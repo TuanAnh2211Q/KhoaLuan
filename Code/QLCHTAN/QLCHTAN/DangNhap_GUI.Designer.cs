@@ -1,7 +1,7 @@
 ﻿
 namespace QLCHTAN
 {
-    partial class FormDangNhap
+    partial class DangNhap_GUI
     {
         /// <summary>
         /// Required designer variable.

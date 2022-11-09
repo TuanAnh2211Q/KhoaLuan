@@ -21,7 +21,7 @@ namespace QLCHTAN
         {
             try
             {
-                FormThemNhanVien t = new FormThemNhanVien();
+                ThemNhanVien_GUI t = new ThemNhanVien_GUI();
                 t.Show();
             }
             catch

@@ -86,7 +86,7 @@ namespace QLCHTAN
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(146, 32);
             this.btnSua.TabIndex = 10;
-            this.btnSua.Text = "Sữa";
+            this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
