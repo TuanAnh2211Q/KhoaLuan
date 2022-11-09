@@ -114,6 +114,12 @@
     <Compile Include="ThongTinDoAn_GUI.Designer.cs">
       <DependentUpon>ThongTinDoAn_GUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinKhuyenMai_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinKhuyenMai_GUI.Designer.cs">
+      <DependentUpon>ThongTinKhuyenMai_GUI.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DangNhap_GUI.resx">
       <DependentUpon>DangNhap_GUI.cs</DependentUpon>
     </EmbeddedResource>
