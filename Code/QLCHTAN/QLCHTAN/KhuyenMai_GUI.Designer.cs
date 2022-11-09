@@ -1,5 +1,4 @@
-﻿
-namespace QLCHTAN
+﻿namespace QLCHTAN
 {
     partial class KhuyenMai_GUI
     {
