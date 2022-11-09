@@ -180,11 +180,11 @@ namespace QLCHTAN
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Sitka Small", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label5.Location = new System.Drawing.Point(167, 9);
+            this.label5.Location = new System.Drawing.Point(184, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(210, 31);
+            this.label5.Size = new System.Drawing.Size(182, 26);
             this.label5.TabIndex = 14;
             this.label5.Text = "DANH MỤC ĐỒ ĂN";
             // 
@@ -207,7 +207,7 @@ namespace QLCHTAN
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Candara Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "DoAn_GUI";
             this.Text = "Đồ ăn";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoAn)).EndInit();

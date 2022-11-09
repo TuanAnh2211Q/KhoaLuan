@@ -11,9 +11,9 @@ using System.Timers;
 
 namespace QLCHTAN
 {
-    public partial class FormDangNhap : Form
+    public partial class DangNhap_GUI : Form
     {
-        public FormDangNhap()
+        public DangNhap_GUI()
         {
             InitializeComponent();
             timer1.Enabled = true;

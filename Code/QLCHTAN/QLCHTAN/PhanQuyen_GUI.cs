@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace QLCHTAN
 {
-    public partial class FormThemNhanVien : Form
+    public partial class PhanQuyen_GUI : Form
     {
-        public FormThemNhanVien()
+        public PhanQuyen_GUI()
         {
             InitializeComponent();
-        }
-
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-
-            MessageBox.Show("Thêm Tài Khoản Thành Công!!!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
         }
     }
 }
