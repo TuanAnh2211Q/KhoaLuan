@@ -118,7 +118,7 @@ namespace QLCHTAN
             this.rbtnNhanVien.ForeColor = System.Drawing.Color.DodgerBlue;
             this.rbtnNhanVien.Location = new System.Drawing.Point(358, 213);
             this.rbtnNhanVien.Name = "rbtnNhanVien";
-            this.rbtnNhanVien.Size = new System.Drawing.Size(117, 27);
+            this.rbtnNhanVien.Size = new System.Drawing.Size(97, 23);
             this.rbtnNhanVien.TabIndex = 7;
             this.rbtnNhanVien.TabStop = true;
             this.rbtnNhanVien.Text = "Nhân Viên";
@@ -130,7 +130,7 @@ namespace QLCHTAN
             this.rbtnQuanLy.ForeColor = System.Drawing.Color.DodgerBlue;
             this.rbtnQuanLy.Location = new System.Drawing.Point(184, 213);
             this.rbtnQuanLy.Name = "rbtnQuanLy";
-            this.rbtnQuanLy.Size = new System.Drawing.Size(105, 27);
+            this.rbtnQuanLy.Size = new System.Drawing.Size(83, 23);
             this.rbtnQuanLy.TabIndex = 6;
             this.rbtnQuanLy.TabStop = true;
             this.rbtnQuanLy.Text = "Quản Lý";
@@ -141,21 +141,21 @@ namespace QLCHTAN
             this.txtPass.Location = new System.Drawing.Point(168, 145);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(328, 30);
+            this.txtPass.Size = new System.Drawing.Size(328, 27);
             this.txtPass.TabIndex = 5;
             // 
             // txtTen
             // 
             this.txtTen.Location = new System.Drawing.Point(168, 91);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(328, 30);
+            this.txtTen.Size = new System.Drawing.Size(328, 27);
             this.txtTen.TabIndex = 4;
             // 
             // txtTaiKhoan
             // 
             this.txtTaiKhoan.Location = new System.Drawing.Point(168, 38);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(328, 30);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(328, 27);
             this.txtTaiKhoan.TabIndex = 3;
             // 
             // label3
@@ -164,7 +164,7 @@ namespace QLCHTAN
             this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label3.Location = new System.Drawing.Point(26, 152);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 23);
+            this.label3.Size = new System.Drawing.Size(82, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mật Khẩu :";
             // 
@@ -174,7 +174,7 @@ namespace QLCHTAN
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label2.Location = new System.Drawing.Point(26, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 23);
+            this.label2.Size = new System.Drawing.Size(96, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên Hiển thị :";
             // 
@@ -184,7 +184,7 @@ namespace QLCHTAN
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label1.Location = new System.Drawing.Point(26, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 23);
+            this.label1.Size = new System.Drawing.Size(82, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tài Khoản :";
             // 
@@ -201,13 +201,13 @@ namespace QLCHTAN
             // 
             // FormTaiKhoan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(870, 600);
+            this.ClientSize = new System.Drawing.Size(873, 600);
             this.Controls.Add(this.dgvResult);
             this.Controls.Add(this.groupBox1);
-            this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

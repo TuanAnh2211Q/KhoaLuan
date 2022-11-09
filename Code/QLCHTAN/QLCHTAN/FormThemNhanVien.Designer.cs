@@ -63,7 +63,7 @@ namespace QLCHTAN
             this.txtSDT.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtSDT.Location = new System.Drawing.Point(581, 235);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(248, 30);
+            this.txtSDT.Size = new System.Drawing.Size(248, 27);
             this.txtSDT.TabIndex = 24;
             // 
             // txtEmail
@@ -71,7 +71,7 @@ namespace QLCHTAN
             this.txtEmail.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtEmail.Location = new System.Drawing.Point(202, 234);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(248, 30);
+            this.txtEmail.Size = new System.Drawing.Size(248, 27);
             this.txtEmail.TabIndex = 23;
             // 
             // txtDiaChi
@@ -79,7 +79,7 @@ namespace QLCHTAN
             this.txtDiaChi.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtDiaChi.Location = new System.Drawing.Point(202, 289);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(627, 30);
+            this.txtDiaChi.Size = new System.Drawing.Size(627, 27);
             this.txtDiaChi.TabIndex = 22;
             // 
             // cbbChucVu
@@ -87,7 +87,7 @@ namespace QLCHTAN
             this.cbbChucVu.FormattingEnabled = true;
             this.cbbChucVu.Location = new System.Drawing.Point(593, 181);
             this.cbbChucVu.Name = "cbbChucVu";
-            this.cbbChucVu.Size = new System.Drawing.Size(236, 31);
+            this.cbbChucVu.Size = new System.Drawing.Size(236, 27);
             this.cbbChucVu.TabIndex = 21;
             // 
             // cbbGioiTinh
@@ -95,7 +95,7 @@ namespace QLCHTAN
             this.cbbGioiTinh.FormattingEnabled = true;
             this.cbbGioiTinh.Location = new System.Drawing.Point(202, 181);
             this.cbbGioiTinh.Name = "cbbGioiTinh";
-            this.cbbGioiTinh.Size = new System.Drawing.Size(248, 31);
+            this.cbbGioiTinh.Size = new System.Drawing.Size(248, 27);
             this.cbbGioiTinh.TabIndex = 20;
             // 
             // txtTen
@@ -103,7 +103,7 @@ namespace QLCHTAN
             this.txtTen.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtTen.Location = new System.Drawing.Point(202, 128);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(627, 30);
+            this.txtTen.Size = new System.Drawing.Size(627, 27);
             this.txtTen.TabIndex = 19;
             // 
             // label6
@@ -111,7 +111,7 @@ namespace QLCHTAN
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(470, 188);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 23);
+            this.label6.Size = new System.Drawing.Size(73, 19);
             this.label6.TabIndex = 18;
             this.label6.Text = "Chức Vụ :";
             // 
@@ -120,7 +120,7 @@ namespace QLCHTAN
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(65, 242);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 23);
+            this.label5.Size = new System.Drawing.Size(50, 19);
             this.label5.TabIndex = 17;
             this.label5.Text = "Email:";
             // 
@@ -129,7 +129,7 @@ namespace QLCHTAN
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(470, 242);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 23);
+            this.label4.Size = new System.Drawing.Size(42, 19);
             this.label4.TabIndex = 16;
             this.label4.Text = "SĐT :";
             // 
@@ -138,7 +138,7 @@ namespace QLCHTAN
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(65, 188);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 23);
+            this.label3.Size = new System.Drawing.Size(78, 19);
             this.label3.TabIndex = 15;
             this.label3.Text = "Giới Tính :";
             // 
@@ -147,7 +147,7 @@ namespace QLCHTAN
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(65, 296);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 23);
+            this.label2.Size = new System.Drawing.Size(63, 19);
             this.label2.TabIndex = 14;
             this.label2.Text = "Địa Chỉ :";
             // 
@@ -156,7 +156,7 @@ namespace QLCHTAN
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(65, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 23);
+            this.label1.Size = new System.Drawing.Size(81, 19);
             this.label1.TabIndex = 13;
             this.label1.Text = "Họ và Tên :";
             // 
@@ -166,7 +166,7 @@ namespace QLCHTAN
             this.label7.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(208, 36);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(485, 32);
+            this.label7.Size = new System.Drawing.Size(383, 25);
             this.label7.TabIndex = 26;
             this.label7.Text = "Hãy Nhập Thông Tin Của Nhân Viên !!";
             // 
@@ -175,7 +175,7 @@ namespace QLCHTAN
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(65, 356);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(151, 23);
+            this.label8.Size = new System.Drawing.Size(118, 19);
             this.label8.TabIndex = 27;
             this.label8.Text = "Loại Nhân Viên :";
             // 
@@ -184,7 +184,7 @@ namespace QLCHTAN
             this.rdbNVPT.AutoSize = true;
             this.rdbNVPT.Location = new System.Drawing.Point(278, 352);
             this.rdbNVPT.Name = "rdbNVPT";
-            this.rdbNVPT.Size = new System.Drawing.Size(118, 27);
+            this.rdbNVPT.Size = new System.Drawing.Size(93, 23);
             this.rdbNVPT.TabIndex = 28;
             this.rdbNVPT.TabStop = true;
             this.rdbNVPT.Text = "Part-Time";
@@ -195,7 +195,7 @@ namespace QLCHTAN
             this.rdbNVFT.AutoSize = true;
             this.rdbNVFT.Location = new System.Drawing.Point(437, 352);
             this.rdbNVFT.Name = "rdbNVFT";
-            this.rdbNVFT.Size = new System.Drawing.Size(112, 27);
+            this.rdbNVFT.Size = new System.Drawing.Size(89, 23);
             this.rdbNVFT.TabIndex = 29;
             this.rdbNVFT.TabStop = true;
             this.rdbNVFT.Text = "Full-Time";
@@ -203,7 +203,7 @@ namespace QLCHTAN
             // 
             // FormThemNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(863, 497);
@@ -224,8 +224,8 @@ namespace QLCHTAN
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormThemNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Thông Tin Nhân VIên";
