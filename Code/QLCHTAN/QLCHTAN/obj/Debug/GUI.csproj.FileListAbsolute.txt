@@ -1,0 +1,27 @@
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\bin\Debug\QLCHTAN.exe.config
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\bin\Debug\QLCHTAN.exe
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\bin\Debug\QLCHTAN.pdb
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.FormDangNhap.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.Properties.Resources.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.exe
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.pdb
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.FormTaiKhoan.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.FormThongTinNhanVien.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.FormThemNhanVien.resources
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.Form1.resources
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.FormDangNhap.resources
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.FormThongTinNhanVien.resources
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.FormTaiKhoan.resources
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.FormThemNhanVien.resources
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.Properties.Resources.resources
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.exe
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.pdb
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\bin\Debug\QLCHTAN.exe.config
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\bin\Debug\QLCHTAN.exe
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\bin\Debug\QLCHTAN.pdb
