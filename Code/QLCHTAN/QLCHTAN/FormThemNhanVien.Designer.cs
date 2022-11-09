@@ -163,10 +163,10 @@ namespace QLCHTAN
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(208, 36);
+            this.label7.Font = new System.Drawing.Font("Candara", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(220, 51);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(383, 25);
+            this.label7.Size = new System.Drawing.Size(375, 28);
             this.label7.TabIndex = 26;
             this.label7.Text = "Hãy Nhập Thông Tin Của Nhân Viên !!";
             // 

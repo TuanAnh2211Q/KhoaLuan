@@ -39,3 +39,7 @@ C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTA
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.exe
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.pdb
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DoAn_GUI.resources
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.LoaiDoAn_GUI.resources
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.NuocUong_GUI.resources
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinDoAn_GUI.resources
