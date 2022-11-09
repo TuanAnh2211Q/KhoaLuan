@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DangNhap_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap_GUI.Designer.cs">
+      <DependentUpon>DangNhap_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoAn_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,29 +70,11 @@
     <Compile Include="Main_GUI.Designer.cs">
       <DependentUpon>Main_GUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDangNhap.cs">
+    <Compile Include="NhanVien_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDangNhap.Designer.cs">
-      <DependentUpon>FormDangNhap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormNhanVien.Designer.cs">
-      <DependentUpon>FormNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormQuanLyTaiKhoan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormQuanLyTaiKhoan.Designer.cs">
-      <DependentUpon>FormQuanLyTaiKhoan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormThemNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormThemNhanVien.Designer.cs">
-      <DependentUpon>FormThemNhanVien.cs</DependentUpon>
+    <Compile Include="NhanVien_GUI.Designer.cs">
+      <DependentUpon>NhanVien_GUI.cs</DependentUpon>
     </Compile>
     <Compile Include="NuocUong_GUI.cs">
       <SubType>Form</SubType>
@@ -94,14 +82,29 @@
     <Compile Include="NuocUong_GUI.Designer.cs">
       <DependentUpon>NuocUong_GUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="PhanQuyen_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanQuyen_GUI.Designer.cs">
+      <DependentUpon>PhanQuyen_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyTaiKhoan_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTaiKhoan_GUI.Designer.cs">
+      <DependentUpon>QuanLyTaiKhoan_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThongTinDoAn_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ThongTinDoAn_GUI.Designer.cs">
       <DependentUpon>ThongTinDoAn_GUI.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DangNhap_GUI.resx">
+      <DependentUpon>DangNhap_GUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoAn_GUI.resx">
       <DependentUpon>DoAn_GUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,20 +114,14 @@
     <EmbeddedResource Include="Main_GUI.resx">
       <DependentUpon>Main_GUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDangNhap.resx">
-      <DependentUpon>FormDangNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormNhanVien.resx">
-      <DependentUpon>FormNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormQuanLyTaiKhoan.resx">
-      <DependentUpon>FormQuanLyTaiKhoan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormThemNhanVien.resx">
-      <DependentUpon>FormThemNhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="NhanVien_GUI.resx">
+      <DependentUpon>NhanVien_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuocUong_GUI.resx">
       <DependentUpon>NuocUong_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanQuyen_GUI.resx">
+      <DependentUpon>PhanQuyen_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,6 +132,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLyTaiKhoan_GUI.resx">
+      <DependentUpon>QuanLyTaiKhoan_GUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThongTinDoAn_GUI.resx">
       <DependentUpon>ThongTinDoAn_GUI.cs</DependentUpon>
     </EmbeddedResource>
