@@ -45,7 +45,7 @@ namespace QLCHTAN
             // 
             // btnKetNoi
             // 
-            this.btnKetNoi.Location = new System.Drawing.Point(264, 120);
+            this.btnKetNoi.Location = new System.Drawing.Point(615, 118);
             this.btnKetNoi.Name = "btnKetNoi";
             this.btnKetNoi.Size = new System.Drawing.Size(114, 41);
             this.btnKetNoi.TabIndex = 2;
@@ -65,7 +65,7 @@ namespace QLCHTAN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(893, 181);
+            this.ClientSize = new System.Drawing.Size(751, 181);
             this.Controls.Add(this.ccbDataSource);
             this.Controls.Add(this.btnKetNoi);
             this.Controls.Add(this.label1);

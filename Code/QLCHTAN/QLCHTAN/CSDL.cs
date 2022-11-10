@@ -60,6 +60,9 @@ namespace QLCHTAN
                     MessageBox.Show("Không thể kết nối cơ sở dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            Main_GUI main = new Main_GUI();
+            main.Show();
+            this.Hide();
         }
 
         private void CSDL_Load(object sender, EventArgs e)
