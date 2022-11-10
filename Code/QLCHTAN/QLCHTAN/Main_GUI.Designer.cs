@@ -165,7 +165,6 @@ namespace QLCHTAN
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnBaoCaoThongKe;
         private System.Windows.Forms.Button btnQuanLiNhanVien;
         private System.Windows.Forms.Button btnQuanLiKho;

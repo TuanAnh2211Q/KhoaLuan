@@ -16,7 +16,7 @@ namespace QLCHTAN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DoAn_GUI());
+            Application.Run(new CSDL());
         }
     }
 }
