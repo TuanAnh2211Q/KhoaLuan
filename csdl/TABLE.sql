@@ -174,7 +174,8 @@ create table KhuyenMai
 (
 	maKhuyenMai varchar(10) not null primary key,
 	tenKhuyenMai nvarchar(50),
-	maLoaiKhuyenMai varchar(10)
+	maLoaiKhuyenMai varchar(10),
+		mucGiam float
 )
 go
 
@@ -183,7 +184,6 @@ create table LoaiKhuyenMai
 (
 	maLoaiKhuyenMai varchar(10) not null primary key,
 	tenLoaiKhuyenMai nvarchar(50),
-	mucGiam float
 )
 go
 
