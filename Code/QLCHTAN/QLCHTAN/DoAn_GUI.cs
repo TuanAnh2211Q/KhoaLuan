@@ -17,6 +17,10 @@ namespace QLCHTAN
             InitializeComponent();
         }
 
-      
+        private void btnThanhPhanDoAn_Click(object sender, EventArgs e)
+        {
+            ThongTinThanhPhanDoAn_GUI tp = new ThongTinThanhPhanDoAn_GUI();
+            tp.Show();
+        }
     }
 }

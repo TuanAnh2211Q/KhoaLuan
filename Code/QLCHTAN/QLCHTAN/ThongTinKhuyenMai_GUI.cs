@@ -16,5 +16,11 @@ namespace QLCHTAN
         {
             InitializeComponent();
         }
+
+        private void btnDanhSachSanPhamApDung_Click(object sender, EventArgs e)
+        {
+            DanhSachKhuyenMai_GUI dssp = new DanhSachKhuyenMai_GUI();
+            dssp.Show();
+        }
     }
 }

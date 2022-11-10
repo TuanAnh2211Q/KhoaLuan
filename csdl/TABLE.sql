@@ -182,7 +182,8 @@ go
 create table LoaiKhuyenMai
 (
 	maLoaiKhuyenMai varchar(10) not null primary key,
-	tenLoaiKhuyenMai nvarchar(50)
+	tenLoaiKhuyenMai nvarchar(50),
+	mucGiam float
 )
 go
 
@@ -190,7 +191,6 @@ create table ThongTinKhuyenMai
 (
 	maKhuyenMai varchar(10), 
 	maSanPham varchar(10),
-	mucGiam float,
 	ngayBatDau datetime,
 	ngayKetThuc datetime,
 	ghiChu nvarchar

@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CSDL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSDL.Designer.cs">
+      <DependentUpon>CSDL.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangNhap_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DangNhap_GUI.Designer.cs">
       <DependentUpon>DangNhap_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSachKhuyenMai_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhSachKhuyenMai_GUI.Designer.cs">
+      <DependentUpon>DanhSachKhuyenMai_GUI.cs</DependentUpon>
     </Compile>
     <Compile Include="DoAn_GUI.cs">
       <SubType>Form</SubType>
@@ -58,23 +70,17 @@
     <Compile Include="DoAn_GUI.Designer.cs">
       <DependentUpon>DoAn_GUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhuyenMai_GUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KhuyenMai_GUI.Designer.cs">
-      <DependentUpon>KhuyenMai_GUI.cs</DependentUpon>
-    </Compile>
     <Compile Include="LoaiDoAn_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoaiDoAn_GUI.Designer.cs">
       <DependentUpon>LoaiDoAn_GUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoaiKhuyenMai.cs">
+    <Compile Include="LoaiKhuyenMai_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoaiKhuyenMai.Designer.cs">
-      <DependentUpon>LoaiKhuyenMai.cs</DependentUpon>
+    <Compile Include="LoaiKhuyenMai_GUI.Designer.cs">
+      <DependentUpon>LoaiKhuyenMai_GUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Main_GUI.cs">
       <SubType>Form</SubType>
@@ -126,20 +132,35 @@
     <Compile Include="ThongTinKhuyenMai_GUI.Designer.cs">
       <DependentUpon>ThongTinKhuyenMai_GUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinThanhPhanDoAn_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinThanhPhanDoAn_GUI.Designer.cs">
+      <DependentUpon>ThongTinThanhPhanDoAn_GUI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CSDL.resx">
+      <DependentUpon>CSDL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangNhap_GUI.resx">
       <DependentUpon>DangNhap_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhSachKhuyenMai_GUI.resx">
+      <DependentUpon>DanhSachKhuyenMai_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoAn_GUI.resx">
       <DependentUpon>DoAn_GUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KhuyenMai_GUI.resx">
-      <DependentUpon>KhuyenMai_GUI.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LoaiDoAn_GUI.resx">
       <DependentUpon>LoaiDoAn_GUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoaiKhuyenMai_GUI.resx">
+      <DependentUpon>LoaiKhuyenMai_GUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main_GUI.resx">
       <DependentUpon>Main_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhaCungCap_GUI.resx">
+      <DependentUpon>NhaCungCap_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien_GUI.resx">
       <DependentUpon>NhanVien_GUI.cs</DependentUpon>
@@ -165,6 +186,12 @@
     <EmbeddedResource Include="ThongTinDoAn_GUI.resx">
       <DependentUpon>ThongTinDoAn_GUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinKhuyenMai_GUI.resx">
+      <DependentUpon>ThongTinKhuyenMai_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinThanhPhanDoAn_GUI.resx">
+      <DependentUpon>ThongTinThanhPhanDoAn_GUI.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -177,6 +204,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{7456951a-1564-4f64-a409-84567b19750c}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{65acf8db-3a05-48da-921f-46d03757b559}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{483e2ff9-40fc-464f-9f5d-b9efc77629c5}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
