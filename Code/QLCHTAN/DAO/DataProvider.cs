@@ -50,6 +50,119 @@ namespace DAO
             Close();
             conn.Dispose();
         }
+
+        public DataTable ExecuteQuery(string query, object[] parameter = null)
+        {
+            DataTable data = new DataTable();
+
+
+            try
+            {
+                Open();
+
+                SqlCommand command = new SqlCommand(query, conn);
+
+                if (parameter != null)
+                {
+                    string[] listPara = query.Split(' ');
+                    int i = 0;
+                    foreach (string item in listPara)
+                    {
+                        if (item.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(item, parameter[i]);
+                            i++;
+                        }
+                    }
+                }
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                adapter.Fill(data);
+
+                Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return data;
+        }
+
+        public int ExecuteNonQuery(string query, object[] parameter = null)
+        {
+            int data = 0;
+
+            try
+            {
+                Open();
+                SqlCommand command = new SqlCommand(query, conn);
+
+                if (parameter != null)
+                {
+                    string[] listPara = query.Split(' ');
+                    int i = 0;
+                    foreach (string item in listPara)
+                    {
+                        if (item.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(item, parameter[i]);
+                            i++;
+                        }
+                    }
+                }
+
+                data = command.ExecuteNonQuery();
+
+                Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return data;
+        }
+
+        public object ExecuteScalar(string query, object[] parameter = null)
+        {
+            object data = 0;
+
+            try
+            {
+                Open();
+                SqlCommand command = new SqlCommand(query, conn);
+
+                if (parameter != null)
+                {
+                    string[] listPara = query.Split(' ');
+                    int i = 0;
+                    foreach (string item in listPara)
+                    {
+                        if (item.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(item, parameter[i]);
+                            i++;
+                        }
+                    }
+                }
+
+                data = command.ExecuteScalar();
+
+                Close();
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return data;
+        }
     }
 
 }

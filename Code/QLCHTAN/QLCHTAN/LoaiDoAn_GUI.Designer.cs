@@ -39,6 +39,8 @@ namespace QLCHTAN
             this.txtMaLoaiDoAn = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.maLoaiDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenLoaiDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiDoAn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,6 +90,7 @@ namespace QLCHTAN
             this.btnThem.TabIndex = 21;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnLamMoi
             // 
@@ -100,16 +103,25 @@ namespace QLCHTAN
             this.btnLamMoi.TabIndex = 20;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // dgvLoaiDoAn
             // 
+            this.dgvLoaiDoAn.AllowUserToAddRows = false;
+            this.dgvLoaiDoAn.AllowUserToDeleteRows = false;
+            this.dgvLoaiDoAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLoaiDoAn.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvLoaiDoAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLoaiDoAn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maLoaiDoAn,
+            this.tenLoaiDoAn});
             this.dgvLoaiDoAn.GridColor = System.Drawing.SystemColors.Control;
             this.dgvLoaiDoAn.Location = new System.Drawing.Point(19, 115);
             this.dgvLoaiDoAn.Name = "dgvLoaiDoAn";
+            this.dgvLoaiDoAn.ReadOnly = true;
             this.dgvLoaiDoAn.Size = new System.Drawing.Size(513, 169);
             this.dgvLoaiDoAn.TabIndex = 19;
+            this.dgvLoaiDoAn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoaiDoAn_CellClick);
             // 
             // txtTenLoaiDoAn
             // 
@@ -147,6 +159,20 @@ namespace QLCHTAN
             this.label1.TabIndex = 15;
             this.label1.Text = "Mã loại đồ ăn:";
             // 
+            // maLoaiDoAn
+            // 
+            this.maLoaiDoAn.DataPropertyName = "maLoaiDoAn";
+            this.maLoaiDoAn.HeaderText = "Mã loại đồ ăn";
+            this.maLoaiDoAn.Name = "maLoaiDoAn";
+            this.maLoaiDoAn.ReadOnly = true;
+            // 
+            // tenLoaiDoAn
+            // 
+            this.tenLoaiDoAn.DataPropertyName = "tenLoaiDoAn";
+            this.tenLoaiDoAn.HeaderText = "Tên loại đồ ăn";
+            this.tenLoaiDoAn.Name = "tenLoaiDoAn";
+            this.tenLoaiDoAn.ReadOnly = true;
+            // 
             // LoaiDoAn_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,6 +190,7 @@ namespace QLCHTAN
             this.Controls.Add(this.label1);
             this.Name = "LoaiDoAn_GUI";
             this.Text = "Loại đồ ăn";
+            this.Load += new System.EventHandler(this.LoaiDoAn_GUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiDoAn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -182,5 +209,7 @@ namespace QLCHTAN
         private System.Windows.Forms.TextBox txtMaLoaiDoAn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maLoaiDoAn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenLoaiDoAn;
     }
 }
