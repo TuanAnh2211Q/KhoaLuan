@@ -294,6 +294,7 @@ namespace QLCHTAN
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ThongTinMatHang_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThongTinMatHang_GUI";
             this.grbThongTinMatHang.ResumeLayout(false);
             this.grbThongTinMatHang.PerformLayout();

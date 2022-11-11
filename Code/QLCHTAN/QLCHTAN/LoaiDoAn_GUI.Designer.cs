@@ -35,12 +35,12 @@ namespace QLCHTAN
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.dgvLoaiDoAn = new System.Windows.Forms.DataGridView();
+            this.maLoaiDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenLoaiDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTenLoaiDoAn = new System.Windows.Forms.TextBox();
             this.txtMaLoaiDoAn = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.maLoaiDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenLoaiDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiDoAn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,6 +123,20 @@ namespace QLCHTAN
             this.dgvLoaiDoAn.TabIndex = 19;
             this.dgvLoaiDoAn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoaiDoAn_CellClick);
             // 
+            // maLoaiDoAn
+            // 
+            this.maLoaiDoAn.DataPropertyName = "maLoaiDoAn";
+            this.maLoaiDoAn.HeaderText = "Mã loại đồ ăn";
+            this.maLoaiDoAn.Name = "maLoaiDoAn";
+            this.maLoaiDoAn.ReadOnly = true;
+            // 
+            // tenLoaiDoAn
+            // 
+            this.tenLoaiDoAn.DataPropertyName = "tenLoaiDoAn";
+            this.tenLoaiDoAn.HeaderText = "Tên loại đồ ăn";
+            this.tenLoaiDoAn.Name = "tenLoaiDoAn";
+            this.tenLoaiDoAn.ReadOnly = true;
+            // 
             // txtTenLoaiDoAn
             // 
             this.txtTenLoaiDoAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -159,20 +173,6 @@ namespace QLCHTAN
             this.label1.TabIndex = 15;
             this.label1.Text = "Mã loại đồ ăn:";
             // 
-            // maLoaiDoAn
-            // 
-            this.maLoaiDoAn.DataPropertyName = "maLoaiDoAn";
-            this.maLoaiDoAn.HeaderText = "Mã loại đồ ăn";
-            this.maLoaiDoAn.Name = "maLoaiDoAn";
-            this.maLoaiDoAn.ReadOnly = true;
-            // 
-            // tenLoaiDoAn
-            // 
-            this.tenLoaiDoAn.DataPropertyName = "tenLoaiDoAn";
-            this.tenLoaiDoAn.HeaderText = "Tên loại đồ ăn";
-            this.tenLoaiDoAn.Name = "tenLoaiDoAn";
-            this.tenLoaiDoAn.ReadOnly = true;
-            // 
             // LoaiDoAn_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +189,7 @@ namespace QLCHTAN
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "LoaiDoAn_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loại đồ ăn";
             this.Load += new System.EventHandler(this.LoaiDoAn_GUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiDoAn)).EndInit();

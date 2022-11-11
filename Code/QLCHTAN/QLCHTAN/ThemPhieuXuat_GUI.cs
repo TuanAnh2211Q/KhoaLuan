@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLCHTAN
 {
-    public partial class ThongTinDoAn_GUI : Form
+    public partial class ThemPhieuXuat_GUI : Form
     {
-        public ThongTinDoAn_GUI()
+        public ThemPhieuXuat_GUI()
         {
             InitializeComponent();
         }

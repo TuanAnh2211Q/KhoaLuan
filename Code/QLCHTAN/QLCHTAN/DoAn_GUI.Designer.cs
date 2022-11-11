@@ -266,6 +266,7 @@ namespace QLCHTAN
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "DoAn_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đồ ăn";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoAn)).EndInit();
             this.ResumeLayout(false);

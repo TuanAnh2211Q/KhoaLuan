@@ -30,58 +30,81 @@ namespace QLCHTAN
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtMaNhap = new System.Windows.Forms.TextBox();
+            this.ccbMaDatHang = new System.Windows.Forms.ComboBox();
+            this.dtNgayNhap = new System.Windows.Forms.DateTimePicker();
             this.rtxtGhiChu = new System.Windows.Forms.RichTextBox();
-            this.txtMaDatHang = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtMaNhap = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvPhieuNhap = new System.Windows.Forms.DataGridView();
             this.btnThongTinChiTiet = new System.Windows.Forms.Button();
             this.btnThemPhieuNhap = new System.Windows.Forms.Button();
-            this.dtNgayNhap = new System.Windows.Forms.DateTimePicker();
             this.btnHuyPhieuNhap = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhap)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.ccbMaDatHang);
             this.groupBox1.Controls.Add(this.dtNgayNhap);
             this.groupBox1.Controls.Add(this.rtxtGhiChu);
-            this.groupBox1.Controls.Add(this.txtMaDatHang);
             this.groupBox1.Controls.Add(this.txtMaNhap);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(18, 18);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(356, 334);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách phiếu nhập";
             // 
-            // label1
+            // ccbMaDatHang
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã nhập:";
+            this.ccbMaDatHang.FormattingEnabled = true;
+            this.ccbMaDatHang.Location = new System.Drawing.Point(106, 145);
+            this.ccbMaDatHang.Name = "ccbMaDatHang";
+            this.ccbMaDatHang.Size = new System.Drawing.Size(243, 27);
+            this.ccbMaDatHang.TabIndex = 21;
             // 
-            // label2
+            // dtNgayNhap
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 102);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ngày nhập:";
+            this.dtNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNgayNhap.Location = new System.Drawing.Point(106, 96);
+            this.dtNgayNhap.Name = "dtNgayNhap";
+            this.dtNgayNhap.Size = new System.Drawing.Size(243, 27);
+            this.dtNgayNhap.TabIndex = 19;
+            // 
+            // rtxtGhiChu
+            // 
+            this.rtxtGhiChu.Location = new System.Drawing.Point(106, 189);
+            this.rtxtGhiChu.Name = "rtxtGhiChu";
+            this.rtxtGhiChu.Size = new System.Drawing.Size(243, 96);
+            this.rtxtGhiChu.TabIndex = 8;
+            this.rtxtGhiChu.Text = "";
+            // 
+            // txtMaNhap
+            // 
+            this.txtMaNhap.Location = new System.Drawing.Point(106, 62);
+            this.txtMaNhap.Name = "txtMaNhap";
+            this.txtMaNhap.Size = new System.Drawing.Size(243, 27);
+            this.txtMaNhap.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 192);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 19);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Ghi chú";
             // 
             // label3
             // 
@@ -93,44 +116,31 @@ namespace QLCHTAN
             this.label3.Text = "Mã đặt hàng:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 192);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 19);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Ghi chú";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 102);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 19);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Ngày nhập:";
             // 
-            // txtMaNhap
+            // label1
             // 
-            this.txtMaNhap.Location = new System.Drawing.Point(106, 62);
-            this.txtMaNhap.Name = "txtMaNhap";
-            this.txtMaNhap.Size = new System.Drawing.Size(243, 27);
-            this.txtMaNhap.TabIndex = 4;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã nhập:";
             // 
-            // rtxtGhiChu
+            // dgvPhieuNhap
             // 
-            this.rtxtGhiChu.Location = new System.Drawing.Point(106, 189);
-            this.rtxtGhiChu.Name = "rtxtGhiChu";
-            this.rtxtGhiChu.Size = new System.Drawing.Size(243, 96);
-            this.rtxtGhiChu.TabIndex = 8;
-            this.rtxtGhiChu.Text = "";
-            // 
-            // txtMaDatHang
-            // 
-            this.txtMaDatHang.Location = new System.Drawing.Point(106, 142);
-            this.txtMaDatHang.Name = "txtMaDatHang";
-            this.txtMaDatHang.Size = new System.Drawing.Size(243, 27);
-            this.txtMaDatHang.TabIndex = 6;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(381, 32);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(518, 271);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhieuNhap.Location = new System.Drawing.Point(381, 32);
+            this.dgvPhieuNhap.Name = "dgvPhieuNhap";
+            this.dgvPhieuNhap.Size = new System.Drawing.Size(518, 271);
+            this.dgvPhieuNhap.TabIndex = 1;
             // 
             // btnThongTinChiTiet
             // 
@@ -150,14 +160,6 @@ namespace QLCHTAN
             this.btnThemPhieuNhap.Text = "Thêm phiếu nhập mới";
             this.btnThemPhieuNhap.UseVisualStyleBackColor = true;
             // 
-            // dtNgayNhap
-            // 
-            this.dtNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgayNhap.Location = new System.Drawing.Point(106, 96);
-            this.dtNgayNhap.Name = "dtNgayNhap";
-            this.dtNgayNhap.Size = new System.Drawing.Size(243, 27);
-            this.dtNgayNhap.TabIndex = 19;
-            // 
             // btnHuyPhieuNhap
             // 
             this.btnHuyPhieuNhap.Location = new System.Drawing.Point(381, 309);
@@ -175,15 +177,16 @@ namespace QLCHTAN
             this.Controls.Add(this.btnHuyPhieuNhap);
             this.Controls.Add(this.btnThemPhieuNhap);
             this.Controls.Add(this.btnThongTinChiTiet);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvPhieuNhap);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PhieuNhapKho_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PhieuNhapKho_GUI";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhap)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -192,16 +195,17 @@ namespace QLCHTAN
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RichTextBox rtxtGhiChu;
-        private System.Windows.Forms.TextBox txtMaDatHang;
         private System.Windows.Forms.TextBox txtMaNhap;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPhieuNhap;
         private System.Windows.Forms.Button btnThongTinChiTiet;
         private System.Windows.Forms.Button btnThemPhieuNhap;
         private System.Windows.Forms.DateTimePicker dtNgayNhap;
         private System.Windows.Forms.Button btnHuyPhieuNhap;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ComboBox ccbMaDatHang;
     }
 }

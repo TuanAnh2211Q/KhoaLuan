@@ -51,7 +51,7 @@ namespace QLCHTAN
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(163, 29);
+            this.label1.Location = new System.Drawing.Point(123, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(267, 33);
@@ -211,8 +211,9 @@ namespace QLCHTAN
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ThongTinKhuyenMai_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThongTinKhuyenMai_GUI";
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinKhuyenMai)).EndInit();
             this.ResumeLayout(false);
