@@ -58,11 +58,11 @@
     <Compile Include="DangNhap_GUI.Designer.cs">
       <DependentUpon>DangNhap_GUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhSachKhuyenMai_GUI.cs">
+    <Compile Include="DanhSachSanPhamKhuyenMai_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhSachKhuyenMai_GUI.Designer.cs">
-      <DependentUpon>DanhSachKhuyenMai_GUI.cs</DependentUpon>
+    <Compile Include="DanhSachSanPhamKhuyenMai_GUI.Designer.cs">
+      <DependentUpon>DanhSachSanPhamKhuyenMai_GUI.cs</DependentUpon>
     </Compile>
     <Compile Include="DoAn_GUI.cs">
       <SubType>Form</SubType>
@@ -112,6 +112,12 @@
     <Compile Include="PhanQuyen_GUI.Designer.cs">
       <DependentUpon>PhanQuyen_GUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="PhieuNhapKho_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuNhapKho_GUI.Designer.cs">
+      <DependentUpon>PhieuNhapKho_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyTaiKhoan_GUI.cs">
@@ -132,6 +138,12 @@
     <Compile Include="ThongTinKhuyenMai_GUI.Designer.cs">
       <DependentUpon>ThongTinKhuyenMai_GUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinMatHang_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinMatHang_GUI.Designer.cs">
+      <DependentUpon>ThongTinMatHang_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThongTinThanhPhanDoAn_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,8 +156,8 @@
     <EmbeddedResource Include="DangNhap_GUI.resx">
       <DependentUpon>DangNhap_GUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhSachKhuyenMai_GUI.resx">
-      <DependentUpon>DanhSachKhuyenMai_GUI.cs</DependentUpon>
+    <EmbeddedResource Include="DanhSachSanPhamKhuyenMai_GUI.resx">
+      <DependentUpon>DanhSachSanPhamKhuyenMai_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoAn_GUI.resx">
       <DependentUpon>DoAn_GUI.cs</DependentUpon>
@@ -171,6 +183,9 @@
     <EmbeddedResource Include="PhanQuyen_GUI.resx">
       <DependentUpon>PhanQuyen_GUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PhieuNhapKho_GUI.resx">
+      <DependentUpon>PhieuNhapKho_GUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -188,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinKhuyenMai_GUI.resx">
       <DependentUpon>ThongTinKhuyenMai_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinMatHang_GUI.resx">
+      <DependentUpon>ThongTinMatHang_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinThanhPhanDoAn_GUI.resx">
       <DependentUpon>ThongTinThanhPhanDoAn_GUI.cs</DependentUpon>
