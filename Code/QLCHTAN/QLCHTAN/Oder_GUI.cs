@@ -26,6 +26,10 @@ namespace QLCHTAN
             tbtnThanhToan.Enabled = true;
         }
 
+
+
+
+
         private void tbtnThanhToan_Click(object sender, EventArgs e)
         {
             ThanhToan_GUI t = new ThanhToan_GUI();
