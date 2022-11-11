@@ -1,7 +1,7 @@
 ﻿
 namespace QLCHTAN
 {
-    partial class DanhSachKhuyenMai_GUI
+    partial class DanhSachSanPhamKhuyenMai_GUI
     {
         /// <summary>
         /// Required designer variable.

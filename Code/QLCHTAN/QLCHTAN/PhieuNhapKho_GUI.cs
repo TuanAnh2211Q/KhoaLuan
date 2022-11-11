@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace QLCHTAN
 {
-    public partial class ThongTinKhuyenMai_GUI : Form
+    public partial class PhieuNhapKho_GUI : Form
     {
-        public ThongTinKhuyenMai_GUI()
+        public PhieuNhapKho_GUI()
         {
             InitializeComponent();
-        }
-
-        private void btnDanhSachSanPhamApDung_Click(object sender, EventArgs e)
-        {
-            DanhSachSanPhamKhuyenMai_GUI dssp = new DanhSachSanPhamKhuyenMai_GUI();
-            dssp.Show();
         }
     }
 }
