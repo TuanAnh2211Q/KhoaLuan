@@ -29,7 +29,6 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,23 +46,15 @@ namespace QLCHTAN
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhaCungCap)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Candara", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 33);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Thông tin nhà cung cấp";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 74);
+            this.label2.Location = new System.Drawing.Point(4, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(128, 19);
             this.label2.TabIndex = 1;
@@ -72,7 +63,7 @@ namespace QLCHTAN
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 190);
+            this.label3.Location = new System.Drawing.Point(4, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 19);
             this.label3.TabIndex = 2;
@@ -81,7 +72,7 @@ namespace QLCHTAN
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 161);
+            this.label4.Location = new System.Drawing.Point(4, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 19);
             this.label4.TabIndex = 3;
@@ -90,7 +81,7 @@ namespace QLCHTAN
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 133);
+            this.label5.Location = new System.Drawing.Point(4, 94);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 19);
             this.label5.TabIndex = 4;
@@ -99,7 +90,7 @@ namespace QLCHTAN
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 103);
+            this.label6.Location = new System.Drawing.Point(4, 64);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 19);
             this.label6.TabIndex = 5;
@@ -108,7 +99,7 @@ namespace QLCHTAN
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 218);
+            this.label7.Location = new System.Drawing.Point(4, 179);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 19);
             this.label7.TabIndex = 6;
@@ -116,44 +107,44 @@ namespace QLCHTAN
             // 
             // txtMaNhaCungCap
             // 
-            this.txtMaNhaCungCap.Location = new System.Drawing.Point(156, 71);
+            this.txtMaNhaCungCap.Location = new System.Drawing.Point(138, 32);
             this.txtMaNhaCungCap.Name = "txtMaNhaCungCap";
             this.txtMaNhaCungCap.Size = new System.Drawing.Size(203, 27);
             this.txtMaNhaCungCap.TabIndex = 7;
             // 
             // txtTenNhaCungCap
             // 
-            this.txtTenNhaCungCap.Location = new System.Drawing.Point(156, 100);
+            this.txtTenNhaCungCap.Location = new System.Drawing.Point(138, 61);
             this.txtTenNhaCungCap.Name = "txtTenNhaCungCap";
             this.txtTenNhaCungCap.Size = new System.Drawing.Size(203, 27);
             this.txtTenNhaCungCap.TabIndex = 8;
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(156, 130);
+            this.txtDiaChi.Location = new System.Drawing.Point(138, 91);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(203, 27);
             this.txtDiaChi.TabIndex = 9;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(156, 158);
+            this.txtEmail.Location = new System.Drawing.Point(138, 119);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(203, 27);
             this.txtEmail.TabIndex = 10;
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(156, 187);
+            this.txtSDT.Location = new System.Drawing.Point(138, 148);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(203, 27);
             this.txtSDT.TabIndex = 11;
             // 
             // rtxtGhiChu
             // 
-            this.rtxtGhiChu.Location = new System.Drawing.Point(156, 215);
+            this.rtxtGhiChu.Location = new System.Drawing.Point(138, 176);
             this.rtxtGhiChu.Name = "rtxtGhiChu";
-            this.rtxtGhiChu.Size = new System.Drawing.Size(203, 96);
+            this.rtxtGhiChu.Size = new System.Drawing.Size(203, 62);
             this.rtxtGhiChu.TabIndex = 12;
             this.rtxtGhiChu.Text = "";
             // 
@@ -163,7 +154,7 @@ namespace QLCHTAN
             this.dgvNhaCungCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhaCungCap.Location = new System.Drawing.Point(365, 18);
             this.dgvNhaCungCap.Name = "dgvNhaCungCap";
-            this.dgvNhaCungCap.Size = new System.Drawing.Size(520, 293);
+            this.dgvNhaCungCap.Size = new System.Drawing.Size(520, 238);
             this.dgvNhaCungCap.TabIndex = 13;
             // 
             // btnSua
@@ -171,7 +162,7 @@ namespace QLCHTAN
             this.btnSua.BackColor = System.Drawing.Color.Transparent;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSua.Location = new System.Drawing.Point(729, 317);
+            this.btnSua.Location = new System.Drawing.Point(648, 262);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 31);
             this.btnSua.TabIndex = 21;
@@ -183,7 +174,7 @@ namespace QLCHTAN
             this.btnXoa.BackColor = System.Drawing.Color.Transparent;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnXoa.Location = new System.Drawing.Point(648, 317);
+            this.btnXoa.Location = new System.Drawing.Point(729, 262);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 31);
             this.btnXoa.TabIndex = 20;
@@ -195,7 +186,7 @@ namespace QLCHTAN
             this.btnThem.BackColor = System.Drawing.Color.Transparent;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnThem.Location = new System.Drawing.Point(567, 317);
+            this.btnThem.Location = new System.Drawing.Point(810, 262);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 31);
             this.btnThem.TabIndex = 19;
@@ -207,50 +198,58 @@ namespace QLCHTAN
             this.btnLamMoi.BackColor = System.Drawing.Color.Transparent;
             this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLamMoi.Location = new System.Drawing.Point(810, 317);
+            this.btnLamMoi.Location = new System.Drawing.Point(567, 262);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(75, 31);
             this.btnLamMoi.TabIndex = 18;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rtxtGhiChu);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtSDT);
+            this.groupBox1.Controls.Add(this.txtMaNhaCungCap);
+            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.txtTenNhaCungCap);
+            this.groupBox1.Controls.Add(this.txtDiaChi);
+            this.groupBox1.Location = new System.Drawing.Point(12, 18);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(347, 280);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông tin nhà cung cấp";
+            // 
             // NhaCungCap_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 356);
+            this.ClientSize = new System.Drawing.Size(908, 310);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.dgvNhaCungCap);
-            this.Controls.Add(this.rtxtGhiChu);
-            this.Controls.Add(this.txtSDT);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtDiaChi);
-            this.Controls.Add(this.txtTenNhaCungCap);
-            this.Controls.Add(this.txtMaNhaCungCap);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NhaCungCap_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NhaCungCap_GUI";
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhaCungCap)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -268,5 +267,6 @@ namespace QLCHTAN
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnLamMoi;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

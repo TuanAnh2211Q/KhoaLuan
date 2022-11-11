@@ -21,5 +21,13 @@ namespace BUS
         {
             return loaiDoAn_DAO.insert_LoaiDoAn_DAO(loaiDoAn_DTO);
         }
+        public bool delete_LoaiDoAn_BUS(LoaiDoAn_DTO loaiDoAn_DTO)
+        {
+            return loaiDoAn_DAO.delete_LoaiDoAn_DAO(loaiDoAn_DTO);
+        }
+        public bool update_LoaiDoAn_BUS(LoaiDoAn_DTO loaiDoAn_DTO)
+        {
+            return loaiDoAn_DAO.update_LoaiDoAn_DAO(loaiDoAn_DTO);
+        }
     }
 }

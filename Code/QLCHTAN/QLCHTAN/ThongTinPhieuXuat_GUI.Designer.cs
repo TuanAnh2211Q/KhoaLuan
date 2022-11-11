@@ -33,14 +33,14 @@ namespace QLCHTAN
             this.dgvThongTinHangXuat = new System.Windows.Forms.DataGridView();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
-            this.grbThongTinphieuNhap = new System.Windows.Forms.GroupBox();
+            this.grbThongTinphieuXuat = new System.Windows.Forms.GroupBox();
             this.rtxtGhiChu = new System.Windows.Forms.RichTextBox();
             this.txtMaXuat = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.grbDanhSachHangXuat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinHangXuat)).BeginInit();
-            this.grbThongTinphieuNhap.SuspendLayout();
+            this.grbThongTinphieuXuat.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbDanhSachHangXuat
@@ -79,20 +79,20 @@ namespace QLCHTAN
             this.btnCapNhat.Text = "Cập nhật phiếu xuất";
             this.btnCapNhat.UseVisualStyleBackColor = true;
             // 
-            // grbThongTinphieuNhap
+            // grbThongTinphieuXuat
             // 
-            this.grbThongTinphieuNhap.Controls.Add(this.rtxtGhiChu);
-            this.grbThongTinphieuNhap.Controls.Add(this.txtMaXuat);
-            this.grbThongTinphieuNhap.Controls.Add(this.label1);
-            this.grbThongTinphieuNhap.Controls.Add(this.label3);
-            this.grbThongTinphieuNhap.Location = new System.Drawing.Point(13, 13);
-            this.grbThongTinphieuNhap.Margin = new System.Windows.Forms.Padding(4);
-            this.grbThongTinphieuNhap.Name = "grbThongTinphieuNhap";
-            this.grbThongTinphieuNhap.Padding = new System.Windows.Forms.Padding(4);
-            this.grbThongTinphieuNhap.Size = new System.Drawing.Size(622, 129);
-            this.grbThongTinphieuNhap.TabIndex = 4;
-            this.grbThongTinphieuNhap.TabStop = false;
-            this.grbThongTinphieuNhap.Text = "Thông tin phiếu nhập";
+            this.grbThongTinphieuXuat.Controls.Add(this.rtxtGhiChu);
+            this.grbThongTinphieuXuat.Controls.Add(this.txtMaXuat);
+            this.grbThongTinphieuXuat.Controls.Add(this.label1);
+            this.grbThongTinphieuXuat.Controls.Add(this.label3);
+            this.grbThongTinphieuXuat.Location = new System.Drawing.Point(13, 13);
+            this.grbThongTinphieuXuat.Margin = new System.Windows.Forms.Padding(4);
+            this.grbThongTinphieuXuat.Name = "grbThongTinphieuXuat";
+            this.grbThongTinphieuXuat.Padding = new System.Windows.Forms.Padding(4);
+            this.grbThongTinphieuXuat.Size = new System.Drawing.Size(622, 129);
+            this.grbThongTinphieuXuat.TabIndex = 4;
+            this.grbThongTinphieuXuat.TabStop = false;
+            this.grbThongTinphieuXuat.Text = "Thông tin phiếu xuất";
             // 
             // rtxtGhiChu
             // 
@@ -114,9 +114,9 @@ namespace QLCHTAN
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(8, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 19);
+            this.label1.Size = new System.Drawing.Size(69, 19);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Mã nhập:";
+            this.label1.Text = "Mã xuất:";
             // 
             // label3
             // 
@@ -133,7 +133,7 @@ namespace QLCHTAN
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(646, 525);
-            this.Controls.Add(this.grbThongTinphieuNhap);
+            this.Controls.Add(this.grbThongTinphieuXuat);
             this.Controls.Add(this.grbDanhSachHangXuat);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnCapNhat);
@@ -144,8 +144,8 @@ namespace QLCHTAN
             this.Text = "ThongTinPhieuXuat_GUI";
             this.grbDanhSachHangXuat.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinHangXuat)).EndInit();
-            this.grbThongTinphieuNhap.ResumeLayout(false);
-            this.grbThongTinphieuNhap.PerformLayout();
+            this.grbThongTinphieuXuat.ResumeLayout(false);
+            this.grbThongTinphieuXuat.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -155,7 +155,7 @@ namespace QLCHTAN
         private System.Windows.Forms.DataGridView dgvThongTinHangXuat;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnCapNhat;
-        private System.Windows.Forms.GroupBox grbThongTinphieuNhap;
+        private System.Windows.Forms.GroupBox grbThongTinphieuXuat;
         private System.Windows.Forms.TextBox txtMaXuat;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;

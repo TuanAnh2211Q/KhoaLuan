@@ -38,15 +38,16 @@ namespace QLCHTAN
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.grbThongTInLoaiKhuyenMai = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiKhuyenMai)).BeginInit();
+            this.grbThongTInLoaiKhuyenMai.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 89);
+            this.label1.Location = new System.Drawing.Point(20, 79);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 19);
@@ -56,7 +57,7 @@ namespace QLCHTAN
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 130);
+            this.label2.Location = new System.Drawing.Point(20, 120);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 19);
@@ -65,14 +66,14 @@ namespace QLCHTAN
             // 
             // txtMaLoaiKhuyenMai
             // 
-            this.txtMaLoaiKhuyenMai.Location = new System.Drawing.Point(165, 86);
+            this.txtMaLoaiKhuyenMai.Location = new System.Drawing.Point(172, 76);
             this.txtMaLoaiKhuyenMai.Name = "txtMaLoaiKhuyenMai";
             this.txtMaLoaiKhuyenMai.Size = new System.Drawing.Size(191, 27);
             this.txtMaLoaiKhuyenMai.TabIndex = 2;
             // 
             // txtTenLoaiKhuyenMai
             // 
-            this.txtTenLoaiKhuyenMai.Location = new System.Drawing.Point(165, 130);
+            this.txtTenLoaiKhuyenMai.Location = new System.Drawing.Point(172, 120);
             this.txtTenLoaiKhuyenMai.Name = "txtTenLoaiKhuyenMai";
             this.txtTenLoaiKhuyenMai.Size = new System.Drawing.Size(191, 27);
             this.txtTenLoaiKhuyenMai.TabIndex = 3;
@@ -80,9 +81,9 @@ namespace QLCHTAN
             // dgvLoaiKhuyenMai
             // 
             this.dgvLoaiKhuyenMai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLoaiKhuyenMai.Location = new System.Drawing.Point(12, 163);
+            this.dgvLoaiKhuyenMai.Location = new System.Drawing.Point(387, 21);
             this.dgvLoaiKhuyenMai.Name = "dgvLoaiKhuyenMai";
-            this.dgvLoaiKhuyenMai.Size = new System.Drawing.Size(344, 150);
+            this.dgvLoaiKhuyenMai.Size = new System.Drawing.Size(318, 185);
             this.dgvLoaiKhuyenMai.TabIndex = 4;
             // 
             // btnSua
@@ -90,7 +91,7 @@ namespace QLCHTAN
             this.btnSua.BackColor = System.Drawing.Color.Transparent;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSua.Location = new System.Drawing.Point(200, 319);
+            this.btnSua.Location = new System.Drawing.Point(468, 218);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 31);
             this.btnSua.TabIndex = 17;
@@ -102,7 +103,7 @@ namespace QLCHTAN
             this.btnXoa.BackColor = System.Drawing.Color.Transparent;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnXoa.Location = new System.Drawing.Point(119, 319);
+            this.btnXoa.Location = new System.Drawing.Point(549, 218);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 31);
             this.btnXoa.TabIndex = 16;
@@ -114,7 +115,7 @@ namespace QLCHTAN
             this.btnThem.BackColor = System.Drawing.Color.Transparent;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnThem.Location = new System.Drawing.Point(38, 319);
+            this.btnThem.Location = new System.Drawing.Point(630, 218);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 31);
             this.btnThem.TabIndex = 15;
@@ -126,46 +127,46 @@ namespace QLCHTAN
             this.btnLamMoi.BackColor = System.Drawing.Color.Transparent;
             this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLamMoi.Location = new System.Drawing.Point(281, 319);
+            this.btnLamMoi.Location = new System.Drawing.Point(387, 218);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(75, 31);
             this.btnLamMoi.TabIndex = 14;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // grbThongTInLoaiKhuyenMai
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(77, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(247, 26);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Thông tin loại khuyến mãi";
+            this.grbThongTInLoaiKhuyenMai.Controls.Add(this.txtTenLoaiKhuyenMai);
+            this.grbThongTInLoaiKhuyenMai.Controls.Add(this.label1);
+            this.grbThongTInLoaiKhuyenMai.Controls.Add(this.label2);
+            this.grbThongTInLoaiKhuyenMai.Controls.Add(this.txtMaLoaiKhuyenMai);
+            this.grbThongTInLoaiKhuyenMai.Location = new System.Drawing.Point(12, 12);
+            this.grbThongTInLoaiKhuyenMai.Name = "grbThongTInLoaiKhuyenMai";
+            this.grbThongTInLoaiKhuyenMai.Size = new System.Drawing.Size(369, 237);
+            this.grbThongTInLoaiKhuyenMai.TabIndex = 19;
+            this.grbThongTInLoaiKhuyenMai.TabStop = false;
+            this.grbThongTInLoaiKhuyenMai.Text = "Thông tin loại khuyến mãi";
             // 
             // LoaiKhuyenMai_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 366);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(718, 272);
+            this.Controls.Add(this.grbThongTInLoaiKhuyenMai);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.dgvLoaiKhuyenMai);
-            this.Controls.Add(this.txtTenLoaiKhuyenMai);
-            this.Controls.Add(this.txtMaLoaiKhuyenMai);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoaiKhuyenMai_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoaiKhuyenMai";
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiKhuyenMai)).EndInit();
+            this.grbThongTInLoaiKhuyenMai.ResumeLayout(false);
+            this.grbThongTInLoaiKhuyenMai.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -180,6 +181,6 @@ namespace QLCHTAN
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnLamMoi;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox grbThongTInLoaiKhuyenMai;
     }
 }
