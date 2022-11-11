@@ -72,6 +72,7 @@ namespace QLCHTAN
             this.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "CSDL";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CSDL";
             this.Load += new System.EventHandler(this.CSDL_Load);
             this.ResumeLayout(false);

@@ -22,7 +22,7 @@ namespace QLCHTAN
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();
-            lblDate.Text = DateTime.Now.ToLongDateString();
+            lblDate.Text = DateTime.Now.ToShortDateString();
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
@@ -37,6 +37,12 @@ namespace QLCHTAN
 
                 MessageBox.Show("Tài Khoản hoặc Mật Khẩu không đúng!!!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        
+        private void llblQuenMatKhau_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Vui lòng liên hệ quản lí để đặt lại mật khẩu");
         }
     }
 }

@@ -230,6 +230,7 @@ namespace QLCHTAN
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "NuocUong_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nước uống";
             ((System.ComponentModel.ISupportInitialize)(this.dgvNuocUong)).EndInit();
             this.ResumeLayout(false);

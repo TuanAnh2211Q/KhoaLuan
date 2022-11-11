@@ -36,16 +36,19 @@ namespace QLCHTAN
             this.label3 = new System.Windows.Forms.Label();
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.llblQuenMatKhau = new System.Windows.Forms.LinkLabel();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(206, 295);
+            this.btnDangNhap.Location = new System.Drawing.Point(251, 212);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(172, 74);
+            this.btnDangNhap.Size = new System.Drawing.Size(152, 35);
             this.btnDangNhap.TabIndex = 0;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
@@ -54,18 +57,18 @@ namespace QLCHTAN
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Green;
-            this.label1.Location = new System.Drawing.Point(123, 44);
+            this.label1.Location = new System.Drawing.Point(118, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(389, 29);
+            this.label1.Size = new System.Drawing.Size(344, 29);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Hãy Đăng Nhập Để Bắt Đầu Ca Làm !!!";
+            this.label1.Text = "Đăng Nhập Để Bắt Đầu Ca Làm !!!";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 141);
+            this.label2.Location = new System.Drawing.Point(52, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 23);
             this.label2.TabIndex = 2;
@@ -74,7 +77,7 @@ namespace QLCHTAN
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 214);
+            this.label3.Location = new System.Drawing.Point(52, 169);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 23);
             this.label3.TabIndex = 3;
@@ -82,51 +85,84 @@ namespace QLCHTAN
             // 
             // txtTaiKhoan
             // 
-            this.txtTaiKhoan.Location = new System.Drawing.Point(182, 132);
+            this.txtTaiKhoan.Location = new System.Drawing.Point(180, 106);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(341, 31);
             this.txtTaiKhoan.TabIndex = 4;
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(182, 205);
+            this.txtMatKhau.Location = new System.Drawing.Point(180, 160);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(341, 31);
             this.txtMatKhau.TabIndex = 5;
             // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.ForeColor = System.Drawing.Color.Navy;
-            this.lblTime.Location = new System.Drawing.Point(364, 411);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(40, 23);
-            this.lblTime.TabIndex = 6;
-            this.lblTime.Text = "Giờ";
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.ForeColor = System.Drawing.Color.Navy;
-            this.lblDate.Location = new System.Drawing.Point(364, 444);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(51, 23);
-            this.lblDate.TabIndex = 7;
-            this.lblDate.Text = "Ngày";
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // FormDangNhap
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(392, 289);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Thời gian hiện tại:";
+            // 
+            // llblQuenMatKhau
+            // 
+            this.llblQuenMatKhau.AutoSize = true;
+            this.llblQuenMatKhau.Font = new System.Drawing.Font("Candara Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblQuenMatKhau.Location = new System.Drawing.Point(276, 250);
+            this.llblQuenMatKhau.Name = "llblQuenMatKhau";
+            this.llblQuenMatKhau.Size = new System.Drawing.Size(94, 15);
+            this.llblQuenMatKhau.TabIndex = 7;
+            this.llblQuenMatKhau.TabStop = true;
+            this.llblQuenMatKhau.Text = "Quên mật khẩu ?";
+            this.llblQuenMatKhau.Click += new System.EventHandler(this.llblQuenMatKhau_Click);
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Location = new System.Drawing.Point(482, 289);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(0, 13);
+            this.lblTime.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(392, 276);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Ngày hiện tại:";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(468, 276);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(0, 13);
+            this.lblDate.TabIndex = 10;
+            // 
+            // DangNhap_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(585, 503);
+            this.ClientSize = new System.Drawing.Size(585, 311);
             this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.lblTime);
+            this.Controls.Add(this.llblQuenMatKhau);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTaiKhoan);
             this.Controls.Add(this.label3);
@@ -135,7 +171,7 @@ namespace QLCHTAN
             this.Controls.Add(this.btnDangNhap);
             this.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.Name = "FormDangNhap";
+            this.Name = "DangNhap_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
             this.ResumeLayout(false);
@@ -151,8 +187,11 @@ namespace QLCHTAN
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTaiKhoan;
         private System.Windows.Forms.TextBox txtMatKhau;
-        private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.LinkLabel llblQuenMatKhau;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblDate;
     }
 }

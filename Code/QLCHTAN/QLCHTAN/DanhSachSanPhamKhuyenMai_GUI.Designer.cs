@@ -188,7 +188,7 @@ namespace QLCHTAN
             this.label2.TabIndex = 36;
             this.label2.Text = "label2";
             // 
-            // DanhSachKhuyenMai_GUI
+            // DanhSachSanPhamKhuyenMai_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -209,8 +209,9 @@ namespace QLCHTAN
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "DanhSachKhuyenMai_GUI";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "DanhSachSanPhamKhuyenMai_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DanhSachKhuyenMai_GUI";
             this.Load += new System.EventHandler(this.DanhSachKhuyenMai_GUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPhamKhuyenMai)).EndInit();
