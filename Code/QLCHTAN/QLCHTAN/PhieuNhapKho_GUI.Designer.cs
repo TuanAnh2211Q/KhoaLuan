@@ -29,6 +29,7 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ccbMaDatHang = new System.Windows.Forms.ComboBox();
             this.dtNgayNhap = new System.Windows.Forms.DateTimePicker();
@@ -39,6 +40,10 @@ namespace QLCHTAN
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPhieuNhap = new System.Windows.Forms.DataGridView();
+            this.maNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maDatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ghiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThongTinChiTiet = new System.Windows.Forms.Button();
             this.btnThemPhieuNhap = new System.Windows.Forms.Button();
             this.btnHuyPhieuNhap = new System.Windows.Forms.Button();
@@ -136,11 +141,45 @@ namespace QLCHTAN
             // 
             // dgvPhieuNhap
             // 
+            this.dgvPhieuNhap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPhieuNhap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maNhap,
+            this.ngayNhap,
+            this.maDatHang,
+            this.ghiChu});
             this.dgvPhieuNhap.Location = new System.Drawing.Point(381, 32);
             this.dgvPhieuNhap.Name = "dgvPhieuNhap";
             this.dgvPhieuNhap.Size = new System.Drawing.Size(518, 271);
             this.dgvPhieuNhap.TabIndex = 1;
+            // 
+            // maNhap
+            // 
+            this.maNhap.HeaderText = "Mã nhập";
+            this.maNhap.Name = "maNhap";
+            // 
+            // ngayNhap
+            // 
+            this.ngayNhap.HeaderText = "Ngày nhập";
+            this.ngayNhap.Name = "ngayNhap";
+            // 
+            // maDatHang
+            // 
+            this.maDatHang.HeaderText = "Mã đặt hàng";
+            this.maDatHang.Name = "maDatHang";
+            // 
+            // ghiChu
+            // 
+            this.ghiChu.HeaderText = "Ghi chú";
+            this.ghiChu.Name = "ghiChu";
             // 
             // btnThongTinChiTiet
             // 
@@ -207,5 +246,9 @@ namespace QLCHTAN
         private System.Windows.Forms.Button btnHuyPhieuNhap;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ComboBox ccbMaDatHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maNhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayNhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maDatHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ghiChu;
     }
 }

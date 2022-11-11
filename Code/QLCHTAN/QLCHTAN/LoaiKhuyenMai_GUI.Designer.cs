@@ -29,6 +29,8 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaLoaiKhuyenMai = new System.Windows.Forms.TextBox();
@@ -39,6 +41,8 @@ namespace QLCHTAN
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.grbThongTInLoaiKhuyenMai = new System.Windows.Forms.GroupBox();
+            this.MaLoaiKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLoaiKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiKhuyenMai)).BeginInit();
             this.grbThongTInLoaiKhuyenMai.SuspendLayout();
             this.SuspendLayout();
@@ -80,10 +84,29 @@ namespace QLCHTAN
             // 
             // dgvLoaiKhuyenMai
             // 
-            this.dgvLoaiKhuyenMai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLoaiKhuyenMai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLoaiKhuyenMai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvLoaiKhuyenMai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaLoaiKhuyenMai,
+            this.TenLoaiKhuyenMai});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLoaiKhuyenMai.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvLoaiKhuyenMai.Location = new System.Drawing.Point(387, 21);
             this.dgvLoaiKhuyenMai.Name = "dgvLoaiKhuyenMai";
-            this.dgvLoaiKhuyenMai.Size = new System.Drawing.Size(318, 185);
+            this.dgvLoaiKhuyenMai.Size = new System.Drawing.Size(346, 185);
             this.dgvLoaiKhuyenMai.TabIndex = 4;
             // 
             // btnSua
@@ -147,11 +170,23 @@ namespace QLCHTAN
             this.grbThongTInLoaiKhuyenMai.TabStop = false;
             this.grbThongTInLoaiKhuyenMai.Text = "Thông tin loại khuyến mãi";
             // 
+            // MaLoaiKhuyenMai
+            // 
+            this.MaLoaiKhuyenMai.DataPropertyName = "maLoaiKhuyenMai";
+            this.MaLoaiKhuyenMai.HeaderText = "Mã loại khuyến mãi";
+            this.MaLoaiKhuyenMai.Name = "MaLoaiKhuyenMai";
+            // 
+            // TenLoaiKhuyenMai
+            // 
+            this.TenLoaiKhuyenMai.DataPropertyName = "tenLoaiKhuyenMai";
+            this.TenLoaiKhuyenMai.HeaderText = "Tên loại khuyến mãi";
+            this.TenLoaiKhuyenMai.Name = "TenLoaiKhuyenMai";
+            // 
             // LoaiKhuyenMai_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 272);
+            this.ClientSize = new System.Drawing.Size(745, 272);
             this.Controls.Add(this.grbThongTInLoaiKhuyenMai);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
@@ -182,5 +217,7 @@ namespace QLCHTAN
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.GroupBox grbThongTInLoaiKhuyenMai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiKhuyenMai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenLoaiKhuyenMai;
     }
 }

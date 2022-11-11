@@ -29,6 +29,7 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,13 +45,19 @@ namespace QLCHTAN
             this.label8 = new System.Windows.Forms.Label();
             this.cbbLoaiNV = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvNhanVien = new System.Windows.Forms.DataGridView();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
+            this.tenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loaiNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -113,7 +120,7 @@ namespace QLCHTAN
             this.txtTen.Location = new System.Drawing.Point(146, 36);
             this.txtTen.Name = "txtTen";
             this.txtTen.ReadOnly = true;
-            this.txtTen.Size = new System.Drawing.Size(226, 27);
+            this.txtTen.Size = new System.Drawing.Size(752, 27);
             this.txtTen.TabIndex = 6;
             // 
             // cbbGioiTinh
@@ -122,7 +129,7 @@ namespace QLCHTAN
             this.cbbGioiTinh.FormattingEnabled = true;
             this.cbbGioiTinh.Location = new System.Drawing.Point(146, 69);
             this.cbbGioiTinh.Name = "cbbGioiTinh";
-            this.cbbGioiTinh.Size = new System.Drawing.Size(226, 27);
+            this.cbbGioiTinh.Size = new System.Drawing.Size(752, 27);
             this.cbbGioiTinh.TabIndex = 7;
             // 
             // cbbChucVu
@@ -131,7 +138,7 @@ namespace QLCHTAN
             this.cbbChucVu.FormattingEnabled = true;
             this.cbbChucVu.Location = new System.Drawing.Point(146, 102);
             this.cbbChucVu.Name = "cbbChucVu";
-            this.cbbChucVu.Size = new System.Drawing.Size(226, 27);
+            this.cbbChucVu.Size = new System.Drawing.Size(752, 27);
             this.cbbChucVu.TabIndex = 8;
             // 
             // txtDiaChi
@@ -140,7 +147,7 @@ namespace QLCHTAN
             this.txtDiaChi.Location = new System.Drawing.Point(146, 201);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.ReadOnly = true;
-            this.txtDiaChi.Size = new System.Drawing.Size(226, 27);
+            this.txtDiaChi.Size = new System.Drawing.Size(752, 27);
             this.txtDiaChi.TabIndex = 9;
             // 
             // txtEmail
@@ -149,7 +156,7 @@ namespace QLCHTAN
             this.txtEmail.Location = new System.Drawing.Point(146, 135);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(226, 27);
+            this.txtEmail.Size = new System.Drawing.Size(752, 27);
             this.txtEmail.TabIndex = 10;
             // 
             // txtSDT
@@ -158,7 +165,7 @@ namespace QLCHTAN
             this.txtSDT.Location = new System.Drawing.Point(146, 168);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.ReadOnly = true;
-            this.txtSDT.Size = new System.Drawing.Size(226, 27);
+            this.txtSDT.Size = new System.Drawing.Size(752, 27);
             this.txtSDT.TabIndex = 11;
             // 
             // label8
@@ -176,7 +183,7 @@ namespace QLCHTAN
             this.cbbLoaiNV.FormattingEnabled = true;
             this.cbbLoaiNV.Location = new System.Drawing.Point(146, 234);
             this.cbbLoaiNV.Name = "cbbLoaiNV";
-            this.cbbLoaiNV.Size = new System.Drawing.Size(226, 27);
+            this.cbbLoaiNV.Size = new System.Drawing.Size(752, 27);
             this.cbbLoaiNV.TabIndex = 29;
             // 
             // groupBox1
@@ -198,25 +205,41 @@ namespace QLCHTAN
             this.groupBox1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(431, 310);
+            this.groupBox1.Size = new System.Drawing.Size(904, 310);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhân viên";
             // 
-            // dataGridView1
+            // dgvNhanVien
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(449, 48);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(468, 225);
-            this.dataGridView1.TabIndex = 31;
+            this.dgvNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tenNhanVien,
+            this.SDT,
+            this.diaChi,
+            this.loaiNhanVien,
+            this.Phai,
+            this.Email});
+            this.dgvNhanVien.Location = new System.Drawing.Point(12, 328);
+            this.dgvNhanVien.Name = "dgvNhanVien";
+            this.dgvNhanVien.Size = new System.Drawing.Size(905, 225);
+            this.dgvNhanVien.TabIndex = 31;
             // 
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.Transparent;
             this.btnSua.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSua.Location = new System.Drawing.Point(569, 280);
+            this.btnSua.Location = new System.Drawing.Point(568, 560);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(108, 45);
@@ -229,7 +252,7 @@ namespace QLCHTAN
             this.btnXoa.BackColor = System.Drawing.Color.Transparent;
             this.btnXoa.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnXoa.Location = new System.Drawing.Point(689, 280);
+            this.btnXoa.Location = new System.Drawing.Point(688, 560);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(108, 45);
@@ -242,7 +265,7 @@ namespace QLCHTAN
             this.btnThem.BackColor = System.Drawing.Color.Transparent;
             this.btnThem.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnThem.Location = new System.Drawing.Point(809, 280);
+            this.btnThem.Location = new System.Drawing.Point(808, 560);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(108, 45);
@@ -255,7 +278,7 @@ namespace QLCHTAN
             this.btnLamMoi.BackColor = System.Drawing.Color.Transparent;
             this.btnLamMoi.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLamMoi.Location = new System.Drawing.Point(449, 280);
+            this.btnLamMoi.Location = new System.Drawing.Point(448, 560);
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(4);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(108, 45);
@@ -263,17 +286,53 @@ namespace QLCHTAN
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = false;
             // 
+            // tenNhanVien
+            // 
+            this.tenNhanVien.DataPropertyName = "tenNhanVien";
+            this.tenNhanVien.HeaderText = "Họ và tên";
+            this.tenNhanVien.Name = "tenNhanVien";
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.HeaderText = "SĐT";
+            this.SDT.Name = "SDT";
+            // 
+            // diaChi
+            // 
+            this.diaChi.DataPropertyName = "diaChi";
+            this.diaChi.HeaderText = "Địa chỉ";
+            this.diaChi.Name = "diaChi";
+            // 
+            // loaiNhanVien
+            // 
+            this.loaiNhanVien.DataPropertyName = "TenLoaiNhanVien";
+            this.loaiNhanVien.HeaderText = "Loại nhân viên";
+            this.loaiNhanVien.Name = "loaiNhanVien";
+            // 
+            // Phai
+            // 
+            this.Phai.DataPropertyName = "Phai";
+            this.Phai.HeaderText = "Giới tính";
+            this.Phai.Name = "Phai";
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            // 
             // FormThongTinNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(929, 336);
+            this.ClientSize = new System.Drawing.Size(929, 660);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnLamMoi);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvNhanVien);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -282,7 +341,7 @@ namespace QLCHTAN
             this.Text = "Thông Tin Nhân Viên";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -304,10 +363,16 @@ namespace QLCHTAN
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbbLoaiNV;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvNhanVien;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnLamMoi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenNhanVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loaiNhanVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Phai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
     }
 }

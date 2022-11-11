@@ -29,6 +29,7 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,6 +48,12 @@ namespace QLCHTAN
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.maNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhaCungCap)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -151,8 +158,24 @@ namespace QLCHTAN
             // dgvNhaCungCap
             // 
             this.dgvNhaCungCap.AllowUserToDeleteRows = false;
+            this.dgvNhaCungCap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNhaCungCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvNhaCungCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNhaCungCap.Location = new System.Drawing.Point(365, 18);
+            this.dgvNhaCungCap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maNhaCungCap,
+            this.tenNhaCungCap,
+            this.diaChi,
+            this.Email,
+            this.SDT,
+            this.GhiChu});
+            this.dgvNhaCungCap.Location = new System.Drawing.Point(376, 18);
             this.dgvNhaCungCap.Name = "dgvNhaCungCap";
             this.dgvNhaCungCap.Size = new System.Drawing.Size(520, 238);
             this.dgvNhaCungCap.TabIndex = 13;
@@ -226,6 +249,43 @@ namespace QLCHTAN
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhà cung cấp";
             // 
+            // maNhaCungCap
+            // 
+            this.maNhaCungCap.DataPropertyName = "maNCC";
+            this.maNhaCungCap.HeaderText = "Mã nhà cung cấp";
+            this.maNhaCungCap.Name = "maNhaCungCap";
+            this.maNhaCungCap.Visible = false;
+            // 
+            // tenNhaCungCap
+            // 
+            this.tenNhaCungCap.DataPropertyName = "tenNCC";
+            this.tenNhaCungCap.HeaderText = "Tên nhà cung cấp";
+            this.tenNhaCungCap.Name = "tenNhaCungCap";
+            // 
+            // diaChi
+            // 
+            this.diaChi.DataPropertyName = "diachiNCC";
+            this.diaChi.HeaderText = "Địa chỉ";
+            this.diaChi.Name = "diaChi";
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "emailNCC";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "sdtNCC";
+            this.SDT.HeaderText = "Số điện thoại";
+            this.SDT.Name = "SDT";
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "ghiChu";
+            this.GhiChu.HeaderText = "Ghi chú";
+            this.GhiChu.Name = "GhiChu";
+            // 
             // NhaCungCap_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -268,5 +328,11 @@ namespace QLCHTAN
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maNhaCungCap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenNhaCungCap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
     }
 }

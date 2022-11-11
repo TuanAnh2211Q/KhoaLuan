@@ -10,13 +10,23 @@ using System.Windows.Forms;
 
 namespace QLCHTAN
 {
-    public partial class NuocUong_GUI : Form
+    public partial class ThanhToan_GUI : Form
     {
-        public NuocUong_GUI()
+        public ThanhToan_GUI()
         {
             InitializeComponent();
         }
 
       
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

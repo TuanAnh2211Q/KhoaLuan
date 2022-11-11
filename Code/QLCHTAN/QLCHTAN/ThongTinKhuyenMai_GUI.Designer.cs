@@ -29,6 +29,7 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,6 +45,10 @@ namespace QLCHTAN
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.S = new System.Windows.Forms.ComboBox();
+            this.maKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenLoaiKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mucGiam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinKhuyenMai)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,7 +123,21 @@ namespace QLCHTAN
             // 
             // dgvThongTinKhuyenMai
             // 
+            this.dgvThongTinKhuyenMai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvThongTinKhuyenMai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvThongTinKhuyenMai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThongTinKhuyenMai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maKhuyenMai,
+            this.tenKhuyenMai,
+            this.tenLoaiKhuyenMai,
+            this.mucGiam});
             this.dgvThongTinKhuyenMai.Location = new System.Drawing.Point(48, 287);
             this.dgvThongTinKhuyenMai.Name = "dgvThongTinKhuyenMai";
             this.dgvThongTinKhuyenMai.Size = new System.Drawing.Size(423, 197);
@@ -190,6 +209,26 @@ namespace QLCHTAN
             this.S.Size = new System.Drawing.Size(304, 27);
             this.S.TabIndex = 22;
             // 
+            // maKhuyenMai
+            // 
+            this.maKhuyenMai.HeaderText = "Mã khuyến mãi";
+            this.maKhuyenMai.Name = "maKhuyenMai";
+            // 
+            // tenKhuyenMai
+            // 
+            this.tenKhuyenMai.HeaderText = "Tên khuyến mãi";
+            this.tenKhuyenMai.Name = "tenKhuyenMai";
+            // 
+            // tenLoaiKhuyenMai
+            // 
+            this.tenLoaiKhuyenMai.HeaderText = "Loại khuyến mãi";
+            this.tenLoaiKhuyenMai.Name = "tenLoaiKhuyenMai";
+            // 
+            // mucGiam
+            // 
+            this.mucGiam.HeaderText = "Mức giảm";
+            this.mucGiam.Name = "mucGiam";
+            // 
             // ThongTinKhuyenMai_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -238,5 +277,9 @@ namespace QLCHTAN
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.ComboBox S;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maKhuyenMai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenKhuyenMai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenLoaiKhuyenMai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mucGiam;
     }
 }

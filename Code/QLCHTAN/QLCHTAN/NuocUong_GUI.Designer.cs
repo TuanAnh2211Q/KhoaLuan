@@ -29,11 +29,17 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.dgvNuocUong = new System.Windows.Forms.DataGridView();
+            this.MaNuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonViBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rtxtGhiChu = new System.Windows.Forms.RichTextBox();
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.txtMaNuoc = new System.Windows.Forms.TextBox();
@@ -43,8 +49,8 @@ namespace QLCHTAN
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.grbThongTinNuocUong = new System.Windows.Forms.GroupBox();
-            this.txtDonViBan = new System.Windows.Forms.TextBox();
             this.txtTenNuoc = new System.Windows.Forms.TextBox();
+            this.txtDonViBan = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNuocUong)).BeginInit();
             this.grbThongTinNuocUong.SuspendLayout();
             this.SuspendLayout();
@@ -54,8 +60,8 @@ namespace QLCHTAN
             this.btnSua.BackColor = System.Drawing.Color.Transparent;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSua.Location = new System.Drawing.Point(650, 285);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSua.Location = new System.Drawing.Point(567, 285);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(112, 45);
             this.btnSua.TabIndex = 41;
@@ -67,8 +73,8 @@ namespace QLCHTAN
             this.btnXoa.BackColor = System.Drawing.Color.Transparent;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnXoa.Location = new System.Drawing.Point(770, 285);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoa.Location = new System.Drawing.Point(687, 285);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(112, 45);
             this.btnXoa.TabIndex = 40;
@@ -80,8 +86,8 @@ namespace QLCHTAN
             this.btnThem.BackColor = System.Drawing.Color.Transparent;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnThem.Location = new System.Drawing.Point(890, 285);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThem.Location = new System.Drawing.Point(807, 285);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(112, 45);
             this.btnThem.TabIndex = 39;
@@ -93,8 +99,8 @@ namespace QLCHTAN
             this.btnLamMoi.BackColor = System.Drawing.Color.Transparent;
             this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLamMoi.Location = new System.Drawing.Point(530, 285);
-            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLamMoi.Location = new System.Drawing.Point(447, 285);
+            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(4);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(112, 45);
             this.btnLamMoi.TabIndex = 38;
@@ -103,22 +109,67 @@ namespace QLCHTAN
             // 
             // dgvNuocUong
             // 
+            this.dgvNuocUong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNuocUong.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNuocUong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvNuocUong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNuocUong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaNuoc,
+            this.TenNuoc,
+            this.DonViBan,
+            this.DonGia,
+            this.GhiChu});
             this.dgvNuocUong.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvNuocUong.Location = new System.Drawing.Point(478, 32);
-            this.dgvNuocUong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvNuocUong.Location = new System.Drawing.Point(395, 32);
+            this.dgvNuocUong.Margin = new System.Windows.Forms.Padding(4);
             this.dgvNuocUong.Name = "dgvNuocUong";
-            this.dgvNuocUong.Size = new System.Drawing.Size(524, 237);
+            this.dgvNuocUong.Size = new System.Drawing.Size(559, 237);
             this.dgvNuocUong.TabIndex = 37;
+            // 
+            // MaNuoc
+            // 
+            this.MaNuoc.DataPropertyName = "maNuoc";
+            this.MaNuoc.HeaderText = "Mã nước";
+            this.MaNuoc.Name = "MaNuoc";
+            // 
+            // TenNuoc
+            // 
+            this.TenNuoc.DataPropertyName = "tenNuoc";
+            this.TenNuoc.HeaderText = "Tên nước";
+            this.TenNuoc.Name = "TenNuoc";
+            // 
+            // DonViBan
+            // 
+            this.DonViBan.DataPropertyName = "donViBan";
+            this.DonViBan.HeaderText = "Đơn vị bán";
+            this.DonViBan.Name = "DonViBan";
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "donGia";
+            this.DonGia.HeaderText = "Đơn giá";
+            this.DonGia.Name = "DonGia";
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "ghiChu";
+            this.GhiChu.HeaderText = "Ghi chú";
+            this.GhiChu.Name = "GhiChu";
             // 
             // rtxtGhiChu
             // 
             this.rtxtGhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtxtGhiChu.Location = new System.Drawing.Point(135, 179);
-            this.rtxtGhiChu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtxtGhiChu.Margin = new System.Windows.Forms.Padding(4);
             this.rtxtGhiChu.Name = "rtxtGhiChu";
-            this.rtxtGhiChu.Size = new System.Drawing.Size(284, 68);
+            this.rtxtGhiChu.Size = new System.Drawing.Size(219, 68);
             this.rtxtGhiChu.TabIndex = 36;
             this.rtxtGhiChu.Text = "";
             // 
@@ -126,18 +177,18 @@ namespace QLCHTAN
             // 
             this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonGia.Location = new System.Drawing.Point(135, 147);
-            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(284, 24);
+            this.txtDonGia.Size = new System.Drawing.Size(219, 24);
             this.txtDonGia.TabIndex = 34;
             // 
             // txtMaNuoc
             // 
             this.txtMaNuoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNuoc.Location = new System.Drawing.Point(135, 51);
-            this.txtMaNuoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaNuoc.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaNuoc.Name = "txtMaNuoc";
-            this.txtMaNuoc.Size = new System.Drawing.Size(284, 24);
+            this.txtMaNuoc.Size = new System.Drawing.Size(219, 24);
             this.txtMaNuoc.TabIndex = 33;
             // 
             // label4
@@ -208,22 +259,13 @@ namespace QLCHTAN
             this.grbThongTinNuocUong.Controls.Add(this.txtDonViBan);
             this.grbThongTinNuocUong.Controls.Add(this.rtxtGhiChu);
             this.grbThongTinNuocUong.Location = new System.Drawing.Point(13, 22);
-            this.grbThongTinNuocUong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbThongTinNuocUong.Margin = new System.Windows.Forms.Padding(4);
             this.grbThongTinNuocUong.Name = "grbThongTinNuocUong";
-            this.grbThongTinNuocUong.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grbThongTinNuocUong.Size = new System.Drawing.Size(457, 308);
+            this.grbThongTinNuocUong.Padding = new System.Windows.Forms.Padding(4);
+            this.grbThongTinNuocUong.Size = new System.Drawing.Size(374, 308);
             this.grbThongTinNuocUong.TabIndex = 44;
             this.grbThongTinNuocUong.TabStop = false;
             this.grbThongTinNuocUong.Text = "Thông tin nước uống";
-            // 
-            // txtDonViBan
-            // 
-            this.txtDonViBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDonViBan.Location = new System.Drawing.Point(135, 115);
-            this.txtDonViBan.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDonViBan.Name = "txtDonViBan";
-            this.txtDonViBan.Size = new System.Drawing.Size(284, 24);
-            this.txtDonViBan.TabIndex = 35;
             // 
             // txtTenNuoc
             // 
@@ -231,14 +273,23 @@ namespace QLCHTAN
             this.txtTenNuoc.Location = new System.Drawing.Point(135, 83);
             this.txtTenNuoc.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNuoc.Name = "txtTenNuoc";
-            this.txtTenNuoc.Size = new System.Drawing.Size(284, 24);
+            this.txtTenNuoc.Size = new System.Drawing.Size(219, 24);
             this.txtTenNuoc.TabIndex = 44;
+            // 
+            // txtDonViBan
+            // 
+            this.txtDonViBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDonViBan.Location = new System.Drawing.Point(135, 115);
+            this.txtDonViBan.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDonViBan.Name = "txtDonViBan";
+            this.txtDonViBan.Size = new System.Drawing.Size(219, 24);
+            this.txtDonViBan.TabIndex = 35;
             // 
             // NuocUong_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 353);
+            this.ClientSize = new System.Drawing.Size(961, 353);
             this.Controls.Add(this.grbThongTinNuocUong);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
@@ -246,7 +297,7 @@ namespace QLCHTAN
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.dgvNuocUong);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NuocUong_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nước uống";
@@ -274,5 +325,10 @@ namespace QLCHTAN
         private System.Windows.Forms.GroupBox grbThongTinNuocUong;
         private System.Windows.Forms.TextBox txtTenNuoc;
         private System.Windows.Forms.TextBox txtDonViBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNuoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenNuoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonViBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
     }
 }

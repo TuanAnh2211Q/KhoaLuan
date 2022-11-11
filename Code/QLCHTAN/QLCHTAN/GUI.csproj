@@ -58,6 +58,12 @@
     <Compile Include="DangNhap_GUI.Designer.cs">
       <DependentUpon>DangNhap_GUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMucMon_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMucMon_GUI.Designer.cs">
+      <DependentUpon>DanhMucMon_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhSachSanPhamKhuyenMai_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,12 @@
     <Compile Include="NuocUong_GUI.Designer.cs">
       <DependentUpon>NuocUong_GUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Order_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_GUI.Designer.cs">
+      <DependentUpon>Order_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="PhanQuyen_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,17 +138,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLyTaiKhoan_GUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLyTaiKhoan_GUI.Designer.cs">
-      <DependentUpon>QuanLyTaiKhoan_GUI.cs</DependentUpon>
-    </Compile>
     <Compile Include="TaiKhoan_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TaiKhoan_GUI.Designer.cs">
       <DependentUpon>TaiKhoan_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThanhToan_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThanhToan_GUI.Designer.cs">
+      <DependentUpon>ThanhToan_GUI.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemPhieuNhap_GUI.cs">
       <SubType>Form</SubType>
@@ -186,6 +198,9 @@
     <EmbeddedResource Include="DangNhap_GUI.resx">
       <DependentUpon>DangNhap_GUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DanhMucMon_GUI.resx">
+      <DependentUpon>DanhMucMon_GUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhSachSanPhamKhuyenMai_GUI.resx">
       <DependentUpon>DanhSachSanPhamKhuyenMai_GUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +225,9 @@
     <EmbeddedResource Include="NuocUong_GUI.resx">
       <DependentUpon>NuocUong_GUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Order_GUI.resx">
+      <DependentUpon>Order_GUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PhanQuyen_GUI.resx">
       <DependentUpon>PhanQuyen_GUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,11 +246,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="QuanLyTaiKhoan_GUI.resx">
-      <DependentUpon>QuanLyTaiKhoan_GUI.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="TaiKhoan_GUI.resx">
       <DependentUpon>TaiKhoan_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThanhToan_GUI.resx">
+      <DependentUpon>ThanhToan_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemPhieuNhap_GUI.resx">
       <DependentUpon>ThemPhieuNhap_GUI.cs</DependentUpon>

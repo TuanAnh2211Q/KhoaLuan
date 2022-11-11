@@ -29,19 +29,23 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaQuyen = new System.Windows.Forms.TextBox();
             this.txtTenQuyen = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.rtxtGhiChu = new System.Windows.Forms.RichTextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPhanQuyen = new System.Windows.Forms.DataGridView();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.maQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ghiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhanQuyen)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,13 +98,26 @@ namespace QLCHTAN
             this.rtxtGhiChu.TabIndex = 5;
             this.rtxtGhiChu.Text = "";
             // 
-            // dataGridView1
+            // dgvPhanQuyen
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(470, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(395, 150);
-            this.dataGridView1.TabIndex = 6;
+            this.dgvPhanQuyen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPhanQuyen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPhanQuyen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhanQuyen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maQuyen,
+            this.tenQuyen,
+            this.ghiChu});
+            this.dgvPhanQuyen.Location = new System.Drawing.Point(470, 25);
+            this.dgvPhanQuyen.Name = "dgvPhanQuyen";
+            this.dgvPhanQuyen.Size = new System.Drawing.Size(395, 150);
+            this.dgvPhanQuyen.TabIndex = 6;
             // 
             // btnSua
             // 
@@ -165,6 +182,24 @@ namespace QLCHTAN
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin quyền";
             // 
+            // maQuyen
+            // 
+            this.maQuyen.DataPropertyName = "maQuyen";
+            this.maQuyen.HeaderText = "Mã quyền";
+            this.maQuyen.Name = "maQuyen";
+            // 
+            // tenQuyen
+            // 
+            this.tenQuyen.DataPropertyName = "tenQuyen";
+            this.tenQuyen.HeaderText = "Tên quyền";
+            this.tenQuyen.Name = "tenQuyen";
+            // 
+            // ghiChu
+            // 
+            this.ghiChu.DataPropertyName = "ghiChu";
+            this.ghiChu.HeaderText = "Ghi chú";
+            this.ghiChu.Name = "ghiChu";
+            // 
             // PhanQuyen_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -175,13 +210,13 @@ namespace QLCHTAN
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnLamMoi);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvPhanQuyen);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PhanQuyen_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PhanQuyen_GUI";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhanQuyen)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -196,11 +231,14 @@ namespace QLCHTAN
         private System.Windows.Forms.TextBox txtTenQuyen;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox rtxtGhiChu;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPhanQuyen;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maQuyen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenQuyen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ghiChu;
     }
 }
