@@ -67,5 +67,45 @@ namespace QLCHTAN
                 return;
             btnLamMoi_Click(sender, e);
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            DialogResult them = MessageBox.Show("Bạn có muốn xóa loại đồ ăn", "Thông báo", MessageBoxButtons.YesNo);
+            if (them == DialogResult.Yes)
+            {
+                if (txtMaLoaiDoAn.Text != "" && txtTenLoaiDoAn.Text != "")
+                {
+                    if (loaiDoAn_BUS.delete_LoaiDoAn_BUS(loaiDoAn_DTO()))
+                        MessageBox.Show("Xóa loại đồ ăn thành công");
+                    else
+                        MessageBox.Show("Xóa loại đồ ăn thất bại");
+                }
+                else
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+            }
+            else
+                return;
+            btnLamMoi_Click(sender, e);
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            DialogResult them = MessageBox.Show("Bạn có muốn chỉnh sửa thông tin loại đồ ăn", "Thông báo", MessageBoxButtons.YesNo);
+            if (them == DialogResult.Yes)
+            {
+                if (txtMaLoaiDoAn.Text != "" && txtTenLoaiDoAn.Text != "")
+                {
+                    if (loaiDoAn_BUS.update_LoaiDoAn_BUS(loaiDoAn_DTO()))
+                        MessageBox.Show("Chỉnh sửa thông tin loại đồ ăn thành công");
+                    else
+                        MessageBox.Show("Chỉnh sửa thông tin loại đồ ăn thất bại");
+                }
+                else
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+            }
+            else
+                return;
+            btnLamMoi_Click(sender, e);
+        }
     }
 }

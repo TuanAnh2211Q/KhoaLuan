@@ -44,7 +44,9 @@ namespace QLCHTAN
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPhamKhuyenMai)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -60,7 +62,7 @@ namespace QLCHTAN
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 84);
+            this.label3.Location = new System.Drawing.Point(14, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 19);
             this.label3.TabIndex = 9;
@@ -68,15 +70,15 @@ namespace QLCHTAN
             // 
             // txtNgayBatDau
             // 
-            this.txtNgayBatDau.Location = new System.Drawing.Point(147, 117);
+            this.txtNgayBatDau.Location = new System.Drawing.Point(137, 57);
             this.txtNgayBatDau.Name = "txtNgayBatDau";
-            this.txtNgayBatDau.Size = new System.Drawing.Size(304, 27);
+            this.txtNgayBatDau.Size = new System.Drawing.Size(266, 27);
             this.txtNgayBatDau.TabIndex = 29;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 120);
+            this.label8.Location = new System.Drawing.Point(14, 60);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(104, 19);
             this.label8.TabIndex = 28;
@@ -84,23 +86,23 @@ namespace QLCHTAN
             // 
             // rtxtGhiChu
             // 
-            this.rtxtGhiChu.Location = new System.Drawing.Point(147, 190);
+            this.rtxtGhiChu.Location = new System.Drawing.Point(137, 130);
             this.rtxtGhiChu.Name = "rtxtGhiChu";
-            this.rtxtGhiChu.Size = new System.Drawing.Size(304, 77);
+            this.rtxtGhiChu.Size = new System.Drawing.Size(266, 77);
             this.rtxtGhiChu.TabIndex = 27;
             this.rtxtGhiChu.Text = "";
             // 
             // txtNgayKetThuc
             // 
-            this.txtNgayKetThuc.Location = new System.Drawing.Point(147, 157);
+            this.txtNgayKetThuc.Location = new System.Drawing.Point(137, 97);
             this.txtNgayKetThuc.Name = "txtNgayKetThuc";
-            this.txtNgayKetThuc.Size = new System.Drawing.Size(304, 27);
+            this.txtNgayKetThuc.Size = new System.Drawing.Size(266, 27);
             this.txtNgayKetThuc.TabIndex = 26;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 160);
+            this.label4.Location = new System.Drawing.Point(14, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 19);
             this.label4.TabIndex = 25;
@@ -109,7 +111,7 @@ namespace QLCHTAN
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 206);
+            this.label5.Location = new System.Drawing.Point(14, 146);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 19);
             this.label5.TabIndex = 24;
@@ -117,9 +119,9 @@ namespace QLCHTAN
             // 
             // txtTenSanPham
             // 
-            this.txtTenSanPham.Location = new System.Drawing.Point(147, 81);
+            this.txtTenSanPham.Location = new System.Drawing.Point(137, 21);
             this.txtTenSanPham.Name = "txtTenSanPham";
-            this.txtTenSanPham.Size = new System.Drawing.Size(304, 27);
+            this.txtTenSanPham.Size = new System.Drawing.Size(266, 27);
             this.txtTenSanPham.TabIndex = 30;
             // 
             // dgvSanPhamKhuyenMai
@@ -127,7 +129,7 @@ namespace QLCHTAN
             this.dgvSanPhamKhuyenMai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSanPhamKhuyenMai.Location = new System.Drawing.Point(457, 80);
             this.dgvSanPhamKhuyenMai.Name = "dgvSanPhamKhuyenMai";
-            this.dgvSanPhamKhuyenMai.Size = new System.Drawing.Size(340, 223);
+            this.dgvSanPhamKhuyenMai.Size = new System.Drawing.Size(340, 269);
             this.dgvSanPhamKhuyenMai.TabIndex = 31;
             // 
             // btnSua
@@ -135,7 +137,7 @@ namespace QLCHTAN
             this.btnSua.BackColor = System.Drawing.Color.Transparent;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSua.Location = new System.Drawing.Point(295, 273);
+            this.btnSua.Location = new System.Drawing.Point(281, 318);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 31);
             this.btnSua.TabIndex = 35;
@@ -147,7 +149,7 @@ namespace QLCHTAN
             this.btnXoa.BackColor = System.Drawing.Color.Transparent;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnXoa.Location = new System.Drawing.Point(214, 273);
+            this.btnXoa.Location = new System.Drawing.Point(200, 318);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 31);
             this.btnXoa.TabIndex = 34;
@@ -159,7 +161,7 @@ namespace QLCHTAN
             this.btnThem.BackColor = System.Drawing.Color.Transparent;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnThem.Location = new System.Drawing.Point(133, 273);
+            this.btnThem.Location = new System.Drawing.Point(119, 318);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 31);
             this.btnThem.TabIndex = 33;
@@ -171,7 +173,7 @@ namespace QLCHTAN
             this.btnLamMoi.BackColor = System.Drawing.Color.Transparent;
             this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLamMoi.Location = new System.Drawing.Point(376, 273);
+            this.btnLamMoi.Location = new System.Drawing.Point(362, 318);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(75, 31);
             this.btnLamMoi.TabIndex = 32;
@@ -188,25 +190,33 @@ namespace QLCHTAN
             this.label2.TabIndex = 36;
             this.label2.Text = "label2";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.rtxtGhiChu);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtNgayKetThuc);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.txtNgayBatDau);
+            this.panel1.Controls.Add(this.txtTenSanPham);
+            this.panel1.Location = new System.Drawing.Point(12, 80);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(424, 223);
+            this.panel1.TabIndex = 37;
+            // 
             // DanhSachSanPhamKhuyenMai_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(813, 318);
+            this.ClientSize = new System.Drawing.Size(813, 363);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.dgvSanPhamKhuyenMai);
-            this.Controls.Add(this.txtTenSanPham);
-            this.Controls.Add(this.txtNgayBatDau);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.rtxtGhiChu);
-            this.Controls.Add(this.txtNgayKetThuc);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -215,6 +225,8 @@ namespace QLCHTAN
             this.Text = "DanhSachKhuyenMai_GUI";
             this.Load += new System.EventHandler(this.DanhSachKhuyenMai_GUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPhamKhuyenMai)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,5 +249,6 @@ namespace QLCHTAN
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

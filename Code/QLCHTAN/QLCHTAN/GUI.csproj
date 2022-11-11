@@ -132,6 +132,12 @@
     <Compile Include="QuanLyTaiKhoan_GUI.Designer.cs">
       <DependentUpon>QuanLyTaiKhoan_GUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaiKhoan_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiKhoan_GUI.Designer.cs">
+      <DependentUpon>TaiKhoan_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemPhieuNhap_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +230,9 @@
     </Compile>
     <EmbeddedResource Include="QuanLyTaiKhoan_GUI.resx">
       <DependentUpon>QuanLyTaiKhoan_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaiKhoan_GUI.resx">
+      <DependentUpon>TaiKhoan_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemPhieuNhap_GUI.resx">
       <DependentUpon>ThemPhieuNhap_GUI.cs</DependentUpon>
