@@ -44,5 +44,17 @@ namespace QLCHTAN
         {
             MessageBox.Show("Vui lòng liên hệ quản lí để đặt lại mật khẩu");
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked)
+            {
+                txtMatKhau.PasswordChar = '\0';
+            }
+            else
+                txtMatKhau.PasswordChar = '*';
+
+        }
     }
+    
 }

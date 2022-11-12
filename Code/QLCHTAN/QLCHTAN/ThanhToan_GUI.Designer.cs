@@ -32,11 +32,11 @@ namespace QLCHTAN
             this.dgvThongTinKhachHang = new System.Windows.Forms.DataGridView();
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rdbTienMat = new System.Windows.Forms.RadioButton();
-            this.rdbThe = new System.Windows.Forms.RadioButton();
             this.btnThanhToan = new System.Windows.Forms.Button();
+            this.rdbThe = new System.Windows.Forms.RadioButton();
+            this.rdbTienMat = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinKhachHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -52,7 +52,6 @@ namespace QLCHTAN
             this.dgvThongTinKhachHang.RowTemplate.Height = 24;
             this.dgvThongTinKhachHang.Size = new System.Drawing.Size(458, 571);
             this.dgvThongTinKhachHang.TabIndex = 0;
-            this.dgvThongTinKhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // dgvHoaDon
             // 
@@ -64,7 +63,7 @@ namespace QLCHTAN
             this.dgvHoaDon.RowTemplate.Height = 24;
             this.dgvHoaDon.Size = new System.Drawing.Size(412, 344);
             this.dgvHoaDon.TabIndex = 1;
-            this.dgvHoaDon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dgvHoaDon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDon_CellContentClick);
             // 
             // panel1
             // 
@@ -78,36 +77,14 @@ namespace QLCHTAN
             this.panel1.Size = new System.Drawing.Size(412, 230);
             this.panel1.TabIndex = 2;
             // 
-            // comboBox1
+            // btnThanhToan
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(123, 22);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(286, 29);
-            this.comboBox1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Hình Thức :";
-            // 
-            // rdbTienMat
-            // 
-            this.rdbTienMat.AutoSize = true;
-            this.rdbTienMat.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbTienMat.Location = new System.Drawing.Point(94, 87);
-            this.rdbTienMat.Name = "rdbTienMat";
-            this.rdbTienMat.Size = new System.Drawing.Size(95, 25);
-            this.rdbTienMat.TabIndex = 2;
-            this.rdbTienMat.TabStop = true;
-            this.rdbTienMat.Text = "Tiền Mặt";
-            this.rdbTienMat.UseVisualStyleBackColor = true;
+            this.btnThanhToan.Location = new System.Drawing.Point(110, 151);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(193, 37);
+            this.btnThanhToan.TabIndex = 4;
+            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.UseVisualStyleBackColor = true;
             // 
             // rdbThe
             // 
@@ -121,14 +98,36 @@ namespace QLCHTAN
             this.rdbThe.Text = "Thẻ";
             this.rdbThe.UseVisualStyleBackColor = true;
             // 
-            // btnThanhToan
+            // rdbTienMat
             // 
-            this.btnThanhToan.Location = new System.Drawing.Point(94, 153);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(193, 37);
-            this.btnThanhToan.TabIndex = 4;
-            this.btnThanhToan.Text = "Thanh Toán";
-            this.btnThanhToan.UseVisualStyleBackColor = true;
+            this.rdbTienMat.AutoSize = true;
+            this.rdbTienMat.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbTienMat.Location = new System.Drawing.Point(94, 87);
+            this.rdbTienMat.Name = "rdbTienMat";
+            this.rdbTienMat.Size = new System.Drawing.Size(95, 25);
+            this.rdbTienMat.TabIndex = 2;
+            this.rdbTienMat.TabStop = true;
+            this.rdbTienMat.Text = "Tiền Mặt";
+            this.rdbTienMat.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 21);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Hình Thức :";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(123, 22);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(286, 29);
+            this.comboBox1.TabIndex = 0;
             // 
             // ThanhToan_GUI
             // 

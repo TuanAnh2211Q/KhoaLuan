@@ -2,15 +2,12 @@ D:\KLTN2022\Code\QLCHTAN\QLCHTAN\bin\Debug\QLCHTAN.exe.config
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\bin\Debug\QLCHTAN.exe
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\bin\Debug\QLCHTAN.pdb
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.AssemblyReference.cache
-D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.FormDangNhap.resources
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.Properties.Resources.resources
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.GenerateResource.cache
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.exe
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.pdb
-D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.FormTaiKhoan.resources
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.FormThongTinNhanVien.resources
-D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.FormThemNhanVien.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.AssemblyReference.cache
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.Form1.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.FormDangNhap.resources
@@ -66,3 +63,33 @@ C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTA
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.Order_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.TaiKhoan_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThanhToan_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\bin\Debug\BUS.dll
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\bin\Debug\DAO.dll
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\bin\Debug\DTO.dll
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\bin\Debug\BUS.pdb
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\bin\Debug\DAO.pdb
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\bin\Debug\DTO.pdb
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.CSDL.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DangNhap_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DanhMucMon_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DanhSachSanPhamKhuyenMai_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DoAn_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.LoaiDoAn_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.LoaiKhuyenMai_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.Main_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.NhaCungCap_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.NuocUong_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.Order_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.PhanQuyen_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.PhieuNhapKho_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.PhieuXuatKho_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.TaiKhoan_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThanhToan_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThemPhieuNhap_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThemPhieuXuat_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinKhuyenMai_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinMatHang_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinPhieuNhap_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinPhieuXuat_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinThanhPhanDoAn_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.CopyComplete
