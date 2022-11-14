@@ -202,7 +202,7 @@ namespace QLCHTAN
             this.Controls.Add(this.dgvLoaiDoAn);
             this.Name = "LoaiDoAn_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Loại đồ ăn";
+            this.Text = "3";
             this.Load += new System.EventHandler(this.LoaiDoAn_GUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiDoAn)).EndInit();
             this.panel1.ResumeLayout(false);

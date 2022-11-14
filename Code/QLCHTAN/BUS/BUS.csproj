@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoaiDoAn_BUS.cs" />
+    <Compile Include="NhanVien_BUS.cs" />
+    <Compile Include="PhanQuyen_BUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

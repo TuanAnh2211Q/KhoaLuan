@@ -15,7 +15,11 @@ namespace DAO
         public DataTable dsLoaiDoAn_DAO()
         {
             Open();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from LoaiDoAn",conn);
+            SqlCommand cmd = new SqlCommand("select_LoaiDoAn", conn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dslda = new DataTable();
             da.Fill(dslda);
             return dslda;
@@ -26,12 +30,26 @@ namespace DAO
             try
             {
                 Open();
-                string kt = "select * from LoaiDoAn where maLoaiDoAn ='" + loaiDoAn_DTO.MaLoaiDoAn + "'";
-                if(ExecuteScalar(kt)==null)
+                SqlCommand kt = new SqlCommand()
                 {
-                    string sql = "Insert into LoaiDoAn values ('" + loaiDoAn_DTO.MaLoaiDoAn + "',N'" + loaiDoAn_DTO.TenLoaiDoAn + "')";
-                    if (ExecuteNonQuery(sql) > 0)
-                        return true;
+                    CommandText = "chect_exist_LoaiDoAn",
+                    Connection = conn,
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                kt.Parameters.Add("@maLoaiDoAn", SqlDbType.VarChar).Value = loaiDoAn_DTO.MaLoaiDoAn;
+                if(kt.ExecuteScalar()==null)
+                {
+                    SqlCommand cmd = new SqlCommand()
+                    {
+                        CommandText = "insert_LoaiDoAn",
+                        Connection = conn,
+                        CommandType = CommandType.StoredProcedure
+                    };
+                    cmd.Parameters.Add("@maLoaiDoAn", SqlDbType.VarChar).Value = loaiDoAn_DTO.MaLoaiDoAn;
+                    cmd.Parameters.Add("@tenLoaiDoAN", SqlDbType.NVarChar).Value = loaiDoAn_DTO.TenLoaiDoAn;
+                    if(cmd.ExecuteNonQuery()>0)
+                    return true;
                 }    
             }
             catch (Exception)
@@ -48,17 +66,16 @@ namespace DAO
             try
             {
                 Open();
-                string kt = "select * from DoAn where maLoaiDoAn ='" + loaiDoAn_DTO.MaLoaiDoAn + "'";
-                if (ExecuteScalar(kt) == null)
-                {
-                    string sql = "delete from LoaiDoAn where MaLoaiDoAn='"+loaiDoAn_DTO.MaLoaiDoAn+"'";
-                    if (ExecuteNonQuery(sql) > 0)
+                    SqlCommand cmd = new SqlCommand()
+                    {
+                        CommandText = "delete_LoaiDoAn",
+                        Connection = conn,
+                        CommandType = CommandType.StoredProcedure
+                    };
+                    cmd.Parameters.Add("@maLoaiDoAn", SqlDbType.VarChar).Value = loaiDoAn_DTO.MaLoaiDoAn;
+                    if (cmd.ExecuteNonQuery() > 0)
                         return true;
-                }
-                else
-                {
-                    MessageBox.Show("Tồn tại đồ ăn thuộc loại này, không thể xóa");
-                }    
+                
             }
             catch (Exception)
             {
@@ -74,11 +91,17 @@ namespace DAO
             try
             {
                 Open();
-               
-                    string sql = "Update LoaiDoAn set TenLoaiDoAn=N'" + loaiDoAn_DTO.TenLoaiDoAn + "' where MaLoaiDoAn='" + loaiDoAn_DTO.MaLoaiDoAn + "'";
-                    if (ExecuteNonQuery(sql) > 0)
+                    SqlCommand cmd = new SqlCommand()
+                    {
+                        CommandText = "update_LoaiDoAn",
+                        Connection = conn,
+                        CommandType = CommandType.StoredProcedure
+                    };
+                    cmd.Parameters.Add("@maLoaiDoAn", SqlDbType.VarChar).Value = loaiDoAn_DTO.MaLoaiDoAn;
+                    cmd.Parameters.Add("@tenLoaiDoAN", SqlDbType.NVarChar).Value = loaiDoAn_DTO.TenLoaiDoAn;
+                    if (cmd.ExecuteNonQuery() > 0)
                         return true;
-               
+                
             }
             catch (Exception)
             {

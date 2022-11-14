@@ -45,6 +45,8 @@
     <Compile Include="DataProvider.cs" />
     <Compile Include="getServer.cs" />
     <Compile Include="LoaiDoAn_DAO.cs" />
+    <Compile Include="NhanVien_DAO.cs" />
+    <Compile Include="PhanQuyen_DAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaiKhoan_DAO.cs" />
   </ItemGroup>
