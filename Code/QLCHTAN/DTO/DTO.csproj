@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DangNhap_DTO.cs" />
     <Compile Include="DoAn_DTO.cs" />
     <Compile Include="LoaiDoAn_DTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
