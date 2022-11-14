@@ -109,3 +109,17 @@ create  procedure select_ChucDanh
 as 
 select maChucDanh,tenChucDanh from ChucDanh where maChucDanh!='Admin'
 go
+
+--===================Đăng nhập===========
+
+create procedure DangNhap
+@tenTaiKhoan varchar(10), @matKhau varchar(50)
+as
+select tenTaiKhoan, matKhau,maQuyen from TaiKhoanNhanVien where tenTaiKhoan=@tenTaiKhoan and matKhau=@matKhau
+go
+
+create  procedure check_Quyen_DangNhap
+@tenTaiKhoan varchar(10)
+as
+select maQuyen from TaiKhoanNhanVien where tenTaiKhoan=@tenTaiKhoan
+go
