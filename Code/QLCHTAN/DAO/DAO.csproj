@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DangNhap_DAO.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="getServer.cs" />
     <Compile Include="LoaiDoAn_DAO.cs" />
