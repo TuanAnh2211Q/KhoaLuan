@@ -125,3 +125,4 @@ select maQuyen from TaiKhoanNhanVien where tenTaiKhoan=@tenTaiKhoan
 go
 
 exec DangNhap 'Admin','123456'
+
