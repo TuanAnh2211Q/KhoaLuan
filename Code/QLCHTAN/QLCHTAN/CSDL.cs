@@ -45,6 +45,9 @@ namespace QLCHTAN
                             DataProvider dataProvider = new DataProvider();   
                             dataProvider.Open();
                             MessageBox.Show("Kết nối thành công");
+                            DangNhap_GUI dangNhap = new DangNhap_GUI();
+                            dangNhap.Show();
+                            this.Hide();
                         }
                         catch
                         {
@@ -60,9 +63,7 @@ namespace QLCHTAN
                     MessageBox.Show("Không thể kết nối cơ sở dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            Main_GUI main = new Main_GUI();
-            main.Show();
-            this.Hide();
+         
         }
 
         private void CSDL_Load(object sender, EventArgs e)

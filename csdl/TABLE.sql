@@ -10,7 +10,7 @@ create table DoAn
 	maDoAn varchar(10) not null primary key,
     maLoaiDoAn varchar(10),
 	tenDoAn nvarchar(50),
-	ghiChu nvarchar
+	ghiChu nvarchar(max)
 )
 go
 
@@ -26,7 +26,7 @@ create table ThongTinDoAn
 	maDoAn varchar(10),
 	donViBan nvarchar(10),
 	donGia money,
-	ghiChu nvarchar
+	ghiChu nvarchar(max)
 )
 go
 
@@ -71,7 +71,7 @@ create Table NhaCungCap
     diaChiNCC nvarchar(40),
 	emailNCC varchar(20),
     sdtNCC varchar(11),
-	ghiChu nvarchar(100)
+	ghiChu nvarchar(max)
 )
 go
 
@@ -84,7 +84,7 @@ create Table MatHang
 	NSX date,
     HSD date,
 	donGia money,
-	ghiChu nvarchar(100)	
+	ghiChu nvarchar(max)	
 )
 go
 
@@ -123,7 +123,7 @@ create table NhapKho
 	maNhap varchar(10) not null primary key,
 	ngayNhap datetime,
 	maDatHang varchar(10),
-	ghiChu nvarchar
+	ghiChu nvarchar(max)
 )
 go
 
@@ -133,7 +133,7 @@ create table ThongTinNhapKho
 	maNCC varchar(10),
 	maHang varchar(10),
 	soLuong int,
-	tongDonGia money,
+	tongDonGia money
 )
 go
 
@@ -150,14 +150,14 @@ create table ThongTinTraHang
 	maNCC varchar(10),
 	maHang varchar(10),
 	soLuong int,
-	tongDonGia money,
+	tongDonGia money
 )
 go
 
 create table XuatKho
 (
 	maXuat varchar(10) not null primary key,
-	ngayXuat datetime,
+	ngayXuat datetime
 )
 go
 
@@ -166,7 +166,7 @@ create table ThongTinXuatKho
 	maXuat varchar(10),
 	maHang varchar(10),
 	soLuong int,
-	ghiChu nvarchar(100)
+	ghiChu nvarchar(max)
 )
 go
 
@@ -183,7 +183,7 @@ go
 create table LoaiKhuyenMai
 (
 	maLoaiKhuyenMai varchar(10) not null primary key,
-	tenLoaiKhuyenMai nvarchar(50),
+	tenLoaiKhuyenMai nvarchar(50)
 )
 go
 
@@ -193,7 +193,7 @@ create table ThongTinKhuyenMai
 	maSanPham varchar(10),
 	ngayBatDau datetime,
 	ngayKetThuc datetime,
-	ghiChu nvarchar
+	ghiChu nvarchar(max)
 )
 go
 
@@ -205,21 +205,21 @@ create table KhachHang
 	SDT varchar(11) not null primary key,
 	Email varchar(50),
 	diaChi nvarchar(100),
-	ghiChu nvarchar
+	ghiChu nvarchar(max)
 )
 go
 
 create table LoaiNhanVien
 (
 	maLoaiNhanVien varchar(10) not null primary key,
-	TenLoaiNhanVien nvarchar(50)
+	tenLoaiNhanVien nvarchar(50)
 )
 go
 
 create table ChucDanh
 (
 	maChucDanh varchar(10) not null primary key,
-	TenChucDanh nvarchar(100),
+	tenChucDanh nvarchar(100),
 	heSoLuong float
 )
 go
@@ -261,7 +261,7 @@ go
 	 gioVao time,
 	 gioRa time,
 	 maCaLam varchar(10),
-	 ghiChu varchar
+	 ghiChu varchar(max)
  )
  go
 
@@ -279,7 +279,7 @@ go
 	 maNhanVien varchar(10),
 	 ngayBatDau datetime,
 	 ngayKetThuc datetime,
-	 ghiChu nvarchar
+	 ghiChu nvarchar(max)
  )
  go
 
@@ -290,11 +290,12 @@ go
 	 mucPhat money
  )
  go
+
  create table ThongTinViPham
  (
 	 maViPham varchar(10),
 	 maNhanVien varchar(10),
-	 ghiChu nvarchar
+	 ghiChu nvarchar(max)
  )
  go
 
@@ -302,7 +303,7 @@ go
 (
 	 maQuyen varchar(10) not null primary key,
 	 tenQuyen nvarchar(50),
-	 ghiChu nvarchar
+	 ghiChu nvarchar(max)
  )
  go
 
@@ -341,7 +342,7 @@ create table DonHang
 	maKhuyenMai varchar(10),
 	thoiGianDat datetime,
 	trangThai int,
-	ghiChu nvarchar
+	ghiChu nvarchar(max)
 )
 go
 
@@ -368,14 +369,15 @@ create table HoaDon
 	tenHoaDon varchar(50),
 	tongGia money,
 	maNhanVien varchar(10),
-	ghiChu varchar
+	ghiChu nvarchar(max)
 )
+go
 
 create table DanhGia
 (
  SDTKhachHang varchar(11),
  maSanPham varchar(10),
- thongTinDanhGia nvarchar
+ thongTinDanhGia nvarchar(max)
  )
 
 
