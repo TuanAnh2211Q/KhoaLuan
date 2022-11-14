@@ -62,8 +62,8 @@ and maNhanVien !='Admin'
 go
 
 --Thêm nhân viên
-create procedure insert_NhanVien
-@maNhanVien varchar(10), @tenNhanVien nvarchar(100), @Phai bit, @SDT varchar(11), @Email varchar(50), @diaChi nvarchar(50),
+create  procedure insert_NhanVien
+@maNhanVien varchar(10), @tenNhanVien nvarchar(100), @Phai nvarchar(5), @SDT varchar(11), @Email varchar(50), @diaChi nvarchar(50),
 @maChucDanh varchar(10), @maLoaiNhanVien varchar(10)
 as
 insert into NhanVien values(@maNhanVien, @tenNhanVien, @Phai, @SDT, @Email, @diaChi, @maChucDanh, @maLoaiNhanVien)
@@ -83,21 +83,21 @@ select maNhanVien from NhanVien where maNhanVien=@maNhanVien
 go
 
 --Sửa thông tin nhân viên
-create procedure update_NhanVien
-@maNhanVien varchar(10), @tenNhanVien nvarchar(100), @Phai bit, @SDT varchar(11), @Email varchar(50), @diaChi nvarchar(50),
-@maChucDanh varchar(10), @maLoaiNhanVien varchar(10)
-as
-update NhanVien 
-set
- tenNhanVien=@tenNhanVien, 
- Phai=@Phai, 
- SDT=@SDT, 
- Email=@Email, 
- diaChi=@diaChi, 
- maChucDanh=@maChucDanh, 
- maLoaiNhanVien=@maLoaiNhanVien
- where maNhanVien=@maNhanVien
-go
+	create procedure update_NhanVien
+	@maNhanVien varchar(10), @tenNhanVien nvarchar(100), @Phai nvarchar(5), @SDT varchar(11), @Email varchar(50), @diaChi nvarchar(50),
+	@maChucDanh varchar(10), @maLoaiNhanVien varchar(10)
+	as
+	update NhanVien 
+	set
+	 tenNhanVien=@tenNhanVien, 
+	 Phai=@Phai, 
+	 SDT=@SDT, 
+	 Email=@Email, 
+	 diaChi=@diaChi, 
+	 maChucDanh=@maChucDanh, 
+	 maLoaiNhanVien=@maLoaiNhanVien
+	 where maNhanVien=@maNhanVien
+	go
 
 --------------------------------LOẠI NHÂN VIÊN---------------------
 create procedure select_LoaiNhanVien
