@@ -19,7 +19,7 @@ namespace DAO
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@tenTaiKhoan", SqlDbType.VarChar).Value = dangNhap_DTO.TenDangNhap;
                 cmd.Parameters.Add("@matKhau", SqlDbType.VarChar).Value = dangNhap_DTO.MatKhau;
-                if(cmd.ExecuteNonQuery()<0)
+                if(cmd.ExecuteScalar()!=null)
                 {
                     return true;
                 }

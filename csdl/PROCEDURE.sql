@@ -124,5 +124,12 @@ as
 select maQuyen from TaiKhoanNhanVien where tenTaiKhoan=@tenTaiKhoan
 go
 
-exec DangNhap 'Admin','123456'
 
+create procedure doi_MatKhau_TaiKhoanNhanVien
+@tenTaiKhoan varchar(10), @matKhauCu varchar(50), @matKhauMoi varchar(50)
+as
+if( @matKhauCu= (select matKhau from TaiKhoanNhanVien where tenTaiKhoan=@tenTaiKhoan))
+begin
+    update TaiKhoanNhanVien set matKhau=@matKhauMoi where tenTaiKhoan=@tenTaiKhoan
+	end
+go

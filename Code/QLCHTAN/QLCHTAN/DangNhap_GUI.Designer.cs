@@ -184,7 +184,7 @@ namespace QLCHTAN
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(585, 343);
+            this.ClientSize = new System.Drawing.Size(585, 330);
             this.Controls.Add(this.btnHienMatKhau);
             this.Controls.Add(this.btnKhongHienMatKhau);
             this.Controls.Add(this.lblDate);

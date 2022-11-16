@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DangNhap_BUS.cs" />
+    <Compile Include="DoiMatKhau_BUS.cs" />
     <Compile Include="LoaiDoAn_BUS.cs" />
     <Compile Include="NhanVien_BUS.cs" />
     <Compile Include="PhanQuyen_BUS.cs" />

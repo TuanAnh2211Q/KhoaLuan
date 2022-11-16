@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="DangNhap_DAO.cs" />
     <Compile Include="DataProvider.cs" />
+    <Compile Include="DoiMatKhau_DAO.cs" />
     <Compile Include="getServer.cs" />
     <Compile Include="LoaiDoAn_DAO.cs" />
     <Compile Include="NhanVien_DAO.cs" />
