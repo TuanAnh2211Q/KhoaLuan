@@ -17,6 +17,7 @@ namespace QLCHTAN
     public partial class DangNhap_GUI : Form
     {
         DangNhap_BUS dangNhap_BUS = new DangNhap_BUS();
+        public static string tenTaiKhoan;
         public DangNhap_GUI()
         {
             InitializeComponent();
@@ -37,19 +38,27 @@ namespace QLCHTAN
         {
             try
             {
-                if(txtTaiKhoan.Text.Trim()!=""&&txtMatKhau.Text.Trim()!="")
+                if(txtTaiKhoan.Text.Trim()!=""||txtMatKhau.Text.Trim()!="")
                 {
                     if(dangNhap_BUS.dangNhapHeThong_BUS(dangNhap_DTO()))
                     {
                         if (dangNhap_BUS.kiemTraQuyenHeThong_BUS(dangNhap_DTO()) == 1)
                             MessageBox.Show("Đăng nhập thành công \n Bạn đang đăng nhập bằng quyền Quản lí");
                         else
+                        {
                             MessageBox.Show("Đăng nhập thành công \n Bạn đang đăng nhập bằng quyền Nhân viên");
-                        MessageBox.Show("Chúc Bạn Một Ngày Làm Việc Vui Vẻ!!!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            tenTaiKhoan = txtTaiKhoan.Text.Trim();
+                            GiaoDienNhanVien_GUI giaoDienNhanVien_GUI = new GiaoDienNhanVien_GUI();
+                            giaoDienNhanVien_GUI.Show();
+                            this.Hide();
+                        }
+
                     }
+                    else
+                        MessageBox.Show("Tên đăng nhập hoặc mất khẩu không đúng, vui lòng kiểm tra lại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Đăng nhập thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
             }
