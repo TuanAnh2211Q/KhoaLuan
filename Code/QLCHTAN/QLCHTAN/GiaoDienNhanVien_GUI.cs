@@ -29,5 +29,12 @@ namespace QLCHTAN
             DoiMatKhau_GUI doiMatKhau_GUI = new DoiMatKhau_GUI();
             doiMatKhau_GUI.Show();
         }
+
+        private void btnLapPhieuNhapHang_Click(object sender, EventArgs e)
+        {
+            PhieuNhapKho_GUI phieuNhapKho_GUI = new PhieuNhapKho_GUI();
+            phieuNhapKho_GUI.Show();
+            this.Close();
+        }
     }
 }

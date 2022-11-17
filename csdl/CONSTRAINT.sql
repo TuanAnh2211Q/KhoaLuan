@@ -175,21 +175,29 @@ go
  add constraint fk_ThongTinDonHang_SanPham foreign key (maSanPham) references SanPham(maSanPham)
  go
 
- alter table LoaiHoaDon
- add constraint fk_LoaiHoaDon_DatHang foreign key (maLoaiHoaDon) references DatHang(maDatHang)
- go
 
-  alter table LoaiHoaDon
- add constraint fk_LoaiHoaDon_NhapKho foreign key (maLoaiHoaDon) references NhapKho(maNhap)
- go
- 
-  alter table LoaiHoaDon
- add constraint fk_LoaiHoaDon_XuatKho foreign key (maLoaiHoaDon) references XuatKho(maXuat)
- go
 
  alter table HoaDon
  add constraint fk_HoaDon_LoaiHoaDon foreign key(maLoaiHoaDon) references LoaiHoaDon(maLoaiHoaDon)
  go
+
+  alter table HoaDon
+ add constraint fk_HoaDon_DatHang foreign key(maHoaDon) references DatHang(maDatHang)
+ go
+
+   alter table HoaDon
+ add constraint fk_HoaDon_NhapKho foreign key(maHoaDon) references NhapKho(maNhap)
+ go
+
+   alter table HoaDon
+ add constraint fk_HoaDon_XuatKho foreign key(maHoaDon) references XuatKho(maXuat)
+ go
+
+   alter table HoaDon
+ add constraint fk_HoaDon_TraHang foreign key(maHoaDon) references TraHang(maTra)
+ go
+
+
 
   alter table HoaDon
  add constraint fk_HoaDon_maNhanVien foreign key(maNhanVien) references NhanVien(maNhanVien)

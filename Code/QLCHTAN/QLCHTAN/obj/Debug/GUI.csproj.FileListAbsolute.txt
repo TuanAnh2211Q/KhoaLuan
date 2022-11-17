@@ -94,3 +94,5 @@ D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.NhanVien_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.GiaoDienNhanVien_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DoiMatKhau_GUI.resources
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.PhieuDatHang_GUI.resources
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinChiTietPhieuDat_GUI.resources

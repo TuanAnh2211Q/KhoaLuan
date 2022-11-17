@@ -133,3 +133,46 @@ begin
     update TaiKhoanNhanVien set matKhau=@matKhauMoi where tenTaiKhoan=@tenTaiKhoan
 	end
 go
+
+-----==========================NHẬP KHO==============
+
+create procedure select_NhapKho
+as
+select * from NhapKho
+go
+
+create procedure select_DatHang
+as
+select * from DatHang where maDatHang in (select maDatHang from NhapKho)
+go
+
+
+--=========================THÔNG TIN CHI TIẾT PHIẾU NHẬP=====
+create procedure select_ThongTinNhapKho
+@maNhap varchar(10)
+as
+select * from ThongTinNhapKho where maNhap=@maNhap
+go
+
+----========PHIẾU ĐẶT HÀNG==============
+create  procedure select_DatHang
+as
+select maDatHang, ngayDatHang,ngayDuKienGiao,phuongThucThanhToan,ghiChu from DatHang
+go
+--Tổng giá phiếu đặt
+
+create  procedure tongGia_DatHang
+as
+select sum(tongDonGia) from ThongTinDatHang
+go
+
+
+create  procedure select_ThongTinDatHang
+@maDatHang varchar(10)
+as
+select mh.tenHang, ttdt.soLuongDat, ncc.tenNCC ,ttdt.tongDonGia from ThongTinDatHang ttdt, MatHang mh,
+NhaCungCap ncc 
+where ttdt.maHang=mh.maHang
+and ncc.maNCC=ttdt.maNCC
+and ttdt.maDatHang=@maDatHang
+go
