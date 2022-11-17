@@ -27,9 +27,102 @@ end
 end
 go
 
+--Cập nhật tổng giá thông tin đặt hàng
+create  trigger insert_update_TongGia_DatHang on ThongTinDatHang instead of
+insert,update as
+begin
+declare
+			@maDatHang varchar(10),
+			@maNCC varchar(10),
+			 @donGia money,
+             @maHang varchar(10),
+             @soLuongDat int,
+			 @tongDonGia money
+			 set @maHang=(select maHang from inserted)
+			 set @soLuongDat= (select soLuongDat from inserted)
+			 set @donGia=( select mh.donGia from MatHang mh, inserted where inserted.maHang=mh.maHang)
+			 set @maDatHang=(select maDatHang from inserted)
+			 set @maNCC=(select maNCC from inserted)
+			 set @tongDonGia=@soLuongDat*@donGia
+		     if exists( select * from ThongTinDatHang where maHang=@maHang and maNCC=@maNCC and maDatHang=@maDatHang)
+			 begin
+			 if exists(select * from ThongTinDatHang where tongDonGia is null)
+			 begin
+			       update ThongTinDatHang
+				   set tongDonGia=0
+				   	 update ThongTinDatHang
+			 set soLuongDat=soLuongDat+@soLuongDat,
+			      tongDonGia=tongDonGia+@tongDonGia
+				  where maHang=@maHang and maNCC=@maNCC and maDatHang=@maDatHang
+			 end
+			 else
+			 begin
+			  update ThongTinDatHang
+			 set soLuongDat=soLuongDat+@soLuongDat,
+			      tongDonGia=tongDonGia+@tongDonGia
+				  where maHang=@maHang and maNCC=@maNCC and maDatHang=@maDatHang
+			 end
+			end
+			else
+			begin
+			insert into ThongTinDatHang values(@maDatHang,@maHang,@maNCC,@soLuongDat,@tongDonGia)
+			end
+			 end
+      --select * from ThongTinDatHang
+	   --insert into ThongTinDatHang values ('MD001','MH002','NCC001',1,null)
 
 
 
 
 
+
+
+
+
+
+
+----Cập nhật tổng giá thông tin phiếu nhập
+create trigger insert_update_TongGia_NhapKho on ThongTinNhapKho instead of insert,update as
+begin 
+	     declare
+		    @maNhap varchar(10),
+			@maNCC varchar(10),
+			 @donGia money,
+             @maHang varchar(10),
+             @soLuongNhap int,
+			 @tongDonGia money
+			 set @maHang=(select maHang from inserted)
+			 set @soLuongNhap= (select soLuong from inserted)
+			 set @donGia=( select mh.donGia from MatHang mh, inserted where inserted.maHang=mh.maHang)
+			 set @maNhap=(select maNhap from inserted)
+			 set @maNCC=(select maNCC from inserted)
+			 set @tongDonGia=@soLuongNhap*@donGia
+		     if exists( select * from ThongTinNhapKho where maHang=@maHang and maNCC=@maNCC and maNhap=@maNhap)
+			 begin
+			 if exists(select * from ThongTinNhapKho where tongDonGia is null)
+			 begin
+			       update ThongTinNhapKho
+				   set tongDonGia=0
+				   	 update ThongTinNhapKho
+			 set  soLuong=soLuong+@soLuongNhap,
+			      tongDonGia=tongDonGia+@tongDonGia
+				  where maHang=@maHang  and maNCC=@maNCC and maNhap=@maNhap
+			 end
+			 else
+			 begin
+			  update ThongTinNhapKho
+			 set soLuong=soLuong+@soLuongNhap,
+			      tongDonGia=tongDonGia+@tongDonGia
+				  where maHang=@maHang  and maNCC=@maNCC and maNhap=@maNhap
+			 end
+			end
+			else
+			begin
+			insert into ThongTinNhapKho values(@maNhap,@maHang,@maNCC,@soLuongNhap,@tongDonGia)
+			end
+end
+go
+
+--select * from ThongTinNhapKho
+--	   insert into ThongTinNhapKho values ('MN001','MH001','NCC001',1,null)
 

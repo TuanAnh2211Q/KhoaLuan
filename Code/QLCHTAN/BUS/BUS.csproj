@@ -46,7 +46,11 @@
     <Compile Include="LoaiDoAn_BUS.cs" />
     <Compile Include="NhanVien_BUS.cs" />
     <Compile Include="PhanQuyen_BUS.cs" />
+    <Compile Include="PhieuDatHang_BUS.cs" />
+    <Compile Include="PhieuNhapKho_BUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThongTinChiTietPhieuDatHang_BUS.cs" />
+    <Compile Include="ThongTinChiTietPhieuNhap_BUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAO\DAO.csproj">

@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,19 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
+using BUS;
+using DTO;
 namespace QLCHTAN
 {
     public partial class ThongTinPhieuNhap_GUI : Form
     {
+        ThongTinChiTietPhieuNhap_BUS thongTinChiTietPhieuNhap_BUS = new ThongTinChiTietPhieuNhap_BUS();
         public ThongTinPhieuNhap_GUI()
         {
             InitializeComponent();
+            txtMaNhap.Text = PhieuNhapKho_GUI.maNhapKho;
         }
-
+        
+        //public ThongTinChiTIetPhieuNhap_DTO thongTinChiTIetPhieuNhap_DTO()
+        //{
+        //    //return new ThongTinChiTIetPhieuNhap_DTO();
+        //}
         private void ThongTinPhieuNhap_GUI_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

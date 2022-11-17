@@ -45,11 +45,12 @@ namespace QLCHTAN
             this.lblDate = new System.Windows.Forms.Label();
             this.btnHienMatKhau = new System.Windows.Forms.Button();
             this.btnKhongHienMatKhau = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(251, 212);
+            this.btnDangNhap.Location = new System.Drawing.Point(180, 212);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(152, 35);
             this.btnDangNhap.TabIndex = 0;
@@ -179,12 +180,23 @@ namespace QLCHTAN
             this.btnKhongHienMatKhau.UseVisualStyleBackColor = true;
             this.btnKhongHienMatKhau.Click += new System.EventHandler(this.btnKhongHienMatKhau_Click);
             // 
+            // btnThoat
+            // 
+            this.btnThoat.Location = new System.Drawing.Point(338, 212);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(152, 35);
+            this.btnThoat.TabIndex = 13;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
             // DangNhap_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(585, 330);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnHienMatKhau);
             this.Controls.Add(this.btnKhongHienMatKhau);
             this.Controls.Add(this.lblDate);
@@ -224,5 +236,6 @@ namespace QLCHTAN
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Button btnHienMatKhau;
         private System.Windows.Forms.Button btnKhongHienMatKhau;
+        private System.Windows.Forms.Button btnThoat;
     }
 }

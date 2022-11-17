@@ -67,9 +67,9 @@ go
 create Table NhaCungCap
 (
     maNCC varchar(10) not null primary key,
-    tenNCC nvarchar(30) not null,
-    diaChiNCC nvarchar(40),
-	emailNCC varchar(20),
+    tenNCC nvarchar(50) not null,
+    diaChiNCC nvarchar(50),
+	emailNCC varchar(50),
     sdtNCC varchar(11),
 	ghiChu nvarchar(max)
 )
@@ -78,7 +78,7 @@ go
 create Table MatHang
 (
     maHang varchar(10) not null primary key,
-    tenHang nvarchar(30) not null,
+    tenHang nvarchar(50) not null,
     maNCC varchar(10),
 	donVi nvarchar(10),
 	NSX date,
@@ -104,7 +104,7 @@ create table DatHang
 	phuongThucThanhToan bit,
 	ngayDatHang datetime,
 	ngayDuKienGiao datetime,
-	ghiChu nvarchar(100)
+	ghiChu nvarchar(max)
 )
 go
 
@@ -141,7 +141,8 @@ create table TraHang
 (
 maTra varchar(10) primary key not null,
 maNhap varchar(10),
-ngayTra datetime
+ngayTra datetime,
+ghiChu nvarchar(max)
 )
 
 create table ThongTinTraHang
@@ -201,7 +202,7 @@ go
 create table KhachHang
 (
 	tenKhachHang nvarchar(100),
-	Phai bit,
+	Phai nvarchar(10),
 	SDT varchar(11) not null primary key,
 	Email varchar(50),
 	diaChi nvarchar(100),
@@ -228,7 +229,7 @@ create table NhanVien
 (
 	maNhanVien varchar(10) not null primary key,
 	tenNhanVien nvarchar(100),
-	Phai bit,
+	Phai nvarchar(10),
 	SDT varchar(11),
 	Email varchar(50),
 	diaChi nvarchar(50),
@@ -366,6 +367,7 @@ go
 create table HoaDon
 (
 	maLoaiHoaDon varchar(10),
+	maHoaDon varchar(10),
 	tenHoaDon varchar(50),
 	tongGia money,
 	maNhanVien varchar(10),

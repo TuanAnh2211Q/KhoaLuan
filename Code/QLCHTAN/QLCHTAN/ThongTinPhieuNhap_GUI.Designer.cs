@@ -37,12 +37,14 @@ namespace QLCHTAN
             this.grbDanhSachHangNhap = new System.Windows.Forms.GroupBox();
             this.lblTongGia = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvThongTinChiTietPhieuNhap = new System.Windows.Forms.DataGridView();
+            this.maHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.grbThongTinphieuNhap.SuspendLayout();
             this.grbDanhSachHangNhap.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinChiTietPhieuNhap)).BeginInit();
             this.SuspendLayout();
             // 
             // grbThongTinphieuNhap
@@ -62,6 +64,7 @@ namespace QLCHTAN
             // 
             // txtMaNhap
             // 
+            this.txtMaNhap.Enabled = false;
             this.txtMaNhap.Location = new System.Drawing.Point(119, 42);
             this.txtMaNhap.Name = "txtMaNhap";
             this.txtMaNhap.Size = new System.Drawing.Size(476, 27);
@@ -97,7 +100,7 @@ namespace QLCHTAN
             // 
             this.grbDanhSachHangNhap.Controls.Add(this.lblTongGia);
             this.grbDanhSachHangNhap.Controls.Add(this.label2);
-            this.grbDanhSachHangNhap.Controls.Add(this.dataGridView1);
+            this.grbDanhSachHangNhap.Controls.Add(this.dgvThongTinChiTietPhieuNhap);
             this.grbDanhSachHangNhap.Location = new System.Drawing.Point(13, 164);
             this.grbDanhSachHangNhap.Name = "grbDanhSachHangNhap";
             this.grbDanhSachHangNhap.Size = new System.Drawing.Size(622, 313);
@@ -123,13 +126,29 @@ namespace QLCHTAN
             this.label2.TabIndex = 1;
             this.label2.Text = "Tổng giá:";
             // 
-            // dataGridView1
+            // dgvThongTinChiTietPhieuNhap
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 26);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(583, 247);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvThongTinChiTietPhieuNhap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvThongTinChiTietPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThongTinChiTietPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maHang,
+            this.soLuong});
+            this.dgvThongTinChiTietPhieuNhap.Location = new System.Drawing.Point(12, 26);
+            this.dgvThongTinChiTietPhieuNhap.Name = "dgvThongTinChiTietPhieuNhap";
+            this.dgvThongTinChiTietPhieuNhap.Size = new System.Drawing.Size(583, 247);
+            this.dgvThongTinChiTietPhieuNhap.TabIndex = 0;
+            // 
+            // maHang
+            // 
+            this.maHang.DataPropertyName = "maHang";
+            this.maHang.HeaderText = "Mã hàng";
+            this.maHang.Name = "maHang";
+            // 
+            // soLuong
+            // 
+            this.soLuong.DataPropertyName = "soLuong";
+            this.soLuong.HeaderText = "Số lượng";
+            this.soLuong.Name = "soLuong";
             // 
             // btnCapNhat
             // 
@@ -148,12 +167,13 @@ namespace QLCHTAN
             this.btnThoat.TabIndex = 3;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // ThongTinPhieuNhap_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 536);
+            this.ClientSize = new System.Drawing.Size(649, 530);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.grbDanhSachHangNhap);
@@ -168,7 +188,7 @@ namespace QLCHTAN
             this.grbThongTinphieuNhap.PerformLayout();
             this.grbDanhSachHangNhap.ResumeLayout(false);
             this.grbDanhSachHangNhap.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinChiTietPhieuNhap)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -181,10 +201,12 @@ namespace QLCHTAN
         private System.Windows.Forms.TextBox txtNhaCungCap;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox grbDanhSachHangNhap;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvThongTinChiTietPhieuNhap;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label lblTongGia;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soLuong;
     }
 }
