@@ -30,17 +30,16 @@ namespace QLCHTAN
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.dvgThongTinDonHang = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panelTongTien = new System.Windows.Forms.Panel();
             this.txtThanhTien = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -50,11 +49,12 @@ namespace QLCHTAN
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
+            this.dvgThongTinDonHang = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            this.panelTongTien.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgThongTinDonHang)).BeginInit();
-            this.panelTongTien.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,6 +71,45 @@ namespace QLCHTAN
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1015, 605);
             this.panel1.TabIndex = 0;
+            // 
+            // panelTongTien
+            // 
+            this.panelTongTien.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelTongTien.Controls.Add(this.txtThanhTien);
+            this.panelTongTien.Controls.Add(this.label3);
+            this.panelTongTien.Location = new System.Drawing.Point(526, 506);
+            this.panelTongTien.Name = "panelTongTien";
+            this.panelTongTien.Size = new System.Drawing.Size(486, 87);
+            this.panelTongTien.TabIndex = 6;
+            // 
+            // txtThanhTien
+            // 
+            this.txtThanhTien.Enabled = false;
+            this.txtThanhTien.Location = new System.Drawing.Point(100, 20);
+            this.txtThanhTien.Name = "txtThanhTien";
+            this.txtThanhTien.ReadOnly = true;
+            this.txtThanhTien.Size = new System.Drawing.Size(283, 36);
+            this.txtThanhTien.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 24);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Thành Tiền :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 178);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(222, 35);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Danh Mục Nước :";
             // 
             // label1
             // 
@@ -91,43 +130,6 @@ namespace QLCHTAN
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(517, 117);
             this.flowLayoutPanel2.TabIndex = 3;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.button4);
-            this.flowLayoutPanel1.Controls.Add(this.button5);
-            this.flowLayoutPanel1.Controls.Add(this.button6);
-            this.flowLayoutPanel1.Controls.Add(this.button7);
-            this.flowLayoutPanel1.Controls.Add(this.button8);
-            this.flowLayoutPanel1.Controls.Add(this.button9);
-            this.flowLayoutPanel1.Controls.Add(this.button10);
-            this.flowLayoutPanel1.Controls.Add(this.button11);
-            this.flowLayoutPanel1.Controls.Add(this.button12);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 216);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(517, 354);
-            this.flowLayoutPanel1.TabIndex = 2;
-            // 
-            // dvgThongTinDonHang
-            // 
-            this.dvgThongTinDonHang.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dvgThongTinDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgThongTinDonHang.Location = new System.Drawing.Point(526, 0);
-            this.dvgThongTinDonHang.Name = "dvgThongTinDonHang";
-            this.dvgThongTinDonHang.RowHeadersWidth = 51;
-            this.dvgThongTinDonHang.RowTemplate.Height = 24;
-            this.dvgThongTinDonHang.Size = new System.Drawing.Size(486, 500);
-            this.dvgThongTinDonHang.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 178);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(222, 35);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Danh Mục Nước :";
             // 
             // button1
             // 
@@ -162,34 +164,21 @@ namespace QLCHTAN
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // panelTongTien
+            // flowLayoutPanel1
             // 
-            this.panelTongTien.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelTongTien.Controls.Add(this.txtThanhTien);
-            this.panelTongTien.Controls.Add(this.label3);
-            this.panelTongTien.Location = new System.Drawing.Point(526, 506);
-            this.panelTongTien.Name = "panelTongTien";
-            this.panelTongTien.Size = new System.Drawing.Size(486, 87);
-            this.panelTongTien.TabIndex = 6;
-            // 
-            // txtThanhTien
-            // 
-            this.txtThanhTien.Enabled = false;
-            this.txtThanhTien.Location = new System.Drawing.Point(100, 20);
-            this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.ReadOnly = true;
-            this.txtThanhTien.Size = new System.Drawing.Size(283, 36);
-            this.txtThanhTien.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 24);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Thành Tiền :";
+            this.flowLayoutPanel1.Controls.Add(this.button4);
+            this.flowLayoutPanel1.Controls.Add(this.button5);
+            this.flowLayoutPanel1.Controls.Add(this.button6);
+            this.flowLayoutPanel1.Controls.Add(this.button7);
+            this.flowLayoutPanel1.Controls.Add(this.button8);
+            this.flowLayoutPanel1.Controls.Add(this.button9);
+            this.flowLayoutPanel1.Controls.Add(this.button10);
+            this.flowLayoutPanel1.Controls.Add(this.button11);
+            this.flowLayoutPanel1.Controls.Add(this.button12);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 216);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(517, 354);
+            this.flowLayoutPanel1.TabIndex = 2;
             // 
             // button4
             // 
@@ -290,6 +279,19 @@ namespace QLCHTAN
             this.button12.Text = "button12";
             this.button12.UseVisualStyleBackColor = false;
             // 
+            // dvgThongTinDonHang
+            // 
+            this.dvgThongTinDonHang.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dvgThongTinDonHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dvgThongTinDonHang.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dvgThongTinDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgThongTinDonHang.Location = new System.Drawing.Point(526, 0);
+            this.dvgThongTinDonHang.Name = "dvgThongTinDonHang";
+            this.dvgThongTinDonHang.RowHeadersWidth = 51;
+            this.dvgThongTinDonHang.RowTemplate.Height = 24;
+            this.dvgThongTinDonHang.Size = new System.Drawing.Size(486, 500);
+            this.dvgThongTinDonHang.TabIndex = 0;
+            // 
             // OrderNuoc_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
@@ -304,11 +306,11 @@ namespace QLCHTAN
             this.Text = "OrderNuoc_GUI";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelTongTien.ResumeLayout(false);
+            this.panelTongTien.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dvgThongTinDonHang)).EndInit();
-            this.panelTongTien.ResumeLayout(false);
-            this.panelTongTien.PerformLayout();
             this.ResumeLayout(false);
 
         }

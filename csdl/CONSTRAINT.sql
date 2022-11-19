@@ -1,9 +1,11 @@
+use QLCUAHANGTHUCANNHANH
+go
 
 alter table SanPham add constraint fk_SanPham_LoaiSanPham foreign key (maLoaiSanPham) references LoaiSanPham(maLoaiSanPham)
 go
  alter table SanPham add constraint fk_DoAn_SanPham foreign key(maSanPham)references DoAn(maDoAn)
  go
-  alter table SanPham add constraint fk_NuocUong_SanPham foreign key(maSanPham) references NuocUong(maNuoc)
+  alter table SanPham add constraint fk_NuocUong_SanPham foreign key(maLoaiSanPham) references NuocUong(maNuoc)
   go
    alter table DoAn add constraint fk_LoaiDoAn_DoAn foreign key (MaLoaiDoAn) references LoaiDoAn (maLoaiDoAn)
  go

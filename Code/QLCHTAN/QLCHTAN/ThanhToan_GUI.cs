@@ -27,5 +27,10 @@ namespace QLCHTAN
         {
 
         }
+
+        private void dvgThongTinDonHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
