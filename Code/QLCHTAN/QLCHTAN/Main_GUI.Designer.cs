@@ -100,6 +100,7 @@ namespace QLCHTAN
             this.button1.TabIndex = 5;
             this.button1.Text = "Quản lí Order";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnKhuyenMai
             // 
@@ -143,7 +144,7 @@ namespace QLCHTAN
             // 
             // Main_GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1158, 469);
             this.Controls.Add(this.btnQuanLiNhaCungCap);

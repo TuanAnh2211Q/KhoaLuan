@@ -17,6 +17,12 @@ namespace QLCHTAN
             InitializeComponent();
         }
 
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            NhanVienThanhToan_GUI t = new NhanVienThanhToan_GUI();
+            t.Show();
+        }
+
         private void dgvHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

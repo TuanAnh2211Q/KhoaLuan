@@ -7,7 +7,6 @@ D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.GenerateResource.cache
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.exe
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.pdb
-D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.FormThongTinNhanVien.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.AssemblyReference.cache
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.Form1.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan_DEV\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.FormDangNhap.resources
@@ -69,7 +68,6 @@ D:\KLTN2022\Code\QLCHTAN\QLCHTAN\bin\Debug\DAO.pdb
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\bin\Debug\DTO.pdb
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.CSDL.resources
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DangNhap_GUI.resources
-D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DanhMucMon_GUI.resources
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DanhSachSanPhamKhuyenMai_GUI.resources
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DoAn_GUI.resources
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.LoaiDoAn_GUI.resources
@@ -96,3 +94,11 @@ C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTA
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DoiMatKhau_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.PhieuDatHang_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinChiTietPhieuDat_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DoiMatKhau_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.GiaoDienNhanVien_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.NhanVien_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.PhieuDatHang_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinChiTietPhieuDat_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DanhMucKhuyenMai_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.NhanVienThanhToan_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.OrderNuoc_GUI.resources
