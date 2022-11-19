@@ -1,5 +1,5 @@
---create database QLCUAHANGTHUCANNHANH
---go
+create database QLCUAHANGTHUCANNHANH
+go
 use  QLCUAHANGTHUCANNHANH
 go
 set dateformat dmy

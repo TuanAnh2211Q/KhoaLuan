@@ -19,6 +19,8 @@ namespace QLCHTAN
             InitializeComponent();
 
         }
+        #region Method
+
         public Form currentFormChild;
         public void openChildForm(Form childForm)
         {
@@ -35,8 +37,14 @@ namespace QLCHTAN
             childForm.BringToFront();
             childForm.Show();
         }
+        void loadDanhMucMon()
+        {
+
+        }
+        #endregion
 
 
+        #region Event
         private void btnMenu_Click(object sender, EventArgs e)
         {
             openChildForm(new DanhMucKhuyenMai_GUI());
@@ -73,5 +81,8 @@ namespace QLCHTAN
             openChildForm(new OrderNuoc_GUI());
             label1.Text = btnNuoc.Text;
         }
+
+
+        #endregion
     }
 }
