@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace QLCHTAN
 {
-    public partial class DanhMucMon_GUI : Form
+    public partial class DanhMucKhuyenMai_GUI : Form
     {
-        public DanhMucMon_GUI()
+        public DanhMucKhuyenMai_GUI()
         {
             InitializeComponent();
+        }
+
+        private void dgvThongTinDonHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

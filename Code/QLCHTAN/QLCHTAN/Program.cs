@@ -16,7 +16,7 @@ namespace QLCHTAN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PhieuDatHang_GUI());
+            Application.Run(new Order_GUI());
             
         }
     }

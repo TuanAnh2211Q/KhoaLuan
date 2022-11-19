@@ -10,17 +10,12 @@ using System.Windows.Forms;
 
 namespace QLCHTAN
 {
-    public partial class Main_GUI : Form
+    public partial class OrderNuoc_GUI : Form
     {
-        public Main_GUI()
+        public OrderNuoc_GUI()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Order_GUI t = new Order_GUI();
-            t.Show();
-        }
     }
 }

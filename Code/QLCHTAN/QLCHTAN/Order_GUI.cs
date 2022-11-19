@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
+using DTO;
 
 namespace QLCHTAN
 {
@@ -17,31 +19,59 @@ namespace QLCHTAN
             InitializeComponent();
 
         }
-
-
-        private void tbtnMenuDoAn_Click(object sender, EventArgs e)
+        public Form currentFormChild;
+        public void openChildForm(Form childForm)
         {
-            DanhMucMon_GUI danhMuc = new DanhMucMon_GUI();
-            danhMuc.MdiParent = this;
-            danhMuc.Show();
-            tbtnThanhToan.Enabled = true;
-            tbtnMenuDoAn.Enabled = false;  
+            if(currentFormChild!=null)
+            {
+                currentFormChild.Close();
+            }
+            currentFormChild = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelThan.Controls.Add(childForm);
+            panelThan.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
 
-
-
-
-        private void tbtnThanhToan_Click(object sender, EventArgs e)
+        private void btnMenu_Click(object sender, EventArgs e)
         {
-            ThanhToan_GUI thanhToan = new ThanhToan_GUI();
-            thanhToan.MdiParent = this;
-            thanhToan.Show();
-            tbtnThanhToan.Enabled = false;
-            tbtnMenuDoAn.Enabled = true;
-
+            openChildForm(new DanhMucKhuyenMai_GUI());
+            label1.Text = btnKhuyenMai.Text;
         }
 
-       
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ThanhToan_GUI());
+            label1.Text = btnThanhToan.Text;
+        }
+
+        private void btnOder_Click(object sender, EventArgs e)
+        {
+            if(currentFormChild!=null)
+            { 
+                currentFormChild.Close();
+            }
+            label1.Text = "Bảng Oder Khách";
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+           DialogResult result=  MessageBox.Show("Bạn có muốn thoát ?", "Thông Báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (result== System.Windows.Forms.DialogResult.Yes)
+            {
+                Main_GUI t = new Main_GUI();
+                t.Show();
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            openChildForm(new OrderNuoc_GUI());
+            label1.Text = btnNuoc.Text;
+        }
     }
 }
