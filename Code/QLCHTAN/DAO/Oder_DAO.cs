@@ -12,16 +12,16 @@ namespace DAO
     class Oder_DAO:DataProvider
     {
         //Load danh sách đồ ăn  
-            public DataTable loadDsDoAn()
-            {
-                 Open();
-                List<DanhMucMon_DTO> danhMucMon = new List<DanhMucMon_DTO>();
+        //public DataTable loadDsDoAn()
+        //{
+        //    Open();
+        //    List<DanhMucMon_DTO> danhMucMon = new List<DanhMucMon_DTO>();
 
-                return danhMucMon;
-            }
+        //    return danhMucMon;
+        //}
 
 
-            
-        
+
+
     }
 }
