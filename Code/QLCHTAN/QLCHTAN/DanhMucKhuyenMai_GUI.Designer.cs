@@ -38,9 +38,9 @@ namespace QLCHTAN
             this.label2 = new System.Windows.Forms.Label();
             this.flpDanhMucKhuyenMaiVIP = new System.Windows.Forms.FlowLayoutPanel();
             this.flpDanhMucKhuyenMai = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpDanhMucCombo = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dvgThongTinDonHang = new System.Windows.Forms.DataGridView();
-            this.flpDanhMucCombo = new System.Windows.Forms.FlowLayoutPanel();
             this.panelTongTien.SuspendLayout();
             this.panel_KhuyenMai.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -122,6 +122,7 @@ namespace QLCHTAN
             // 
             // flpDanhMucKhuyenMaiVIP
             // 
+            this.flpDanhMucKhuyenMaiVIP.AutoScroll = true;
             this.flpDanhMucKhuyenMaiVIP.Location = new System.Drawing.Point(3, 461);
             this.flpDanhMucKhuyenMaiVIP.Name = "flpDanhMucKhuyenMaiVIP";
             this.flpDanhMucKhuyenMaiVIP.Size = new System.Drawing.Size(526, 114);
@@ -129,10 +130,19 @@ namespace QLCHTAN
             // 
             // flpDanhMucKhuyenMai
             // 
+            this.flpDanhMucKhuyenMai.AutoScroll = true;
             this.flpDanhMucKhuyenMai.Location = new System.Drawing.Point(4, 307);
             this.flpDanhMucKhuyenMai.Name = "flpDanhMucKhuyenMai";
             this.flpDanhMucKhuyenMai.Size = new System.Drawing.Size(526, 117);
             this.flpDanhMucKhuyenMai.TabIndex = 4;
+            // 
+            // flpDanhMucCombo
+            // 
+            this.flpDanhMucCombo.AutoScroll = true;
+            this.flpDanhMucCombo.Location = new System.Drawing.Point(3, 38);
+            this.flpDanhMucCombo.Name = "flpDanhMucCombo";
+            this.flpDanhMucCombo.Size = new System.Drawing.Size(526, 222);
+            this.flpDanhMucCombo.TabIndex = 3;
             // 
             // panel1
             // 
@@ -155,15 +165,8 @@ namespace QLCHTAN
             this.dvgThongTinDonHang.Name = "dvgThongTinDonHang";
             this.dvgThongTinDonHang.RowHeadersWidth = 51;
             this.dvgThongTinDonHang.RowTemplate.Height = 24;
-            this.dvgThongTinDonHang.Size = new System.Drawing.Size(482, 492);
+            this.dvgThongTinDonHang.Size = new System.Drawing.Size(482, 500);
             this.dvgThongTinDonHang.TabIndex = 15;
-            // 
-            // flpDanhMucCombo
-            // 
-            this.flpDanhMucCombo.Location = new System.Drawing.Point(3, 38);
-            this.flpDanhMucCombo.Name = "flpDanhMucCombo";
-            this.flpDanhMucCombo.Size = new System.Drawing.Size(526, 222);
-            this.flpDanhMucCombo.TabIndex = 3;
             // 
             // DanhMucKhuyenMai_GUI
             // 

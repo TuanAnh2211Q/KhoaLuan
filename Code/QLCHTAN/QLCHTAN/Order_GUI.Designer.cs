@@ -160,6 +160,7 @@ namespace QLCHTAN
             // 
             // flpDanhMucMon
             // 
+            this.flpDanhMucMon.AutoScroll = true;
             this.flpDanhMucMon.Location = new System.Drawing.Point(0, 5);
             this.flpDanhMucMon.Name = "flpDanhMucMon";
             this.flpDanhMucMon.Size = new System.Drawing.Size(576, 514);
