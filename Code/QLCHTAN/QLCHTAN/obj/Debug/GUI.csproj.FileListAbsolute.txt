@@ -56,7 +56,6 @@ C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTA
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinMatHang_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinPhieuNhap_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinPhieuXuat_GUI.resources
-C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DanhMucMon_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.Order_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.TaiKhoan_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThanhToan_GUI.resources
@@ -102,3 +101,6 @@ D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinChiTietPhieuDat_GUI.r
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DanhMucKhuyenMai_GUI.resources
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.NhanVienThanhToan_GUI.resources
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.OrderNuoc_GUI.resources
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DanhMucKhuyenMai_GUI.resources
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.NhanVienThanhToan_GUI.resources
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.OrderNuoc_GUI.resources

@@ -2,27 +2,13 @@
 go
 
 --==================================== Insert Thông Tin =============================
--------------------------Sản Phẩm----------------
-insert into SanPham
-values ('SPO01','SPDA01'),
-('SPO02','SPDA02'),
-('SPO03','SPDA03'),
-('SPO04','SPNC01'),
-('SPO05','SPNC02'),
-('SPO06','SPNC03')
 
-insert into LoaiSanPham
-values ('SPDA01','Gà Truyền Thống'),
-('SPDA02',N'Gà Sốt Cay'),
-('SPDA03',N'Buger Bò'),
-('SPNC01',N'Coke Lớn '),
-('SPNC02',N'Coke nhỏ '),
-('SPNC03',N'Fanta Lớn ')
 -------------------------Đồ Ăn----------------
 insert into DoAn
 values ('SP001','SPDA01',N'Gà Truyền Thống',''),
 ('SP002','SPDA02','Gà Sốt Cay',''),
 ('SP003','SPDA03','Gà Sốt Bơ','')
+
 
 insert into LoaiDoAn
 values ('DA01','SPDA01'),
