@@ -130,6 +130,12 @@
     <Compile Include="NuocUong_GUI.Designer.cs">
       <DependentUpon>NuocUong_GUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderDoAn_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderDoAn_GUI.Designer.cs">
+      <DependentUpon>OrderDoAn_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderNuoc_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuocUong_GUI.resx">
       <DependentUpon>NuocUong_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderDoAn_GUI.resx">
+      <DependentUpon>OrderDoAn_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderNuoc_GUI.resx">
       <DependentUpon>OrderNuoc_GUI.cs</DependentUpon>

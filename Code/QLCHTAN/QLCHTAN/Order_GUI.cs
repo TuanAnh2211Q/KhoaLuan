@@ -37,10 +37,7 @@ namespace QLCHTAN
             childForm.BringToFront();
             childForm.Show();
         }
-        void loadDanhMucMon()
-        {
-
-        }
+    
         #endregion
 
 
@@ -65,7 +62,11 @@ namespace QLCHTAN
             }
             label1.Text = "Bảng Oder Khách";
         }
-
+        private void btnNuoc_Click(object sender, EventArgs e)
+        {
+            openChildForm(new OrderNuoc_GUI());
+            label1.Text = btnNuoc.Text;
+        }
         private void btnThoat_Click(object sender, EventArgs e)
         {
            DialogResult result=  MessageBox.Show("Bạn có muốn thoát ?", "Thông Báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
@@ -76,13 +77,11 @@ namespace QLCHTAN
             }
         }
 
-        private void button13_Click(object sender, EventArgs e)
-        {
-            openChildForm(new OrderNuoc_GUI());
-            label1.Text = btnNuoc.Text;
-        }
+
 
 
         #endregion
+
+       
     }
 }

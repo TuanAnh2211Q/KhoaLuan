@@ -38,14 +38,16 @@ namespace QLCHTAN
             this.panel_Tren = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelThan = new System.Windows.Forms.Panel();
-            this.btnNuoc = new System.Windows.Forms.Button();
-            this.flpDanhMucMon = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dvgThongTinDonHang = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtThanhTien = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnNuoc = new System.Windows.Forms.Button();
             this.panel_Trai.SuspendLayout();
             this.panel_Tren.SuspendLayout();
-            this.panelThan.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgThongTinDonHang)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +55,7 @@ namespace QLCHTAN
             // 
             this.panel_Trai.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel_Trai.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel_Trai.Controls.Add(this.btnNuoc);
             this.panel_Trai.Controls.Add(this.btnThoat);
             this.panel_Trai.Controls.Add(this.btnOder);
             this.panel_Trai.Controls.Add(this.panel_Than);
@@ -66,7 +69,7 @@ namespace QLCHTAN
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnThoat.Location = new System.Drawing.Point(-2, 537);
+            this.btnThoat.Location = new System.Drawing.Point(-1, 590);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(145, 65);
             this.btnThoat.TabIndex = 8;
@@ -96,7 +99,7 @@ namespace QLCHTAN
             // btnThanhToan
             // 
             this.btnThanhToan.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnThanhToan.Location = new System.Drawing.Point(-1, 392);
+            this.btnThanhToan.Location = new System.Drawing.Point(-3, 463);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(145, 65);
             this.btnThanhToan.TabIndex = 1;
@@ -107,7 +110,7 @@ namespace QLCHTAN
             // btnKhuyenMai
             // 
             this.btnKhuyenMai.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnKhuyenMai.Location = new System.Drawing.Point(-2, 237);
+            this.btnKhuyenMai.Location = new System.Drawing.Point(-3, 328);
             this.btnKhuyenMai.Name = "btnKhuyenMai";
             this.btnKhuyenMai.Size = new System.Drawing.Size(143, 65);
             this.btnKhuyenMai.TabIndex = 0;
@@ -139,41 +142,42 @@ namespace QLCHTAN
             // 
             this.panelThan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelThan.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelThan.Controls.Add(this.btnNuoc);
-            this.panelThan.Controls.Add(this.flpDanhMucMon);
-            this.panelThan.Controls.Add(this.panel2);
             this.panelThan.Location = new System.Drawing.Point(144, 74);
             this.panelThan.Name = "panelThan";
-            this.panelThan.Size = new System.Drawing.Size(946, 593);
+            this.panelThan.Size = new System.Drawing.Size(536, 593);
             this.panelThan.TabIndex = 6;
             // 
-            // btnNuoc
+            // panel1
             // 
-            this.btnNuoc.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnNuoc.Location = new System.Drawing.Point(3, 525);
-            this.btnNuoc.Name = "btnNuoc";
-            this.btnNuoc.Size = new System.Drawing.Size(558, 38);
-            this.btnNuoc.TabIndex = 12;
-            this.btnNuoc.Text = "Nước";
-            this.btnNuoc.UseVisualStyleBackColor = false;
-            this.btnNuoc.Click += new System.EventHandler(this.button13_Click);
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.dvgThongTinDonHang);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Location = new System.Drawing.Point(678, 74);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(412, 593);
+            this.panel1.TabIndex = 8;
             // 
-            // flpDanhMucMon
+            // dvgThongTinDonHang
             // 
-            this.flpDanhMucMon.AutoScroll = true;
-            this.flpDanhMucMon.Location = new System.Drawing.Point(0, 5);
-            this.flpDanhMucMon.Name = "flpDanhMucMon";
-            this.flpDanhMucMon.Size = new System.Drawing.Size(576, 514);
-            this.flpDanhMucMon.TabIndex = 3;
+            this.dvgThongTinDonHang.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dvgThongTinDonHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dvgThongTinDonHang.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dvgThongTinDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgThongTinDonHang.Location = new System.Drawing.Point(3, 3);
+            this.dvgThongTinDonHang.Name = "dvgThongTinDonHang";
+            this.dvgThongTinDonHang.RowHeadersWidth = 51;
+            this.dvgThongTinDonHang.RowTemplate.Height = 24;
+            this.dvgThongTinDonHang.Size = new System.Drawing.Size(402, 480);
+            this.dvgThongTinDonHang.TabIndex = 4;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.txtThanhTien);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(582, 494);
+            this.panel2.Location = new System.Drawing.Point(18, 502);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(361, 62);
-            this.panel2.TabIndex = 2;
+            this.panel2.TabIndex = 3;
             // 
             // txtThanhTien
             // 
@@ -194,12 +198,24 @@ namespace QLCHTAN
             this.label2.TabIndex = 0;
             this.label2.Text = "Thành Tiền : ";
             // 
+            // btnNuoc
+            // 
+            this.btnNuoc.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnNuoc.Location = new System.Drawing.Point(-2, 199);
+            this.btnNuoc.Name = "btnNuoc";
+            this.btnNuoc.Size = new System.Drawing.Size(143, 65);
+            this.btnNuoc.TabIndex = 9;
+            this.btnNuoc.Text = "Nước";
+            this.btnNuoc.UseVisualStyleBackColor = false;
+            this.btnNuoc.Click += new System.EventHandler(this.btnNuoc_Click);
+            // 
             // Order_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1092, 668);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelThan);
             this.Controls.Add(this.panel_Tren);
             this.Controls.Add(this.panel_Trai);
@@ -212,7 +228,8 @@ namespace QLCHTAN
             this.panel_Trai.ResumeLayout(false);
             this.panel_Tren.ResumeLayout(false);
             this.panel_Tren.PerformLayout();
-            this.panelThan.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dvgThongTinDonHang)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -227,13 +244,14 @@ namespace QLCHTAN
         private System.Windows.Forms.Panel panel_Tren;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel_Than;
-        private System.Windows.Forms.Panel panelThan;
         private System.Windows.Forms.Button btnOder;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Panel panelThan;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtThanhTien;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.FlowLayoutPanel flpDanhMucMon;
-        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.DataGridView dvgThongTinDonHang;
         private System.Windows.Forms.Button btnNuoc;
     }
 }

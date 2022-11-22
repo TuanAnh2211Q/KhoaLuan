@@ -30,62 +30,25 @@ namespace QLCHTAN
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panelTongTien = new System.Windows.Forms.Panel();
-            this.txtThanhTien = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.dvgThongTinDonHang = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            this.panelTongTien.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgThongTinDonHang)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.panelTongTien);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.flowLayoutPanel2);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Controls.Add(this.dvgThongTinDonHang);
             this.panel1.Location = new System.Drawing.Point(1, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1015, 605);
+            this.panel1.Size = new System.Drawing.Size(531, 605);
             this.panel1.TabIndex = 0;
-            // 
-            // panelTongTien
-            // 
-            this.panelTongTien.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelTongTien.Controls.Add(this.txtThanhTien);
-            this.panelTongTien.Controls.Add(this.label3);
-            this.panelTongTien.Location = new System.Drawing.Point(526, 506);
-            this.panelTongTien.Name = "panelTongTien";
-            this.panelTongTien.Size = new System.Drawing.Size(486, 87);
-            this.panelTongTien.TabIndex = 6;
-            // 
-            // txtThanhTien
-            // 
-            this.txtThanhTien.Enabled = false;
-            this.txtThanhTien.Location = new System.Drawing.Point(100, 20);
-            this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.ReadOnly = true;
-            this.txtThanhTien.Size = new System.Drawing.Size(283, 36);
-            this.txtThanhTien.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 24);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Thành Tiền :";
             // 
             // label2
             // 
@@ -123,25 +86,12 @@ namespace QLCHTAN
             this.flowLayoutPanel1.Size = new System.Drawing.Size(517, 354);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
-            // dvgThongTinDonHang
-            // 
-            this.dvgThongTinDonHang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dvgThongTinDonHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dvgThongTinDonHang.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dvgThongTinDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgThongTinDonHang.Location = new System.Drawing.Point(526, 0);
-            this.dvgThongTinDonHang.Name = "dvgThongTinDonHang";
-            this.dvgThongTinDonHang.RowHeadersWidth = 51;
-            this.dvgThongTinDonHang.RowTemplate.Height = 24;
-            this.dvgThongTinDonHang.Size = new System.Drawing.Size(486, 500);
-            this.dvgThongTinDonHang.TabIndex = 0;
-            // 
             // OrderNuoc_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1018, 611);
+            this.ClientSize = new System.Drawing.Size(534, 611);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Candara", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -150,9 +100,6 @@ namespace QLCHTAN
             this.Text = "OrderNuoc_GUI";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panelTongTien.ResumeLayout(false);
-            this.panelTongTien.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgThongTinDonHang)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -160,13 +107,9 @@ namespace QLCHTAN
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dvgThongTinDonHang;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panelTongTien;
-        private System.Windows.Forms.TextBox txtThanhTien;
-        private System.Windows.Forms.Label label3;
     }
 }
