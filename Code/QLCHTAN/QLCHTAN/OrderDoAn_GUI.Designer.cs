@@ -29,19 +29,19 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
-            this.flpDanhMucMon = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpDanhMucMonChinh = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpDanhMucMonPhu = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // flpDanhMucMon
+            // flpDanhMucMonChinh
             // 
-            this.flpDanhMucMon.AutoScroll = true;
-            this.flpDanhMucMon.Location = new System.Drawing.Point(9, 47);
-            this.flpDanhMucMon.Name = "flpDanhMucMon";
-            this.flpDanhMucMon.Size = new System.Drawing.Size(592, 332);
-            this.flpDanhMucMon.TabIndex = 13;
+            this.flpDanhMucMonChinh.AutoScroll = true;
+            this.flpDanhMucMonChinh.Location = new System.Drawing.Point(9, 47);
+            this.flpDanhMucMonChinh.Name = "flpDanhMucMonChinh";
+            this.flpDanhMucMonChinh.Size = new System.Drawing.Size(592, 332);
+            this.flpDanhMucMonChinh.TabIndex = 13;
             // 
             // label1
             // 
@@ -53,13 +53,13 @@ namespace QLCHTAN
             this.label1.TabIndex = 14;
             this.label1.Text = "Món Chính :";
             // 
-            // flowLayoutPanel1
+            // flpDanhMucMonPhu
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 444);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(592, 193);
-            this.flowLayoutPanel1.TabIndex = 15;
+            this.flpDanhMucMonPhu.AutoScroll = true;
+            this.flpDanhMucMonPhu.Location = new System.Drawing.Point(12, 444);
+            this.flpDanhMucMonPhu.Name = "flpDanhMucMonPhu";
+            this.flpDanhMucMonPhu.Size = new System.Drawing.Size(592, 193);
+            this.flpDanhMucMonPhu.TabIndex = 15;
             // 
             // label2
             // 
@@ -79,23 +79,24 @@ namespace QLCHTAN
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(613, 649);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flpDanhMucMonPhu);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.flpDanhMucMon);
+            this.Controls.Add(this.flpDanhMucMonChinh);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "OrderDoAn_GUI";
             this.Text = "OrderDoAn_GUI";
+            this.Load += new System.EventHandler(this.OrderDoAn_GUI_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.FlowLayoutPanel flpDanhMucMon;
+        private System.Windows.Forms.FlowLayoutPanel flpDanhMucMonChinh;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpDanhMucMonPhu;
         private System.Windows.Forms.Label label2;
     }
 }
