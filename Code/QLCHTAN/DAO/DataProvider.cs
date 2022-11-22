@@ -10,6 +10,21 @@ namespace DAO
 {
     public class DataProvider
     {
+        //instance là Design patern Singleton nha mấy bro :V
+        private static DataProvider instance;
+        public static DataProvider Instance 
+        {
+            get {
+                    if (instance == null)
+                        instance = new DataProvider();
+                    return DataProvider.instance; 
+                }
+            set
+            {
+                DataProvider.instance = value;
+            }
+        }
+
         public SqlConnection conn;
         public static string DataSource { get; set; }
 
@@ -20,6 +35,7 @@ namespace DAO
         public string Password { get; set; }
 
         public string connSTR { get; set; }
+      
 
         public DataProvider()
         {
@@ -51,7 +67,88 @@ namespace DAO
             conn.Dispose();
         }
 
-       
+        //Sài này truy vấn cho mau nha bro
+        /// Này thêm nè
+        public DataTable ExecuteQuery(string query, object[] Parameter = null)
+        {
+            DataTable data = new DataTable();
+            using (SqlConnection connection =new SqlConnection(connSTR))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                if(Parameter != null)
+                {
+                    string[] listPara = query.Split(' ');
+                    int i = 0;
+                    foreach(string item in listPara)
+                    {
+                        if(item.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(item, Parameter[i]);
+                            i++;
+                        }
+                    }
+                }
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                connection.Close();
+            }
+            return data;
+        }
+        // sài để update cho nhẹ :v
+        public int ExecuteNoQuery(string query, object[] Parameter = null)
+        {
+           int data =0;
+            using (SqlConnection connection = new SqlConnection(connSTR))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                if (Parameter != null)
+                {
+                    string[] listPara = query.Split(' ');
+                    int i = 0;
+                    foreach (string item in listPara)
+                    {
+                        if (item.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(item, Parameter[i]);
+                            i++;
+                        }
+                    }
+                }
+                data = command.ExecuteNonQuery();
+                connection.Close();
+                
+            }
+            return data;
+        }
+        //Sài để đếm số lượng đồ nè (select count*)
+        public object ExecuteScalar(string query, object[] Parameter = null)
+        {
+           object data = 0;
+            using (SqlConnection connection = new SqlConnection(connSTR))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                if (Parameter != null)
+                {
+                    string[] listPara = query.Split(' ');
+                    int i = 0;
+                    foreach (string item in listPara)
+                    {
+                        if (item.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(item, Parameter[i]);
+                            i++;
+                        }
+                    }
+                }
+                data = command.ExecuteScalar();
+                connection.Close();
+
+            }
+            return data;
+        }
     }
 
 }

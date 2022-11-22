@@ -1,4 +1,6 @@
-﻿--===================LOẠI ĐỒ ĂN==========================================
+﻿use QLCUAHANGTHUCANNHANH
+go
+--===================LOẠI ĐỒ ĂN==========================================
 --Thêm loại đồ ăn
 --drop procedure insert_LoaiDoAn
 create procedure insert_LoaiDoAn
@@ -49,6 +51,7 @@ create procedure select_PhanQuyen
 as
 select*from PhanQuyen
 go
+exec dbo.select_PhanQuyen
 ------===================NHÂN VIÊN==============================
 
 --Lấy thông tin nhân viên
@@ -176,3 +179,10 @@ where ttdt.maHang=mh.maHang
 and ncc.maNCC=ttdt.maNCC
 and ttdt.maDatHang=@maDatHang
 go
+----========ORDER==============
+-- Lấy thông tin món ăn
+alter proc Load_MonAnChin
+as  select*from DoAn 
+exec dbo.Load_MonAnChin
+
+--===

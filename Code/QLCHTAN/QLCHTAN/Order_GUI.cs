@@ -56,10 +56,7 @@ namespace QLCHTAN
 
         private void btnOder_Click(object sender, EventArgs e)
         {
-            if(currentFormChild!=null)
-            { 
-                currentFormChild.Close();
-            }
+            openChildForm(new OrderDoAn_GUI());
             label1.Text = "Bảng Oder Khách";
         }
         private void btnNuoc_Click(object sender, EventArgs e)
