@@ -180,9 +180,19 @@ and ncc.maNCC=ttdt.maNCC
 and ttdt.maDatHang=@maDatHang
 go
 ----========ORDER==============
--- Lấy thông tin món ăn
+-- Lấy thông tin món ăn chính
 alter proc Load_MonAnChin
-as  select*from DoAn 
+as  select*from DoAn where maLoaiDoAn='LDA01'
 exec dbo.Load_MonAnChin
-
---===
+--Lấy thông tin món ăn phụ
+create proc Load_MonAnPhu
+as  select*from DoAn where maLoaiDoAn='LDA02'
+exec dbo.Load_MonAnPhu
+--Lấy thông tin nước
+alter proc Load_NuocUong	
+as select tenNuoc from NuocUong
+exec dbo.Load_NuocUong
+--Lấy thông tin kích cở nước
+create proc load_KichCoNuoc
+as select donViBan from NuocUong	
+exec dbo.load_KichCoNuoc
