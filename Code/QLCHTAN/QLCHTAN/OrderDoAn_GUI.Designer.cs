@@ -40,7 +40,7 @@ namespace QLCHTAN
             this.flpDanhMucMonChinh.AutoScroll = true;
             this.flpDanhMucMonChinh.Location = new System.Drawing.Point(9, 47);
             this.flpDanhMucMonChinh.Name = "flpDanhMucMonChinh";
-            this.flpDanhMucMonChinh.Size = new System.Drawing.Size(592, 332);
+            this.flpDanhMucMonChinh.Size = new System.Drawing.Size(592, 312);
             this.flpDanhMucMonChinh.TabIndex = 13;
             // 
             // label1
@@ -56,16 +56,16 @@ namespace QLCHTAN
             // flpDanhMucMonPhu
             // 
             this.flpDanhMucMonPhu.AutoScroll = true;
-            this.flpDanhMucMonPhu.Location = new System.Drawing.Point(12, 444);
+            this.flpDanhMucMonPhu.Location = new System.Drawing.Point(12, 413);
             this.flpDanhMucMonPhu.Name = "flpDanhMucMonPhu";
-            this.flpDanhMucMonPhu.Size = new System.Drawing.Size(592, 193);
+            this.flpDanhMucMonPhu.Size = new System.Drawing.Size(592, 229);
             this.flpDanhMucMonPhu.TabIndex = 15;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 391);
+            this.label2.Location = new System.Drawing.Point(12, 375);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 35);
             this.label2.TabIndex = 16;
@@ -77,7 +77,7 @@ namespace QLCHTAN
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(613, 649);
+            this.ClientSize = new System.Drawing.Size(613, 654);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.flpDanhMucMonPhu);
             this.Controls.Add(this.label1);
