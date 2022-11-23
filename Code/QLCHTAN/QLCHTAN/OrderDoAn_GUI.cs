@@ -24,7 +24,7 @@ namespace QLCHTAN
         #region Method
         public void loadMonAnChinh()
         {
-            List<OrderDoAn_DTO> monChinhList = OrderDoAn_DAO.Instance.loadDanhSachMonAn_DAO();
+            List<OrderDoAn_DTO> monChinhList = OrderDoAn_DAO.Instance.loadDanhSachMonAnChinh_DAO();
             foreach( OrderDoAn_DTO item in monChinhList)
             {
                 Button btn = new Button()
@@ -33,12 +33,29 @@ namespace QLCHTAN
                     Height = OrderDoAn_DTO.dai
                 };
                 btn.Text = item.TenDoAn;
+                btn.BackColor = Color.LightGreen;
               flpDanhMucMonChinh.Controls.Add(btn);
               
 
             }
         }
+        public void loadMonAnPhu()
+        {
+            List<OrderDoAn_DTO> monChinhList = OrderDoAn_DAO.Instance.loadDanhSachMonAnPhu_DAO();
+            foreach (OrderDoAn_DTO item in monChinhList)
+            {
+                Button btn = new Button()
+                {
+                    Width = OrderDoAn_DTO.rong,
+                    Height = OrderDoAn_DTO.dai
+                };
+                btn.Text = item.TenDoAn;
+                btn.BackColor = Color.LightGreen;
+                flpDanhMucMonPhu.Controls.Add(btn);
 
+
+            }
+        }
         #endregion
 
         #region Event
@@ -46,6 +63,7 @@ namespace QLCHTAN
         private void OrderDoAn_GUI_Load(object sender, EventArgs e)
         {
             loadMonAnChinh();
+            loadMonAnPhu();
         }
 
         #endregion
