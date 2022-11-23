@@ -169,6 +169,5 @@ namespace QLCHTAN
                 e.Handled = true;
         }
 
-       
     }
 }

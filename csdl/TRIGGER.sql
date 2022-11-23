@@ -15,6 +15,9 @@ declare @tk varchar(10)=(select maNhanVien from inserted),
 end
 go 
 
+
+
+
 --drop trigger tg_XoaTK
 create trigger tg_XoaTK on NhanVien instead of delete as
 begin
@@ -26,6 +29,58 @@ delete from NhanVien where maNhanVien=@tk
 end
 end
 go
+-------------------------------------------SẢN PHẨM----------------------------------------------------
+------ĐỒ ĂN-------------------
+--Thêm đồ ăn vào loại sản phẩm
+create trigger insert_doAn on DoAn instead of insert as
+begin
+declare @masp nchar(30)= (select maDoAn from inserted),
+             @maLoaiDoAn nchar(30)=(select maLoaiDoAn from inserted),
+			 @tenDoAn nvarchar(50)=(select tenDoAn from inserted)
+	insert into SanPham values(@masp,'MLSP001')
+	insert into DoAn values(@masp,@maLoaiDoAn,@tenDoAn)
+end
+insert into DoAn values ('MDA001','MLDA001','Burger')
+insert into ThongTinDoAn values('MDA001','cái',50000,'burger thơm ngon mời bạn ăn nha')
+delete from DoAn where maDoAn='MDA001'
+
+select * from ThongTinDoAn
+--Xóa đồ ăn trong loại sản phẩm
+create  trigger delete_doAn on DoAn instead of  delete as
+begin
+alter table DoAn drop constraint fk_DoAn_SanPham
+declare @masp nchar(30)= (select maDoAn from deleted)
+delete from ThongTinDoAn where maDoAn=@masp
+delete from SanPham where maSanPham=@masp
+delete from DoAn where maDoAn=@masp
+alter table DoAn add constraint fk_DoAn_SanPham foreign key (maDoAn) references SanPham(maSanPham)
+end
+
+
+------NƯỚC UỐNG-------------------
+------Thêm nước uống----
+create trigger insert_NuocUong on NuocUong instead of insert as
+begin
+declare @masp nchar(30)= (select maNuoc from inserted),
+			 @tenNuocUong nvarchar(50)=(select tenNuoc from inserted),
+			 @donViBan nvarchar(10)=(select donViBan from inserted),
+			 @giaBan money=(select giaBanNuoc from inserted)
+insert into SanPham values(@masp,'MLSP002')
+insert into NuocUong values(@masp,@tenNuocUong,@donViBan,@giaBan)
+end
+go
+
+--Xóa đồ ăn trong loại sản phẩm
+create trigger delete_NuocUong on NuocUong instead of  delete as
+begin
+alter table NuocUong drop constraint fk_NuocUong_SanPham
+declare @masp nchar(30)= (select maNuoc from deleted)
+delete from SanPham where maSanPham=@masp
+delete from NuocUong where maNuoc=@masp
+alter table NuocUong add constraint fk_NuocUong_SanPham foreign key (maNuoc) references SanPham(maSanPham)
+end
+go
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 --Cập nhật tổng giá thông tin đặt hàng
 create  trigger insert_update_TongGia_DatHang on ThongTinDatHang instead of
@@ -82,7 +137,7 @@ declare
 
 
 ----Cập nhật tổng giá thông tin phiếu nhập
-create trigger insert_update_TongGia_NhapKho on ThongTinNhapKho instead of insert,update as
+create  trigger insert_update_TongGia_NhapKho on ThongTinNhapKho instead of insert,update as
 begin 
 	     declare
 		    @maNhap varchar(10),

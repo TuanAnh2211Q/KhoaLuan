@@ -153,6 +153,7 @@ namespace QLCHTAN
             // 
             // panel6
             // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.groupBox5);
             this.panel6.Controls.Add(this.btnQuanLiKhachHang);
             this.panel6.Location = new System.Drawing.Point(456, 116);
@@ -191,6 +192,7 @@ namespace QLCHTAN
             // 
             // panel5
             // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.groupBox4);
             this.panel5.Controls.Add(this.btnQuanLiTraHang);
             this.panel5.Location = new System.Drawing.Point(456, 22);
@@ -229,6 +231,7 @@ namespace QLCHTAN
             // 
             // panel4
             // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.groupBox3);
             this.panel4.Controls.Add(this.btnQuanLiXuatHang);
             this.panel4.Location = new System.Drawing.Point(9, 301);
@@ -267,6 +270,7 @@ namespace QLCHTAN
             // 
             // panel3
             // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.groupBox2);
             this.panel3.Controls.Add(this.btnLapPhieuNhapHang);
             this.panel3.Location = new System.Drawing.Point(9, 210);
@@ -306,6 +310,7 @@ namespace QLCHTAN
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.btnQuanLiHangTon);
             this.panel2.Location = new System.Drawing.Point(9, 116);
@@ -344,6 +349,7 @@ namespace QLCHTAN
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.grbMoTaOrder);
             this.panel1.Controls.Add(this.btnOrder);
             this.panel1.Location = new System.Drawing.Point(9, 22);

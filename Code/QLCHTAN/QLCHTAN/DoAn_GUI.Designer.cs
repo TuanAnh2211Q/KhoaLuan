@@ -29,7 +29,6 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,6 +37,12 @@ namespace QLCHTAN
             this.txtTenDoAn = new System.Windows.Forms.TextBox();
             this.rtxtGhiChu = new System.Windows.Forms.RichTextBox();
             this.dgvDoAn = new System.Windows.Forms.DataGridView();
+            this.MaDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonViBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -49,12 +54,6 @@ namespace QLCHTAN
             this.txtDonViBan = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.grbThongTinDoAn = new System.Windows.Forms.GroupBox();
-            this.MaDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonViBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoAn)).BeginInit();
             this.grbThongTinDoAn.SuspendLayout();
             this.SuspendLayout();
@@ -128,14 +127,6 @@ namespace QLCHTAN
             // 
             this.dgvDoAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDoAn.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDoAn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDoAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDoAn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDoAn,
@@ -149,6 +140,42 @@ namespace QLCHTAN
             this.dgvDoAn.Name = "dgvDoAn";
             this.dgvDoAn.Size = new System.Drawing.Size(891, 265);
             this.dgvDoAn.TabIndex = 9;
+            // 
+            // MaDoAn
+            // 
+            this.MaDoAn.DataPropertyName = "maDoAn";
+            this.MaDoAn.HeaderText = "Mã đồ ăn";
+            this.MaDoAn.Name = "MaDoAn";
+            // 
+            // TenDoAn
+            // 
+            this.TenDoAn.DataPropertyName = "tenDoAn";
+            this.TenDoAn.HeaderText = "Tên đồ ăn";
+            this.TenDoAn.Name = "TenDoAn";
+            // 
+            // LoaiDoAn
+            // 
+            this.LoaiDoAn.DataPropertyName = "loaiDoAn";
+            this.LoaiDoAn.HeaderText = "Loại đồ ăn";
+            this.LoaiDoAn.Name = "LoaiDoAn";
+            // 
+            // DonViBan
+            // 
+            this.DonViBan.DataPropertyName = "donViBan";
+            this.DonViBan.HeaderText = "Đơn vị bán";
+            this.DonViBan.Name = "DonViBan";
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "donGia";
+            this.DonGia.HeaderText = "Đơn giá";
+            this.DonGia.Name = "DonGia";
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "ghiChu";
+            this.GhiChu.HeaderText = "Ghi chú";
+            this.GhiChu.Name = "GhiChu";
             // 
             // btnLamMoi
             // 
@@ -211,7 +238,7 @@ namespace QLCHTAN
             // 
             this.btnThanhPhanDoAn.Location = new System.Drawing.Point(213, 279);
             this.btnThanhPhanDoAn.Name = "btnThanhPhanDoAn";
-            this.btnThanhPhanDoAn.Size = new System.Drawing.Size(470, 23);
+            this.btnThanhPhanDoAn.Size = new System.Drawing.Size(470, 36);
             this.btnThanhPhanDoAn.TabIndex = 16;
             this.btnThanhPhanDoAn.Text = "Thông tin thành phần";
             this.btnThanhPhanDoAn.UseVisualStyleBackColor = true;
@@ -275,42 +302,6 @@ namespace QLCHTAN
             this.grbThongTinDoAn.TabIndex = 21;
             this.grbThongTinDoAn.TabStop = false;
             this.grbThongTinDoAn.Text = "Thông tin dồ ăn";
-            // 
-            // MaDoAn
-            // 
-            this.MaDoAn.DataPropertyName = "maDoAn";
-            this.MaDoAn.HeaderText = "Mã đồ ăn";
-            this.MaDoAn.Name = "MaDoAn";
-            // 
-            // TenDoAn
-            // 
-            this.TenDoAn.DataPropertyName = "tenDoAn";
-            this.TenDoAn.HeaderText = "Tên đồ ăn";
-            this.TenDoAn.Name = "TenDoAn";
-            // 
-            // LoaiDoAn
-            // 
-            this.LoaiDoAn.DataPropertyName = "loaiDoAn";
-            this.LoaiDoAn.HeaderText = "Loại đồ ăn";
-            this.LoaiDoAn.Name = "LoaiDoAn";
-            // 
-            // DonViBan
-            // 
-            this.DonViBan.DataPropertyName = "donViBan";
-            this.DonViBan.HeaderText = "Đơn vị bán";
-            this.DonViBan.Name = "DonViBan";
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "donGia";
-            this.DonGia.HeaderText = "Đơn giá";
-            this.DonGia.Name = "DonGia";
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.DataPropertyName = "ghiChu";
-            this.GhiChu.HeaderText = "Ghi chú";
-            this.GhiChu.Name = "GhiChu";
             // 
             // DoAn_GUI
             // 

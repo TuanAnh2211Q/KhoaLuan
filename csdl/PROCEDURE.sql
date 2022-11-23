@@ -43,6 +43,14 @@ create procedure chect_exist_LoaiDoAn
 as
 select * from LoaiDoAn where maLoaiDoAn=@maLoaiDoAn 
 go
+--============================ĐỒ ĂN========================
+create procedure insert_DoAn_ThongTinDoAn
+@maDoAn nchar(30), @maLoaiDoAn nchar(30), @tenDoAn nvarchar(50),@donViBan nvarchar(10), @donGia money, @ghiChu nvarchar(max)
+as
+insert into DoAn values(@maDoAn,@maLoaiDoAn,@tenDoAn)
+insert into ThongTinDoAn values(@maDoAn,@donViBan,@donGia,@ghiChu)
+go
+
 
 --===================PHÂN QUYỀN============================
 

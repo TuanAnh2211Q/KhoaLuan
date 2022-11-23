@@ -29,7 +29,6 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
             this.txtNgayBatDau = new System.Windows.Forms.TextBox();
@@ -40,16 +39,16 @@ namespace QLCHTAN
             this.label5 = new System.Windows.Forms.Label();
             this.txtTenSanPham = new System.Windows.Forms.TextBox();
             this.dgvSanPhamKhuyenMai = new System.Windows.Forms.DataGridView();
+            this.MaSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.lblTenKhuyenMai = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.MaSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPhamKhuyenMai)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +57,8 @@ namespace QLCHTAN
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(90, 28);
+            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label1.Location = new System.Drawing.Point(268, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(430, 29);
             this.label1.TabIndex = 0;
@@ -67,6 +67,7 @@ namespace QLCHTAN
             // label
             // 
             this.label.AutoSize = true;
+            this.label.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label.Location = new System.Drawing.Point(14, 24);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(80, 19);
@@ -83,6 +84,7 @@ namespace QLCHTAN
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label8.Location = new System.Drawing.Point(14, 60);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(104, 19);
@@ -107,6 +109,7 @@ namespace QLCHTAN
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label4.Location = new System.Drawing.Point(14, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 19);
@@ -116,6 +119,7 @@ namespace QLCHTAN
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label5.Location = new System.Drawing.Point(14, 146);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 19);
@@ -132,14 +136,8 @@ namespace QLCHTAN
             // dgvSanPhamKhuyenMai
             // 
             this.dgvSanPhamKhuyenMai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSanPhamKhuyenMai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvSanPhamKhuyenMai.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvSanPhamKhuyenMai.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvSanPhamKhuyenMai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSanPhamKhuyenMai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSanPham,
@@ -150,6 +148,30 @@ namespace QLCHTAN
             this.dgvSanPhamKhuyenMai.Name = "dgvSanPhamKhuyenMai";
             this.dgvSanPhamKhuyenMai.Size = new System.Drawing.Size(1047, 269);
             this.dgvSanPhamKhuyenMai.TabIndex = 31;
+            // 
+            // MaSanPham
+            // 
+            this.MaSanPham.DataPropertyName = "maSanPham";
+            this.MaSanPham.HeaderText = "Mã sản phẩm";
+            this.MaSanPham.Name = "MaSanPham";
+            // 
+            // NgayBatDau
+            // 
+            this.NgayBatDau.DataPropertyName = "ngayBatDau";
+            this.NgayBatDau.HeaderText = "Ngày bắt đầu";
+            this.NgayBatDau.Name = "NgayBatDau";
+            // 
+            // NgayKetThuc
+            // 
+            this.NgayKetThuc.DataPropertyName = "ngayKetThuc";
+            this.NgayKetThuc.HeaderText = "Ngày kết thúc";
+            this.NgayKetThuc.Name = "NgayKetThuc";
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "ghiChu";
+            this.GhiChu.HeaderText = "Ghi chú";
+            this.GhiChu.Name = "GhiChu";
             // 
             // btnSua
             // 
@@ -203,7 +225,8 @@ namespace QLCHTAN
             // 
             this.lblTenKhuyenMai.AutoSize = true;
             this.lblTenKhuyenMai.Font = new System.Drawing.Font("Candara", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenKhuyenMai.Location = new System.Drawing.Point(517, 24);
+            this.lblTenKhuyenMai.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblTenKhuyenMai.Location = new System.Drawing.Point(695, 23);
             this.lblTenKhuyenMai.Name = "lblTenKhuyenMai";
             this.lblTenKhuyenMai.Size = new System.Drawing.Size(50, 33);
             this.lblTenKhuyenMai.TabIndex = 36;
@@ -211,6 +234,7 @@ namespace QLCHTAN
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.rtxtGhiChu);
             this.panel1.Controls.Add(this.label);
             this.panel1.Controls.Add(this.label5);
@@ -225,34 +249,11 @@ namespace QLCHTAN
             this.panel1.Size = new System.Drawing.Size(1047, 223);
             this.panel1.TabIndex = 37;
             // 
-            // MaSanPham
-            // 
-            this.MaSanPham.DataPropertyName = "maSanPham";
-            this.MaSanPham.HeaderText = "Mã sản phẩm";
-            this.MaSanPham.Name = "MaSanPham";
-            // 
-            // NgayBatDau
-            // 
-            this.NgayBatDau.DataPropertyName = "ngayBatDau";
-            this.NgayBatDau.HeaderText = "Ngày bắt đầu";
-            this.NgayBatDau.Name = "NgayBatDau";
-            // 
-            // NgayKetThuc
-            // 
-            this.NgayKetThuc.DataPropertyName = "ngayKetThuc";
-            this.NgayKetThuc.HeaderText = "Ngày kết thúc";
-            this.NgayKetThuc.Name = "NgayKetThuc";
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.DataPropertyName = "ghiChu";
-            this.GhiChu.HeaderText = "Ghi chú";
-            this.GhiChu.Name = "GhiChu";
-            // 
             // DanhSachSanPhamKhuyenMai_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1071, 627);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTenKhuyenMai);
@@ -262,7 +263,7 @@ namespace QLCHTAN
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.dgvSanPhamKhuyenMai);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DanhSachSanPhamKhuyenMai_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

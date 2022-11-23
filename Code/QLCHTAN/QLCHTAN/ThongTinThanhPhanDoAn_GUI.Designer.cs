@@ -29,20 +29,17 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.dgvThanhPhanMon = new System.Windows.Forms.DataGridView();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.maThanhPhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenThanhPhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dinhLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,15 +66,6 @@ namespace QLCHTAN
             this.label2.TabIndex = 1;
             this.label2.Text = "label2";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Mã thành phần:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -96,38 +84,9 @@ namespace QLCHTAN
             this.label5.TabIndex = 4;
             this.label5.Text = "Định lượng:";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(142, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 27);
-            this.textBox1.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(142, 137);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 27);
-            this.textBox2.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(142, 109);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(199, 27);
-            this.textBox3.TabIndex = 7;
-            // 
             // dgvThanhPhanMon
             // 
             this.dgvThanhPhanMon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvThanhPhanMon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvThanhPhanMon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThanhPhanMon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maThanhPhan,
@@ -186,18 +145,37 @@ namespace QLCHTAN
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(139, 109);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(202, 27);
+            this.comboBox1.TabIndex = 40;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(139, 142);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(202, 27);
+            this.textBox1.TabIndex = 41;
+            // 
             // maThanhPhan
             // 
+            this.maThanhPhan.DataPropertyName = "maThanhPhan";
             this.maThanhPhan.HeaderText = "Mã thành phần";
             this.maThanhPhan.Name = "maThanhPhan";
+            this.maThanhPhan.Visible = false;
             // 
             // tenThanhPhan
             // 
+            this.tenThanhPhan.DataPropertyName = "tenThanhPhan";
             this.tenThanhPhan.HeaderText = "Tên thành phần";
             this.tenThanhPhan.Name = "tenThanhPhan";
             // 
             // dinhLuong
             // 
+            this.dinhLuong.DataPropertyName = "dinhLuong";
             this.dinhLuong.HeaderText = "Định lượng";
             this.dinhLuong.Name = "dinhLuong";
             // 
@@ -206,17 +184,15 @@ namespace QLCHTAN
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(740, 248);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.dgvThanhPhanMon);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -234,12 +210,8 @@ namespace QLCHTAN
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.DataGridView dgvThanhPhanMon;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
@@ -248,5 +220,7 @@ namespace QLCHTAN
         private System.Windows.Forms.DataGridViewTextBoxColumn maThanhPhan;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenThanhPhan;
         private System.Windows.Forms.DataGridViewTextBoxColumn dinhLuong;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

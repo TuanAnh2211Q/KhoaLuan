@@ -43,7 +43,13 @@ namespace QLCHTAN
                     if(dangNhap_BUS.dangNhapHeThong_BUS(dangNhap_DTO()))
                     {
                         if (dangNhap_BUS.kiemTraQuyenHeThong_BUS(dangNhap_DTO()) == 1)
+                        {
                             MessageBox.Show("Đăng nhập thành công \n Bạn đang đăng nhập bằng quyền Quản lí");
+                            tenTaiKhoan = txtTaiKhoan.Text.Trim();
+                            GiaoDienQuanLi_GUI giaoDienQuanLi_GUI = new GiaoDienQuanLi_GUI();
+                            giaoDienQuanLi_GUI.Show();
+                            this.Hide();
+                        }
                         else
                         {
                             MessageBox.Show("Đăng nhập thành công \n Bạn đang đăng nhập bằng quyền Nhân viên");
@@ -97,7 +103,7 @@ namespace QLCHTAN
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
     

@@ -3,10 +3,14 @@ go
 
 alter table SanPham add constraint fk_SanPham_LoaiSanPham foreign key (maLoaiSanPham) references LoaiSanPham(maLoaiSanPham)
 go
- alter table SanPham add constraint fk_DoAn_SanPham foreign key(maSanPham)references DoAn(maDoAn)
+
+ alter table DoAn add constraint fk_DoAn_SanPham foreign key(maDoAn)references SanPham(maSanPham)
  go
-  alter table SanPham add constraint fk_NuocUong_SanPham foreign key(maLoaiSanPham) references NuocUong(maNuoc)
+
+  alter table NuocUong add constraint fk_NuocUong_SanPham foreign key(maNuoc) references SanPham(maSanPham)
   go
+
+
    alter table DoAn add constraint fk_LoaiDoAn_DoAn foreign key (MaLoaiDoAn) references LoaiDoAn (maLoaiDoAn)
  go
 alter table ThongTinDoAn add constraint fk_DoAn_ThongTinDoAn foreign key (maDoAn) references DoAn (maDoAn)
