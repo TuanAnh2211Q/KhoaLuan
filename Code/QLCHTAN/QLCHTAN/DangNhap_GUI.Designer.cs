@@ -250,7 +250,7 @@ namespace QLCHTAN
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDangNhap);
             this.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "DangNhap_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

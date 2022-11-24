@@ -46,10 +46,12 @@ delete from DoAn where maDoAn='MDA001'
 
 select * from ThongTinDoAn
 --Xóa đồ ăn trong loại sản phẩm
-create  trigger delete_doAn on DoAn instead of  delete as
+
+create   trigger delete_doAn on DoAn instead of  delete as
 begin
 alter table DoAn drop constraint fk_DoAn_SanPham
 declare @masp nchar(30)= (select maDoAn from deleted)
+delete from ThongTinThanhPhanDoAn where maDoAn=@masp
 delete from ThongTinDoAn where maDoAn=@masp
 delete from SanPham where maSanPham=@masp
 delete from DoAn where maDoAn=@masp
@@ -70,7 +72,7 @@ insert into NuocUong values(@masp,@tenNuocUong,@donViBan,@giaBan)
 end
 go
 
---Xóa đồ ăn trong loại sản phẩm
+--Xóa nước uống trong loại sản phẩm
 create trigger delete_NuocUong on NuocUong instead of  delete as
 begin
 alter table NuocUong drop constraint fk_NuocUong_SanPham

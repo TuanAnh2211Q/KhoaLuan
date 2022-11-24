@@ -49,6 +49,7 @@
     <Compile Include="getServer.cs" />
     <Compile Include="LoaiDoAn_DAO.cs" />
     <Compile Include="NhanVien_DAO.cs" />
+    <Compile Include="NuocUong_DAO.cs" />
     <Compile Include="OrderDoAn_DAO.cs" />
     <Compile Include="OrderNuoc_DAO.cs" />
     <Compile Include="PhanQuyen_DAO.cs" />

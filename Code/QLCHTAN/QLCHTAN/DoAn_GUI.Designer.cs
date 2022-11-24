@@ -37,13 +37,6 @@ namespace QLCHTAN
             this.txtMaDoAn = new System.Windows.Forms.TextBox();
             this.txtTenDoAn = new System.Windows.Forms.TextBox();
             this.rtxtGhiChu = new System.Windows.Forms.RichTextBox();
-            this.dgvDoAn = new System.Windows.Forms.DataGridView();
-            this.MaDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonViBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -57,9 +50,16 @@ namespace QLCHTAN
             this.grbThongTinDoAn = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDoAn)).BeginInit();
+            this.dgvDoAn = new System.Windows.Forms.DataGridView();
+            this.maDoAnColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonViBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbThongTinDoAn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoAn)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -126,71 +126,6 @@ namespace QLCHTAN
             this.rtxtGhiChu.Size = new System.Drawing.Size(180, 48);
             this.rtxtGhiChu.TabIndex = 8;
             this.rtxtGhiChu.Text = "";
-            // 
-            // dgvDoAn
-            // 
-            this.dgvDoAn.AllowUserToAddRows = false;
-            this.dgvDoAn.AllowUserToDeleteRows = false;
-            this.dgvDoAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDoAn.BackgroundColor = System.Drawing.SystemColors.Info;
-            this.dgvDoAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDoAn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaDoAn,
-            this.Column1,
-            this.LoaiDoAn,
-            this.DonViBan,
-            this.DonGia,
-            this.GhiChu});
-            this.dgvDoAn.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvDoAn.Location = new System.Drawing.Point(296, 61);
-            this.dgvDoAn.Name = "dgvDoAn";
-            this.dgvDoAn.ReadOnly = true;
-            this.dgvDoAn.Size = new System.Drawing.Size(647, 269);
-            this.dgvDoAn.TabIndex = 9;
-            this.dgvDoAn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDoAn_CellClick);
-            // 
-            // MaDoAn
-            // 
-            this.MaDoAn.DataPropertyName = "maDoAn";
-            this.MaDoAn.HeaderText = "Mã đồ ăn";
-            this.MaDoAn.Name = "MaDoAn";
-            this.MaDoAn.ReadOnly = true;
-            this.MaDoAn.Visible = false;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "tenDoAn";
-            this.Column1.HeaderText = "Tên đồ ăn";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // LoaiDoAn
-            // 
-            this.LoaiDoAn.DataPropertyName = "tenLoaiDoAn";
-            this.LoaiDoAn.HeaderText = "Loại đồ ăn";
-            this.LoaiDoAn.Name = "LoaiDoAn";
-            this.LoaiDoAn.ReadOnly = true;
-            // 
-            // DonViBan
-            // 
-            this.DonViBan.DataPropertyName = "donViBan";
-            this.DonViBan.HeaderText = "Đơn vị bán";
-            this.DonViBan.Name = "DonViBan";
-            this.DonViBan.ReadOnly = true;
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "donGia";
-            this.DonGia.HeaderText = "Đơn giá";
-            this.DonGia.Name = "DonGia";
-            this.DonGia.ReadOnly = true;
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.DataPropertyName = "ghiChu";
-            this.GhiChu.HeaderText = "Ghi chú";
-            this.GhiChu.Name = "GhiChu";
-            this.GhiChu.ReadOnly = true;
             // 
             // btnLamMoi
             // 
@@ -304,6 +239,7 @@ namespace QLCHTAN
             // 
             // grbThongTinDoAn
             // 
+            this.grbThongTinDoAn.BackColor = System.Drawing.SystemColors.HighlightText;
             this.grbThongTinDoAn.Controls.Add(this.txtMaDoAn);
             this.grbThongTinDoAn.Controls.Add(this.btnThem);
             this.grbThongTinDoAn.Controls.Add(this.btnXoa);
@@ -349,25 +285,90 @@ namespace QLCHTAN
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
+            // dgvDoAn
+            // 
+            this.dgvDoAn.AllowUserToAddRows = false;
+            this.dgvDoAn.AllowUserToDeleteRows = false;
+            this.dgvDoAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDoAn.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvDoAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDoAn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maDoAnColumn,
+            this.Column1,
+            this.LoaiDoAn,
+            this.DonViBan,
+            this.DonGia,
+            this.GhiChu});
+            this.dgvDoAn.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvDoAn.Location = new System.Drawing.Point(296, 61);
+            this.dgvDoAn.Name = "dgvDoAn";
+            this.dgvDoAn.ReadOnly = true;
+            this.dgvDoAn.Size = new System.Drawing.Size(647, 269);
+            this.dgvDoAn.TabIndex = 9;
+            this.dgvDoAn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDoAn_CellClick);
+            // 
+            // maDoAnColumn
+            // 
+            this.maDoAnColumn.DataPropertyName = "maDoAn";
+            this.maDoAnColumn.HeaderText = "Mã đồ ăn";
+            this.maDoAnColumn.Name = "maDoAnColumn";
+            this.maDoAnColumn.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "tenDoAn";
+            this.Column1.HeaderText = "Tên đồ ăn";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // LoaiDoAn
+            // 
+            this.LoaiDoAn.DataPropertyName = "tenLoaiDoAn";
+            this.LoaiDoAn.HeaderText = "Loại đồ ăn";
+            this.LoaiDoAn.Name = "LoaiDoAn";
+            this.LoaiDoAn.ReadOnly = true;
+            // 
+            // DonViBan
+            // 
+            this.DonViBan.DataPropertyName = "donViBan";
+            this.DonViBan.HeaderText = "Đơn vị bán";
+            this.DonViBan.Name = "DonViBan";
+            this.DonViBan.ReadOnly = true;
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "donGia";
+            this.DonGia.HeaderText = "Đơn giá";
+            this.DonGia.Name = "DonGia";
+            this.DonGia.ReadOnly = true;
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "ghiChu";
+            this.GhiChu.HeaderText = "Ghi chú";
+            this.GhiChu.Name = "GhiChu";
+            this.GhiChu.ReadOnly = true;
+            // 
             // DoAn_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(951, 342);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.grbThongTinDoAn);
             this.Controls.Add(this.dgvDoAn);
             this.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "DoAn_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đồ ăn";
             this.Load += new System.EventHandler(this.DoAn_GUI_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDoAn)).EndInit();
             this.grbThongTinDoAn.ResumeLayout(false);
             this.grbThongTinDoAn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoAn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,7 +383,6 @@ namespace QLCHTAN
         private System.Windows.Forms.TextBox txtMaDoAn;
         private System.Windows.Forms.TextBox txtTenDoAn;
         private System.Windows.Forms.RichTextBox rtxtGhiChu;
-        private System.Windows.Forms.DataGridView dgvDoAn;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnXoa;
@@ -396,7 +396,8 @@ namespace QLCHTAN
         private System.Windows.Forms.GroupBox grbThongTinDoAn;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDoAn;
+        private System.Windows.Forms.DataGridView dgvDoAn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maDoAnColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiDoAn;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonViBan;

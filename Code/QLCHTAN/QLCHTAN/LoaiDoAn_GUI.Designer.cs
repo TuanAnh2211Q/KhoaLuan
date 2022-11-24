@@ -29,6 +29,7 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -49,22 +50,23 @@ namespace QLCHTAN
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Sitka Small", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label5.Location = new System.Drawing.Point(154, 9);
+            this.label5.Location = new System.Drawing.Point(136, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(268, 31);
+            this.label5.Size = new System.Drawing.Size(231, 26);
             this.label5.TabIndex = 24;
             this.label5.Text = "DANH MỤC LOẠI ĐỒ ĂN";
             // 
             // btnSua
             // 
-            this.btnSua.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSua.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSua.Location = new System.Drawing.Point(376, 303);
+            this.btnSua.Location = new System.Drawing.Point(307, 293);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 31);
+            this.btnSua.Size = new System.Drawing.Size(77, 31);
             this.btnSua.TabIndex = 23;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
@@ -72,12 +74,13 @@ namespace QLCHTAN
             // 
             // btnXoa
             // 
-            this.btnXoa.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnXoa.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnXoa.Location = new System.Drawing.Point(295, 303);
+            this.btnXoa.Location = new System.Drawing.Point(224, 293);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 31);
+            this.btnXoa.Size = new System.Drawing.Size(77, 31);
             this.btnXoa.TabIndex = 22;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -85,12 +88,13 @@ namespace QLCHTAN
             // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnThem.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnThem.Location = new System.Drawing.Point(214, 303);
+            this.btnThem.Location = new System.Drawing.Point(141, 293);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 31);
+            this.btnThem.Size = new System.Drawing.Size(77, 31);
             this.btnThem.TabIndex = 21;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
@@ -98,12 +102,13 @@ namespace QLCHTAN
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLamMoi.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLamMoi.Location = new System.Drawing.Point(457, 303);
+            this.btnLamMoi.Location = new System.Drawing.Point(390, 293);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(75, 31);
+            this.btnLamMoi.Size = new System.Drawing.Size(77, 31);
             this.btnLamMoi.TabIndex = 20;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = false;
@@ -114,7 +119,15 @@ namespace QLCHTAN
             this.dgvLoaiDoAn.AllowUserToAddRows = false;
             this.dgvLoaiDoAn.AllowUserToDeleteRows = false;
             this.dgvLoaiDoAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvLoaiDoAn.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvLoaiDoAn.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLoaiDoAn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvLoaiDoAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLoaiDoAn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maLoaiDoAn,
@@ -123,7 +136,7 @@ namespace QLCHTAN
             this.dgvLoaiDoAn.Location = new System.Drawing.Point(19, 118);
             this.dgvLoaiDoAn.Name = "dgvLoaiDoAn";
             this.dgvLoaiDoAn.ReadOnly = true;
-            this.dgvLoaiDoAn.Size = new System.Drawing.Size(513, 169);
+            this.dgvLoaiDoAn.Size = new System.Drawing.Size(448, 169);
             this.dgvLoaiDoAn.TabIndex = 19;
             this.dgvLoaiDoAn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoaiDoAn_CellClick);
             // 
@@ -144,55 +157,57 @@ namespace QLCHTAN
             // txtTenLoaiDoAn
             // 
             this.txtTenLoaiDoAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenLoaiDoAn.Location = new System.Drawing.Point(104, 42);
+            this.txtTenLoaiDoAn.Location = new System.Drawing.Point(102, 40);
             this.txtTenLoaiDoAn.Name = "txtTenLoaiDoAn";
-            this.txtTenLoaiDoAn.Size = new System.Drawing.Size(406, 24);
+            this.txtTenLoaiDoAn.Size = new System.Drawing.Size(331, 24);
             this.txtTenLoaiDoAn.TabIndex = 18;
             // 
             // txtMaLoaiDoAn
             // 
             this.txtMaLoaiDoAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaLoaiDoAn.Location = new System.Drawing.Point(104, 13);
+            this.txtMaLoaiDoAn.Location = new System.Drawing.Point(102, 11);
             this.txtMaLoaiDoAn.Name = "txtMaLoaiDoAn";
-            this.txtMaLoaiDoAn.Size = new System.Drawing.Size(406, 24);
+            this.txtMaLoaiDoAn.Size = new System.Drawing.Size(331, 24);
             this.txtMaLoaiDoAn.TabIndex = 17;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 45);
+            this.label2.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 18);
+            this.label2.Size = new System.Drawing.Size(96, 18);
             this.label2.TabIndex = 16;
             this.label2.Text = "Tên loại đồ ăn:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 16);
+            this.label1.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 18);
+            this.label1.Size = new System.Drawing.Size(93, 18);
             this.label1.TabIndex = 15;
             this.label1.Text = "Mã loại đồ ăn:";
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txtTenLoaiDoAn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtMaLoaiDoAn);
-            this.panel1.Location = new System.Drawing.Point(19, 43);
+            this.panel1.Location = new System.Drawing.Point(19, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(513, 69);
+            this.panel1.Size = new System.Drawing.Size(448, 79);
             this.panel1.TabIndex = 25;
             // 
             // LoaiDoAn_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 346);
+            this.BackColor = System.Drawing.SystemColors.Info;
+            this.ClientSize = new System.Drawing.Size(475, 329);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnSua);
@@ -200,6 +215,7 @@ namespace QLCHTAN
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.dgvLoaiDoAn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "LoaiDoAn_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "3";
