@@ -58,6 +58,7 @@
     <Compile Include="TaiKhoan_DAO.cs" />
     <Compile Include="ThongTinChiTietPhieuDatHang_DAO.cs" />
     <Compile Include="ThongTinChiTietPhieuNhap_DAO.cs" />
+    <Compile Include="ThongTinThanhPhanDoAn_DAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">

@@ -44,12 +44,43 @@ as
 select * from LoaiDoAn where maLoaiDoAn=@maLoaiDoAn 
 go
 --============================ĐỒ ĂN========================
+
+	create procedure show_dsDoAn
+	as
+	select da.maDoAn, da.tenDoAn, lda.tenLoaiDoAn, ttda.donViBan, ttda.donGia,ttda.ghiChu from DoAn da, ThongTinDoAn ttda,LoaiDoAn lda
+	where da.maDoAn=ttda.maDoAn
+	and da.maLoaiDoAn=lda.maLoaiDoAn
+
+
 create procedure insert_DoAn_ThongTinDoAn
 @maDoAn nchar(30), @maLoaiDoAn nchar(30), @tenDoAn nvarchar(50),@donViBan nvarchar(10), @donGia money, @ghiChu nvarchar(max)
 as
 insert into DoAn values(@maDoAn,@maLoaiDoAn,@tenDoAn)
 insert into ThongTinDoAn values(@maDoAn,@donViBan,@donGia,@ghiChu)
 go
+
+create procedure delete_DoAn_ThongTinDoAn
+@maDoAn nchar(30)
+as
+delete from DoAn where maDoAn=@maDoAn
+go
+create procedure update_DoAn_ThongTinDoAn
+@maDoAn nchar(30), @maLoaiDoAn nchar(30), @tenDoAn nvarchar(50),@donViBan nvarchar(10), @donGia money, @ghiChu nvarchar(max)
+as
+update DoAn set maLoaiDoAn= @maLoaiDoAn, tenDoAn=@tenDoAn where maDoAn=@maDoAn
+update ThongTinDoAn set donViBan=@donViBan,donGia= @donGia,ghiChu=@ghiChu where maDoAn=@maDoAn
+go
+
+
+create procedure select_DoAn_ThanhPhanDoAn @maDoAn nchar(30)
+as
+select * from ThongTinThanhPhanDoAn where maDoAn=@maDoAn
+go
+
+--===========================MẶT HÀNG========================
+create procedure select_MatHang
+as
+select maHang,TenHang from MatHang
 
 
 --===================PHÂN QUYỀN============================

@@ -17,6 +17,9 @@ namespace QLCHTAN
             InitializeComponent();
         }
 
-     
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
