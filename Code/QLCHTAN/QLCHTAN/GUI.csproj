@@ -106,12 +106,6 @@
     <Compile Include="LoaiKhuyenMai_GUI.Designer.cs">
       <DependentUpon>LoaiKhuyenMai_GUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main_GUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main_GUI.Designer.cs">
-      <DependentUpon>Main_GUI.cs</DependentUpon>
-    </Compile>
     <Compile Include="NhaCungCap_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,9 +263,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoaiKhuyenMai_GUI.resx">
       <DependentUpon>LoaiKhuyenMai_GUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main_GUI.resx">
-      <DependentUpon>Main_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhaCungCap_GUI.resx">
       <DependentUpon>NhaCungCap_GUI.cs</DependentUpon>

@@ -77,11 +77,49 @@ as
 select * from ThongTinThanhPhanDoAn where maDoAn=@maDoAn
 go
 
+
+create procedure insert_DoAn_ThanhPhanDoAn @maThanhPhan nchar(30), @tenThanhPhan nvarchar(50), @dinhLuong nvarchar(10), @maDoAn nchar(30)
+as 
+insert into ThongTinThanhPhanDoAn values (@maThanhPhan,@tenThanhPhan,@dinhLuong,@maDoAn)
+go
+
+create procedure update_DoAn_ThanhPhanDoAn @maThanhPhan nchar(30),  @dinhLuong nvarchar(10), @maDoAn nchar(30)
+as 
+update ThongTinThanhPhanDoAn set dinhLuong=@dinhLuong where maDoAn=@maDoAn and maThanhPhan=@maThanhPhan 
+go
+
+create procedure delete_DoAn_ThanhPhanDoAn @maThanhPhan nchar(30), @maDoAn nchar(30)
+as 
+delete from ThongTinThanhPhanDoAn  where maDoAn=@maDoAn and maThanhPhan=@maThanhPhan 
+go
 --===========================MẶT HÀNG========================
 create procedure select_MatHang
 as
 select maHang,TenHang from MatHang
 
+--=================================NƯỚC UỐNG==================
+create procedure select_NuocUong
+as
+select * from NuocUong
+go
+
+create  procedure insert_to_NuocUong
+@maNuocUong nchar(30), @tenNuocUong nvarchar(50), @donViBan nvarchar(10), @donGia money
+as
+insert into NuocUong values(@maNuocUong,@tenNuocUong,@donViBan,@donGia)
+go
+
+create procedure delete_to_NuocUong
+@maNuocUong nchar(30)
+as
+delete from NuocUong where maNuoc=@maNuocUong
+go
+
+create procedure update_to_NuocUong
+@maNuocUong nchar(30), @tenNuocUong nvarchar(50), @donViBan nvarchar(10), @donGia money
+as
+update NuocUong set tenNuoc=@tenNuocUong, donViBan=@donViBan, giaBanNuoc=@donGia where maNuoc=@maNuocUong
+go
 
 --===================PHÂN QUYỀN============================
 

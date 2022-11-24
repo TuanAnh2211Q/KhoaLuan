@@ -22,6 +22,18 @@ namespace BUS
         {
             return tttpda_DAO.show_dsthanhPhanDoAn_DAO();
         }
+        public bool insert_ThanhPhanDoAn_DAO(ThongTinThanhPhanDoAn_DTO tttpda)
+        {
+            return tttpda_DAO.insert_ThanhPhanDoAn_DAO(tttpda);
+        }
+        public bool update_ThanhPhanDoAn_DAO(ThongTinThanhPhanDoAn_DTO tttpda)
+        {
+            return tttpda_DAO.update_ThanhPhanDoAn_DAO(tttpda);
+        }
+        public bool delete_ThanhPhanDoAn_DAO(ThongTinThanhPhanDoAn_DTO tttpda)
+        {
+            return tttpda_DAO.delete_ThanhPhanDoAn_DAO(tttpda);
+        }
 
     }
 }
