@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -55,6 +55,15 @@ namespace QLCHTAN
             {
                 if (txtMaLoaiDoAn.Text != "" && txtTenLoaiDoAn.Text != "")
                 {
+                    for (int i = 0; i <= dgvLoaiDoAn.Rows.Count - 1; i++)
+                    {
+                        if (txtMaLoaiDoAn.Text == dgvLoaiDoAn.Rows[i].Cells["maLoaiDoAn"].Value.ToString())
+                        {
+                            MessageBox.Show("Mã loại đồ ăn đã tồn tại, không thể thêm");
+                            return;
+                        }
+                    }
+
                     if (loaiDoAn_BUS.insert_LoaiDoAn_BUS(loaiDoAn_DTO()))
                         MessageBox.Show("Thêm loại đồ ăn thành công");
                     else

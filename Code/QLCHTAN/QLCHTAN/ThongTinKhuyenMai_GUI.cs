@@ -22,5 +22,15 @@ namespace QLCHTAN
             DanhSachSanPhamKhuyenMai_GUI dssp = new DanhSachSanPhamKhuyenMai_GUI();
             dssp.Show();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

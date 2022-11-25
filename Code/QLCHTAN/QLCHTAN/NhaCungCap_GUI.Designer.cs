@@ -29,6 +29,8 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhaCungCap_GUI));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -171,7 +173,9 @@ namespace QLCHTAN
             // 
             // dgvNhaCungCap
             // 
-            this.dgvNhaCungCap.AllowUserToDeleteRows = false;
+            this.dgvNhaCungCap.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvNhaCungCap.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvNhaCungCap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNhaCungCap.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvNhaCungCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -184,52 +188,61 @@ namespace QLCHTAN
             this.GhiChu});
             this.dgvNhaCungCap.Location = new System.Drawing.Point(324, 55);
             this.dgvNhaCungCap.Name = "dgvNhaCungCap";
+            this.dgvNhaCungCap.ReadOnly = true;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvNhaCungCap.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvNhaCungCap.Size = new System.Drawing.Size(520, 238);
             this.dgvNhaCungCap.TabIndex = 13;
+            this.dgvNhaCungCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhaCungCap_CellClick);
             // 
             // maNhaCungCap
             // 
             this.maNhaCungCap.DataPropertyName = "maNCC";
             this.maNhaCungCap.HeaderText = "Mã nhà cung cấp";
             this.maNhaCungCap.Name = "maNhaCungCap";
-            this.maNhaCungCap.Visible = false;
+            this.maNhaCungCap.ReadOnly = true;
             // 
             // tenNhaCungCap
             // 
             this.tenNhaCungCap.DataPropertyName = "tenNCC";
             this.tenNhaCungCap.HeaderText = "Tên nhà cung cấp";
             this.tenNhaCungCap.Name = "tenNhaCungCap";
+            this.tenNhaCungCap.ReadOnly = true;
             // 
             // diaChi
             // 
             this.diaChi.DataPropertyName = "diachiNCC";
             this.diaChi.HeaderText = "Địa chỉ";
             this.diaChi.Name = "diaChi";
+            this.diaChi.ReadOnly = true;
             // 
             // Email
             // 
             this.Email.DataPropertyName = "emailNCC";
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             // 
             // SDT
             // 
             this.SDT.DataPropertyName = "sdtNCC";
             this.SDT.HeaderText = "Số điện thoại";
             this.SDT.Name = "SDT";
+            this.SDT.ReadOnly = true;
             // 
             // GhiChu
             // 
             this.GhiChu.DataPropertyName = "ghiChu";
             this.GhiChu.HeaderText = "Ghi chú";
             this.GhiChu.Name = "GhiChu";
+            this.GhiChu.ReadOnly = true;
             // 
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.Transparent;
             this.btnSua.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSua.Location = new System.Drawing.Point(82, 244);
+            this.btnSua.Location = new System.Drawing.Point(146, 244);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(69, 31);
             this.btnSua.TabIndex = 21;
@@ -242,7 +255,7 @@ namespace QLCHTAN
             this.btnXoa.BackColor = System.Drawing.Color.Transparent;
             this.btnXoa.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnXoa.Location = new System.Drawing.Point(157, 244);
+            this.btnXoa.Location = new System.Drawing.Point(74, 243);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(66, 31);
             this.btnXoa.TabIndex = 20;
@@ -255,7 +268,7 @@ namespace QLCHTAN
             this.btnThem.BackColor = System.Drawing.Color.Transparent;
             this.btnThem.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnThem.Location = new System.Drawing.Point(229, 244);
+            this.btnThem.Location = new System.Drawing.Point(7, 243);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(62, 31);
             this.btnThem.TabIndex = 19;
@@ -268,7 +281,7 @@ namespace QLCHTAN
             this.btnLamMoi.BackColor = System.Drawing.Color.Transparent;
             this.btnLamMoi.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLamMoi.Location = new System.Drawing.Point(7, 244);
+            this.btnLamMoi.Location = new System.Drawing.Point(221, 244);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(70, 31);
             this.btnLamMoi.TabIndex = 18;
@@ -326,7 +339,7 @@ namespace QLCHTAN
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(856, 310);
+            this.ClientSize = new System.Drawing.Size(856, 304);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -336,7 +349,7 @@ namespace QLCHTAN
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NhaCungCap_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NhaCungCap_GUI";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.NhaCungCap_GUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhaCungCap)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -366,13 +379,13 @@ namespace QLCHTAN
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn maNhaCungCap;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenNhaCungCap;
         private System.Windows.Forms.DataGridViewTextBoxColumn diaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

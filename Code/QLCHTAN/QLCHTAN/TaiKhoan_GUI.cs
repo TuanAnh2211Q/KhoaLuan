@@ -16,5 +16,15 @@ namespace QLCHTAN
         {
             InitializeComponent();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDatLaiMatKhau_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

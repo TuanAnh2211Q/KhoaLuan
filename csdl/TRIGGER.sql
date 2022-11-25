@@ -83,7 +83,54 @@ alter table NuocUong add constraint fk_NuocUong_SanPham foreign key (maNuoc) ref
 end
 go
 -----------------------------------------------------------------------------------------------------------------------------------------------
+--------NHÀ CUNG CẤP
+--Xóa nhà cung cấp
+create trigger delete_NCC on NhaCungCap instead of delete as
+begin
+declare @maNCC varchar(10)=(select maNCC from deleted)
 
+if exists( select * from MatHang where maNCC=@maNCC)
+begin
+update MatHang set maNCC=null where maNCC=@maNCC
+delete from NhaCungCap where maNCC=@maNCC
+end
+
+if exists(select * from ThongTinDatHang where maNCC=@maNCC)
+begin
+update ThongTinDatHang set maNCC=null where maNCC=@maNCC
+update DatHang set ghiChu=ghiChu+ N', nhà cung cấp đã ngưng hợp tác ' where maDatHang in (select maDatHang from ThongTinDatHang where maNCC=@maNCC)
+delete from NhaCungCap where maNCC=@maNCC
+end
+
+if exists(select * from ThongTinNhapKho where maNCC=@maNCC)
+begin
+update ThongTinNhapKho set maNCC=null where maNCC=@maNCC
+update NhapKho set ghiChu=ghiChu+ N', nhà cung cấp đã ngưng hợp tác ' where maNhap in (select maNhap from ThongTinNhapKho where maNCC=@maNCC)
+delete from NhaCungCap where maNCC=@maNCC
+end
+else
+begin
+delete from NhaCungCap where maNCC=@maNCC
+end
+end
+
+select * from NhaCungCap
+select * from MatHang
+select * from ThongTinDatHang
+select * from ThongTinNhapKho
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------
 --Cập nhật tổng giá thông tin đặt hàng
 create  trigger insert_update_TongGia_DatHang on ThongTinDatHang instead of
 insert,update as

@@ -226,7 +226,6 @@ namespace QLCHTAN
             this.Name = "PhieuNhapKho_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PhieuNhapKho_GUI";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PhieuNhapKho_GUI_FormClosing);
             this.Load += new System.EventHandler(this.PhieuNhapKho_GUI_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -62,6 +62,14 @@ namespace QLCHTAN
                     {
                         if (doAn_BUS.insert_DoAn_ThongTinDoAn_BUS(doAn_DTO()))
                         {
+                            for (int i = 0; i <= dgvDoAn.Rows.Count - 1; i++)
+                            {
+                                if (txtMaDoAn.Text == dgvDoAn.Rows[i].Cells["maDoAnColumn"].Value.ToString())
+                                {
+                                    MessageBox.Show("Mã đồ ăn đã tồn tại, không thể thêm");
+                                    return;
+                                }
+                            }
                             MessageBox.Show("Thêm đồ ăn thành công");
                             btnLamMoi_Click(sender, e);
                         }

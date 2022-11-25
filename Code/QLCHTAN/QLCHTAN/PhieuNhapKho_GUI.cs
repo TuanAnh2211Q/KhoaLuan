@@ -24,11 +24,7 @@ namespace QLCHTAN
         {
             return new PhieuNhapKho_DTO(txtMaNhap.Text.Trim(), dtNgayNhap.Value, ccbMaDatHang.Text, txtGhiChu.Text);
         }
-        private void PhieuNhapKho_GUI_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            GiaoDienNhanVien_GUI giaoDienNhanVien_GUI = new GiaoDienNhanVien_GUI();
-            giaoDienNhanVien_GUI.Show();
-        }
+     
 
         private void PhieuNhapKho_GUI_Load(object sender, EventArgs e)
         {
