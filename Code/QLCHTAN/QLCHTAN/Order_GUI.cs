@@ -69,8 +69,8 @@ namespace QLCHTAN
            DialogResult result=  MessageBox.Show("Bạn có muốn thoát ?", "Thông Báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
             if (result== System.Windows.Forms.DialogResult.Yes)
             {
-                Main_GUI t = new Main_GUI();
-                t.Show();
+                //Main_GUI t = new Main_GUI();
+                //t.Show();
             }
         }
 

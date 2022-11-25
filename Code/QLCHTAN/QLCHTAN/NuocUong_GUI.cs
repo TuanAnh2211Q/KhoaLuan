@@ -58,6 +58,14 @@ namespace QLCHTAN
                 {
                     if (txtMaNuoc.Text != "" && txtTenNuoc.Text != "" & txtDonGia.Text != "" && txtDonViBan.Text != "")
                     {
+                        for (int i = 0; i <= dgvNuocUong.Rows.Count - 1; i++)
+                        {
+                            if (txtMaNuoc.Text == dgvNuocUong.Rows[i].Cells["MaNuoc"].Value.ToString())
+                            {
+                                MessageBox.Show("Mã nước uống đã tồn tại, không thể thêm");
+                                return;
+                            }
+                        }
                         if (nuocuong.insert_NuocUong_BUS(nuocUong_DTO()))
                         {
                             MessageBox.Show("Thêm nước thành công");

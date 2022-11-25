@@ -39,8 +39,16 @@ namespace QLCHTAN
             {
                 if (txtMaNhanVien.Text.Trim() != "" && txtTenNhanVien.Text.Trim() != "" && txtSDT.Text.Trim() != "" && txtEmail.Text.Trim() != "" && txtDiaChi.Text.Trim() != "")
                 {
-                    
-                        if (nhanVien_BUS.insert_NhanVien_BUS(nhanVien_DTO()))
+                    for (int i = 0; i <= dgvNhanVien.Rows.Count - 1; i++)
+                    {
+                        if (txtMaNhanVien.Text == dgvNhanVien.Rows[i].Cells["maNhanVien"].Value.ToString())
+                        {
+                            MessageBox.Show("Mã nhân viên đã tồn tại, không thể thêm");
+                            return;
+                        }
+                    }
+
+                    if (nhanVien_BUS.insert_NhanVien_BUS(nhanVien_DTO()))
                         {
                             MessageBox.Show("Thêm nhân viên thành công");
                             NhanVien_GUI_Load(sender, e);

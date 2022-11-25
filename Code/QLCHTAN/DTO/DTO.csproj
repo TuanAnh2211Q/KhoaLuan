@@ -46,6 +46,9 @@
     <Compile Include="DoAn_DTO.cs" />
     <Compile Include="DoiMatKhau_DTO.cs" />
     <Compile Include="LoaiDoAn_DTO.cs" />
+    <Compile Include="LoaiKhuyenMai_DTO.cs" />
+    <Compile Include="MatHang_DTO.cs" />
+    <Compile Include="NhaCungCap_DTO.cs" />
     <Compile Include="NhanVien_DTO.cs" />
     <Compile Include="NuocUong_DTO.cs" />
     <Compile Include="OrderDoAn_DTO.cs" />

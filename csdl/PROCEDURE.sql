@@ -93,10 +93,36 @@ as
 delete from ThongTinThanhPhanDoAn  where maDoAn=@maDoAn and maThanhPhan=@maThanhPhan 
 go
 --===========================MẶT HÀNG========================
-create procedure select_MatHang
+create  procedure select_MatHang
 as
-select maHang,TenHang from MatHang
+select* from MatHang
 
+
+
+create proc insert_MatHang
+@maHang varchar(10), @tenHang nvarchar(50), @maNCC varchar(10), @donVi nvarchar(10), @NSX date, @HSD date, @donGia money, @ghiChu nvarchar(max)
+as
+insert into MatHang values(@maHang,@tenHang,@maNCC,@donVi,@NSX,@HSD,@donGia,@ghiChu)
+go
+
+create proc update_MatHang
+@maHang varchar(10), @tenHang nvarchar(50), @maNCC varchar(10), @donVi nvarchar(10), @NSX date, @HSD date, @donGia money, @ghiChu nvarchar(max)
+as
+update  MatHang set tenHang= @tenHang, maNCC=@maNCC, donVi=@donVi, donGia=@donGia, NSX=@NSX, HSD=@HSD, ghiChu=@ghiChu where maHang=@maHang
+go
+
+create proc delete_MatHang
+@maHang varchar(10)
+as
+delete from MatHang where maHang=@maHang
+go
+
+create proc check_MatHang_ThanhPhan
+@maHang varchar(10)
+as
+select * from ThongTinThanhPhanDoAn tttpda, MatHang mh where mh.maHang=tttpda.maThanhPhan
+and tttpda.maThanhPhan=@maHang
+go
 --=================================NƯỚC UỐNG==================
 create procedure select_NuocUong
 as
@@ -273,3 +299,52 @@ exec dbo.Load_NuocUong
 create proc load_KichCoNuoc
 as select donViBan from NuocUong	
 exec dbo.load_KichCoNuoc
+
+
+
+
+--======================NHÀ CUNG CẤP===========
+create proc select_NCC
+as 
+select * from NhaCungCap
+go
+
+
+create proc insert_to_NCC
+@maNCC varchar(10), @tenNCC nvarchar(50), @diachiNCC nvarchar(50),@emailNCC varchar(50), @sdtNCC varchar(11), @ghiChu nvarchar(max)
+as
+insert into NhaCungCap values (@maNCC,@tenNCC,@diachiNCC, @emailNCC,@sdtNCC,@ghiChu)
+go
+
+create proc update_to_NCC
+@maNCC varchar(10), @tenNCC nvarchar(50), @diachiNCC nvarchar(50),@emailNCC varchar(50), @sdtNCC varchar(11), @ghiChu nvarchar(max)
+as
+update NhaCungCap
+set tenNCC=@tenNCC, diaChiNCC=@diachiNCC, emailNCC=@emailNCC,sdtNCC=@sdtNCC,ghiChu=@ghiChu where maNCC=@maNCC
+go
+
+create proc delete_to_NCC
+@maNCC varchar(10)
+as
+delete from NhaCungCap where maNCC=@maNCC
+go
+
+--=====================LOẠI KHUYẾN MÃI============
+create proc select_LoaiKM
+as
+select* from LoaiKhuyenMai
+
+create proc insert_LoaiKM
+@maLoai varchar(10), @tenLoai nvarchar(50)
+as
+insert into LoaiKhuyenMai values (@maLoai,@tenLoai)
+
+create proc update_LoaiKM
+@maLoai varchar(10), @tenLoai nvarchar(50)
+as
+update LoaiKhuyenMai set tenLoaiKhuyenMai=@tenLoai where maLoaiKhuyenMai=@maLoai
+
+create proc delete_LoaiKM
+@maLoai varchar(10)
+as
+delete LoaiKhuyenMai where maLoaiKhuyenMai=@maLoai

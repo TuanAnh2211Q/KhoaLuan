@@ -109,5 +109,11 @@ namespace QLCHTAN
         private void btnQLTH_Click(object sender, EventArgs e)
         {
         }
+
+        private void btnQLMH_Click(object sender, EventArgs e)
+        {
+            MatHang_GUI mathang = new MatHang_GUI();
+            mathang.Show();
+        }
     }
 }
