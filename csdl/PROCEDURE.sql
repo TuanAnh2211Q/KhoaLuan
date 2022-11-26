@@ -155,12 +155,19 @@ as
 select*from PhanQuyen
 go
 exec dbo.select_PhanQuyen
+--Update Quyen
+
+create  procedure update_Quyen
+@maQuyen varchar(10), @tenQuyen nvarchar(50), @ghiChu nvarchar(max)
+as
+update PhanQuyen set tenQuyen=@tenQuyen, ghiChu=@ghiChu where maQuyen=@maQuyen
+
 ------===================NHÂN VIÊN==============================
 
 --Lấy thông tin nhân viên
 create  procedure select_NhanVien
 as
-select maNhanVien,tenNhanVien, Phai, tenChucDanh, Email, SDT, diaChi, tenLoaiNhanVien
+select maNhanVien,tenNhanVien, Phai,nv.maChucDanh, tenChucDanh, Email, SDT, diaChi, tenLoaiNhanVien, nv.maLoaiNhanVien
 from NhanVien nv, ChucDanh cd, LoaiNhanVien lnv
 where nv.maChucDanh=cd.maChucDanh
 and nv.maLoaiNhanVien=lnv.maLoaiNhanVien
@@ -210,6 +217,26 @@ create procedure select_LoaiNhanVien
 as
 select maLoaiNhanVien, tenLoaiNhanVien from LoaiNhanVien
 go
+
+--====================TÀI KHOẢN NHÂN VIÊN
+
+create proc select_TKNV
+as
+select id, tenTaiKhoan,matKhau,ttnn.maNhanVien, tenNhanVien,q.maQuyen from TaiKhoanNhanVien ttnn, NhanVien nv, PhanQuyen q
+where ttnn.maNhanVien=nv.maNhanVien
+and ttnn.maQuyen=q.maQuyen
+
+create  proc update_QuyenTKNV
+@id int, @maQuyen varchar(10)
+as
+update TaiKhoanNhanVien set maQuyen=@maQuyen where id=@id
+
+create  proc rs_mkTKNV
+@id int
+as
+update TaiKhoanNhanVien set matKhau='1' where id=@id
+
+
 ----------------------------CHỨC DANH--------------------
 create  procedure select_ChucDanh
 as 
