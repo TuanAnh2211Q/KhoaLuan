@@ -38,7 +38,21 @@ namespace QLCHTAN
                 txtMaQuyen.Enabled = false;
             }
         }
-       
-      
+
+        private void txtGhiChu_Leave(object sender, EventArgs e)
+        {
+            if (phanQuyen_BUS.update_Quyen_BUS(phanQuyen_DTO()))
+            {
+                PhanQuyen_GUI_Load(sender, e);
+            }
+        }
+
+        private void txtTenQuyen_Leave(object sender, EventArgs e)
+        {
+            if (phanQuyen_BUS.update_Quyen_BUS(phanQuyen_DTO()))
+            {
+                PhanQuyen_GUI_Load(sender, e);
+            }
+        }
     }
 }

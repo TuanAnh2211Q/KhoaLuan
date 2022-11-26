@@ -16,6 +16,18 @@ namespace QLCHTAN
     {
         NhanVien_BUS nhanVien_BUS = new NhanVien_BUS();
         public string GioiTinh { get; set; }
+
+        public bool kt_NhanVien()
+        {
+            for (int i = 0; i <= dgvNhanVien.Rows.Count - 1; i++)
+            {
+                if (txtMaNhanVien.Text == dgvNhanVien.Rows[i].Cells["maNhanVien"].Value.ToString())
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         public NhanVien_GUI()
         {
             InitializeComponent();
@@ -24,7 +36,6 @@ namespace QLCHTAN
         private void NhanVien_GUI_Load(object sender, EventArgs e)
         {
             btnLamMoi_Click(sender, e);
-
         }
        
         public NhanVien_DTO nhanVien_DTO()
@@ -39,23 +50,20 @@ namespace QLCHTAN
             {
                 if (txtMaNhanVien.Text.Trim() != "" && txtTenNhanVien.Text.Trim() != "" && txtSDT.Text.Trim() != "" && txtEmail.Text.Trim() != "" && txtDiaChi.Text.Trim() != "")
                 {
-                    for (int i = 0; i <= dgvNhanVien.Rows.Count - 1; i++)
-                    {
-                        if (txtMaNhanVien.Text == dgvNhanVien.Rows[i].Cells["maNhanVien"].Value.ToString())
-                        {
-                            MessageBox.Show("Mã nhân viên đã tồn tại, không thể thêm");
-                            return;
-                        }
-                    }
 
-                    if (nhanVien_BUS.insert_NhanVien_BUS(nhanVien_DTO()))
+                    if (!kt_NhanVien())
+                    {
+                        if (nhanVien_BUS.insert_NhanVien_BUS(nhanVien_DTO()))
                         {
                             MessageBox.Show("Thêm nhân viên thành công");
                             NhanVien_GUI_Load(sender, e);
                         }
                         else
                             MessageBox.Show("Thêm nhân viên thất bại");
-                        
+                    }
+                    else
+                        MessageBox.Show("Mã nhân viên đã tồn tại, vui lòng nhập lại");
+
                 }
                 else
                     MessageBox.Show("Vui lòng nhập đủ thông tin");
@@ -69,14 +77,19 @@ namespace QLCHTAN
             {
                 if (txtMaNhanVien.Text.Trim() != "" )
                 {
-
-                    if (nhanVien_BUS.delete_NhanVien_BUS(nhanVien_DTO()))
+                    if (kt_NhanVien())
                     {
-                        MessageBox.Show("Xóa nhân viên thành công");
-                        NhanVien_GUI_Load(sender, e);
+
+                        if (nhanVien_BUS.delete_NhanVien_BUS(nhanVien_DTO()))
+                        {
+                            MessageBox.Show("Xóa nhân viên thành công");
+                            NhanVien_GUI_Load(sender, e);
+                        }
+                        else
+                            MessageBox.Show("Xóa nhân viên thất bại");
                     }
                     else
-                        MessageBox.Show("Xóa nhân viên thất bại");
+                        MessageBox.Show("Nhân viên không tồn tại, vui lòng kiểm tra lại");
 
                 }
                 else
@@ -90,15 +103,18 @@ namespace QLCHTAN
             {
                 if (txtMaNhanVien.Text.Trim() != "" && txtTenNhanVien.Text.Trim() != "" && txtSDT.Text.Trim() != "" && txtEmail.Text.Trim() != "" && txtDiaChi.Text.Trim() != "")
                 {
-
-                    if (nhanVien_BUS.update_NhanVien_BUS(nhanVien_DTO()))
+                    if(kt_NhanVien())
                     {
-                        MessageBox.Show("Chỉnh sửa thông tin nhân viên thành công");
-                        NhanVien_GUI_Load(sender, e);
-                    }
+                        if (nhanVien_BUS.update_NhanVien_BUS(nhanVien_DTO()))
+                        {
+                            MessageBox.Show("Chỉnh sửa thông tin nhân viên thành công");
+                            NhanVien_GUI_Load(sender, e);
+                        }
+                        else
+                            MessageBox.Show("Chỉnh sửa thông tin nhân viên thất bại");
+                    }    
                     else
-                        MessageBox.Show("Chỉnh sửa thông tin nhân viên thất bại");
-
+                        MessageBox.Show("Nhân viên không tồn tại, vui lòng kiểm tra lại");
                 }
                 else
                     MessageBox.Show("Vui lòng nhập đủ thông tin");
@@ -107,6 +123,7 @@ namespace QLCHTAN
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             txtMaNhanVien.Clear();
+            txtMaNhanVien.Enabled = true;
             txtTenNhanVien.Clear();
             txtSDT.Clear();
             txtEmail.Clear();
@@ -146,19 +163,19 @@ namespace QLCHTAN
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dgvNhanVien.Rows[e.RowIndex];
-                txtMaNhanVien.Text = row.Cells[0].Value.ToString();
-                txtTenNhanVien.Text = row.Cells[1].Value.ToString();
+                txtMaNhanVien.Text = row.Cells["maNhanVien"].Value.ToString();
+                txtTenNhanVien.Text = row.Cells["tenNhanVien"].Value.ToString();
                 if (row.Cells[2].Value.ToString().Trim() == "Nam")
                     rdbNam1.Checked = true;
                 else if (row.Cells[2].Value.ToString().Trim() == "Nữ")
                     rdbNu0.Checked = true;
                 else if (row.Cells[2].Value.ToString().Trim() == "Khác")
                     rdbKhac.Checked = true;
-                cbbChucDanh.Text = row.Cells[3].Value.ToString();
-                txtEmail.Text = row.Cells[4].Value.ToString();
-                txtSDT.Text = row.Cells[5].Value.ToString();
-                txtDiaChi.Text = row.Cells[6].Value.ToString();
-                cbbLoaiNV.Text = row.Cells[7].Value.ToString();
+                cbbChucDanh.SelectedValue = row.Cells["maChucDanh"].Value.ToString();
+                txtEmail.Text = row.Cells["Email"].Value.ToString();
+                txtSDT.Text = row.Cells["SDT"].Value.ToString();
+                txtDiaChi.Text = row.Cells["diaChi"].Value.ToString();
+                cbbLoaiNV.SelectedValue = row.Cells["maLoaiNhanVien"].Value.ToString();
                 txtMaNhanVien.Enabled = false;
             }
         }
@@ -173,9 +190,10 @@ namespace QLCHTAN
 
         private void txtTenNhanVien_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsDigit(e.KeyChar) && Char.IsControl(e.KeyChar))
+            if (Char.IsDigit(e.KeyChar) )
                 e.Handled = true;
         }
 
+        
     }
 }

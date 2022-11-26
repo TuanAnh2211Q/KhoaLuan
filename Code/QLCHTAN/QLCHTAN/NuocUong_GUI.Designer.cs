@@ -58,6 +58,7 @@ namespace QLCHTAN
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.Transparent;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSua.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSua.Location = new System.Drawing.Point(141, 155);
@@ -72,6 +73,7 @@ namespace QLCHTAN
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.Color.Transparent;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnXoa.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnXoa.Location = new System.Drawing.Point(76, 155);
@@ -86,6 +88,7 @@ namespace QLCHTAN
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.Transparent;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThem.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnThem.Location = new System.Drawing.Point(12, 155);
@@ -100,6 +103,7 @@ namespace QLCHTAN
             // btnLamMoi
             // 
             this.btnLamMoi.BackColor = System.Drawing.Color.Transparent;
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLamMoi.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnLamMoi.Location = new System.Drawing.Point(210, 155);
@@ -177,6 +181,7 @@ namespace QLCHTAN
             this.txtMaNuoc.Name = "txtMaNuoc";
             this.txtMaNuoc.Size = new System.Drawing.Size(199, 23);
             this.txtMaNuoc.TabIndex = 33;
+            this.txtMaNuoc.Leave += new System.EventHandler(this.txtMaNuoc_Leave);
             // 
             // label3
             // 

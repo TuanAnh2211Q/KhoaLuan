@@ -17,6 +17,9 @@ namespace BUS
         {
             return phanQuyen_DAO.dsQuyen_DAO();
         }
-      
+       public bool update_Quyen_BUS(PhanQuyen_DTO phanQuyen)
+        {
+            return phanQuyen_DAO.update_Quyen_DAO(phanQuyen);
+        }
     }
 }

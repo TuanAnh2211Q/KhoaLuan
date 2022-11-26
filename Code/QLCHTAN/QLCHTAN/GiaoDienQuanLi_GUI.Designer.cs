@@ -568,7 +568,7 @@ namespace QLCHTAN
             this.pQLNH.Controls.Add(this.pictureBox9);
             this.pQLNH.Controls.Add(this.txtQLNH);
             this.pQLNH.Controls.Add(this.btnQLNH);
-            this.pQLNH.Location = new System.Drawing.Point(377, 186);
+            this.pQLNH.Location = new System.Drawing.Point(377, 249);
             this.pQLNH.Name = "pQLNH";
             this.pQLNH.Size = new System.Drawing.Size(352, 62);
             this.pQLNH.TabIndex = 9;
@@ -618,7 +618,7 @@ namespace QLCHTAN
             this.pXuatHang.Controls.Add(this.pictureBox10);
             this.pXuatHang.Controls.Add(this.txtQLXH);
             this.pXuatHang.Controls.Add(this.btnQLXH);
-            this.pXuatHang.Location = new System.Drawing.Point(377, 254);
+            this.pXuatHang.Location = new System.Drawing.Point(377, 317);
             this.pXuatHang.Name = "pXuatHang";
             this.pXuatHang.Size = new System.Drawing.Size(352, 62);
             this.pXuatHang.TabIndex = 10;
@@ -668,7 +668,7 @@ namespace QLCHTAN
             this.pDatHang.Controls.Add(this.pictureBox11);
             this.pDatHang.Controls.Add(this.txtQLDH);
             this.pDatHang.Controls.Add(this.btnQLDH);
-            this.pDatHang.Location = new System.Drawing.Point(377, 318);
+            this.pDatHang.Location = new System.Drawing.Point(377, 185);
             this.pDatHang.Name = "pDatHang";
             this.pDatHang.Size = new System.Drawing.Size(352, 62);
             this.pDatHang.TabIndex = 11;

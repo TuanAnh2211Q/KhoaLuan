@@ -29,6 +29,26 @@ delete from NhanVien where maNhanVien=@tk
 end
 end
 go
+
+
+--
+create trigger update_quyenTk_nhanvien on NhanVien after update
+as
+begin
+declare @maChucDanh varchar(10)=(select maChucDanh from inserted)
+if(@maChucDanh='CD001')
+begin
+update  TaiKhoanNhanVien
+set MaQuyen='MQ001'
+where maNhanVien=(select maNhanVien from inserted)
+end
+else if(@maChucDanh='CD002')
+begin
+update  TaiKhoanNhanVien
+set MaQuyen='MQ002'
+where maNhanVien=(select maNhanVien from inserted)
+end
+end
 -------------------------------------------SẢN PHẨM----------------------------------------------------
 ------ĐỒ ĂN-------------------
 --Thêm đồ ăn vào loại sản phẩm
@@ -230,3 +250,10 @@ go
 --select * from ThongTinNhapKho
 --	   insert into ThongTinNhapKho values ('MN001','MH001','NCC001',1,null)
 
+
+--======================KHUYẾN MÃI===========================
+create trigger delete_on_KhuyenMai on KhuyenMai instead of delete
+as
+declare @maKhuyenMai varchar(10)=(select maKhuyenMai from deleted)
+delete from ThongTinKhuyenMai where maKhuyenMai=@maKhuyenMai
+delete from KhuyenMai where maKhuyenMai=@maKhuyenMai

@@ -36,7 +36,6 @@ C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTA
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DangNhap_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.PhanQuyen_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.LoaiKhuyenMai_GUI.resources
-C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinKhuyenMai_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\bin\Debug\BUS.dll
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\bin\Debug\DAO.dll
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\bin\Debug\DTO.dll
@@ -47,7 +46,6 @@ C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTA
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.NhaCungCap_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinThanhPhanDoAn_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.CopyComplete
-C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DanhSachSanPhamKhuyenMai_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.PhieuNhapKho_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.PhieuXuatKho_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThemPhieuNhap_GUI.resources
@@ -107,3 +105,5 @@ D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.OrderDoAn_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.OrderDoAn_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.GiaoDienQuanLi_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.MatHang_GUI.resources
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.KhuyenMai_GUI.resources
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinKhuyenMai_GUI.resources

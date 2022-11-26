@@ -22,7 +22,27 @@ namespace DAO
             da.Fill(tb);
             return tb;
         }
+        public bool update_Quyen_DAO(PhanQuyen_DTO phanQuyen)
+        {
+            Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("update_Quyen", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@maQuyen", SqlDbType.VarChar).Value = phanQuyen.MaQuyen;
+                cmd.Parameters.Add("@tenQuyen", SqlDbType.NVarChar).Value = phanQuyen.TenQuyen;
+                cmd.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = phanQuyen.GhiChu;
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
 
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return false;
+        }
     }
 
 }

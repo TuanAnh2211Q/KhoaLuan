@@ -155,12 +155,19 @@ as
 select*from PhanQuyen
 go
 exec dbo.select_PhanQuyen
+--Update Quyen
+
+create  procedure update_Quyen
+@maQuyen varchar(10), @tenQuyen nvarchar(50), @ghiChu nvarchar(max)
+as
+update PhanQuyen set tenQuyen=@tenQuyen, ghiChu=@ghiChu where maQuyen=@maQuyen
+
 ------===================NHÂN VIÊN==============================
 
 --Lấy thông tin nhân viên
 create  procedure select_NhanVien
 as
-select maNhanVien,tenNhanVien, Phai, tenChucDanh, Email, SDT, diaChi, tenLoaiNhanVien
+select maNhanVien,tenNhanVien, Phai,nv.maChucDanh, tenChucDanh, Email, SDT, diaChi, tenLoaiNhanVien, nv.maLoaiNhanVien
 from NhanVien nv, ChucDanh cd, LoaiNhanVien lnv
 where nv.maChucDanh=cd.maChucDanh
 and nv.maLoaiNhanVien=lnv.maLoaiNhanVien
@@ -210,6 +217,26 @@ create procedure select_LoaiNhanVien
 as
 select maLoaiNhanVien, tenLoaiNhanVien from LoaiNhanVien
 go
+
+--====================TÀI KHOẢN NHÂN VIÊN
+
+create proc select_TKNV
+as
+select id, tenTaiKhoan,matKhau,ttnn.maNhanVien, tenNhanVien,q.maQuyen from TaiKhoanNhanVien ttnn, NhanVien nv, PhanQuyen q
+where ttnn.maNhanVien=nv.maNhanVien
+and ttnn.maQuyen=q.maQuyen
+
+create  proc update_QuyenTKNV
+@id int, @maQuyen varchar(10)
+as
+update TaiKhoanNhanVien set maQuyen=@maQuyen where id=@id
+
+create  proc rs_mkTKNV
+@id int
+as
+update TaiKhoanNhanVien set matKhau='1' where id=@id
+
+
 ----------------------------CHỨC DANH--------------------
 create  procedure select_ChucDanh
 as 
@@ -348,3 +375,64 @@ create proc delete_LoaiKM
 @maLoai varchar(10)
 as
 delete LoaiKhuyenMai where maLoaiKhuyenMai=@maLoai
+
+
+-----------------=KHUYẾN MÃI--------------------
+
+create proc select_KhuyenMai
+as
+select*from KhuyenMai
+
+create proc insert_KM
+@maKM varchar(10), @tenKM nvarchar(50), @maLoaiKM varchar(10), @mucGiam float
+as
+insert into KhuyenMai values(@maKM,@tenKM,@maLoaiKM,@mucGiam)
+
+create  proc update_KM
+@maKM varchar(10), @tenKM nvarchar(50), @maLoaiKM varchar(10), @mucGiam float
+as
+update KhuyenMai set tenKhuyenMai=@tenKM,maLoaiKhuyenMai=@maLoaiKM, mucGiam=@mucGiam where maKhuyenMai=@maKM
+
+create proc delete_KM
+@maKM varchar(10)
+as
+delete from KhuyenMai where maKhuyenMai=@maKM
+
+
+-----------------=THÔNG TIN KHUYẾN MÃI--------------------
+create proc select_TTSP
+as
+select maSanPham, tenDoAn as tenSanPham from  SanPham sp, DoAn da
+where da.maDoAn=sp.maSanPham
+Union
+select maSanPham , tenNuoc as tenSanPham from SanPham sp, NuocUong n
+where n.maNuoc=sp.maSanPham
+
+
+
+create proc select_ThongTinKhuyenMai
+@maKhuyenMai varchar(10)
+as
+select maKhuyenMai,maSanPham,da.tenDoAn as TenSanPham,ngayBatDau,ngayKetThuc,ghiChu from ThongTinKhuyenMai ttkm,DoAn da
+where ttkm.maSanPham=da.maDoAn and maKhuyenMai=@maKhuyenMai
+union
+select maKhuyenMai,maSanPham,n.tenNuoc as TenSanPham,ngayBatDau,ngayKetThuc,ghiChu from ThongTinKhuyenMai ttkm,NuocUong n
+where ttkm.maSanPham=n.maNuoc and maKhuyenMai=@maKhuyenMai
+
+
+create proc insert_ThongTinKhuyenMai
+@maKM varchar(10), @maSP varchar(10), @ngayBD datetime, @ngayKT datetime, @ghiChu nvarchar(max)
+as
+insert into ThongTinKhuyenMai values (@maKM,@maSP,@ngayBD,@ngayKT,@ghiChu)
+
+create proc update_ThongTinKhuyenMai
+@maKM varchar(10), @maSP varchar(10), @ngayBD datetime, @ngayKT datetime, @ghiChu nvarchar(max)
+as
+update ThongTinKhuyenMai set ngayBatDau=@ngayBD, ngayKetThuc=@ngayKT, ghiChu=@ghiChu where maKhuyenMai=@maKM and maSanPham=@maSP
+
+
+create proc delete_ThongTinKhuyenMai
+@maKM varchar(10), @maSP varchar(10)
+as
+delete from ThongTinKhuyenMai where maKhuyenMai=@maKM and maSanPham=@maSP
+

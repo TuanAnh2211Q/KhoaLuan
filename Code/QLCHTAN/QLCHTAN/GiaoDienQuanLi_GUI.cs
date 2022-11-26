@@ -74,7 +74,7 @@ namespace QLCHTAN
 
         private void btnQLKM_Click(object sender, EventArgs e)
         {
-            ThongTinKhuyenMai_GUI khuyenmai = new ThongTinKhuyenMai_GUI();
+            KhuyenMai_GUI khuyenmai = new KhuyenMai_GUI();
             khuyenmai.Show();
         }
 
