@@ -16,6 +16,18 @@ namespace QLCHTAN
     public partial class NhaCungCap_GUI : Form
     {
         NhaCungCap_BUS ncc = new NhaCungCap_BUS();
+
+        public bool kt_NCC()
+        {
+            for (int i = 0; i <= dgvNhaCungCap.Rows.Count - 1; i++)
+            {
+                if (txtMaNhaCungCap.Text == dgvNhaCungCap.Rows[i].Cells["maNhaCungCap"].Value.ToString())
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         public NhaCungCap_DTO nccDTO()
         {
             return new NhaCungCap_DTO(txtMaNhaCungCap.Text, txtTenNhaCungCap.Text, txtDiaChi.Text, txtEmail.Text, txtSDT.Text, rtxtGhiChu.Text);
@@ -34,19 +46,26 @@ namespace QLCHTAN
                     DialogResult rs = MessageBox.Show("Xác nhận xóa thông tin nhà cung cấp ?", "Thông báo", MessageBoxButtons.YesNo);
                     if (rs == DialogResult.Yes)
                     {
-                       
-                        if (ncc.delete_NCC_BUS(nccDTO()))
-                        {
-                            MessageBox.Show("Xóa nhà cung cấp thành công");
-                            NhaCungCap_GUI_Load(sender, e);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Xóa nhà cung cấp thất bại");
-                        }
+                       if(kt_NCC())
+                       {
+                             if (ncc.delete_NCC_BUS(nccDTO()))
+                             {
+                                 MessageBox.Show("Xóa nhà cung cấp thành công");
+                                 NhaCungCap_GUI_Load(sender, e);
+                             }
+                             else
+                             {
+                                 MessageBox.Show("Xóa nhà cung cấp thất bại");
+                             }
+                       }   
+                       else
+                       {
+                             MessageBox.Show("Nhà cung cấp không tồn tại, không thể xóa");
+                       }   
+
                     }
-                }
             }
+        }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -59,26 +78,27 @@ namespace QLCHTAN
                     DialogResult rs = MessageBox.Show("Xác nhận thêm thông tin nhà cung cấp ?", "Thông báo", MessageBoxButtons.YesNo);
                     if(rs==DialogResult.Yes)
                     {
-                        for (int i = 0; i <= dgvNhaCungCap.Rows.Count - 1; i++)
+                       if(!kt_NCC())
                         {
-                            if (txtMaNhaCungCap.Text == dgvNhaCungCap.Rows[i].Cells["maNhaCungCap"].Value.ToString())
+
+                            if (ncc.insert_NCC_BUS(nccDTO()))
                             {
-                                MessageBox.Show("Mã nhà cung cấp đã tồn tại, không thể thêm");
-                                return;
+                                MessageBox.Show("Thêm nhà cung cấp thành công");
+                                NhaCungCap_GUI_Load(sender, e);
                             }
-                        }
-                        if(ncc.insert_NCC_BUS(nccDTO()))
-                        {
-                            MessageBox.Show("Thêm nhà cung cấp thành công");
-                            NhaCungCap_GUI_Load(sender, e);
+                            else
+                            {
+                                MessageBox.Show("Thêm nhà cung cấp thất bại");
+                            }
                         }    
-                        else
-                        {
-                            MessageBox.Show("Thêm nhà cung cấp thất bại");
-                        }    
-                    }    
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mã nhà cung cấp đã tồn tại, không thể thêm");
+                    }
                 }    
             }
+
             else
             {
                 MessageBox.Show("Vui lòng không để trống thông tin");
@@ -96,15 +116,23 @@ namespace QLCHTAN
                     DialogResult rs = MessageBox.Show("Xác nhận sửa thông tin nhà cung cấp ?", "Thông báo", MessageBoxButtons.YesNo);
                     if (rs == DialogResult.Yes)
                     {
-                        if (ncc.update_NCC_BUS(nccDTO()))
+                        if(kt_NCC())
                         {
-                            MessageBox.Show("Sửa thông tin nhà cung cấp thành công");
-                            NhaCungCap_GUI_Load(sender, e);
-                        }
+                            if (ncc.update_NCC_BUS(nccDTO()))
+                            {
+                                MessageBox.Show("Sửa thông tin nhà cung cấp thành công");
+                                NhaCungCap_GUI_Load(sender, e);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Sửa thông tin nhà cung cấp thất bại");
+                            }
+                        }    
                         else
                         {
-                            MessageBox.Show("Sửa thông tin nhà cung cấp thất bại");
+                            MessageBox.Show("Nhà cung cấp chưa tồn tại, không thể sửa");
                         }
+
                     }
                 }
             }

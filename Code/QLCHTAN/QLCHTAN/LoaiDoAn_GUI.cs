@@ -15,6 +15,17 @@ namespace QLCHTAN
     public partial class LoaiDoAn_GUI : Form
     {
         LoaiDoAn_BUS loaiDoAn_BUS = new LoaiDoAn_BUS();
+        public bool kt_LoaiDoAn()
+        {
+            for (int i = 0; i <= dgvLoaiDoAn.Rows.Count - 1; i++)
+            {
+                if (txtMaLoaiDoAn.Text == dgvLoaiDoAn.Rows[i].Cells["maLoaiDoAn"].Value.ToString())
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         public LoaiDoAn_GUI()
         {
             InitializeComponent();
@@ -55,19 +66,19 @@ namespace QLCHTAN
             {
                 if (txtMaLoaiDoAn.Text != "" && txtTenLoaiDoAn.Text != "")
                 {
-                    for (int i = 0; i <= dgvLoaiDoAn.Rows.Count - 1; i++)
+                    if(!kt_LoaiDoAn())
                     {
-                        if (txtMaLoaiDoAn.Text == dgvLoaiDoAn.Rows[i].Cells["maLoaiDoAn"].Value.ToString())
-                        {
-                            MessageBox.Show("Mã loại đồ ăn đã tồn tại, không thể thêm");
-                            return;
-                        }
-                    }
 
-                    if (loaiDoAn_BUS.insert_LoaiDoAn_BUS(loaiDoAn_DTO()))
-                        MessageBox.Show("Thêm loại đồ ăn thành công");
+                        if (loaiDoAn_BUS.insert_LoaiDoAn_BUS(loaiDoAn_DTO()))
+                            MessageBox.Show("Thêm loại đồ ăn thành công");
+                        else
+                            MessageBox.Show("Thêm loại đồ ăn thất bại");
+                    }    
                     else
-                        MessageBox.Show("Thêm loại đồ ăn thất bại");
+                    {
+                        MessageBox.Show("Mã loại đồ ăn đã tồn tại, không thể thêm");
+                        return;
+                    }    
                 }
                 else
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
@@ -79,15 +90,24 @@ namespace QLCHTAN
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            DialogResult them = MessageBox.Show("Bạn có muốn xóa loại đồ ăn", "Thông báo", MessageBoxButtons.YesNo);
-            if (them == DialogResult.Yes)
+            DialogResult xoa = MessageBox.Show("Bạn có muốn xóa loại đồ ăn", "Thông báo", MessageBoxButtons.YesNo);
+            if (xoa == DialogResult.Yes)
             {
                 if (txtMaLoaiDoAn.Text != "" && txtTenLoaiDoAn.Text != "")
                 {
-                    if (loaiDoAn_BUS.delete_LoaiDoAn_BUS(loaiDoAn_DTO()))
-                        MessageBox.Show("Xóa loại đồ ăn thành công");
+                    if (kt_LoaiDoAn())
+                    {
+                        {
+                            if (loaiDoAn_BUS.delete_LoaiDoAn_BUS(loaiDoAn_DTO()))
+                                MessageBox.Show("Xóa loại đồ ăn thành công");
+                            else
+                                MessageBox.Show("Xóa loại đồ ăn thất bại");
+                        }
+                    }
                     else
-                        MessageBox.Show("Xóa loại đồ ăn thất bại");
+                    {
+                        MessageBox.Show("Không tồn tại loại đồ ăn muốn xóa");
+                    }
                 }
                 else
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
@@ -104,10 +124,17 @@ namespace QLCHTAN
             {
                 if (txtMaLoaiDoAn.Text != "" && txtTenLoaiDoAn.Text != "")
                 {
-                    if (loaiDoAn_BUS.update_LoaiDoAn_BUS(loaiDoAn_DTO()))
-                        MessageBox.Show("Chỉnh sửa thông tin loại đồ ăn thành công");
+                   if(kt_LoaiDoAn())
+                    {
+                        if (loaiDoAn_BUS.update_LoaiDoAn_BUS(loaiDoAn_DTO()))
+                            MessageBox.Show("Chỉnh sửa thông tin loại đồ ăn thành công");
+                        else
+                            MessageBox.Show("Chỉnh sửa thông tin loại đồ ăn thất bại");
+                    }
                     else
-                        MessageBox.Show("Chỉnh sửa thông tin loại đồ ăn thất bại");
+                    {
+                        MessageBox.Show("Không tồn tại loại đồ ăn muốn sửa");
+                    }
                 }
                 else
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin");

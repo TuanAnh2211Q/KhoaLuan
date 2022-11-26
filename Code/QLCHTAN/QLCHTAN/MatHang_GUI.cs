@@ -16,6 +16,17 @@ namespace QLCHTAN
     {
         MatHang_BUS mathang = new MatHang_BUS();
         NhaCungCap_BUS ncc = new NhaCungCap_BUS();
+        public bool kt_MatHang()
+        {
+            for (int i = 0; i <= dgvMatHang.Rows.Count; i++)
+            {
+                if (txtMaHang.Text.Trim() == dgvMatHang.Rows[i].Cells["maHang"].Value.ToString().Trim())
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         public MatHang_DTO mathangDTO()
         {
             string ncc;
@@ -40,26 +51,24 @@ namespace QLCHTAN
                 }
                 else
                 {
-                    DialogResult rs = MessageBox.Show("Xác nhận thêm vào danh sách ?", "Thông báo", MessageBoxButtons.YesNo);
-                    if(rs==DialogResult.Yes)
+                   if(!kt_MatHang())
                     {
-                        for (int i = 0; i <= dgvMatHang.Rows.Count; i++)
+                        DialogResult rs = MessageBox.Show("Xác nhận thêm vào danh sách ?", "Thông báo", MessageBoxButtons.YesNo);
+                        if (rs == DialogResult.Yes)
                         {
-                            if (txtMaHang.Text == dgvMatHang.Rows[i].Cells["maHang"].Value.ToString())
+
+                            if (mathang.insert_MatHang_BUS(mathangDTO()))
                             {
-                                MessageBox.Show("Mã hàng đã tồn tại, vui lòng nhập lại");
-                                return;
+                                MessageBox.Show("Thêm mặt hàng thành công");
+                                MatHang_GUI_Load(sender, e);
                             }
                             else
-                                break;
+                                MessageBox.Show("Thêm mặt hàng thất bại");
                         }
-                        if (mathang.insert_MatHang_BUS(mathangDTO()))
-                        {
-                            MessageBox.Show("Thêm mặt hàng thành công");
-                            MatHang_GUI_Load(sender, e);
-                        }
-                        else
-                            MessageBox.Show("Thêm mặt hàng thất bại");
+                    }  
+                   else
+                    {
+                        MessageBox.Show("Mã mặt hàng đã tồn tại, vui lòng kiểm tra lại");
                     }    
                 }
 
@@ -85,14 +94,21 @@ namespace QLCHTAN
                     }
                     else
                     {
-
-                        if (mathang.delete_MatHang_BUS(mathangDTO()))
+                        if(kt_MatHang())
                         {
-                            MessageBox.Show("Xóa mặt hàng thành công");
-                            MatHang_GUI_Load(sender, e);
-                        }
+
+                            if (mathang.delete_MatHang_BUS(mathangDTO()))
+                            {
+                                MessageBox.Show("Xóa mặt hàng thành công");
+                                MatHang_GUI_Load(sender, e);
+                            }
+                            else
+                                MessageBox.Show("Xóa mặt hàng thất bại");
+                        }    
                         else
-                            MessageBox.Show("Xóa mặt hàng thất bại");
+                        {
+                            MessageBox.Show("Không tồn tại mặt hàng, không thể xóa");
+                        }    
                     }
    
                     }
@@ -112,16 +128,23 @@ namespace QLCHTAN
                 }
                 else
                 {
-                    DialogResult rs = MessageBox.Show("Xác nhận sửa thông tin ?", "Thông báo", MessageBoxButtons.YesNo);
-                    if (rs == DialogResult.Yes)
+                   if(kt_MatHang())
                     {
-                        if (mathang.update_MatHang_BUS(mathangDTO()))
+                        DialogResult rs = MessageBox.Show("Xác nhận sửa thông tin ?", "Thông báo", MessageBoxButtons.YesNo);
+                        if (rs == DialogResult.Yes)
                         {
-                            MessageBox.Show("Chỉnh sửa thành công");
-                            MatHang_GUI_Load(sender, e);
+                            if (mathang.update_MatHang_BUS(mathangDTO()))
+                            {
+                                MessageBox.Show("Chỉnh sửa thành công");
+                                MatHang_GUI_Load(sender, e);
+                            }
+                            else
+                                MessageBox.Show("Chỉnh sửa thất bại");
                         }
-                        else
-                            MessageBox.Show("Chỉnh sửa thất bại");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tồn tại mặt hàng, không thể sửa");
                     }
                 }
 

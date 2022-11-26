@@ -47,6 +47,7 @@
     <Compile Include="DoAn_DAO.cs" />
     <Compile Include="DoiMatKhau_DAO.cs" />
     <Compile Include="getServer.cs" />
+    <Compile Include="KhuyenMai_DAO.cs" />
     <Compile Include="LoaiDoAn_DAO.cs" />
     <Compile Include="LoaiKhuyenMai_DAO.cs" />
     <Compile Include="MatHang_DAO.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="TaiKhoan_DAO.cs" />
     <Compile Include="ThongTinChiTietPhieuDatHang_DAO.cs" />
     <Compile Include="ThongTinChiTietPhieuNhap_DAO.cs" />
+    <Compile Include="ThongTinKhuyenMai_DAO.cs" />
     <Compile Include="ThongTinThanhPhanDoAn_DAO.cs" />
   </ItemGroup>
   <ItemGroup>

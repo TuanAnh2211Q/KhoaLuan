@@ -8,6 +8,14 @@ namespace DTO
 {
     public class TaiKhoan_DTO
     {
+        private int id;
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
         private string tenTaiKhoan;
 
         public string TenTaiKhoan
@@ -15,29 +23,38 @@ namespace DTO
             get { return tenTaiKhoan; }
             set { tenTaiKhoan = value; }
         }
+        private string matKhau;
 
-        private string tenNhanVien;
-
-        public string TenNhanVien
+        public string MatKhau
         {
-            get { return tenNhanVien; }
-            set { tenNhanVien = value; }
+            get { return matKhau; }
+            set { matKhau = value; }
         }
 
-        private string tenQuyen;
+        private string maNhanVien;
 
-        public string TenQuyen
+        public string MaNhanVien
         {
-            get { return tenQuyen; }
-            set { tenQuyen = value; }
+            get { return maNhanVien; }
+            set { maNhanVien = value; }
+        }
+
+        private string maQuyen;
+
+        public string MaQuyen
+        {
+            get { return maQuyen; }
+            set { maQuyen = value; }
         }
 
 
-        public TaiKhoan_DTO(string TenTaiKhoan, string TenNhanVien, string TenQuyen)
+        public TaiKhoan_DTO(int Id, string TenTaiKhoan,string MatKhau, string maNhanVien, string maQuyen)
         {
+            this.id = Id;
             this.tenTaiKhoan = TenTaiKhoan;
-            this.tenNhanVien = TenNhanVien;
-            this.tenQuyen = TenQuyen;
+            this.matKhau = MatKhau;
+            this.maNhanVien = maNhanVien;
+            this.maQuyen = maQuyen;
         }
     }
 }

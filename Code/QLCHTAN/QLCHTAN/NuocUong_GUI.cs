@@ -19,6 +19,17 @@ namespace QLCHTAN
         {
             return new NuocUong_DTO(txtMaNuoc.Text, txtTenNuoc.Text, txtDonViBan.Text, txtDonGia.Text);
         }
+        public bool kt_NuocUong()
+        {
+            for (int i = 0; i <= dgvNuocUong.Rows.Count - 1; i++)
+            {
+                if (txtMaNuoc.Text.Trim() == dgvNuocUong.Rows[i].Cells["MaNuoc"].Value.ToString().Trim())
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         public NuocUong_GUI()
         {
             InitializeComponent();
@@ -54,36 +65,34 @@ namespace QLCHTAN
             DialogResult them = MessageBox.Show("Bạn muốn thêm nước uống này ?", "Thông báo", MessageBoxButtons.YesNo);
             if (them == DialogResult.Yes)
             {
-                try
+                if (!kt_NuocUong())
                 {
-                    if (txtMaNuoc.Text != "" && txtTenNuoc.Text != "" & txtDonGia.Text != "" && txtDonViBan.Text != "")
+                    try
                     {
-                        for (int i = 0; i <= dgvNuocUong.Rows.Count - 1; i++)
+                        if (txtMaNuoc.Text != "" && txtTenNuoc.Text != "" & txtDonGia.Text != "" && txtDonViBan.Text != "")
                         {
-                            if (txtMaNuoc.Text == dgvNuocUong.Rows[i].Cells["MaNuoc"].Value.ToString())
+
+                            if (nuocuong.insert_NuocUong_BUS(nuocUong_DTO()))
                             {
-                                MessageBox.Show("Mã nước uống đã tồn tại, không thể thêm");
-                                return;
+                                MessageBox.Show("Thêm nước thành công");
+                                btnLamMoi_Click(sender, e);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Thêm nước thất bại vui lòng kiểm tra lại thông tin nhập");
                             }
                         }
-                        if (nuocuong.insert_NuocUong_BUS(nuocUong_DTO()))
-                        {
-                            MessageBox.Show("Thêm nước thành công");
-                            btnLamMoi_Click(sender, e);
-                        }
                         else
-                        {
-                            MessageBox.Show("Thêm nước thất bại vui lòng kiểm tra lại thông tin nhập");
-                        }
-                    }
-                    else
-                    { MessageBox.Show("Vui lòng nhập dầy đủ thông tin"); }
+                        { MessageBox.Show("Vui lòng nhập dầy đủ thông tin"); }
 
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Thêm nước thất bại vui lòng kiểm tra lại thông tin nước");
+                    }
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Thêm nước thất bại vui lòng kiểm tra lại thông tin đồ ăn");
-                }
+                else
+                    MessageBox.Show("Mã nước uống đã tồn tại, không thể thêm");
             }
         }
 
@@ -92,28 +101,34 @@ namespace QLCHTAN
             DialogResult delete = MessageBox.Show("Bạn có muốn xóa nước uống này ?", "Thông báo", MessageBoxButtons.YesNo);
             if (delete == DialogResult.Yes)
             {
-                try
+                if (kt_NuocUong())
                 {
-                    if (txtMaNuoc.Text != "")
+
+                    try
                     {
-                        if (nuocuong.delete_NuocUong_BUS(nuocUong_DTO()))
+                        if (txtMaNuoc.Text != "")
                         {
-                            MessageBox.Show("Xóa nước uống thành công");
-                            btnLamMoi_Click(sender, e);
+                            if (nuocuong.delete_NuocUong_BUS(nuocUong_DTO()))
+                            {
+                                MessageBox.Show("Xóa nước uống thành công");
+                                btnLamMoi_Click(sender, e);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Xóa nước uống thất bại vui lòng kiểm tra lại thông tin nhập");
+                            }
                         }
                         else
-                        {
-                            MessageBox.Show("Xóa nước uống thất bại vui lòng kiểm tra lại thông tin nhập");
-                        }
-                    }
-                    else
-                    { MessageBox.Show("Vui lòng nhập dầy đủ thông tin"); }
+                        { MessageBox.Show("Vui lòng nhập dầy đủ thông tin"); }
 
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Xóa nước uống thất bại vui lòng kiểm tra lại thông tin đồ ăn");
+                    }
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Xóa nước uống thất bại vui lòng kiểm tra lại thông tin đồ ăn");
-                }
+                else
+                    MessageBox.Show("Mã nước không tồn tại, không thể xóa");
             }
         }
 
@@ -122,29 +137,40 @@ namespace QLCHTAN
             DialogResult sua = MessageBox.Show("Bạn muốn sửa thông tin nước uống này ?", "Thông báo", MessageBoxButtons.YesNo);
             if (sua == DialogResult.Yes)
             {
-                try
+                if (kt_NuocUong())
                 {
-                    if (txtMaNuoc.Text != "" && txtTenNuoc.Text != "" & txtDonGia.Text != "" && txtDonViBan.Text != "")
+                    try
                     {
-                        if (nuocuong.update_NuocUong_BUS(nuocUong_DTO()))
+                        if (txtMaNuoc.Text != "" && txtTenNuoc.Text != "" & txtDonGia.Text != "" && txtDonViBan.Text != "")
                         {
-                            MessageBox.Show("Sửa thông tin nước thành công");
-                            btnLamMoi_Click(sender, e);
+                            if (nuocuong.update_NuocUong_BUS(nuocUong_DTO()))
+                            {
+                                MessageBox.Show("Sửa thông tin nước thành công");
+                                btnLamMoi_Click(sender, e);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Sửa thông tin nước thất bại vui lòng kiểm tra lại thông tin nhập");
+                            }
                         }
                         else
-                        {
-                            MessageBox.Show("Sửa thông tin nước thất bại vui lòng kiểm tra lại thông tin nhập");
-                        }
-                    }
-                    else
-                    { MessageBox.Show("Vui lòng nhập dầy đủ thông tin"); }
+                        { MessageBox.Show("Vui lòng nhập dầy đủ thông tin"); }
 
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Sửa thông tin nước thất bại vui lòng kiểm tra lại thông tin đồ ăn");
+                    }
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Sửa thông tin nước thất bại vui lòng kiểm tra lại thông tin đồ ăn");
-                }
+                else
+                    MessageBox.Show("Mã nước không tồn tại, không thể sửa");
             }
+        }
+
+        private void txtMaNuoc_Leave(object sender, EventArgs e)
+        {
+            txtMaNuoc.Text = txtMaNuoc.Text.ToUpper();
+
         }
     }
 }
