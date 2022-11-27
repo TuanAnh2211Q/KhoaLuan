@@ -151,54 +151,38 @@ select * from ThongTinNhapKho
 
 
 ------------------------------------------------------------------------------------------------------
---Cập nhật tổng giá thông tin đặt hàng
-create  trigger insert_update_TongGia_DatHang on ThongTinDatHang instead of
-insert,update as
+--Thêm thông tin đặt hàng khi thêm hàng
+create  trigger insert_ThongTinDatHang_trg on ThongTinDatHang instead of insert as
 begin
 declare
-			@maDatHang varchar(10),
-			@maNCC varchar(10),
-			 @donGia money,
-             @maHang varchar(10),
-             @soLuongDat int,
-			 @tongDonGia money
-			 set @maHang=(select maHang from inserted)
-			 set @soLuongDat= (select soLuongDat from inserted)
-			 set @donGia=( select mh.donGia from MatHang mh, inserted where inserted.maHang=mh.maHang)
-			 set @maDatHang=(select maDatHang from inserted)
-			 set @maNCC=(select maNCC from inserted)
+			@maDatHang varchar(10)=(select maDatHang from inserted),
+            @maHang varchar(10)=(select maHang from inserted),
+			@soLuongDat int = (select soLuongDat from inserted),
+			@maNCC varchar(10)=(select maNCC from inserted),
+			 @donGia money=( select mh.donGia from MatHang mh, inserted where inserted.maHang=mh.maHang and inserted.maNCC=mh.maNCC),
+			 @tongDonGia money --Tổng đơn giá của mặt hàng
+			 if not exists(select* from ThongTinDatHang where maDatHang=@maDatHang and maHang=@maHang and maNCC=@maNCC)
+			 begin
 			 set @tongDonGia=@soLuongDat*@donGia
-		     if exists( select * from ThongTinDatHang where maHang=@maHang and maNCC=@maNCC and maDatHang=@maDatHang)
-			 begin
-			 if exists(select * from ThongTinDatHang where tongDonGia is null)
-			 begin
-			       update ThongTinDatHang
-				   set tongDonGia=0
-				   	 update ThongTinDatHang
-			 set soLuongDat=soLuongDat+@soLuongDat,
-			      tongDonGia=tongDonGia+@tongDonGia
-				  where maHang=@maHang and maNCC=@maNCC and maDatHang=@maDatHang
+			 insert into ThongTinDatHang values (@maDatHang,@maHang,@maNCC,@soLuongDat,@tongDonGia)
 			 end
 			 else
 			 begin
-			  update ThongTinDatHang
-			 set soLuongDat=soLuongDat+@soLuongDat,
-			      tongDonGia=tongDonGia+@tongDonGia
-				  where maHang=@maHang and maNCC=@maNCC and maDatHang=@maDatHang
-			 end
-			end
-			else
-			begin
-			insert into ThongTinDatHang values(@maDatHang,@maHang,@maNCC,@soLuongDat,@tongDonGia)
-			end
-			 end
+			 	set @tongDonGia=@soLuongDat*@donGia
+				  update ThongTinDatHang
+				  set soLuongDat=soLuongDat+ @soLuongDat,
+				  tongDonGia=tongDonGia+ @tongDonGia
+				  where  maDatHang=@maDatHang and maHang=@maHang and maNCC=@maNCC			
+			 end    
+ end
+
       --select * from ThongTinDatHang
-	   --insert into ThongTinDatHang values ('MD001','MH002','NCC001',1,null)
 
+	  insert into ThongTinDatHang(maDatHang,maHang,maNCC,soLuongDat) values('MD001','MH001','NCC002',1)
 
+--Cập nhật giá sau khi thêm 
 
-
-
+select * from ThongTinDatHang 
 
 
 

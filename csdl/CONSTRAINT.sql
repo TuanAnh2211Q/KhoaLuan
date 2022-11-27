@@ -170,7 +170,7 @@ go
  go
 
  alter table DonHang
- add constraint fk_DonHang_KhachHang foreign key (SDTKhachHang) references KhachHang(SDT)
+ add constraint fk_DonHang_KhachHang foreign key (idKhachHang) references KhachHang(idKhachHang)
  go
 
  alter table DonHang
@@ -210,7 +210,7 @@ go
  go
 
  alter table DanhGia
- add constraint fk_DanhGia_KhachHang foreign key (SDTKhachHang) references KhachHang(SDT)
+ add constraint fk_DanhGia_KhachHang foreign key (idKhachHang) references KhachHang(idKhachHang)
  go
 
   alter table DanhGia
