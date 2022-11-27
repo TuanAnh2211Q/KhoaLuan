@@ -70,11 +70,6 @@
     <Compile Include="Order_GUI.Designer.cs">
       <DependentUpon>Order_GUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLCUAHANGTHUCANNHANHDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLCUAHANGTHUCANNHANHDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ThongTinKhuyenMai_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,17 +327,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QLCUAHANGTHUCANNHANHDataSet.xsc">
-      <DependentUpon>QLCUAHANGTHUCANNHANHDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLCUAHANGTHUCANNHANHDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLCUAHANGTHUCANNHANHDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLCUAHANGTHUCANNHANHDataSet.xss">
-      <DependentUpon>QLCUAHANGTHUCANNHANHDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

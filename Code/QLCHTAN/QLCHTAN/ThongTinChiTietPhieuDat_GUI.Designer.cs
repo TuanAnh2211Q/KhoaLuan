@@ -46,7 +46,6 @@ namespace QLCHTAN
             this.soLuongDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongDonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qLCUAHANGTHUCANNHANHDataSet = new QLCHTAN.QLCUAHANGTHUCANNHANHDataSet();
             this.lblThoat = new System.Windows.Forms.LinkLabel();
             this.btnThem = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -56,7 +55,6 @@ namespace QLCHTAN
             this.grbThongTinPhieuDat.SuspendLayout();
             this.grbDanhSachHangDat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinChiTietPhieuDat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLCUAHANGTHUCANNHANHDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // grbThongTinPhieuDat
@@ -238,8 +236,7 @@ namespace QLCHTAN
             // 
             // qLCUAHANGTHUCANNHANHDataSet
             // 
-            this.qLCUAHANGTHUCANNHANHDataSet.DataSetName = "QLCUAHANGTHUCANNHANHDataSet";
-            this.qLCUAHANGTHUCANNHANHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+           
             // 
             // lblThoat
             // 
@@ -331,7 +328,6 @@ namespace QLCHTAN
             this.grbDanhSachHangDat.ResumeLayout(false);
             this.grbDanhSachHangDat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinChiTietPhieuDat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLCUAHANGTHUCANNHANHDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,7 +342,6 @@ namespace QLCHTAN
         private System.Windows.Forms.Label lblTongGia;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvThongTinChiTietPhieuDat;
-        private QLCUAHANGTHUCANNHANHDataSet qLCUAHANGTHUCANNHANHDataSet;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbbMatHang;
