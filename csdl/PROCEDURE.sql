@@ -310,15 +310,20 @@ and ncc.maNCC=ttdt.maNCC
 and ttdt.maDatHang=@maDatHang
 go
 ----========Thông Tin Khách Hàng==============
+--Lấy thông tin khách hàng
 create procedure select_KhachHang
 as
 	select*from KhachHang
 exec dbo.select_KhachHang
-
+--Lấy Giới tính khách hàng
+create proc select_GioiTinhKhachHang
+as select Phai from KhachHang
+exec dbo.select_GioiTinhKhachHang
+--Update thông tin khách hàng
 alter proc update_KhachHang
-@SDT varchar(11),@tenKhachHang  nvarchar(100), @Phai nvarchar(10), @email nvarchar(50),@diaChi nvarchar(100),@ghiChu nvarchar(max)
+ @idKhachHang int,@SDT varchar(11),@tenKhachHang  nvarchar(100), @Phai nvarchar(10), @email nvarchar(50),@diaChi nvarchar(100),@ghiChu nvarchar(max)
 as
-update KhachHang set tenKhachHang=@tenKhachHang, Phai=@Phai,ghiChu=@ghiChu,diaChi=@diaChi,Email=@email where SDT=@SDT
+update KhachHang set SDT=@SDT, tenKhachHang=@tenKhachHang, Phai=@Phai,diaChi=@diaChi,Email=@email,ghiChu=@ghiChu where idKhachHang =@idKhachHang
 go
 exec dbo.update_KhachHang
 --======================NHÀ CUNG CẤP===========
@@ -426,4 +431,7 @@ create proc delete_ThongTinKhuyenMai
 @maKM varchar(10), @maSP varchar(10)
 as
 delete from ThongTinKhuyenMai where maKhuyenMai=@maKM and maSanPham=@maSP
+
+
+
 
