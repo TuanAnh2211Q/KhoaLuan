@@ -19,6 +19,72 @@ namespace DAO
             da.Fill(tb);
             return tb;
         }
-        
+        public bool insert_PhieuDat_DAO(PhieuDatHang_DTO phieudat)
+        {
+            Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("insert_DatHang", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@maDH", SqlDbType.VarChar).Value = phieudat.MaDatHang.Trim();
+                cmd.Parameters.Add("@ngayDat", SqlDbType.DateTime).Value = phieudat.NgayDatHang;
+                cmd.Parameters.Add("@ngaydukiengiao", SqlDbType.DateTime).Value = phieudat.NgayDuKienGiao;
+                cmd.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = phieudat.GhiChu;
+                cmd.Parameters.Add("@phuongthucthanhtoan", SqlDbType.NVarChar).Value = phieudat.PhuongThucThanhToan;
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return false;
+        }
+
+        public bool delete_PhieuDat_DAO(PhieuDatHang_DTO phieudat)
+        {
+            Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("delete_DatHang", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@maDH", SqlDbType.VarChar).Value = phieudat.MaDatHang.Trim();
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return false;
+        }
+
+        public bool update_PhieuDat_DAO(PhieuDatHang_DTO phieudat)
+        {
+            Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("update_DatHang", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@maDH", SqlDbType.VarChar).Value = phieudat.MaDatHang.Trim();
+                cmd.Parameters.Add("@ngayDat", SqlDbType.DateTime).Value = phieudat.NgayDatHang;
+                cmd.Parameters.Add("@ngaydukiengiao", SqlDbType.DateTime).Value = phieudat.NgayDuKienGiao;
+                cmd.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = phieudat.GhiChu;
+                cmd.Parameters.Add("@phuongthucthanhtoan", SqlDbType.NVarChar).Value = phieudat.PhuongThucThanhToan;
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return false;
+        }
+
     }
 }

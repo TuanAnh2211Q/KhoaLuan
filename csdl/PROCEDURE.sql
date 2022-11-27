@@ -294,36 +294,50 @@ select maDatHang, ngayDatHang,ngayDuKienGiao,phuongThucThanhToan,ghiChu from Dat
 go
 --Tổng giá phiếu đặt
 
-create  procedure tongGia_DatHang
+create   procedure tongGia_DatHang
+@maDatHang varchar(10)
 as
-select sum(tongDonGia) from ThongTinDatHang
+select sum(tongDonGia) from ThongTinDatHang where maDatHang=@maDatHang
 go
 
 
-create  procedure select_ThongTinDatHang
+create   procedure select_ThongTinDatHang
 @maDatHang varchar(10)
 as
-select mh.tenHang, ttdt.soLuongDat, ncc.tenNCC ,ttdt.tongDonGia from ThongTinDatHang ttdt, MatHang mh,
+select mh.maHang, mh.tenHang, ttdt.soLuongDat, ncc.tenNCC ,ttdt.tongDonGia from ThongTinDatHang ttdt, MatHang mh,
 NhaCungCap ncc 
 where ttdt.maHang=mh.maHang
 and ncc.maNCC=ttdt.maNCC
 and ttdt.maDatHang=@maDatHang
 go
+
+create proc update_ThongTinDatHang
+@maDatHang varchar(10), @maHang varchar(10), @soLuongDat int
+as
+update ThongTinDatHang set soLuongDat=@soLuongDat where maDatHang=@maDatHang and maHang=@maHang
+go
+
+create proc insert_ThongTinDatHang
+@maDatHang varchar(10),@maHang varchar(10),@soLuongDat int
+as
+insert into ThongTinDatHang values (@maDatHang,@maHang,null,@soLuongDat,null)
+
+create proc delete_ThongTinDatHang
+@maDatHang varchar(10),@maHang varchar(10)
+as
+delete from ThongTinDatHang where maDatHang=@maDatHang and maHang=@maHang
+
+
 ----========Thông Tin Khách Hàng==============
---Lấy thông tin khách hàng
 create procedure select_KhachHang
 as
 	select*from KhachHang
 exec dbo.select_KhachHang
---Lấy Giới tính khách hàng
-create proc select_GioiTinhKhachHang
-as select Phai from KhachHang
-exec dbo.select_GioiTinhKhachHang
---Update thông tin khách hàng
+
 alter proc update_KhachHang
- @idKhachHang int,@SDT varchar(11),@tenKhachHang  nvarchar(100), @Phai nvarchar(10), @email nvarchar(50),@diaChi nvarchar(100),@ghiChu nvarchar(max)
+@SDT varchar(11),@tenKhachHang  nvarchar(100), @Phai nvarchar(10), @email nvarchar(50),@diaChi nvarchar(100),@ghiChu nvarchar(max)
 as
-update KhachHang set SDT=@SDT, tenKhachHang=@tenKhachHang, Phai=@Phai,diaChi=@diaChi,Email=@email,ghiChu=@ghiChu where idKhachHang =@idKhachHang
+update KhachHang set tenKhachHang=@tenKhachHang, Phai=@Phai,ghiChu=@ghiChu,diaChi=@diaChi,Email=@email where SDT=@SDT
 go
 exec dbo.update_KhachHang
 --======================NHÀ CUNG CẤP===========
@@ -431,6 +445,26 @@ create proc delete_ThongTinKhuyenMai
 @maKM varchar(10), @maSP varchar(10)
 as
 delete from ThongTinKhuyenMai where maKhuyenMai=@maKM and maSanPham=@maSP
+
+
+--===========PHIẾU ĐẶT=-----------------------
+create  proc insert_DatHang 
+@maDH varchar(10), @ngayDat datetime, @ngaydukiengiao datetime, @ghiChu nvarchar(max), @phuongthucthanhtoan nvarchar(50)
+as
+insert into DatHang values (@maDH,@ngayDat,@ngaydukiengiao,@ghiChu,@phuongthucthanhtoan)
+go
+
+create  proc delete_DatHang 
+@maDH varchar(10)
+as
+delete from DatHang where maDatHang=@maDH
+go
+
+create  proc update_DatHang 
+@maDH varchar(10), @ngayDat datetime, @ngaydukiengiao datetime, @ghiChu nvarchar(max), @phuongthucthanhtoan nvarchar(50)
+as
+update DatHang set ngayDatHang=@ngayDat, ngayDuKienGiao=@ngaydukiengiao, ghiChu=@ghiChu, phuongThucThanhToan=@phuongthucthanhtoan where maDatHang=@maDH
+go
 
 
 

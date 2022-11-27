@@ -29,6 +29,7 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhieuDatHang_GUI));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dtNgayDat = new System.Windows.Forms.DateTimePicker();
             this.txtGhiChu = new System.Windows.Forms.RichTextBox();
@@ -37,7 +38,6 @@ namespace QLCHTAN
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnThemPhieuDat = new System.Windows.Forms.Button();
-            this.btnThongTinChiTiet = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnHuyPhieuDat = new System.Windows.Forms.Button();
             this.dgvPhieuDat = new System.Windows.Forms.DataGridView();
@@ -48,37 +48,38 @@ namespace QLCHTAN
             this.ghiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.ccbPhuongThucThanhToan = new System.Windows.Forms.ComboBox();
             this.dtNgayDuKienGiao = new System.Windows.Forms.DateTimePicker();
+            this.btnLamMoi = new System.Windows.Forms.Button();
+            this.ccbPhuongThucThanhToan = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblkThongTinPhieuDat = new System.Windows.Forms.LinkLabel();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuDat)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtNgayDat
             // 
-            this.dtNgayDat.Enabled = false;
             this.dtNgayDat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtNgayDat.Location = new System.Drawing.Point(114, 76);
-            this.dtNgayDat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtNgayDat.Margin = new System.Windows.Forms.Padding(2);
             this.dtNgayDat.Name = "dtNgayDat";
             this.dtNgayDat.Size = new System.Drawing.Size(159, 23);
             this.dtNgayDat.TabIndex = 19;
             // 
             // txtGhiChu
             // 
-            this.txtGhiChu.Enabled = false;
             this.txtGhiChu.Location = new System.Drawing.Point(82, 182);
-            this.txtGhiChu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGhiChu.Margin = new System.Windows.Forms.Padding(2);
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(190, 77);
+            this.txtGhiChu.Size = new System.Drawing.Size(190, 82);
             this.txtGhiChu.TabIndex = 8;
             this.txtGhiChu.Text = "";
             // 
             // txtMaDat
             // 
-            this.txtMaDat.Enabled = false;
             this.txtMaDat.Location = new System.Drawing.Point(114, 49);
-            this.txtMaDat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaDat.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaDat.Name = "txtMaDat";
             this.txtMaDat.Size = new System.Drawing.Size(159, 23);
             this.txtMaDat.TabIndex = 4;
@@ -117,24 +118,14 @@ namespace QLCHTAN
             // 
             // btnThemPhieuDat
             // 
-            this.btnThemPhieuDat.Location = new System.Drawing.Point(429, 240);
-            this.btnThemPhieuDat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemPhieuDat.Location = new System.Drawing.Point(291, 283);
+            this.btnThemPhieuDat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemPhieuDat.Name = "btnThemPhieuDat";
-            this.btnThemPhieuDat.Size = new System.Drawing.Size(132, 33);
+            this.btnThemPhieuDat.Size = new System.Drawing.Size(135, 33);
             this.btnThemPhieuDat.TabIndex = 8;
             this.btnThemPhieuDat.Text = "Thêm phiếu đặt mới";
             this.btnThemPhieuDat.UseVisualStyleBackColor = true;
-            // 
-            // btnThongTinChiTiet
-            // 
-            this.btnThongTinChiTiet.Location = new System.Drawing.Point(565, 240);
-            this.btnThongTinChiTiet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnThongTinChiTiet.Name = "btnThongTinChiTiet";
-            this.btnThongTinChiTiet.Size = new System.Drawing.Size(128, 33);
-            this.btnThongTinChiTiet.TabIndex = 7;
-            this.btnThongTinChiTiet.Text = "Thông tin chi tiết ";
-            this.btnThongTinChiTiet.UseVisualStyleBackColor = true;
-            this.btnThongTinChiTiet.Click += new System.EventHandler(this.btnThongTinChiTiet_Click);
+            this.btnThemPhieuDat.Click += new System.EventHandler(this.btnThemPhieuDat_Click);
             // 
             // label1
             // 
@@ -148,13 +139,14 @@ namespace QLCHTAN
             // 
             // btnHuyPhieuDat
             // 
-            this.btnHuyPhieuDat.Location = new System.Drawing.Point(292, 240);
-            this.btnHuyPhieuDat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHuyPhieuDat.Location = new System.Drawing.Point(430, 282);
+            this.btnHuyPhieuDat.Margin = new System.Windows.Forms.Padding(2);
             this.btnHuyPhieuDat.Name = "btnHuyPhieuDat";
-            this.btnHuyPhieuDat.Size = new System.Drawing.Size(132, 33);
+            this.btnHuyPhieuDat.Size = new System.Drawing.Size(108, 33);
             this.btnHuyPhieuDat.TabIndex = 9;
             this.btnHuyPhieuDat.Text = "Hủy phiếu đặt";
             this.btnHuyPhieuDat.UseVisualStyleBackColor = true;
+            this.btnHuyPhieuDat.Click += new System.EventHandler(this.btnHuyPhieuDat_Click);
             // 
             // dgvPhieuDat
             // 
@@ -169,11 +161,11 @@ namespace QLCHTAN
             this.ngayDuKienGiao,
             this.phuongThucThanhToan,
             this.ghiChu});
-            this.dgvPhieuDat.Location = new System.Drawing.Point(292, 21);
-            this.dgvPhieuDat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPhieuDat.Location = new System.Drawing.Point(291, 52);
+            this.dgvPhieuDat.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPhieuDat.Name = "dgvPhieuDat";
             this.dgvPhieuDat.ReadOnly = true;
-            this.dgvPhieuDat.Size = new System.Drawing.Size(403, 214);
+            this.dgvPhieuDat.Size = new System.Drawing.Size(427, 222);
             this.dgvPhieuDat.TabIndex = 6;
             this.dgvPhieuDat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuDat_CellClick);
             // 
@@ -214,6 +206,7 @@ namespace QLCHTAN
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblkThongTinPhieuDat);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.ccbPhuongThucThanhToan);
             this.groupBox1.Controls.Add(this.dtNgayDuKienGiao);
@@ -226,7 +219,7 @@ namespace QLCHTAN
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(277, 264);
+            this.groupBox1.Size = new System.Drawing.Size(277, 305);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách phiếu đặt";
@@ -242,37 +235,84 @@ namespace QLCHTAN
             this.label5.Text = "Phương thức thanh toán:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // dtNgayDuKienGiao
+            // 
+            this.dtNgayDuKienGiao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNgayDuKienGiao.Location = new System.Drawing.Point(114, 110);
+            this.dtNgayDuKienGiao.Margin = new System.Windows.Forms.Padding(2);
+            this.dtNgayDuKienGiao.Name = "dtNgayDuKienGiao";
+            this.dtNgayDuKienGiao.Size = new System.Drawing.Size(159, 23);
+            this.dtNgayDuKienGiao.TabIndex = 20;
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
+            this.btnLamMoi.Location = new System.Drawing.Point(674, 283);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(44, 33);
+            this.btnLamMoi.TabIndex = 10;
+            this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
             // ccbPhuongThucThanhToan
             // 
-            this.ccbPhuongThucThanhToan.Enabled = false;
+            this.ccbPhuongThucThanhToan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ccbPhuongThucThanhToan.FormattingEnabled = true;
+            this.ccbPhuongThucThanhToan.Items.AddRange(new object[] {
+            "Chuyển khoản",
+            "Tiền mặt"});
             this.ccbPhuongThucThanhToan.Location = new System.Drawing.Point(152, 136);
-            this.ccbPhuongThucThanhToan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ccbPhuongThucThanhToan.Margin = new System.Windows.Forms.Padding(2);
             this.ccbPhuongThucThanhToan.Name = "ccbPhuongThucThanhToan";
             this.ccbPhuongThucThanhToan.Size = new System.Drawing.Size(120, 23);
             this.ccbPhuongThucThanhToan.TabIndex = 21;
             // 
-            // dtNgayDuKienGiao
+            // button1
             // 
-            this.dtNgayDuKienGiao.Enabled = false;
-            this.dtNgayDuKienGiao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgayDuKienGiao.Location = new System.Drawing.Point(114, 110);
-            this.dtNgayDuKienGiao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dtNgayDuKienGiao.Name = "dtNgayDuKienGiao";
-            this.dtNgayDuKienGiao.Size = new System.Drawing.Size(159, 23);
-            this.dtNgayDuKienGiao.TabIndex = 20;
+            this.button1.Location = new System.Drawing.Point(542, 282);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(129, 34);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Cập nhật phiếu đặt";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblkThongTinPhieuDat
+            // 
+            this.lblkThongTinPhieuDat.AutoSize = true;
+            this.lblkThongTinPhieuDat.Location = new System.Drawing.Point(121, 282);
+            this.lblkThongTinPhieuDat.Name = "lblkThongTinPhieuDat";
+            this.lblkThongTinPhieuDat.Size = new System.Drawing.Size(115, 15);
+            this.lblkThongTinPhieuDat.TabIndex = 12;
+            this.lblkThongTinPhieuDat.TabStop = true;
+            this.lblkThongTinPhieuDat.Text = "Thông tin phiếu đặt";
+            this.lblkThongTinPhieuDat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkThongTinPhieuDat_LinkClicked);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(392, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(226, 26);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "DANH SÁCH PHIẾU ĐẶT";
             // 
             // PhieuDatHang_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(711, 289);
-            this.Controls.Add(this.btnThemPhieuDat);
-            this.Controls.Add(this.btnThongTinChiTiet);
-            this.Controls.Add(this.btnHuyPhieuDat);
+            this.ClientSize = new System.Drawing.Size(730, 327);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.dgvPhieuDat);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnThemPhieuDat);
+            this.Controls.Add(this.btnHuyPhieuDat);
             this.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "PhieuDatHang_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -282,6 +322,7 @@ namespace QLCHTAN
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -295,18 +336,21 @@ namespace QLCHTAN
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnThemPhieuDat;
-        private System.Windows.Forms.Button btnThongTinChiTiet;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnHuyPhieuDat;
         private System.Windows.Forms.DataGridView dgvPhieuDat;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox ccbPhuongThucThanhToan;
         private System.Windows.Forms.DateTimePicker dtNgayDuKienGiao;
         private System.Windows.Forms.DataGridViewTextBoxColumn maDatHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayDatHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayDuKienGiao;
         private System.Windows.Forms.DataGridViewTextBoxColumn phuongThucThanhToan;
         private System.Windows.Forms.DataGridViewTextBoxColumn ghiChu;
+        private System.Windows.Forms.Button btnLamMoi;
+        private System.Windows.Forms.ComboBox ccbPhuongThucThanhToan;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.LinkLabel lblkThongTinPhieuDat;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -15,6 +15,22 @@ namespace QLCHTAN
     public partial class ThongTinChiTietPhieuDat_GUI : Form
     {
         ThongTinChiTietPhieuDatHang_BUS thongTinChiTietPhieuDatHang_BUS = new ThongTinChiTietPhieuDatHang_BUS();
+        MatHang_BUS matHang = new MatHang_BUS();
+        public bool kiemtra_MatHangDat()
+        {
+            foreach(DataGridViewRow r in dgvThongTinChiTietPhieuDat.Rows)
+            {
+                if (cbbMatHang.SelectedValue.ToString().Trim() == r.Cells["maHang"].Value.ToString().Trim())
+                    return true;
+            }
+            return false;
+
+        }
+        public ThongTinChiTietPhieuDatHang_DTO thongTinChiTietPhieuDatHang_DTO()
+        {
+          
+            return new ThongTinChiTietPhieuDatHang_DTO(txtMaDatHang.Text.Trim(), cbbMatHang.SelectedValue.ToString().Trim(), Convert.ToInt32(txtSoLuong.Text));
+        }
         public ThongTinChiTietPhieuDat_GUI()
         {
             InitializeComponent();
@@ -24,12 +40,123 @@ namespace QLCHTAN
         {
             txtMaDatHang.Text = PhieuDatHang_GUI.maPhieuDat;
             dgvThongTinChiTietPhieuDat.DataSource = thongTinChiTietPhieuDatHang_BUS.ds_SanPhamDat_BUS(PhieuDatHang_GUI.maPhieuDat);
-            lblTongGia.Text = thongTinChiTietPhieuDatHang_BUS.tongGia_PhieuDat_BUS() + "VND";
+            lblTongGia.Text = thongTinChiTietPhieuDatHang_BUS.tongGia_PhieuDat_BUS(PhieuDatHang_GUI.maPhieuDat) + "VND";
+
+            cbbMatHang.DataSource = matHang.show_dsMatHang_BUS();
+            cbbMatHang.DisplayMember = "tenHang";
+            cbbMatHang.ValueMember = "maHang";
+            txtSoLuong.Text = "";
+            cbbMatHang.SelectedIndex = 0;
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
+        private void lblThoat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
+        }
+
+        private void lblkLamMoi_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ThongTinChiTietPhieuDat_GUI_Load(sender,e);
+        }
+
+        private void dgvThongTinChiTietPhieuDat_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex>=0)
+            {
+                DataGridViewRow r = dgvThongTinChiTietPhieuDat.Rows[e.RowIndex];
+                cbbMatHang.SelectedValue = r.Cells["maHang"].Value.ToString();
+                txtSoLuong.Text = r.Cells["soLuongDat"].Value.ToString();
+            }    
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if (txtSoLuong.Text != "")
+            {
+                DialogResult rs = MessageBox.Show("Xác nhận thêm mặt hàng vào đơn nhập ?", "Thông báo", MessageBoxButtons.YesNo);
+                if (rs == DialogResult.Yes)
+                {
+                    if (thongTinChiTietPhieuDatHang_BUS.insert_ThongTinDatHang(thongTinChiTietPhieuDatHang_DTO()))
+                    {
+                        MessageBox.Show("Thêm mặt hàng thành công");
+                        ThongTinChiTietPhieuDat_GUI_Load(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vui lòng kiểm tra lại thông tin");
+                    }
+
+                }
+            }
+            else
+                MessageBox.Show("Vui lòng nhập số lượng hàng thêm");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (txtSoLuong.Text != "")
+            {
+                DialogResult rs = MessageBox.Show("Xác nhận thay đổi số lượng đặt hàng ?", "Thông báo", MessageBoxButtons.YesNo);
+                if (rs == DialogResult.Yes)
+                {
+                    if (thongTinChiTietPhieuDatHang_BUS.update_ThongTinDatHang(thongTinChiTietPhieuDatHang_DTO()))
+                    {
+                        MessageBox.Show("Thay đổi thành công");
+                        ThongTinChiTietPhieuDat_GUI_Load(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vui lòng kiểm tra lại thông tin");
+                    }
+
+                }
+            }
+            else
+                MessageBox.Show("Vui lòng nhập số lượng hàng cần chỉnh sửa");
+        }
+
+        private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Char.IsNumber(e.KeyChar) && e.KeyChar > 0) ||Char.IsControl(e.KeyChar) )
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+           if(kiemtra_MatHangDat())
+            {
+                DialogResult rs = MessageBox.Show("Xác nhận xóa mặt hàng khỏi đơn đặt ?", "Thông báo", MessageBoxButtons.YesNo);
+                if (rs == DialogResult.Yes)
+                {
+                    if (txtSoLuong.Text == "")
+                    {
+                        txtSoLuong.Text = "0";
+                    }
+                    if (thongTinChiTietPhieuDatHang_BUS.delete_ThongTinDatHang(thongTinChiTietPhieuDatHang_DTO()))
+                    {
+                        MessageBox.Show("Xóa mặt hàng đặt thành công");
+                        ThongTinChiTietPhieuDat_GUI_Load(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vui lòng kiểm tra lại thông tin");
+                    }
+
+                }
+            }    
+           else
+            {
+                MessageBox.Show("Mặt hàng không tồn tại trong danh sách đặt");
+            }    
+              
+           
+        }
+
+        private void cbbMatHang_SelectedValueChanged(object sender, EventArgs e)
+        {
+            lblMaHangNhap.Text = cbbMatHang.SelectedValue.ToString();
         }
     }
 }

@@ -24,14 +24,7 @@ namespace DTO
             set { maHang = value; }
         }
 
-        private string maNCC;
-
-        public string MaNCC
-        {
-            get { return maNCC; }
-            set { maNCC = value; }
-        }
-
+     
         private int soLuongDat;
 
         public int SoLuongDat
@@ -40,21 +33,13 @@ namespace DTO
             set { soLuongDat = value; }
         }
 
-        private decimal tongDonGia;
-
-        public decimal TongDonGia
-        {
-            get { return tongDonGia; }
-            set { tongDonGia = value; }
-        }
-
-        public ThongTinChiTietPhieuDatHang_DTO(string MaDat, string MaHang, string MaNCC, int SoLuongDat, decimal TongDonGia)
+     
+        public ThongTinChiTietPhieuDatHang_DTO(string MaDat, string MaHang, int SoLuongDat)
         {
             this.maDat = MaDat;
             this.maHang = MaHang;
-            this.maNCC = MaNCC;
             this.soLuongDat = SoLuongDat;
-            this.tongDonGia = TongDonGia;
+
         }
         
     }

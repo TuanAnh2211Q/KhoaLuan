@@ -15,6 +15,18 @@ namespace BUS
         public DataTable dsPhieuDatHang_BUS()
         {
             return phieuDatHang_DAO.dsPhieuDat_DAO();
-        }    
+        }
+        public bool insert_PhieuDat_BUS(PhieuDatHang_DTO phieudat)
+        {
+            return phieuDatHang_DAO.insert_PhieuDat_DAO(phieudat);
+        }
+        public bool delete_PhieuDat_BUS(PhieuDatHang_DTO phieudat)
+        {
+            return phieuDatHang_DAO.delete_PhieuDat_DAO(phieudat);
+        }
+        public bool update_PhieuDat_BUS(PhieuDatHang_DTO phieudat)
+        {
+            return phieuDatHang_DAO.update_PhieuDat_DAO(phieudat);
+        }
     }
 }
