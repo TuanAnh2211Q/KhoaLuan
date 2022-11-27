@@ -52,8 +52,7 @@
     <Compile Include="NhaCungCap_DTO.cs" />
     <Compile Include="NhanVien_DTO.cs" />
     <Compile Include="NuocUong_DTO.cs" />
-    <Compile Include="OrderDoAn_DTO.cs" />
-    <Compile Include="OrderNuoc_DTO.cs" />
+    <Compile Include="KhachHang_DTO.cs" />
     <Compile Include="PhanQuyen_DTO.cs" />
     <Compile Include="PhieuDatHang_DTO.cs" />
     <Compile Include="ThongTinChiTietPhieuDatHang_DTO.cs" />

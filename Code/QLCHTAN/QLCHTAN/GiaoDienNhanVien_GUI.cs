@@ -36,5 +36,17 @@ namespace QLCHTAN
             phieuNhapKho_GUI.Show();
             this.Close();
         }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            Order_GUI order = new Order_GUI();
+            order.Show();
+        }
+
+        private void btnQuanLiKhachHang_Click(object sender, EventArgs e)
+        {
+            KhachHang_GUI khachhang = new KhachHang_GUI();
+            khachhang.Show();
+        }
     }
 }

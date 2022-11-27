@@ -58,6 +58,7 @@ namespace QLCHTAN
             this.dgvThongTinHangXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongTinHangXuat.Location = new System.Drawing.Point(12, 26);
             this.dgvThongTinHangXuat.Name = "dgvThongTinHangXuat";
+            this.dgvThongTinHangXuat.RowHeadersWidth = 51;
             this.dgvThongTinHangXuat.Size = new System.Drawing.Size(583, 247);
             this.dgvThongTinHangXuat.TabIndex = 0;
             // 
@@ -106,7 +107,7 @@ namespace QLCHTAN
             // 
             this.txtMaXuat.Location = new System.Drawing.Point(119, 42);
             this.txtMaXuat.Name = "txtMaXuat";
-            this.txtMaXuat.Size = new System.Drawing.Size(476, 27);
+            this.txtMaXuat.Size = new System.Drawing.Size(476, 32);
             this.txtMaXuat.TabIndex = 24;
             // 
             // label1
@@ -114,7 +115,7 @@ namespace QLCHTAN
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(8, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 19);
+            this.label1.Size = new System.Drawing.Size(84, 24);
             this.label1.TabIndex = 20;
             this.label1.Text = "Mã xuất:";
             // 
@@ -123,15 +124,16 @@ namespace QLCHTAN
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(8, 78);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 19);
+            this.label3.Size = new System.Drawing.Size(78, 24);
             this.label3.TabIndex = 22;
             this.label3.Text = "Ghi chú:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ThongTinPhieuXuat_GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(646, 525);
             this.Controls.Add(this.grbThongTinphieuXuat);
             this.Controls.Add(this.grbDanhSachHangXuat);

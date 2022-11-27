@@ -65,7 +65,7 @@ namespace QLCHTAN
             this.txtMaDatHang.Enabled = false;
             this.txtMaDatHang.Location = new System.Drawing.Point(119, 65);
             this.txtMaDatHang.Name = "txtMaDatHang";
-            this.txtMaDatHang.Size = new System.Drawing.Size(476, 27);
+            this.txtMaDatHang.Size = new System.Drawing.Size(476, 32);
             this.txtMaDatHang.TabIndex = 24;
             // 
             // label1
@@ -73,7 +73,7 @@ namespace QLCHTAN
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(8, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 19);
+            this.label1.Size = new System.Drawing.Size(121, 24);
             this.label1.TabIndex = 20;
             this.label1.Text = "Mã đặt hàng:";
             // 
@@ -94,7 +94,7 @@ namespace QLCHTAN
             this.lblTongGia.AutoSize = true;
             this.lblTongGia.Location = new System.Drawing.Point(75, 276);
             this.lblTongGia.Name = "lblTongGia";
-            this.lblTongGia.Size = new System.Drawing.Size(49, 19);
+            this.lblTongGia.Size = new System.Drawing.Size(60, 24);
             this.lblTongGia.TabIndex = 2;
             this.lblTongGia.Text = "..........";
             // 
@@ -103,7 +103,7 @@ namespace QLCHTAN
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(8, 276);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 19);
+            this.label2.Size = new System.Drawing.Size(86, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tổng giá:";
             // 
@@ -118,6 +118,7 @@ namespace QLCHTAN
             this.tongDonGia});
             this.dgvThongTinChiTietPhieuDat.Location = new System.Drawing.Point(12, 26);
             this.dgvThongTinChiTietPhieuDat.Name = "dgvThongTinChiTietPhieuDat";
+            this.dgvThongTinChiTietPhieuDat.RowHeadersWidth = 51;
             this.dgvThongTinChiTietPhieuDat.Size = new System.Drawing.Size(583, 247);
             this.dgvThongTinChiTietPhieuDat.TabIndex = 0;
             // 
@@ -125,24 +126,28 @@ namespace QLCHTAN
             // 
             this.tenHang.DataPropertyName = "tenHang";
             this.tenHang.HeaderText = "Tên hàng";
+            this.tenHang.MinimumWidth = 6;
             this.tenHang.Name = "tenHang";
             // 
             // soLuongDat
             // 
             this.soLuongDat.DataPropertyName = "soLuongDat";
             this.soLuongDat.HeaderText = "Số lượng đặt";
+            this.soLuongDat.MinimumWidth = 6;
             this.soLuongDat.Name = "soLuongDat";
             // 
             // tenNCC
             // 
             this.tenNCC.DataPropertyName = "tenNCC";
             this.tenNCC.HeaderText = "Tên Nhà Cung Cấp";
+            this.tenNCC.MinimumWidth = 6;
             this.tenNCC.Name = "tenNCC";
             // 
             // tongDonGia
             // 
             this.tongDonGia.DataPropertyName = "tongDonGia";
             this.tongDonGia.HeaderText = "Tổng đơn giá";
+            this.tongDonGia.MinimumWidth = 6;
             this.tongDonGia.Name = "tongDonGia";
             // 
             // btnThoat
@@ -166,8 +171,9 @@ namespace QLCHTAN
             // 
             // ThongTinChiTietPhieuDat_GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(645, 529);
             this.Controls.Add(this.grbThongTinPhieuDat);
             this.Controls.Add(this.grbDanhSachHangDat);

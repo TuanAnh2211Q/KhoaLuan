@@ -66,7 +66,7 @@ namespace QLCHTAN
             this.dtNgayXuat.Location = new System.Drawing.Point(130, 79);
             this.dtNgayXuat.Margin = new System.Windows.Forms.Padding(4);
             this.dtNgayXuat.Name = "dtNgayXuat";
-            this.dtNgayXuat.Size = new System.Drawing.Size(362, 27);
+            this.dtNgayXuat.Size = new System.Drawing.Size(362, 32);
             this.dtNgayXuat.TabIndex = 19;
             // 
             // txtMaXuat
@@ -74,7 +74,7 @@ namespace QLCHTAN
             this.txtMaXuat.Location = new System.Drawing.Point(130, 45);
             this.txtMaXuat.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaXuat.Name = "txtMaXuat";
-            this.txtMaXuat.Size = new System.Drawing.Size(362, 27);
+            this.txtMaXuat.Size = new System.Drawing.Size(362, 32);
             this.txtMaXuat.TabIndex = 4;
             // 
             // label2
@@ -83,7 +83,7 @@ namespace QLCHTAN
             this.label2.Location = new System.Drawing.Point(19, 85);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 19);
+            this.label2.Size = new System.Drawing.Size(101, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ngày xuất:";
             // 
@@ -93,7 +93,7 @@ namespace QLCHTAN
             this.label1.Location = new System.Drawing.Point(19, 45);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 19);
+            this.label1.Size = new System.Drawing.Size(84, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã xuất:";
             // 
@@ -122,7 +122,7 @@ namespace QLCHTAN
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(17, 296);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 19);
+            this.label3.Size = new System.Drawing.Size(78, 24);
             this.label3.TabIndex = 1;
             this.label3.Text = "Ghi chú:";
             // 
@@ -131,6 +131,7 @@ namespace QLCHTAN
             this.dgvDanhSachHangXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachHangXuat.Location = new System.Drawing.Point(6, 36);
             this.dgvDanhSachHangXuat.Name = "dgvDanhSachHangXuat";
+            this.dgvDanhSachHangXuat.RowHeadersWidth = 51;
             this.dgvDanhSachHangXuat.Size = new System.Drawing.Size(439, 250);
             this.dgvDanhSachHangXuat.TabIndex = 0;
             // 
@@ -154,8 +155,9 @@ namespace QLCHTAN
             // 
             // ThemPhieuXuat_GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(992, 410);
             this.Controls.Add(this.grThemPhieuNhap);
             this.Controls.Add(this.grbDanhSachHangXuat);

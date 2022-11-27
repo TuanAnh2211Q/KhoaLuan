@@ -309,27 +309,18 @@ where ttdt.maHang=mh.maHang
 and ncc.maNCC=ttdt.maNCC
 and ttdt.maDatHang=@maDatHang
 go
-----========ORDER==============
--- Lấy thông tin món ăn chính
-alter proc Load_MonAnChin
-as  select*from DoAn where maLoaiDoAn='LDA01'
-exec dbo.Load_MonAnChin
---Lấy thông tin món ăn phụ
-create proc Load_MonAnPhu
-as  select*from DoAn where maLoaiDoAn='LDA02'
-exec dbo.Load_MonAnPhu
---Lấy thông tin nước
-alter proc Load_NuocUong	
-as select tenNuoc from NuocUong
-exec dbo.Load_NuocUong
---Lấy thông tin kích cở nước
-create proc load_KichCoNuoc
-as select donViBan from NuocUong	
-exec dbo.load_KichCoNuoc
+----========Thông Tin Khách Hàng==============
+create procedure select_KhachHang
+as
+	select*from KhachHang
+exec dbo.select_KhachHang
 
-
-
-
+alter proc update_KhachHang
+@SDT varchar(11),@tenKhachHang  nvarchar(100), @Phai nvarchar(10), @email nvarchar(50),@diaChi nvarchar(100),@ghiChu nvarchar(max)
+as
+update KhachHang set tenKhachHang=@tenKhachHang, Phai=@Phai,ghiChu=@ghiChu,diaChi=@diaChi,Email=@email where SDT=@SDT
+go
+exec dbo.update_KhachHang
 --======================NHÀ CUNG CẤP===========
 create proc select_NCC
 as 

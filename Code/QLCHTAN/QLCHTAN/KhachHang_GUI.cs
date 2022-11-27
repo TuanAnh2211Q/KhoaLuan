@@ -7,19 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
+using DTO;
+using BUS;
 
 namespace QLCHTAN
 {
-    public partial class DanhMucKhuyenMai_GUI : Form
+    public partial class KhachHang_GUI : Form
     {
-        public DanhMucKhuyenMai_GUI()
+        public KhachHang_GUI()
         {
             InitializeComponent();
         }
 
-        private void dgvThongTinDonHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnLamMoi_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void KhachHang_GUI_Load(object sender, EventArgs e)
+        {
+        
         }
     }
 }

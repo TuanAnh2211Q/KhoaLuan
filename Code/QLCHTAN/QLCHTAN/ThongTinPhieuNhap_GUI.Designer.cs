@@ -67,7 +67,7 @@ namespace QLCHTAN
             this.txtMaNhap.Enabled = false;
             this.txtMaNhap.Location = new System.Drawing.Point(119, 42);
             this.txtMaNhap.Name = "txtMaNhap";
-            this.txtMaNhap.Size = new System.Drawing.Size(476, 27);
+            this.txtMaNhap.Size = new System.Drawing.Size(476, 32);
             this.txtMaNhap.TabIndex = 24;
             // 
             // label1
@@ -75,7 +75,7 @@ namespace QLCHTAN
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(8, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 19);
+            this.label1.Size = new System.Drawing.Size(89, 24);
             this.label1.TabIndex = 20;
             this.label1.Text = "Mã nhập:";
             // 
@@ -83,7 +83,7 @@ namespace QLCHTAN
             // 
             this.txtNhaCungCap.Location = new System.Drawing.Point(119, 75);
             this.txtNhaCungCap.Name = "txtNhaCungCap";
-            this.txtNhaCungCap.Size = new System.Drawing.Size(476, 27);
+            this.txtNhaCungCap.Size = new System.Drawing.Size(476, 32);
             this.txtNhaCungCap.TabIndex = 25;
             // 
             // label3
@@ -91,7 +91,7 @@ namespace QLCHTAN
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(8, 78);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 19);
+            this.label3.Size = new System.Drawing.Size(129, 24);
             this.label3.TabIndex = 22;
             this.label3.Text = "Nhà cung cấp:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -113,7 +113,7 @@ namespace QLCHTAN
             this.lblTongGia.AutoSize = true;
             this.lblTongGia.Location = new System.Drawing.Point(75, 276);
             this.lblTongGia.Name = "lblTongGia";
-            this.lblTongGia.Size = new System.Drawing.Size(49, 19);
+            this.lblTongGia.Size = new System.Drawing.Size(60, 24);
             this.lblTongGia.TabIndex = 2;
             this.lblTongGia.Text = "..........";
             // 
@@ -122,7 +122,7 @@ namespace QLCHTAN
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(8, 276);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 19);
+            this.label2.Size = new System.Drawing.Size(88, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tổng giá:";
             // 
@@ -135,6 +135,7 @@ namespace QLCHTAN
             this.soLuong});
             this.dgvThongTinChiTietPhieuNhap.Location = new System.Drawing.Point(12, 26);
             this.dgvThongTinChiTietPhieuNhap.Name = "dgvThongTinChiTietPhieuNhap";
+            this.dgvThongTinChiTietPhieuNhap.RowHeadersWidth = 51;
             this.dgvThongTinChiTietPhieuNhap.Size = new System.Drawing.Size(583, 247);
             this.dgvThongTinChiTietPhieuNhap.TabIndex = 0;
             // 
@@ -142,12 +143,14 @@ namespace QLCHTAN
             // 
             this.maHang.DataPropertyName = "maHang";
             this.maHang.HeaderText = "Mã hàng";
+            this.maHang.MinimumWidth = 6;
             this.maHang.Name = "maHang";
             // 
             // soLuong
             // 
             this.soLuong.DataPropertyName = "soLuong";
             this.soLuong.HeaderText = "Số lượng";
+            this.soLuong.MinimumWidth = 6;
             this.soLuong.Name = "soLuong";
             // 
             // btnCapNhat
@@ -171,8 +174,9 @@ namespace QLCHTAN
             // 
             // ThongTinPhieuNhap_GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(649, 530);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnCapNhat);

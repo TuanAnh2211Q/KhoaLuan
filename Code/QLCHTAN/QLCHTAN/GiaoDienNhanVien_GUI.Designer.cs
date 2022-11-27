@@ -93,7 +93,7 @@ namespace QLCHTAN
             this.lblkDangXuat.AutoSize = true;
             this.lblkDangXuat.Location = new System.Drawing.Point(731, 102);
             this.lblkDangXuat.Name = "lblkDangXuat";
-            this.lblkDangXuat.Size = new System.Drawing.Size(63, 15);
+            this.lblkDangXuat.Size = new System.Drawing.Size(83, 21);
             this.lblkDangXuat.TabIndex = 3;
             this.lblkDangXuat.TabStop = true;
             this.lblkDangXuat.Text = "Đăng xuất";
@@ -104,7 +104,7 @@ namespace QLCHTAN
             this.lblkDoiMatKhau.AutoSize = true;
             this.lblkDoiMatKhau.Location = new System.Drawing.Point(798, 102);
             this.lblkDoiMatKhau.Name = "lblkDoiMatKhau";
-            this.lblkDoiMatKhau.Size = new System.Drawing.Size(79, 15);
+            this.lblkDoiMatKhau.Size = new System.Drawing.Size(105, 21);
             this.lblkDoiMatKhau.TabIndex = 2;
             this.lblkDoiMatKhau.TabStop = true;
             this.lblkDoiMatKhau.Text = "Đổi mật khẩu";
@@ -115,7 +115,7 @@ namespace QLCHTAN
             this.lblTenNhanVien.AutoSize = true;
             this.lblTenNhanVien.Location = new System.Drawing.Point(77, 19);
             this.lblTenNhanVien.Name = "lblTenNhanVien";
-            this.lblTenNhanVien.Size = new System.Drawing.Size(0, 15);
+            this.lblTenNhanVien.Size = new System.Drawing.Size(0, 21);
             this.lblTenNhanVien.TabIndex = 1;
             // 
             // label1
@@ -123,7 +123,7 @@ namespace QLCHTAN
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 15);
+            this.label1.Size = new System.Drawing.Size(85, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhân viên:";
             // 
@@ -135,6 +135,7 @@ namespace QLCHTAN
             this.btnOrder.TabIndex = 1;
             this.btnOrder.Text = "Quản lí Order";
             this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // grbChucNangNhanVien
             // 
@@ -189,6 +190,7 @@ namespace QLCHTAN
             this.btnQuanLiKhachHang.TabIndex = 1;
             this.btnQuanLiKhachHang.Text = "Quản lí thông tin khách hàng";
             this.btnQuanLiKhachHang.UseVisualStyleBackColor = true;
+            this.btnQuanLiKhachHang.Click += new System.EventHandler(this.btnQuanLiKhachHang_Click);
             // 
             // panel5
             // 
@@ -379,8 +381,9 @@ namespace QLCHTAN
             // 
             // GiaoDienNhanVien_GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(907, 563);
             this.Controls.Add(this.grbChucNangNhanVien);
             this.Controls.Add(this.grbThongTinDangNhap);

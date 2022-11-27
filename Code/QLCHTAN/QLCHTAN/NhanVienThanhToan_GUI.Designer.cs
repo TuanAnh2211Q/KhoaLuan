@@ -31,7 +31,6 @@ namespace QLCHTAN
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhanVienThanhToan_GUI));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnThanhToan = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnHienMatKhau = new System.Windows.Forms.Button();
             this.btnKhongHienMatKhau = new System.Windows.Forms.Button();
@@ -39,6 +38,7 @@ namespace QLCHTAN
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnThanhToan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,22 +54,11 @@ namespace QLCHTAN
             this.panel1.Controls.Add(this.txtTaiKhoan);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(-42, -15);
+            this.panel1.Location = new System.Drawing.Point(2, 4);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(725, 326);
+            this.panel1.Size = new System.Drawing.Size(641, 290);
             this.panel1.TabIndex = 0;
-            // 
-            // btnThanhToan
-            // 
-            this.btnThanhToan.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan.Location = new System.Drawing.Point(205, 216);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(307, 50);
-            this.btnThanhToan.TabIndex = 20;
-            this.btnThanhToan.Text = "Thanh Toán";
-            this.btnThanhToan.UseVisualStyleBackColor = true;
-            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // label1
             // 
@@ -138,11 +127,25 @@ namespace QLCHTAN
             this.label2.TabIndex = 13;
             this.label2.Text = "Tài Khoản :";
             // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.BackColor = System.Drawing.Color.Aqua;
+            this.btnThanhToan.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnThanhToan.Location = new System.Drawing.Point(205, 203);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(299, 48);
+            this.btnThanhToan.TabIndex = 21;
+            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.button1_Click);
+            // 
             // NhanVienThanhToan_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(642, 296);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -159,7 +162,6 @@ namespace QLCHTAN
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnHienMatKhau;
         private System.Windows.Forms.Button btnKhongHienMatKhau;
@@ -167,5 +169,6 @@ namespace QLCHTAN
         private System.Windows.Forms.TextBox txtTaiKhoan;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnThanhToan;
     }
 }

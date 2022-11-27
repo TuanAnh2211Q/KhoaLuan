@@ -51,7 +51,6 @@
     <Compile Include="NhaCungCap_BUS.cs" />
     <Compile Include="NhanVien_BUS.cs" />
     <Compile Include="NuocUong_BUS.cs" />
-    <Compile Include="OrderDoAn_BUS.cs" />
     <Compile Include="PhanQuyen_BUS.cs" />
     <Compile Include="PhieuDatHang_BUS.cs" />
     <Compile Include="PhieuNhapKho_BUS.cs" />
