@@ -55,7 +55,6 @@ C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTA
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinPhieuXuat_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.Order_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.TaiKhoan_GUI.resources
-C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThanhToan_GUI.resources
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\bin\Debug\BUS.dll
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\bin\Debug\DAO.dll
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\bin\Debug\DTO.dll
@@ -93,10 +92,7 @@ D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.NhanVien_GUI.resources
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.PhieuDatHang_GUI.resources
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinChiTietPhieuDat_GUI.resources
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.NhanVienThanhToan_GUI.resources
-C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.DanhMucKhuyenMai_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.NhanVienThanhToan_GUI.resources
-C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.OrderNuoc_GUI.resources
-C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.OrderDoAn_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.GiaoDienQuanLi_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.MatHang_GUI.resources
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.KhuyenMai_GUI.resources
@@ -105,3 +101,4 @@ D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.GiaoDienQuanLi_GUI.resources
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.MatHang_GUI.resources
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.KhuyenMai_GUI.resources
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.KhachHang_GUI.resources
+C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.KhachHang_GUI.resources
