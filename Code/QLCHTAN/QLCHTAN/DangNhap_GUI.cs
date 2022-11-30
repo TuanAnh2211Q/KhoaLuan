@@ -30,8 +30,10 @@ namespace QLCHTAN
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lblTime.Text = DateTime.Now.ToLongTimeString();
-            lblDate.Text = DateTime.Now.ToShortDateString();
+            string time= DateTime.Now.ToLongTimeString();
+            string date= DateTime.Now.ToShortDateString();
+            lblTime.Text = time;
+            lblDate.Text = date;
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
@@ -48,7 +50,7 @@ namespace QLCHTAN
                             tenTaiKhoan = txtTaiKhoan.Text.Trim();
                             GiaoDienQuanLi_GUI giaoDienQuanLi_GUI = new GiaoDienQuanLi_GUI();
                             giaoDienQuanLi_GUI.Show();
-                            this.Hide();
+                            this.Close();
                         }
                         else
                         {
@@ -56,7 +58,7 @@ namespace QLCHTAN
                             tenTaiKhoan = txtTaiKhoan.Text.Trim();
                             GiaoDienNhanVien_GUI giaoDienNhanVien_GUI = new GiaoDienNhanVien_GUI();
                             giaoDienNhanVien_GUI.Show();
-                            this.Hide();
+                            this.Close();
                         }
 
                     }

@@ -23,12 +23,12 @@ namespace QLCHTAN
             //Application.Run(new NhaCungCap_GUI());
             //Application.Run(new NuocUong_GUI());
             //Application.Run(new MatHang_GUI());
-            //Application.Run(new CSDL());
+            Application.Run(new CSDL());
             //Application.Run(new LoaiKhuyenMai_GUI());
             //Application.Run(new KhuyenMai_GUI());
             //Application.Run(new DoAn_GUI());
             //Application.Run(new NhanVien_GUI());
-            Application.Run(new PhieuDatHang_GUI());
+            //Application.Run(new PhieuDatHang_GUI());
         }
     }
 }
