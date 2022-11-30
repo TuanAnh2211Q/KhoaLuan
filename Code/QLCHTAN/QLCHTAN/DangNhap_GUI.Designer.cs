@@ -99,7 +99,7 @@ namespace QLCHTAN
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(341, 36);
             this.txtTaiKhoan.TabIndex = 4;
-            this.txtTaiKhoan.Text = "NV004";
+            this.txtTaiKhoan.Text = "NV002";
             // 
             // txtMatKhau
             // 

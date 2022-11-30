@@ -9,3 +9,14 @@ C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTA
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\BUS\obj\Debug\BUS.dll
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\QLCHTAN\BUS\obj\Debug\BUS.pdb
+D:\KLTN2022\Code\QLCHTAN\BUS\bin\Debug\BUS.dll
+D:\KLTN2022\Code\QLCHTAN\BUS\bin\Debug\BUS.pdb
+D:\KLTN2022\Code\QLCHTAN\BUS\bin\Debug\DAO.dll
+D:\KLTN2022\Code\QLCHTAN\BUS\bin\Debug\DTO.dll
+D:\KLTN2022\Code\QLCHTAN\BUS\bin\Debug\DAO.pdb
+D:\KLTN2022\Code\QLCHTAN\BUS\bin\Debug\DTO.pdb
+D:\KLTN2022\Code\QLCHTAN\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\KLTN2022\Code\QLCHTAN\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\KLTN2022\Code\QLCHTAN\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\KLTN2022\Code\QLCHTAN\BUS\obj\Debug\BUS.dll
+D:\KLTN2022\Code\QLCHTAN\BUS\obj\Debug\BUS.pdb

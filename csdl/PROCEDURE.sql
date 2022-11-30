@@ -335,11 +335,30 @@ as
 exec dbo.select_KhachHang
 
 alter proc update_KhachHang
-@SDT varchar(11),@tenKhachHang  nvarchar(100), @Phai nvarchar(10), @email nvarchar(50),@diaChi nvarchar(100),@ghiChu nvarchar(max)
+@tenKhachHang  nvarchar(100), @Phai varchar(10),@SDT varchar(11),
+@Email varchar(50), @diaChi nvarchar(100),@ghiChu nvarchar(max),
+@idKhachHang int
 as
-update KhachHang set tenKhachHang=@tenKhachHang, Phai=@Phai,ghiChu=@ghiChu,diaChi=@diaChi,Email=@email where SDT=@SDT
+update KhachHang
+set
+	tenKhachHang=@tenKhachHang,
+	Phai=@Phai,
+	SDT=@SDT, 
+	Email=@Email, 
+	diaChi=@diaChi,
+	ghiChu=@ghiChu
+	where idKhachHang=@idKhachHang
 go
 exec dbo.update_KhachHang
+
+-- Xóa thông tin khách hàng
+create proc delete_KhachHang
+@idKhachHang int
+as
+ delete from KhachHang where idKhachHang=@idKhachHang
+go
+exec dbo.delete_KhachHang
+
 --======================NHÀ CUNG CẤP===========
 create proc select_NCC
 as 
