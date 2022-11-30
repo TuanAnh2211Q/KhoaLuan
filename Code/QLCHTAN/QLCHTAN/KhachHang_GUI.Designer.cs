@@ -55,7 +55,7 @@ namespace QLCHTAN
             this.Phai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinKhachHang)).BeginInit();
@@ -97,6 +97,7 @@ namespace QLCHTAN
             this.btnXoa.TabIndex = 24;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -276,6 +277,8 @@ namespace QLCHTAN
             // 
             // dgvThongTinKhachHang
             // 
+            this.dgvThongTinKhachHang.AllowUserToAddRows = false;
+            this.dgvThongTinKhachHang.AllowUserToDeleteRows = false;
             this.dgvThongTinKhachHang.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dgvThongTinKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongTinKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -284,14 +287,15 @@ namespace QLCHTAN
             this.Phai,
             this.diaChi,
             this.Email,
-            this.Column1});
+            this.idKhachHang});
             this.dgvThongTinKhachHang.Location = new System.Drawing.Point(446, 6);
             this.dgvThongTinKhachHang.Name = "dgvThongTinKhachHang";
+            this.dgvThongTinKhachHang.ReadOnly = true;
             this.dgvThongTinKhachHang.RowHeadersWidth = 51;
             this.dgvThongTinKhachHang.RowTemplate.Height = 24;
             this.dgvThongTinKhachHang.Size = new System.Drawing.Size(466, 390);
             this.dgvThongTinKhachHang.TabIndex = 1;
-            this.dgvThongTinKhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinKhachHang_CellContentClick);
+            this.dgvThongTinKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinKhachHang_CellClick);
             // 
             // SDT
             // 
@@ -299,6 +303,7 @@ namespace QLCHTAN
             this.SDT.HeaderText = "Số Điện Thoại";
             this.SDT.MinimumWidth = 6;
             this.SDT.Name = "SDT";
+            this.SDT.ReadOnly = true;
             this.SDT.Width = 125;
             // 
             // tenKhachHang
@@ -307,6 +312,7 @@ namespace QLCHTAN
             this.tenKhachHang.HeaderText = "Tên Khách Hàng";
             this.tenKhachHang.MinimumWidth = 6;
             this.tenKhachHang.Name = "tenKhachHang";
+            this.tenKhachHang.ReadOnly = true;
             this.tenKhachHang.Width = 125;
             // 
             // Phai
@@ -315,6 +321,7 @@ namespace QLCHTAN
             this.Phai.HeaderText = "Giới Tính";
             this.Phai.MinimumWidth = 6;
             this.Phai.Name = "Phai";
+            this.Phai.ReadOnly = true;
             this.Phai.Width = 125;
             // 
             // diaChi
@@ -323,6 +330,7 @@ namespace QLCHTAN
             this.diaChi.HeaderText = "Địa Chỉ";
             this.diaChi.MinimumWidth = 6;
             this.diaChi.Name = "diaChi";
+            this.diaChi.ReadOnly = true;
             this.diaChi.Width = 125;
             // 
             // Email
@@ -331,15 +339,17 @@ namespace QLCHTAN
             this.Email.HeaderText = "Email";
             this.Email.MinimumWidth = 6;
             this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             this.Email.Width = 125;
             // 
-            // Column1
+            // idKhachHang
             // 
-            this.Column1.DataPropertyName = "idKhachHang";
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
+            this.idKhachHang.DataPropertyName = "idKhachHang";
+            this.idKhachHang.HeaderText = "ID";
+            this.idKhachHang.MinimumWidth = 6;
+            this.idKhachHang.Name = "idKhachHang";
+            this.idKhachHang.ReadOnly = true;
+            this.idKhachHang.Width = 125;
             // 
             // KhachHang_GUI
             // 
@@ -392,6 +402,6 @@ namespace QLCHTAN
         private System.Windows.Forms.DataGridViewTextBoxColumn Phai;
         private System.Windows.Forms.DataGridViewTextBoxColumn diaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idKhachHang;
     }
 }
