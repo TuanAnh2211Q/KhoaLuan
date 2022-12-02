@@ -30,6 +30,8 @@ namespace QLCHTAN
         private void InitializeComponent()
         {
             this.grbThongTinPhieuDat = new System.Windows.Forms.GroupBox();
+            this.lblMaHangNhap = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,10 +50,8 @@ namespace QLCHTAN
             this.tongDonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblThoat = new System.Windows.Forms.LinkLabel();
             this.btnThem = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblMaHangNhap = new System.Windows.Forms.Label();
             this.grbThongTinPhieuDat.SuspendLayout();
             this.grbDanhSachHangDat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinChiTietPhieuDat)).BeginInit();
@@ -73,6 +73,26 @@ namespace QLCHTAN
             this.grbThongTinPhieuDat.TabIndex = 4;
             this.grbThongTinPhieuDat.TabStop = false;
             this.grbThongTinPhieuDat.Text = "Thông tin phiếu đặt hàng";
+            // 
+            // lblMaHangNhap
+            // 
+            this.lblMaHangNhap.AutoSize = true;
+            this.lblMaHangNhap.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaHangNhap.ForeColor = System.Drawing.Color.Red;
+            this.lblMaHangNhap.Location = new System.Drawing.Point(101, 65);
+            this.lblMaHangNhap.Name = "lblMaHangNhap";
+            this.lblMaHangNhap.Size = new System.Drawing.Size(55, 15);
+            this.lblMaHangNhap.TabIndex = 30;
+            this.lblMaHangNhap.Text = "................";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(8, 98);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 15);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Tên hàng nhập:";
             // 
             // txtSoLuong
             // 
@@ -202,6 +222,7 @@ namespace QLCHTAN
             this.maHang.DataPropertyName = "maHang";
             this.maHang.HeaderText = "Mã hàng";
             this.maHang.Name = "maHang";
+            this.maHang.ReadOnly = true;
             this.maHang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.maHang.Visible = false;
             // 
@@ -211,6 +232,7 @@ namespace QLCHTAN
             this.tenHang.HeaderText = "Tên hàng";
             this.tenHang.MinimumWidth = 6;
             this.tenHang.Name = "tenHang";
+            this.tenHang.ReadOnly = true;
             this.tenHang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // soLuongDat
@@ -219,6 +241,7 @@ namespace QLCHTAN
             this.soLuongDat.HeaderText = "Số lượng đặt";
             this.soLuongDat.MinimumWidth = 6;
             this.soLuongDat.Name = "soLuongDat";
+            this.soLuongDat.ReadOnly = true;
             // 
             // tenNCC
             // 
@@ -226,6 +249,7 @@ namespace QLCHTAN
             this.tenNCC.HeaderText = "Tên Nhà Cung Cấp";
             this.tenNCC.MinimumWidth = 6;
             this.tenNCC.Name = "tenNCC";
+            this.tenNCC.ReadOnly = true;
             // 
             // tongDonGia
             // 
@@ -233,10 +257,7 @@ namespace QLCHTAN
             this.tongDonGia.HeaderText = "Tổng đơn giá";
             this.tongDonGia.MinimumWidth = 6;
             this.tongDonGia.Name = "tongDonGia";
-            // 
-            // qLCUAHANGTHUCANNHANHDataSet
-            // 
-           
+            this.tongDonGia.ReadOnly = true;
             // 
             // lblThoat
             // 
@@ -261,17 +282,17 @@ namespace QLCHTAN
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // button2
+            // btnSua
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Info;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(419, 370);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Sửa";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnSua.BackColor = System.Drawing.SystemColors.Info;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSua.Location = new System.Drawing.Point(419, 370);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(75, 23);
+            this.btnSua.TabIndex = 11;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -285,26 +306,6 @@ namespace QLCHTAN
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 98);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 15);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Tên hàng nhập:";
-            // 
-            // lblMaHangNhap
-            // 
-            this.lblMaHangNhap.AutoSize = true;
-            this.lblMaHangNhap.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaHangNhap.ForeColor = System.Drawing.Color.Red;
-            this.lblMaHangNhap.Location = new System.Drawing.Point(101, 65);
-            this.lblMaHangNhap.Name = "lblMaHangNhap";
-            this.lblMaHangNhap.Size = new System.Drawing.Size(55, 15);
-            this.lblMaHangNhap.TabIndex = 30;
-            this.lblMaHangNhap.Text = "................";
-            // 
             // ThongTinChiTietPhieuDat_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -312,7 +313,7 @@ namespace QLCHTAN
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(502, 401);
             this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.lblThoat);
             this.Controls.Add(this.grbThongTinPhieuDat);
@@ -349,7 +350,7 @@ namespace QLCHTAN
         private System.Windows.Forms.LinkLabel lblThoat;
         private System.Windows.Forms.LinkLabel lblkLamMoi;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn maHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenHang;

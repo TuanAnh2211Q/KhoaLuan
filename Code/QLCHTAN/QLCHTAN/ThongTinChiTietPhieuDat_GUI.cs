@@ -47,6 +47,19 @@ namespace QLCHTAN
             cbbMatHang.ValueMember = "maHang";
             txtSoLuong.Text = "";
             cbbMatHang.SelectedIndex = 0;
+
+            if(PhieuDatHang_GUI.trangThaiPhieu)
+            {
+                btnThem.Enabled = false;
+                btnXoa.Enabled = false;
+                btnSua.Enabled = false;
+            }    
+            else
+            {
+                btnThem.Enabled = true;
+                btnXoa.Enabled = true;
+                btnSua.Enabled = true;
+            }
         }
 
         private void lblThoat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -92,7 +105,7 @@ namespace QLCHTAN
                 MessageBox.Show("Vui lòng nhập số lượng hàng thêm");
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnSua_Click(object sender, EventArgs e)
         {
             if (txtSoLuong.Text != "")
             {

@@ -152,7 +152,7 @@ select * from ThongTinNhapKho
 
 ---------------------------------ĐẶT HÀNG-------------------------------
 --Thêm thông tin đặt hàng
-create trigger trg_insert_ThongTinDatHang on ThongTinDatHang instead of insert
+create  trigger trg_insert_ThongTinDatHang on ThongTinDatHang instead of insert
 as
 begin
 declare 
@@ -214,12 +214,28 @@ end
  delete from ThongTinDatHang where maDatHang=(select maDatHang from deleted)
  delete from DatHang where maDatHang=(select maDatHang from deleted)
  end
+
+ create  trigger trg_insertPhieuDat on DatHang instead of insert
+ as
+ begin
+ declare 
+    @maphieu varchar(10)=(select maDatHang from inserted),
+	@ngayDat datetime =(select ngayDatHang from inserted),
+	@ngayGiao datetime =(select ngayDuKienGiao from inserted),
+	@ghiChu nvarchar(max)=(select ghiChu from inserted),
+	@phuongThuc nvarchar(5)=(select phuongThucThanhToan from inserted),
+	@trangThai bit=0
+
+ insert into DatHang values(@maPhieu,@ngayDat,@ngayGiao,@ghiChu,@phuongThuc,(select trangThai=@trangThai from inserted))
+ end
+
+
  ---------------TRẢ HÀNG---------------------------------------
 
 
+ set dateformat dmy
 
-
-
+ exec insert_DatHang  'MD002','20/11/2022','20/12/2022','Không có gì','Chuyển khoản'
 
 
 

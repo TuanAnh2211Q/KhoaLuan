@@ -67,7 +67,7 @@ alter table ThongTinDoAn add constraint fk_DoAn_ThongTinDoAn foreign key (maDoAn
 
   
  alter table TraHang 
- add constraint fk_TraHang_NhapKho foreign key (maNhap) references NhapKho(maNhap)
+ add constraint fk_TraHang_DatHang foreign key (maDatHang) references DatHang(maDatHang)
 go
 alter table ThongTinTraHang 
  add constraint fk_ThongTinTraHang_TraHang foreign key (maTra) references TraHang(maTra)

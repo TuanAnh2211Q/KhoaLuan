@@ -74,6 +74,8 @@ namespace DAO
                 cmd.Parameters.Add("@ngaydukiengiao", SqlDbType.DateTime).Value = phieudat.NgayDuKienGiao;
                 cmd.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = phieudat.GhiChu;
                 cmd.Parameters.Add("@phuongthucthanhtoan", SqlDbType.NVarChar).Value = phieudat.PhuongThucThanhToan;
+                cmd.Parameters.Add("@trangThai", SqlDbType.Bit).Value = phieudat.TrangThai;
+
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
 
