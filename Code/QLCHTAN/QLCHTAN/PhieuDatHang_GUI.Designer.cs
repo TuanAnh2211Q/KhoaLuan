@@ -47,13 +47,16 @@ namespace QLCHTAN
             this.phuongThucThanhToan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ghiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblkThongTinPhieuDat = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
+            this.ccbPhuongThucThanhToan = new System.Windows.Forms.ComboBox();
             this.dtNgayDuKienGiao = new System.Windows.Forms.DateTimePicker();
             this.btnLamMoi = new System.Windows.Forms.Button();
-            this.ccbPhuongThucThanhToan = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.lblkThongTinPhieuDat = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.rdbChuaXacNhan = new System.Windows.Forms.RadioButton();
+            this.rdbXacNhan = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuDat)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -69,10 +72,10 @@ namespace QLCHTAN
             // 
             // txtGhiChu
             // 
-            this.txtGhiChu.Location = new System.Drawing.Point(82, 182);
+            this.txtGhiChu.Location = new System.Drawing.Point(82, 206);
             this.txtGhiChu.Margin = new System.Windows.Forms.Padding(2);
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(190, 82);
+            this.txtGhiChu.Size = new System.Drawing.Size(190, 58);
             this.txtGhiChu.TabIndex = 8;
             this.txtGhiChu.Text = "";
             // 
@@ -88,7 +91,7 @@ namespace QLCHTAN
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 185);
+            this.label4.Location = new System.Drawing.Point(5, 206);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 15);
@@ -206,6 +209,9 @@ namespace QLCHTAN
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rdbChuaXacNhan);
+            this.groupBox1.Controls.Add(this.rdbXacNhan);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.lblkThongTinPhieuDat);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.ccbPhuongThucThanhToan);
@@ -224,6 +230,17 @@ namespace QLCHTAN
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách phiếu đặt";
             // 
+            // lblkThongTinPhieuDat
+            // 
+            this.lblkThongTinPhieuDat.AutoSize = true;
+            this.lblkThongTinPhieuDat.Location = new System.Drawing.Point(121, 282);
+            this.lblkThongTinPhieuDat.Name = "lblkThongTinPhieuDat";
+            this.lblkThongTinPhieuDat.Size = new System.Drawing.Size(115, 15);
+            this.lblkThongTinPhieuDat.TabIndex = 12;
+            this.lblkThongTinPhieuDat.TabStop = true;
+            this.lblkThongTinPhieuDat.Text = "Thông tin phiếu đặt";
+            this.lblkThongTinPhieuDat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkThongTinPhieuDat_LinkClicked);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -234,6 +251,19 @@ namespace QLCHTAN
             this.label5.TabIndex = 22;
             this.label5.Text = "Phương thức thanh toán:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ccbPhuongThucThanhToan
+            // 
+            this.ccbPhuongThucThanhToan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ccbPhuongThucThanhToan.FormattingEnabled = true;
+            this.ccbPhuongThucThanhToan.Items.AddRange(new object[] {
+            "Chuyển khoản",
+            "Tiền mặt"});
+            this.ccbPhuongThucThanhToan.Location = new System.Drawing.Point(152, 136);
+            this.ccbPhuongThucThanhToan.Margin = new System.Windows.Forms.Padding(2);
+            this.ccbPhuongThucThanhToan.Name = "ccbPhuongThucThanhToan";
+            this.ccbPhuongThucThanhToan.Size = new System.Drawing.Size(120, 23);
+            this.ccbPhuongThucThanhToan.TabIndex = 21;
             // 
             // dtNgayDuKienGiao
             // 
@@ -254,19 +284,6 @@ namespace QLCHTAN
             this.btnLamMoi.UseVisualStyleBackColor = true;
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
-            // ccbPhuongThucThanhToan
-            // 
-            this.ccbPhuongThucThanhToan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ccbPhuongThucThanhToan.FormattingEnabled = true;
-            this.ccbPhuongThucThanhToan.Items.AddRange(new object[] {
-            "Chuyển khoản",
-            "Tiền mặt"});
-            this.ccbPhuongThucThanhToan.Location = new System.Drawing.Point(152, 136);
-            this.ccbPhuongThucThanhToan.Margin = new System.Windows.Forms.Padding(2);
-            this.ccbPhuongThucThanhToan.Name = "ccbPhuongThucThanhToan";
-            this.ccbPhuongThucThanhToan.Size = new System.Drawing.Size(120, 23);
-            this.ccbPhuongThucThanhToan.TabIndex = 21;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(542, 282);
@@ -278,17 +295,6 @@ namespace QLCHTAN
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lblkThongTinPhieuDat
-            // 
-            this.lblkThongTinPhieuDat.AutoSize = true;
-            this.lblkThongTinPhieuDat.Location = new System.Drawing.Point(121, 282);
-            this.lblkThongTinPhieuDat.Name = "lblkThongTinPhieuDat";
-            this.lblkThongTinPhieuDat.Size = new System.Drawing.Size(115, 15);
-            this.lblkThongTinPhieuDat.TabIndex = 12;
-            this.lblkThongTinPhieuDat.TabStop = true;
-            this.lblkThongTinPhieuDat.Text = "Thông tin phiếu đặt";
-            this.lblkThongTinPhieuDat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkThongTinPhieuDat_LinkClicked);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -299,6 +305,37 @@ namespace QLCHTAN
             this.label6.Size = new System.Drawing.Size(226, 26);
             this.label6.TabIndex = 12;
             this.label6.Text = "DANH SÁCH PHIẾU ĐẶT";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 166);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 15);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Trạng thái:";
+            // 
+            // rdbChuaXacNhan
+            // 
+            this.rdbChuaXacNhan.AutoSize = true;
+            this.rdbChuaXacNhan.Location = new System.Drawing.Point(155, 166);
+            this.rdbChuaXacNhan.Name = "rdbChuaXacNhan";
+            this.rdbChuaXacNhan.Size = new System.Drawing.Size(105, 19);
+            this.rdbChuaXacNhan.TabIndex = 25;
+            this.rdbChuaXacNhan.TabStop = true;
+            this.rdbChuaXacNhan.Text = "Chưa xác nhận";
+            this.rdbChuaXacNhan.UseVisualStyleBackColor = true;
+            // 
+            // rdbXacNhan
+            // 
+            this.rdbXacNhan.AutoSize = true;
+            this.rdbXacNhan.Location = new System.Drawing.Point(77, 166);
+            this.rdbXacNhan.Name = "rdbXacNhan";
+            this.rdbXacNhan.Size = new System.Drawing.Size(74, 19);
+            this.rdbXacNhan.TabIndex = 24;
+            this.rdbXacNhan.TabStop = true;
+            this.rdbXacNhan.Text = "Xác nhận";
+            this.rdbXacNhan.UseVisualStyleBackColor = true;
             // 
             // PhieuDatHang_GUI
             // 
@@ -352,5 +389,8 @@ namespace QLCHTAN
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel lblkThongTinPhieuDat;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RadioButton rdbChuaXacNhan;
+        private System.Windows.Forms.RadioButton rdbXacNhan;
+        private System.Windows.Forms.Label label7;
     }
 }
