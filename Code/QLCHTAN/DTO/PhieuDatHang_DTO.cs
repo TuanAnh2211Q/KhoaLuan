@@ -47,15 +47,23 @@ namespace DTO
             get { return ghiChu; }
             set { ghiChu = value; }
         }
+        private bool trangThai;
+
+        public bool TrangThai
+        {
+            get { return trangThai; }
+            set { trangThai = value; }
+        }
 
 
-        public PhieuDatHang_DTO(string MaDatHang, DateTime NgayDatHang, DateTime NgayDuKienGiao, string PhuongThucThanhToan, string GhiChu)
+        public PhieuDatHang_DTO(string MaDatHang, DateTime NgayDatHang, DateTime NgayDuKienGiao, string PhuongThucThanhToan, string GhiChu,bool TrangThai )
         {
             this.maDatHang = MaDatHang;
             this.ngayDatHang = NgayDatHang;
             this.ngayDuKienGiao = NgayDuKienGiao;
             this.phuongThucThanhToan = PhuongThucThanhToan;
             this.ghiChu = GhiChu;
+            this.trangThai = TrangThai;
         }
 
 

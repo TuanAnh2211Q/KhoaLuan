@@ -16,13 +16,14 @@ namespace QLCHTAN
     {
         PhieuDatHang_BUS phieuDatHang_BUS = new PhieuDatHang_BUS();
         public static string maPhieuDat;
+        public static bool trangThaiPhieu;
         public PhieuDatHang_GUI()
         {
             InitializeComponent();
         }
         public PhieuDatHang_DTO phieuDatHang_DTO()
         {
-            return new PhieuDatHang_DTO(txtMaDat.Text.Trim(), dtNgayDat.Value, dtNgayDuKienGiao.Value, ccbPhuongThucThanhToan.Text.Trim(), txtGhiChu.Text);
+            return new PhieuDatHang_DTO(txtMaDat.Text.Trim(), dtNgayDat.Value, dtNgayDuKienGiao.Value, ccbPhuongThucThanhToan.Text.Trim(), txtGhiChu.Text,trangThaiPhieu);
         }
         public bool kt_Dondat()
         {
@@ -33,7 +34,7 @@ namespace QLCHTAN
             }
             return false;
         }
-       
+
 
         private void PhieuDatHang_GUI_Load(object sender, EventArgs e)
         {
@@ -46,11 +47,21 @@ namespace QLCHTAN
             if(e.RowIndex>=0)
             {
                 DataGridViewRow r = dgvPhieuDat.Rows[e.RowIndex];
-                txtMaDat.Text = r.Cells[0].Value.ToString();
-                dtNgayDat.Value = Convert.ToDateTime( r.Cells[1].Value.ToString());
-                dtNgayDuKienGiao.Value = Convert.ToDateTime(r.Cells[2].Value.ToString());
-                ccbPhuongThucThanhToan.Text = r.Cells[3].Value.ToString();
-                txtGhiChu.Text = r.Cells[4].Value.ToString();
+                txtMaDat.Text = r.Cells["maDatHang"].Value.ToString();
+                dtNgayDat.Value = Convert.ToDateTime( r.Cells["ngayDatHang"].Value.ToString());
+                dtNgayDuKienGiao.Value = Convert.ToDateTime(r.Cells["ngayDuKienGiao"].Value.ToString());
+                ccbPhuongThucThanhToan.Text = r.Cells["phuongThucThanhToan"].Value.ToString();
+                txtGhiChu.Text = r.Cells["ghiChu"].Value.ToString();
+                if(r.Cells["trangThai"].Value is true)
+                {
+                    lblTrangThai.Text = "Đã hoàn thành";
+                    trangThaiPhieu = true;
+                }    
+                else
+                {
+                    lblTrangThai.Text = "Chưa hoàn thành";
+                    trangThaiPhieu = false;
+                }
                 txtMaDat.Enabled = false;
             }    
         }
@@ -68,6 +79,12 @@ namespace QLCHTAN
             txtGhiChu.Clear();
             txtMaDat.Enabled = true;
             ccbPhuongThucThanhToan.SelectedIndex = 0;
+            btnCapNhat.Enabled = true;
+            btnHuyPhieuDat.Enabled = true;
+            lblTrangThai.Text = ".................................................................";
+            lblTrangThai.ForeColor = Color.Black;
+
+
         }
 
         private void btnThemPhieuDat_Click(object sender, EventArgs e)
@@ -124,9 +141,16 @@ namespace QLCHTAN
 
             if (txtMaDat.Text != "")
             {
-                if (kt_Dondat())
+                  if(lblTrangThai.Text=="Đã hoàn thành")
                 {
-                    
+                    MessageBox.Show("Phiếu đặt đã hoàn thành, không thể xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }   
+                  else
+                {
+                    if (kt_Dondat())
+                    {
+
                         DialogResult rs = MessageBox.Show("Xác nhận xóa phiếu đặt ? ", "Thông báo", MessageBoxButtons.YesNo);
                         if (rs == DialogResult.Yes)
                         {
@@ -138,50 +162,67 @@ namespace QLCHTAN
                             else
                                 MessageBox.Show("Phiếu đặt còn sử dụng, không thể xóa");
                         }
-                   
-                }
-                else
-                {
-                    MessageBox.Show("Phiếu đặt không tồn tại, vui lòng kiểm tra lại thông tin");
-                }
+
+
+                        else
+                        {
+                            MessageBox.Show("Phiếu đặt không tồn tại, vui lòng kiểm tra lại thông tin");
+                        }
+                    }
+                }    
             }
             else
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCapNhat_Click(object sender, EventArgs e)
         {
             if (txtMaDat.Text != "")
             {
-                if (kt_Dondat())
+
+                if (lblTrangThai.Text == "Đã hoàn thành")
                 {
-                    long sp = dtNgayDuKienGiao.Value.Subtract(dtNgayDat.Value).Ticks;
-                    if (sp < 0)
-                    {
-                        MessageBox.Show("Ngày dự kiến giao không được nhỏ hơn ngày đặt");
-                    }
-                    else
-                    {
-                        DialogResult rs = MessageBox.Show("Xác nhận cập nhật phiếu đặt ?", "Thông báo", MessageBoxButtons.YesNo);
-                        if (rs == DialogResult.Yes)
-                        {
-                            if (phieuDatHang_BUS.update_PhieuDat_BUS(phieuDatHang_DTO()))
-                            {
-                                MessageBox.Show("Cập nhật thành công");
-                                btnLamMoi_Click(sender, e);
-                            }
-                            else
-                                MessageBox.Show("Cập nhật thất bại, vui lòng kiểm tra lại thông tin");
-                        }
-                    }
+                    MessageBox.Show("Phiếu đặt đã hoàn thành, không thể chỉnh sửa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("Phiếu đặt không tồn tại, vui lòng kiểm tra lại thông tin");
+                    if (kt_Dondat())
+                    {
+                        long sp = dtNgayDuKienGiao.Value.Subtract(dtNgayDat.Value).Ticks;
+                        if (sp < 0)
+                        {
+                            MessageBox.Show("Ngày dự kiến giao không được nhỏ hơn ngày đặt");
+                        }
+                        else
+                        {
+                            DialogResult rs = MessageBox.Show("Xác nhận cập nhật phiếu đặt ?", "Thông báo", MessageBoxButtons.YesNo);
+                            if (rs == DialogResult.Yes)
+                            {
+                                if (phieuDatHang_BUS.update_PhieuDat_BUS(phieuDatHang_DTO()))
+                                {
+                                    MessageBox.Show("Cập nhật thành công");
+                                    btnLamMoi_Click(sender, e);
+                                }
+                                else
+                                    MessageBox.Show("Cập nhật thất bại, vui lòng kiểm tra lại thông tin");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Phiếu đặt không tồn tại, vui lòng kiểm tra lại thông tin");
+                    }
                 }
+               
             }
             else
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+        }
+
+        private void lblTrangThai_TextChanged(object sender, EventArgs e)
+        {
+            lblTrangThai.ForeColor = Color.Red;
         }
     }
 }
