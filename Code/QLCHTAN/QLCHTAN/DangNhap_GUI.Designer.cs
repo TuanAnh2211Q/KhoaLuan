@@ -99,7 +99,7 @@ namespace QLCHTAN
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(341, 36);
             this.txtTaiKhoan.TabIndex = 4;
-            this.txtTaiKhoan.Text = "NV002";
+            this.txtTaiKhoan.Text = "NV003";
             // 
             // txtMatKhau
             // 
@@ -233,7 +233,7 @@ namespace QLCHTAN
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(533, 330);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);

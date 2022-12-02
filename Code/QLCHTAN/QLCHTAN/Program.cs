@@ -16,7 +16,7 @@ namespace QLCHTAN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DangNhap_GUI());
+            //Application.Run(new DangNhap_GUI());
             //Application.Run(new LoaiDoAn_GUI());
             //Application.Run(new TaiKhoan_GUI());
             //Application.Run(new Order_GUI());

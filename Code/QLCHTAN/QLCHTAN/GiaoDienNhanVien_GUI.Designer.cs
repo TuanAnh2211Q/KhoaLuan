@@ -139,6 +139,7 @@ namespace QLCHTAN
             // 
             // grbChucNangNhanVien
             // 
+            this.grbChucNangNhanVien.BackColor = System.Drawing.Color.Turquoise;
             this.grbChucNangNhanVien.Controls.Add(this.panel6);
             this.grbChucNangNhanVien.Controls.Add(this.panel5);
             this.grbChucNangNhanVien.Controls.Add(this.panel4);
@@ -383,7 +384,7 @@ namespace QLCHTAN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.Color.Turquoise;
             this.ClientSize = new System.Drawing.Size(907, 563);
             this.Controls.Add(this.grbChucNangNhanVien);
             this.Controls.Add(this.grbThongTinDangNhap);
