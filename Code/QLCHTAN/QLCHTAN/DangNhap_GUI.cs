@@ -50,7 +50,7 @@ namespace QLCHTAN
                             tenTaiKhoan = txtTaiKhoan.Text.Trim();
                             GiaoDienQuanLi_GUI giaoDienQuanLi_GUI = new GiaoDienQuanLi_GUI();
                             giaoDienQuanLi_GUI.Show();
-                            this.Close();
+                            this.Hide();
                         }
                         else
                         {
@@ -58,7 +58,7 @@ namespace QLCHTAN
                             tenTaiKhoan = txtTaiKhoan.Text.Trim();
                             GiaoDienNhanVien_GUI giaoDienNhanVien_GUI = new GiaoDienNhanVien_GUI();
                             giaoDienNhanVien_GUI.Show();
-                            this.Close();
+                            this.Hide();
                         }
 
                     }
@@ -106,6 +106,11 @@ namespace QLCHTAN
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void DangNhap_GUI_Leave(object sender, EventArgs e)
+        {
+            timer1.Stop();
         }
     }
     

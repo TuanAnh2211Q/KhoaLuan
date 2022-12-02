@@ -334,7 +334,7 @@ as
 	select*from KhachHang
 exec dbo.select_KhachHang
 
-alter proc update_KhachHang
+create proc update_KhachHang
 @tenKhachHang  nvarchar(100), @Phai varchar(10),@SDT varchar(11),
 @Email varchar(50), @diaChi nvarchar(100),@ghiChu nvarchar(max),
 @idKhachHang int
