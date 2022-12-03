@@ -41,11 +41,11 @@ namespace QLCHTAN
 
 
         #region Event
-        private void cbbSDT_SelectedValueChanged(object sender, EventArgs e)
-        {
-            cbbSDT.DataSource = khachHang_BUS.show_dsKhachHang_BUS();
-            txtTenKhach.Text()=khachHang_DTO.
-        }
+        //private void cbbSDT_SelectedValueChanged(object sender, EventArgs e)
+        //{
+        //    cbbSDT.DataSource = khachHang_BUS.show_dsKhachHang_BUS();
+        //    txtTenKhach.Text()=khachHang_DTO.
+        //}
         private void Order_GUI_Load(object sender, EventArgs e)
         {
             clearData(sender,e);

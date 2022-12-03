@@ -180,7 +180,7 @@ namespace QLCHTAN
             this.cbbSDT.Name = "cbbSDT";
             this.cbbSDT.Size = new System.Drawing.Size(351, 32);
             this.cbbSDT.TabIndex = 5;
-            this.cbbSDT.SelectedValueChanged += new System.EventHandler(this.cbbSDT_SelectedValueChanged);
+            //this.cbbSDT.SelectedValueChanged += new System.EventHandler(this.cbbSDT_SelectedValueChanged);
             this.cbbSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbbSDT_KeyPress);
             // 
             // label2
