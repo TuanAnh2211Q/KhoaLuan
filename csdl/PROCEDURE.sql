@@ -335,7 +335,7 @@ as
 exec dbo.select_KhachHang
 
 alter proc update_KhachHang
-@tenKhachHang  nvarchar(100), @Phai varchar(10),@SDT varchar(11),
+@tenKhachHang  nvarchar(100), @Phai nvarchar(10),@SDT varchar(11),
 @Email varchar(50), @diaChi nvarchar(100),@ghiChu nvarchar(max),
 @idKhachHang int
 as
@@ -357,7 +357,7 @@ create proc delete_KhachHang
 as
  delete from KhachHang where idKhachHang=@idKhachHang
 go
-exec dbo.delete_KhachHang
+exec dbo.delete_KhachHang 
 
 --======================NHÀ CUNG CẤP===========
 create proc select_NCC

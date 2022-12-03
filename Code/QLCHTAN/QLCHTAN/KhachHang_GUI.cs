@@ -35,6 +35,7 @@ namespace QLCHTAN
             txtTenKhachHang.Clear();
             txtGmail.Clear();
             rtbGhiChu.Clear();
+            txtDiaChi.Clear();
             rdbNam.Checked = rdbNu.Checked = false;
             txtSDT.Focus();
             dgvThongTinKhachHang.DataSource = khachhang_BUS.show_dsKhachHang_BUS();
@@ -48,8 +49,6 @@ namespace QLCHTAN
                 {
                     return true;
                 }
-                
-
             }
             return false;
         }
@@ -132,21 +131,25 @@ namespace QLCHTAN
             DialogResult them = MessageBox.Show("Bạn có chắc muốn xóa khách hàng này không ?", "Thông Báo ", MessageBoxButtons.YesNo);
             if (them == DialogResult.Yes)
             {
-                if (kt_KhachHang())
+                if (txtMaKhachHang.Text.Trim()!="")
                 {
-                    if (khachhang_BUS.delete_KhachHang_BUS(khachHang_DTO()))
+
+                    if (kt_KhachHang())
                     {
-                        MessageBox.Show("Xóa thông tin khách hàng thành công");
-                        KhachHang_GUI_Load(sender, e);
+                        if (khachhang_BUS.delete_KhachHang_BUS(khachHang_DTO()))
+                        {
+                            MessageBox.Show("Xóa thông tin khách hàng thành công");
+                            KhachHang_GUI_Load(sender, e);
+                        }
+                        else
+                            MessageBox.Show("Xóa Nhân Viên Thất Bại");
                     }
                     else
-                        MessageBox.Show("Xóa Nhân Viên Thất Bại");
+                        MessageBox.Show("Nhân viên không tồn tại, vui lòng kiểm tra lại ");
                 }
                 else
-                    MessageBox.Show("Nhân viên không tồn tại, vui lòng kiểm tra lại ");
+                    MessageBox.Show("Vui lòng nhập đủ thông tin");
             }
-            else
-                MessageBox.Show("Vui lòng nhập đũ thông tin");
         }
     }
 }

@@ -16,14 +16,14 @@ namespace QLCHTAN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new DangNhap_GUI());
+            Application.Run(new DangNhap_GUI());
             //Application.Run(new LoaiDoAn_GUI());
             //Application.Run(new TaiKhoan_GUI());
             //Application.Run(new Order_GUI());
             //Application.Run(new NhaCungCap_GUI());
             //Application.Run(new NuocUong_GUI());
             //Application.Run(new MatHang_GUI());
-            Application.Run(new CSDL());
+            //Application.Run(new CSDL());
             //Application.Run(new LoaiKhuyenMai_GUI());
             //Application.Run(new KhuyenMai_GUI());
             //Application.Run(new DoAn_GUI());

@@ -43,7 +43,6 @@ namespace QLCHTAN
             this.txtQLTK = new System.Windows.Forms.TextBox();
             this.btnQLTK = new System.Windows.Forms.Button();
             this.pQLDA = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtQLMA = new System.Windows.Forms.TextBox();
             this.btnQLDA = new System.Windows.Forms.Button();
             this.pQLNU = new System.Windows.Forms.Panel();
@@ -86,13 +85,13 @@ namespace QLCHTAN
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.txtQLMH = new System.Windows.Forms.TextBox();
             this.btnQLMH = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.pQLNV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pQLTK.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pQLDA.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pQLNU.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.pQLLDA.SuspendLayout();
@@ -113,6 +112,7 @@ namespace QLCHTAN
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -122,9 +122,9 @@ namespace QLCHTAN
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(948, 101);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -175,7 +175,7 @@ namespace QLCHTAN
             this.pQLNV.Controls.Add(this.txtQLNV);
             this.pQLNV.Controls.Add(this.btnQLNV);
             this.pQLNV.Location = new System.Drawing.Point(16, 144);
-            this.pQLNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pQLNV.Margin = new System.Windows.Forms.Padding(4);
             this.pQLNV.Name = "pQLNV";
             this.pQLNV.Size = new System.Drawing.Size(470, 76);
             this.pQLNV.TabIndex = 1;
@@ -185,7 +185,7 @@ namespace QLCHTAN
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(54, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -199,7 +199,7 @@ namespace QLCHTAN
             this.txtQLNV.Enabled = false;
             this.txtQLNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQLNV.Location = new System.Drawing.Point(223, 6);
-            this.txtQLNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQLNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtQLNV.Multiline = true;
             this.txtQLNV.Name = "txtQLNV";
             this.txtQLNV.Size = new System.Drawing.Size(238, 61);
@@ -214,7 +214,7 @@ namespace QLCHTAN
             this.btnQLNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLNV.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnQLNV.Location = new System.Drawing.Point(79, 6);
-            this.btnQLNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLNV.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLNV.Name = "btnQLNV";
             this.btnQLNV.Size = new System.Drawing.Size(136, 64);
             this.btnQLNV.TabIndex = 0;
@@ -229,7 +229,7 @@ namespace QLCHTAN
             this.pQLTK.Controls.Add(this.txtQLTK);
             this.pQLTK.Controls.Add(this.btnQLTK);
             this.pQLTK.Location = new System.Drawing.Point(16, 228);
-            this.pQLTK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pQLTK.Margin = new System.Windows.Forms.Padding(4);
             this.pQLTK.Name = "pQLTK";
             this.pQLTK.Size = new System.Drawing.Size(469, 77);
             this.pQLTK.TabIndex = 2;
@@ -239,7 +239,7 @@ namespace QLCHTAN
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(52, 52);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -251,7 +251,7 @@ namespace QLCHTAN
             this.txtQLTK.Enabled = false;
             this.txtQLTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQLTK.Location = new System.Drawing.Point(223, 4);
-            this.txtQLTK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQLTK.Margin = new System.Windows.Forms.Padding(4);
             this.txtQLTK.Multiline = true;
             this.txtQLTK.Name = "txtQLTK";
             this.txtQLTK.Size = new System.Drawing.Size(237, 63);
@@ -266,7 +266,7 @@ namespace QLCHTAN
             this.btnQLTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLTK.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnQLTK.Location = new System.Drawing.Point(79, 4);
-            this.btnQLTK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLTK.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLTK.Name = "btnQLTK";
             this.btnQLTK.Size = new System.Drawing.Size(136, 64);
             this.btnQLTK.TabIndex = 0;
@@ -281,22 +281,10 @@ namespace QLCHTAN
             this.pQLDA.Controls.Add(this.txtQLMA);
             this.pQLDA.Controls.Add(this.btnQLDA);
             this.pQLDA.Location = new System.Drawing.Point(16, 390);
-            this.pQLDA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pQLDA.Margin = new System.Windows.Forms.Padding(4);
             this.pQLDA.Name = "pQLDA";
             this.pQLDA.Size = new System.Drawing.Size(469, 76);
             this.pQLDA.TabIndex = 3;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(54, 54);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
             // 
             // txtQLMA
             // 
@@ -305,7 +293,7 @@ namespace QLCHTAN
             this.txtQLMA.Enabled = false;
             this.txtQLMA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQLMA.Location = new System.Drawing.Point(223, 6);
-            this.txtQLMA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQLMA.Margin = new System.Windows.Forms.Padding(4);
             this.txtQLMA.Multiline = true;
             this.txtQLMA.Name = "txtQLMA";
             this.txtQLMA.Size = new System.Drawing.Size(238, 61);
@@ -320,7 +308,7 @@ namespace QLCHTAN
             this.btnQLDA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLDA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnQLDA.Location = new System.Drawing.Point(79, 6);
-            this.btnQLDA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLDA.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLDA.Name = "btnQLDA";
             this.btnQLDA.Size = new System.Drawing.Size(136, 64);
             this.btnQLDA.TabIndex = 0;
@@ -336,7 +324,7 @@ namespace QLCHTAN
             this.pQLNU.Controls.Add(this.btnQLNU);
             this.pQLNU.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pQLNU.Location = new System.Drawing.Point(16, 474);
-            this.pQLNU.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pQLNU.Margin = new System.Windows.Forms.Padding(4);
             this.pQLNU.Name = "pQLNU";
             this.pQLNU.Size = new System.Drawing.Size(469, 76);
             this.pQLNU.TabIndex = 4;
@@ -346,7 +334,7 @@ namespace QLCHTAN
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(71, 66);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -360,7 +348,7 @@ namespace QLCHTAN
             this.txtQLNU.Enabled = false;
             this.txtQLNU.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQLNU.Location = new System.Drawing.Point(223, 6);
-            this.txtQLNU.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQLNU.Margin = new System.Windows.Forms.Padding(4);
             this.txtQLNU.Multiline = true;
             this.txtQLNU.Name = "txtQLNU";
             this.txtQLNU.Size = new System.Drawing.Size(238, 61);
@@ -375,7 +363,7 @@ namespace QLCHTAN
             this.btnQLNU.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLNU.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnQLNU.Location = new System.Drawing.Point(79, 6);
-            this.btnQLNU.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLNU.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLNU.Name = "btnQLNU";
             this.btnQLNU.Size = new System.Drawing.Size(136, 64);
             this.btnQLNU.TabIndex = 0;
@@ -390,7 +378,7 @@ namespace QLCHTAN
             this.pQLLDA.Controls.Add(this.txtQLLDA);
             this.pQLLDA.Controls.Add(this.btnQLLDA);
             this.pQLLDA.Location = new System.Drawing.Point(16, 306);
-            this.pQLLDA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pQLLDA.Margin = new System.Windows.Forms.Padding(4);
             this.pQLLDA.Name = "pQLLDA";
             this.pQLLDA.Size = new System.Drawing.Size(469, 76);
             this.pQLLDA.TabIndex = 5;
@@ -400,7 +388,7 @@ namespace QLCHTAN
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(71, 66);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -414,7 +402,7 @@ namespace QLCHTAN
             this.txtQLLDA.Enabled = false;
             this.txtQLLDA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQLLDA.Location = new System.Drawing.Point(223, 6);
-            this.txtQLLDA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQLLDA.Margin = new System.Windows.Forms.Padding(4);
             this.txtQLLDA.Multiline = true;
             this.txtQLLDA.Name = "txtQLLDA";
             this.txtQLLDA.Size = new System.Drawing.Size(238, 61);
@@ -429,7 +417,7 @@ namespace QLCHTAN
             this.btnQLLDA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLLDA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnQLLDA.Location = new System.Drawing.Point(79, 6);
-            this.btnQLLDA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLLDA.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLLDA.Name = "btnQLLDA";
             this.btnQLLDA.Size = new System.Drawing.Size(136, 64);
             this.btnQLLDA.TabIndex = 0;
@@ -444,7 +432,7 @@ namespace QLCHTAN
             this.pQLNCC.Controls.Add(this.txtQLNCC);
             this.pQLNCC.Controls.Add(this.btnQLNCC);
             this.pQLNCC.Location = new System.Drawing.Point(503, 144);
-            this.pQLNCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pQLNCC.Margin = new System.Windows.Forms.Padding(4);
             this.pQLNCC.Name = "pQLNCC";
             this.pQLNCC.Size = new System.Drawing.Size(469, 76);
             this.pQLNCC.TabIndex = 6;
@@ -454,7 +442,7 @@ namespace QLCHTAN
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(71, 66);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -468,7 +456,7 @@ namespace QLCHTAN
             this.txtQLNCC.Enabled = false;
             this.txtQLNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQLNCC.Location = new System.Drawing.Point(223, 6);
-            this.txtQLNCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQLNCC.Margin = new System.Windows.Forms.Padding(4);
             this.txtQLNCC.Multiline = true;
             this.txtQLNCC.Name = "txtQLNCC";
             this.txtQLNCC.Size = new System.Drawing.Size(238, 61);
@@ -483,7 +471,7 @@ namespace QLCHTAN
             this.btnQLNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLNCC.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnQLNCC.Location = new System.Drawing.Point(79, 6);
-            this.btnQLNCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLNCC.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLNCC.Name = "btnQLNCC";
             this.btnQLNCC.Size = new System.Drawing.Size(136, 64);
             this.btnQLNCC.TabIndex = 0;
@@ -498,7 +486,7 @@ namespace QLCHTAN
             this.panel5.Controls.Add(this.txtQLKM);
             this.panel5.Controls.Add(this.btnQLKM);
             this.panel5.Location = new System.Drawing.Point(16, 641);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(469, 76);
             this.panel5.TabIndex = 7;
@@ -508,7 +496,7 @@ namespace QLCHTAN
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(71, 66);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -522,7 +510,7 @@ namespace QLCHTAN
             this.txtQLKM.Enabled = false;
             this.txtQLKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQLKM.Location = new System.Drawing.Point(223, 6);
-            this.txtQLKM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQLKM.Margin = new System.Windows.Forms.Padding(4);
             this.txtQLKM.Multiline = true;
             this.txtQLKM.Name = "txtQLKM";
             this.txtQLKM.Size = new System.Drawing.Size(238, 61);
@@ -537,7 +525,7 @@ namespace QLCHTAN
             this.btnQLKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLKM.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnQLKM.Location = new System.Drawing.Point(79, 6);
-            this.btnQLKM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLKM.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLKM.Name = "btnQLKM";
             this.btnQLKM.Size = new System.Drawing.Size(136, 64);
             this.btnQLKM.TabIndex = 0;
@@ -552,7 +540,7 @@ namespace QLCHTAN
             this.pQLLKM.Controls.Add(this.txtQLLKM);
             this.pQLLKM.Controls.Add(this.btnQLLKM);
             this.pQLLKM.Location = new System.Drawing.Point(16, 725);
-            this.pQLLKM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pQLLKM.Margin = new System.Windows.Forms.Padding(4);
             this.pQLLKM.Name = "pQLLKM";
             this.pQLLKM.Size = new System.Drawing.Size(469, 76);
             this.pQLLKM.TabIndex = 8;
@@ -562,7 +550,7 @@ namespace QLCHTAN
             this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
             this.pictureBox8.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(71, 66);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -576,7 +564,7 @@ namespace QLCHTAN
             this.txtQLLKM.Enabled = false;
             this.txtQLLKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQLLKM.Location = new System.Drawing.Point(223, 6);
-            this.txtQLLKM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQLLKM.Margin = new System.Windows.Forms.Padding(4);
             this.txtQLLKM.Multiline = true;
             this.txtQLLKM.Name = "txtQLLKM";
             this.txtQLLKM.Size = new System.Drawing.Size(238, 61);
@@ -591,7 +579,7 @@ namespace QLCHTAN
             this.btnQLLKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLLKM.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnQLLKM.Location = new System.Drawing.Point(79, 6);
-            this.btnQLLKM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLLKM.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLLKM.Name = "btnQLLKM";
             this.btnQLLKM.Size = new System.Drawing.Size(136, 64);
             this.btnQLLKM.TabIndex = 0;
@@ -606,7 +594,7 @@ namespace QLCHTAN
             this.pQLNH.Controls.Add(this.txtQLNH);
             this.pQLNH.Controls.Add(this.btnQLNH);
             this.pQLNH.Location = new System.Drawing.Point(503, 306);
-            this.pQLNH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pQLNH.Margin = new System.Windows.Forms.Padding(4);
             this.pQLNH.Name = "pQLNH";
             this.pQLNH.Size = new System.Drawing.Size(469, 76);
             this.pQLNH.TabIndex = 9;
@@ -616,7 +604,7 @@ namespace QLCHTAN
             this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
             this.pictureBox9.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(71, 66);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -630,7 +618,7 @@ namespace QLCHTAN
             this.txtQLNH.Enabled = false;
             this.txtQLNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQLNH.Location = new System.Drawing.Point(223, 6);
-            this.txtQLNH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQLNH.Margin = new System.Windows.Forms.Padding(4);
             this.txtQLNH.Multiline = true;
             this.txtQLNH.Name = "txtQLNH";
             this.txtQLNH.Size = new System.Drawing.Size(238, 61);
@@ -645,7 +633,7 @@ namespace QLCHTAN
             this.btnQLNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLNH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnQLNH.Location = new System.Drawing.Point(79, 6);
-            this.btnQLNH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLNH.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLNH.Name = "btnQLNH";
             this.btnQLNH.Size = new System.Drawing.Size(136, 64);
             this.btnQLNH.TabIndex = 0;
@@ -660,7 +648,7 @@ namespace QLCHTAN
             this.pXuatHang.Controls.Add(this.txtQLXH);
             this.pXuatHang.Controls.Add(this.btnQLXH);
             this.pXuatHang.Location = new System.Drawing.Point(503, 390);
-            this.pXuatHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pXuatHang.Margin = new System.Windows.Forms.Padding(4);
             this.pXuatHang.Name = "pXuatHang";
             this.pXuatHang.Size = new System.Drawing.Size(469, 76);
             this.pXuatHang.TabIndex = 10;
@@ -670,7 +658,7 @@ namespace QLCHTAN
             this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
             this.pictureBox10.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(71, 66);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -684,7 +672,7 @@ namespace QLCHTAN
             this.txtQLXH.Enabled = false;
             this.txtQLXH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQLXH.Location = new System.Drawing.Point(223, 6);
-            this.txtQLXH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQLXH.Margin = new System.Windows.Forms.Padding(4);
             this.txtQLXH.Multiline = true;
             this.txtQLXH.Name = "txtQLXH";
             this.txtQLXH.Size = new System.Drawing.Size(238, 61);
@@ -699,7 +687,7 @@ namespace QLCHTAN
             this.btnQLXH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLXH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnQLXH.Location = new System.Drawing.Point(79, 6);
-            this.btnQLXH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLXH.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLXH.Name = "btnQLXH";
             this.btnQLXH.Size = new System.Drawing.Size(136, 64);
             this.btnQLXH.TabIndex = 0;
@@ -714,7 +702,7 @@ namespace QLCHTAN
             this.pDatHang.Controls.Add(this.txtQLDH);
             this.pDatHang.Controls.Add(this.btnQLDH);
             this.pDatHang.Location = new System.Drawing.Point(503, 228);
-            this.pDatHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pDatHang.Margin = new System.Windows.Forms.Padding(4);
             this.pDatHang.Name = "pDatHang";
             this.pDatHang.Size = new System.Drawing.Size(469, 76);
             this.pDatHang.TabIndex = 11;
@@ -724,7 +712,7 @@ namespace QLCHTAN
             this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
             this.pictureBox11.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(71, 66);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -738,7 +726,7 @@ namespace QLCHTAN
             this.txtQLDH.Enabled = false;
             this.txtQLDH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQLDH.Location = new System.Drawing.Point(223, 6);
-            this.txtQLDH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQLDH.Margin = new System.Windows.Forms.Padding(4);
             this.txtQLDH.Multiline = true;
             this.txtQLDH.Name = "txtQLDH";
             this.txtQLDH.Size = new System.Drawing.Size(238, 61);
@@ -753,7 +741,7 @@ namespace QLCHTAN
             this.btnQLDH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLDH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnQLDH.Location = new System.Drawing.Point(79, 6);
-            this.btnQLDH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLDH.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLDH.Name = "btnQLDH";
             this.btnQLDH.Size = new System.Drawing.Size(136, 64);
             this.btnQLDH.TabIndex = 0;
@@ -768,7 +756,7 @@ namespace QLCHTAN
             this.panel1.Controls.Add(this.txtQLTH);
             this.panel1.Controls.Add(this.btnQLTH);
             this.panel1.Location = new System.Drawing.Point(503, 475);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(469, 76);
             this.panel1.TabIndex = 12;
@@ -778,7 +766,7 @@ namespace QLCHTAN
             this.pictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
             this.pictureBox12.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(71, 66);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -792,7 +780,7 @@ namespace QLCHTAN
             this.txtQLTH.Enabled = false;
             this.txtQLTH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQLTH.Location = new System.Drawing.Point(223, 6);
-            this.txtQLTH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQLTH.Margin = new System.Windows.Forms.Padding(4);
             this.txtQLTH.Multiline = true;
             this.txtQLTH.Name = "txtQLTH";
             this.txtQLTH.Size = new System.Drawing.Size(238, 61);
@@ -807,7 +795,7 @@ namespace QLCHTAN
             this.btnQLTH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLTH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnQLTH.Location = new System.Drawing.Point(79, 6);
-            this.btnQLTH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLTH.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLTH.Name = "btnQLTH";
             this.btnQLTH.Size = new System.Drawing.Size(136, 64);
             this.btnQLTH.TabIndex = 0;
@@ -822,7 +810,7 @@ namespace QLCHTAN
             this.panel2.Controls.Add(this.txtQLMH);
             this.panel2.Controls.Add(this.btnQLMH);
             this.panel2.Location = new System.Drawing.Point(16, 555);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(469, 76);
             this.panel2.TabIndex = 13;
@@ -832,7 +820,7 @@ namespace QLCHTAN
             this.pictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
             this.pictureBox13.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(71, 66);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -846,7 +834,7 @@ namespace QLCHTAN
             this.txtQLMH.Enabled = false;
             this.txtQLMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQLMH.Location = new System.Drawing.Point(223, 6);
-            this.txtQLMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQLMH.Margin = new System.Windows.Forms.Padding(4);
             this.txtQLMH.Multiline = true;
             this.txtQLMH.Name = "txtQLMH";
             this.txtQLMH.Size = new System.Drawing.Size(238, 61);
@@ -861,13 +849,25 @@ namespace QLCHTAN
             this.btnQLMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLMH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnQLMH.Location = new System.Drawing.Point(79, 6);
-            this.btnQLMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLMH.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLMH.Name = "btnQLMH";
             this.btnQLMH.Size = new System.Drawing.Size(136, 64);
             this.btnQLMH.TabIndex = 0;
             this.btnQLMH.Text = "Quản lí mặt hàng";
             this.btnQLMH.UseVisualStyleBackColor = true;
             this.btnQLMH.Click += new System.EventHandler(this.btnQLMH_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(4, 6);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(54, 54);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
             // 
             // GiaoDienQuanLi_GUI
             // 
@@ -891,7 +891,7 @@ namespace QLCHTAN
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.Color.Cornsilk;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GiaoDienQuanLi_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giao diện quản lí";
@@ -906,7 +906,6 @@ namespace QLCHTAN
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pQLDA.ResumeLayout(false);
             this.pQLDA.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pQLNU.ResumeLayout(false);
             this.pQLNU.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -937,6 +936,7 @@ namespace QLCHTAN
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -956,7 +956,6 @@ namespace QLCHTAN
         private System.Windows.Forms.Button btnQLTK;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel pQLDA;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox txtQLMA;
         private System.Windows.Forms.Button btnQLDA;
         private System.Windows.Forms.Panel pQLNU;
@@ -999,5 +998,6 @@ namespace QLCHTAN
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.TextBox txtQLMH;
         private System.Windows.Forms.Button btnQLMH;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

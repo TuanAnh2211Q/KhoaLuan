@@ -25,15 +25,15 @@ namespace DTO
         public string Phai { get => phai; set => phai = value; }
         public string Email { get => email; set => email = value; }
 
-        public KhachHang_DTO(string idKhachHang,string sDT,string tenKhachHang,string phai, string diaChi,string email, string ghiChu)
+        public KhachHang_DTO(string idKhachHang,string sDT,string tenKhachHang, string diaChi, string phai, string email, string ghiChu)
         {
-            this.idKhachHang = IdKhachHang;
-            this.sDT = SDT;
-            this.tenKhachHang = TenKhachHang;
-            this.phai = Phai;
-            this.diaChi = DiaChi;
-            this.email = Email;
-            this.ghiChu = GhiChu;
+            this.IdKhachHang = idKhachHang;
+            this.SDT = sDT;
+            this.TenKhachHang = tenKhachHang;
+            this.DiaChi = diaChi;
+            this.Phai = phai;
+            this.Email = email;
+            this.GhiChu = ghiChu;
         }
     }
 }
