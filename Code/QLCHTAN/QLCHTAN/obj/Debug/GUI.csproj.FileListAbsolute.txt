@@ -88,3 +88,5 @@ D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\GUI.csproj.CopyComplete
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.exe
 D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.pdb
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.PhieuTra_GUI.resources
+D:\KLTN2022\Code\QLCHTAN\QLCHTAN\obj\Debug\QLCHTAN.ThongTinPhieuTra_GUI.resources
