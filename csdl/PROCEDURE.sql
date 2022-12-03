@@ -274,6 +274,10 @@ as
 select * from NhapKho
 go
 
+create procedure select_DatHang
+as
+select * from DatHang where maDatHang in (select maDatHang from NhapKho)
+go
 
 
 --=========================THÔNG TIN CHI TIẾT PHIẾU NHẬP=====
@@ -286,7 +290,7 @@ go
 ----========PHIẾU ĐẶT HÀNG==============
 create  procedure select_DatHang
 as
-select maDatHang, ngayDatHang,ngayDuKienGiao,phuongThucThanhToan,ghiChu,trangThai from DatHang
+select maDatHang, ngayDatHang,ngayDuKienGiao,phuongThucThanhToan,ghiChu from DatHang
 go
 --Tổng giá phiếu đặt
 
@@ -330,8 +334,8 @@ as
 	select*from KhachHang
 exec dbo.select_KhachHang
 
-create proc update_KhachHang
-@tenKhachHang  nvarchar(100), @Phai varchar(10),@SDT varchar(11),
+alter proc update_KhachHang
+@tenKhachHang  nvarchar(100), @Phai nvarchar(10),@SDT varchar(11),
 @Email varchar(50), @diaChi nvarchar(100),@ghiChu nvarchar(max),
 @idKhachHang int
 as
@@ -353,7 +357,7 @@ create proc delete_KhachHang
 as
  delete from KhachHang where idKhachHang=@idKhachHang
 go
-exec dbo.delete_KhachHang
+exec dbo.delete_KhachHang 
 
 --======================NHÀ CUNG CẤP===========
 create proc select_NCC
@@ -463,15 +467,10 @@ delete from ThongTinKhuyenMai where maKhuyenMai=@maKM and maSanPham=@maSP
 
 
 --===========PHIẾU ĐẶT=-----------------------
-create procedure select_DatHang
-as
-select * from DatHang 
-go
-
-create proc insert_DatHang 
+create  proc insert_DatHang 
 @maDH varchar(10), @ngayDat datetime, @ngaydukiengiao datetime, @ghiChu nvarchar(max), @phuongthucthanhtoan nvarchar(50)
 as
-insert into DatHang values (@maDH,@ngayDat,@ngaydukiengiao,@ghiChu,@phuongthucthanhtoan,NULL)
+insert into DatHang values (@maDH,@ngayDat,@ngaydukiengiao,@ghiChu,@phuongthucthanhtoan)
 go
 
 create  proc delete_DatHang 
@@ -480,12 +479,11 @@ as
 delete from DatHang where maDatHang=@maDH
 go
 
-create proc update_DatHang 
-@maDH varchar(10), @ngayDat datetime, @ngaydukiengiao datetime, @ghiChu nvarchar(max), @phuongthucthanhtoan nvarchar(50),@trangThai bit
+create  proc update_DatHang 
+@maDH varchar(10), @ngayDat datetime, @ngaydukiengiao datetime, @ghiChu nvarchar(max), @phuongthucthanhtoan nvarchar(50)
 as
-update DatHang set ngayDatHang=@ngayDat, ngayDuKienGiao=@ngaydukiengiao, ghiChu=@ghiChu, phuongThucThanhToan=@phuongthucthanhtoan, trangThai=@trangThai where maDatHang=@maDH
+update DatHang set ngayDatHang=@ngayDat, ngayDuKienGiao=@ngaydukiengiao, ghiChu=@ghiChu, phuongThucThanhToan=@phuongthucthanhtoan where maDatHang=@maDH
 go
-
 
 
 

@@ -48,6 +48,14 @@ namespace QLCHTAN
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panelKhachHang = new System.Windows.Forms.Panel();
+            this.rdbNu = new System.Windows.Forms.RadioButton();
+            this.rdbNam = new System.Windows.Forms.RadioButton();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.rtxtGhiChu = new System.Windows.Forms.RichTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.panelThanhToan = new System.Windows.Forms.Panel();
@@ -56,6 +64,8 @@ namespace QLCHTAN
             this.label8 = new System.Windows.Forms.Label();
             this.PanelOrder = new System.Windows.Forms.Panel();
             this.panelThongTinOrder = new System.Windows.Forms.Panel();
+            this.cbxSize = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.btnXoaMon = new System.Windows.Forms.Button();
             this.btnThemMon = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -64,9 +74,6 @@ namespace QLCHTAN
             this.cbbDanhMucMon = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.txtGhiChu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonHang)).BeginInit();
             this.gbPhuongThuc.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -88,7 +95,7 @@ namespace QLCHTAN
             // 
             // btnThanhToan
             // 
-            this.btnThanhToan.BackColor = System.Drawing.Color.Aqua;
+            this.btnThanhToan.BackColor = System.Drawing.Color.PowderBlue;
             this.btnThanhToan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnThanhToan.Location = new System.Drawing.Point(16, 521);
             this.btnThanhToan.Name = "btnThanhToan";
@@ -131,14 +138,14 @@ namespace QLCHTAN
             this.dgvDonHang.Name = "dgvDonHang";
             this.dgvDonHang.RowHeadersWidth = 51;
             this.dgvDonHang.RowTemplate.Height = 24;
-            this.dgvDonHang.Size = new System.Drawing.Size(435, 339);
+            this.dgvDonHang.Size = new System.Drawing.Size(438, 441);
             this.dgvDonHang.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 252);
+            this.label4.Location = new System.Drawing.Point(3, 313);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 21);
             this.label4.TabIndex = 8;
@@ -161,15 +168,20 @@ namespace QLCHTAN
             this.txtTenKhach.Name = "txtTenKhach";
             this.txtTenKhach.Size = new System.Drawing.Size(351, 32);
             this.txtTenKhach.TabIndex = 7;
+            this.txtTenKhach.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTenKhach_KeyPress);
             // 
             // cbbSDT
             // 
+            this.cbbSDT.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbSDT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbbSDT.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbSDT.FormattingEnabled = true;
             this.cbbSDT.Location = new System.Drawing.Point(42, 118);
             this.cbbSDT.Name = "cbbSDT";
             this.cbbSDT.Size = new System.Drawing.Size(351, 32);
             this.cbbSDT.TabIndex = 5;
+            this.cbbSDT.SelectedValueChanged += new System.EventHandler(this.cbbSDT_SelectedValueChanged);
+            this.cbbSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbbSDT_KeyPress);
             // 
             // label2
             // 
@@ -192,6 +204,7 @@ namespace QLCHTAN
             this.rdbMangVe.TabStop = true;
             this.rdbMangVe.Text = "Mang Về ";
             this.rdbMangVe.UseVisualStyleBackColor = true;
+            this.rdbMangVe.CheckedChanged += new System.EventHandler(this.rdbMangVe_CheckedChanged);
             // 
             // rdbAnTaiCho
             // 
@@ -204,6 +217,7 @@ namespace QLCHTAN
             this.rdbAnTaiCho.TabStop = true;
             this.rdbAnTaiCho.Text = "Ăn Tại Chổ ";
             this.rdbAnTaiCho.UseVisualStyleBackColor = true;
+            this.rdbAnTaiCho.CheckedChanged += new System.EventHandler(this.rdbAnTaiCho_CheckedChanged);
             // 
             // label3
             // 
@@ -218,7 +232,7 @@ namespace QLCHTAN
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 19);
+            this.label1.Location = new System.Drawing.Point(69, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(256, 29);
             this.label1.TabIndex = 3;
@@ -229,9 +243,9 @@ namespace QLCHTAN
             this.gbPhuongThuc.Controls.Add(this.rdbGiaoHang);
             this.gbPhuongThuc.Controls.Add(this.rdbMangVe);
             this.gbPhuongThuc.Controls.Add(this.rdbAnTaiCho);
-            this.gbPhuongThuc.Location = new System.Drawing.Point(3, 365);
+            this.gbPhuongThuc.Location = new System.Drawing.Point(3, 478);
             this.gbPhuongThuc.Name = "gbPhuongThuc";
-            this.gbPhuongThuc.Size = new System.Drawing.Size(402, 170);
+            this.gbPhuongThuc.Size = new System.Drawing.Size(402, 144);
             this.gbPhuongThuc.TabIndex = 2;
             this.gbPhuongThuc.TabStop = false;
             this.gbPhuongThuc.Text = "Loại Dịch Vụ :";
@@ -247,6 +261,7 @@ namespace QLCHTAN
             this.rdbGiaoHang.TabStop = true;
             this.rdbGiaoHang.Text = "Giao Hàng";
             this.rdbGiaoHang.UseVisualStyleBackColor = true;
+            this.rdbGiaoHang.CheckedChanged += new System.EventHandler(this.rdbGiaoHang_CheckedChanged);
             // 
             // flowLayoutPanel1
             // 
@@ -269,8 +284,13 @@ namespace QLCHTAN
             // 
             // panelKhachHang
             // 
-            this.panelKhachHang.BackColor = System.Drawing.SystemColors.Info;
-            this.panelKhachHang.Controls.Add(this.txtGhiChu);
+            this.panelKhachHang.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panelKhachHang.Controls.Add(this.rdbNu);
+            this.panelKhachHang.Controls.Add(this.rdbNam);
+            this.panelKhachHang.Controls.Add(this.label14);
+            this.panelKhachHang.Controls.Add(this.txtEmail);
+            this.panelKhachHang.Controls.Add(this.label13);
+            this.panelKhachHang.Controls.Add(this.rtxtGhiChu);
             this.panelKhachHang.Controls.Add(this.label11);
             this.panelKhachHang.Controls.Add(this.txtDiaChi);
             this.panelKhachHang.Controls.Add(this.label4);
@@ -283,12 +303,92 @@ namespace QLCHTAN
             this.panelKhachHang.Controls.Add(this.flowLayoutPanel1);
             this.panelKhachHang.Location = new System.Drawing.Point(2, 1);
             this.panelKhachHang.Name = "panelKhachHang";
-            this.panelKhachHang.Size = new System.Drawing.Size(408, 660);
+            this.panelKhachHang.Size = new System.Drawing.Size(405, 769);
             this.panelKhachHang.TabIndex = 6;
+            // 
+            // rdbNu
+            // 
+            this.rdbNu.AutoSize = true;
+            this.rdbNu.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbNu.Location = new System.Drawing.Point(217, 279);
+            this.rdbNu.Name = "rdbNu";
+            this.rdbNu.Size = new System.Drawing.Size(58, 28);
+            this.rdbNu.TabIndex = 17;
+            this.rdbNu.TabStop = true;
+            this.rdbNu.Text = "Nữ";
+            this.rdbNu.UseVisualStyleBackColor = true;
+            this.rdbNu.CheckedChanged += new System.EventHandler(this.rdbNu_CheckedChanged);
+            // 
+            // rdbNam
+            // 
+            this.rdbNam.AutoSize = true;
+            this.rdbNam.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbNam.Location = new System.Drawing.Point(83, 279);
+            this.rdbNam.Name = "rdbNam";
+            this.rdbNam.Size = new System.Drawing.Size(71, 28);
+            this.rdbNam.TabIndex = 16;
+            this.rdbNam.TabStop = true;
+            this.rdbNam.Text = "Nam";
+            this.rdbNam.UseVisualStyleBackColor = true;
+            this.rdbNam.CheckedChanged += new System.EventHandler(this.rdbNam_CheckedChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(6, 247);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(83, 21);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Giới Tính :";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(42, 421);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(354, 32);
+            this.txtEmail.TabIndex = 14;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(6, 390);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(57, 21);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "Email :";
+            // 
+            // rtxtGhiChu
+            // 
+            this.rtxtGhiChu.Location = new System.Drawing.Point(7, 678);
+            this.rtxtGhiChu.Name = "rtxtGhiChu";
+            this.rtxtGhiChu.Size = new System.Drawing.Size(383, 71);
+            this.rtxtGhiChu.TabIndex = 12;
+            this.rtxtGhiChu.Text = "";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(3, 651);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(84, 24);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Ghi Chú :";
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Location = new System.Drawing.Point(42, 344);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(351, 32);
+            this.txtDiaChi.TabIndex = 9;
             // 
             // panelThanhToan
             // 
-            this.panelThanhToan.BackColor = System.Drawing.SystemColors.Info;
+            this.panelThanhToan.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panelThanhToan.Controls.Add(this.txtTongTien);
             this.panelThanhToan.Controls.Add(this.label10);
             this.panelThanhToan.Controls.Add(this.btnThanhToan);
@@ -298,7 +398,7 @@ namespace QLCHTAN
             this.panelThanhToan.Controls.Add(this.label8);
             this.panelThanhToan.Location = new System.Drawing.Point(860, 2);
             this.panelThanhToan.Name = "panelThanhToan";
-            this.panelThanhToan.Size = new System.Drawing.Size(290, 660);
+            this.panelThanhToan.Size = new System.Drawing.Size(290, 768);
             this.panelThanhToan.TabIndex = 8;
             // 
             // cbbMaGiamGia
@@ -325,7 +425,7 @@ namespace QLCHTAN
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(48, 10);
+            this.label8.Location = new System.Drawing.Point(75, 15);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(147, 29);
             this.label8.TabIndex = 4;
@@ -333,16 +433,19 @@ namespace QLCHTAN
             // 
             // PanelOrder
             // 
-            this.PanelOrder.BackColor = System.Drawing.SystemColors.Info;
+            this.PanelOrder.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.PanelOrder.Controls.Add(this.dgvDonHang);
             this.PanelOrder.Controls.Add(this.panelThongTinOrder);
             this.PanelOrder.Location = new System.Drawing.Point(413, 1);
             this.PanelOrder.Name = "PanelOrder";
-            this.PanelOrder.Size = new System.Drawing.Size(444, 660);
+            this.PanelOrder.Size = new System.Drawing.Size(444, 769);
             this.PanelOrder.TabIndex = 7;
             // 
             // panelThongTinOrder
             // 
+            this.panelThongTinOrder.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panelThongTinOrder.Controls.Add(this.cbxSize);
+            this.panelThongTinOrder.Controls.Add(this.label12);
             this.panelThongTinOrder.Controls.Add(this.btnXoaMon);
             this.panelThongTinOrder.Controls.Add(this.btnThemMon);
             this.panelThongTinOrder.Controls.Add(this.label7);
@@ -356,11 +459,30 @@ namespace QLCHTAN
             this.panelThongTinOrder.Size = new System.Drawing.Size(435, 303);
             this.panelThongTinOrder.TabIndex = 0;
             // 
+            // cbxSize
+            // 
+            this.cbxSize.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxSize.FormattingEnabled = true;
+            this.cbxSize.Location = new System.Drawing.Point(154, 126);
+            this.cbxSize.Name = "cbxSize";
+            this.cbxSize.Size = new System.Drawing.Size(266, 32);
+            this.cbxSize.TabIndex = 14;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(3, 134);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(118, 24);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Kích Thước :";
+            // 
             // btnXoaMon
             // 
-            this.btnXoaMon.BackColor = System.Drawing.Color.Aqua;
+            this.btnXoaMon.BackColor = System.Drawing.Color.PowderBlue;
             this.btnXoaMon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnXoaMon.Location = new System.Drawing.Point(226, 248);
+            this.btnXoaMon.Location = new System.Drawing.Point(250, 244);
             this.btnXoaMon.Name = "btnXoaMon";
             this.btnXoaMon.Size = new System.Drawing.Size(153, 45);
             this.btnXoaMon.TabIndex = 12;
@@ -369,9 +491,9 @@ namespace QLCHTAN
             // 
             // btnThemMon
             // 
-            this.btnThemMon.BackColor = System.Drawing.Color.Aqua;
+            this.btnThemMon.BackColor = System.Drawing.Color.PowderBlue;
             this.btnThemMon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnThemMon.Location = new System.Drawing.Point(46, 248);
+            this.btnThemMon.Location = new System.Drawing.Point(70, 244);
             this.btnThemMon.Name = "btnThemMon";
             this.btnThemMon.Size = new System.Drawing.Size(153, 45);
             this.btnThemMon.TabIndex = 11;
@@ -382,7 +504,7 @@ namespace QLCHTAN
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 157);
+            this.label7.Location = new System.Drawing.Point(3, 200);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(103, 24);
             this.label7.TabIndex = 10;
@@ -391,7 +513,7 @@ namespace QLCHTAN
             // nudSoLuong
             // 
             this.nudSoLuong.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudSoLuong.Location = new System.Drawing.Point(154, 149);
+            this.nudSoLuong.Location = new System.Drawing.Point(154, 192);
             this.nudSoLuong.Minimum = new decimal(new int[] {
             1,
             0,
@@ -411,7 +533,7 @@ namespace QLCHTAN
             // 
             this.cbbTenMon.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbTenMon.FormattingEnabled = true;
-            this.cbbTenMon.Location = new System.Drawing.Point(154, 79);
+            this.cbbTenMon.Location = new System.Drawing.Point(154, 68);
             this.cbbTenMon.Name = "cbbTenMon";
             this.cbbTenMon.Size = new System.Drawing.Size(266, 32);
             this.cbbTenMon.TabIndex = 8;
@@ -429,7 +551,7 @@ namespace QLCHTAN
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 87);
+            this.label6.Location = new System.Drawing.Point(3, 76);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 24);
             this.label6.TabIndex = 6;
@@ -445,46 +567,22 @@ namespace QLCHTAN
             this.label5.TabIndex = 5;
             this.label5.Text = "Danh Mục Món :";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 572);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 24);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Ghi Chú :";
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(42, 283);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(351, 32);
-            this.txtDiaChi.TabIndex = 9;
-            // 
-            // txtGhiChu
-            // 
-            this.txtGhiChu.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGhiChu.Location = new System.Drawing.Point(41, 599);
-            this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(351, 32);
-            this.txtGhiChu.TabIndex = 12;
-            // 
             // Order_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(1152, 660);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1152, 767);
             this.Controls.Add(this.panelKhachHang);
             this.Controls.Add(this.panelThanhToan);
             this.Controls.Add(this.PanelOrder);
             this.Font = new System.Drawing.Font("Candara Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Order_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderChinh";
+            this.Load += new System.EventHandler(this.Order_GUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonHang)).EndInit();
             this.gbPhuongThuc.ResumeLayout(false);
             this.gbPhuongThuc.PerformLayout();
@@ -539,8 +637,15 @@ namespace QLCHTAN
         private System.Windows.Forms.ComboBox cbbDanhMucMon;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtDiaChi;
+        private System.Windows.Forms.RichTextBox rtxtGhiChu;
+        private System.Windows.Forms.ComboBox cbxSize;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.RadioButton rdbNu;
+        private System.Windows.Forms.RadioButton rdbNam;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label13;
     }
 }

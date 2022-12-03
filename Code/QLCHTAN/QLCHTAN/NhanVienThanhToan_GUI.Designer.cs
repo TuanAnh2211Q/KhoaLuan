@@ -29,8 +29,10 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhanVienThanhToan_GUI));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnThanhToan = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnHienMatKhau = new System.Windows.Forms.Button();
             this.btnKhongHienMatKhau = new System.Windows.Forms.Button();
@@ -38,7 +40,9 @@ namespace QLCHTAN
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnThanhToan = new System.Windows.Forms.Button();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +50,9 @@ namespace QLCHTAN
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.lblDate);
+            this.panel1.Controls.Add(this.lblTime);
             this.panel1.Controls.Add(this.btnThanhToan);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnHienMatKhau);
@@ -59,6 +66,19 @@ namespace QLCHTAN
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(641, 290);
             this.panel1.TabIndex = 0;
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnThanhToan.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnThanhToan.Location = new System.Drawing.Point(205, 203);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(299, 48);
+            this.btnThanhToan.TabIndex = 21;
+            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // label1
             // 
@@ -127,18 +147,29 @@ namespace QLCHTAN
             this.label2.TabIndex = 13;
             this.label2.Text = "Tài Khoản :";
             // 
-            // btnThanhToan
+            // lblDate
             // 
-            this.btnThanhToan.BackColor = System.Drawing.Color.Aqua;
-            this.btnThanhToan.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnThanhToan.Location = new System.Drawing.Point(205, 203);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(299, 48);
-            this.btnThanhToan.TabIndex = 21;
-            this.btnThanhToan.Text = "Thanh Toán";
-            this.btnThanhToan.UseVisualStyleBackColor = false;
-            this.btnThanhToan.Click += new System.EventHandler(this.button1_Click);
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(23, 240);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(90, 17);
+            this.lblDate.TabIndex = 24;
+            this.lblDate.Text = "Ngày hiện tại:";
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Location = new System.Drawing.Point(23, 253);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(115, 17);
+            this.lblTime.TabIndex = 23;
+            this.lblTime.Text = "Thời gian hiện tại:";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // NhanVienThanhToan_GUI
             // 
@@ -170,5 +201,8 @@ namespace QLCHTAN
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnThanhToan;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -32,7 +32,6 @@ namespace QLCHTAN
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtMaKhachHang = new System.Windows.Forms.TextBox();
@@ -65,22 +64,21 @@ namespace QLCHTAN
             // 
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.btnXoa);
-            this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnLamMoi);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(5, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(446, 422);
+            this.panel1.Size = new System.Drawing.Size(446, 429);
             this.panel1.TabIndex = 0;
             // 
             // btnSua
             // 
-            this.btnSua.BackColor = System.Drawing.Color.Transparent;
-            this.btnSua.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnSua.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSua.Location = new System.Drawing.Point(210, 377);
+            this.btnSua.Location = new System.Drawing.Point(166, 377);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(103, 31);
+            this.btnSua.Size = new System.Drawing.Size(103, 45);
             this.btnSua.TabIndex = 25;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
@@ -88,37 +86,25 @@ namespace QLCHTAN
             // 
             // btnXoa
             // 
-            this.btnXoa.BackColor = System.Drawing.Color.Transparent;
-            this.btnXoa.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnXoa.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnXoa.Location = new System.Drawing.Point(109, 377);
+            this.btnXoa.Location = new System.Drawing.Point(23, 377);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(100, 31);
+            this.btnXoa.Size = new System.Drawing.Size(100, 45);
             this.btnXoa.TabIndex = 24;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.Transparent;
-            this.btnThem.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnThem.Location = new System.Drawing.Point(7, 377);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(96, 31);
-            this.btnThem.TabIndex = 23;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = false;
-            // 
             // btnLamMoi
             // 
-            this.btnLamMoi.BackColor = System.Drawing.Color.Transparent;
-            this.btnLamMoi.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnLamMoi.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLamMoi.Location = new System.Drawing.Point(319, 377);
+            this.btnLamMoi.Location = new System.Drawing.Point(314, 377);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(104, 31);
+            this.btnLamMoi.Size = new System.Drawing.Size(109, 45);
             this.btnLamMoi.TabIndex = 22;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = false;
@@ -294,7 +280,7 @@ namespace QLCHTAN
             this.dgvThongTinKhachHang.ReadOnly = true;
             this.dgvThongTinKhachHang.RowHeadersWidth = 51;
             this.dgvThongTinKhachHang.RowTemplate.Height = 24;
-            this.dgvThongTinKhachHang.Size = new System.Drawing.Size(466, 390);
+            this.dgvThongTinKhachHang.Size = new System.Drawing.Size(489, 429);
             this.dgvThongTinKhachHang.TabIndex = 1;
             this.dgvThongTinKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinKhachHang_CellClick);
             // 
@@ -357,7 +343,7 @@ namespace QLCHTAN
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(935, 440);
             this.Controls.Add(this.dgvThongTinKhachHang);
             this.Controls.Add(this.panel1);
@@ -390,7 +376,6 @@ namespace QLCHTAN
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.DataGridView dgvThongTinKhachHang;
         private System.Windows.Forms.RadioButton rdbNu;

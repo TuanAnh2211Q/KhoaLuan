@@ -15,6 +15,7 @@ namespace QLCHTAN
         public NhanVienThanhToan_GUI()
         {
             InitializeComponent();
+            timer1.Enabled = true;
         }
 
         private void btnHienMatKhau_Click(object sender, EventArgs e)
@@ -37,7 +38,7 @@ namespace QLCHTAN
 
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnThanhToan_Click(object sender, EventArgs e)
         {
             try
             {
@@ -48,6 +49,17 @@ namespace QLCHTAN
             {
                 MessageBox.Show("Tài Khoản hoặc Mật Khẩu không đúng!!!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+        
+                string time = DateTime.Now.ToLongTimeString();
+                string date = DateTime.Now.ToShortDateString();
+                lblTime.Text = time;
+                lblDate.Text = date;
         }
     }
 }
