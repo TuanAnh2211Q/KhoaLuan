@@ -29,11 +29,16 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Order_GUI));
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.rdbThe = new System.Windows.Forms.RadioButton();
             this.rdbTienMat = new System.Windows.Forms.RadioButton();
             this.dgvDonHang = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtTenKhach = new System.Windows.Forms.TextBox();
@@ -48,6 +53,7 @@ namespace QLCHTAN
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panelKhachHang = new System.Windows.Forms.Panel();
+            this.btnLamMoi = new System.Windows.Forms.Button();
             this.rdbNu = new System.Windows.Forms.RadioButton();
             this.rdbNam = new System.Windows.Forms.RadioButton();
             this.label14 = new System.Windows.Forms.Label();
@@ -133,13 +139,46 @@ namespace QLCHTAN
             // 
             this.dgvDonHang.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dgvDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDonHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
             this.dgvDonHang.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvDonHang.Location = new System.Drawing.Point(3, 313);
             this.dgvDonHang.Name = "dgvDonHang";
             this.dgvDonHang.RowHeadersWidth = 51;
             this.dgvDonHang.RowTemplate.Height = 24;
-            this.dgvDonHang.Size = new System.Drawing.Size(438, 441);
+            this.dgvDonHang.Size = new System.Drawing.Size(438, 453);
             this.dgvDonHang.TabIndex = 1;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Tên Món ";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Số Lượng";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Đơn giá";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Thành Tiền";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
             // 
             // label4
             // 
@@ -243,7 +282,7 @@ namespace QLCHTAN
             this.gbPhuongThuc.Controls.Add(this.rdbGiaoHang);
             this.gbPhuongThuc.Controls.Add(this.rdbMangVe);
             this.gbPhuongThuc.Controls.Add(this.rdbAnTaiCho);
-            this.gbPhuongThuc.Location = new System.Drawing.Point(3, 478);
+            this.gbPhuongThuc.Location = new System.Drawing.Point(3, 459);
             this.gbPhuongThuc.Name = "gbPhuongThuc";
             this.gbPhuongThuc.Size = new System.Drawing.Size(402, 144);
             this.gbPhuongThuc.TabIndex = 2;
@@ -285,6 +324,7 @@ namespace QLCHTAN
             // panelKhachHang
             // 
             this.panelKhachHang.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panelKhachHang.Controls.Add(this.btnLamMoi);
             this.panelKhachHang.Controls.Add(this.rdbNu);
             this.panelKhachHang.Controls.Add(this.rdbNam);
             this.panelKhachHang.Controls.Add(this.label14);
@@ -305,6 +345,16 @@ namespace QLCHTAN
             this.panelKhachHang.Name = "panelKhachHang";
             this.panelKhachHang.Size = new System.Drawing.Size(405, 769);
             this.panelKhachHang.TabIndex = 6;
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
+            this.btnLamMoi.Location = new System.Drawing.Point(146, 710);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(104, 44);
+            this.btnLamMoi.TabIndex = 18;
+            this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // rdbNu
             // 
@@ -362,7 +412,7 @@ namespace QLCHTAN
             // 
             // rtxtGhiChu
             // 
-            this.rtxtGhiChu.Location = new System.Drawing.Point(7, 678);
+            this.rtxtGhiChu.Location = new System.Drawing.Point(10, 633);
             this.rtxtGhiChu.Name = "rtxtGhiChu";
             this.rtxtGhiChu.Size = new System.Drawing.Size(383, 71);
             this.rtxtGhiChu.TabIndex = 12;
@@ -372,7 +422,7 @@ namespace QLCHTAN
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 651);
+            this.label11.Location = new System.Drawing.Point(6, 606);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(84, 24);
             this.label11.TabIndex = 11;
@@ -647,5 +697,10 @@ namespace QLCHTAN
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Button btnLamMoi;
     }
 }

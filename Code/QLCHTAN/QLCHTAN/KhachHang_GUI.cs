@@ -21,29 +21,11 @@ namespace QLCHTAN
         {
             InitializeComponent();
         }
-        private void KhachHang_GUI_Load(object sender, EventArgs e)
-        {
-            dgvThongTinKhachHang.DataSource = khachhang_BUS.show_dsKhachHang_BUS();
-            txtSDT.Text = txtTenKhachHang.Text = txtGmail.Text = rtbGhiChu.Text = "";
-            txtSDT.Enabled = true;
 
-        }
-
-        private void btnLamMoi_Click(object sender, EventArgs e)
-        {
-            txtSDT.Clear();
-            txtTenKhachHang.Clear();
-            txtGmail.Clear();
-            rtbGhiChu.Clear();
-            txtDiaChi.Clear();
-            rdbNam.Checked = rdbNu.Checked = false;
-            txtSDT.Focus();
-            dgvThongTinKhachHang.DataSource = khachhang_BUS.show_dsKhachHang_BUS();
-            txtMaKhachHang.Clear();
-        }
+        #region Method
         public bool kt_KhachHang()
         {
-            for(int i=0;i<=dgvThongTinKhachHang.Rows.Count-1;i++)
+            for (int i = 0; i <= dgvThongTinKhachHang.Rows.Count - 1; i++)
             {
                 if (txtMaKhachHang.Text == dgvThongTinKhachHang.Rows[i].Cells["idKhachHang"].Value.ToString())
                 {
@@ -54,19 +36,42 @@ namespace QLCHTAN
         }
         public KhachHang_DTO khachHang_DTO()
         {
-            return new KhachHang_DTO(txtMaKhachHang.Text.Trim(), txtSDT.Text.Trim(), txtTenKhachHang.Text.Trim(),GioiTinh.Trim(), txtDiaChi.Text.Trim(), txtGmail.Text.Trim(),rtbGhiChu.Text.Trim());
+            return new KhachHang_DTO(txtMaKhachHang.Text.Trim(), txtSDT.Text.Trim(), txtTenKhachHang.Text.Trim(),  txtDiaChi.Text.Trim(), GioiTinh.Trim(), txtGmail.Text.Trim(), rtbGhiChu.Text.Trim());
         }
+
+        #endregion
+        //==================================================================================================================================================
+        #region Event
+        private void KhachHang_GUI_Load(object sender, EventArgs e)
+        {
+            btnLamMoi_Click(sender, e);
      
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            txtSDT.Clear();
+            txtTenKhachHang.Clear();
+            rdbNam.Checked = false;
+            rdbNu.Checked = false;
+            txtGmail.Clear();
+            txtDiaChi.Clear();
+            rtbGhiChu.Clear();
+            txtSDT.Focus();
+            dgvThongTinKhachHang.DataSource = khachhang_BUS.show_dsKhachHang_BUS();
+            txtMaKhachHang.Clear();
+        }
+
         private void btnSua_Click(object sender, EventArgs e)
         {
             DialogResult them = MessageBox.Show("Bạn có chắc muốn sửa thông tin nhân viên ?", "Thông báo", MessageBoxButtons.YesNo);
             if (them == DialogResult.Yes)
             {
-                if(txtSDT.Text.Trim()!="" && txtTenKhachHang.Text.Trim()!="" && txtDiaChi.Text.Trim()!="" && txtGmail.Text.Trim()!="" && rtbGhiChu.Text.Trim()!="")
+                if (txtSDT.Text.Trim() != "" && txtTenKhachHang.Text.Trim() != "" &&  txtDiaChi.Text.Trim() != "" && txtGmail.Text.Trim() != "" && rtbGhiChu.Text.Trim() != "")
                 {
-                    if(kt_KhachHang())
+                    if (kt_KhachHang())
                     {
-                        if(khachhang_BUS.update_KhachHang_BUS(khachHang_DTO()))
+                        if (khachhang_BUS.update_KhachHang_BUS(khachHang_DTO()))
                         {
                             MessageBox.Show("Sửa Thông Tin Khách Hàng Thành Công");
                             KhachHang_GUI_Load(sender, e);
@@ -90,11 +95,11 @@ namespace QLCHTAN
 
         private void rdbNu_CheckedChanged(object sender, EventArgs e)
         {
-          if (rdbNu.Checked)
-                    GioiTinh = "Nữ";
+            if (rdbNu.Checked)
+                GioiTinh = "Nữ";
         }
 
-       
+
         private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
@@ -114,9 +119,9 @@ namespace QLCHTAN
                 DataGridViewRow row = this.dgvThongTinKhachHang.Rows[e.RowIndex];
                 txtSDT.Text = row.Cells["SDT"].Value.ToString();
                 txtTenKhachHang.Text = row.Cells["tenKhachHang"].Value.ToString();
-                if (row.Cells[1].Value.ToString().Trim() == "Nam")
+                if (row.Cells["Phai"].Value.ToString().Trim() == "Nam")
                     rdbNam.Checked = true;
-                else if (row.Cells[1].Value.ToString().Trim() == "Nữ")
+                else if (row.Cells["Phai"].Value.ToString().Trim() == "Nữ")
                     rdbNu.Checked = true;
                 txtGmail.Text = row.Cells["Email"].Value.ToString();
                 txtDiaChi.Text = row.Cells["diaChi"].Value.ToString();
@@ -131,7 +136,7 @@ namespace QLCHTAN
             DialogResult them = MessageBox.Show("Bạn có chắc muốn xóa khách hàng này không ?", "Thông Báo ", MessageBoxButtons.YesNo);
             if (them == DialogResult.Yes)
             {
-                if (txtMaKhachHang.Text.Trim()!="")
+                if (txtMaKhachHang.Text.Trim() != "")
                 {
 
                     if (kt_KhachHang())
@@ -151,5 +156,7 @@ namespace QLCHTAN
                     MessageBox.Show("Vui lòng nhập đủ thông tin");
             }
         }
+        #endregion
+
     }
 }

@@ -334,7 +334,7 @@ as
 	select*from KhachHang
 exec dbo.select_KhachHang
 
-alter proc update_KhachHang
+create proc update_KhachHang
 @tenKhachHang  nvarchar(100), @Phai nvarchar(10),@SDT varchar(11),
 @Email varchar(50), @diaChi nvarchar(100),@ghiChu nvarchar(max),
 @idKhachHang int
@@ -358,6 +358,12 @@ as
  delete from KhachHang where idKhachHang=@idKhachHang
 go
 exec dbo.delete_KhachHang 
+
+create proc find_KhachHang
+@SDT varchar(11)
+as
+select * from KhachHang where SDT=@SDT
+exec dbo.find_KhachHang
 
 --======================NHÀ CUNG CẤP===========
 create proc select_NCC
@@ -486,5 +492,23 @@ update DatHang set ngayDatHang=@ngayDat, ngayDuKienGiao=@ngaydukiengiao, ghiChu=
 go
 
 
+---------------------ORDER--------------------
+create proc select_dsDoAnTheoLoai
+@maLoaiDoAn varchar(10)
+as
+select * from DoAn where maLoaiDoAn=@maLoaiDoAn 
 
 
+create proc select_DonViBanDoAn
+as
+select sp.maSanPham, da.tenDoAn,ttda.donViBan,ttda.donGia from DoAn da, SanPham sp, ThongTinDoAn ttda where da.maDoAn=sp.maSanPham and da.maDoAn=ttda.maDoAn
+union all
+select sp.maSanPham,nu.tenNuoc,nu.donViBan,nu.giaBanNuoc from NuocUong nu, SanPham sp where nu.maNuoc=sp.maSanPham
+order by sp.maSanPham
+exec dbo.select_DonViBanDoAn
+
+
+select lda.tenLoaiDoAn from SanPham sp, DoAn da ,LoaiDoAn lda, NuocUong nu 
+where da.maDoAn=sp.maSanPham and nu.maNuoc=sp.maSanPham and lda.maLoaiDoAn=sp.maSanPham
+
+select*from LoaiDoAn

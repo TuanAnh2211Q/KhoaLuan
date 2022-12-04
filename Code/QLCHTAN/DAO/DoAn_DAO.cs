@@ -29,7 +29,25 @@ namespace DAO
             da.Fill(dslda);
             return dslda;
         }
-
+        public DataTable show_dsMon_DAO()
+        {
+            Open();
+            SqlDataAdapter da = new SqlDataAdapter("select_DoAnTheoYeuCau",conn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dsMon = new DataTable();
+            da.Fill(dsMon);
+            return dsMon;
+        }
+        public DataTable show_dsLoaiDoAn_DAO( string maLoaiDoAn)
+        {
+            Open();
+            SqlDataAdapter da = new SqlDataAdapter("select_dsDoAnTheoLoai", conn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@maLoaiDoAn", SqlDbType.NChar).Value = maLoaiDoAn;
+            DataTable dslda = new DataTable();
+            da.Fill(dslda);
+            return dslda;
+        }
         public bool insert_DoAn_DAO(DoAn_DTO doAn_DTO)
         {
             try
