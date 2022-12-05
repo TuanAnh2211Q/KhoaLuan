@@ -499,27 +499,10 @@ as
 select tenDoAn,maDoAn from DoAn where maLoaiDoAn=@maLoaiDoAn
 
 
---create proc select_DonViBanDoAn
---as
---select sp.maSanPham, da.tenDoAn,ttda.donViBan,ttda.donGia from DoAn da, SanPham sp, ThongTinDoAn ttda where da.maDoAn=sp.maSanPham and da.maDoAn=ttda.maDoAn
---union all
---select sp.maSanPham,nu.tenNuoc,nu.donViBan,nu.giaBanNuoc from NuocUong nu, SanPham sp where nu.maNuoc=sp.maSanPham
---order by sp.maSanPham
---go
-
-
-
-
-exec dbo.select_DonViBanDoAn
-
-
-select lda.tenLoaiDoAn from SanPham sp, DoAn da ,LoaiDoAn lda, NuocUong nu 
-where da.maDoAn=sp.maSanPham and nu.maNuoc=sp.maSanPham and lda.maLoaiDoAn=sp.maSanPham
-
-select*from LoaiDoAn
-
 
 create proc select_DonViBanDoAn
 @maDoAn varchar(10)
 as
 select donViBan from ThongTinDoAn where maDoAn=@maDoAn
+
+

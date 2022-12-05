@@ -871,10 +871,6 @@ namespace QLCHTAN
             // 
             // pCuaSoChucNang
             // 
-            this.pCuaSoChucNang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pCuaSoChucNang.AutoSize = true;
             this.pCuaSoChucNang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pCuaSoChucNang.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pCuaSoChucNang.Location = new System.Drawing.Point(393, 1);
@@ -943,7 +939,6 @@ namespace QLCHTAN
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
