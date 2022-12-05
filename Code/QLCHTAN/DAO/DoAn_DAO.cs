@@ -43,7 +43,7 @@ namespace DAO
             Open();
             SqlDataAdapter da = new SqlDataAdapter("select_dsDoAnTheoLoai", conn);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            da.SelectCommand.Parameters.Add("@maLoaiDoAn", SqlDbType.NChar).Value = maLoaiDoAn;
+            da.SelectCommand.Parameters.Add("@maLoaiDoAn", SqlDbType.VarChar).Value = maLoaiDoAn;
             DataTable dslda = new DataTable();
             da.Fill(dslda);
             return dslda;
@@ -112,6 +112,17 @@ namespace DAO
                 throw;
             }
             return false;
+        }
+
+        public string select_DonViBanDoAn(string maDoAn)
+        {
+            Open();
+            SqlCommand cmd = new SqlCommand("select_DonViBanDoAn", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@maDoAn", SqlDbType.VarChar).Value = maDoAn;
+            if (cmd.ExecuteScalar() != null)
+                return cmd.ExecuteScalar().ToString();
+            return null;
         }
     }
 }

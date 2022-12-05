@@ -42,5 +42,9 @@ namespace BUS
             return doAn_DAO.show_dsLoaiDoAn_DAO(maLoaiDoAN);
 
         }
+        public string select_DonViBanDoAn(string maDoAn)
+        {
+            return doAn_DAO.select_DonViBanDoAn(maDoAn);
+        }
     }
 }

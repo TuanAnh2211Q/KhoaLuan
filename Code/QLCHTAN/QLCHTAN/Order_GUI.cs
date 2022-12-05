@@ -57,23 +57,13 @@ namespace QLCHTAN
             cbbDanhMucMon.DataSource = doAn_BUS.show_dsLoaiDoAn_BUS();
             cbbDanhMucMon.DisplayMember = "tenLoaiDoAn";
             cbbDanhMucMon.ValueMember = "maLoaiDoAn";
-            if (cbbDanhMucMon.SelectedValue != null)
-            {
-                cbbTenMon.DataSource = doAn_BUS.show_DSLoaiDoAn_BUS(cbbDanhMucMon.SelectedValue.ToString());
-                cbbTenMon.DisplayMember = "tenDoAn";
-                cbbTenMon.ValueMember = "maDoAn";
-                if (cbbTenMon.SelectedValue != null)
-                {
-                    cbxSize.DataSource = doAn_BUS.show_dsMon_BUS(/*cbbDanhMucMon.SelectedValue.ToString()*/);
-                    cbxSize.DisplayMember = "donViBan";
-                    cbxSize.ValueMember = "donViBan";
-                }
-            }
             cbbSDT.SelectedValue = -1;
             //Load khuyến mãi
             cbbMaGiamGia.DataSource = khuyenMai_BUS.show_KM_BUS();
             cbbMaGiamGia.DisplayMember = "tenKhuyenMai";
             cbbMaGiamGia.ValueMember = "maKhuyenMai";
+
+           
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
@@ -172,8 +162,51 @@ namespace QLCHTAN
             clearData(sender, e);
         }
 
+
+
         #endregion
 
-       
+        private void cbbDanhMucMon_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbbDanhMucMon.SelectedValue != null)
+            {
+                string maloai = cbbDanhMucMon.SelectedValue.ToString().Trim();  
+                if(doAn_BUS.show_DSLoaiDoAn_BUS(maloai).Rows.Count>0)
+                {
+                    cbbTenMon.DataSource = doAn_BUS.show_DSLoaiDoAn_BUS(maloai);
+                    cbbTenMon.DisplayMember = "tenDoAn";
+                    cbbTenMon.ValueMember = "maDoAn";
+                }    
+                else
+                {
+                    cbbTenMon.DataSource = null;
+                    cbbTenMon.Text = String.Empty;
+                }    
+            }
+           
+        }
+
+        private void cbbTenMon_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbbTenMon.SelectedValue != null)
+            {
+                string tenDoAn = cbbTenMon.SelectedValue.ToString().Trim();
+                if (doAn_BUS.select_DonViBanDoAn(tenDoAn) !=null)
+                {
+                    txtDinhLuongDoAn.Text = doAn_BUS.select_DonViBanDoAn(tenDoAn);
+                    txtDinhLuongDoAn.Enabled = false;
+                }
+                else
+                {
+                    txtDinhLuongDoAn.Clear();
+                    txtDinhLuongDoAn.Enabled = true;
+                }
+            }
+            else
+            {
+                txtDinhLuongDoAn.Clear();
+                txtDinhLuongDoAn.Enabled = true;
+            }    
+        }
     }
 }
