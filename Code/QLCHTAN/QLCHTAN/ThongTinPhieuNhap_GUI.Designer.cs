@@ -29,114 +29,46 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
-            this.grbThongTinphieuNhap = new System.Windows.Forms.GroupBox();
-            this.txtMaNhap = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNhaCungCap = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.grbDanhSachHangNhap = new System.Windows.Forms.GroupBox();
-            this.lblTongGia = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTongGiaNhap = new System.Windows.Forms.Label();
             this.dgvThongTinChiTietPhieuNhap = new System.Windows.Forms.DataGridView();
             this.maHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCapNhat = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.grbThongTinphieuNhap.SuspendLayout();
-            this.grbDanhSachHangNhap.SuspendLayout();
+            this.tongDonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblThongTinPhieuNhap = new System.Windows.Forms.Label();
+            this.lblkThoat = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinChiTietPhieuNhap)).BeginInit();
             this.SuspendLayout();
             // 
-            // grbThongTinphieuNhap
+            // lblTongGiaNhap
             // 
-            this.grbThongTinphieuNhap.Controls.Add(this.txtMaNhap);
-            this.grbThongTinphieuNhap.Controls.Add(this.label1);
-            this.grbThongTinphieuNhap.Controls.Add(this.txtNhaCungCap);
-            this.grbThongTinphieuNhap.Controls.Add(this.label3);
-            this.grbThongTinphieuNhap.Location = new System.Drawing.Point(13, 28);
-            this.grbThongTinphieuNhap.Margin = new System.Windows.Forms.Padding(4);
-            this.grbThongTinphieuNhap.Name = "grbThongTinphieuNhap";
-            this.grbThongTinphieuNhap.Padding = new System.Windows.Forms.Padding(4);
-            this.grbThongTinphieuNhap.Size = new System.Drawing.Size(622, 129);
-            this.grbThongTinphieuNhap.TabIndex = 0;
-            this.grbThongTinphieuNhap.TabStop = false;
-            this.grbThongTinphieuNhap.Text = "Thông tin phiếu nhập";
-            // 
-            // txtMaNhap
-            // 
-            this.txtMaNhap.Enabled = false;
-            this.txtMaNhap.Location = new System.Drawing.Point(119, 42);
-            this.txtMaNhap.Name = "txtMaNhap";
-            this.txtMaNhap.Size = new System.Drawing.Size(476, 32);
-            this.txtMaNhap.TabIndex = 24;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 24);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Mã nhập:";
-            // 
-            // txtNhaCungCap
-            // 
-            this.txtNhaCungCap.Location = new System.Drawing.Point(119, 75);
-            this.txtNhaCungCap.Name = "txtNhaCungCap";
-            this.txtNhaCungCap.Size = new System.Drawing.Size(476, 32);
-            this.txtNhaCungCap.TabIndex = 25;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 78);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 24);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Nhà cung cấp:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // grbDanhSachHangNhap
-            // 
-            this.grbDanhSachHangNhap.Controls.Add(this.lblTongGia);
-            this.grbDanhSachHangNhap.Controls.Add(this.label2);
-            this.grbDanhSachHangNhap.Controls.Add(this.dgvThongTinChiTietPhieuNhap);
-            this.grbDanhSachHangNhap.Location = new System.Drawing.Point(13, 164);
-            this.grbDanhSachHangNhap.Name = "grbDanhSachHangNhap";
-            this.grbDanhSachHangNhap.Size = new System.Drawing.Size(622, 313);
-            this.grbDanhSachHangNhap.TabIndex = 1;
-            this.grbDanhSachHangNhap.TabStop = false;
-            this.grbDanhSachHangNhap.Text = "Danh sách hàng nhập";
-            // 
-            // lblTongGia
-            // 
-            this.lblTongGia.AutoSize = true;
-            this.lblTongGia.Location = new System.Drawing.Point(75, 276);
-            this.lblTongGia.Name = "lblTongGia";
-            this.lblTongGia.Size = new System.Drawing.Size(60, 24);
-            this.lblTongGia.TabIndex = 2;
-            this.lblTongGia.Text = "..........";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 276);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 24);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tổng giá:";
+            this.lblTongGiaNhap.AutoSize = true;
+            this.lblTongGiaNhap.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTongGiaNhap.Location = new System.Drawing.Point(12, 53);
+            this.lblTongGiaNhap.Name = "lblTongGiaNhap";
+            this.lblTongGiaNhap.Size = new System.Drawing.Size(82, 23);
+            this.lblTongGiaNhap.TabIndex = 1;
+            this.lblTongGiaNhap.Text = "Tổng giá:";
             // 
             // dgvThongTinChiTietPhieuNhap
             // 
+            this.dgvThongTinChiTietPhieuNhap.AllowUserToAddRows = false;
+            this.dgvThongTinChiTietPhieuNhap.AllowUserToDeleteRows = false;
             this.dgvThongTinChiTietPhieuNhap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvThongTinChiTietPhieuNhap.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvThongTinChiTietPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongTinChiTietPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maHang,
-            this.soLuong});
-            this.dgvThongTinChiTietPhieuNhap.Location = new System.Drawing.Point(12, 26);
+            this.tenHang,
+            this.tenNCC,
+            this.soLuong,
+            this.tongDonGia});
+            this.dgvThongTinChiTietPhieuNhap.Location = new System.Drawing.Point(12, 79);
             this.dgvThongTinChiTietPhieuNhap.Name = "dgvThongTinChiTietPhieuNhap";
+            this.dgvThongTinChiTietPhieuNhap.ReadOnly = true;
             this.dgvThongTinChiTietPhieuNhap.RowHeadersWidth = 51;
-            this.dgvThongTinChiTietPhieuNhap.Size = new System.Drawing.Size(583, 247);
+            this.dgvThongTinChiTietPhieuNhap.Size = new System.Drawing.Size(1067, 692);
             this.dgvThongTinChiTietPhieuNhap.TabIndex = 0;
             // 
             // maHang
@@ -145,72 +77,91 @@ namespace QLCHTAN
             this.maHang.HeaderText = "Mã hàng";
             this.maHang.MinimumWidth = 6;
             this.maHang.Name = "maHang";
+            this.maHang.ReadOnly = true;
+            // 
+            // tenHang
+            // 
+            this.tenHang.DataPropertyName = "tenHang";
+            this.tenHang.HeaderText = "Tên hàng";
+            this.tenHang.Name = "tenHang";
+            this.tenHang.ReadOnly = true;
+            // 
+            // tenNCC
+            // 
+            this.tenNCC.DataPropertyName = "tenNCC";
+            this.tenNCC.HeaderText = "Tên nhà cung cấp";
+            this.tenNCC.Name = "tenNCC";
+            this.tenNCC.ReadOnly = true;
             // 
             // soLuong
             // 
             this.soLuong.DataPropertyName = "soLuong";
-            this.soLuong.HeaderText = "Số lượng";
+            this.soLuong.HeaderText = "Số lượng hàng";
             this.soLuong.MinimumWidth = 6;
             this.soLuong.Name = "soLuong";
+            this.soLuong.ReadOnly = true;
             // 
-            // btnCapNhat
+            // tongDonGia
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(364, 483);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(169, 41);
-            this.btnCapNhat.TabIndex = 2;
-            this.btnCapNhat.Text = "Cập nhật phiếu nhập";
-            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.tongDonGia.DataPropertyName = "tongDonGia";
+            this.tongDonGia.HeaderText = "Tổng đơn giá";
+            this.tongDonGia.Name = "tongDonGia";
+            this.tongDonGia.ReadOnly = true;
             // 
-            // btnThoat
+            // lblThongTinPhieuNhap
             // 
-            this.btnThoat.Location = new System.Drawing.Point(539, 483);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(96, 41);
-            this.btnThoat.TabIndex = 3;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.lblThongTinPhieuNhap.AutoSize = true;
+            this.lblThongTinPhieuNhap.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThongTinPhieuNhap.ForeColor = System.Drawing.Color.Red;
+            this.lblThongTinPhieuNhap.Location = new System.Drawing.Point(407, 21);
+            this.lblThongTinPhieuNhap.Name = "lblThongTinPhieuNhap";
+            this.lblThongTinPhieuNhap.Size = new System.Drawing.Size(318, 29);
+            this.lblThongTinPhieuNhap.TabIndex = 4;
+            this.lblThongTinPhieuNhap.Text = "THÔNG TIN PHIẾU NHẬP  MÃ:";
+            // 
+            // lblkThoat
+            // 
+            this.lblkThoat.AutoSize = true;
+            this.lblkThoat.Location = new System.Drawing.Point(1003, 774);
+            this.lblkThoat.Name = "lblkThoat";
+            this.lblkThoat.Size = new System.Drawing.Size(49, 19);
+            this.lblkThoat.TabIndex = 5;
+            this.lblkThoat.TabStop = true;
+            this.lblkThoat.Text = "Thoát";
+            this.lblkThoat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkThoat_LinkClicked);
             // 
             // ThongTinPhieuNhap_GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(649, 530);
-            this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnCapNhat);
-            this.Controls.Add(this.grbDanhSachHangNhap);
-            this.Controls.Add(this.grbThongTinphieuNhap);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(1091, 797);
+            this.Controls.Add(this.lblkThoat);
+            this.Controls.Add(this.lblThongTinPhieuNhap);
+            this.Controls.Add(this.lblTongGiaNhap);
+            this.Controls.Add(this.dgvThongTinChiTietPhieuNhap);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ThongTinPhieuNhap_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThongTinPhieuNhap";
             this.Load += new System.EventHandler(this.ThongTinPhieuNhap_GUI_Load);
-            this.grbThongTinphieuNhap.ResumeLayout(false);
-            this.grbThongTinphieuNhap.PerformLayout();
-            this.grbDanhSachHangNhap.ResumeLayout(false);
-            this.grbDanhSachHangNhap.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinChiTietPhieuNhap)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox grbThongTinphieuNhap;
-        private System.Windows.Forms.TextBox txtMaNhap;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNhaCungCap;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox grbDanhSachHangNhap;
         private System.Windows.Forms.DataGridView dgvThongTinChiTietPhieuNhap;
-        private System.Windows.Forms.Button btnCapNhat;
-        private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.Label lblTongGia;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTongGiaNhap;
+        private System.Windows.Forms.Label lblThongTinPhieuNhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn maHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenNCC;
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tongDonGia;
+        private System.Windows.Forms.LinkLabel lblkThoat;
     }
 }

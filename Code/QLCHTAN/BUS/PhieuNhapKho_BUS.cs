@@ -20,5 +20,22 @@ namespace BUS
         {
             return phieuNhapKho_DAO.dsPhieuDat_DAO();
         }
+        public bool insert_PhieuNhap(PhieuNhapKho_DTO phieuNhapKho_DTO)
+        {
+            return phieuNhapKho_DAO.insert_PhieuNhap(phieuNhapKho_DTO);
+        }
+        public bool delete_PhieuNhap(PhieuNhapKho_DTO phieuNhapKho_DTO)
+        {
+            return phieuNhapKho_DAO.delete_PhieuNhap(phieuNhapKho_DTO);
+        }
+        public bool update_PhieuNhap(PhieuNhapKho_DTO phieuNhapKho_DTO)
+        {
+            return phieuNhapKho_DAO.update_PhieuNhap(phieuNhapKho_DTO);
+        }
+        public bool check_PhieuNhap(string maphieu)
+        {
+            return phieuNhapKho_DAO.check_PhieuNhap( maphieu);
+
+        }
     }
 }

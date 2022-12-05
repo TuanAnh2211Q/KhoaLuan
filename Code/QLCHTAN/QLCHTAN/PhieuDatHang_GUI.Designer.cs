@@ -61,7 +61,7 @@ namespace QLCHTAN
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblkThoat = new System.Windows.Forms.LinkLabel();
-            this.btnHoanThanh = new System.Windows.Forms.Button();
+            this.btnThayDoiTrangThai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuDat)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -383,7 +383,7 @@ namespace QLCHTAN
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.lblkThoat);
-            this.panel1.Controls.Add(this.btnHoanThanh);
+            this.panel1.Controls.Add(this.btnThayDoiTrangThai);
             this.panel1.Controls.Add(this.dgvPhieuDat);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.btnHuyPhieuDat);
@@ -406,18 +406,18 @@ namespace QLCHTAN
             this.lblkThoat.Text = "Thoát";
             this.lblkThoat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkThoat_LinkClicked);
             // 
-            // btnHoanThanh
+            // btnThayDoiTrangThai
             // 
-            this.btnHoanThanh.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHoanThanh.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnHoanThanh.Location = new System.Drawing.Point(487, 564);
-            this.btnHoanThanh.Margin = new System.Windows.Forms.Padding(2);
-            this.btnHoanThanh.Name = "btnHoanThanh";
-            this.btnHoanThanh.Size = new System.Drawing.Size(139, 34);
-            this.btnHoanThanh.TabIndex = 13;
-            this.btnHoanThanh.Text = "Hoàn thảnh phiếu đặt";
-            this.btnHoanThanh.UseVisualStyleBackColor = true;
-            this.btnHoanThanh.Click += new System.EventHandler(this.btnHoanThanh_Click);
+            this.btnThayDoiTrangThai.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThayDoiTrangThai.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnThayDoiTrangThai.Location = new System.Drawing.Point(487, 564);
+            this.btnThayDoiTrangThai.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThayDoiTrangThai.Name = "btnThayDoiTrangThai";
+            this.btnThayDoiTrangThai.Size = new System.Drawing.Size(139, 34);
+            this.btnThayDoiTrangThai.TabIndex = 13;
+            this.btnThayDoiTrangThai.Text = "Thay đổi trạng thái";
+            this.btnThayDoiTrangThai.UseVisualStyleBackColor = true;
+            this.btnThayDoiTrangThai.Click += new System.EventHandler(this.btnThayDoiTrangThai_Click);
             // 
             // PhieuDatHang_GUI
             // 
@@ -475,7 +475,7 @@ namespace QLCHTAN
         private System.Windows.Forms.LinkLabel lblkTaoPhieuTra;
         private System.Windows.Forms.LinkLabel lblkTaoPhieuNhap;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnHoanThanh;
+        private System.Windows.Forms.Button btnThayDoiTrangThai;
         private System.Windows.Forms.LinkLabel lblkThoat;
     }
 }

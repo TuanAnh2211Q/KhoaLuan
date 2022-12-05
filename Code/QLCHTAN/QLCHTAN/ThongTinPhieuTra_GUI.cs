@@ -44,8 +44,16 @@ namespace QLCHTAN
           
             cbbMatHang.DataSource = ttctpd.ds_SanPhamDat_BUS(txtMaDatHang.Text);
             cbbMatHang.DisplayMember = "tenHang";
-            cbbMatHang.ValueMember = "maHang";
-            lblMaHangNhap.Text = cbbMatHang.SelectedValue.ToString();
+            cbbMatHang.ValueMember = "maHang";            
+            if(cbbMatHang.SelectedValue!=null)
+            {
+                lblMaHangNhap.Text = cbbMatHang.SelectedValue.ToString();
+            }
+            else
+            {
+                DialogResult rs = MessageBox.Show("Không có mặt hàng nào trong phiếu đặt để thực hiện đổi trả", "Thông báo", MessageBoxButtons.OK);
+                this.Close();
+            }    
             lblTongGia.Text = ttpt.tongGia_PhieuTra_BUS(txtMaTra.Text);
             txtSoLuong.Clear();
         }
@@ -54,11 +62,12 @@ namespace QLCHTAN
 
         private void cbbMatHang_SelectedValueChanged(object sender, EventArgs e)
         {
-
-            lblMaHangNhap.Text = cbbMatHang.SelectedValue.ToString();
-            lblSoLuongDat.Text = ttpt.select_SoLuongDat_DAO(txtMaDatHang.Text, lblMaHangNhap.Text);
-            txtSoLuong.Text = lblSoLuongDat.Text;
-
+            if (cbbMatHang.SelectedValue!=null)
+            {
+                lblMaHangNhap.Text = cbbMatHang.SelectedValue.ToString();
+                lblSoLuongDat.Text = ttpt.select_SoLuongDat_DAO(txtMaDatHang.Text, lblMaHangNhap.Text);
+                txtSoLuong.Text = lblSoLuongDat.Text;
+            }    
         }
 
         private void btnThem_Click(object sender, EventArgs e)

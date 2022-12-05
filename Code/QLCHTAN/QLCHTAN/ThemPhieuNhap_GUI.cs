@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DTO;
+using BUS;
 namespace QLCHTAN
 {
     public partial class ThemPhieuNhap_GUI : Form
@@ -16,6 +17,14 @@ namespace QLCHTAN
         public static DateTime ngayNhapKho;
         public static string maDatNhap;
         public static string ghiChuNhap;
+        public static bool trangThai=false;
+        ThongTinChiTietPhieuNhap_BUS thongTinChiTietPhieuNhap_BUS = new ThongTinChiTietPhieuNhap_BUS();
+        PhieuNhapKho_BUS phieuNhapKho_BUS = new PhieuNhapKho_BUS();
+        PhieuNhapKho_DTO phieuNhap_DTO()
+        {
+            return new PhieuNhapKho_DTO(maNhapKho, ngayNhapKho, maDatNhap, ghiChuNhap,trangThai);
+        }
+        
         public ThemPhieuNhap_GUI()
         {
             InitializeComponent();
@@ -40,6 +49,7 @@ namespace QLCHTAN
         {
            if(txtMaNhap.Text=="")
             {
+                dgvThongTinChiTietPhieuNhap.DataSource = null;
                 MessageBox.Show("Vui lòng nhập thông tin mã nhập");
             }
             else
@@ -49,6 +59,14 @@ namespace QLCHTAN
                 maDatNhap = txtMaDat.Text;
                 ghiChuNhap = rtxtGhiChu.Text;
                 tbThemPhieuNhap.SelectedTab = tbpThemChiTiet;
+                if(PhieuDatHang_GUI.maPhieuDat==null)
+                {
+                    dgvThongTinChiTietPhieuNhap.DataSource = thongTinChiTietPhieuNhap_BUS.select_to_PhieuNhap_Temp(txtMaDat.Text, PhieuTra_GUI.maPhieuTra);
+                }
+                else
+                {
+                    dgvThongTinChiTietPhieuNhap.DataSource = thongTinChiTietPhieuNhap_BUS.select_to_PhieuNhap_Temp(PhieuDatHang_GUI.maPhieuDat, PhieuTra_GUI.maPhieuTra);
+                }
             }
         }
 
@@ -72,6 +90,8 @@ namespace QLCHTAN
             ngayNhapKho = DateTime.Now;
             maDatNhap = null;
             ghiChuNhap = rtxtGhiChu.Text;
+            PhieuDatHang_GUI.maPhieuDat = null;
+            PhieuTra_GUI.maPhieuTra = null;
         }
 
    
@@ -86,6 +106,38 @@ namespace QLCHTAN
             }
         }
 
-
+        private void btnXacNhan_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Xác nhận thêm phiếu nhập mới ?", "Thông báo", MessageBoxButtons.YesNo);
+            if(rs==DialogResult.Yes)
+            {
+                if(phieuNhapKho_BUS.insert_PhieuNhap(phieuNhap_DTO()))
+                {
+                    DataTable tb = (DataTable)dgvThongTinChiTietPhieuNhap.DataSource;
+                    foreach (DataRow r in tb.Rows)
+                    {
+                        string maNhaCungCap = r.Field<string>("maNCC");
+                        string maHangNhap = r.Field<string>("maHang");
+                        int soLuongNhap= r.Field<int>("soLuongNhap");
+                        decimal tongDGNhap= r.Field<decimal>("tongDonGia");
+                        ThongTinChiTietPhieuNhap_DTO ttctpn= new ThongTinChiTietPhieuNhap_DTO(maNhapKho, maNhaCungCap, maHangNhap, soLuongNhap, tongDGNhap);
+                        if (thongTinChiTietPhieuNhap_BUS.insert_ThongTinPhieuNhap_DAO(ttctpn))
+                        {
+                            trangThai = true;
+                            phieuNhapKho_BUS.update_PhieuNhap(phieuNhap_DTO());
+                        }
+                        else
+                            trangThai = false;
+                    }
+                    if (phieuNhapKho_BUS.check_PhieuNhap(maNhapKho))
+                    {
+                        MessageBox.Show("Xác nhận thêm phiếu nhập thành công");
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Xác nhận phiếu nhập thất bại");
+                }    
+            }    
+        }
     }
 }

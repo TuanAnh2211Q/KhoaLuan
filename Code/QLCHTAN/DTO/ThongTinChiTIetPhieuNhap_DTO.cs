@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class ThongTinChiTIetPhieuNhap_DTO
+    public class ThongTinChiTietPhieuNhap_DTO
     {
         private string maNhap;
 
@@ -48,7 +48,7 @@ namespace DTO
             set { tongDonGia = value; }
         }
 
-        public ThongTinChiTIetPhieuNhap_DTO (string MaNhap, string MaNCC, string MaHang, int SoLuongNhap, decimal TongDonGia)
+        public ThongTinChiTietPhieuNhap_DTO (string MaNhap, string MaNCC, string MaHang, int SoLuongNhap, decimal TongDonGia)
         {
             this.maNhap = MaNhap;
             this.maNCC = MaNCC;

@@ -281,11 +281,14 @@ go
 
 
 --=========================THÔNG TIN CHI TIẾT PHIẾU NHẬP=====
-create procedure select_ThongTinNhapKho
+create drop procedure select_ThongTinNhapKho
 @maNhap varchar(10)
 as
-select * from ThongTinNhapKho where maNhap=@maNhap
-go
+select mh.maHang, mh.tenHang, ttnk.soLuong, ncc.tenNCC ,ttnk.tongDonGia 
+from ThongTinNhapKho ttnk, MatHang mh,NhaCungCap ncc 
+where ttnk.maHang=mh.maHang
+and ncc.maNCC=ttnk.maNCC
+and ttnk.maDatHang=@maDatHanggo
 
 ----========PHIẾU ĐẶT HÀNG==============
 create  procedure select_DatHang

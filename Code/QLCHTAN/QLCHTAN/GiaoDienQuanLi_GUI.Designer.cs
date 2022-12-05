@@ -536,7 +536,7 @@ namespace QLCHTAN
             this.pQLNH.Controls.Add(this.pictureBox9);
             this.pQLNH.Controls.Add(this.txtQLNH);
             this.pQLNH.Controls.Add(this.btnQLNH);
-            this.pQLNH.Location = new System.Drawing.Point(15, 690);
+            this.pQLNH.Location = new System.Drawing.Point(13, 756);
             this.pQLNH.Name = "pQLNH";
             this.pQLNH.Size = new System.Drawing.Size(352, 62);
             this.pQLNH.TabIndex = 9;
@@ -587,10 +587,11 @@ namespace QLCHTAN
             this.pXuatHang.Controls.Add(this.pictureBox10);
             this.pXuatHang.Controls.Add(this.txtQLXH);
             this.pXuatHang.Controls.Add(this.btnQLXH);
-            this.pXuatHang.Location = new System.Drawing.Point(15, 758);
+            this.pXuatHang.Location = new System.Drawing.Point(13, 822);
             this.pXuatHang.Name = "pXuatHang";
             this.pXuatHang.Size = new System.Drawing.Size(352, 62);
             this.pXuatHang.TabIndex = 10;
+            this.pXuatHang.Visible = false;
             // 
             // pictureBox10
             // 
@@ -689,7 +690,7 @@ namespace QLCHTAN
             this.panel1.Controls.Add(this.pictureBox12);
             this.panel1.Controls.Add(this.txtQLTH);
             this.panel1.Controls.Add(this.btnQLTH);
-            this.panel1.Location = new System.Drawing.Point(15, 827);
+            this.panel1.Location = new System.Drawing.Point(14, 692);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(352, 62);
             this.panel1.TabIndex = 12;
@@ -791,12 +792,12 @@ namespace QLCHTAN
             this.pChucNang.AutoScroll = true;
             this.pChucNang.BackColor = System.Drawing.Color.SkyBlue;
             this.pChucNang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pChucNang.Controls.Add(this.pXuatHang);
             this.pChucNang.Controls.Add(this.pQLNV);
             this.pChucNang.Controls.Add(this.panel1);
             this.pChucNang.Controls.Add(this.panel2);
             this.pChucNang.Controls.Add(this.pDatHang);
             this.pChucNang.Controls.Add(this.pQLTK);
-            this.pChucNang.Controls.Add(this.pXuatHang);
             this.pChucNang.Controls.Add(this.pQLDA);
             this.pChucNang.Controls.Add(this.pQLNCC);
             this.pChucNang.Controls.Add(this.pQLNH);
