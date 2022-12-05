@@ -143,5 +143,10 @@ namespace QLCHTAN
                 return;
             btnLamMoi_Click(sender, e);
         }
+
+        private void lblkThoat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

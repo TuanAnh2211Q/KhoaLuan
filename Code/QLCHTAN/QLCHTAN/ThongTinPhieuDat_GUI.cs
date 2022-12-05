@@ -12,7 +12,7 @@ using DTO;
 using BUS;
 namespace QLCHTAN
 {
-    public partial class ThongTinChiTietPhieuDat_GUI : Form
+    public partial class ThongTinPhieuDat_GUI : Form
     {
         ThongTinChiTietPhieuDatHang_BUS thongTinChiTietPhieuDatHang_BUS = new ThongTinChiTietPhieuDatHang_BUS();
         MatHang_BUS matHang = new MatHang_BUS();
@@ -31,7 +31,7 @@ namespace QLCHTAN
           
             return new ThongTinChiTietPhieuDatHang_DTO(txtMaDatHang.Text.Trim(), cbbMatHang.SelectedValue.ToString().Trim(), Convert.ToInt32(txtSoLuong.Text));
         }
-        public ThongTinChiTietPhieuDat_GUI()
+        public ThongTinPhieuDat_GUI()
         {
             InitializeComponent();
         }
@@ -53,6 +53,7 @@ namespace QLCHTAN
                 btnThem.Enabled = false;
                 btnXoa.Enabled = false;
                 btnSua.Enabled = false;
+                btnThem.BackColor = btnXoa.BackColor = btnSua.BackColor = Color.Transparent;
             }    
             else
             {
@@ -171,5 +172,7 @@ namespace QLCHTAN
         {
             lblMaHangNhap.Text = cbbMatHang.SelectedValue.ToString();
         }
+
+      
     }
 }

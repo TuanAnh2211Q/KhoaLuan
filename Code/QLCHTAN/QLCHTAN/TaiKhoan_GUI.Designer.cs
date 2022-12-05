@@ -186,6 +186,8 @@ namespace QLCHTAN
             // 
             this.dgvTaiKhoan.AllowUserToAddRows = false;
             this.dgvTaiKhoan.AllowUserToDeleteRows = false;
+            this.dgvTaiKhoan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvTaiKhoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTaiKhoan.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -200,7 +202,7 @@ namespace QLCHTAN
             this.dgvTaiKhoan.Location = new System.Drawing.Point(307, 57);
             this.dgvTaiKhoan.Name = "dgvTaiKhoan";
             this.dgvTaiKhoan.ReadOnly = true;
-            this.dgvTaiKhoan.Size = new System.Drawing.Size(355, 126);
+            this.dgvTaiKhoan.Size = new System.Drawing.Size(579, 142);
             this.dgvTaiKhoan.TabIndex = 1;
             this.dgvTaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTaiKhoan_CellClick);
             // 
@@ -253,7 +255,7 @@ namespace QLCHTAN
             // 
             this.lblTaiKhoan.AutoSize = true;
             this.lblTaiKhoan.ForeColor = System.Drawing.Color.Red;
-            this.lblTaiKhoan.Location = new System.Drawing.Point(406, 23);
+            this.lblTaiKhoan.Location = new System.Drawing.Point(516, 23);
             this.lblTaiKhoan.Name = "lblTaiKhoan";
             this.lblTaiKhoan.Size = new System.Drawing.Size(146, 19);
             this.lblTaiKhoan.TabIndex = 2;
@@ -262,7 +264,7 @@ namespace QLCHTAN
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(558, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(668, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -271,9 +273,12 @@ namespace QLCHTAN
             // 
             // lblkDanhSachQuyen
             // 
+            this.lblkDanhSachQuyen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblkDanhSachQuyen.AutoSize = true;
             this.lblkDanhSachQuyen.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblkDanhSachQuyen.Location = new System.Drawing.Point(580, 186);
+            this.lblkDanhSachQuyen.Location = new System.Drawing.Point(804, 38);
             this.lblkDanhSachQuyen.Name = "lblkDanhSachQuyen";
             this.lblkDanhSachQuyen.Size = new System.Drawing.Size(82, 13);
             this.lblkDanhSachQuyen.TabIndex = 4;
@@ -294,8 +299,8 @@ namespace QLCHTAN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(674, 206);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(898, 206);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblkDanhSachQuyen);
             this.Controls.Add(this.pictureBox1);
@@ -303,6 +308,7 @@ namespace QLCHTAN
             this.Controls.Add(this.dgvTaiKhoan);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TaiKhoan_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

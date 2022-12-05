@@ -124,5 +124,10 @@ namespace QLCHTAN
                 txtMaLoaiKhuyenMai.Enabled = false;
             }
         }
+
+        private void lblkThoat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

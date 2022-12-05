@@ -29,6 +29,10 @@ namespace QLCHTAN
             //Application.Run(new DoAn_GUI());
             //Application.Run(new NhanVien_GUI());
             //Application.Run(new PhieuDatHang_GUI());
+<<<<<<< HEAD
+=======
+            //Application.Run(new PhieuTra_GUI());
+>>>>>>> ta
         }
     }
 }

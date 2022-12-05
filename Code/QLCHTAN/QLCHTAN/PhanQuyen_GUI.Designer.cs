@@ -35,11 +35,11 @@ namespace QLCHTAN
             this.txtTenQuyen = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvPhanQuyen = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.maQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ghiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtGhiChu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhanQuyen)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -95,6 +95,9 @@ namespace QLCHTAN
             // 
             this.dgvPhanQuyen.AllowUserToAddRows = false;
             this.dgvPhanQuyen.AllowUserToDeleteRows = false;
+            this.dgvPhanQuyen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPhanQuyen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPhanQuyen.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvPhanQuyen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -110,8 +113,32 @@ namespace QLCHTAN
             this.dgvPhanQuyen.TabIndex = 6;
             this.dgvPhanQuyen.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhanQuyen_CellClick);
             // 
+            // maQuyen
+            // 
+            this.maQuyen.DataPropertyName = "maQuyen";
+            this.maQuyen.HeaderText = "Mã quyền";
+            this.maQuyen.Name = "maQuyen";
+            this.maQuyen.ReadOnly = true;
+            // 
+            // tenQuyen
+            // 
+            this.tenQuyen.DataPropertyName = "tenQuyen";
+            this.tenQuyen.HeaderText = "Tên quyền";
+            this.tenQuyen.Name = "tenQuyen";
+            this.tenQuyen.ReadOnly = true;
+            // 
+            // ghiChu
+            // 
+            this.ghiChu.DataPropertyName = "ghiChu";
+            this.ghiChu.HeaderText = "Ghi chú";
+            this.ghiChu.Name = "ghiChu";
+            this.ghiChu.ReadOnly = true;
+            this.ghiChu.Visible = false;
+            // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.txtGhiChu);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
@@ -137,37 +164,16 @@ namespace QLCHTAN
             this.txtGhiChu.TabIndex = 5;
             this.txtGhiChu.Leave += new System.EventHandler(this.txtGhiChu_Leave);
             // 
-            // maQuyen
-            // 
-            this.maQuyen.DataPropertyName = "maQuyen";
-            this.maQuyen.HeaderText = "Mã quyền";
-            this.maQuyen.Name = "maQuyen";
-            this.maQuyen.ReadOnly = true;
-            // 
-            // tenQuyen
-            // 
-            this.tenQuyen.DataPropertyName = "tenQuyen";
-            this.tenQuyen.HeaderText = "Tên quyền";
-            this.tenQuyen.Name = "tenQuyen";
-            this.tenQuyen.ReadOnly = true;
-            // 
-            // ghiChu
-            // 
-            this.ghiChu.DataPropertyName = "ghiChu";
-            this.ghiChu.HeaderText = "Ghi chú";
-            this.ghiChu.Name = "ghiChu";
-            this.ghiChu.ReadOnly = true;
-            this.ghiChu.Visible = false;
-            // 
             // PhanQuyen_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(568, 173);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvPhanQuyen);
             this.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PhanQuyen_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PhanQuyen_GUI";

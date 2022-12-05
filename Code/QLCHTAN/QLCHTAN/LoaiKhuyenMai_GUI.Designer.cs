@@ -42,6 +42,7 @@ namespace QLCHTAN
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.grbThongTInLoaiKhuyenMai = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblkThoat = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiKhuyenMai)).BeginInit();
             this.grbThongTInLoaiKhuyenMai.SuspendLayout();
             this.SuspendLayout();
@@ -88,15 +89,18 @@ namespace QLCHTAN
             // 
             this.dgvLoaiKhuyenMai.AllowUserToAddRows = false;
             this.dgvLoaiKhuyenMai.AllowUserToDeleteRows = false;
+            this.dgvLoaiKhuyenMai.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvLoaiKhuyenMai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLoaiKhuyenMai.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgvLoaiKhuyenMai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaLoaiKhuyenMai,
             this.TenLoaiKhuyenMai});
-            this.dgvLoaiKhuyenMai.Location = new System.Drawing.Point(367, 42);
+            this.dgvLoaiKhuyenMai.Location = new System.Drawing.Point(367, 56);
             this.dgvLoaiKhuyenMai.Name = "dgvLoaiKhuyenMai";
             this.dgvLoaiKhuyenMai.ReadOnly = true;
-            this.dgvLoaiKhuyenMai.Size = new System.Drawing.Size(346, 148);
+            this.dgvLoaiKhuyenMai.Size = new System.Drawing.Size(346, 134);
             this.dgvLoaiKhuyenMai.TabIndex = 4;
             this.dgvLoaiKhuyenMai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoaiKhuyenMai_CellClick);
             // 
@@ -172,6 +176,8 @@ namespace QLCHTAN
             // 
             // grbThongTInLoaiKhuyenMai
             // 
+            this.grbThongTInLoaiKhuyenMai.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.grbThongTInLoaiKhuyenMai.Controls.Add(this.txtTenLoaiKhuyenMai);
             this.grbThongTInLoaiKhuyenMai.Controls.Add(this.btnLamMoi);
             this.grbThongTInLoaiKhuyenMai.Controls.Add(this.btnSua);
@@ -198,17 +204,30 @@ namespace QLCHTAN
             this.label3.TabIndex = 20;
             this.label3.Text = "Danh sách loại khuyến mãi";
             // 
+            // lblkThoat
+            // 
+            this.lblkThoat.AutoSize = true;
+            this.lblkThoat.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblkThoat.Location = new System.Drawing.Point(363, 34);
+            this.lblkThoat.Name = "lblkThoat";
+            this.lblkThoat.Size = new System.Drawing.Size(39, 15);
+            this.lblkThoat.TabIndex = 21;
+            this.lblkThoat.TabStop = true;
+            this.lblkThoat.Text = "Thoát";
+            this.lblkThoat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkThoat_LinkClicked);
+            // 
             // LoaiKhuyenMai_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(725, 203);
+            this.Controls.Add(this.lblkThoat);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.grbThongTInLoaiKhuyenMai);
             this.Controls.Add(this.dgvLoaiKhuyenMai);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoaiKhuyenMai_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -237,5 +256,6 @@ namespace QLCHTAN
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiKhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLoaiKhuyenMai;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.LinkLabel lblkThoat;
     }
 }

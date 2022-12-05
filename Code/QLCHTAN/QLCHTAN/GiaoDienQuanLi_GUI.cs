@@ -25,95 +25,128 @@ namespace QLCHTAN
             this.Close();
         }
 
-        private void GiaoDienQuanLi_GUI_Load(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void btnQLNV_Click(object sender, EventArgs e)
         {
-            NhanVien_GUI nhanvien = new NhanVien_GUI();
+            pCuaSoChucNang.Controls.Clear();
+            NhanVien_GUI nhanvien = new NhanVien_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize=true };
+            this.pCuaSoChucNang.Controls.Add(nhanvien);
             nhanvien.Show();
-  
         }
 
         private void btnQLTK_Click(object sender, EventArgs e)
         {
-            TaiKhoan_GUI taiKhoan = new TaiKhoan_GUI();
+            pCuaSoChucNang.Controls.Clear();
+            TaiKhoan_GUI taiKhoan = new TaiKhoan_GUI(){ Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true };
+            this.pCuaSoChucNang.Controls.Add(taiKhoan);
             taiKhoan.Show();
  
         }
 
         private void btnQLLDA_Click(object sender, EventArgs e)
         {
-            LoaiDoAn_GUI loaiDoAn = new LoaiDoAn_GUI();
+            pCuaSoChucNang.Controls.Clear();
+            LoaiDoAn_GUI loaiDoAn = new LoaiDoAn_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true };
+            this.pCuaSoChucNang.Controls.Add(loaiDoAn);
             loaiDoAn.Show();
     
         }
 
         private void btnQLDA_Click(object sender, EventArgs e)
         {
-            DoAn_GUI doan = new DoAn_GUI();
+            pCuaSoChucNang.Controls.Clear();
+            DoAn_GUI doan = new DoAn_GUI(){ Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true };
+            this.pCuaSoChucNang.Controls.Add(doan);
             doan.Show();
-           
         }
 
         private void btnQLNU_Click(object sender, EventArgs e)
         {
-            NuocUong_GUI nuocuong = new NuocUong_GUI();
+            pCuaSoChucNang.Controls.Clear();
+            NuocUong_GUI nuocuong = new NuocUong_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true };
+            this.pCuaSoChucNang.Controls.Add(nuocuong);
             nuocuong.Show();
           
         }
 
         private void btnQLNCC_Click(object sender, EventArgs e)
         {
-            NhaCungCap_GUI nhacungcap = new NhaCungCap_GUI();
+            pCuaSoChucNang.Controls.Clear();
+            NhaCungCap_GUI nhacungcap = new NhaCungCap_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true };
+            this.pCuaSoChucNang.Controls.Add(nhacungcap);
             nhacungcap.Show();
            
         }
 
         private void btnQLKM_Click(object sender, EventArgs e)
         {
-            KhuyenMai_GUI khuyenmai = new KhuyenMai_GUI();
+            pCuaSoChucNang.Controls.Clear();
+            KhuyenMai_GUI khuyenmai = new KhuyenMai_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true };
+            this.pCuaSoChucNang.Controls.Add(khuyenmai);
             khuyenmai.Show();
         }
 
         private void btnQLLKM_Click(object sender, EventArgs e)
         {
-            LoaiKhuyenMai_GUI loaikhuyenmai = new LoaiKhuyenMai_GUI();
+            pCuaSoChucNang.Controls.Clear();
+            LoaiKhuyenMai_GUI loaikhuyenmai = new LoaiKhuyenMai_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true };
+            this.pCuaSoChucNang.Controls.Add(loaikhuyenmai);
             loaikhuyenmai.Show();
     
         }
 
         private void btnQLNH_Click(object sender, EventArgs e)
         {
-            PhieuNhapKho_GUI phieunhap = new PhieuNhapKho_GUI();
+            pCuaSoChucNang.Controls.Clear();
+            PhieuNhapKho_GUI phieunhap = new PhieuNhapKho_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true };
+            this.pCuaSoChucNang.Controls.Add(phieunhap);
             phieunhap.Show();
  
         }
 
         private void btnQLXH_Click(object sender, EventArgs e)
         {
-            PhieuXuatKho_GUI phieuxuat = new PhieuXuatKho_GUI();
+            pCuaSoChucNang.Controls.Clear();
+            PhieuXuatKho_GUI phieuxuat = new PhieuXuatKho_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true };
+            this.pCuaSoChucNang.Controls.Add(phieuxuat);
             phieuxuat.Show();
     
         }
 
         private void btnQLDH_Click(object sender, EventArgs e)
         {
-            PhieuDatHang_GUI phieudat = new PhieuDatHang_GUI();
+            pCuaSoChucNang.Controls.Clear();
+            PhieuDatHang_GUI phieudat = new PhieuDatHang_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true };
+            this.pCuaSoChucNang.Controls.Add(phieudat);
             phieudat.Show();
        
         }
 
         private void btnQLTH_Click(object sender, EventArgs e)
         {
+            pCuaSoChucNang.Controls.Clear();
+            PhieuTra_GUI phieuTra = new PhieuTra_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true };
+            this.pCuaSoChucNang.Controls.Add(phieuTra);
+            phieuTra.Show();
         }
 
         private void btnQLMH_Click(object sender, EventArgs e)
         {
-            MatHang_GUI mathang = new MatHang_GUI();
+            pCuaSoChucNang.Controls.Clear();
+            MatHang_GUI mathang = new MatHang_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true };
+            this.pCuaSoChucNang.Controls.Add(mathang);
             mathang.Show();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.panel3.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
+        }
+
+        private void pChucNang_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.pChucNang.ClientRectangle, Color.DarkCyan, ButtonBorderStyle.Solid);
         }
     }
 }

@@ -487,4 +487,85 @@ go
 
 
 
+----------------------------PHIẾU TRẢ----------------------------
+create proc select_PhieuTra
+as
+select* from TraHang
 
+<<<<<<< HEAD
+=======
+
+create proc insert_TraHang
+@maTra varchar(10), @ngayTra datetime,  @ghiChu nvarchar(max), @maDat varchar(10)
+as
+insert into TraHang values (@maTra,@ngayTra,@ghiChu,@maDat,0)
+go
+
+create proc delete_TraHang
+@maTra varchar(10)
+as
+delete from TraHang where maTra=@maTra
+
+create proc update_TraHang
+@maTra varchar(10), @ngayTra datetime,  @ghiChu nvarchar(max), @maDat varchar(10)
+as
+update TraHang set ngayTra=@ngayTra, ghiChu=@ghiChu where maTra=@maTra and maDatHang=@maDat
+go
+
+create proc check_date_TraHang
+@maDatHang varchar(10)
+as
+select ngayDuKienGiao from DatHang where maDatHang=@maDatHang
+
+
+
+
+
+
+create   procedure tongGia_TraHang
+@maTra varchar(10)
+as
+select sum(tongDonGia) from ThongTinTraHang where maTra=@maTra
+go
+
+create proc soLuong_TraHang
+@maTra varchar(10),@maHang varchar(10)
+as
+select soLuong from ThongTinTraHang where maHang=@maHang and maTra=@maTra
+go
+
+create   procedure select_ThongTinPhieuTra
+@maTra varchar(10)
+as
+select mh.maHang, mh.tenHang, ttth.soLuong, ncc.tenNCC ,ttth.tongDonGia from ThongTinTraHang ttth, MatHang mh,
+NhaCungCap ncc 
+where ttth.maHang=mh.maHang
+and ncc.maNCC=ttth.maNCC
+and ttth.maTra=@maTra
+go
+
+create proc update_ThongTinTraHang
+@maTra varchar(10),@maHang varchar(10),@soLuongTra int
+as
+update ThongTinTraHang set soLuong=@soLuongTra where maTra=@maTra and maHang=@maHang
+go
+
+create proc insert_ThongTinTraHang
+@maTra varchar(10),@maHang varchar(10),@soLuongTra int
+as
+insert into ThongTinTraHang values (@maTra,null,@maHang,@soLuongTra,null)
+go
+
+create proc delete_ThongTinTraHang
+@maTra varchar(10),@maHang varchar(10)
+as
+delete from ThongTinTraHang where maTra=@maTra and maHang=@maHang
+
+
+-------------------NHẬP KHO
+
+create proc insert_NhapKho
+@maNhap varchar(10), @ngayNhap datetime, @maDat varchar(10), @ghiChu nvarchar(max)
+as
+insert into NhapKho values (@maNhap, @ngayNhap,@maDat,@ghiChu)
+>>>>>>> ta

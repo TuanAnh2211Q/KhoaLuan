@@ -187,6 +187,10 @@ namespace QLCHTAN
             else
                 btnDanhSachSanPhamApDung.Enabled = true;
         }
- 
+
+        private void lblkThoat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
