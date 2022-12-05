@@ -16,6 +16,7 @@ namespace QLCHTAN
     {
         ThongTinChiTietPhieuDatHang_BUS ttctpd = new ThongTinChiTietPhieuDatHang_BUS();
         ThongTinPhieuTra_BUS ttpt = new ThongTinPhieuTra_BUS();
+        public object mahang=null;
         public bool kiemtra_MatHangTra()
         {
             foreach (DataGridViewRow r in dgvThongTinPhieuTra.Rows)
@@ -44,19 +45,20 @@ namespace QLCHTAN
             cbbMatHang.DataSource = ttctpd.ds_SanPhamDat_BUS(txtMaDatHang.Text);
             cbbMatHang.DisplayMember = "tenHang";
             cbbMatHang.ValueMember = "maHang";
-            cbbMatHang.Text = "";
             lblMaHangNhap.Text = cbbMatHang.SelectedValue.ToString();
             lblTongGia.Text = ttpt.tongGia_PhieuTra_BUS(txtMaTra.Text);
             txtSoLuong.Clear();
         }
 
-    
+
 
         private void cbbMatHang_SelectedValueChanged(object sender, EventArgs e)
         {
+
             lblMaHangNhap.Text = cbbMatHang.SelectedValue.ToString();
             lblSoLuongDat.Text = ttpt.select_SoLuongDat_DAO(txtMaDatHang.Text, lblMaHangNhap.Text);
             txtSoLuong.Text = lblSoLuongDat.Text;
+
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -132,7 +134,7 @@ namespace QLCHTAN
             if(e.RowIndex>=0)
             {
                 DataGridViewRow r = dgvThongTinPhieuTra.Rows[e.RowIndex];
-                cbbMatHang.SelectedValue = r.Cells["maHang"].Value;
+                cbbMatHang.SelectedValue = r.Cells["maHang"].Value.ToString();
                 txtSoLuong.Text = r.Cells["soLuong"].Value.ToString();
             }    
         }
@@ -177,5 +179,7 @@ namespace QLCHTAN
                 MessageBox.Show("Mặt hàng không tồn tại trong danh sách đặt");
             }
         }
+
+        
     }
 }
