@@ -148,5 +148,17 @@ namespace QLCHTAN
         {
             ControlPaint.DrawBorder(e.Graphics, this.pChucNang.ClientRectangle, Color.DarkCyan, ButtonBorderStyle.Solid);
         }
+
+        private void GiaoDienQuanLi_GUI_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblkDangXuat_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DangNhap_GUI dangNhap = new DangNhap_GUI();
+            dangNhap.Show();
+            this.Close();
+        }
     }
 }

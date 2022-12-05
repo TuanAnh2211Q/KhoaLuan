@@ -39,6 +39,7 @@ namespace QLCHTAN
             this.txtQLTK = new System.Windows.Forms.TextBox();
             this.btnQLTK = new System.Windows.Forms.Button();
             this.pQLDA = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtQLMA = new System.Windows.Forms.TextBox();
             this.btnQLDA = new System.Windows.Forms.Button();
             this.pQLNU = new System.Windows.Forms.Panel();
@@ -81,10 +82,6 @@ namespace QLCHTAN
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.txtQLMH = new System.Windows.Forms.TextBox();
             this.btnQLMH = new System.Windows.Forms.Button();
-<<<<<<< HEAD
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
-=======
             this.pChucNang = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -92,12 +89,12 @@ namespace QLCHTAN
             this.lblkDangXuat = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.pCuaSoChucNang = new System.Windows.Forms.Panel();
->>>>>>> ta
             this.pQLNV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pQLTK.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pQLDA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pQLNU.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.pQLLDA.SuspendLayout();
@@ -118,70 +115,11 @@ namespace QLCHTAN
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-<<<<<<< HEAD
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lblkDangXuat);
-            this.groupBox1.Controls.Add(this.lblTenTaiKhoan);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(948, 101);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin tài khoản";
-            // 
-            // lblkDangXuat
-            // 
-            this.lblkDangXuat.AutoSize = true;
-            this.lblkDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblkDangXuat.Location = new System.Drawing.Point(865, 81);
-            this.lblkDangXuat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblkDangXuat.Name = "lblkDangXuat";
-            this.lblkDangXuat.Size = new System.Drawing.Size(72, 17);
-            this.lblkDangXuat.TabIndex = 2;
-            this.lblkDangXuat.TabStop = true;
-            this.lblkDangXuat.Text = "Đăng xuất";
-            this.lblkDangXuat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkDangXuat_LinkClicked);
-            // 
-            // lblTenTaiKhoan
-            // 
-            this.lblTenTaiKhoan.AutoSize = true;
-            this.lblTenTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenTaiKhoan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTenTaiKhoan.Location = new System.Drawing.Point(180, 39);
-            this.lblTenTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTenTaiKhoan.Name = "lblTenTaiKhoan";
-            this.lblTenTaiKhoan.Size = new System.Drawing.Size(70, 25);
-            this.lblTenTaiKhoan.TabIndex = 1;
-            this.lblTenTaiKhoan.Text = "label2";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Pink;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(8, 39);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tên tài khoản:";
-            // 
-=======
             this.pChucNang.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.SuspendLayout();
             // 
->>>>>>> ta
             // pQLNV
             // 
             this.pQLNV.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -189,14 +127,9 @@ namespace QLCHTAN
             this.pQLNV.Controls.Add(this.pictureBox1);
             this.pQLNV.Controls.Add(this.txtQLNV);
             this.pQLNV.Controls.Add(this.btnQLNV);
-<<<<<<< HEAD
-            this.pQLNV.Location = new System.Drawing.Point(16, 144);
-            this.pQLNV.Margin = new System.Windows.Forms.Padding(4);
-=======
             this.pQLNV.Location = new System.Drawing.Point(13, 18);
->>>>>>> ta
             this.pQLNV.Name = "pQLNV";
-            this.pQLNV.Size = new System.Drawing.Size(470, 76);
+            this.pQLNV.Size = new System.Drawing.Size(353, 62);
             this.pQLNV.TabIndex = 1;
             // 
             // pictureBox1
@@ -204,8 +137,7 @@ namespace QLCHTAN
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(54, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -218,11 +150,10 @@ namespace QLCHTAN
             this.txtQLNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQLNV.Enabled = false;
             this.txtQLNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQLNV.Location = new System.Drawing.Point(223, 6);
-            this.txtQLNV.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQLNV.Location = new System.Drawing.Point(167, 5);
             this.txtQLNV.Multiline = true;
             this.txtQLNV.Name = "txtQLNV";
-            this.txtQLNV.Size = new System.Drawing.Size(238, 61);
+            this.txtQLNV.Size = new System.Drawing.Size(179, 50);
             this.txtQLNV.TabIndex = 1;
             this.txtQLNV.Text = " Quản lí thông tin nhân viên đang làm việc tại cửa hàng";
             // 
@@ -234,10 +165,9 @@ namespace QLCHTAN
             this.btnQLNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLNV.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnQLNV.Location = new System.Drawing.Point(79, 6);
-            this.btnQLNV.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQLNV.Location = new System.Drawing.Point(59, 5);
             this.btnQLNV.Name = "btnQLNV";
-            this.btnQLNV.Size = new System.Drawing.Size(136, 64);
+            this.btnQLNV.Size = new System.Drawing.Size(102, 52);
             this.btnQLNV.TabIndex = 0;
             this.btnQLNV.Text = "Quản lí nhân viên";
             this.btnQLNV.UseVisualStyleBackColor = false;
@@ -250,22 +180,16 @@ namespace QLCHTAN
             this.pQLTK.Controls.Add(this.pictureBox2);
             this.pQLTK.Controls.Add(this.txtQLTK);
             this.pQLTK.Controls.Add(this.btnQLTK);
-<<<<<<< HEAD
-            this.pQLTK.Location = new System.Drawing.Point(16, 228);
-            this.pQLTK.Margin = new System.Windows.Forms.Padding(4);
-=======
             this.pQLTK.Location = new System.Drawing.Point(13, 86);
->>>>>>> ta
             this.pQLTK.Name = "pQLTK";
-            this.pQLTK.Size = new System.Drawing.Size(469, 77);
+            this.pQLTK.Size = new System.Drawing.Size(352, 63);
             this.pQLTK.TabIndex = 2;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(52, 52);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -276,11 +200,10 @@ namespace QLCHTAN
             // 
             this.txtQLTK.Enabled = false;
             this.txtQLTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQLTK.Location = new System.Drawing.Point(223, 4);
-            this.txtQLTK.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQLTK.Location = new System.Drawing.Point(167, 3);
             this.txtQLTK.Multiline = true;
             this.txtQLTK.Name = "txtQLTK";
-            this.txtQLTK.Size = new System.Drawing.Size(237, 63);
+            this.txtQLTK.Size = new System.Drawing.Size(179, 52);
             this.txtQLTK.TabIndex = 1;
             this.txtQLTK.Text = "Quản lí thông tin tài khoản nhân viên cửa hàng";
             // 
@@ -291,10 +214,9 @@ namespace QLCHTAN
             this.btnQLTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLTK.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnQLTK.Location = new System.Drawing.Point(79, 4);
-            this.btnQLTK.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQLTK.Location = new System.Drawing.Point(59, 3);
             this.btnQLTK.Name = "btnQLTK";
-            this.btnQLTK.Size = new System.Drawing.Size(136, 64);
+            this.btnQLTK.Size = new System.Drawing.Size(102, 52);
             this.btnQLTK.TabIndex = 0;
             this.btnQLTK.Text = "Quản lí tài khoản";
             this.btnQLTK.UseVisualStyleBackColor = true;
@@ -307,15 +229,21 @@ namespace QLCHTAN
             this.pQLDA.Controls.Add(this.pictureBox3);
             this.pQLDA.Controls.Add(this.txtQLMA);
             this.pQLDA.Controls.Add(this.btnQLDA);
-<<<<<<< HEAD
-            this.pQLDA.Location = new System.Drawing.Point(16, 390);
-            this.pQLDA.Margin = new System.Windows.Forms.Padding(4);
-=======
             this.pQLDA.Location = new System.Drawing.Point(13, 218);
->>>>>>> ta
             this.pQLDA.Name = "pQLDA";
-            this.pQLDA.Size = new System.Drawing.Size(469, 76);
+            this.pQLDA.Size = new System.Drawing.Size(352, 62);
             this.pQLDA.TabIndex = 3;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(3, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(54, 54);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
             // 
             // txtQLMA
             // 
@@ -323,11 +251,10 @@ namespace QLCHTAN
             this.txtQLMA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQLMA.Enabled = false;
             this.txtQLMA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQLMA.Location = new System.Drawing.Point(223, 6);
-            this.txtQLMA.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQLMA.Location = new System.Drawing.Point(167, 5);
             this.txtQLMA.Multiline = true;
             this.txtQLMA.Name = "txtQLMA";
-            this.txtQLMA.Size = new System.Drawing.Size(238, 61);
+            this.txtQLMA.Size = new System.Drawing.Size(179, 50);
             this.txtQLMA.TabIndex = 1;
             this.txtQLMA.Text = " Quản lí thông tin món ăn";
             // 
@@ -338,10 +265,9 @@ namespace QLCHTAN
             this.btnQLDA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLDA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLDA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnQLDA.Location = new System.Drawing.Point(79, 6);
-            this.btnQLDA.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQLDA.Location = new System.Drawing.Point(59, 5);
             this.btnQLDA.Name = "btnQLDA";
-            this.btnQLDA.Size = new System.Drawing.Size(136, 64);
+            this.btnQLDA.Size = new System.Drawing.Size(102, 52);
             this.btnQLDA.TabIndex = 0;
             this.btnQLDA.Text = "Quản lí đồ ăn";
             this.btnQLDA.UseVisualStyleBackColor = true;
@@ -355,24 +281,18 @@ namespace QLCHTAN
             this.pQLNU.Controls.Add(this.txtQLNU);
             this.pQLNU.Controls.Add(this.btnQLNU);
             this.pQLNU.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.pQLNU.Location = new System.Drawing.Point(16, 474);
-            this.pQLNU.Margin = new System.Windows.Forms.Padding(4);
-=======
             this.pQLNU.Location = new System.Drawing.Point(13, 286);
->>>>>>> ta
             this.pQLNU.Name = "pQLNU";
-            this.pQLNU.Size = new System.Drawing.Size(469, 76);
+            this.pQLNU.Size = new System.Drawing.Size(352, 62);
             this.pQLNU.TabIndex = 4;
             // 
             // pictureBox4
             // 
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Location = new System.Drawing.Point(3, 5);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(71, 66);
+            this.pictureBox4.Size = new System.Drawing.Size(54, 54);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
@@ -383,11 +303,10 @@ namespace QLCHTAN
             this.txtQLNU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQLNU.Enabled = false;
             this.txtQLNU.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQLNU.Location = new System.Drawing.Point(223, 6);
-            this.txtQLNU.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQLNU.Location = new System.Drawing.Point(167, 5);
             this.txtQLNU.Multiline = true;
             this.txtQLNU.Name = "txtQLNU";
-            this.txtQLNU.Size = new System.Drawing.Size(238, 61);
+            this.txtQLNU.Size = new System.Drawing.Size(179, 50);
             this.txtQLNU.TabIndex = 1;
             this.txtQLNU.Text = " Quản lí thông tin nước";
             // 
@@ -398,10 +317,9 @@ namespace QLCHTAN
             this.btnQLNU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLNU.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLNU.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnQLNU.Location = new System.Drawing.Point(79, 6);
-            this.btnQLNU.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQLNU.Location = new System.Drawing.Point(59, 5);
             this.btnQLNU.Name = "btnQLNU";
-            this.btnQLNU.Size = new System.Drawing.Size(136, 64);
+            this.btnQLNU.Size = new System.Drawing.Size(102, 52);
             this.btnQLNU.TabIndex = 0;
             this.btnQLNU.Text = "Quản lí nước uống";
             this.btnQLNU.UseVisualStyleBackColor = true;
@@ -414,24 +332,18 @@ namespace QLCHTAN
             this.pQLLDA.Controls.Add(this.pictureBox5);
             this.pQLLDA.Controls.Add(this.txtQLLDA);
             this.pQLLDA.Controls.Add(this.btnQLLDA);
-<<<<<<< HEAD
-            this.pQLLDA.Location = new System.Drawing.Point(16, 306);
-            this.pQLLDA.Margin = new System.Windows.Forms.Padding(4);
-=======
             this.pQLLDA.Location = new System.Drawing.Point(13, 150);
->>>>>>> ta
             this.pQLLDA.Name = "pQLLDA";
-            this.pQLLDA.Size = new System.Drawing.Size(469, 76);
+            this.pQLLDA.Size = new System.Drawing.Size(352, 62);
             this.pQLLDA.TabIndex = 5;
             // 
             // pictureBox5
             // 
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Location = new System.Drawing.Point(3, 5);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(71, 66);
+            this.pictureBox5.Size = new System.Drawing.Size(54, 54);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
@@ -442,11 +354,10 @@ namespace QLCHTAN
             this.txtQLLDA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQLLDA.Enabled = false;
             this.txtQLLDA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQLLDA.Location = new System.Drawing.Point(223, 6);
-            this.txtQLLDA.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQLLDA.Location = new System.Drawing.Point(167, 5);
             this.txtQLLDA.Multiline = true;
             this.txtQLLDA.Name = "txtQLLDA";
-            this.txtQLLDA.Size = new System.Drawing.Size(238, 61);
+            this.txtQLLDA.Size = new System.Drawing.Size(179, 50);
             this.txtQLLDA.TabIndex = 1;
             this.txtQLLDA.Text = " Quản lí thông tin loại món ăn";
             // 
@@ -457,10 +368,9 @@ namespace QLCHTAN
             this.btnQLLDA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLLDA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLLDA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnQLLDA.Location = new System.Drawing.Point(79, 6);
-            this.btnQLLDA.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQLLDA.Location = new System.Drawing.Point(59, 5);
             this.btnQLLDA.Name = "btnQLLDA";
-            this.btnQLLDA.Size = new System.Drawing.Size(136, 64);
+            this.btnQLLDA.Size = new System.Drawing.Size(102, 52);
             this.btnQLLDA.TabIndex = 0;
             this.btnQLLDA.Text = "Quản lí loại đồ ăn";
             this.btnQLLDA.UseVisualStyleBackColor = true;
@@ -473,24 +383,18 @@ namespace QLCHTAN
             this.pQLNCC.Controls.Add(this.pictureBox6);
             this.pQLNCC.Controls.Add(this.txtQLNCC);
             this.pQLNCC.Controls.Add(this.btnQLNCC);
-<<<<<<< HEAD
-            this.pQLNCC.Location = new System.Drawing.Point(503, 144);
-            this.pQLNCC.Margin = new System.Windows.Forms.Padding(4);
-=======
             this.pQLNCC.Location = new System.Drawing.Point(15, 558);
->>>>>>> ta
             this.pQLNCC.Name = "pQLNCC";
-            this.pQLNCC.Size = new System.Drawing.Size(469, 76);
+            this.pQLNCC.Size = new System.Drawing.Size(352, 62);
             this.pQLNCC.TabIndex = 6;
             // 
             // pictureBox6
             // 
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Location = new System.Drawing.Point(3, 5);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(71, 66);
+            this.pictureBox6.Size = new System.Drawing.Size(54, 54);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 2;
             this.pictureBox6.TabStop = false;
@@ -501,11 +405,10 @@ namespace QLCHTAN
             this.txtQLNCC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQLNCC.Enabled = false;
             this.txtQLNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQLNCC.Location = new System.Drawing.Point(223, 6);
-            this.txtQLNCC.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQLNCC.Location = new System.Drawing.Point(167, 5);
             this.txtQLNCC.Multiline = true;
             this.txtQLNCC.Name = "txtQLNCC";
-            this.txtQLNCC.Size = new System.Drawing.Size(238, 61);
+            this.txtQLNCC.Size = new System.Drawing.Size(179, 50);
             this.txtQLNCC.TabIndex = 1;
             this.txtQLNCC.Text = " Quản lí thông tin nhà cung cấp";
             // 
@@ -516,10 +419,9 @@ namespace QLCHTAN
             this.btnQLNCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLNCC.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnQLNCC.Location = new System.Drawing.Point(79, 6);
-            this.btnQLNCC.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQLNCC.Location = new System.Drawing.Point(59, 5);
             this.btnQLNCC.Name = "btnQLNCC";
-            this.btnQLNCC.Size = new System.Drawing.Size(136, 64);
+            this.btnQLNCC.Size = new System.Drawing.Size(102, 52);
             this.btnQLNCC.TabIndex = 0;
             this.btnQLNCC.Text = "Quản lí nhà cung cấp";
             this.btnQLNCC.UseVisualStyleBackColor = true;
@@ -532,24 +434,18 @@ namespace QLCHTAN
             this.panel5.Controls.Add(this.pictureBox7);
             this.panel5.Controls.Add(this.txtQLKM);
             this.panel5.Controls.Add(this.btnQLKM);
-<<<<<<< HEAD
-            this.panel5.Location = new System.Drawing.Point(16, 641);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
-=======
             this.panel5.Location = new System.Drawing.Point(14, 422);
->>>>>>> ta
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(469, 76);
+            this.panel5.Size = new System.Drawing.Size(352, 62);
             this.panel5.TabIndex = 7;
             // 
             // pictureBox7
             // 
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Location = new System.Drawing.Point(3, 5);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(71, 66);
+            this.pictureBox7.Size = new System.Drawing.Size(54, 54);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 2;
             this.pictureBox7.TabStop = false;
@@ -560,11 +456,10 @@ namespace QLCHTAN
             this.txtQLKM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQLKM.Enabled = false;
             this.txtQLKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQLKM.Location = new System.Drawing.Point(223, 6);
-            this.txtQLKM.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQLKM.Location = new System.Drawing.Point(167, 5);
             this.txtQLKM.Multiline = true;
             this.txtQLKM.Name = "txtQLKM";
-            this.txtQLKM.Size = new System.Drawing.Size(238, 61);
+            this.txtQLKM.Size = new System.Drawing.Size(179, 50);
             this.txtQLKM.TabIndex = 1;
             this.txtQLKM.Text = "Quản lí thông tin khuyến mãi";
             // 
@@ -575,10 +470,9 @@ namespace QLCHTAN
             this.btnQLKM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLKM.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnQLKM.Location = new System.Drawing.Point(79, 6);
-            this.btnQLKM.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQLKM.Location = new System.Drawing.Point(59, 5);
             this.btnQLKM.Name = "btnQLKM";
-            this.btnQLKM.Size = new System.Drawing.Size(136, 64);
+            this.btnQLKM.Size = new System.Drawing.Size(102, 52);
             this.btnQLKM.TabIndex = 0;
             this.btnQLKM.Text = "Quản lí khuyến mãi";
             this.btnQLKM.UseVisualStyleBackColor = true;
@@ -591,24 +485,18 @@ namespace QLCHTAN
             this.pQLLKM.Controls.Add(this.pictureBox8);
             this.pQLLKM.Controls.Add(this.txtQLLKM);
             this.pQLLKM.Controls.Add(this.btnQLLKM);
-<<<<<<< HEAD
-            this.pQLLKM.Location = new System.Drawing.Point(16, 725);
-            this.pQLLKM.Margin = new System.Windows.Forms.Padding(4);
-=======
             this.pQLLKM.Location = new System.Drawing.Point(14, 490);
->>>>>>> ta
             this.pQLLKM.Name = "pQLLKM";
-            this.pQLLKM.Size = new System.Drawing.Size(469, 76);
+            this.pQLLKM.Size = new System.Drawing.Size(352, 62);
             this.pQLLKM.TabIndex = 8;
             // 
             // pictureBox8
             // 
             this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Location = new System.Drawing.Point(3, 5);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(71, 66);
+            this.pictureBox8.Size = new System.Drawing.Size(54, 54);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 2;
             this.pictureBox8.TabStop = false;
@@ -619,15 +507,10 @@ namespace QLCHTAN
             this.txtQLLKM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQLLKM.Enabled = false;
             this.txtQLLKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.txtQLLKM.Location = new System.Drawing.Point(223, 6);
-            this.txtQLLKM.Margin = new System.Windows.Forms.Padding(4);
-=======
             this.txtQLLKM.Location = new System.Drawing.Point(168, 7);
->>>>>>> ta
             this.txtQLLKM.Multiline = true;
             this.txtQLLKM.Name = "txtQLLKM";
-            this.txtQLLKM.Size = new System.Drawing.Size(238, 61);
+            this.txtQLLKM.Size = new System.Drawing.Size(179, 50);
             this.txtQLLKM.TabIndex = 1;
             this.txtQLLKM.Text = "Quản lí thông tin loại khuyến mãi";
             // 
@@ -638,10 +521,9 @@ namespace QLCHTAN
             this.btnQLLKM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLLKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLLKM.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnQLLKM.Location = new System.Drawing.Point(79, 6);
-            this.btnQLLKM.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQLLKM.Location = new System.Drawing.Point(59, 5);
             this.btnQLLKM.Name = "btnQLLKM";
-            this.btnQLLKM.Size = new System.Drawing.Size(136, 64);
+            this.btnQLLKM.Size = new System.Drawing.Size(102, 52);
             this.btnQLLKM.TabIndex = 0;
             this.btnQLLKM.Text = "Quản lí loại khuyến mãi";
             this.btnQLLKM.UseVisualStyleBackColor = true;
@@ -654,24 +536,18 @@ namespace QLCHTAN
             this.pQLNH.Controls.Add(this.pictureBox9);
             this.pQLNH.Controls.Add(this.txtQLNH);
             this.pQLNH.Controls.Add(this.btnQLNH);
-<<<<<<< HEAD
-            this.pQLNH.Location = new System.Drawing.Point(503, 306);
-            this.pQLNH.Margin = new System.Windows.Forms.Padding(4);
-=======
             this.pQLNH.Location = new System.Drawing.Point(15, 690);
->>>>>>> ta
             this.pQLNH.Name = "pQLNH";
-            this.pQLNH.Size = new System.Drawing.Size(469, 76);
+            this.pQLNH.Size = new System.Drawing.Size(352, 62);
             this.pQLNH.TabIndex = 9;
             // 
             // pictureBox9
             // 
             this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox9.Location = new System.Drawing.Point(3, 5);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(71, 66);
+            this.pictureBox9.Size = new System.Drawing.Size(54, 54);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 2;
             this.pictureBox9.TabStop = false;
@@ -682,11 +558,10 @@ namespace QLCHTAN
             this.txtQLNH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQLNH.Enabled = false;
             this.txtQLNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQLNH.Location = new System.Drawing.Point(223, 6);
-            this.txtQLNH.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQLNH.Location = new System.Drawing.Point(167, 5);
             this.txtQLNH.Multiline = true;
             this.txtQLNH.Name = "txtQLNH";
-            this.txtQLNH.Size = new System.Drawing.Size(238, 61);
+            this.txtQLNH.Size = new System.Drawing.Size(179, 50);
             this.txtQLNH.TabIndex = 1;
             this.txtQLNH.Text = "Quản lí nhập hàng";
             // 
@@ -697,10 +572,9 @@ namespace QLCHTAN
             this.btnQLNH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLNH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnQLNH.Location = new System.Drawing.Point(79, 6);
-            this.btnQLNH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQLNH.Location = new System.Drawing.Point(59, 5);
             this.btnQLNH.Name = "btnQLNH";
-            this.btnQLNH.Size = new System.Drawing.Size(136, 64);
+            this.btnQLNH.Size = new System.Drawing.Size(102, 52);
             this.btnQLNH.TabIndex = 0;
             this.btnQLNH.Text = "Quản lí nhập hàng";
             this.btnQLNH.UseVisualStyleBackColor = true;
@@ -713,24 +587,18 @@ namespace QLCHTAN
             this.pXuatHang.Controls.Add(this.pictureBox10);
             this.pXuatHang.Controls.Add(this.txtQLXH);
             this.pXuatHang.Controls.Add(this.btnQLXH);
-<<<<<<< HEAD
-            this.pXuatHang.Location = new System.Drawing.Point(503, 390);
-            this.pXuatHang.Margin = new System.Windows.Forms.Padding(4);
-=======
             this.pXuatHang.Location = new System.Drawing.Point(15, 758);
->>>>>>> ta
             this.pXuatHang.Name = "pXuatHang";
-            this.pXuatHang.Size = new System.Drawing.Size(469, 76);
+            this.pXuatHang.Size = new System.Drawing.Size(352, 62);
             this.pXuatHang.TabIndex = 10;
             // 
             // pictureBox10
             // 
             this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox10.Location = new System.Drawing.Point(3, 5);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(71, 66);
+            this.pictureBox10.Size = new System.Drawing.Size(54, 54);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 2;
             this.pictureBox10.TabStop = false;
@@ -741,11 +609,10 @@ namespace QLCHTAN
             this.txtQLXH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQLXH.Enabled = false;
             this.txtQLXH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQLXH.Location = new System.Drawing.Point(223, 6);
-            this.txtQLXH.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQLXH.Location = new System.Drawing.Point(167, 5);
             this.txtQLXH.Multiline = true;
             this.txtQLXH.Name = "txtQLXH";
-            this.txtQLXH.Size = new System.Drawing.Size(238, 61);
+            this.txtQLXH.Size = new System.Drawing.Size(179, 50);
             this.txtQLXH.TabIndex = 1;
             this.txtQLXH.Text = "Quản lí xuất hàng";
             // 
@@ -756,10 +623,9 @@ namespace QLCHTAN
             this.btnQLXH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLXH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLXH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnQLXH.Location = new System.Drawing.Point(79, 6);
-            this.btnQLXH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQLXH.Location = new System.Drawing.Point(59, 5);
             this.btnQLXH.Name = "btnQLXH";
-            this.btnQLXH.Size = new System.Drawing.Size(136, 64);
+            this.btnQLXH.Size = new System.Drawing.Size(102, 52);
             this.btnQLXH.TabIndex = 0;
             this.btnQLXH.Text = "Quản lí xuất hàng";
             this.btnQLXH.UseVisualStyleBackColor = true;
@@ -772,24 +638,18 @@ namespace QLCHTAN
             this.pDatHang.Controls.Add(this.pictureBox11);
             this.pDatHang.Controls.Add(this.txtQLDH);
             this.pDatHang.Controls.Add(this.btnQLDH);
-<<<<<<< HEAD
-            this.pDatHang.Location = new System.Drawing.Point(503, 228);
-            this.pDatHang.Margin = new System.Windows.Forms.Padding(4);
-=======
             this.pDatHang.Location = new System.Drawing.Point(15, 626);
->>>>>>> ta
             this.pDatHang.Name = "pDatHang";
-            this.pDatHang.Size = new System.Drawing.Size(469, 76);
+            this.pDatHang.Size = new System.Drawing.Size(352, 62);
             this.pDatHang.TabIndex = 11;
             // 
             // pictureBox11
             // 
             this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox11.Location = new System.Drawing.Point(3, 5);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(71, 66);
+            this.pictureBox11.Size = new System.Drawing.Size(54, 54);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 2;
             this.pictureBox11.TabStop = false;
@@ -800,11 +660,10 @@ namespace QLCHTAN
             this.txtQLDH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQLDH.Enabled = false;
             this.txtQLDH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQLDH.Location = new System.Drawing.Point(223, 6);
-            this.txtQLDH.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQLDH.Location = new System.Drawing.Point(167, 5);
             this.txtQLDH.Multiline = true;
             this.txtQLDH.Name = "txtQLDH";
-            this.txtQLDH.Size = new System.Drawing.Size(238, 61);
+            this.txtQLDH.Size = new System.Drawing.Size(179, 50);
             this.txtQLDH.TabIndex = 1;
             this.txtQLDH.Text = "Quản lí đặt hàng";
             // 
@@ -815,10 +674,9 @@ namespace QLCHTAN
             this.btnQLDH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLDH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLDH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnQLDH.Location = new System.Drawing.Point(79, 6);
-            this.btnQLDH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQLDH.Location = new System.Drawing.Point(59, 5);
             this.btnQLDH.Name = "btnQLDH";
-            this.btnQLDH.Size = new System.Drawing.Size(136, 64);
+            this.btnQLDH.Size = new System.Drawing.Size(102, 52);
             this.btnQLDH.TabIndex = 0;
             this.btnQLDH.Text = "Quản lí đặt hàng";
             this.btnQLDH.UseVisualStyleBackColor = true;
@@ -831,24 +689,18 @@ namespace QLCHTAN
             this.panel1.Controls.Add(this.pictureBox12);
             this.panel1.Controls.Add(this.txtQLTH);
             this.panel1.Controls.Add(this.btnQLTH);
-<<<<<<< HEAD
-            this.panel1.Location = new System.Drawing.Point(503, 475);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-=======
             this.panel1.Location = new System.Drawing.Point(15, 827);
->>>>>>> ta
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(469, 76);
+            this.panel1.Size = new System.Drawing.Size(352, 62);
             this.panel1.TabIndex = 12;
             // 
             // pictureBox12
             // 
             this.pictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox12.Location = new System.Drawing.Point(3, 5);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(71, 66);
+            this.pictureBox12.Size = new System.Drawing.Size(54, 54);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 2;
             this.pictureBox12.TabStop = false;
@@ -859,11 +711,10 @@ namespace QLCHTAN
             this.txtQLTH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQLTH.Enabled = false;
             this.txtQLTH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQLTH.Location = new System.Drawing.Point(223, 6);
-            this.txtQLTH.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQLTH.Location = new System.Drawing.Point(167, 5);
             this.txtQLTH.Multiline = true;
             this.txtQLTH.Name = "txtQLTH";
-            this.txtQLTH.Size = new System.Drawing.Size(238, 61);
+            this.txtQLTH.Size = new System.Drawing.Size(179, 50);
             this.txtQLTH.TabIndex = 1;
             this.txtQLTH.Text = "Quản lí trả hàng";
             // 
@@ -874,10 +725,9 @@ namespace QLCHTAN
             this.btnQLTH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLTH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLTH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnQLTH.Location = new System.Drawing.Point(79, 6);
-            this.btnQLTH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQLTH.Location = new System.Drawing.Point(59, 5);
             this.btnQLTH.Name = "btnQLTH";
-            this.btnQLTH.Size = new System.Drawing.Size(136, 64);
+            this.btnQLTH.Size = new System.Drawing.Size(102, 52);
             this.btnQLTH.TabIndex = 0;
             this.btnQLTH.Text = "Quản lí trả hàng";
             this.btnQLTH.UseVisualStyleBackColor = true;
@@ -890,24 +740,18 @@ namespace QLCHTAN
             this.panel2.Controls.Add(this.pictureBox13);
             this.panel2.Controls.Add(this.txtQLMH);
             this.panel2.Controls.Add(this.btnQLMH);
-<<<<<<< HEAD
-            this.panel2.Location = new System.Drawing.Point(16, 555);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-=======
             this.panel2.Location = new System.Drawing.Point(14, 352);
->>>>>>> ta
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(469, 76);
+            this.panel2.Size = new System.Drawing.Size(352, 62);
             this.panel2.TabIndex = 13;
             // 
             // pictureBox13
             // 
             this.pictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox13.Location = new System.Drawing.Point(3, 5);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(71, 66);
+            this.pictureBox13.Size = new System.Drawing.Size(54, 54);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 2;
             this.pictureBox13.TabStop = false;
@@ -918,11 +762,10 @@ namespace QLCHTAN
             this.txtQLMH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQLMH.Enabled = false;
             this.txtQLMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQLMH.Location = new System.Drawing.Point(223, 6);
-            this.txtQLMH.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQLMH.Location = new System.Drawing.Point(167, 5);
             this.txtQLMH.Multiline = true;
             this.txtQLMH.Name = "txtQLMH";
-            this.txtQLMH.Size = new System.Drawing.Size(238, 61);
+            this.txtQLMH.Size = new System.Drawing.Size(179, 50);
             this.txtQLMH.TabIndex = 1;
             this.txtQLMH.Text = "Quản lí thông tin hàng hóa nguyên liệu chế biến món ăn";
             // 
@@ -933,28 +776,14 @@ namespace QLCHTAN
             this.btnQLMH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLMH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnQLMH.Location = new System.Drawing.Point(79, 6);
-            this.btnQLMH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQLMH.Location = new System.Drawing.Point(59, 5);
             this.btnQLMH.Name = "btnQLMH";
-            this.btnQLMH.Size = new System.Drawing.Size(136, 64);
+            this.btnQLMH.Size = new System.Drawing.Size(102, 52);
             this.btnQLMH.TabIndex = 0;
             this.btnQLMH.Text = "Quản lí mặt hàng";
             this.btnQLMH.UseVisualStyleBackColor = true;
             this.btnQLMH.Click += new System.EventHandler(this.btnQLMH_Click);
             // 
-<<<<<<< HEAD
-            // pictureBox3
-            // 
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(54, 54);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-=======
             // pChucNang
             // 
             this.pChucNang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1026,6 +855,7 @@ namespace QLCHTAN
             this.lblkDangXuat.TabIndex = 19;
             this.lblkDangXuat.TabStop = true;
             this.lblkDangXuat.Text = "Đăng xuất";
+            this.lblkDangXuat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkDangXuat_LinkClicked_1);
             // 
             // label1
             // 
@@ -1051,33 +881,11 @@ namespace QLCHTAN
             this.pCuaSoChucNang.Name = "pCuaSoChucNang";
             this.pCuaSoChucNang.Size = new System.Drawing.Size(1162, 733);
             this.pCuaSoChucNang.TabIndex = 17;
->>>>>>> ta
             // 
             // GiaoDienQuanLi_GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.BackColor = System.Drawing.Color.Pink;
-            this.ClientSize = new System.Drawing.Size(983, 821);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pDatHang);
-            this.Controls.Add(this.pXuatHang);
-            this.Controls.Add(this.pQLNCC);
-            this.Controls.Add(this.pQLNH);
-            this.Controls.Add(this.pQLLKM);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.pQLLDA);
-            this.Controls.Add(this.pQLNU);
-            this.Controls.Add(this.pQLDA);
-            this.Controls.Add(this.pQLTK);
-            this.Controls.Add(this.pQLNV);
-            this.Controls.Add(this.groupBox1);
-            this.ForeColor = System.Drawing.Color.Cornsilk;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-=======
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -1087,10 +895,10 @@ namespace QLCHTAN
             this.Controls.Add(this.pChucNang);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
->>>>>>> ta
             this.Name = "GiaoDienQuanLi_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giao diện quản lí";
+            this.Load += new System.EventHandler(this.GiaoDienQuanLi_GUI_Load);
             this.pQLNV.ResumeLayout(false);
             this.pQLNV.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1099,6 +907,7 @@ namespace QLCHTAN
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pQLDA.ResumeLayout(false);
             this.pQLDA.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pQLNU.ResumeLayout(false);
             this.pQLNU.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1129,14 +938,10 @@ namespace QLCHTAN
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-<<<<<<< HEAD
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-=======
             this.pChucNang.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
->>>>>>> ta
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1152,6 +957,7 @@ namespace QLCHTAN
         private System.Windows.Forms.Button btnQLTK;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel pQLDA;
+        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox txtQLMA;
         private System.Windows.Forms.Button btnQLDA;
         private System.Windows.Forms.Panel pQLNU;
@@ -1194,9 +1000,6 @@ namespace QLCHTAN
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.TextBox txtQLMH;
         private System.Windows.Forms.Button btnQLMH;
-<<<<<<< HEAD
-        private System.Windows.Forms.PictureBox pictureBox3;
-=======
         private System.Windows.Forms.Panel pChucNang;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblTenTaiKhoan;
@@ -1204,6 +1007,5 @@ namespace QLCHTAN
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pCuaSoChucNang;
         private System.Windows.Forms.PictureBox pictureBox14;
->>>>>>> ta
     }
 }
