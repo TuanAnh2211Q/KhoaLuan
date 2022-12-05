@@ -12,19 +12,22 @@ namespace BUS
 {
     public class KhachHang_BUS
     {
-        KhachHang_DAO khachhang = new KhachHang_DAO();
+        KhachHang_DAO khachhang_DAO = new KhachHang_DAO();
         public DataTable show_dsKhachHang_BUS()
         {
-            return khachhang.show_dsKhachHang_DAO();
+            return khachhang_DAO.show_dsKhachHang_DAO();
         }
-
+        public DataTable find_KhachHang_BUS(string sdt)
+        {
+            return khachhang_DAO.Find_KhachHang_DAO(sdt);
+        }
         public bool update_KhachHang_BUS(KhachHang_DTO KhachHangDTO)
         {
-            return khachhang.update_KhachHang_DAO(KhachHangDTO);
+            return khachhang_DAO.update_KhachHang_DAO(KhachHangDTO);
         }
         public bool delete_KhachHang_BUS(KhachHang_DTO khachHangDTO)
         {
-            return khachhang.delete_KhachHang_DAO(khachHangDTO);
+            return khachhang_DAO.delete_KhachHang_DAO(khachHangDTO);
         }
             
     }

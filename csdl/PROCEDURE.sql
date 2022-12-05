@@ -334,7 +334,7 @@ as
 	select*from KhachHang
 exec dbo.select_KhachHang
 
-alter proc update_KhachHang
+create proc update_KhachHang
 @tenKhachHang  nvarchar(100), @Phai nvarchar(10),@SDT varchar(11),
 @Email varchar(50), @diaChi nvarchar(100),@ghiChu nvarchar(max),
 @idKhachHang int
@@ -358,6 +358,12 @@ as
  delete from KhachHang where idKhachHang=@idKhachHang
 go
 exec dbo.delete_KhachHang 
+
+create proc find_KhachHang
+@SDT varchar(11)
+as
+select * from KhachHang where SDT=@SDT
+exec dbo.find_KhachHang
 
 --======================NHÀ CUNG CẤP===========
 create proc select_NCC
@@ -486,86 +492,23 @@ update DatHang set ngayDatHang=@ngayDat, ngayDuKienGiao=@ngaydukiengiao, ghiChu=
 go
 
 
-
-----------------------------PHIẾU TRẢ----------------------------
-create proc select_PhieuTra
+---------------------ORDER--------------------
+create proc select_dsDoAnTheoLoai
+@maLoaiDoAn varchar(10)
 as
-select* from TraHang
+select * from DoAn where maLoaiDoAn=@maLoaiDoAn 
 
-<<<<<<< HEAD
-=======
 
-create proc insert_TraHang
-@maTra varchar(10), @ngayTra datetime,  @ghiChu nvarchar(max), @maDat varchar(10)
+create proc select_DonViBanDoAn
 as
-insert into TraHang values (@maTra,@ngayTra,@ghiChu,@maDat,0)
-go
-
-create proc delete_TraHang
-@maTra varchar(10)
-as
-delete from TraHang where maTra=@maTra
-
-create proc update_TraHang
-@maTra varchar(10), @ngayTra datetime,  @ghiChu nvarchar(max), @maDat varchar(10)
-as
-update TraHang set ngayTra=@ngayTra, ghiChu=@ghiChu where maTra=@maTra and maDatHang=@maDat
-go
-
-create proc check_date_TraHang
-@maDatHang varchar(10)
-as
-select ngayDuKienGiao from DatHang where maDatHang=@maDatHang
+select sp.maSanPham, da.tenDoAn,ttda.donViBan,ttda.donGia from DoAn da, SanPham sp, ThongTinDoAn ttda where da.maDoAn=sp.maSanPham and da.maDoAn=ttda.maDoAn
+union all
+select sp.maSanPham,nu.tenNuoc,nu.donViBan,nu.giaBanNuoc from NuocUong nu, SanPham sp where nu.maNuoc=sp.maSanPham
+order by sp.maSanPham
+exec dbo.select_DonViBanDoAn
 
 
+select lda.tenLoaiDoAn from SanPham sp, DoAn da ,LoaiDoAn lda, NuocUong nu 
+where da.maDoAn=sp.maSanPham and nu.maNuoc=sp.maSanPham and lda.maLoaiDoAn=sp.maSanPham
 
-
-
-
-create   procedure tongGia_TraHang
-@maTra varchar(10)
-as
-select sum(tongDonGia) from ThongTinTraHang where maTra=@maTra
-go
-
-create proc soLuong_TraHang
-@maTra varchar(10),@maHang varchar(10)
-as
-select soLuong from ThongTinTraHang where maHang=@maHang and maTra=@maTra
-go
-
-create   procedure select_ThongTinPhieuTra
-@maTra varchar(10)
-as
-select mh.maHang, mh.tenHang, ttth.soLuong, ncc.tenNCC ,ttth.tongDonGia from ThongTinTraHang ttth, MatHang mh,
-NhaCungCap ncc 
-where ttth.maHang=mh.maHang
-and ncc.maNCC=ttth.maNCC
-and ttth.maTra=@maTra
-go
-
-create proc update_ThongTinTraHang
-@maTra varchar(10),@maHang varchar(10),@soLuongTra int
-as
-update ThongTinTraHang set soLuong=@soLuongTra where maTra=@maTra and maHang=@maHang
-go
-
-create proc insert_ThongTinTraHang
-@maTra varchar(10),@maHang varchar(10),@soLuongTra int
-as
-insert into ThongTinTraHang values (@maTra,null,@maHang,@soLuongTra,null)
-go
-
-create proc delete_ThongTinTraHang
-@maTra varchar(10),@maHang varchar(10)
-as
-delete from ThongTinTraHang where maTra=@maTra and maHang=@maHang
-
-
--------------------NHẬP KHO
-
-create proc insert_NhapKho
-@maNhap varchar(10), @ngayNhap datetime, @maDat varchar(10), @ghiChu nvarchar(max)
-as
-insert into NhapKho values (@maNhap, @ngayNhap,@maDat,@ghiChu)
->>>>>>> ta
+select*from LoaiDoAn
