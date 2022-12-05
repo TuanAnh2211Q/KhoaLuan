@@ -51,6 +51,7 @@ namespace QLCHTAN
             this.cbbLoaiKhuyenMai = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblkThoat = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinKhuyenMai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -147,6 +148,9 @@ namespace QLCHTAN
             // 
             this.dgvThongTinKhuyenMai.AllowUserToAddRows = false;
             this.dgvThongTinKhuyenMai.AllowUserToDeleteRows = false;
+            this.dgvThongTinKhuyenMai.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvThongTinKhuyenMai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThongTinKhuyenMai.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvThongTinKhuyenMai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -284,6 +288,8 @@ namespace QLCHTAN
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.btnDanhSachSanPhamApDung);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnSua);
@@ -305,17 +311,30 @@ namespace QLCHTAN
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khuyến mãi";
             // 
+            // lblkThoat
+            // 
+            this.lblkThoat.AutoSize = true;
+            this.lblkThoat.Location = new System.Drawing.Point(365, 43);
+            this.lblkThoat.Name = "lblkThoat";
+            this.lblkThoat.Size = new System.Drawing.Size(39, 15);
+            this.lblkThoat.TabIndex = 25;
+            this.lblkThoat.TabStop = true;
+            this.lblkThoat.Text = "Thoát";
+            this.lblkThoat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkThoat_LinkClicked);
+            // 
             // KhuyenMai_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(969, 228);
+            this.Controls.Add(this.lblkThoat);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvThongTinKhuyenMai);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "KhuyenMai_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThongTinKhuyenMai_GUI";
@@ -352,5 +371,6 @@ namespace QLCHTAN
         private System.Windows.Forms.DataGridViewTextBoxColumn tenKhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn maLoaiKhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn mucGiam;
+        private System.Windows.Forms.LinkLabel lblkThoat;
     }
 }

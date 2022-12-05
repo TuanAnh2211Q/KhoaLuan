@@ -199,6 +199,9 @@ namespace QLCHTAN
             }
         }
 
-        
+        private void lblkThoat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -119,6 +119,9 @@ namespace QLCHTAN
             // 
             this.dgvNuocUong.AllowUserToAddRows = false;
             this.dgvNuocUong.AllowUserToDeleteRows = false;
+            this.dgvNuocUong.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvNuocUong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNuocUong.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvNuocUong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -229,6 +232,8 @@ namespace QLCHTAN
             // 
             // grbThongTinNuocUong
             // 
+            this.grbThongTinNuocUong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.grbThongTinNuocUong.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.grbThongTinNuocUong.Controls.Add(this.txtTenNuoc);
             this.grbThongTinNuocUong.Controls.Add(this.btnLamMoi);
@@ -297,14 +302,14 @@ namespace QLCHTAN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(725, 221);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.grbThongTinNuocUong);
             this.Controls.Add(this.dgvNuocUong);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NuocUong_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

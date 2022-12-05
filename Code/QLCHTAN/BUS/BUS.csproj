@@ -55,11 +55,13 @@
     <Compile Include="PhanQuyen_BUS.cs" />
     <Compile Include="PhieuDatHang_BUS.cs" />
     <Compile Include="PhieuNhapKho_BUS.cs" />
+    <Compile Include="PhieuTra_BUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaiKhoan_BUS.cs" />
     <Compile Include="ThongTinChiTietPhieuDatHang_BUS.cs" />
     <Compile Include="ThongTinChiTietPhieuNhap_BUS.cs" />
     <Compile Include="ThongTinKhuyenMai_BUS.cs" />
+    <Compile Include="ThongTinPhieuTra_BUS.cs" />
     <Compile Include="ThongTinThanhPhanDoAn_BUS.cs" />
   </ItemGroup>
   <ItemGroup>

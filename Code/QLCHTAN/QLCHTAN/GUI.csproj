@@ -192,11 +192,11 @@
     <Compile Include="ThemPhieuXuat_GUI.Designer.cs">
       <DependentUpon>ThemPhieuXuat_GUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThongTinChiTietPhieuDat_GUI.cs">
+    <Compile Include="ThongTinPhieuDat_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThongTinChiTietPhieuDat_GUI.Designer.cs">
-      <DependentUpon>ThongTinChiTietPhieuDat_GUI.cs</DependentUpon>
+    <Compile Include="ThongTinPhieuDat_GUI.Designer.cs">
+      <DependentUpon>ThongTinPhieuDat_GUI.cs</DependentUpon>
     </Compile>
     <Compile Include="KhuyenMai_GUI.cs">
       <SubType>Form</SubType>
@@ -315,8 +315,8 @@
     <EmbeddedResource Include="ThemPhieuXuat_GUI.resx">
       <DependentUpon>ThemPhieuXuat_GUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThongTinChiTietPhieuDat_GUI.resx">
-      <DependentUpon>ThongTinChiTietPhieuDat_GUI.cs</DependentUpon>
+    <EmbeddedResource Include="ThongTinPhieuDat_GUI.resx">
+      <DependentUpon>ThongTinPhieuDat_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhuyenMai_GUI.resx">
       <DependentUpon>KhuyenMai_GUI.cs</DependentUpon>

@@ -63,7 +63,7 @@ namespace QLCHTAN
                     trangThaiPhieu = false;
                 }
                 txtMaDat.Enabled = false;
-            }    
+            }
         }
 
         private void txtMaDat_TextChanged(object sender, EventArgs e)
@@ -81,7 +81,7 @@ namespace QLCHTAN
             ccbPhuongThucThanhToan.SelectedIndex = 0;
             btnCapNhat.Enabled = true;
             btnHuyPhieuDat.Enabled = true;
-            lblTrangThai.Text = ".................................................................";
+            lblTrangThai.Text = "............................................................................";
             lblTrangThai.ForeColor = Color.Black;
 
 
@@ -131,7 +131,7 @@ namespace QLCHTAN
             }
             else
             {
-                ThongTinChiTietPhieuDat_GUI thongTinChiTietPhieuDat_GUI = new ThongTinChiTietPhieuDat_GUI();
+                ThongTinPhieuDat_GUI thongTinChiTietPhieuDat_GUI = new ThongTinPhieuDat_GUI();
                 thongTinChiTietPhieuDat_GUI.Show();
             }
         }
@@ -223,6 +223,90 @@ namespace QLCHTAN
         private void lblTrangThai_TextChanged(object sender, EventArgs e)
         {
             lblTrangThai.ForeColor = Color.Red;
+        }
+
+        private void lblkTaoPhieuTra_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if(txtMaDat.Text!="")
+            {
+                PhieuTra_GUI phieuTra = new PhieuTra_GUI();
+                phieuTra.Show();
+            }    
+            else
+            {
+                    MessageBox.Show("Vui lòng chọn đơn đặt muốn tạo phiếu trả");    
+            }
+        }
+
+        private void lblkTaoPhieuNhap_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if(txtMaDat.Text=="")
+            {
+                MessageBox.Show("Vui lòng chọn phiếu đặt muốn lập phiếu nhập");
+            }
+            else
+            {
+                maPhieuDat = txtMaDat.Text;
+                ThemPhieuNhap_GUI themPhieuNhap = new ThemPhieuNhap_GUI();
+                themPhieuNhap.Show();
+            }    
+        }
+
+        private void PhieuDatHang_GUI_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            maDatHang = null;
+        }
+
+        private void btnHoanThanh_Click(object sender, EventArgs e)
+        {
+            if (txtMaDat.Text != "")
+            {
+
+                if (lblTrangThai.Text == "Đã hoàn thành")
+                {
+                    MessageBox.Show("Phiếu đặt đã hoàn thành không thể thay đổi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                else
+                {
+                    if (kt_Dondat())
+                    {
+                        long sp = dtNgayDuKienGiao.Value.Subtract(dtNgayDat.Value).Ticks;
+                        if (sp < 0)
+                        {
+                            MessageBox.Show("Ngày dự kiến giao không được nhỏ hơn ngày đặt");
+                        }
+                        else
+                        {
+                            DialogResult rs = MessageBox.Show("Xác nhận hoàn thành phiếu đặt ?", "Thông báo", MessageBoxButtons.YesNo);
+                            if (rs == DialogResult.Yes)
+                            {
+                                PhieuDatHang_DTO pd= new PhieuDatHang_DTO(txtMaDat.Text.Trim(), dtNgayDat.Value, dtNgayDuKienGiao.Value, ccbPhuongThucThanhToan.Text.Trim(), txtGhiChu.Text,true);
+
+                                if (phieuDatHang_BUS.update_PhieuDat_BUS(pd))
+                                {
+                                    MessageBox.Show("Thành công");
+                                    btnLamMoi_Click(sender, e);
+                                }
+                                else
+                                    MessageBox.Show("Cập nhật thất bại, vui lòng kiểm tra lại thông tin");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Phiếu đặt không tồn tại, vui lòng kiểm tra lại thông tin");
+                    }
+                }
+
+            }
+            else
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+        }
+
+        private void lblkThoat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
