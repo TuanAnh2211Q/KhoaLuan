@@ -15,7 +15,8 @@ namespace QLCHTAN
     public partial class PhieuDatHang_GUI : Form
     {
         PhieuDatHang_BUS phieuDatHang_BUS = new PhieuDatHang_BUS();
-        public static string maPhieuDat;
+        ThongTinChiTietPhieuDatHang_BUS thongTinChiTietPhieuDatHang_BUS = new ThongTinChiTietPhieuDatHang_BUS();
+        public static string maPhieuDat=null;
         public static bool trangThaiPhieu;
         public PhieuDatHang_GUI()
         {
@@ -68,7 +69,7 @@ namespace QLCHTAN
 
         private void txtMaDat_TextChanged(object sender, EventArgs e)
         {
-            maPhieuDat = txtMaDat.Text;
+            maPhieuDat = txtMaDat.Text.Trim();
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
@@ -247,6 +248,19 @@ namespace QLCHTAN
             else
             {
                 maPhieuDat = txtMaDat.Text;
+                if (phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuTra(phieuDatHang_DTO()) != null)
+                    PhieuTra_GUI.maPhieuTra = phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuTra(phieuDatHang_DTO());
+                else
+                {
+                    if (thongTinChiTietPhieuDatHang_BUS.ds_SanPhamDat_BUS(maPhieuDat).Rows.Count <= 0)
+                    {
+                        MessageBox.Show("Không có thông tin lập phiếu nhập");
+                        return;
+                    }
+                    else
+                        PhieuTra_GUI.maPhieuTra = null;
+                }
+                
                 ThemPhieuNhap_GUI themPhieuNhap = new ThemPhieuNhap_GUI();
                 themPhieuNhap.Show();
             }    
@@ -257,16 +271,17 @@ namespace QLCHTAN
             maDatHang = null;
         }
 
-        private void btnHoanThanh_Click(object sender, EventArgs e)
+        private void btnThayDoiTrangThai_Click(object sender, EventArgs e)
         {
             if (txtMaDat.Text != "")
             {
 
-                if (lblTrangThai.Text == "Đã hoàn thành")
+                if (phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuTra(phieuDatHang_DTO())!=null||!phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuNhap(phieuDatHang_DTO()))
                 {
-                    MessageBox.Show("Phiếu đặt đã hoàn thành không thể thay đổi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Phiếu đặt này đã được hoàn thiện, không thể thay đổi trạng thái", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
+               
                 else
                 {
                     if (kt_Dondat())
@@ -281,7 +296,15 @@ namespace QLCHTAN
                             DialogResult rs = MessageBox.Show("Xác nhận hoàn thành phiếu đặt ?", "Thông báo", MessageBoxButtons.YesNo);
                             if (rs == DialogResult.Yes)
                             {
-                                PhieuDatHang_DTO pd= new PhieuDatHang_DTO(txtMaDat.Text.Trim(), dtNgayDat.Value, dtNgayDuKienGiao.Value, ccbPhuongThucThanhToan.Text.Trim(), txtGhiChu.Text,true);
+                                if(trangThaiPhieu is false)
+                                {
+                                    trangThaiPhieu = true;
+                                }
+                                else
+                                {
+                                    trangThaiPhieu = false;
+                                }
+                                PhieuDatHang_DTO pd = new PhieuDatHang_DTO(txtMaDat.Text.Trim(), dtNgayDat.Value, dtNgayDuKienGiao.Value, ccbPhuongThucThanhToan.Text.Trim(), txtGhiChu.Text, trangThaiPhieu);
 
                                 if (phieuDatHang_BUS.update_PhieuDat_BUS(pd))
                                 {

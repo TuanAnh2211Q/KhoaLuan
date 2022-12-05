@@ -18,19 +18,19 @@ namespace QLCHTAN
         public ThongTinPhieuNhap_GUI()
         {
             InitializeComponent();
-            txtMaNhap.Text = PhieuNhapKho_GUI.maNhapKho;
         }
-        
-        //public ThongTinChiTIetPhieuNhap_DTO thongTinChiTIetPhieuNhap_DTO()
-        //{
-        //    //return new ThongTinChiTIetPhieuNhap_DTO();
-        //}
+       
         private void ThongTinPhieuNhap_GUI_Load(object sender, EventArgs e)
         {
-            
+            lblThongTinPhieuNhap.Text = lblThongTinPhieuNhap.Text + " " + PhieuNhapKho_GUI.maNhapKho;
+            dgvThongTinChiTietPhieuNhap.DataSource = thongTinChiTietPhieuNhap_BUS.dsThongTinChiTietPhieuNhap(PhieuNhapKho_GUI.maNhapKho);
+            string tongGia = thongTinChiTietPhieuNhap_BUS.select_TongGiaNhap_DAO(PhieuNhapKho_GUI.maNhapKho).ToString();
+            lblTongGiaNhap.Text =lblTongGiaNhap.Text+" "+tongGia +" " + "VNĐ";
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
+      
+
+        private void lblkThoat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
         }

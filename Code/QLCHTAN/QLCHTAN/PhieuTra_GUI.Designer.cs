@@ -55,6 +55,7 @@ namespace QLCHTAN
             this.btnThemPhieuTra = new System.Windows.Forms.Button();
             this.btnHuyPhieuTra = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbkThoat = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuTra)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -261,6 +262,7 @@ namespace QLCHTAN
             this.txtMaTra.Name = "txtMaTra";
             this.txtMaTra.Size = new System.Drawing.Size(237, 23);
             this.txtMaTra.TabIndex = 4;
+            this.txtMaTra.TextChanged += new System.EventHandler(this.txtMaTra_TextChanged);
             // 
             // label4
             // 
@@ -321,6 +323,7 @@ namespace QLCHTAN
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.lbkThoat);
             this.panel1.Controls.Add(this.dgvPhieuTra);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.btnHuyPhieuTra);
@@ -332,6 +335,17 @@ namespace QLCHTAN
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(744, 528);
             this.panel1.TabIndex = 20;
+            // 
+            // lbkThoat
+            // 
+            this.lbkThoat.AutoSize = true;
+            this.lbkThoat.Location = new System.Drawing.Point(3, 25);
+            this.lbkThoat.Name = "lbkThoat";
+            this.lbkThoat.Size = new System.Drawing.Size(39, 15);
+            this.lbkThoat.TabIndex = 20;
+            this.lbkThoat.TabStop = true;
+            this.lbkThoat.Text = "Thoát";
+            this.lbkThoat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbkThoat_LinkClicked);
             // 
             // PhieuTra_GUI
             // 
@@ -384,5 +398,6 @@ namespace QLCHTAN
         private System.Windows.Forms.DataGridViewTextBoxColumn maDatHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn trangThai;
         private System.Windows.Forms.ComboBox cbbMaDat;
+        private System.Windows.Forms.LinkLabel lbkThoat;
     }
 }

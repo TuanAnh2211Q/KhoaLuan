@@ -87,6 +87,50 @@ namespace DAO
             }
             return false;
         }
+        public string check_TrangThai_PhieuDat_PhieuTra(PhieuDatHang_DTO phieudat)
+        {
+            Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("check_PhieuDat_PhieuTra", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@maDat", SqlDbType.VarChar).Value = phieudat.MaDatHang.Trim();
+                if (cmd.ExecuteScalar()!=null)
+                    return Convert.ToString(cmd.ExecuteScalar());
+                else
+                {
+                    return null;
+                }    
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public bool check_TrangThai_PhieuDat_PhieuNhap(PhieuDatHang_DTO phieudat)
+        {
+            Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("check_PhieuDat_PhieuNhap", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@maDat", SqlDbType.VarChar).Value = phieudat.MaDatHang.Trim();
+                if (cmd.ExecuteScalar() != null)
+                    return false;
+                else
+                {
+                    return true;
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
     }
 }

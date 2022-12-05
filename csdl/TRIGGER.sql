@@ -254,35 +254,16 @@ end
 
 
  ----------NHẬP KHO-----------------------------------
-----Thêm tổng giá thông tin phiếu nhập
---create  trigger insert_TongGia_NhapKho on ThongTinNhapKho instead of insert as
---begin 
---	     declare
---		    @maNhap varchar(10)=(select maNhap from inserted),
---			@maNCC varchar(10)=(select mh.maNCC from  MatHang mh, inserted where inserted.maHang=mh.maHang ),
---			 @donGia money=( select mh.donGia from MatHang mh, inserted where inserted.maHang=mh.maHang),
---             @maHang varchar(10)=(select maHang from inserted),
---             @soLuongNhap int= (select soLuong from inserted),
---			 @tongDonGia money
-			 
---			 set @tongDonGia=@soLuongNhap*@donGia
---			 	if not exists(select * from ThongTinNhapKho where maHang=@maHang and maNhap=@maNhap and maNCC=@maNCC)
---			begin
---			insert into ThongTinNhapKho values(@maNhap,@maNCC,@maHang,@soLuongNhap,(select tongDonGia=@tongDonGia from inserted))
---			end
---			else
---			begin
---			update ThongTinNhapKho
---			set soLuong=soLuong+@soLuongNhap,
---		    tongDonGia=tongDonGia+@tongDonGia
---			where maHang=@maHang and maNhap=@maNhap and maNCC=@maNCC
---			end
-		  
---end
---go
+ --
+ create trigger trg_insertThongTinNhapHang on ThongTinNhapKho after insert
+ as
+ begin
+ declare
+ @maDatHang varchar(10)=(select maDatHang from NhapKho where maNhap=(select maNhap from inserted))
+ update DatHang set trangThai=1 where maDatHang=@maDatHang
+ update TraHang set trangThai=1 where maDatHang=@maDatHang
+ end
 
---insert into ThongTinNhapKho values('MN001',null,'MH001',1,null)
---select * from ThongTinNhapKho
 
 ----Cập nhật thông tin phiếu nhập
 --create trigger update_TongGia_NhapKho on ThongTinNhapKho instead of update as
@@ -337,7 +318,17 @@ delete from KhuyenMai where maKhuyenMai=@maKhuyenMai
 
 
 ----------------------------TRẢ HÀNG
-create  trigger trg_insert_ThongTinTraHang on ThongTinTraHang instead of insert
+
+create trigger trg_insert_TraHang on TraHang after insert
+as
+begin
+declare
+@maDat varchar(10)=(select maDatHang from inserted)
+update DatHang set trangThai=1 where maDatHang=@maDat
+
+end
+
+create trigger trg_insert_ThongTinTraHang on ThongTinTraHang instead of insert
 as
 begin
 declare 
@@ -381,3 +372,13 @@ declare
 			where maHang=@mahang and maTra=@matra and maNCC=@maNCC
 end
  go
+
+
+ create trigger delete_PhieuTra on TraHang instead of delete
+ as
+ declare 
+   @maTra varchar(10)= (select maTra from deleted)
+
+   delete from ThongTinTraHang where maTra=@maTra;
+   delete from TraHang where maTra=@maTra
+   go

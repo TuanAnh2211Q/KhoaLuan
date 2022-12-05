@@ -47,7 +47,6 @@ namespace QLCHTAN
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvThongTinChiTietPhieuNhap = new System.Windows.Forms.DataGridView();
-            this.maNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -230,6 +229,7 @@ namespace QLCHTAN
             this.btnXacNhan.TabIndex = 2;
             this.btnXacNhan.Text = "Xác nhận";
             this.btnXacNhan.UseVisualStyleBackColor = true;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // label5
             // 
@@ -247,7 +247,6 @@ namespace QLCHTAN
             this.dgvThongTinChiTietPhieuNhap.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvThongTinChiTietPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongTinChiTietPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maNhap,
             this.maHang,
             this.maNCC,
             this.soLuong,
@@ -257,12 +256,6 @@ namespace QLCHTAN
             this.dgvThongTinChiTietPhieuNhap.Name = "dgvThongTinChiTietPhieuNhap";
             this.dgvThongTinChiTietPhieuNhap.Size = new System.Drawing.Size(569, 424);
             this.dgvThongTinChiTietPhieuNhap.TabIndex = 0;
-            // 
-            // maNhap
-            // 
-            this.maNhap.DataPropertyName = "maNhap";
-            this.maNhap.HeaderText = "Mã nhập";
-            this.maNhap.Name = "maNhap";
             // 
             // maHang
             // 
@@ -278,7 +271,7 @@ namespace QLCHTAN
             // 
             // soLuong
             // 
-            this.soLuong.DataPropertyName = "soLuong";
+            this.soLuong.DataPropertyName = "soLuongNhap";
             this.soLuong.HeaderText = "Số lượng";
             this.soLuong.Name = "soLuong";
             // 
@@ -330,12 +323,11 @@ namespace QLCHTAN
         private System.Windows.Forms.TabPage tbpThemChiTiet;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgvThongTinChiTietPhieuNhap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maNhap;
+        private System.Windows.Forms.Button btnQuayLai;
+        private System.Windows.Forms.Button btnXacNhan;
         private System.Windows.Forms.DataGridViewTextBoxColumn maHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn maNCC;
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn tongDonGia;
-        private System.Windows.Forms.Button btnQuayLai;
-        private System.Windows.Forms.Button btnXacNhan;
     }
 }

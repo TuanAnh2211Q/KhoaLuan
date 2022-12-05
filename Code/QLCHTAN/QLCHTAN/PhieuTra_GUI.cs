@@ -18,7 +18,7 @@ namespace QLCHTAN
         PhieuTra_BUS phieuTra_BUS = new PhieuTra_BUS();
         public static string maDat;
         public static string maTraHang;
-
+        public static string maPhieuTra=null;
         public PhieuTra_DTO phieuTra()
         {
             return new PhieuTra_DTO(txtMaTra.Text.Trim(), cbbMaDat.SelectedValue.ToString().Trim(), dtNgayTra.Value, txtGhiChu.Text);
@@ -231,6 +231,16 @@ namespace QLCHTAN
         private void PhieuTra_GUI_FormClosing(object sender, FormClosingEventArgs e)
         {
             maDat = null;
+        }
+
+        private void lbkThoat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtMaTra_TextChanged(object sender, EventArgs e)
+        {
+            maPhieuTra = txtMaTra.Text.Trim();
         }
     }
 }
