@@ -17,6 +17,7 @@ namespace QLCHTAN
     {
         KhachHang_BUS khachHang_BUS = new KhachHang_BUS();
         DoAn_BUS doAn_BUS = new DoAn_BUS();
+        NuocUong_BUS nuocUong_BUS = new NuocUong_BUS();
         KhuyenMai_BUS khuyenMai_BUS = new KhuyenMai_BUS();
         public string loaiDichVu { get; set; }
         public string GioiTinh { get; set; }
@@ -58,6 +59,17 @@ namespace QLCHTAN
             cbbDanhMucMon.DisplayMember = "tenLoaiDoAn";
             cbbDanhMucMon.ValueMember = "maLoaiDoAn";
             cbbSDT.SelectedValue = -1;
+            cbbSizeDoAn.DataSource = doAn_BUS.select_DonViBanDoAn();
+            cbbSizeDoAn.DisplayMember = "donViBan";
+            cbbSizeDoAn.ValueMember = "donViBan";
+            //load dữ liệu nước uống
+            cbbTenNuoc.DataSource = nuocUong_BUS.show_dsNuocUong_BUS();
+            cbbTenNuoc.DisplayMember = "tenNuoc";
+            cbbTenNuoc.ValueMember = "maNuoc";
+            //txtSizeNuoc.Text = nuocUong_BUS.show_dsLoaiNuocUong_BUS(maNuoc);
+            //cbbSizeNuoc.DataSource = nuocUong_BUS.show_dsNuocUong_BUS();
+            //cbbSizeNuoc.DisplayMember = "donViBan";
+            //cbbSizeNuoc.ValueMember = "donViBan";
             //Load khuyến mãi
             cbbMaGiamGia.DataSource = khuyenMai_BUS.show_KM_BUS();
             cbbMaGiamGia.DisplayMember = "tenKhuyenMai";
@@ -156,57 +168,41 @@ namespace QLCHTAN
              
                
         }
+        private void cbbDanhMucMon_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbbDanhMucMon.SelectedValue != null)
+            {
+                string maloai = cbbDanhMucMon.SelectedValue.ToString().Trim();
+                if (doAn_BUS.show_DSLoaiDoAn_BUS(maloai).Rows.Count > 0)
+                {
+                    cbbTenMon.DataSource = doAn_BUS.show_DSLoaiDoAn_BUS(maloai);
+                    cbbTenMon.DisplayMember = "tenDoAn";
+                    cbbTenMon.ValueMember = "maDoAn";
+                }
+                else
+                {
+                    cbbTenMon.DataSource = null;
+                    cbbTenMon.Text = String.Empty;
+                }
+            }
 
+        }
+
+        
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             clearData(sender, e);
         }
+        private void dgvDonHang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
 
 
 
         #endregion
 
-        private void cbbDanhMucMon_SelectedValueChanged(object sender, EventArgs e)
-        {
-            if (cbbDanhMucMon.SelectedValue != null)
-            {
-                string maloai = cbbDanhMucMon.SelectedValue.ToString().Trim();  
-                if(doAn_BUS.show_DSLoaiDoAn_BUS(maloai).Rows.Count>0)
-                {
-                    cbbTenMon.DataSource = doAn_BUS.show_DSLoaiDoAn_BUS(maloai);
-                    cbbTenMon.DisplayMember = "tenDoAn";
-                    cbbTenMon.ValueMember = "maDoAn";
-                }    
-                else
-                {
-                    cbbTenMon.DataSource = null;
-                    cbbTenMon.Text = String.Empty;
-                }    
-            }
-           
-        }
 
-        private void cbbTenMon_SelectedValueChanged(object sender, EventArgs e)
-        {
-            if (cbbTenMon.SelectedValue != null)
-            {
-                string tenDoAn = cbbTenMon.SelectedValue.ToString().Trim();
-                if (doAn_BUS.select_DonViBanDoAn(tenDoAn) !=null)
-                {
-                    txtDinhLuongDoAn.Text = doAn_BUS.select_DonViBanDoAn(tenDoAn);
-                    txtDinhLuongDoAn.Enabled = false;
-                }
-                else
-                {
-                    txtDinhLuongDoAn.Clear();
-                    txtDinhLuongDoAn.Enabled = true;
-                }
-            }
-            else
-            {
-                txtDinhLuongDoAn.Clear();
-                txtDinhLuongDoAn.Enabled = true;
-            }    
-        }
     }
 }

@@ -29,7 +29,6 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Order_GUI));
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.btnThanhToan = new System.Windows.Forms.Button();
@@ -70,53 +69,53 @@ namespace QLCHTAN
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.PanelOrder = new System.Windows.Forms.Panel();
-            this.btnXoaMon = new System.Windows.Forms.Button();
-            this.btnThemMon = new System.Windows.Forms.Button();
-            this.nudSoLuongMon = new System.Windows.Forms.NumericUpDown();
-            this.cbbTenMon = new System.Windows.Forms.ComboBox();
-            this.cbbDanhMucMon = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnXoaNuoc = new System.Windows.Forms.Button();
+            this.btnThemNuoc = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.nudSoLuongNuoc = new System.Windows.Forms.NumericUpDown();
             this.cbbTenNuoc = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.cbbSizeDoAn = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.nudSoLuongNuoc = new System.Windows.Forms.NumericUpDown();
-            this.btnXoaNuoc = new System.Windows.Forms.Button();
-            this.btnThemNuoc = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtDinhLuongDoAn = new System.Windows.Forms.TextBox();
-            this.txtDinhLuongNuoc = new System.Windows.Forms.TextBox();
+            this.btnXoaMon = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnThemMon = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.nudSoLuongMon = new System.Windows.Forms.NumericUpDown();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cbbDanhMucMon = new System.Windows.Forms.ComboBox();
+            this.cbbTenMon = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonHang)).BeginInit();
             this.gbPhuongThuc.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panelKhachHang.SuspendLayout();
             this.panelThanhToan.SuspendLayout();
             this.PanelOrder.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuongMon)).BeginInit();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuongNuoc)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuongMon)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTongTien
             // 
+            this.txtTongTien.AllowDrop = true;
             this.txtTongTien.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongTien.Location = new System.Drawing.Point(22, 260);
+            this.txtTongTien.Location = new System.Drawing.Point(24, 190);
+            this.txtTongTien.Multiline = true;
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.ReadOnly = true;
-            this.txtTongTien.Size = new System.Drawing.Size(259, 27);
+            this.txtTongTien.Size = new System.Drawing.Size(257, 22);
             this.txtTongTien.TabIndex = 16;
             // 
             // btnThanhToan
             // 
             this.btnThanhToan.BackColor = System.Drawing.Color.PowderBlue;
             this.btnThanhToan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnThanhToan.Location = new System.Drawing.Point(16, 521);
+            this.btnThanhToan.Location = new System.Drawing.Point(22, 390);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(256, 45);
             this.btnThanhToan.TabIndex = 14;
@@ -130,7 +129,7 @@ namespace QLCHTAN
             this.rdbThe.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbThe.Location = new System.Drawing.Point(169, 59);
             this.rdbThe.Name = "rdbThe";
-            this.rdbThe.Size = new System.Drawing.Size(52, 23);
+            this.rdbThe.Size = new System.Drawing.Size(63, 28);
             this.rdbThe.TabIndex = 3;
             this.rdbThe.TabStop = true;
             this.rdbThe.Text = "Thẻ";
@@ -142,7 +141,7 @@ namespace QLCHTAN
             this.rdbTienMat.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbTienMat.Location = new System.Drawing.Point(13, 59);
             this.rdbTienMat.Name = "rdbTienMat";
-            this.rdbTienMat.Size = new System.Drawing.Size(87, 23);
+            this.rdbTienMat.Size = new System.Drawing.Size(106, 28);
             this.rdbTienMat.TabIndex = 2;
             this.rdbTienMat.TabStop = true;
             this.rdbTienMat.Text = "Tiền Mặt";
@@ -152,14 +151,6 @@ namespace QLCHTAN
             // 
             this.dgvDonHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDonHang.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDonHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDonHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -171,8 +162,9 @@ namespace QLCHTAN
             this.dgvDonHang.Name = "dgvDonHang";
             this.dgvDonHang.RowHeadersWidth = 51;
             this.dgvDonHang.RowTemplate.Height = 24;
-            this.dgvDonHang.Size = new System.Drawing.Size(528, 496);
+            this.dgvDonHang.Size = new System.Drawing.Size(528, 492);
             this.dgvDonHang.TabIndex = 1;
+            this.dgvDonHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDonHang_CellClick);
             // 
             // Column1
             // 
@@ -204,7 +196,7 @@ namespace QLCHTAN
             this.label4.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 313);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 17);
+            this.label4.Size = new System.Drawing.Size(67, 21);
             this.label4.TabIndex = 8;
             this.label4.Text = "Địa Chỉ :";
             // 
@@ -212,9 +204,9 @@ namespace QLCHTAN
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(12, 209);
+            this.label10.Location = new System.Drawing.Point(5, 152);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 19);
+            this.label10.Size = new System.Drawing.Size(103, 24);
             this.label10.TabIndex = 15;
             this.label10.Text = "Tổng Tiền :";
             // 
@@ -223,7 +215,7 @@ namespace QLCHTAN
             this.txtTenKhach.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKhach.Location = new System.Drawing.Point(42, 201);
             this.txtTenKhach.Name = "txtTenKhach";
-            this.txtTenKhach.Size = new System.Drawing.Size(351, 27);
+            this.txtTenKhach.Size = new System.Drawing.Size(351, 32);
             this.txtTenKhach.TabIndex = 7;
             this.txtTenKhach.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTenKhach_KeyPress);
             // 
@@ -235,8 +227,9 @@ namespace QLCHTAN
             this.cbbSDT.FormattingEnabled = true;
             this.cbbSDT.Location = new System.Drawing.Point(42, 118);
             this.cbbSDT.Name = "cbbSDT";
-            this.cbbSDT.Size = new System.Drawing.Size(351, 27);
+            this.cbbSDT.Size = new System.Drawing.Size(351, 32);
             this.cbbSDT.TabIndex = 5;
+            this.cbbSDT.SelectedValueChanged += new System.EventHandler(this.cbbSDT_SelectedValueChanged);
             this.cbbSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbbSDT_KeyPress);
             // 
             // label2
@@ -245,7 +238,7 @@ namespace QLCHTAN
             this.label2.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 17);
+            this.label2.Size = new System.Drawing.Size(118, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Số Điện Thoại :";
             // 
@@ -255,7 +248,7 @@ namespace QLCHTAN
             this.rdbMangVe.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbMangVe.Location = new System.Drawing.Point(156, 71);
             this.rdbMangVe.Name = "rdbMangVe";
-            this.rdbMangVe.Size = new System.Drawing.Size(90, 23);
+            this.rdbMangVe.Size = new System.Drawing.Size(108, 28);
             this.rdbMangVe.TabIndex = 1;
             this.rdbMangVe.TabStop = true;
             this.rdbMangVe.Text = "Mang Về ";
@@ -268,7 +261,7 @@ namespace QLCHTAN
             this.rdbAnTaiCho.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbAnTaiCho.Location = new System.Drawing.Point(7, 73);
             this.rdbAnTaiCho.Name = "rdbAnTaiCho";
-            this.rdbAnTaiCho.Size = new System.Drawing.Size(101, 23);
+            this.rdbAnTaiCho.Size = new System.Drawing.Size(125, 28);
             this.rdbAnTaiCho.TabIndex = 0;
             this.rdbAnTaiCho.TabStop = true;
             this.rdbAnTaiCho.Text = "Ăn Tại Chổ ";
@@ -281,7 +274,7 @@ namespace QLCHTAN
             this.label3.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 164);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 17);
+            this.label3.Size = new System.Drawing.Size(92, 21);
             this.label3.TabIndex = 6;
             this.label3.Text = "Tên Khách :";
             // 
@@ -290,7 +283,7 @@ namespace QLCHTAN
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(69, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 23);
+            this.label1.Size = new System.Drawing.Size(256, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "Thông Tin Khách Hàng !!";
             // 
@@ -301,7 +294,7 @@ namespace QLCHTAN
             this.gbPhuongThuc.Controls.Add(this.rdbAnTaiCho);
             this.gbPhuongThuc.Location = new System.Drawing.Point(3, 459);
             this.gbPhuongThuc.Name = "gbPhuongThuc";
-            this.gbPhuongThuc.Size = new System.Drawing.Size(402, 144);
+            this.gbPhuongThuc.Size = new System.Drawing.Size(402, 108);
             this.gbPhuongThuc.TabIndex = 2;
             this.gbPhuongThuc.TabStop = false;
             this.gbPhuongThuc.Text = "Loại Dịch Vụ :";
@@ -312,7 +305,7 @@ namespace QLCHTAN
             this.rdbGiaoHang.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbGiaoHang.Location = new System.Drawing.Point(278, 71);
             this.rdbGiaoHang.Name = "rdbGiaoHang";
-            this.rdbGiaoHang.Size = new System.Drawing.Size(97, 23);
+            this.rdbGiaoHang.Size = new System.Drawing.Size(118, 28);
             this.rdbGiaoHang.TabIndex = 2;
             this.rdbGiaoHang.TabStop = true;
             this.rdbGiaoHang.Text = "Giao Hàng";
@@ -331,7 +324,7 @@ namespace QLCHTAN
             this.groupBox1.Controls.Add(this.rdbThe);
             this.groupBox1.Controls.Add(this.rdbTienMat);
             this.groupBox1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(9, 349);
+            this.groupBox1.Location = new System.Drawing.Point(9, 243);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(278, 133);
             this.groupBox1.TabIndex = 13;
@@ -367,7 +360,7 @@ namespace QLCHTAN
             // btnLamMoi
             // 
             this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
-            this.btnLamMoi.Location = new System.Drawing.Point(146, 710);
+            this.btnLamMoi.Location = new System.Drawing.Point(146, 674);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(104, 44);
             this.btnLamMoi.TabIndex = 18;
@@ -380,7 +373,7 @@ namespace QLCHTAN
             this.rdbNu.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbNu.Location = new System.Drawing.Point(217, 279);
             this.rdbNu.Name = "rdbNu";
-            this.rdbNu.Size = new System.Drawing.Size(49, 23);
+            this.rdbNu.Size = new System.Drawing.Size(58, 28);
             this.rdbNu.TabIndex = 17;
             this.rdbNu.TabStop = true;
             this.rdbNu.Text = "Nữ";
@@ -393,7 +386,7 @@ namespace QLCHTAN
             this.rdbNam.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbNam.Location = new System.Drawing.Point(83, 279);
             this.rdbNam.Name = "rdbNam";
-            this.rdbNam.Size = new System.Drawing.Size(59, 23);
+            this.rdbNam.Size = new System.Drawing.Size(71, 28);
             this.rdbNam.TabIndex = 16;
             this.rdbNam.TabStop = true;
             this.rdbNam.Text = "Nam";
@@ -406,7 +399,7 @@ namespace QLCHTAN
             this.label14.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(6, 247);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(68, 17);
+            this.label14.Size = new System.Drawing.Size(83, 21);
             this.label14.TabIndex = 15;
             this.label14.Text = "Giới Tính :";
             // 
@@ -415,7 +408,7 @@ namespace QLCHTAN
             this.txtEmail.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(42, 421);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(354, 27);
+            this.txtEmail.Size = new System.Drawing.Size(354, 32);
             this.txtEmail.TabIndex = 14;
             // 
             // label13
@@ -424,13 +417,13 @@ namespace QLCHTAN
             this.label13.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(6, 390);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(48, 17);
+            this.label13.Size = new System.Drawing.Size(57, 21);
             this.label13.TabIndex = 13;
             this.label13.Text = "Email :";
             // 
             // rtxtGhiChu
             // 
-            this.rtxtGhiChu.Location = new System.Drawing.Point(10, 633);
+            this.rtxtGhiChu.Location = new System.Drawing.Point(10, 597);
             this.rtxtGhiChu.Name = "rtxtGhiChu";
             this.rtxtGhiChu.Size = new System.Drawing.Size(383, 71);
             this.rtxtGhiChu.TabIndex = 12;
@@ -440,9 +433,9 @@ namespace QLCHTAN
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 606);
+            this.label11.Location = new System.Drawing.Point(6, 570);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 19);
+            this.label11.Size = new System.Drawing.Size(84, 24);
             this.label11.TabIndex = 11;
             this.label11.Text = "Ghi Chú :";
             // 
@@ -451,7 +444,7 @@ namespace QLCHTAN
             this.txtDiaChi.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(42, 344);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(351, 27);
+            this.txtDiaChi.Size = new System.Drawing.Size(351, 32);
             this.txtDiaChi.TabIndex = 9;
             // 
             // panelThanhToan
@@ -476,9 +469,9 @@ namespace QLCHTAN
             this.cbbMaGiamGia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMaGiamGia.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbMaGiamGia.FormattingEnabled = true;
-            this.cbbMaGiamGia.Location = new System.Drawing.Point(24, 134);
+            this.cbbMaGiamGia.Location = new System.Drawing.Point(24, 115);
             this.cbbMaGiamGia.Name = "cbbMaGiamGia";
-            this.cbbMaGiamGia.Size = new System.Drawing.Size(257, 27);
+            this.cbbMaGiamGia.Size = new System.Drawing.Size(257, 32);
             this.cbbMaGiamGia.TabIndex = 12;
             // 
             // label9
@@ -487,7 +480,7 @@ namespace QLCHTAN
             this.label9.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(12, 91);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 19);
+            this.label9.Size = new System.Drawing.Size(94, 24);
             this.label9.TabIndex = 7;
             this.label9.Text = "Giảm Giá :";
             // 
@@ -496,7 +489,7 @@ namespace QLCHTAN
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(75, 15);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(114, 23);
+            this.label8.Size = new System.Drawing.Size(147, 29);
             this.label8.TabIndex = 4;
             this.label8.Text = "Thanh Toán !!";
             // 
@@ -513,205 +506,27 @@ namespace QLCHTAN
             this.PanelOrder.Size = new System.Drawing.Size(543, 769);
             this.PanelOrder.TabIndex = 7;
             // 
-            // btnXoaMon
+            // label18
             // 
-            this.btnXoaMon.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnXoaMon.Font = new System.Drawing.Font("Candara Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaMon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnXoaMon.Location = new System.Drawing.Point(146, 153);
-            this.btnXoaMon.Name = "btnXoaMon";
-            this.btnXoaMon.Size = new System.Drawing.Size(115, 45);
-            this.btnXoaMon.TabIndex = 12;
-            this.btnXoaMon.Text = "Xóa Món";
-            this.btnXoaMon.UseVisualStyleBackColor = false;
-            // 
-            // btnThemMon
-            // 
-            this.btnThemMon.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnThemMon.Font = new System.Drawing.Font("Candara Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemMon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnThemMon.Location = new System.Drawing.Point(6, 153);
-            this.btnThemMon.Name = "btnThemMon";
-            this.btnThemMon.Size = new System.Drawing.Size(115, 45);
-            this.btnThemMon.TabIndex = 11;
-            this.btnThemMon.Text = "Thêm Món ";
-            this.btnThemMon.UseVisualStyleBackColor = false;
-            // 
-            // nudSoLuongMon
-            // 
-            this.nudSoLuongMon.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudSoLuongMon.Location = new System.Drawing.Point(111, 120);
-            this.nudSoLuongMon.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudSoLuongMon.Name = "nudSoLuongMon";
-            this.nudSoLuongMon.Size = new System.Drawing.Size(150, 27);
-            this.nudSoLuongMon.TabIndex = 9;
-            this.nudSoLuongMon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudSoLuongMon.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // cbbTenMon
-            // 
-            this.cbbTenMon.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTenMon.FormattingEnabled = true;
-            this.cbbTenMon.Location = new System.Drawing.Point(111, 46);
-            this.cbbTenMon.Name = "cbbTenMon";
-            this.cbbTenMon.Size = new System.Drawing.Size(152, 27);
-            this.cbbTenMon.TabIndex = 8;
-            this.cbbTenMon.SelectedValueChanged += new System.EventHandler(this.cbbTenMon_SelectedValueChanged);
-            // 
-            // cbbDanhMucMon
-            // 
-            this.cbbDanhMucMon.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbDanhMucMon.FormattingEnabled = true;
-            this.cbbDanhMucMon.Location = new System.Drawing.Point(111, 13);
-            this.cbbDanhMucMon.Name = "cbbDanhMucMon";
-            this.cbbDanhMucMon.Size = new System.Drawing.Size(150, 27);
-            this.cbbDanhMucMon.TabIndex = 7;
-            this.cbbDanhMucMon.SelectedValueChanged += new System.EventHandler(this.cbbDanhMucMon_SelectedValueChanged);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(3, 17);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(106, 18);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "Danh mục món:";
-            // 
-            // cbbTenNuoc
-            // 
-            this.cbbTenNuoc.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTenNuoc.FormattingEnabled = true;
-            this.cbbTenNuoc.Location = new System.Drawing.Point(90, 13);
-            this.cbbTenNuoc.Name = "cbbTenNuoc";
-            this.cbbTenNuoc.Size = new System.Drawing.Size(165, 27);
-            this.cbbTenNuoc.TabIndex = 9;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(12, 17);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(72, 18);
-            this.label17.TabIndex = 12;
-            this.label17.Text = "Tên nước:";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.txtDinhLuongDoAn);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.btnXoaMon);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.btnThemMon);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.nudSoLuongMon);
-            this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.cbbDanhMucMon);
-            this.panel3.Controls.Add(this.cbbTenMon);
-            this.panel3.Location = new System.Drawing.Point(3, 60);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(264, 204);
-            this.panel3.TabIndex = 2;
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(187, 18);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(176, 29);
+            this.label18.TabIndex = 4;
+            this.label18.Text = "Danh sách order";
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.txtDinhLuongNuoc);
             this.panel4.Controls.Add(this.btnXoaNuoc);
             this.panel4.Controls.Add(this.btnThemNuoc);
             this.panel4.Controls.Add(this.label16);
             this.panel4.Controls.Add(this.nudSoLuongNuoc);
-            this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.cbbTenNuoc);
             this.panel4.Controls.Add(this.label17);
             this.panel4.Location = new System.Drawing.Point(270, 60);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(258, 204);
             this.panel4.TabIndex = 3;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(3, 55);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 18);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Tên món:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(3, 83);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(82, 18);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "Định lượng:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(3, 119);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 18);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Số lượng:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(12, 59);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 18);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Định lượng:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Red;
-            this.label16.Location = new System.Drawing.Point(15, 106);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(69, 18);
-            this.label16.TabIndex = 18;
-            this.label16.Text = "Số lượng:";
-            // 
-            // nudSoLuongNuoc
-            // 
-            this.nudSoLuongNuoc.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudSoLuongNuoc.Location = new System.Drawing.Point(105, 103);
-            this.nudSoLuongNuoc.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudSoLuongNuoc.Name = "nudSoLuongNuoc";
-            this.nudSoLuongNuoc.Size = new System.Drawing.Size(150, 27);
-            this.nudSoLuongNuoc.TabIndex = 17;
-            this.nudSoLuongNuoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudSoLuongNuoc.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // btnXoaNuoc
             // 
@@ -737,38 +552,203 @@ namespace QLCHTAN
             this.btnThemNuoc.Text = "Thêm nước";
             this.btnThemNuoc.UseVisualStyleBackColor = false;
             // 
-            // label18
+            // label16
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(187, 18);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(138, 23);
-            this.label18.TabIndex = 4;
-            this.label18.Text = "Danh sách order";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Red;
+            this.label16.Location = new System.Drawing.Point(11, 83);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(88, 23);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "Số lượng:";
             // 
-            // txtDinhLuongDoAn
+            // nudSoLuongNuoc
             // 
-            this.txtDinhLuongDoAn.Enabled = false;
-            this.txtDinhLuongDoAn.Location = new System.Drawing.Point(111, 84);
-            this.txtDinhLuongDoAn.Name = "txtDinhLuongDoAn";
-            this.txtDinhLuongDoAn.Size = new System.Drawing.Size(150, 30);
-            this.txtDinhLuongDoAn.TabIndex = 16;
+            this.nudSoLuongNuoc.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudSoLuongNuoc.Location = new System.Drawing.Point(90, 104);
+            this.nudSoLuongNuoc.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudSoLuongNuoc.Name = "nudSoLuongNuoc";
+            this.nudSoLuongNuoc.Size = new System.Drawing.Size(165, 32);
+            this.nudSoLuongNuoc.TabIndex = 17;
+            this.nudSoLuongNuoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudSoLuongNuoc.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // txtDinhLuongNuoc
+            // cbbTenNuoc
             // 
-            this.txtDinhLuongNuoc.Enabled = false;
-            this.txtDinhLuongNuoc.Location = new System.Drawing.Point(105, 59);
-            this.txtDinhLuongNuoc.Name = "txtDinhLuongNuoc";
-            this.txtDinhLuongNuoc.Size = new System.Drawing.Size(150, 30);
-            this.txtDinhLuongNuoc.TabIndex = 19;
+            this.cbbTenNuoc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbTenNuoc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbTenNuoc.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTenNuoc.FormattingEnabled = true;
+            this.cbbTenNuoc.Location = new System.Drawing.Point(90, 46);
+            this.cbbTenNuoc.Name = "cbbTenNuoc";
+            this.cbbTenNuoc.Size = new System.Drawing.Size(165, 32);
+            this.cbbTenNuoc.TabIndex = 9;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Red;
+            this.label17.Location = new System.Drawing.Point(12, 17);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(91, 23);
+            this.label17.TabIndex = 12;
+            this.label17.Text = "Tên nước:";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.cbbSizeDoAn);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.btnXoaMon);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.btnThemMon);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.nudSoLuongMon);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.cbbDanhMucMon);
+            this.panel3.Controls.Add(this.cbbTenMon);
+            this.panel3.Location = new System.Drawing.Point(3, 60);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(264, 204);
+            this.panel3.TabIndex = 2;
+            // 
+            // cbbSizeDoAn
+            // 
+            this.cbbSizeDoAn.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbSizeDoAn.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbSizeDoAn.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSizeDoAn.FormattingEnabled = true;
+            this.cbbSizeDoAn.Location = new System.Drawing.Point(111, 84);
+            this.cbbSizeDoAn.Name = "cbbSizeDoAn";
+            this.cbbSizeDoAn.Size = new System.Drawing.Size(150, 32);
+            this.cbbSizeDoAn.TabIndex = 20;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(3, 119);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 23);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Số lượng:";
+            // 
+            // btnXoaMon
+            // 
+            this.btnXoaMon.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnXoaMon.Font = new System.Drawing.Font("Candara Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaMon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnXoaMon.Location = new System.Drawing.Point(146, 153);
+            this.btnXoaMon.Name = "btnXoaMon";
+            this.btnXoaMon.Size = new System.Drawing.Size(115, 45);
+            this.btnXoaMon.TabIndex = 12;
+            this.btnXoaMon.Text = "Xóa Món";
+            this.btnXoaMon.UseVisualStyleBackColor = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(3, 83);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(110, 23);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Kích Thước :";
+            // 
+            // btnThemMon
+            // 
+            this.btnThemMon.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnThemMon.Font = new System.Drawing.Font("Candara Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemMon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnThemMon.Location = new System.Drawing.Point(6, 153);
+            this.btnThemMon.Name = "btnThemMon";
+            this.btnThemMon.Size = new System.Drawing.Size(115, 45);
+            this.btnThemMon.TabIndex = 11;
+            this.btnThemMon.Text = "Thêm Món ";
+            this.btnThemMon.UseVisualStyleBackColor = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(3, 55);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 23);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Tên món:";
+            // 
+            // nudSoLuongMon
+            // 
+            this.nudSoLuongMon.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudSoLuongMon.Location = new System.Drawing.Point(111, 120);
+            this.nudSoLuongMon.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudSoLuongMon.Name = "nudSoLuongMon";
+            this.nudSoLuongMon.Size = new System.Drawing.Size(150, 32);
+            this.nudSoLuongMon.TabIndex = 9;
+            this.nudSoLuongMon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudSoLuongMon.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(3, 17);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(136, 23);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Danh mục món:";
+            // 
+            // cbbDanhMucMon
+            // 
+            this.cbbDanhMucMon.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbDanhMucMon.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbDanhMucMon.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbDanhMucMon.FormattingEnabled = true;
+            this.cbbDanhMucMon.Location = new System.Drawing.Point(111, 13);
+            this.cbbDanhMucMon.Name = "cbbDanhMucMon";
+            this.cbbDanhMucMon.Size = new System.Drawing.Size(150, 32);
+            this.cbbDanhMucMon.TabIndex = 7;
+            this.cbbDanhMucMon.SelectedValueChanged += new System.EventHandler(this.cbbDanhMucMon_SelectedValueChanged);
+            // 
+            // cbbTenMon
+            // 
+            this.cbbTenMon.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbTenMon.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbTenMon.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTenMon.FormattingEnabled = true;
+            this.cbbTenMon.Location = new System.Drawing.Point(111, 46);
+            this.cbbTenMon.Name = "cbbTenMon";
+            this.cbbTenMon.Size = new System.Drawing.Size(152, 32);
+            this.cbbTenMon.TabIndex = 8;
             // 
             // Order_GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1294, 767);
+            this.ClientSize = new System.Drawing.Size(1252, 781);
             this.Controls.Add(this.panelKhachHang);
             this.Controls.Add(this.panelThanhToan);
             this.Controls.Add(this.PanelOrder);
@@ -789,12 +769,12 @@ namespace QLCHTAN
             this.panelThanhToan.PerformLayout();
             this.PanelOrder.ResumeLayout(false);
             this.PanelOrder.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuongMon)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuongNuoc)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuongMon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -853,13 +833,11 @@ namespace QLCHTAN
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button btnXoaNuoc;
         private System.Windows.Forms.Button btnThemNuoc;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.NumericUpDown nudSoLuongNuoc;
-        private System.Windows.Forms.TextBox txtDinhLuongNuoc;
-        private System.Windows.Forms.TextBox txtDinhLuongDoAn;
+        private System.Windows.Forms.ComboBox cbbSizeDoAn;
     }
 }

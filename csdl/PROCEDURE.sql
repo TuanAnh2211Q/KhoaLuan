@@ -493,16 +493,28 @@ go
 
 
 ---------------------ORDER--------------------
-create proc select_dsDoAnTheoLoai
+
+-- Lấy danh sách đồ ăn
+alter proc select_dsDoAnTheoLoai
 @maLoaiDoAn varchar(10)
 as
 select tenDoAn,maDoAn from DoAn where maLoaiDoAn=@maLoaiDoAn
 
 
-
-create proc select_DonViBanDoAn
-@maDoAn varchar(10)
+--lấy đơn vị bán đồ ăn
+alter proc select_DonViBanDoAn
 as
-select donViBan from ThongTinDoAn where maDoAn=@maDoAn
+select distinct donViBan from ThongTinDoAn 
 
-
+--lấy danh sách nước uống
+create proc select_dsNuocUong
+@maNuoc varchar(10)
+as
+	select tenNuoc, maNuoc from NuocUong where maNuoc=@maNuoc
+exec dbo.select_NuocUong
+--lấy đơn vị bán nước
+create proc select_DonViBanNuoc
+@maNuoc varchar(10)
+as
+	select donViBan from NuocUong where maNuoc=@maNuoc
+exec dbo.select_Donselect_DonViBanNuoc

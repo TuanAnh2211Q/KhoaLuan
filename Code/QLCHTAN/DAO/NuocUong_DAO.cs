@@ -81,5 +81,25 @@ namespace DAO
             }
             return false;
         }
+        public DataTable show_dsLoaiNuocUong_DAO( string maNuoc)
+        {
+            Open();
+            SqlDataAdapter da = new SqlDataAdapter("select_dsNuocUong",conn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@maNuoc", SqlDbType.VarChar).Value = maNuoc;
+            DataTable dsnu = new DataTable();
+            da.Fill(dsnu);
+            return dsnu;
+        }
+        public string select_DonViBanNuocUong(string maNuoc)
+        {
+            Open();
+            SqlCommand cmd = new SqlCommand("select_DonViBanNuoc", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@maNuoc", SqlDbType.VarChar).Value = maNuoc;
+            if (cmd.ExecuteScalar() != null)
+                return cmd.ExecuteScalar().ToString();
+            return null;
+        }
     }
 }
