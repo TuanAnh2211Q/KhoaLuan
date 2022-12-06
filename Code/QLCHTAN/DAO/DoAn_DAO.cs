@@ -38,16 +38,7 @@ namespace DAO
             da.Fill(dsMon);
             return dsMon;
         }
-        public DataTable show_dsLoaiDoAn_DAO( string maLoaiDoAn)
-        {
-            Open();
-            SqlDataAdapter da = new SqlDataAdapter("select_dsDoAnTheoLoai", conn);
-            da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            da.SelectCommand.Parameters.Add("@maLoaiDoAn", SqlDbType.VarChar).Value = maLoaiDoAn;
-            DataTable dslda = new DataTable();
-            da.Fill(dslda);
-            return dslda;
-        }
+        
         public bool insert_DoAn_DAO(DoAn_DTO doAn_DTO)
         {
             try
@@ -113,16 +104,24 @@ namespace DAO
             }
             return false;
         }
-
-        public string select_DonViBanDoAn(string maDoAn)
+        public DataTable show_dsLoaiDoAn_DAO( string maLoaiDoAn)
         {
             Open();
-            SqlCommand cmd = new SqlCommand("select_DonViBanDoAn", conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@maDoAn", SqlDbType.VarChar).Value = maDoAn;
-            if (cmd.ExecuteScalar() != null)
-                return cmd.ExecuteScalar().ToString();
-            return null;
+            SqlDataAdapter da = new SqlDataAdapter("select_dsDoAnTheoLoai", conn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@maLoaiDoAn", SqlDbType.VarChar).Value = maLoaiDoAn;
+            DataTable dslda = new DataTable();
+            da.Fill(dslda);
+            return dslda;
+        }
+        public DataTable select_DonViBanDoAn()
+        {
+            Open();
+            SqlDataAdapter da = new SqlDataAdapter("select_DonViBanDoAn", conn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable tb = new DataTable();
+            da.Fill(tb);
+            return tb;
         }
     }
 }

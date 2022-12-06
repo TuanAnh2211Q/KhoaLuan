@@ -1,4 +1,6 @@
-﻿--Trigger tự tạo tài khoản nhân viên
+﻿use QLCUAHANGTHUCANNHANH
+go
+--Trigger tự tạo tài khoản nhân viên
 
 --drop trigger tg_TaoTK
 create trigger tg_TaoTK on NhanVien after insert as
@@ -373,6 +375,7 @@ declare
 end
  go
 
+<<<<<<< HEAD
 
  create trigger delete_PhieuTra on TraHang instead of delete
  as
@@ -382,3 +385,23 @@ end
    delete from ThongTinTraHang where maTra=@maTra;
    delete from TraHang where maTra=@maTra
    go
+=======
+--==================Order=========================
+--Tính thành tiền
+create trigger trg_total_ThongTinDonHang on ThongTinDonHang instead of insert ,update 
+as
+begin
+declare
+		@maDonHang varchar(10)= (select maDonHang from ThongTinDonHang),
+		@tenMon nvarchar(50) =(select tenDoAn from DoAn inserted),
+		@donGia	money = (select donGia from ThongTinDoAn ttda, DoAn da where ttda.maDoAn=da.maDoAn),
+		@soLuongMon int =(select soLuong from inserted),
+		@thanhTien money
+		set @thanhTien=@donGia*@soLuongMon
+
+		update ThongTinDonHang
+		set thanhTien=@thanhTien
+		where maDonHang=@maDonHang
+end
+go
+>>>>>>> DienDayNeee
