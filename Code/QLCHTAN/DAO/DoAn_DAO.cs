@@ -114,7 +114,7 @@ namespace DAO
             da.Fill(dslda);
             return dslda;
         }
-        public DataTable select_DonViBanDoAn()
+        public DataTable select_DonViBanDoAn_DAO()
         {
             Open();
             SqlDataAdapter da = new SqlDataAdapter("select_DonViBanDoAn", conn);
@@ -122,6 +122,21 @@ namespace DAO
             DataTable tb = new DataTable();
             da.Fill(tb);
             return tb;
+        }
+        public decimal select_GiaDoAn_DAO(string maDoAn)
+        {
+            Open();
+            SqlDataAdapter da = new SqlDataAdapter("select_GiaDoAn", conn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            //SqlCommand cmd = new SqlCommand("select_GiaDoAn", conn);
+            da.SelectCommand.Parameters.Add("@maDoAn", SqlDbType.VarChar).Value = maDoAn;
+            if (da.SelectCommand.ExecuteScalar() != null)
+            {
+                return (decimal)da.SelectCommand.ExecuteScalar();
+            }
+            else
+                return 0;
+
         }
     }
 }

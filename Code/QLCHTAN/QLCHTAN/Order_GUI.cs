@@ -59,17 +59,13 @@ namespace QLCHTAN
             cbbDanhMucMon.DisplayMember = "tenLoaiDoAn";
             cbbDanhMucMon.ValueMember = "maLoaiDoAn";
             cbbSDT.SelectedValue = -1;
-            cbbSizeDoAn.DataSource = doAn_BUS.select_DonViBanDoAn();
+            cbbSizeDoAn.DataSource = doAn_BUS.select_DonViBanDoAn_BUS();
             cbbSizeDoAn.DisplayMember = "donViBan";
             cbbSizeDoAn.ValueMember = "donViBan";
             //load dữ liệu nước uống
             cbbTenNuoc.DataSource = nuocUong_BUS.show_dsNuocUong_BUS();
             cbbTenNuoc.DisplayMember = "tenNuoc";
             cbbTenNuoc.ValueMember = "maNuoc";
-            //txtSizeNuoc.Text = nuocUong_BUS.show_dsLoaiNuocUong_BUS(maNuoc);
-            //cbbSizeNuoc.DataSource = nuocUong_BUS.show_dsNuocUong_BUS();
-            //cbbSizeNuoc.DisplayMember = "donViBan";
-            //cbbSizeNuoc.ValueMember = "donViBan";
             //Load khuyến mãi
             cbbMaGiamGia.DataSource = khuyenMai_BUS.show_KM_BUS();
             cbbMaGiamGia.DisplayMember = "tenKhuyenMai";
@@ -198,11 +194,32 @@ namespace QLCHTAN
 
         }
 
+        private void btnThemMon_Click(object sender, EventArgs e)
+        {
+            string maDoAn ;
+            DataTable thongtindonhang = (DataTable)dgvThongTinDonHang.DataSource;
+            
+            string maLoai = cbbDanhMucMon.SelectedValue.ToString().Trim();
+            foreach(DataRow r in thongtindonhang.Rows)
+            {
+                cbbTenMon.DataSource = doAn_BUS.show_DSLoaiDoAn_BUS(maLoai);
+                cbbTenMon.DisplayMember = "tenDoAn";
+                cbbTenMon.ValueMember = "maDoAn";
+                cbbTenMon.SelectedValue = r.Field<string>("tenDoAn");
+                //int soLuong = nudSoLuongMon.Value;
+                //soLuong = r.Field<int>("soLuong");
+                //decimal donGia = doAn_BUS.select_GiaDoAn_BUS(cbbTenMon.ValueMember);
+                //donGia = r.Field<decimal>("donGia");
+
+                //decimal thanhTien = donGia * soLuong;
+
+            }
+        }
+
 
 
 
         #endregion
-
 
     }
 }

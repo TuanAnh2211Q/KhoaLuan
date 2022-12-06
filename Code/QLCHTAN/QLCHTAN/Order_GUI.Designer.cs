@@ -34,11 +34,7 @@ namespace QLCHTAN
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.rdbThe = new System.Windows.Forms.RadioButton();
             this.rdbTienMat = new System.Windows.Forms.RadioButton();
-            this.dgvDonHang = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvThongTinDonHang = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtTenKhach = new System.Windows.Forms.TextBox();
@@ -88,7 +84,11 @@ namespace QLCHTAN
             this.label15 = new System.Windows.Forms.Label();
             this.cbbDanhMucMon = new System.Windows.Forms.ComboBox();
             this.cbbTenMon = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDonHang)).BeginInit();
+            this.tenDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinDonHang)).BeginInit();
             this.gbPhuongThuc.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panelKhachHang.SuspendLayout();
@@ -147,48 +147,24 @@ namespace QLCHTAN
             this.rdbTienMat.Text = "Tiền Mặt";
             this.rdbTienMat.UseVisualStyleBackColor = true;
             // 
-            // dgvDonHang
+            // dgvThongTinDonHang
             // 
-            this.dgvDonHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDonHang.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDonHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dgvDonHang.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dgvDonHang.Location = new System.Drawing.Point(3, 270);
-            this.dgvDonHang.Name = "dgvDonHang";
-            this.dgvDonHang.RowHeadersWidth = 51;
-            this.dgvDonHang.RowTemplate.Height = 24;
-            this.dgvDonHang.Size = new System.Drawing.Size(528, 492);
-            this.dgvDonHang.TabIndex = 1;
-            this.dgvDonHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDonHang_CellClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Tên Món ";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Số Lượng";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Đơn giá";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Thành Tiền";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
+            this.dgvThongTinDonHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvThongTinDonHang.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvThongTinDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThongTinDonHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tenDoAn,
+            this.soLuong,
+            this.donGia,
+            this.ThanhTien});
+            this.dgvThongTinDonHang.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvThongTinDonHang.Location = new System.Drawing.Point(3, 270);
+            this.dgvThongTinDonHang.Name = "dgvThongTinDonHang";
+            this.dgvThongTinDonHang.RowHeadersWidth = 51;
+            this.dgvThongTinDonHang.RowTemplate.Height = 24;
+            this.dgvThongTinDonHang.Size = new System.Drawing.Size(528, 492);
+            this.dgvThongTinDonHang.TabIndex = 1;
+            this.dgvThongTinDonHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDonHang_CellClick);
             // 
             // label4
             // 
@@ -500,7 +476,7 @@ namespace QLCHTAN
             this.PanelOrder.Controls.Add(this.label18);
             this.PanelOrder.Controls.Add(this.panel4);
             this.PanelOrder.Controls.Add(this.panel3);
-            this.PanelOrder.Controls.Add(this.dgvDonHang);
+            this.PanelOrder.Controls.Add(this.dgvThongTinDonHang);
             this.PanelOrder.Location = new System.Drawing.Point(413, 1);
             this.PanelOrder.Name = "PanelOrder";
             this.PanelOrder.Size = new System.Drawing.Size(543, 769);
@@ -677,6 +653,7 @@ namespace QLCHTAN
             this.btnThemMon.TabIndex = 11;
             this.btnThemMon.Text = "Thêm Món ";
             this.btnThemMon.UseVisualStyleBackColor = false;
+            this.btnThemMon.Click += new System.EventHandler(this.btnThemMon_Click);
             // 
             // label6
             // 
@@ -742,6 +719,33 @@ namespace QLCHTAN
             this.cbbTenMon.Size = new System.Drawing.Size(152, 32);
             this.cbbTenMon.TabIndex = 8;
             // 
+            // tenDoAn
+            // 
+            this.tenDoAn.DataPropertyName = "tenDoAn";
+            this.tenDoAn.HeaderText = "Tên Món ";
+            this.tenDoAn.MinimumWidth = 6;
+            this.tenDoAn.Name = "tenDoAn";
+            // 
+            // soLuong
+            // 
+            this.soLuong.DataPropertyName = "soLuong";
+            this.soLuong.HeaderText = "Số Lượng";
+            this.soLuong.MinimumWidth = 6;
+            this.soLuong.Name = "soLuong";
+            // 
+            // donGia
+            // 
+            this.donGia.HeaderText = "Đơn giá";
+            this.donGia.MinimumWidth = 6;
+            this.donGia.Name = "donGia";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "thanhTien";
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.MinimumWidth = 6;
+            this.ThanhTien.Name = "ThanhTien";
+            // 
             // Order_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
@@ -758,7 +762,7 @@ namespace QLCHTAN
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderChinh";
             this.Load += new System.EventHandler(this.Order_GUI_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDonHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinDonHang)).EndInit();
             this.gbPhuongThuc.ResumeLayout(false);
             this.gbPhuongThuc.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -785,7 +789,7 @@ namespace QLCHTAN
         private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.RadioButton rdbThe;
         private System.Windows.Forms.RadioButton rdbTienMat;
-        private System.Windows.Forms.DataGridView dgvDonHang;
+        private System.Windows.Forms.DataGridView dgvThongTinDonHang;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtTenKhach;
@@ -820,10 +824,6 @@ namespace QLCHTAN
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label17;
@@ -839,5 +839,9 @@ namespace QLCHTAN
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.NumericUpDown nudSoLuongNuoc;
         private System.Windows.Forms.ComboBox cbbSizeDoAn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenDoAn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
     }
 }
