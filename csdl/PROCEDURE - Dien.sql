@@ -521,3 +521,8 @@ create proc select_DonViBanNuoc
 as
 	select donViBan from NuocUong where maNuoc=@maNuoc
 exec dbo.select_Donselect_DonViBanNuoc
+-- Lấy giá dồ ăn
+create proc select_GiaDoAn
+@maDoAn varchar(10)
+as
+	select donGia from ThongTinDoAn where maDoAn=@maDoAn
