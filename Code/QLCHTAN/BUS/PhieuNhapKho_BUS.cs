@@ -37,5 +37,9 @@ namespace BUS
             return phieuNhapKho_DAO.check_PhieuNhap( maphieu);
 
         }
+        public bool check_MaPhieu(string maphieu)
+        {
+            return phieuNhapKho_DAO.check_PhieuNhap(maphieu);
+        }
     }
 }

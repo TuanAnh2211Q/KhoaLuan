@@ -39,13 +39,22 @@ namespace DTO
             get { return maDoAn; }
             set { maDoAn = value; }
         }
+        private int soLuong;
 
-        public ThongTinThanhPhanDoAn_DTO (string MaThanhPhan, string TenThanhPhan, string DinhLuong, string MaDoAn)
+        public int SoLuong
+        {
+            get { return soLuong; }
+            set { soLuong = value; }
+        }
+
+
+        public ThongTinThanhPhanDoAn_DTO (string MaThanhPhan, string TenThanhPhan, string DinhLuong, string MaDoAn,int SoLuong)
         {
             this.maThanhPhan = MaThanhPhan;
             this.tenThanhPhan = TenThanhPhan;
             this.dinhLuong = DinhLuong;
             this.maDoAn = MaDoAn;
+            this.soLuong = SoLuong;
         }
     }
 }

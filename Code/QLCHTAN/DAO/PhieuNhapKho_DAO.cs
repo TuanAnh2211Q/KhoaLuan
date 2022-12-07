@@ -36,7 +36,7 @@ namespace DAO
                 SqlCommand cmd = new SqlCommand("insert_PhieuNhap", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@maNhap", SqlDbType.VarChar).Value = phieuNhapKho_DTO.MaNhap;
-                cmd.Parameters.Add("@ngayNhap", SqlDbType.VarChar).Value = phieuNhapKho_DTO.NgayNhap;
+                cmd.Parameters.Add("@ngayNhap", SqlDbType.DateTime).Value = phieuNhapKho_DTO.NgayNhap;
                 cmd.Parameters.Add("@maDatHang", SqlDbType.VarChar).Value = phieuNhapKho_DTO.MaDatHang;
                 cmd.Parameters.Add("@ghiChu", SqlDbType.VarChar).Value = phieuNhapKho_DTO.GhiChu;
                 if (cmd.ExecuteNonQuery() > 0)
@@ -107,5 +107,24 @@ namespace DAO
             }
             return false;
         }
+        public bool check_MaPhieu(string maphieu)
+        {
+            Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("check_MaNhapKho", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@maNhap", SqlDbType.VarChar).Value = maphieu;
+                if (cmd.ExecuteScalar() != null)
+                    return false;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return true;
+        }
+
     }
 }

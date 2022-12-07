@@ -30,7 +30,6 @@ namespace QLCHTAN
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblkHuyPhieuNhap = new System.Windows.Forms.LinkLabel();
             this.txtMaDatHang = new System.Windows.Forms.TextBox();
             this.lblkThongTinChiTiet = new System.Windows.Forms.LinkLabel();
             this.lblTrangThai = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@ namespace QLCHTAN
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.lblkThoat = new System.Windows.Forms.LinkLabel();
+            this.lblkHuyPhieuNhap = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhap)).BeginInit();
             this.panel1.SuspendLayout();
@@ -81,17 +81,6 @@ namespace QLCHTAN
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách phiếu nhập";
-            // 
-            // lblkHuyPhieuNhap
-            // 
-            this.lblkHuyPhieuNhap.AutoSize = true;
-            this.lblkHuyPhieuNhap.Location = new System.Drawing.Point(193, 316);
-            this.lblkHuyPhieuNhap.Name = "lblkHuyPhieuNhap";
-            this.lblkHuyPhieuNhap.Size = new System.Drawing.Size(93, 15);
-            this.lblkHuyPhieuNhap.TabIndex = 26;
-            this.lblkHuyPhieuNhap.TabStop = true;
-            this.lblkHuyPhieuNhap.Text = "Hủy phiếu nhập";
-            this.lblkHuyPhieuNhap.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkHuyPhieuNhap_LinkClicked);
             // 
             // txtMaDatHang
             // 
@@ -291,6 +280,17 @@ namespace QLCHTAN
             this.lblkThoat.Text = "Thoát";
             this.lblkThoat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkThoat_LinkClicked);
             // 
+            // lblkHuyPhieuNhap
+            // 
+            this.lblkHuyPhieuNhap.AutoSize = true;
+            this.lblkHuyPhieuNhap.Location = new System.Drawing.Point(193, 316);
+            this.lblkHuyPhieuNhap.Name = "lblkHuyPhieuNhap";
+            this.lblkHuyPhieuNhap.Size = new System.Drawing.Size(93, 15);
+            this.lblkHuyPhieuNhap.TabIndex = 26;
+            this.lblkHuyPhieuNhap.TabStop = true;
+            this.lblkHuyPhieuNhap.Text = "Hủy phiếu nhập";
+            this.lblkHuyPhieuNhap.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkHuyPhieuNhap_LinkClicked);
+            // 
             // PhieuNhapKho_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -330,7 +330,6 @@ namespace QLCHTAN
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label lblTrangThai;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.LinkLabel lblkHuyPhieuNhap;
         private System.Windows.Forms.TextBox txtMaDatHang;
         private System.Windows.Forms.LinkLabel lblkThongTinChiTiet;
         private System.Windows.Forms.Panel panel1;
@@ -341,5 +340,6 @@ namespace QLCHTAN
         private System.Windows.Forms.DataGridViewTextBoxColumn ghiChu;
         private System.Windows.Forms.DataGridViewTextBoxColumn trangThai;
         private System.Windows.Forms.LinkLabel lblkThoat;
+        private System.Windows.Forms.LinkLabel lblkHuyPhieuNhap;
     }
 }

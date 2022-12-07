@@ -94,8 +94,54 @@ insert into NuocUong values(@masp,@tenNuocUong,@donViBan,@giaBan)
 end
 go
 
+------------------------------MẶT HÀNG-------------------------------------------
+
+--create trigger insert_MatHang_NuocUong on MatHang after insert as
+--begin
+--declare 
+--		@maHang varchar(10)=(select maHang from inserted),
+--		@tenHang nvarchar(50)=(select tenHang from inserted),
+--		@maNCC varchar(10)=(select maNCC from inserted),
+--		@donVi nvarchar(10)=(select donVi from inserted),
+--		@NSX date=(select NSX from inserted),
+--		@HSD date=(select HSD from inserted),
+--		@donGia money=(select donGia from inserted),
+--		@ghiChu nvarchar(max)=(select ghiChu from inserted),
+--		@loaiHang bit=(select loaiHang from inserted)
+
+--		if(@loaiHang=0)
+--		begin
+--		if exists(select maNuoc from NuocUong where maNuoc=@maHang)
+--		begin
+--		update MatHang
+--		set tenHang=@tenHang,maNCC=@maNCC,donVi=@donVi,NSX=@NSX,HSD=@NSX,donGia=@donGia,ghiChu=@ghiChu
+--		where maHang=@maHang
+--		end
+--		else
+--		insert into MatHang(@maHang,@tenHang,@maNCC,@donVi,@
+
+--		end
+
+
+--end
+
+create trigger trg_delete_MatHang on MatHang instead of delete
+as
+begin
+declare
+@maHang varchar(10)= (select maHang from deleted)
+if exists(select maNuoc from NuocUong where maNuoc=@maHang)
+begin
+delete from NuocUong where maNuoc=@maHang
+end
+delete from MatHang where maHang=@maHang
+end
+
+-----------------------------------------------------------------------------------------
+
+
 --Xóa nước uống trong loại sản phẩm
-create trigger delete_NuocUong on NuocUong instead of  delete as
+create  trigger delete_NuocUong on NuocUong instead of  delete as
 begin
 alter table NuocUong drop constraint fk_NuocUong_SanPham
 declare @masp nchar(30)= (select maNuoc from deleted)
@@ -267,29 +313,6 @@ end
  end
 
 
-----Cập nhật thông tin phiếu nhập
---create trigger update_TongGia_NhapKho on ThongTinNhapKho instead of update as
---begin 
---	     declare
---		    @maNhap varchar(10)=(select maNhap from inserted),
---			@maNCC varchar(10)=(select mh.maNCC from  MatHang mh, inserted where inserted.maHang=mh.maHang ),
---			 @donGia money=( select mh.donGia from MatHang mh, inserted where inserted.maHang=mh.maHang),
---             @maHang varchar(10)=(select maHang from inserted),
---             @soLuongNhap int= (select soLuong from inserted),
---			 @tongDonGia money
-			 
---			 set @tongDonGia=@soLuongNhap*@donGia
---			update ThongTinNhapKho
---			set soLuong=@soLuongNhap,
---		    tongDonGia=@tongDonGia
---			where maHang=@maHang and maNhap=@maNhap and maNCC=@maNCC
-			
-		  
---end
---go
---select * from ThongTinNhapKho
---	   insert into ThongTinNhapKho values ('MN001','MH001','NCC001',1,null)
---update ThongTinNhapKho set soLuong=5 where maHang='MH002' and maNhap='MN001'
 
 
 
@@ -375,7 +398,6 @@ declare
 end
  go
 
-<<<<<<< HEAD
 
  create trigger delete_PhieuTra on TraHang instead of delete
  as
@@ -385,7 +407,6 @@ end
    delete from ThongTinTraHang where maTra=@maTra;
    delete from TraHang where maTra=@maTra
    go
-=======
 --==================Order=========================
 --Tính thành tiền
 create trigger trg_total_ThongTinDonHang on ThongTinDonHang instead of insert ,update 
@@ -404,4 +425,3 @@ declare
 		where maDonHang=@maDonHang
 end
 go
->>>>>>> DienDayNeee
