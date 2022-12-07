@@ -1,0 +1,9 @@
+D:\KLTN2022\Code\QLCHTAN\DAO\bin\Debug\DAO.dll
+D:\KLTN2022\Code\QLCHTAN\DAO\bin\Debug\DAO.pdb
+D:\KLTN2022\Code\QLCHTAN\DAO\bin\Debug\DTO.dll
+D:\KLTN2022\Code\QLCHTAN\DAO\bin\Debug\DTO.pdb
+D:\KLTN2022\Code\QLCHTAN\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\KLTN2022\Code\QLCHTAN\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\KLTN2022\Code\QLCHTAN\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\KLTN2022\Code\QLCHTAN\DAO\obj\Debug\DAO.dll
+D:\KLTN2022\Code\QLCHTAN\DAO\obj\Debug\DAO.pdb

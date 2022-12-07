@@ -1,0 +1,11 @@
+D:\KLTN2022\Code\QLCHTAN\BUS\bin\Debug\BUS.dll
+D:\KLTN2022\Code\QLCHTAN\BUS\bin\Debug\BUS.pdb
+D:\KLTN2022\Code\QLCHTAN\BUS\bin\Debug\DAO.dll
+D:\KLTN2022\Code\QLCHTAN\BUS\bin\Debug\DTO.dll
+D:\KLTN2022\Code\QLCHTAN\BUS\bin\Debug\DAO.pdb
+D:\KLTN2022\Code\QLCHTAN\BUS\bin\Debug\DTO.pdb
+D:\KLTN2022\Code\QLCHTAN\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\KLTN2022\Code\QLCHTAN\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\KLTN2022\Code\QLCHTAN\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\KLTN2022\Code\QLCHTAN\BUS\obj\Debug\BUS.dll
+D:\KLTN2022\Code\QLCHTAN\BUS\obj\Debug\BUS.pdb

@@ -1,0 +1,6 @@
+D:\KLTN2022\Code\QLCHTAN\DTO\bin\Debug\DTO.dll
+D:\KLTN2022\Code\QLCHTAN\DTO\bin\Debug\DTO.pdb
+D:\KLTN2022\Code\QLCHTAN\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\KLTN2022\Code\QLCHTAN\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\KLTN2022\Code\QLCHTAN\DTO\obj\Debug\DTO.dll
+D:\KLTN2022\Code\QLCHTAN\DTO\obj\Debug\DTO.pdb
