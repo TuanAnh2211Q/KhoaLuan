@@ -13,7 +13,15 @@ namespace DAO
         public DataTable show_dsMatHang_DA0()
         {
             Open();
-            SqlDataAdapter da = new SqlDataAdapter("select_MatHang", conn);
+            SqlDataAdapter da = new SqlDataAdapter("select_MatHang_DoAn", conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+        public DataTable show_dsMatHang_Nuoc_DA0()
+        {
+            Open();
+            SqlDataAdapter da = new SqlDataAdapter("select_MatHang_Nuoc", conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
@@ -44,6 +52,7 @@ namespace DAO
                 cmd.Parameters.Add("@HSD", SqlDbType.Date).Value = mathang.HSD;
                 cmd.Parameters.Add("@donGia", SqlDbType.Money).Value = mathang.DonGia;
                 cmd.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = mathang.GhiChu;
+                cmd.Parameters.Add("@loaiHang", SqlDbType.Bit).Value = mathang.LoaiHang;
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
@@ -77,6 +86,7 @@ namespace DAO
                 cmd.Parameters.Add("@HSD", SqlDbType.Date).Value = mathang.HSD;
                 cmd.Parameters.Add("@donGia", SqlDbType.Money).Value = mathang.DonGia;
                 cmd.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = mathang.GhiChu;
+                cmd.Parameters.Add("@loaiHang", SqlDbType.Bit).Value = mathang.LoaiHang;
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
@@ -123,6 +133,18 @@ namespace DAO
                 throw;
             }
             return false;
+        }
+
+
+        public string select_MatHang_NCC(string maHang)
+        {
+            Open();
+            SqlCommand cmd = new SqlCommand("select_MatHang_NCC", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@maHang", SqlDbType.VarChar).Value = maHang;
+            if (cmd.ExecuteScalar() != null)
+                return cmd.ExecuteScalar().ToString();
+            return null;
         }
 
     }

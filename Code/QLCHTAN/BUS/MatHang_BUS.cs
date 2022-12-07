@@ -17,6 +17,10 @@ namespace BUS
         {
             return mathang.show_dsNCC_MatHang_DAO();
         }
+        public DataTable show_dsMatHang_Nuoc_BUS()
+        {
+            return mathang.show_dsMatHang_Nuoc_DA0();
+        }
         public DataTable show_dsMatHang_BUS()
         {
             return mathang.show_dsMatHang_DA0();
@@ -40,6 +44,9 @@ namespace BUS
         {
             return mathang.check_MatHangTrongDoAn_DAO(mathangDTO);
         }
-
+        public string select_MatHang_NCC(string maHang)
+        {
+            return mathang.select_MatHang_NCC(maHang);
+        }
     }
 }

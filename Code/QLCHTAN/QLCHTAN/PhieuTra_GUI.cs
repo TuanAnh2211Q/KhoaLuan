@@ -201,16 +201,23 @@ namespace QLCHTAN
 
         private void lblkThongTinPhieuDat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if(txtMaTra.Text!="")
+          if(kt_PhieuTra())
             {
-                maDat = cbbMaDat.SelectedValue.ToString();
-                maTraHang = txtMaTra.Text;
-                ThongTinPhieuTra_GUI thongTinPhieuTra = new ThongTinPhieuTra_GUI();
-                thongTinPhieuTra.Show();
+                if (txtMaTra.Text != "")
+                {
+                    maDat = cbbMaDat.SelectedValue.ToString();
+                    maTraHang = txtMaTra.Text;
+                    ThongTinPhieuTra_GUI thongTinPhieuTra = new ThongTinPhieuTra_GUI();
+                    thongTinPhieuTra.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn phiếu trả");
+                }
             }    
-            else
+          else
             {
-                MessageBox.Show("Vui lòng chọn phiếu trả");
+                MessageBox.Show("Phiếu trả chưa được tạo", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }    
         }
 
@@ -231,6 +238,7 @@ namespace QLCHTAN
         private void PhieuTra_GUI_FormClosing(object sender, FormClosingEventArgs e)
         {
             maDat = null;
+            maTraHang = null; 
         }
 
         private void lbkThoat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -241,6 +249,16 @@ namespace QLCHTAN
         private void txtMaTra_TextChanged(object sender, EventArgs e)
         {
             maPhieuTra = txtMaTra.Text.Trim();
+        }
+
+        private void dtNgayTra_ValueChanged(object sender, EventArgs e)
+        {
+            txtMaTra.Text = "MT" + "_" + cbbMaDat.SelectedValue.ToString() + "_" + dtNgayTra.Value.Day.ToString() + dtNgayTra.Value.Month.ToString() + dtNgayTra.Value.Year.ToString();
+        }
+
+        private void cbbMaDat_SelectedValueChanged(object sender, EventArgs e)
+        {
+            txtMaTra.Text = "MT" + "_" + cbbMaDat.SelectedValue.ToString() + "_" + dtNgayTra.Value.Day.ToString() + dtNgayTra.Value.Month.ToString() + dtNgayTra.Value.Year.ToString();
         }
     }
 }

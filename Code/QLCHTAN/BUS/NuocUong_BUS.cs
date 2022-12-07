@@ -37,5 +37,9 @@ namespace BUS
         {
             return nuocUong_DAO.select_DonViBanNuocUong(maNuoc);
         }
+        public DataTable select_thongTin_MatHangNuoc_BUS(string maNuoc)
+        {
+            return nuocUong_DAO.select_thongTin_MatHangNuoc(maNuoc);
+        }
     }
 }

@@ -125,15 +125,22 @@ namespace QLCHTAN
 
         private void lblkThongTinPhieuDat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (txtMaDat.Text.Trim() == "")
+            if(kt_Dondat())
             {
-                MessageBox.Show("Vui lòng chọn phiếu nhập muốn xem thông tin");
-                return;
-            }
+                if (txtMaDat.Text.Trim() == "")
+                {
+                    MessageBox.Show("Vui lòng chọn phiếu nhập muốn xem thông tin");
+                    return;
+                }
+                else
+                {
+                    ThongTinPhieuDat_GUI thongTinChiTietPhieuDat_GUI = new ThongTinPhieuDat_GUI();
+                    thongTinChiTietPhieuDat_GUI.Show();
+                }
+            }    
             else
             {
-                ThongTinPhieuDat_GUI thongTinChiTietPhieuDat_GUI = new ThongTinPhieuDat_GUI();
-                thongTinChiTietPhieuDat_GUI.Show();
+                MessageBox.Show("Phiếu đặt chưa được tạo", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -228,41 +235,51 @@ namespace QLCHTAN
 
         private void lblkTaoPhieuTra_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if(txtMaDat.Text!="")
-            {
-                PhieuTra_GUI phieuTra = new PhieuTra_GUI();
-                phieuTra.Show();
-            }    
-            else
-            {
-                    MessageBox.Show("Vui lòng chọn đơn đặt muốn tạo phiếu trả");    
-            }
+                if (txtMaDat.Text != "")
+                {
+                    PhieuTra_GUI phieuTra = new PhieuTra_GUI();
+                    phieuTra.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn đơn đặt muốn tạo phiếu trả");
+                }
+               
+
+
         }
 
         private void lblkTaoPhieuNhap_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if(txtMaDat.Text=="")
+           if(phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuNhap(phieuDatHang_DTO()))
             {
-                MessageBox.Show("Vui lòng chọn phiếu đặt muốn lập phiếu nhập");
-            }
-            else
-            {
-                maPhieuDat = txtMaDat.Text;
-                if (phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuTra(phieuDatHang_DTO()) != null)
-                    PhieuTra_GUI.maPhieuTra = phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuTra(phieuDatHang_DTO());
+                if (txtMaDat.Text == "")
+                {
+                    MessageBox.Show("Vui lòng chọn phiếu đặt muốn lập phiếu nhập");
+                }
                 else
                 {
-                    if (thongTinChiTietPhieuDatHang_BUS.ds_SanPhamDat_BUS(maPhieuDat).Rows.Count <= 0)
-                    {
-                        MessageBox.Show("Không có thông tin lập phiếu nhập");
-                        return;
-                    }
+                    maPhieuDat = txtMaDat.Text;
+                    if (phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuTra(phieuDatHang_DTO()) != null)
+                        PhieuTra_GUI.maPhieuTra = phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuTra(phieuDatHang_DTO());
                     else
-                        PhieuTra_GUI.maPhieuTra = null;
+                    {
+                        if (thongTinChiTietPhieuDatHang_BUS.ds_SanPhamDat_BUS(maPhieuDat).Rows.Count <= 0)
+                        {
+                            MessageBox.Show("Không có thông tin lập phiếu nhập");
+                            return;
+                        }
+                        else
+                            PhieuTra_GUI.maPhieuTra = null;
+                    }
+
+                    ThemPhieuNhap_GUI themPhieuNhap = new ThemPhieuNhap_GUI();
+                    themPhieuNhap.Show();
                 }
-                
-                ThemPhieuNhap_GUI themPhieuNhap = new ThemPhieuNhap_GUI();
-                themPhieuNhap.Show();
+            }    
+           else
+            {
+                MessageBox.Show("Đã tồn tại phiếu nhập từ phiều đặt này");
             }    
         }
 

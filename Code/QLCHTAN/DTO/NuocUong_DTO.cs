@@ -39,6 +39,7 @@ namespace DTO
             get { return donGia; }
             set { donGia = value; }
         }
+       
 
         public NuocUong_DTO (string MaNuoc, string TenNuoc, string DonViBan, string DonGia)
         {
@@ -46,6 +47,7 @@ namespace DTO
             this.tenNuoc = TenNuoc;
             this.donViBan = DonViBan;
             this.donGia = DonGia;
+            
         }
     }
 }

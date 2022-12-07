@@ -137,10 +137,12 @@ namespace QLCHTAN
             // dtNgayNhap
             // 
             this.dtNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgayNhap.Location = new System.Drawing.Point(101, 89);
+            this.dtNgayNhap.Location = new System.Drawing.Point(101, 35);
             this.dtNgayNhap.Name = "dtNgayNhap";
             this.dtNgayNhap.Size = new System.Drawing.Size(460, 23);
             this.dtNgayNhap.TabIndex = 19;
+            this.dtNgayNhap.Value = new System.DateTime(2022, 12, 7, 16, 2, 47, 0);
+            this.dtNgayNhap.ValueChanged += new System.EventHandler(this.dtNgayNhap_ValueChanged);
             // 
             // rtxtGhiChu
             // 
@@ -152,7 +154,7 @@ namespace QLCHTAN
             // 
             // txtMaNhap
             // 
-            this.txtMaNhap.Location = new System.Drawing.Point(101, 36);
+            this.txtMaNhap.Location = new System.Drawing.Point(101, 88);
             this.txtMaNhap.Name = "txtMaNhap";
             this.txtMaNhap.Size = new System.Drawing.Size(460, 23);
             this.txtMaNhap.TabIndex = 4;
@@ -179,7 +181,7 @@ namespace QLCHTAN
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 94);
+            this.label2.Location = new System.Drawing.Point(15, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 15);
             this.label2.TabIndex = 1;
@@ -188,7 +190,7 @@ namespace QLCHTAN
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 36);
+            this.label1.Location = new System.Drawing.Point(15, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 15);
             this.label1.TabIndex = 0;

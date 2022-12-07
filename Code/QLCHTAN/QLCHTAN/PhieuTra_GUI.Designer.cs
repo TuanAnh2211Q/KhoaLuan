@@ -181,10 +181,11 @@ namespace QLCHTAN
             // 
             this.cbbMaDat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMaDat.FormattingEnabled = true;
-            this.cbbMaDat.Location = new System.Drawing.Point(84, 107);
+            this.cbbMaDat.Location = new System.Drawing.Point(83, 77);
             this.cbbMaDat.Name = "cbbMaDat";
             this.cbbMaDat.Size = new System.Drawing.Size(238, 23);
             this.cbbMaDat.TabIndex = 28;
+            this.cbbMaDat.SelectedValueChanged += new System.EventHandler(this.cbbMaDat_SelectedValueChanged);
             // 
             // lblkTaoPhieuNhap
             // 
@@ -200,7 +201,7 @@ namespace QLCHTAN
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 110);
+            this.label3.Location = new System.Drawing.Point(14, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 15);
             this.label3.TabIndex = 25;
@@ -240,11 +241,12 @@ namespace QLCHTAN
             // dtNgayTra
             // 
             this.dtNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgayTra.Location = new System.Drawing.Point(84, 76);
+            this.dtNgayTra.Location = new System.Drawing.Point(85, 105);
             this.dtNgayTra.Margin = new System.Windows.Forms.Padding(2);
             this.dtNgayTra.Name = "dtNgayTra";
             this.dtNgayTra.Size = new System.Drawing.Size(237, 23);
             this.dtNgayTra.TabIndex = 19;
+            this.dtNgayTra.ValueChanged += new System.EventHandler(this.dtNgayTra_ValueChanged);
             // 
             // txtGhiChu
             // 
@@ -277,7 +279,7 @@ namespace QLCHTAN
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 81);
+            this.label2.Location = new System.Drawing.Point(14, 111);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
@@ -287,7 +289,7 @@ namespace QLCHTAN
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 51);
+            this.label1.Location = new System.Drawing.Point(6, 80);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 15);

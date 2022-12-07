@@ -311,7 +311,7 @@ namespace QLCHTAN
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TaiKhoan_GUI";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TaiKhoan";
             this.Load += new System.EventHandler(this.TaiKhoan_GUI_Load);
             this.groupBox1.ResumeLayout(false);
