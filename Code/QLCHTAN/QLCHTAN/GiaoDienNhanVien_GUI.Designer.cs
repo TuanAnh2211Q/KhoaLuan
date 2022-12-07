@@ -36,74 +36,75 @@ namespace QLCHTAN
             this.lblTenNhanVien = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnOrder = new System.Windows.Forms.Button();
-            this.grbChucNangNhanVien = new System.Windows.Forms.GroupBox();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.pQLThongTinKhachHang = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txtQuanLiThongTinKhachHang = new System.Windows.Forms.TextBox();
             this.btnQuanLiKhachHang = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pQLTraHang = new System.Windows.Forms.Panel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnQuanLiTraHang = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtMoTaQuanLiXuatHang = new System.Windows.Forms.TextBox();
-            this.btnQuanLiXuatHang = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtMoTaLapPhieuNhapHang = new System.Windows.Forms.TextBox();
-            this.btnLapPhieuNhapHang = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtMoTaQuanLiHangTon = new System.Windows.Forms.TextBox();
-            this.btnQuanLiHangTon = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.grbMoTaOrder = new System.Windows.Forms.GroupBox();
-            this.txtMoTaOrder = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.pQLXuatHang = new System.Windows.Forms.Panel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pQLNhapHang = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtMoTaLapPhieuNhapHang = new System.Windows.Forms.TextBox();
+            this.btnLapPhieuNhapHang = new System.Windows.Forms.Button();
+            this.pQLHangTon = new System.Windows.Forms.Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtMoTaQuanLiHangTon = new System.Windows.Forms.TextBox();
+            this.btnQuanLiHangTon = new System.Windows.Forms.Button();
+            this.pQLOrder = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.grbMoTaOrder = new System.Windows.Forms.GroupBox();
+            this.txtMoTaOrder = new System.Windows.Forms.TextBox();
+            this.lblTenTaiKhoanNhanVien = new System.Windows.Forms.Label();
+            this.flpChucNangNhanVien = new System.Windows.Forms.FlowLayoutPanel();
+            this.gbxChucNangNhanVien = new System.Windows.Forms.GroupBox();
+            this.pCuaSoChucNang = new System.Windows.Forms.Panel();
             this.grbThongTinDangNhap.SuspendLayout();
-            this.grbChucNangNhanVien.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.grbMoTaOrder.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.pQLThongTinKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.pQLTraHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            this.panel7.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.pQLXuatHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            this.pQLNhapHang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.pQLHangTon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.pQLOrder.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.grbMoTaOrder.SuspendLayout();
+            this.flpChucNangNhanVien.SuspendLayout();
+            this.gbxChucNangNhanVien.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbThongTinDangNhap
             // 
+            this.grbThongTinDangNhap.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.grbThongTinDangNhap.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.grbThongTinDangNhap.Controls.Add(this.lblTenTaiKhoanNhanVien);
             this.grbThongTinDangNhap.Controls.Add(this.lblkDangXuat);
             this.grbThongTinDangNhap.Controls.Add(this.lblkDoiMatKhau);
             this.grbThongTinDangNhap.Controls.Add(this.lblTenNhanVien);
             this.grbThongTinDangNhap.Controls.Add(this.label1);
-            this.grbThongTinDangNhap.Location = new System.Drawing.Point(12, 25);
+            this.grbThongTinDangNhap.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.grbThongTinDangNhap.Location = new System.Drawing.Point(12, 12);
             this.grbThongTinDangNhap.Name = "grbThongTinDangNhap";
-            this.grbThongTinDangNhap.Size = new System.Drawing.Size(1068, 126);
+            this.grbThongTinDangNhap.Size = new System.Drawing.Size(564, 118);
             this.grbThongTinDangNhap.TabIndex = 0;
             this.grbThongTinDangNhap.TabStop = false;
             this.grbThongTinDangNhap.Text = "Thông tin đăng nhập";
@@ -111,7 +112,7 @@ namespace QLCHTAN
             // lblkDangXuat
             // 
             this.lblkDangXuat.AutoSize = true;
-            this.lblkDangXuat.Location = new System.Drawing.Point(731, 102);
+            this.lblkDangXuat.Location = new System.Drawing.Point(366, 74);
             this.lblkDangXuat.Name = "lblkDangXuat";
             this.lblkDangXuat.Size = new System.Drawing.Size(83, 21);
             this.lblkDangXuat.TabIndex = 3;
@@ -122,7 +123,7 @@ namespace QLCHTAN
             // lblkDoiMatKhau
             // 
             this.lblkDoiMatKhau.AutoSize = true;
-            this.lblkDoiMatKhau.Location = new System.Drawing.Point(798, 102);
+            this.lblkDoiMatKhau.Location = new System.Drawing.Point(437, 74);
             this.lblkDoiMatKhau.Name = "lblkDoiMatKhau";
             this.lblkDoiMatKhau.Size = new System.Drawing.Size(105, 21);
             this.lblkDoiMatKhau.TabIndex = 2;
@@ -158,32 +159,29 @@ namespace QLCHTAN
             this.btnOrder.UseVisualStyleBackColor = false;
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
-            // grbChucNangNhanVien
+            // pQLThongTinKhachHang
             // 
-            this.grbChucNangNhanVien.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.grbChucNangNhanVien.Controls.Add(this.panel6);
-            this.grbChucNangNhanVien.Controls.Add(this.panel5);
-            this.grbChucNangNhanVien.Controls.Add(this.panel4);
-            this.grbChucNangNhanVien.Controls.Add(this.panel3);
-            this.grbChucNangNhanVien.Controls.Add(this.panel2);
-            this.grbChucNangNhanVien.Controls.Add(this.panel1);
-            this.grbChucNangNhanVien.Location = new System.Drawing.Point(12, 149);
-            this.grbChucNangNhanVien.Name = "grbChucNangNhanVien";
-            this.grbChucNangNhanVien.Size = new System.Drawing.Size(1068, 406);
-            this.grbChucNangNhanVien.TabIndex = 2;
-            this.grbChucNangNhanVien.TabStop = false;
-            this.grbChucNangNhanVien.Text = "Chức năng nhân viên";
+            this.pQLThongTinKhachHang.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pQLThongTinKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pQLThongTinKhachHang.Controls.Add(this.pictureBox6);
+            this.pQLThongTinKhachHang.Controls.Add(this.groupBox5);
+            this.pQLThongTinKhachHang.Controls.Add(this.btnQuanLiKhachHang);
+            this.pQLThongTinKhachHang.Location = new System.Drawing.Point(3, 405);
+            this.pQLThongTinKhachHang.Name = "pQLThongTinKhachHang";
+            this.pQLThongTinKhachHang.Size = new System.Drawing.Size(528, 96);
+            this.pQLThongTinKhachHang.TabIndex = 7;
             // 
-            // panel6
+            // pictureBox6
             // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.pictureBox6);
-            this.panel6.Controls.Add(this.groupBox5);
-            this.panel6.Controls.Add(this.btnQuanLiKhachHang);
-            this.panel6.Location = new System.Drawing.Point(543, 228);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(535, 96);
-            this.panel6.TabIndex = 7;
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(4, 5);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(99, 85);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 3;
+            this.pictureBox6.TabStop = false;
             // 
             // groupBox5
             // 
@@ -217,16 +215,29 @@ namespace QLCHTAN
             this.btnQuanLiKhachHang.UseVisualStyleBackColor = false;
             this.btnQuanLiKhachHang.Click += new System.EventHandler(this.btnQuanLiKhachHang_Click);
             // 
-            // panel5
+            // pQLTraHang
             // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.pictureBox12);
-            this.panel5.Controls.Add(this.groupBox4);
-            this.panel5.Controls.Add(this.btnQuanLiTraHang);
-            this.panel5.Location = new System.Drawing.Point(543, 126);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(535, 92);
-            this.panel5.TabIndex = 6;
+            this.pQLTraHang.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pQLTraHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pQLTraHang.Controls.Add(this.pictureBox12);
+            this.pQLTraHang.Controls.Add(this.groupBox4);
+            this.pQLTraHang.Controls.Add(this.btnQuanLiTraHang);
+            this.pQLTraHang.Location = new System.Drawing.Point(3, 307);
+            this.pQLTraHang.Name = "pQLTraHang";
+            this.pQLTraHang.Size = new System.Drawing.Size(526, 92);
+            this.pQLTraHang.TabIndex = 6;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(4, 1);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(103, 78);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 3;
+            this.pictureBox12.TabStop = false;
             // 
             // groupBox4
             // 
@@ -259,64 +270,91 @@ namespace QLCHTAN
             this.btnQuanLiTraHang.Text = "Quản lí trả hàng";
             this.btnQuanLiTraHang.UseVisualStyleBackColor = false;
             // 
-            // panel4
+            // pQLXuatHang
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.panel7);
-            this.panel4.Controls.Add(this.groupBox3);
-            this.panel4.Controls.Add(this.btnQuanLiXuatHang);
-            this.panel4.Location = new System.Drawing.Point(543, 24);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(519, 92);
-            this.panel4.TabIndex = 5;
+            this.pQLXuatHang.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pQLXuatHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pQLXuatHang.Controls.Add(this.pictureBox10);
+            this.pQLXuatHang.Controls.Add(this.groupBox6);
+            this.pQLXuatHang.Controls.Add(this.button1);
+            this.pQLXuatHang.Location = new System.Drawing.Point(3, 507);
+            this.pQLXuatHang.Name = "pQLXuatHang";
+            this.pQLXuatHang.Size = new System.Drawing.Size(527, 88);
+            this.pQLXuatHang.TabIndex = 6;
             // 
-            // groupBox3
+            // pictureBox10
             // 
-            this.groupBox3.Controls.Add(this.txtMoTaQuanLiXuatHang);
-            this.groupBox3.Location = new System.Drawing.Point(233, 3);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(291, 82);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Mô tả";
+            this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(4, 3);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(103, 79);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 3;
+            this.pictureBox10.TabStop = false;
             // 
-            // txtMoTaQuanLiXuatHang
+            // groupBox6
             // 
-            this.txtMoTaQuanLiXuatHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMoTaQuanLiXuatHang.Location = new System.Drawing.Point(6, 22);
-            this.txtMoTaQuanLiXuatHang.Multiline = true;
-            this.txtMoTaQuanLiXuatHang.Name = "txtMoTaQuanLiXuatHang";
-            this.txtMoTaQuanLiXuatHang.Size = new System.Drawing.Size(279, 54);
-            this.txtMoTaQuanLiXuatHang.TabIndex = 0;
-            this.txtMoTaQuanLiXuatHang.Text = "Quản lí thông tin phiếu xuất hàng";
+            this.groupBox6.Controls.Add(this.textBox2);
+            this.groupBox6.Location = new System.Drawing.Point(233, 3);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(289, 82);
+            this.groupBox6.TabIndex = 2;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Mô tả";
             // 
-            // btnQuanLiXuatHang
+            // textBox2
             // 
-            this.btnQuanLiXuatHang.BackColor = System.Drawing.Color.Aqua;
-            this.btnQuanLiXuatHang.Location = new System.Drawing.Point(109, 3);
-            this.btnQuanLiXuatHang.Name = "btnQuanLiXuatHang";
-            this.btnQuanLiXuatHang.Size = new System.Drawing.Size(118, 82);
-            this.btnQuanLiXuatHang.TabIndex = 1;
-            this.btnQuanLiXuatHang.Text = "Quản lí xuất hàng";
-            this.btnQuanLiXuatHang.UseVisualStyleBackColor = false;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(6, 22);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(277, 54);
+            this.textBox2.TabIndex = 0;
+            this.textBox2.Text = "Quản lí thông tin phiếu xuất hàng";
             // 
-            // panel3
+            // button1
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.pictureBox9);
-            this.panel3.Controls.Add(this.groupBox2);
-            this.panel3.Controls.Add(this.btnLapPhieuNhapHang);
-            this.panel3.Location = new System.Drawing.Point(10, 228);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(527, 96);
-            this.panel3.TabIndex = 4;
+            this.button1.BackColor = System.Drawing.Color.PowderBlue;
+            this.button1.Location = new System.Drawing.Point(109, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 82);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Quản lí xuất hàng";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // pQLNhapHang
+            // 
+            this.pQLNhapHang.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pQLNhapHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pQLNhapHang.Controls.Add(this.pictureBox9);
+            this.pQLNhapHang.Controls.Add(this.groupBox2);
+            this.pQLNhapHang.Controls.Add(this.btnLapPhieuNhapHang);
+            this.pQLNhapHang.Location = new System.Drawing.Point(3, 205);
+            this.pQLNhapHang.Name = "pQLNhapHang";
+            this.pQLNhapHang.Size = new System.Drawing.Size(527, 96);
+            this.pQLNhapHang.TabIndex = 4;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(4, 5);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(101, 85);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 3;
+            this.pictureBox9.TabStop = false;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtMoTaLapPhieuNhapHang);
             this.groupBox2.Location = new System.Drawing.Point(231, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(301, 90);
+            this.groupBox2.Size = new System.Drawing.Size(291, 90);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Mô tả";
@@ -342,16 +380,29 @@ namespace QLCHTAN
             this.btnLapPhieuNhapHang.UseVisualStyleBackColor = false;
             this.btnLapPhieuNhapHang.Click += new System.EventHandler(this.btnLapPhieuNhapHang_Click);
             // 
-            // panel2
+            // pQLHangTon
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.pictureBox11);
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Controls.Add(this.btnQuanLiHangTon);
-            this.panel2.Location = new System.Drawing.Point(10, 122);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(527, 96);
-            this.panel2.TabIndex = 3;
+            this.pQLHangTon.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pQLHangTon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pQLHangTon.Controls.Add(this.pictureBox11);
+            this.pQLHangTon.Controls.Add(this.groupBox1);
+            this.pQLHangTon.Controls.Add(this.btnQuanLiHangTon);
+            this.pQLHangTon.Location = new System.Drawing.Point(3, 103);
+            this.pQLHangTon.Name = "pQLHangTon";
+            this.pQLHangTon.Size = new System.Drawing.Size(527, 96);
+            this.pQLHangTon.TabIndex = 3;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(4, -1);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(101, 91);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 3;
+            this.pictureBox11.TabStop = false;
             // 
             // groupBox1
             // 
@@ -383,16 +434,29 @@ namespace QLCHTAN
             this.btnQuanLiHangTon.Text = "Quản lí hàng tồn";
             this.btnQuanLiHangTon.UseVisualStyleBackColor = false;
             // 
-            // panel1
+            // pQLOrder
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.grbMoTaOrder);
-            this.panel1.Controls.Add(this.btnOrder);
-            this.panel1.Location = new System.Drawing.Point(9, 22);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(528, 94);
-            this.panel1.TabIndex = 2;
+            this.pQLOrder.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pQLOrder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pQLOrder.Controls.Add(this.pictureBox3);
+            this.pQLOrder.Controls.Add(this.grbMoTaOrder);
+            this.pQLOrder.Controls.Add(this.btnOrder);
+            this.pQLOrder.Location = new System.Drawing.Point(3, 3);
+            this.pQLOrder.Name = "pQLOrder";
+            this.pQLOrder.Size = new System.Drawing.Size(528, 94);
+            this.pQLOrder.TabIndex = 2;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(4, 8);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 78);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
             // 
             // grbMoTaOrder
             // 
@@ -414,163 +478,98 @@ namespace QLCHTAN
             this.txtMoTaOrder.TabIndex = 0;
             this.txtMoTaOrder.Text = "Quán lí thông tin order của cửa hàng";
             // 
-            // pictureBox3
+            // lblTenTaiKhoanNhanVien
             // 
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(4, 8);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 78);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
+            this.lblTenTaiKhoanNhanVien.AutoSize = true;
+            this.lblTenTaiKhoanNhanVien.Location = new System.Drawing.Point(97, 19);
+            this.lblTenTaiKhoanNhanVien.Name = "lblTenTaiKhoanNhanVien";
+            this.lblTenTaiKhoanNhanVien.Size = new System.Drawing.Size(52, 21);
+            this.lblTenTaiKhoanNhanVien.TabIndex = 4;
+            this.lblTenTaiKhoanNhanVien.Text = "label2";
             // 
-            // pictureBox9
+            // flpChucNangNhanVien
             // 
-            this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(4, 5);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(101, 85);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 3;
-            this.pictureBox9.TabStop = false;
+            this.flpChucNangNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flpChucNangNhanVien.AutoScroll = true;
+            this.flpChucNangNhanVien.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flpChucNangNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flpChucNangNhanVien.Controls.Add(this.pQLOrder);
+            this.flpChucNangNhanVien.Controls.Add(this.pQLHangTon);
+            this.flpChucNangNhanVien.Controls.Add(this.pQLNhapHang);
+            this.flpChucNangNhanVien.Controls.Add(this.pQLTraHang);
+            this.flpChucNangNhanVien.Controls.Add(this.pQLThongTinKhachHang);
+            this.flpChucNangNhanVien.Controls.Add(this.pQLXuatHang);
+            this.flpChucNangNhanVien.Location = new System.Drawing.Point(10, 26);
+            this.flpChucNangNhanVien.Name = "flpChucNangNhanVien";
+            this.flpChucNangNhanVien.Size = new System.Drawing.Size(548, 604);
+            this.flpChucNangNhanVien.TabIndex = 3;
             // 
-            // pictureBox6
+            // gbxChucNangNhanVien
             // 
-            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(4, 5);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(99, 85);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 3;
-            this.pictureBox6.TabStop = false;
+            this.gbxChucNangNhanVien.Controls.Add(this.flpChucNangNhanVien);
+            this.gbxChucNangNhanVien.Location = new System.Drawing.Point(12, 136);
+            this.gbxChucNangNhanVien.Name = "gbxChucNangNhanVien";
+            this.gbxChucNangNhanVien.Size = new System.Drawing.Size(564, 649);
+            this.gbxChucNangNhanVien.TabIndex = 4;
+            this.gbxChucNangNhanVien.TabStop = false;
+            this.gbxChucNangNhanVien.Text = "Chức Năng Nhân Viên :";
             // 
-            // pictureBox12
+            // pCuaSoChucNang
             // 
-            this.pictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(4, 1);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(103, 78);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 3;
-            this.pictureBox12.TabStop = false;
-            // 
-            // panel7
-            // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.pictureBox10);
-            this.panel7.Controls.Add(this.groupBox6);
-            this.panel7.Controls.Add(this.button1);
-            this.panel7.Location = new System.Drawing.Point(-1, -1);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(519, 88);
-            this.panel7.TabIndex = 6;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.textBox2);
-            this.groupBox6.Location = new System.Drawing.Point(233, 3);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(291, 82);
-            this.groupBox6.TabIndex = 2;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Mô tả";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(6, 22);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(279, 54);
-            this.textBox2.TabIndex = 0;
-            this.textBox2.Text = "Quản lí thông tin phiếu xuất hàng";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.PowderBlue;
-            this.button1.Location = new System.Drawing.Point(109, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 82);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Quản lí xuất hàng";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(4, 3);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(103, 79);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 3;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(4, -1);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(101, 91);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 3;
-            this.pictureBox11.TabStop = false;
+            this.pCuaSoChucNang.AutoScroll = true;
+            this.pCuaSoChucNang.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pCuaSoChucNang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pCuaSoChucNang.Location = new System.Drawing.Point(582, 12);
+            this.pCuaSoChucNang.Name = "pCuaSoChucNang";
+            this.pCuaSoChucNang.Size = new System.Drawing.Size(1250, 754);
+            this.pCuaSoChucNang.TabIndex = 5;
             // 
             // GiaoDienNhanVien_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1092, 563);
-            this.Controls.Add(this.grbChucNangNhanVien);
+            this.ClientSize = new System.Drawing.Size(1856, 781);
+            this.Controls.Add(this.pCuaSoChucNang);
+            this.Controls.Add(this.gbxChucNangNhanVien);
             this.Controls.Add(this.grbThongTinDangNhap);
             this.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "GiaoDienNhanVien_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GiaoDienNhanVien_GUI";
+            this.Text = "Giao Diện Nhân Viên";
             this.grbThongTinDangNhap.ResumeLayout(false);
             this.grbThongTinDangNhap.PerformLayout();
-            this.grbChucNangNhanVien.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
+            this.pQLThongTinKhachHang.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.panel5.ResumeLayout(false);
+            this.pQLTraHang.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.grbMoTaOrder.ResumeLayout(false);
-            this.grbMoTaOrder.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            this.panel7.ResumeLayout(false);
+            this.pQLXuatHang.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.pQLNhapHang.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.pQLHangTon.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.pQLOrder.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.grbMoTaOrder.ResumeLayout(false);
+            this.grbMoTaOrder.PerformLayout();
+            this.flpChucNangNhanVien.ResumeLayout(false);
+            this.gbxChucNangNhanVien.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -583,27 +582,22 @@ namespace QLCHTAN
         private System.Windows.Forms.Label lblTenNhanVien;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnOrder;
-        private System.Windows.Forms.GroupBox grbChucNangNhanVien;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtMoTaQuanLiXuatHang;
-        private System.Windows.Forms.Button btnQuanLiXuatHang;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pQLNhapHang;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtMoTaLapPhieuNhapHang;
         private System.Windows.Forms.Button btnLapPhieuNhapHang;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pQLHangTon;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtMoTaQuanLiHangTon;
         private System.Windows.Forms.Button btnQuanLiHangTon;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pQLOrder;
         private System.Windows.Forms.GroupBox grbMoTaOrder;
         private System.Windows.Forms.TextBox txtMoTaOrder;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel pQLThongTinKhachHang;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox txtQuanLiThongTinKhachHang;
         private System.Windows.Forms.Button btnQuanLiKhachHang;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pQLTraHang;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnQuanLiTraHang;
@@ -611,11 +605,15 @@ namespace QLCHTAN
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel pQLXuatHang;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Label lblTenTaiKhoanNhanVien;
+        private System.Windows.Forms.FlowLayoutPanel flpChucNangNhanVien;
+        private System.Windows.Forms.GroupBox gbxChucNangNhanVien;
+        private System.Windows.Forms.Panel pCuaSoChucNang;
     }
 }

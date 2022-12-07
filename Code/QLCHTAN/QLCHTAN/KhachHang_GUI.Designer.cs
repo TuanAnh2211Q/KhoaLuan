@@ -283,7 +283,7 @@ namespace QLCHTAN
             this.dgvThongTinKhachHang.ReadOnly = true;
             this.dgvThongTinKhachHang.RowHeadersWidth = 51;
             this.dgvThongTinKhachHang.RowTemplate.Height = 24;
-            this.dgvThongTinKhachHang.Size = new System.Drawing.Size(1121, 429);
+            this.dgvThongTinKhachHang.Size = new System.Drawing.Size(992, 429);
             this.dgvThongTinKhachHang.TabIndex = 1;
             this.dgvThongTinKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinKhachHang_CellClick);
             // 
@@ -350,10 +350,11 @@ namespace QLCHTAN
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1579, 440);
+            this.ClientSize = new System.Drawing.Size(1441, 440);
             this.Controls.Add(this.dgvThongTinKhachHang);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Candara", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "KhachHang_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

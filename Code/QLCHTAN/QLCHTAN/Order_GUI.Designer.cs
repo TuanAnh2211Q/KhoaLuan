@@ -35,6 +35,10 @@ namespace QLCHTAN
             this.rdbThe = new System.Windows.Forms.RadioButton();
             this.rdbTienMat = new System.Windows.Forms.RadioButton();
             this.dgvThongTinDonHang = new System.Windows.Forms.DataGridView();
+            this.tenDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtTenKhach = new System.Windows.Forms.TextBox();
@@ -84,10 +88,6 @@ namespace QLCHTAN
             this.label15 = new System.Windows.Forms.Label();
             this.cbbDanhMucMon = new System.Windows.Forms.ComboBox();
             this.cbbTenMon = new System.Windows.Forms.ComboBox();
-            this.tenDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinDonHang)).BeginInit();
             this.gbPhuongThuc.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -165,6 +165,33 @@ namespace QLCHTAN
             this.dgvThongTinDonHang.Size = new System.Drawing.Size(528, 492);
             this.dgvThongTinDonHang.TabIndex = 1;
             this.dgvThongTinDonHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDonHang_CellClick);
+            // 
+            // tenDoAn
+            // 
+            this.tenDoAn.DataPropertyName = "tenDoAn";
+            this.tenDoAn.HeaderText = "Tên Món ";
+            this.tenDoAn.MinimumWidth = 6;
+            this.tenDoAn.Name = "tenDoAn";
+            // 
+            // soLuong
+            // 
+            this.soLuong.DataPropertyName = "soLuong";
+            this.soLuong.HeaderText = "Số Lượng";
+            this.soLuong.MinimumWidth = 6;
+            this.soLuong.Name = "soLuong";
+            // 
+            // donGia
+            // 
+            this.donGia.HeaderText = "Đơn giá";
+            this.donGia.MinimumWidth = 6;
+            this.donGia.Name = "donGia";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "thanhTien";
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.MinimumWidth = 6;
+            this.ThanhTien.Name = "ThanhTien";
             // 
             // label4
             // 
@@ -719,33 +746,6 @@ namespace QLCHTAN
             this.cbbTenMon.Size = new System.Drawing.Size(152, 32);
             this.cbbTenMon.TabIndex = 8;
             // 
-            // tenDoAn
-            // 
-            this.tenDoAn.DataPropertyName = "tenDoAn";
-            this.tenDoAn.HeaderText = "Tên Món ";
-            this.tenDoAn.MinimumWidth = 6;
-            this.tenDoAn.Name = "tenDoAn";
-            // 
-            // soLuong
-            // 
-            this.soLuong.DataPropertyName = "soLuong";
-            this.soLuong.HeaderText = "Số Lượng";
-            this.soLuong.MinimumWidth = 6;
-            this.soLuong.Name = "soLuong";
-            // 
-            // donGia
-            // 
-            this.donGia.HeaderText = "Đơn giá";
-            this.donGia.MinimumWidth = 6;
-            this.donGia.Name = "donGia";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "thanhTien";
-            this.ThanhTien.HeaderText = "Thành Tiền";
-            this.ThanhTien.MinimumWidth = 6;
-            this.ThanhTien.Name = "ThanhTien";
-            // 
             // Order_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
@@ -757,6 +757,7 @@ namespace QLCHTAN
             this.Controls.Add(this.panelThanhToan);
             this.Controls.Add(this.PanelOrder);
             this.Font = new System.Drawing.Font("Candara Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Order_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
