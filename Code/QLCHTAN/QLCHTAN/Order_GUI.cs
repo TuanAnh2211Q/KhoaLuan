@@ -210,7 +210,6 @@ namespace QLCHTAN
                 //soLuong = r.Field<int>("soLuong");
                 //decimal donGia = doAn_BUS.select_GiaDoAn_BUS(cbbTenMon.ValueMember);
                 //donGia = r.Field<decimal>("donGia");
-
                 //decimal thanhTien = donGia * soLuong;
 
             }
