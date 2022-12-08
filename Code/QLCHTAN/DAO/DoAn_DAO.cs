@@ -128,7 +128,6 @@ namespace DAO
             Open();
             SqlDataAdapter da = new SqlDataAdapter("select_GiaDoAn", conn);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            //SqlCommand cmd = new SqlCommand("select_GiaDoAn", conn);
             da.SelectCommand.Parameters.Add("@maDoAn", SqlDbType.VarChar).Value = maDoAn;
             if (da.SelectCommand.ExecuteScalar() != null)
             {
@@ -137,6 +136,18 @@ namespace DAO
             else
                 return 0;
 
+        }
+        public bool insert_MonAn_DAO(DoAn_DTO doAn_DTO)
+        {
+            try
+            {
+
+                return true;
+            } catch(Exception)
+            {
+                throw;
+            }
+            return false;
         }
     }
 }
