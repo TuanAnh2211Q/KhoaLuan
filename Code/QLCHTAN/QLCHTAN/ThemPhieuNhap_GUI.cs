@@ -33,15 +33,16 @@ namespace QLCHTAN
 
         private void ThemPhieuNhap_GUI_Load(object sender, EventArgs e)
         {
-            if(PhieuTra_GUI.maDat==null)
-            {
-                txtMaDat.Text = PhieuDatHang_GUI.maPhieuDat;
-            }
-            else
+            dtNgayNhap.Value = DateTime.Today;
+            if(PhieuDatHang_GUI.maPhieuDat==null)
             {
                 txtMaDat.Text = PhieuTra_GUI.maDat;
             }
-        
+            else
+            {
+                txtMaDat.Text = PhieuDatHang_GUI.maPhieuDat;
+            }
+            txtMaNhap.Text = "MN"+"_"+txtMaDat.Text.Trim()+"_"+ dtNgayNhap.Value.Day.ToString() + dtNgayNhap.Value.Month.ToString() + dtNgayNhap.Value.Year.ToString();
 
         }
 
@@ -54,19 +55,26 @@ namespace QLCHTAN
             }
             else
             {
-                maNhapKho = txtMaNhap.Text;
-                ngayNhapKho = dtNgayNhap.Value;
-                maDatNhap = txtMaDat.Text;
-                ghiChuNhap = rtxtGhiChu.Text;
-                tbThemPhieuNhap.SelectedTab = tbpThemChiTiet;
-                if(PhieuDatHang_GUI.maPhieuDat==null)
+               if(phieuNhapKho_BUS.check_MaPhieu(txtMaNhap.Text)==false)
                 {
-                    dgvThongTinChiTietPhieuNhap.DataSource = thongTinChiTietPhieuNhap_BUS.select_to_PhieuNhap_Temp(txtMaDat.Text, PhieuTra_GUI.maPhieuTra);
-                }
-                else
+                    maNhapKho = txtMaNhap.Text;
+                    ngayNhapKho = dtNgayNhap.Value;
+                    maDatNhap = txtMaDat.Text;
+                    ghiChuNhap = rtxtGhiChu.Text;
+                    tbThemPhieuNhap.SelectedTab = tbpThemChiTiet;
+                    if (PhieuDatHang_GUI.maPhieuDat == null)
+                    {
+                        dgvThongTinChiTietPhieuNhap.DataSource = thongTinChiTietPhieuNhap_BUS.select_to_PhieuNhap_Temp(txtMaDat.Text, PhieuTra_GUI.maPhieuTra);
+                    }
+                    else
+                    {
+                        dgvThongTinChiTietPhieuNhap.DataSource = thongTinChiTietPhieuNhap_BUS.select_to_PhieuNhap_Temp(PhieuDatHang_GUI.maPhieuDat, PhieuTra_GUI.maPhieuTra);
+                    }
+                }    
+               else
                 {
-                    dgvThongTinChiTietPhieuNhap.DataSource = thongTinChiTietPhieuNhap_BUS.select_to_PhieuNhap_Temp(PhieuDatHang_GUI.maPhieuDat, PhieuTra_GUI.maPhieuTra);
-                }
+                    MessageBox.Show("Mã nhập đã tồn tại, vui lòng nhập lại");
+                }    
             }
         }
 
@@ -138,6 +146,11 @@ namespace QLCHTAN
                         MessageBox.Show("Xác nhận phiếu nhập thất bại");
                 }    
             }    
+        }
+
+        private void dtNgayNhap_ValueChanged(object sender, EventArgs e)
+        {
+            txtMaNhap.Text = "MN" + dtNgayNhap.Value.Day.ToString() + dtNgayNhap.Value.Month.ToString() + dtNgayNhap.Value.Year.ToString();
         }
     }
 }

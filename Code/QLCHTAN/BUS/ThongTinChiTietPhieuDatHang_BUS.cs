@@ -34,5 +34,11 @@ namespace BUS
         {
             return thongTinChiTietPhieuDat_DAO.delete_ThongTinDatHang(thongTin);
         }
+        public DataTable ds_matHang_BUS()
+        {
+            return thongTinChiTietPhieuDat_DAO.ds_matHang_DAO();
+        }
+
+
     }
 }

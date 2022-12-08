@@ -15,11 +15,23 @@ namespace DAO
             Open();
             SqlDataAdapter da = new SqlDataAdapter("select_ThongTinDatHang", conn);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            da.SelectCommand.Parameters.Add("maDatHang", SqlDbType.VarChar).Value =  madat;
+            da.SelectCommand.Parameters.Add("@maDatHang", SqlDbType.VarChar).Value =  madat;
             DataTable tb = new DataTable();
             da.Fill(tb);
             return tb;
         }
+
+        public DataTable ds_matHang_DAO()
+        {
+            Open();
+            SqlDataAdapter da = new SqlDataAdapter("select_DSMatHang", conn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable tb = new DataTable();
+            da.Fill(tb);
+            return tb;
+        }
+
+
         public string tongGia_PhieuDat_DAO(string madat)
         {
 

@@ -56,9 +56,9 @@ namespace DTO
             set { hsd = value; }
         }
 
-        private string donGia;
+        private decimal donGia;
 
-        public string DonGia
+        public decimal DonGia
         {
             get { return donGia; }
             set { donGia = value; }
@@ -71,8 +71,16 @@ namespace DTO
             get { return ghiChu; }
             set { ghiChu = value; }
         }
+        private bool loaiHang;
 
-        public MatHang_DTO(string MaHang, string TenHang, string MaNCC, string DonVi, string NSX, string HSD, string DonGia, string GhiChu)
+        public bool LoaiHang
+        {
+            get { return loaiHang; }
+            set { loaiHang = value; }
+        }
+
+
+        public MatHang_DTO(string MaHang, string TenHang, string MaNCC, string DonVi, string NSX, string HSD, decimal DonGia, string GhiChu,bool LoaiHang)
         {
             this.maHang = MaHang;
             this.tenHang = TenHang;
@@ -82,6 +90,7 @@ namespace DTO
             this.hsd = HSD;
             this.donGia = DonGia;
             this.ghiChu = GhiChu;
+            this.loaiHang = LoaiHang;
         }
     }
 }

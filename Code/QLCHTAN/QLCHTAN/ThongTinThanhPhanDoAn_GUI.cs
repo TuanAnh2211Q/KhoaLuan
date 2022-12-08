@@ -17,7 +17,7 @@ namespace QLCHTAN
         ThongTinThanhPhanDoAn_BUS tttpda_BUS = new ThongTinThanhPhanDoAn_BUS();
         public ThongTinThanhPhanDoAn_DTO tttpda()
         {
-            return new ThongTinThanhPhanDoAn_DTO(cbbTenThanhPhan.SelectedValue.ToString().Trim(), cbbTenThanhPhan.Text.Trim(), txtDinhLuong.Text.Trim(), DoAn_GUI.maDoAn.Trim());
+            return new ThongTinThanhPhanDoAn_DTO(cbbTenThanhPhan.SelectedValue.ToString().Trim(), cbbTenThanhPhan.Text.Trim(), txtDinhLuong.Text.Trim(), DoAn_GUI.maDoAn.Trim(),Convert.ToInt32(txtSoLuong.Text.Trim()));
         }
         public ThongTinThanhPhanDoAn_GUI()
         {
@@ -38,8 +38,9 @@ namespace QLCHTAN
             if(e.RowIndex>=0)
             {
                 DataGridViewRow r = dgvThanhPhanMon.Rows[e.RowIndex];
-                cbbTenThanhPhan.Text = r.Cells[1].Value.ToString().Trim();
-                txtDinhLuong.Text = r.Cells[2].Value.ToString();
+                cbbTenThanhPhan.Text = r.Cells["tenThanhPhan"].Value.ToString().Trim();
+                txtDinhLuong.Text = r.Cells["dinhLuong"].Value.ToString();
+                txtSoLuong.Text = r.Cells["soLuong"].Value.ToString();
             }    
         }
 

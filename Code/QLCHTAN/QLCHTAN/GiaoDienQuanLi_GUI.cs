@@ -160,5 +160,13 @@ namespace QLCHTAN
             dangNhap.Show();
             this.Close();
         }
+
+        private void btnQLHT_Click(object sender, EventArgs e)
+        {
+            pCuaSoChucNang.Controls.Clear();
+            ThongTinTonKho_GUI qltk = new ThongTinTonKho_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true };
+            this.pCuaSoChucNang.Controls.Add(qltk);
+            qltk.Show();
+        }
     }
 }

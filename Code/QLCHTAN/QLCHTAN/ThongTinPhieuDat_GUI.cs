@@ -42,7 +42,7 @@ namespace QLCHTAN
             dgvThongTinChiTietPhieuDat.DataSource = thongTinChiTietPhieuDatHang_BUS.ds_SanPhamDat_BUS(PhieuDatHang_GUI.maPhieuDat);
             lblTongGia.Text = thongTinChiTietPhieuDatHang_BUS.tongGia_PhieuDat_BUS(PhieuDatHang_GUI.maPhieuDat) + "VND";
 
-            cbbMatHang.DataSource = matHang.show_dsMatHang_BUS();
+            cbbMatHang.DataSource = thongTinChiTietPhieuDatHang_BUS.ds_matHang_BUS();
             cbbMatHang.DisplayMember = "tenHang";
             cbbMatHang.ValueMember = "maHang";
             txtSoLuong.Text = "";

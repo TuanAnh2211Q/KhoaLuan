@@ -234,6 +234,12 @@
     <Compile Include="ThongTinThanhPhanDoAn_GUI.Designer.cs">
       <DependentUpon>ThongTinThanhPhanDoAn_GUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinTonKho_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinTonKho_GUI.Designer.cs">
+      <DependentUpon>ThongTinTonKho_GUI.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CSDL.resx">
       <DependentUpon>CSDL.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinThanhPhanDoAn_GUI.resx">
       <DependentUpon>ThongTinThanhPhanDoAn_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinTonKho_GUI.resx">
+      <DependentUpon>ThongTinTonKho_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
