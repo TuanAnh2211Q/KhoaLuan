@@ -64,6 +64,7 @@
     <Compile Include="ThongTinKhuyenMai_DTO.cs" />
     <Compile Include="ThongTinPhieuTra_DTO.cs" />
     <Compile Include="ThongTinThanhPhanDoAn_DTO.cs" />
+    <Compile Include="ThongTinTonKho_DTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

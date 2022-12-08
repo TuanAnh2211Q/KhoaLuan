@@ -15,13 +15,15 @@ namespace QLCHTAN
         public GiaoDienNhanVien_GUI()
         {
             InitializeComponent();
+            lblTenTaiKhoanNhanVien.Text = DangNhap_GUI.tenTaiKhoan;
         }
 
         private void lblkDangXuat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            
             DangNhap_GUI dangNhap_GUI = new DangNhap_GUI();
             dangNhap_GUI.Show();
+            this.Close();
         }
 
         private void lblkDoiMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -32,20 +34,26 @@ namespace QLCHTAN
 
         private void btnLapPhieuNhapHang_Click(object sender, EventArgs e)
         {
-            PhieuNhapKho_GUI phieuNhapKho_GUI = new PhieuNhapKho_GUI();
+            pCuaSoChucNang.Controls.Clear();
+            PhieuNhapKho_GUI phieuNhapKho_GUI = new PhieuNhapKho_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true }; ;
+            this.pCuaSoChucNang.Controls.Add(phieuNhapKho_GUI);
             phieuNhapKho_GUI.Show();
-            this.Close();
+            
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            Order_GUI order = new Order_GUI();
+            pCuaSoChucNang.Controls.Clear();
+            Order_GUI order = new Order_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true }; ;
+            this.pCuaSoChucNang.Controls.Add(order);
             order.Show();
         }
 
         private void btnQuanLiKhachHang_Click(object sender, EventArgs e)
         {
-            KhachHang_GUI khachhang = new KhachHang_GUI();
+            pCuaSoChucNang.Controls.Clear();
+            KhachHang_GUI khachhang = new KhachHang_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true }; ;
+            this.pCuaSoChucNang.Controls.Add(khachhang);
             khachhang.Show();
         }
     }

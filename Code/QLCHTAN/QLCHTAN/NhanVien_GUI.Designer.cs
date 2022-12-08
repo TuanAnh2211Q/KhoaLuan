@@ -507,7 +507,7 @@ namespace QLCHTAN
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "NhanVien_GUI";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Thông Tin Nhân Viên";
             this.Load += new System.EventHandler(this.NhanVien_GUI_Load);
             this.groupBox1.ResumeLayout(false);

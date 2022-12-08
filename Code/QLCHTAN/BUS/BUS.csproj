@@ -63,6 +63,7 @@
     <Compile Include="ThongTinKhuyenMai_BUS.cs" />
     <Compile Include="ThongTinPhieuTra_BUS.cs" />
     <Compile Include="ThongTinThanhPhanDoAn_BUS.cs" />
+    <Compile Include="ThongTinTonKho_BUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAO\DAO.csproj">

@@ -71,6 +71,7 @@ namespace DAO
                 da.SelectCommand.Parameters.Add("@tenNuocUong", SqlDbType.NVarChar).Value = NuocUong_DTO.TenNuoc;
                 da.SelectCommand.Parameters.Add("@donViBan", SqlDbType.NVarChar).Value = NuocUong_DTO.DonViBan;
                 da.SelectCommand.Parameters.Add("@donGia", SqlDbType.Money).Value = NuocUong_DTO.DonGia;
+
                 if (da.SelectCommand.ExecuteNonQuery() > 0)
                     return true;
             }
@@ -100,6 +101,16 @@ namespace DAO
             if (cmd.ExecuteScalar() != null)
                 return cmd.ExecuteScalar().ToString();
             return null;
+        }
+        public DataTable select_thongTin_MatHangNuoc(string maNuoc)
+        {
+            Open();
+            SqlDataAdapter da = new SqlDataAdapter("select_thongTin_MatHangNuoc", conn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@maHang", SqlDbType.VarChar).Value = maNuoc;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
         }
     }
 }

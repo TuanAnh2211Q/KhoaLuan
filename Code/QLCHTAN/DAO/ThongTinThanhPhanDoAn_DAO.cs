@@ -23,7 +23,7 @@ namespace DAO
         public DataTable show_dsthanhPhanDoAn_DAO()
         {
             Open();
-            SqlDataAdapter da = new SqlDataAdapter("select_MatHang", conn);
+            SqlDataAdapter da = new SqlDataAdapter("select_MatHang_DoAn", conn);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -40,6 +40,7 @@ namespace DAO
                 cmd.Parameters.Add("@tenThanhPhan", SqlDbType.NVarChar).Value = tttpda.TenThanhPhan;
                 cmd.Parameters.Add("@dinhLuong", SqlDbType.NVarChar).Value = tttpda.DinhLuong;
                 cmd.Parameters.Add("@maDoAn", SqlDbType.NChar).Value = tttpda.MaDoAn;
+                cmd.Parameters.Add("@soLuong", SqlDbType.Int).Value = tttpda.SoLuong;
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
 
@@ -59,10 +60,13 @@ namespace DAO
                 {
                     SqlCommand cmd = new SqlCommand("update_DoAn_ThanhPhanDoAn", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@maThanhPhan", SqlDbType.NChar).Value = tttpda.MaThanhPhan;
-                    cmd.Parameters.Add("@dinhLuong", SqlDbType.NVarChar).Value = tttpda.DinhLuong;
-                    cmd.Parameters.Add("@maDoAn", SqlDbType.NChar).Value = tttpda.MaDoAn;
-                    if (cmd.ExecuteNonQuery() > 0)
+                cmd.Parameters.Add("@maThanhPhan", SqlDbType.NChar).Value = tttpda.MaThanhPhan;
+                cmd.Parameters.Add("@tenThanhPhan", SqlDbType.NVarChar).Value = tttpda.TenThanhPhan;
+                cmd.Parameters.Add("@dinhLuong", SqlDbType.NVarChar).Value = tttpda.DinhLuong;
+                cmd.Parameters.Add("@soLuong", SqlDbType.Int).Value = tttpda.SoLuong;
+
+                cmd.Parameters.Add("@maDoAn", SqlDbType.NChar).Value = tttpda.MaDoAn;
+                if (cmd.ExecuteNonQuery() > 0)
                         return true;
 
                 }
