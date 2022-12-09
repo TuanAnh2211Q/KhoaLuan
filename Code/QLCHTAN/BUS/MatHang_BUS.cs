@@ -48,5 +48,10 @@ namespace BUS
         {
             return mathang.select_MatHang_NCC(maHang);
         }
+
+        public decimal select_DonGia_MatHang(string maHang)
+        {
+            return mathang.select_DonGia_MatHang(maHang);
+        }
     }
 }

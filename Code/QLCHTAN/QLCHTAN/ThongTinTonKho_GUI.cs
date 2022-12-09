@@ -14,6 +14,7 @@ namespace QLCHTAN
 {
     public partial class ThongTinTonKho_GUI : Form
     {
+        ThongTinChiTietPhieuDatHang_BUS thongTinChiTietPhieuDatHang_BUS = new ThongTinChiTietPhieuDatHang_BUS();
         ThongTinTonKho_BUS thongTinTonKho_BUS = new ThongTinTonKho_BUS();
         MatHang_BUS matHang_BUS = new MatHang_BUS();
         NhaCungCap_BUS nhaCungCap_BUS = new NhaCungCap_BUS();
@@ -37,7 +38,7 @@ namespace QLCHTAN
         {
             dgvThongTinHangTon.DataSource = thongTinTonKho_BUS.show_DS_HangTon_DAO();
 
-            cbbMaHang.DataSource = matHang_BUS.show_dsMatHang_BUS();
+            cbbMaHang.DataSource = thongTinChiTietPhieuDatHang_BUS.ds_matHang_BUS() ;
             cbbMaHang.DisplayMember = "maHang";
             cbbMaHang.ValueMember = "tenHang";
 
@@ -68,6 +69,15 @@ namespace QLCHTAN
             }    
         }
 
-      
+        private void lblkTaoPhieuXuat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ThemPhieuXuat_GUI themPhieuXuat_GUI = new ThemPhieuXuat_GUI();
+            themPhieuXuat_GUI.Show();
+        }
+
+        private void lblkLamMoi_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ThongTinTonKho_GUI_Load(sender, e);
+        }
     }
 }

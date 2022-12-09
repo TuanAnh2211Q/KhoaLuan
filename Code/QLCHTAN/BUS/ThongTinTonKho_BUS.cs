@@ -16,5 +16,9 @@ namespace BUS
         {
             return thongTinTonKho_DAO.show_DS_HangTon_DAO();
         }
+        public int select_SoLuong_TonKho_DAO(string mahang)
+        {
+            return thongTinTonKho_DAO.select_SoLuong_TonKho_DAO(mahang);
+        }
     }
 }

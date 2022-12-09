@@ -56,6 +56,7 @@
     <Compile Include="PhieuDatHang_BUS.cs" />
     <Compile Include="PhieuNhapKho_BUS.cs" />
     <Compile Include="PhieuTra_BUS.cs" />
+    <Compile Include="PhieuXuat_BUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaiKhoan_BUS.cs" />
     <Compile Include="ThongTinChiTietPhieuDatHang_BUS.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="ThongTinPhieuTra_BUS.cs" />
     <Compile Include="ThongTinThanhPhanDoAn_BUS.cs" />
     <Compile Include="ThongTinTonKho_BUS.cs" />
+    <Compile Include="ThongTinPhieuXuat_BUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAO\DAO.csproj">

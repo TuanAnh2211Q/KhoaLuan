@@ -19,5 +19,15 @@ namespace DAO
             da.Fill(dt);
             return dt;
         }
+        public int select_SoLuong_TonKho_DAO(string mahang)
+        {
+            Open();
+            SqlCommand cmd = new SqlCommand("select_SoLuong_TonKho", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@maHang", SqlDbType.VarChar).Value = mahang;
+            if (cmd.ExecuteScalar() != null)
+                return Convert.ToInt32(cmd.ExecuteScalar());
+            return 0;
+        }
     }
 }
