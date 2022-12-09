@@ -51,6 +51,8 @@ namespace QLCHTAN
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.lblkLamMoi = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinHangTon)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -183,7 +185,7 @@ namespace QLCHTAN
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(131, 226);
+            this.linkLabel1.Location = new System.Drawing.Point(56, 225);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(117, 15);
             this.linkLabel1.TabIndex = 11;
@@ -194,12 +196,13 @@ namespace QLCHTAN
             // lblkTaoPhieuXuat
             // 
             this.lblkTaoPhieuXuat.AutoSize = true;
-            this.lblkTaoPhieuXuat.Location = new System.Drawing.Point(254, 226);
+            this.lblkTaoPhieuXuat.Location = new System.Drawing.Point(196, 225);
             this.lblkTaoPhieuXuat.Name = "lblkTaoPhieuXuat";
             this.lblkTaoPhieuXuat.Size = new System.Drawing.Size(112, 15);
             this.lblkTaoPhieuXuat.TabIndex = 10;
             this.lblkTaoPhieuXuat.TabStop = true;
             this.lblkTaoPhieuXuat.Text = "Tạo phiếu xuất kho";
+            this.lblkTaoPhieuXuat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkTaoPhieuXuat_LinkClicked);
             // 
             // lblTongDonGia
             // 
@@ -287,12 +290,35 @@ namespace QLCHTAN
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã hàng:";
             // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(0, 0);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(61, 15);
+            this.linkLabel2.TabIndex = 4;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "linkLabel2";
+            // 
+            // lblkLamMoi
+            // 
+            this.lblkLamMoi.AutoSize = true;
+            this.lblkLamMoi.Location = new System.Drawing.Point(1128, 35);
+            this.lblkLamMoi.Name = "lblkLamMoi";
+            this.lblkLamMoi.Size = new System.Drawing.Size(55, 15);
+            this.lblkLamMoi.TabIndex = 5;
+            this.lblkLamMoi.TabStop = true;
+            this.lblkLamMoi.Text = "Làm mới";
+            this.lblkLamMoi.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkLamMoi_LinkClicked);
+            // 
             // ThongTinTonKho_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1210, 600);
+            this.Controls.Add(this.lblkLamMoi);
+            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvThongTinHangTon);
@@ -335,5 +361,7 @@ namespace QLCHTAN
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel lblkTaoPhieuXuat;
         private System.Windows.Forms.TextBox txtTenHang;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel lblkLamMoi;
     }
 }

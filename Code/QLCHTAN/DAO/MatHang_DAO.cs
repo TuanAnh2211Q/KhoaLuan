@@ -147,5 +147,16 @@ namespace DAO
             return null;
         }
 
+        public decimal select_DonGia_MatHang(string maHang)
+        {
+            Open();
+            SqlCommand cmd = new SqlCommand("select_DonGia_MatHang", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@maHang", SqlDbType.VarChar).Value = maHang;
+            if (cmd.ExecuteScalar() != null)
+                return Convert.ToDecimal( cmd.ExecuteScalar());
+            return 0;
+        }    
+
     }
 }

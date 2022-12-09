@@ -116,41 +116,50 @@ namespace QLCHTAN
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            DialogResult rs = MessageBox.Show("Xác nhận thêm phiếu nhập mới ?", "Thông báo", MessageBoxButtons.YesNo);
-            if(rs==DialogResult.Yes)
+          if(phieuNhapKho_BUS.check_MaPhieu(txtMaNhap.Text))
             {
-                if(phieuNhapKho_BUS.insert_PhieuNhap(phieuNhap_DTO()))
+                MessageBox.Show("Mã phiếu nhập đã tồn tại vui lòng nhập mã khác");
+            }
+            else
+            {
+                DialogResult rs = MessageBox.Show("Xác nhận thêm phiếu nhập mới ?", "Thông báo", MessageBoxButtons.YesNo);
+                if (rs == DialogResult.Yes)
                 {
-                    DataTable tb = (DataTable)dgvThongTinChiTietPhieuNhap.DataSource;
-                    foreach (DataRow r in tb.Rows)
+                    if (phieuNhapKho_BUS.insert_PhieuNhap(phieuNhap_DTO()))
                     {
-                        string maNhaCungCap = r.Field<string>("maNCC");
-                        string maHangNhap = r.Field<string>("maHang");
-                        int soLuongNhap= r.Field<int>("soLuongNhap");
-                        decimal tongDGNhap= r.Field<decimal>("tongDonGia");
-                        ThongTinChiTietPhieuNhap_DTO ttctpn= new ThongTinChiTietPhieuNhap_DTO(maNhapKho, maNhaCungCap, maHangNhap, soLuongNhap, tongDGNhap);
-                        if (thongTinChiTietPhieuNhap_BUS.insert_ThongTinPhieuNhap_DAO(ttctpn))
+                        DataTable tb = (DataTable)dgvThongTinChiTietPhieuNhap.DataSource;
+                        foreach (DataRow r in tb.Rows)
                         {
-                            trangThai = true;
-                            phieuNhapKho_BUS.update_PhieuNhap(phieuNhap_DTO());
+                            string maNhaCungCap = r.Field<string>("maNCC");
+                            string maHangNhap = r.Field<string>("maHang");
+                            int soLuongNhap = r.Field<int>("soLuongNhap");
+                            decimal tongDGNhap = r.Field<decimal>("tongDonGia");
+                            ThongTinChiTietPhieuNhap_DTO ttctpn = new ThongTinChiTietPhieuNhap_DTO(maNhapKho, maNhaCungCap, maHangNhap, soLuongNhap, tongDGNhap);
+                            if (thongTinChiTietPhieuNhap_BUS.insert_ThongTinPhieuNhap_DAO(ttctpn))
+                            {
+                                trangThai = true;
+                                phieuNhapKho_BUS.update_PhieuNhap(phieuNhap_DTO());
+                            }
+                            else
+                                trangThai = false;
+                        }
+                        if (phieuNhapKho_BUS.check_PhieuNhap(maNhapKho))
+                        {
+                            MessageBox.Show("Xác nhận thêm phiếu nhập thành công");
+                            this.Close();
                         }
                         else
-                            trangThai = false;
+                            MessageBox.Show("Xác nhận phiếu nhập thất bại");
                     }
-                    if (phieuNhapKho_BUS.check_PhieuNhap(maNhapKho))
-                    {
-                        MessageBox.Show("Xác nhận thêm phiếu nhập thành công");
-                        this.Close();
-                    }
-                    else
-                        MessageBox.Show("Xác nhận phiếu nhập thất bại");
-                }    
-            }    
+                }
+            }
         }
 
         private void dtNgayNhap_ValueChanged(object sender, EventArgs e)
         {
-            txtMaNhap.Text = "MN" + dtNgayNhap.Value.Day.ToString() + dtNgayNhap.Value.Month.ToString() + dtNgayNhap.Value.Year.ToString();
+            Random rnd = new Random();
+            int ma = Convert.ToInt32(DateTime.Now.Day) + Convert.ToInt32(DateTime.Now.Month) + Convert.ToInt32(DateTime.Now.Year) + Convert.ToInt32(DateTime.Now.Hour) + Convert.ToInt32(DateTime.Now.Minute) + Convert.ToInt32(DateTime.Now.Millisecond) + rnd.Next(1, 1000);
+            txtMaNhap.Text = "MN" + "_"+ma.ToString();
         }
     }
 }
