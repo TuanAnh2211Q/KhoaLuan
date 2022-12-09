@@ -36,13 +36,11 @@ namespace QLCHTAN
             }
         }
 
-
-
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             try
             {
-
+                
                 MessageBox.Show("Thanh Toán Thành Công !!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch

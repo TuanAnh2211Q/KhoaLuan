@@ -113,7 +113,7 @@ namespace QLCHTAN
                 txtTenDoAn.Text = r.Cells[1].Value.ToString();
                 ccbLoaiDoAn.Text = r.Cells[2].Value.ToString();
                 txtDonViBan.Text = r.Cells[3].Value.ToString();
-                txtDonGia.Text = Convert.ToSingle(r.Cells[4].Value).ToString();
+                txtDonGia.Text = (r.Cells[4].Value).ToString();
                 rtxtGhiChu.Text = r.Cells[5].Value.ToString();
                 txtMaDoAn.Enabled = false;
                 if (txtTenDoAn.Text == "")

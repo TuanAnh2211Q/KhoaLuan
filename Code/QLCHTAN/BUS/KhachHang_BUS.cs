@@ -29,6 +29,9 @@ namespace BUS
         {
             return khachhang_DAO.delete_KhachHang_DAO(khachHangDTO);
         }
-            
+        public bool insert_KhachHang_BUS(KhachHang_DTO khachHang_DTO)
+        {
+            return khachhang_DAO.insert_KhachHang_DAO(khachHang_DTO);
+        }
     }
 }

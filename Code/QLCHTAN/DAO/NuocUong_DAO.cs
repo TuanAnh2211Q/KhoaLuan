@@ -112,5 +112,30 @@ namespace DAO
             da.Fill(dt);
             return dt;
         }
+        public decimal select_donGiaNuoc_DAO(string maSanPham,string donViBan)
+        {
+            Open();
+            SqlCommand cmd = new SqlCommand("select_donGia_SanPham", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@maSanPham", SqlDbType.VarChar).Value = maSanPham;
+            cmd.Parameters.Add("@donViBan", SqlDbType.NVarChar).Value = donViBan;
+            if (cmd.ExecuteScalar() != null)
+            {
+                return Convert.ToDecimal(cmd.ExecuteScalar());
+            }
+            return 0;
+        }
+        public string select_maSanPhamNuoc_DAO(string maNuoc)
+        {
+            Open();
+            SqlCommand cmd = new SqlCommand("select_SanPham_Nuoc", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@maNuoc", SqlDbType.VarChar).Value = maNuoc;
+            if (cmd.ExecuteScalar() != null)
+            {
+                return Convert.ToString(cmd.ExecuteScalar());
+            }
+            return null;
+        }
     }
 }

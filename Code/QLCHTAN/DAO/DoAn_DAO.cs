@@ -123,31 +123,30 @@ namespace DAO
             da.Fill(tb);
             return tb;
         }
-        public decimal select_GiaDoAn_DAO(string maDoAn)
+        public decimal select_donGia_DAO(string maSanPham,string donViBan)
         {
             Open();
-            SqlDataAdapter da = new SqlDataAdapter("select_GiaDoAn", conn);
-            da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            da.SelectCommand.Parameters.Add("@maDoAn", SqlDbType.VarChar).Value = maDoAn;
-            if (da.SelectCommand.ExecuteScalar() != null)
+            SqlCommand da = new SqlCommand("select_donGia_SanPham", conn);
+            da.CommandType = CommandType.StoredProcedure;
+            da.Parameters.Add("@maSanPham", SqlDbType.VarChar).Value = maSanPham;
+            da.Parameters.Add("@donViBan", SqlDbType.NVarChar).Value = donViBan;
+            if (da.ExecuteScalar()!=null)
             {
-                return (decimal)da.SelectCommand.ExecuteScalar();
+                return Convert.ToDecimal(da.ExecuteScalar());
             }
-            else
-                return 0;
-
+            return 0;
         }
-        public bool insert_MonAn_DAO(DoAn_DTO doAn_DTO)
+        public string select_maSanPhamDoAn_DAO(string maDoAn)
         {
-            try
+            Open();
+            SqlCommand cmd = new SqlCommand("select_maSanPham_DoAn", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@maDoAn", SqlDbType.VarChar).Value = maDoAn;
+            if (cmd.ExecuteScalar()!= null)
             {
-
-                return true;
-            } catch(Exception)
-            {
-                throw;
+                return Convert.ToString(cmd.ExecuteScalar());
             }
-            return false;
+            return null;
         }
     }
 }
