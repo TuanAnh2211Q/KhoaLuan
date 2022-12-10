@@ -44,6 +44,7 @@
     <Compile Include="DangNhap_BUS.cs" />
     <Compile Include="DoAn_BUS.cs" />
     <Compile Include="DoiMatKhau_BUS.cs" />
+    <Compile Include="DonHang_BUS.cs" />
     <Compile Include="KhachHang_BUS.cs" />
     <Compile Include="KhuyenMai_BUS.cs" />
     <Compile Include="LoaiDoAn_BUS.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="TaiKhoan_BUS.cs" />
     <Compile Include="ThongTinChiTietPhieuDatHang_BUS.cs" />
     <Compile Include="ThongTinChiTietPhieuNhap_BUS.cs" />
+    <Compile Include="ThongTinDonHang_BUS.cs" />
     <Compile Include="ThongTinKhuyenMai_BUS.cs" />
     <Compile Include="ThongTinPhieuTra_BUS.cs" />
     <Compile Include="ThongTinThanhPhanDoAn_BUS.cs" />

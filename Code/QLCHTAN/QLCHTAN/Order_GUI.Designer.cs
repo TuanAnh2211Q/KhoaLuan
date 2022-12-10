@@ -32,7 +32,7 @@ namespace QLCHTAN
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Order_GUI));
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.btnThanhToan = new System.Windows.Forms.Button();
-            this.rdbThe = new System.Windows.Forms.RadioButton();
+            this.rdbOnline = new System.Windows.Forms.RadioButton();
             this.rdbTienMat = new System.Windows.Forms.RadioButton();
             this.dgvThongTinDonHang = new System.Windows.Forms.DataGridView();
             this.maSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +55,6 @@ namespace QLCHTAN
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panelKhachHang = new System.Windows.Forms.Panel();
-            this.txtMaKhachHang = new System.Windows.Forms.TextBox();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.rdbNu = new System.Windows.Forms.RadioButton();
             this.rdbNam = new System.Windows.Forms.RadioButton();
@@ -109,11 +108,11 @@ namespace QLCHTAN
             // 
             this.txtTongTien.AllowDrop = true;
             this.txtTongTien.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongTien.Location = new System.Drawing.Point(24, 190);
+            this.txtTongTien.Location = new System.Drawing.Point(24, 180);
             this.txtTongTien.Multiline = true;
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.ReadOnly = true;
-            this.txtTongTien.Size = new System.Drawing.Size(257, 22);
+            this.txtTongTien.Size = new System.Drawing.Size(257, 32);
             this.txtTongTien.TabIndex = 16;
             // 
             // btnThanhToan
@@ -128,17 +127,17 @@ namespace QLCHTAN
             this.btnThanhToan.UseVisualStyleBackColor = false;
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
-            // rdbThe
+            // rdbOnline
             // 
-            this.rdbThe.AutoSize = true;
-            this.rdbThe.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbThe.Location = new System.Drawing.Point(169, 59);
-            this.rdbThe.Name = "rdbThe";
-            this.rdbThe.Size = new System.Drawing.Size(63, 28);
-            this.rdbThe.TabIndex = 3;
-            this.rdbThe.TabStop = true;
-            this.rdbThe.Text = "Thẻ";
-            this.rdbThe.UseVisualStyleBackColor = true;
+            this.rdbOnline.AutoSize = true;
+            this.rdbOnline.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbOnline.Location = new System.Drawing.Point(169, 59);
+            this.rdbOnline.Name = "rdbOnline";
+            this.rdbOnline.Size = new System.Drawing.Size(87, 28);
+            this.rdbOnline.TabIndex = 3;
+            this.rdbOnline.TabStop = true;
+            this.rdbOnline.Text = "Online";
+            this.rdbOnline.UseVisualStyleBackColor = true;
             // 
             // rdbTienMat
             // 
@@ -364,7 +363,7 @@ namespace QLCHTAN
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.rdbThe);
+            this.groupBox1.Controls.Add(this.rdbOnline);
             this.groupBox1.Controls.Add(this.rdbTienMat);
             this.groupBox1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(9, 243);
@@ -378,7 +377,6 @@ namespace QLCHTAN
             // 
             this.panelKhachHang.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panelKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelKhachHang.Controls.Add(this.txtMaKhachHang);
             this.panelKhachHang.Controls.Add(this.btnLamMoi);
             this.panelKhachHang.Controls.Add(this.rdbNu);
             this.panelKhachHang.Controls.Add(this.rdbNam);
@@ -400,18 +398,6 @@ namespace QLCHTAN
             this.panelKhachHang.Name = "panelKhachHang";
             this.panelKhachHang.Size = new System.Drawing.Size(405, 769);
             this.panelKhachHang.TabIndex = 6;
-            // 
-            // txtMaKhachHang
-            // 
-            this.txtMaKhachHang.AllowDrop = true;
-            this.txtMaKhachHang.Enabled = false;
-            this.txtMaKhachHang.HideSelection = false;
-            this.txtMaKhachHang.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtMaKhachHang.Location = new System.Drawing.Point(3, 8);
-            this.txtMaKhachHang.Name = "txtMaKhachHang";
-            this.txtMaKhachHang.ReadOnly = true;
-            this.txtMaKhachHang.Size = new System.Drawing.Size(60, 36);
-            this.txtMaKhachHang.TabIndex = 19;
             // 
             // btnLamMoi
             // 
@@ -873,7 +859,7 @@ namespace QLCHTAN
 
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Button btnThanhToan;
-        private System.Windows.Forms.RadioButton rdbThe;
+        private System.Windows.Forms.RadioButton rdbOnline;
         private System.Windows.Forms.RadioButton rdbTienMat;
         private System.Windows.Forms.DataGridView dgvThongTinDonHang;
         private System.Windows.Forms.Label label4;
@@ -933,6 +919,5 @@ namespace QLCHTAN
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn donGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
-        private System.Windows.Forms.TextBox txtMaKhachHang;
     }
 }

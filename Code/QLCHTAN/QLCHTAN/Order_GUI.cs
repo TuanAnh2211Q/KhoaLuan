@@ -21,8 +21,9 @@ namespace QLCHTAN
         NuocUong_BUS nuocUong_BUS = new NuocUong_BUS();
         KhuyenMai_BUS khuyenMai_BUS = new KhuyenMai_BUS();
         public string loaiDichVu { get; set; }
+        public decimal TongTien { get; set; }
         public string GioiTinh { get; set; }
-        public string idKhachHang { get; set; }
+        public decimal MucKhuyenMai { get; set; }
         public DataTable dt = new DataTable();
         public Order_GUI()
         {
@@ -31,7 +32,7 @@ namespace QLCHTAN
         #region Method
         public KhachHang_DTO khachHang_DTO()
         {
-            return new KhachHang_DTO(Convert.ToString(txtMaKhachHang.Text.Trim()),cbbSDT.SelectedValue.ToString().Trim(), txtTenKhach.Text.Trim(), GioiTinh.Trim(), txtDiaChi.Text.Trim(), txtEmail.Text.Trim(), rtxtGhiChu.Text.Trim());
+            return new KhachHang_DTO(/*txtMaKhachHang.Text.Trim(),*/cbbSDT.SelectedValue.ToString().Trim(), txtTenKhach.Text.Trim(), GioiTinh.Trim(), txtDiaChi.Text.Trim(), txtEmail.Text.Trim(), rtxtGhiChu.Text.Trim());
         }
         public bool ktra_MonAn()
         {
@@ -41,7 +42,7 @@ namespace QLCHTAN
                 {
                     return false;
                 }
-                else if( (cbbTenMon.SelectedValue.ToString().Trim() == dgvThongTinDonHang.Rows[i].Cells["maSanPham"].Value.ToString().Trim())&&(cbbSizeDoAn.SelectedValue.ToString().Trim()==dgvThongTinDonHang.Rows[i].Cells["donViBan"].Value.ToString())   ) 
+                else if( (cbbTenMon.SelectedValue.ToString().Trim() == dgvThongTinDonHang.Rows[i].Cells["maSanPham"].Value.ToString().Trim())&&(cbbSizeDoAn.SelectedValue.ToString().Trim()==dgvThongTinDonHang.Rows[i].Cells["donViBan"].Value.ToString())) 
 
                 {
                     return true;
@@ -58,8 +59,7 @@ namespace QLCHTAN
                 {
                     return false;
                 }
-                else if ((cbbTenNuoc.SelectedValue.ToString().Trim() == dgvThongTinDonHang.Rows[i].Cells["tenMon"].Value.ToString().Trim())&&(txtSizeNuoc.Text.ToString().Trim() == dgvThongTinDonHang.Rows[i].Cells["donViBan"].Value.ToString()) )
-
+                else if ((cbbTenNuoc.SelectedValue.ToString().Trim() == dgvThongTinDonHang.Rows[i].Cells["maSanPham"].Value.ToString().Trim())&&(txtSizeNuoc.Text.ToString().Trim() == dgvThongTinDonHang.Rows[i].Cells["donViBan"].Value.ToString()) )
                 {
                     return true;
                 }
@@ -111,14 +111,15 @@ namespace QLCHTAN
             cbbMaGiamGia.DataSource = khuyenMai_BUS.show_KM_BUS();
             cbbMaGiamGia.DisplayMember = "tenKhuyenMai";
             cbbMaGiamGia.ValueMember = "maKhuyenMai";
-
+          
+            
 
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            //Thêm thông tin khách hàng vào database
-            if (khachHang_BUS.insert_KhachHang_BUS(khachHang_DTO))
+           // Thêm thông tin khách hàng vào database
+            if (khachHang_BUS.insert_KhachHang_BUS(khachHang_DTO()))
             {
                 MessageBox.Show("Thêm Khách Hàng Thành Công");
             }
@@ -250,6 +251,7 @@ namespace QLCHTAN
             string maSanPham = doAn_BUS.select_maSanPhamDoAn_BUS(cbbTenMon.SelectedValue.ToString());
             decimal donGia = doAn_BUS.select_donGia_BUS(maSanPham, donViBan);
             decimal thanhTien = nudSoLuongMon.Value * donGia;
+            //MucKhuyenMai = khuyenMai_BUS.select_MucKhuyenMai_BUS(cbbMaGiamGia.SelectedValue.ToString());
             DialogResult them = MessageBox.Show("Bạn muốn thêm món ăn này ?", "Thông báo", MessageBoxButtons.YesNo);
             if (them == DialogResult.Yes)
             {
@@ -264,7 +266,7 @@ namespace QLCHTAN
                         r.Cells["donViban"].Value = donViBan.ToString();
                         r.Cells["soLuong"].Value = nudSoLuongMon.Value.ToString();
                         r.Cells["donGia"].Value = donGia.ToString();
-                        r.Cells["thanhTien"].Value = thanhTien.ToString();
+                        r.Cells["thanhTien"].Value = thanhTien.ToString() ;
                         break;
                     }
                 }
@@ -277,10 +279,18 @@ namespace QLCHTAN
                             dgvThongTinDonHang.Rows[i].Cells["soLuong"].Value = (Convert.ToInt32(dgvThongTinDonHang.Rows[i].Cells["soLuong"].Value) + Convert.ToInt32(nudSoLuongMon.Value)).ToString();
                             thanhTien = nudSoLuongMon.Value * donGia;
                             DataGridViewRow r = dgvThongTinDonHang.Rows[i];
-                            r.Cells["thanhTien"].Value = thanhTien.ToString();
+                            r.Cells["thanhTien"].Value = (Convert.ToDecimal(r.Cells["thanhTien"].Value) +thanhTien).ToString();
                         }
                     }
                 }
+                TongTien = dgvThongTinDonHang.Rows.Count;
+                thanhTien = 0;
+                for (int i = 0; i <= TongTien - 1; i++)
+                {
+                    thanhTien += Convert.ToDecimal(dgvThongTinDonHang.Rows[i].Cells["thanhTien"].Value.ToString());
+                }
+                txtTongTien.Text = thanhTien.ToString();
+                
             }
         }
 
@@ -308,6 +318,26 @@ namespace QLCHTAN
                         break;
                     }
                 }
+                else
+                {
+                    for (int i = 0; i <= dgvThongTinDonHang.Rows.Count - 1; i++)
+                    {
+                        if ((maSanPham.ToString() == dgvThongTinDonHang.Rows[i].Cells["maSanPham"].Value.ToString()) && (txtSizeNuoc.Text.ToString() == dgvThongTinDonHang.Rows[i].Cells["donViBan"].Value.ToString()))
+                        {
+                            dgvThongTinDonHang.Rows[i].Cells["soLuong"].Value = (Convert.ToInt32(dgvThongTinDonHang.Rows[i].Cells["soLuong"].Value) + Convert.ToInt32(nudSoLuongNuoc.Value)).ToString();
+                            thanhTien = nudSoLuongNuoc.Value * donGia;
+                            DataGridViewRow r = dgvThongTinDonHang.Rows[i];
+                            r.Cells["thanhTien"].Value = r.Cells["thanhTien"].Value = (Convert.ToDecimal(r.Cells["thanhTien"].Value) + thanhTien).ToString();
+                        }
+                    }
+                }
+                TongTien = dgvThongTinDonHang.Rows.Count;
+                thanhTien = 0;
+                for (int i = 0; i <= TongTien - 1; i++)
+                {
+                    thanhTien += Convert.ToDecimal(dgvThongTinDonHang.Rows[i].Cells["thanhTien"].Value.ToString());
+                }
+                txtTongTien.Text = thanhTien.ToString();
             }
         }
         private void cbbTenNuoc_SelectedValueChanged(object sender, EventArgs e)

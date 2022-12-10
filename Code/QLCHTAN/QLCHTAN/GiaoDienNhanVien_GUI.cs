@@ -34,26 +34,26 @@ namespace QLCHTAN
 
         private void btnLapPhieuNhapHang_Click(object sender, EventArgs e)
         {
-            pCuaSoChucNang.Controls.Clear();
+            panelChucNang.Controls.Clear();
             PhieuNhapKho_GUI phieuNhapKho_GUI = new PhieuNhapKho_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true }; ;
-            this.pCuaSoChucNang.Controls.Add(phieuNhapKho_GUI);
+            this.panelChucNang.Controls.Add(phieuNhapKho_GUI);
             phieuNhapKho_GUI.Show();
             
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            pCuaSoChucNang.Controls.Clear();
+            panelChucNang.Controls.Clear();
             Order_GUI order = new Order_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true }; ;
-            this.pCuaSoChucNang.Controls.Add(order);
+            this.panelChucNang.Controls.Add(order);
             order.Show();
         }
 
         private void btnQuanLiKhachHang_Click(object sender, EventArgs e)
         {
-            pCuaSoChucNang.Controls.Clear();
+            panelChucNang.Controls.Clear();
             KhachHang_GUI khachhang = new KhachHang_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true }; ;
-            this.pCuaSoChucNang.Controls.Add(khachhang);
+            this.panelChucNang.Controls.Add(khachhang);
             khachhang.Show();
         }
     }

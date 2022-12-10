@@ -66,7 +66,7 @@ namespace DAO
                 cmd.Parameters.Add("diaChi", SqlDbType.NVarChar).Value = khachhang_DTO.DiaChi;
                 cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = khachhang_DTO.Email;
                 cmd.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = khachhang_DTO.GhiChu;
-                cmd.Parameters.Add("idKhachHang", SqlDbType.Int).Value = khachhang_DTO.IdKhachHang;
+                //cmd.Parameters.Add("idKhachHang", SqlDbType.Int).Value = khachhang_DTO.IdKhachHang;
                if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
@@ -83,7 +83,7 @@ namespace DAO
                 Open();
                 SqlCommand cmd = new SqlCommand("delete_KhachHang",conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@idKhachHang", SqlDbType.Int).Value = khachhang_DTO.IdKhachHang;
+                cmd.Parameters.Add("@SDTKhachHang", SqlDbType.Int).Value = khachhang_DTO.SDT;
                 if(cmd.ExecuteNonQuery()>0)
                      return true;
             }

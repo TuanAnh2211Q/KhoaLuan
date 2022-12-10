@@ -405,3 +405,19 @@ declare
 end
 go
 >>>>>>> DienDayNeee
+--Trừ định lượng của đơn hàng
+create trigger trg_thanhPhanDoAn_ThongTinDonHang on KhoBan instead of insert, update
+as 
+begin
+declare 
+		--@dinhLuong nvarchar(20)=(select dinhLuong from ThongTinThanhPhanDoAn tttpda,ThongTinDonHang ttdh,SanPham sp, DoAn da where ttdh.maSanPham= sp.maSanPham and sp.maSanPham=da.maDoAn and da.maDoAn=tttpda.maDoAn),
+		@soLuongBan int =menu.soLuong
+					   (   	select tttpda.soLuong from ThongTinDonHang ttdh,SanPham sp,ThongTinThanhPhanDoAn tttpda,DoAn 
+							where ttdh.maSanPham=sp.maSanPham and sp.maSanPham=DoAn.maDoAn and DoAn.maDoAn=tttpda.maDoAn )
+							union
+							select nu.soLuong from ThongTinDonHang ttdh, SanPham sp, NuocUong nu where ttdh.maSanPham= sp.maSanPham and sp.maSanPham= nu.maNuoc
+							)menu,
+		@soLuongTrongKho=(select kb.soLuong from KhoBan kb, MatHang mh, SanPham sp where kb.maHang=mh.maHang and mh.maHang= )
+		@soLuongConLai int,
+		set @soLuongConLai
+

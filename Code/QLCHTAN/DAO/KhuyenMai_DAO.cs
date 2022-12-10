@@ -83,6 +83,26 @@ namespace DAO
             }
             return false;
         }
+        public decimal select_MucKhuyenMai_DAO(KhuyenMai_DTO khuyenMai_DTO)
+        {
+            Open();   
+            try{
+                SqlCommand cmd = new SqlCommand("select_MucKhuyenMai", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@maKM", SqlDbType.VarChar).Value = khuyenMai_DTO.MaKhuyenMai;
+                if (cmd.ExecuteScalar() != null)
+                {
+                    return Convert.ToDecimal(cmd.ExecuteScalar());
+                }
+                return 0;
 
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return 0;
+        }
     }
 }
