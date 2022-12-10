@@ -28,11 +28,11 @@ namespace BUS
         {
             return phieuDatHang_DAO.update_PhieuDat_DAO(phieudat);
         }
-        public string check_TrangThai_PhieuDat_PhieuTra(PhieuDatHang_DTO phieudat)
+        public string check_TrangThai_PhieuDat_PhieuTra(string phieudat)
         {
             return phieuDatHang_DAO.check_TrangThai_PhieuDat_PhieuTra(phieudat);
         }
-        public bool check_TrangThai_PhieuDat_PhieuNhap(PhieuDatHang_DTO phieudat)
+        public bool check_TrangThai_PhieuDat_PhieuNhap(string phieudat)
         {
             return phieuDatHang_DAO.check_TrangThai_PhieuDat_PhieuNhap(phieudat);
         }

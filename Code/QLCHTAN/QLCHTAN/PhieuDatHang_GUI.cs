@@ -24,7 +24,7 @@ namespace QLCHTAN
         }
         public PhieuDatHang_DTO phieuDatHang_DTO()
         {
-            return new PhieuDatHang_DTO(txtMaDat.Text.Trim(), dtNgayDat.Value, dtNgayDuKienGiao.Value, ccbPhuongThucThanhToan.Text.Trim(), txtGhiChu.Text,trangThaiPhieu);
+            return new PhieuDatHang_DTO(txtMaDat.Text.Trim(), dtNgayDat.Value, dtNgayDuKienGiao.Value, ccbPhuongThucThanhToan.Text, txtGhiChu.Text,trangThaiPhieu);
         }
         public bool kt_Dondat()
         {
@@ -40,7 +40,6 @@ namespace QLCHTAN
         private void PhieuDatHang_GUI_Load(object sender, EventArgs e)
         {
             dgvPhieuDat.DataSource = phieuDatHang_BUS.dsPhieuDatHang_BUS();
-            ccbPhuongThucThanhToan.SelectedIndex = 0;
         }
 
         private void dgvPhieuDat_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -251,7 +250,7 @@ namespace QLCHTAN
 
         private void lblkTaoPhieuNhap_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           if(phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuNhap(phieuDatHang_DTO()))
+           if(phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuNhap(txtMaDat.Text))
             {
                 if (txtMaDat.Text == "")
                 {
@@ -260,8 +259,8 @@ namespace QLCHTAN
                 else
                 {
                     maPhieuDat = txtMaDat.Text;
-                    if (phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuTra(phieuDatHang_DTO()) != null)
-                        PhieuTra_GUI.maPhieuTra = phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuTra(phieuDatHang_DTO());
+                    if (phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuTra(txtMaDat.Text) != null)
+                        PhieuTra_GUI.maPhieuTra = phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuTra(txtMaDat.Text);
                     else
                     {
                         if (thongTinChiTietPhieuDatHang_BUS.ds_SanPhamDat_BUS(maPhieuDat).Rows.Count <= 0)
@@ -293,7 +292,7 @@ namespace QLCHTAN
             if (txtMaDat.Text != "")
             {
 
-                if (phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuTra(phieuDatHang_DTO())!=null||!phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuNhap(phieuDatHang_DTO()))
+                if (phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuTra(txtMaDat.Text)!=null||!phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuNhap(txtMaDat.Text))
                 {
                     MessageBox.Show("Phiếu đặt này đã được hoàn thiện, không thể thay đổi trạng thái", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
@@ -346,6 +345,7 @@ namespace QLCHTAN
 
         private void lblkThoat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            maPhieuDat = null;
             this.Close();
         }
     }

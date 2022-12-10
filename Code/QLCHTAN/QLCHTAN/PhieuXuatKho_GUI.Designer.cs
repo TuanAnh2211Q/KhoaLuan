@@ -36,17 +36,17 @@ namespace QLCHTAN
             this.txtMaXuat = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvPhieuXuat = new System.Windows.Forms.DataGridView();
+            this.maXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblTrangThai = new System.Windows.Forms.Label();
             this.lblkDuyetPhieuXuat = new System.Windows.Forms.LinkLabel();
-            this.maXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTrangThai = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuXuat)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -133,6 +133,27 @@ namespace QLCHTAN
             this.dgvPhieuXuat.TabIndex = 1;
             this.dgvPhieuXuat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuXuat_CellClick);
             // 
+            // maXuat
+            // 
+            this.maXuat.DataPropertyName = "maXuat";
+            this.maXuat.HeaderText = "Mã xuất";
+            this.maXuat.Name = "maXuat";
+            this.maXuat.ReadOnly = true;
+            // 
+            // ngayXuat
+            // 
+            this.ngayXuat.DataPropertyName = "ngayXuat";
+            this.ngayXuat.HeaderText = "Ngày xuất";
+            this.ngayXuat.Name = "ngayXuat";
+            this.ngayXuat.ReadOnly = true;
+            // 
+            // trangThai
+            // 
+            this.trangThai.DataPropertyName = "trangThai";
+            this.trangThai.HeaderText = "Trạng thái";
+            this.trangThai.Name = "trangThai";
+            this.trangThai.ReadOnly = true;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -187,25 +208,6 @@ namespace QLCHTAN
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách phiếu nhập";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 15);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Trạng thái:";
-            // 
-            // lblTrangThai
-            // 
-            this.lblTrangThai.AutoSize = true;
-            this.lblTrangThai.ForeColor = System.Drawing.Color.Red;
-            this.lblTrangThai.Location = new System.Drawing.Point(76, 110);
-            this.lblTrangThai.Name = "lblTrangThai";
-            this.lblTrangThai.Size = new System.Drawing.Size(121, 15);
-            this.lblTrangThai.TabIndex = 28;
-            this.lblTrangThai.Text = "......................................";
-            // 
             // lblkDuyetPhieuXuat
             // 
             this.lblkDuyetPhieuXuat.AutoSize = true;
@@ -215,27 +217,29 @@ namespace QLCHTAN
             this.lblkDuyetPhieuXuat.TabIndex = 29;
             this.lblkDuyetPhieuXuat.TabStop = true;
             this.lblkDuyetPhieuXuat.Text = "Duyệt phiếu xuất";
+            this.lblkDuyetPhieuXuat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkDuyetPhieuXuat_LinkClicked);
             // 
-            // maXuat
+            // lblTrangThai
             // 
-            this.maXuat.DataPropertyName = "maXuat";
-            this.maXuat.HeaderText = "Mã xuất";
-            this.maXuat.Name = "maXuat";
-            this.maXuat.ReadOnly = true;
+            this.lblTrangThai.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTrangThai.AutoSize = true;
+            this.lblTrangThai.ForeColor = System.Drawing.Color.Red;
+            this.lblTrangThai.Location = new System.Drawing.Point(76, 110);
+            this.lblTrangThai.Name = "lblTrangThai";
+            this.lblTrangThai.Size = new System.Drawing.Size(121, 15);
+            this.lblTrangThai.TabIndex = 28;
+            this.lblTrangThai.Text = "......................................";
             // 
-            // ngayXuat
+            // label3
             // 
-            this.ngayXuat.DataPropertyName = "ngayXuat";
-            this.ngayXuat.HeaderText = "Ngày xuất";
-            this.ngayXuat.Name = "ngayXuat";
-            this.ngayXuat.ReadOnly = true;
-            // 
-            // trangThai
-            // 
-            this.trangThai.DataPropertyName = "trangThai";
-            this.trangThai.HeaderText = "Trạng thái";
-            this.trangThai.Name = "trangThai";
-            this.trangThai.ReadOnly = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(5, 110);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 15);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Trạng thái:";
             // 
             // PhieuXuatKho_GUI
             // 

@@ -25,5 +25,9 @@ namespace BUS
         {
             return phieuXuat_DAO.check_MaXuat_DAO(maXuat);
         }
+        public bool update_PhieuXuat_BUS(String maXuat)
+        {
+            return phieuXuat_DAO.update_PhieuXuat_DAO(maXuat);
+        }
     }
 }

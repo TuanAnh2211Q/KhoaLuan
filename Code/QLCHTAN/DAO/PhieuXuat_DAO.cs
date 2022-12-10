@@ -51,5 +51,16 @@ namespace DAO
                 return true;
             return false;
         }
+
+        public bool update_PhieuXuat_DAO(String maXuat)
+        {
+            Open();
+            SqlCommand cmd = new SqlCommand("update_PhieuXuat", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@maXuat", SqlDbType.VarChar).Value = maXuat;
+            if (cmd.ExecuteNonQuery() >0)
+                return true;
+            return false;
+        }
     }
 }
