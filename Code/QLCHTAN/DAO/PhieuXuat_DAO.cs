@@ -41,6 +41,25 @@ namespace DAO
             return false;
         }
 
+        public bool delete_PhieuXuat_DAO(PhieuXuat_DTO phieuXuat)
+        {
+            Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("delete_XuatKho", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@maXuat", SqlDbType.VarChar).Value = phieuXuat.MaXuat;
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return false;
+        }
+
         public bool check_MaXuat_DAO(String maXuat)
         {
             Open();

@@ -71,6 +71,7 @@ namespace QLCHTAN
             this.lblkHuyPhieuXuat.TabIndex = 26;
             this.lblkHuyPhieuXuat.TabStop = true;
             this.lblkHuyPhieuXuat.Text = "Hủy phiếu xuất";
+            this.lblkHuyPhieuXuat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkHuyPhieuXuat_LinkClicked);
             // 
             // lblkThongTinChiTiet
             // 
@@ -87,7 +88,7 @@ namespace QLCHTAN
             // 
             this.dtNgayNhap.Enabled = false;
             this.dtNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgayNhap.Location = new System.Drawing.Point(82, 73);
+            this.dtNgayNhap.Location = new System.Drawing.Point(82, 157);
             this.dtNgayNhap.Margin = new System.Windows.Forms.Padding(2);
             this.dtNgayNhap.Name = "dtNgayNhap";
             this.dtNgayNhap.Size = new System.Drawing.Size(235, 23);
@@ -96,7 +97,7 @@ namespace QLCHTAN
             // txtMaXuat
             // 
             this.txtMaXuat.Enabled = false;
-            this.txtMaXuat.Location = new System.Drawing.Point(82, 46);
+            this.txtMaXuat.Location = new System.Drawing.Point(82, 130);
             this.txtMaXuat.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaXuat.Name = "txtMaXuat";
             this.txtMaXuat.Size = new System.Drawing.Size(235, 23);
@@ -157,7 +158,7 @@ namespace QLCHTAN
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 78);
+            this.label2.Location = new System.Drawing.Point(5, 162);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 15);
@@ -167,7 +168,7 @@ namespace QLCHTAN
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 48);
+            this.label1.Location = new System.Drawing.Point(5, 132);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 15);
@@ -226,7 +227,7 @@ namespace QLCHTAN
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTrangThai.AutoSize = true;
             this.lblTrangThai.ForeColor = System.Drawing.Color.Red;
-            this.lblTrangThai.Location = new System.Drawing.Point(76, 110);
+            this.lblTrangThai.Location = new System.Drawing.Point(76, 194);
             this.lblTrangThai.Name = "lblTrangThai";
             this.lblTrangThai.Size = new System.Drawing.Size(121, 15);
             this.lblTrangThai.TabIndex = 28;
@@ -235,7 +236,7 @@ namespace QLCHTAN
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 110);
+            this.label3.Location = new System.Drawing.Point(5, 194);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 15);
             this.label3.TabIndex = 27;

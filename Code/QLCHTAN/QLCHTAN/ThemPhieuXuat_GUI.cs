@@ -41,6 +41,7 @@ namespace QLCHTAN
         }
         private void ThemPhieuXuat_GUI_Load(object sender, EventArgs e)
         {
+          
             dtNgayXuat.Value = DateTime.Today;
             cbbMatHang.DataSource = tttk.show_DS_HangTon_DAO();
             cbbMatHang.DisplayMember = "tenHang";
@@ -237,7 +238,7 @@ namespace QLCHTAN
                                 int soluong = Convert.ToInt32(r.Cells["soLuong"].Value);
                                 string ghichu = r.Cells["ghiChu"].Value.ToString();
                                 decimal tongdongia = Convert.ToDecimal(r.Cells["tongDonGia"].Value);
-                                ThongTinPhieuXuat_DTO ttpx_dto = new ThongTinPhieuXuat_DTO(maxuat, mahang, soluong, ghichu, tongdongia);
+                                ThongTinPhieuXuat_DTO ttpx_dto = new ThongTinPhieuXuat_DTO(maxuat, mahang, soluong, ghichu);
                                 thongTinPhieuXuat.insert_ThongTinXuatKho_BUS(ttpx_dto);
                             }
                         }

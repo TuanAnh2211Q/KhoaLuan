@@ -17,11 +17,15 @@ namespace QLCHTAN
         ThongTinPhieuXuat_BUS ttpx_BUS = new ThongTinPhieuXuat_BUS();
         ThongTinTonKho_BUS tttk_BUS = new ThongTinTonKho_BUS();
         PhieuXuat_BUS phieuXuat_BUS = new PhieuXuat_BUS();
-        public bool tt;
+        public static bool tt;
         public static string maxuat=null;
         public PhieuXuatKho_GUI()
         {
             InitializeComponent();
+        }
+        public PhieuXuat_DTO phieuxuat_DTO()
+        {
+            return new PhieuXuat_DTO(txtMaXuat.Text, dtNgayNhap.Value, tt);
         }
 
         private void lblkThongTinChiTiet_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -100,6 +104,36 @@ namespace QLCHTAN
                             MessageBox.Show("Duyệt thành công");
                         PhieuXuatKho_GUI_Load(sender, e);
                     }    
+                }    
+            }    
+        }
+
+        private void lblkHuyPhieuXuat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if(tt is true)
+            {
+                MessageBox.Show("Phiếu xuất đã hoàn thành, không thể xóa");
+            }    
+            else
+            {
+                if(txtMaXuat.Text=="")
+                {
+                    MessageBox.Show("Chọn phiếu xuất muốn hủy");
+                }
+                else
+                {
+                    DialogResult rs = MessageBox.Show("Xác nhận xóa toàn bộ phiếu xuất ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+                    if (rs == DialogResult.Yes)
+                    {
+                        if (phieuXuat_BUS.delete_PhieuXuat_DAO(phieuxuat_DTO()))
+                        {
+                            MessageBox.Show("Hủy phiếu xuất thành công");
+                            PhieuXuatKho_GUI_Load(sender, e);
+                        }
+                        else
+                            MessageBox.Show("Hủy phiếu xuất thất bại");
+
+                    }
                 }    
             }    
         }
