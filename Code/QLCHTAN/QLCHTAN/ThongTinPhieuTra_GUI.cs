@@ -38,6 +38,14 @@ namespace QLCHTAN
 
         private void ThongTinPhieuTra_GUI_Load(object sender, EventArgs e)
         {
+            if(PhieuTra_GUI.trangThaiTra is true)
+            {
+                btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = false;
+            }    
+            else
+            {
+                btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = true;
+            }
             txtMaDatHang.Text = PhieuTra_GUI.maDat;
             txtMaTra.Text = PhieuTra_GUI.maTraHang;
             dgvThongTinPhieuTra.DataSource = ttpt.ds_SanPhamTra_BUS(txtMaTra.Text);

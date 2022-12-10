@@ -87,14 +87,14 @@ namespace DAO
             }
             return false;
         }
-        public string check_TrangThai_PhieuDat_PhieuTra(PhieuDatHang_DTO phieudat)
+        public string check_TrangThai_PhieuDat_PhieuTra(string phieudat)
         {
             Open();
             try
             {
                 SqlCommand cmd = new SqlCommand("check_PhieuDat_PhieuTra", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@maDat", SqlDbType.VarChar).Value = phieudat.MaDatHang.Trim();
+                cmd.Parameters.Add("@maDat", SqlDbType.VarChar).Value = phieudat;
                 if (cmd.ExecuteScalar()!=null)
                     return Convert.ToString(cmd.ExecuteScalar());
                 else
@@ -109,14 +109,14 @@ namespace DAO
                 throw;
             }
         }
-        public bool check_TrangThai_PhieuDat_PhieuNhap(PhieuDatHang_DTO phieudat)
+        public bool check_TrangThai_PhieuDat_PhieuNhap(string phieudat)
         {
             Open();
             try
             {
                 SqlCommand cmd = new SqlCommand("check_PhieuDat_PhieuNhap", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@maDat", SqlDbType.VarChar).Value = phieudat.MaDatHang.Trim();
+                cmd.Parameters.Add("@maDat", SqlDbType.VarChar).Value = phieudat;
                 if (cmd.ExecuteScalar() != null)
                     return false;
                 else

@@ -42,7 +42,6 @@ namespace QLCHTAN
             {
                 txtMaDat.Text = PhieuDatHang_GUI.maPhieuDat;
             }
-            txtMaNhap.Text = "MN"+"_"+txtMaDat.Text.Trim()+"_"+ dtNgayNhap.Value.Day.ToString() + dtNgayNhap.Value.Month.ToString() + dtNgayNhap.Value.Year.ToString();
 
         }
 

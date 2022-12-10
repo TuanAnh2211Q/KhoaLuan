@@ -36,14 +36,6 @@ namespace DAO
             SqlDataAdapter da = new SqlDataAdapter("select_to_PhieuNhapTemp", conn);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
             da.SelectCommand.Parameters.Add("@maDat", SqlDbType.VarChar).Value = madat;
-            if (matra==null)
-            {
-                da.SelectCommand.Parameters.Add("@maTra", SqlDbType.VarChar).Value = DBNull.Value;
-            }
-            else
-            {
-                da.SelectCommand.Parameters.Add("@maTra", SqlDbType.VarChar).Value = matra;
-            }
             DataTable tb = new DataTable();
             da.Fill(tb);
             return tb;

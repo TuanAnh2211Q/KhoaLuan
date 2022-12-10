@@ -16,12 +16,20 @@ namespace QLCHTAN
     {
         PhieuDatHang_BUS phieuDatHang_BUS = new PhieuDatHang_BUS();
         PhieuTra_BUS phieuTra_BUS = new PhieuTra_BUS();
+        public static bool trangThaiTra;
         public static string maDat;
         public static string maTraHang;
         public static string maPhieuTra=null;
         public PhieuTra_DTO phieuTra()
         {
-            return new PhieuTra_DTO(txtMaTra.Text.Trim(), cbbMaDat.SelectedValue.ToString().Trim(), dtNgayTra.Value, txtGhiChu.Text);
+            if (cbbMaDat.SelectedValue != null)
+            {
+                return new PhieuTra_DTO(txtMaTra.Text.Trim(), cbbMaDat.SelectedValue.ToString().Trim(), dtNgayTra.Value, txtGhiChu.Text);
+            }
+            else
+            {
+                return new PhieuTra_DTO(txtMaTra.Text.Trim(), null, dtNgayTra.Value, txtGhiChu.Text);
+            }
         }
 
         public bool kt_PhieuTra()
@@ -40,7 +48,12 @@ namespace QLCHTAN
 
         private void PhieuTra_GUI_Load(object sender, EventArgs e)
         {
-            dgvPhieuTra.DataSource = phieuTra_BUS.show_PhieuTra_BUS();
+            if (cbbMaDat.SelectedValue!=null)
+            {
+                dgvPhieuTra.DataSource = phieuTra_BUS.show_PhieuTra_BUS();
+                dtNgayTra.Value = Convert.ToDateTime(phieuTra_BUS.check_date_TraHang_DAO(phieuTra()));
+            }
+
             cbbMaDat.DataSource = phieuDatHang_BUS.dsPhieuDatHang_BUS();
             cbbMaDat.DisplayMember = "maDatHang";
             cbbMaDat.ValueMember = "maDatHang";
@@ -49,7 +62,6 @@ namespace QLCHTAN
                 cbbMaDat.SelectedValue = PhieuDatHang_GUI.maPhieuDat;
             }
 
-            dtNgayTra.Value = Convert.ToDateTime(phieuTra_BUS.check_date_TraHang_DAO(phieuTra()));
         }
 
         private void btnThemPhieuTra_Click(object sender, EventArgs e)
@@ -62,9 +74,9 @@ namespace QLCHTAN
                     if (sp < 0)
                     {
                         MessageBox.Show("Ngày lập phiếu trả phải lớn hơn ngày dự kiến giao của phiếu đặt \n" +
-                            " (Ngày dự kiến giao của phiếu đặt này là "+ Convert.ToDateTime(phieuTra_BUS.check_date_TraHang_DAO(phieuTra())).ToShortDateString() + ")");
+                            " (Ngày dự kiến giao của phiếu đặt này là " + Convert.ToDateTime(phieuTra_BUS.check_date_TraHang_DAO(phieuTra())).ToShortDateString() + ")");
                     }
-                    else
+                    else if (phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuTra(cbbMaDat.SelectedValue.ToString()) == null)
                     {
                         DialogResult rs = MessageBox.Show("Xác nhận thêm phiếu trả mới ?", "Thông báo", MessageBoxButtons.YesNo);
                         if (rs == DialogResult.Yes)
@@ -78,6 +90,8 @@ namespace QLCHTAN
                                 MessageBox.Show("Thêm phiếu trả thất bại, vui lòng kiểm tra lại thông tin");
                         }
                     }
+                    else
+                        MessageBox.Show("Không thể thêm phiếu trả do đã tồn tại phiếu trả hàng trên phiếu đặt này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
@@ -175,6 +189,9 @@ namespace QLCHTAN
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             PhieuTra_GUI_Load(sender, e);
+            txtMaTra.Text = "";
+            txtMaTra.Enabled = true;
+            cbbMaDat.Enabled = true;
         }
 
         private void dgvPhieuTra_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -188,10 +205,12 @@ namespace QLCHTAN
                 txtMaTra.Text= r.Cells["maTra"].Value.ToString();
                 if (r.Cells["trangThai"].Value is true)
                 {
+                    trangThaiTra = true;
                     lblTrangThai.Text = "Đã hoàn thành";
                 }
                 else
                 {
+                    trangThaiTra = false;
                     lblTrangThai.Text = "Chưa hoàn thành";
                 }
                 txtMaTra.Enabled = false;
@@ -223,16 +242,24 @@ namespace QLCHTAN
 
         private void lblkTaoPhieuNhap_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           if(txtMaTra.Text=="")
+            if (phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuNhap(cbbMaDat.SelectedValue.ToString()))
             {
-                MessageBox.Show("Vui lòng chọn phiếu trả muốn lập phiếu nhập");
-            }    
-           else
+                if (txtMaTra.Text == "")
+                {
+                    MessageBox.Show("Vui lòng chọn phiếu trả muốn lập phiếu nhập");
+                }
+                else
+                {
+                    maDat = cbbMaDat.SelectedValue.ToString();
+                    ThemPhieuNhap_GUI taoPhieuNhap = new ThemPhieuNhap_GUI();
+                    taoPhieuNhap.Show();
+                }
+            }
+            else
             {
-                maDat = cbbMaDat.SelectedValue.ToString();
-                ThemPhieuNhap_GUI taoPhieuNhap = new ThemPhieuNhap_GUI();
-                taoPhieuNhap.Show();
-            }    
+                MessageBox.Show("Đã tồn tại phiếu nhập trên mã đặt hàng này");
+            }
+
         }
 
         private void PhieuTra_GUI_FormClosing(object sender, FormClosingEventArgs e)
@@ -243,6 +270,7 @@ namespace QLCHTAN
 
         private void lbkThoat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            maPhieuTra = null;
             this.Close();
         }
 
@@ -253,12 +281,9 @@ namespace QLCHTAN
 
         private void dtNgayTra_ValueChanged(object sender, EventArgs e)
         {
-            txtMaTra.Text = "MT" + "_" + cbbMaDat.SelectedValue.ToString() + "_" + dtNgayTra.Value.Day.ToString() + dtNgayTra.Value.Month.ToString() + dtNgayTra.Value.Year.ToString();
-        }
-
-        private void cbbMaDat_SelectedValueChanged(object sender, EventArgs e)
-        {
-            txtMaTra.Text = "MT" + "_" + cbbMaDat.SelectedValue.ToString() + "_" + dtNgayTra.Value.Day.ToString() + dtNgayTra.Value.Month.ToString() + dtNgayTra.Value.Year.ToString();
+            Random rnd = new Random();
+            int ma = Convert.ToInt32(DateTime.Now.Day) + Convert.ToInt32(DateTime.Now.Month) + Convert.ToInt32(DateTime.Now.Year) + Convert.ToInt32(DateTime.Now.Hour) + Convert.ToInt32(DateTime.Now.Minute) + Convert.ToInt32(DateTime.Now.Millisecond) + rnd.Next(1, 1000);
+            txtMaTra.Text = "MT" + "_" + ma.ToString();
         }
     }
 }
