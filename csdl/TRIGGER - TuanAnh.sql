@@ -22,7 +22,39 @@ declare
 			end
 end
 
+create trigger trg_insert_ThongTinXuatKho on ThongTinXuatKho instead of insert, update
+as
+begin
+declare 
+			@maXuat varchar(10)=(select maXuat from inserted),
+			@maHang varchar(10)=(select maHang from inserted),
+			@soLuong int=(select soLuong from inserted),
+			@donGia money=(select donGia from inserted,MatHang  mh where inserted.maHang=mh.maHang),
+			@ghiChu nvarchar(max)=(select ghiChu from inserted),
+			@tongDonGia money
+		     set @tongdongia=@soLuong*@donGia
+			if not exists(select * from ThongTinXuatKho where maXuat=@maXuat and maHang=@maHang)
+			begin
+			insert into ThongTinXuatKho values (@maXuat,@maHang,@soLuong,@ghiChu,(select tongDonGia=@tongDonGia from inserted))
+			end
+			else
+			begin
+			update ThongTinXuatKho
+			set soLuong=soLuong+@soLuong,
+					tongDonGia=tongDonGia+@tongDonGia
+					where maXuat=@maXuat and maHang=@maHang
+			end
 
+end
+
+create trigger trg_delete_PhieuXuat on XuatKho instead of delete
+as
+begin
+declare 
+@maXuat varchar(10) =(select maXuat from deleted)
+delete from ThongTinXuatKho where maXuat=@maXuat
+delete from XuatKho where maXuat=@maXuat
+end
 
 create  trigger trg_duyet_PhieuXuat on XuatKho after insert, update
 as
@@ -33,8 +65,6 @@ declare
 @soLuong int,
 @ghiChu nvarchar(max),
 @tongDonGia money
-
-
 
 DECLARE thongTinPhieuXuat CURSOR FOR  -- khai báo con trỏ cursorProduct
 SELECT inserted.maXuat,maHang,soLuong,ghiChu,tongDonGia FROM inserted,ThongTinXuatKho ttxk where ttxk.maXuat=inserted.maXuat     -- dữ liệu trỏ tới

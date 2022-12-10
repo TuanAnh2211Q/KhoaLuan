@@ -29,5 +29,10 @@ namespace BUS
         {
             return phieuXuat_DAO.update_PhieuXuat_DAO(maXuat);
         }
+        public bool delete_PhieuXuat_DAO(PhieuXuat_DTO phieuXuat)
+        {
+            return phieuXuat_DAO.delete_PhieuXuat_DAO(phieuXuat);
+
+        }
     }
 }

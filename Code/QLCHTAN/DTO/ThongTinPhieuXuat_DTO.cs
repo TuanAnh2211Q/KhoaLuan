@@ -40,21 +40,13 @@ namespace DTO
             set { ghiChu = value; }
         }
 
-        private decimal tongDonGia;
-
-        public decimal TongDonGia
-        {
-            get { return tongDonGia; }
-            set { tongDonGia = value; }
-        }
-        
-        public ThongTinPhieuXuat_DTO(string MaXuat, string MaHang, int SoLuong, string GhiChu, decimal TongDonGia)
+   
+        public ThongTinPhieuXuat_DTO(string MaXuat, string MaHang, int SoLuong, string GhiChu)
         {
             this.maXuat = MaXuat;
             this.maHang = MaHang;
             this.soLuong = SoLuong;
             this.ghiChu = GhiChu;
-            this.tongDonGia = TongDonGia;
         }
     }
 }
