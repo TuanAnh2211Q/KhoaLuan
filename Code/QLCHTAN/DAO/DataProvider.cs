@@ -36,13 +36,14 @@ namespace DAO
 
         public string connSTR { get; set; }
       
+        //XÓa dataSource
 
         public DataProvider()
         {
             this.DataBase = "QLCUAHANGTHUCANNHANH";
             this.Username = "sa";
             this.Password = "123";
-            this.connSTR = @"Data Source="+DataSource+";Initial Catalog="+DataBase+";Persist Security Info=True;User ID="+Username+";Password="+Password+"";
+            this.connSTR = @"Data Source=DESKTOP-4MUEPD4\THANHBAO;Initial Catalog=" + DataBase+";Persist Security Info=True;User ID="+Username+";Password="+Password+"";
             conn = new SqlConnection(connSTR);
         }
 

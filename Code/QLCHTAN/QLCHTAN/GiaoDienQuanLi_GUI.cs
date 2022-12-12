@@ -168,5 +168,13 @@ namespace QLCHTAN
             this.pCuaSoChucNang.Controls.Add(qltk);
             qltk.Show();
         }
+
+        private void btnQLHKB_Click(object sender, EventArgs e)
+        {
+            pCuaSoChucNang.Controls.Clear();
+            KhoBan_GUI khoban = new KhoBan_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true };
+            this.pCuaSoChucNang.Controls.Add(khoban);
+            khoban.Show();
+        }
     }
 }
