@@ -514,7 +514,7 @@ namespace QLCHTAN
             this.flpChucNangNhanVien.Controls.Add(this.pQLXuatHang);
             this.flpChucNangNhanVien.Location = new System.Drawing.Point(10, 26);
             this.flpChucNangNhanVien.Name = "flpChucNangNhanVien";
-            this.flpChucNangNhanVien.Size = new System.Drawing.Size(548, 614);
+            this.flpChucNangNhanVien.Size = new System.Drawing.Size(521, 620);
             this.flpChucNangNhanVien.TabIndex = 3;
             // 
             // gbxChucNangNhanVien
@@ -529,9 +529,9 @@ namespace QLCHTAN
             // 
             // panelChucNang
             // 
-            this.panelChucNang.Location = new System.Drawing.Point(562, 12);
+            this.panelChucNang.Location = new System.Drawing.Point(582, 2);
             this.panelChucNang.Name = "panelChucNang";
-            this.panelChucNang.Size = new System.Drawing.Size(843, 764);
+            this.panelChucNang.Size = new System.Drawing.Size(1341, 783);
             this.panelChucNang.TabIndex = 3;
             // 
             // GiaoDienNhanVien_GUI
@@ -542,7 +542,7 @@ namespace QLCHTAN
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1417, 731);
+            this.ClientSize = new System.Drawing.Size(1924, 803);
             this.Controls.Add(this.gbxChucNangNhanVien);
             this.Controls.Add(this.panelChucNang);
             this.Controls.Add(this.grbThongTinDangNhap);

@@ -641,7 +641,6 @@ namespace QLCHTAN
             0,
             0});
             this.nudSoLuongNuoc.Name = "nudSoLuongNuoc";
-            this.nudSoLuongNuoc.ReadOnly = true;
             this.nudSoLuongNuoc.Size = new System.Drawing.Size(165, 32);
             this.nudSoLuongNuoc.TabIndex = 17;
             this.nudSoLuongNuoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -773,7 +772,6 @@ namespace QLCHTAN
             0,
             0});
             this.nudSoLuongMon.Name = "nudSoLuongMon";
-            this.nudSoLuongMon.ReadOnly = true;
             this.nudSoLuongMon.Size = new System.Drawing.Size(150, 32);
             this.nudSoLuongMon.TabIndex = 9;
             this.nudSoLuongMon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
