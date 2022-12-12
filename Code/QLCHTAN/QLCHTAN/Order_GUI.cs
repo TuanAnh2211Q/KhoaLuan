@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data;
 using DTO;
 using BUS;
 
@@ -22,9 +21,25 @@ namespace QLCHTAN
         KhuyenMai_BUS khuyenMai_BUS = new KhuyenMai_BUS();
         public string loaiDichVu { get; set; }
         public decimal TongTien { get; set; }
-        public string GioiTinh { get; set; }
         public decimal MucKhuyenMai { get; set; }
-        public DataTable dt = new DataTable();
+
+
+        //Khai báo truy vấn đơn hàng
+        public static DataTable spOrder;
+
+        public static string sdt;
+        public static string tenKH;
+        public static string diaChi;
+        public static string email;
+        public static string GioiTinh { get; set; }
+        public static string maLoaiDon;
+        public static bool htThanhToan;
+        public static string maKM;
+        public static string ghiChu;
+        public static string tongGia;
+        public static DataTable ttdh;
+        
+
         public Order_GUI()
         {
             InitializeComponent();
@@ -84,6 +99,9 @@ namespace QLCHTAN
             rdbMangVe.Checked = false;
             dgvThongTinDonHang.Rows.Clear();
             rdbNam.Enabled = true;
+            txtTongTien.Clear();
+            rdbOnline.Checked = false;
+            rdbTienMat.Checked = false;
         }
 
 
@@ -121,15 +139,69 @@ namespace QLCHTAN
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
            // Thêm thông tin khách hàng vào database
-            if (khachHang_BUS.insert_KhachHang_BUS(khachHang_DTO()))
+           if(cbbSDT.Text!=""&& txtTenKhach.Text!=""&&txtDiaChi.Text!=""&&GioiTinh!=null)
             {
-                MessageBox.Show("Thêm Khách Hàng Thành Công");
-            }
-            else
-                MessageBox.Show("Thêm Thông Tin Khách Hàng Thất bại!!");
+                if(txtTongTien.Text!="")
+                {
+                    if(!rdbAnTaiCho.Checked &&!rdbGiaoHang.Checked &&!rdbMangVe.Checked)
+                    {
+                        MessageBox.Show("Vui lòng chọn hình thức dùng món", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    }
+                    else
+                    {
+                        if(!rdbTienMat.Checked&& !rdbOnline.Checked)
+                        {
+                            MessageBox.Show("Vui lòng chọn hình thức thanh toán", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                        }
+                        else
+                        {
+                            sdt = cbbSDT.Text;
+                            tenKH = txtTenKhach.Text;
+                            diaChi = txtDiaChi.Text;
+                            email = txtEmail.Text;
+                            maLoaiDon = loaiDichVu;
+                            ghiChu = rtxtGhiChu.Text;
+                            if (cbbMaGiamGia.SelectedValue != null)
+                            {
+                                maKM = cbbMaGiamGia.SelectedValue.ToString();
+                            }
+                            else
+                                maKM = null;
+                            tongGia = txtTongTien.Text;
+                            ttdh = new DataTable();
+                            ttdh.Columns.Add("maSanPham");
+                            ttdh.Columns.Add("tenSanPham");
+                            ttdh.Columns.Add("soLuong");
+                            ttdh.Columns.Add("donGia");
+                            ttdh.Columns.Add("thanhTien");
 
-            NhanVienThanhToan_GUI t = new NhanVienThanhToan_GUI();
-            t.Show();
+                            foreach (DataGridViewRow r in dgvThongTinDonHang.Rows)
+                            {
+                                DataRow tr = ttdh.NewRow();
+                                tr["maSanPham"] = r.Cells["maSanPham"].Value.ToString();
+                                tr["tenSanPham"] = r.Cells["tenMon"].Value.ToString();
+                                tr["soLuong"] = r.Cells["soLuong"].Value.ToString();
+                                tr["donGia"] = r.Cells["donGia"].Value.ToString();
+                                tr["thanhTien"] = r.Cells["thanhTien"].Value.ToString();
+                                ttdh.Rows.Add(tr);
+                            }    
+                            NhanVienThanhToan_GUI t = new NhanVienThanhToan_GUI();
+                            t.Show();
+
+                        }
+                      
+                    }
+                }    
+               else
+                {
+                    MessageBox.Show("Vui lòng tổng kết tổng tiền", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+            }  
+           else
+            {
+                MessageBox.Show("Vui lòng nhập đủ thông tin khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }    
+          
             
         }
         private void rdbNam_CheckedChanged(object sender, EventArgs e)
@@ -152,7 +224,7 @@ namespace QLCHTAN
         {
             if (rdbAnTaiCho.Checked)
             {
-                loaiDichVu = "Ăn Tại Chổ";
+                loaiDichVu = "MLDH001";
             }
         }
 
@@ -161,7 +233,7 @@ namespace QLCHTAN
 
             if (rdbMangVe.Checked)
             {
-                loaiDichVu = "Mang Về";
+                loaiDichVu = "MLDH002";
             }
         }
 
@@ -169,7 +241,7 @@ namespace QLCHTAN
         {
             if (rdbGiaoHang.Checked)
             {
-                loaiDichVu = "Giao Hàng";
+                loaiDichVu = "MLDH003";
             }
 
         }
@@ -242,18 +314,13 @@ namespace QLCHTAN
         {
             clearData(sender, e);
         }
-        private void dgvDonHang_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
+      
         private void btnThemMon_Click(object sender, EventArgs e)
         {
             string donViBan = cbbSizeDoAn.SelectedValue.ToString();
             string maSanPham = doAn_BUS.select_maSanPhamDoAn_BUS(cbbTenMon.SelectedValue.ToString());
             decimal donGia = doAn_BUS.select_donGia_BUS(maSanPham, donViBan);
             decimal thanhTien = nudSoLuongMon.Value * donGia;
-            MucKhuyenMai = khuyenMai_BUS.select_MucKhuyenMai_BUS(cbbMaGiamGia.SelectedValue.ToString());
             DialogResult them = MessageBox.Show("Bạn muốn thêm món ăn này ?", "Thông báo", MessageBoxButtons.YesNo);
             if (them == DialogResult.Yes)
             {
@@ -285,20 +352,19 @@ namespace QLCHTAN
                         }
                     }
                 }
-                TongTien = dgvThongTinDonHang.Rows.Count;
+                
                 thanhTien = 0;
-                for (int i = 0; i <= TongTien - 1; i++)
+                for (int i = 0; i <= dgvThongTinDonHang.Rows.Count - 1; i++)
                 {
                     thanhTien += Convert.ToDecimal(dgvThongTinDonHang.Rows[i].Cells["thanhTien"].Value.ToString());
                 }
-                txtTongTien.Text = Convert.ToString(Convert.ToDecimal(thanhTien.ToString()) - (Convert.ToDecimal(thanhTien.ToString())*Convert.ToDecimal(MucKhuyenMai.ToString())));
-                
+                TongTien = Convert.ToDecimal(Convert.ToDecimal(thanhTien.ToString()));
+                txtTongTien.Text = "";
             }
         }
 
         private void btnThemNuoc_Click(object sender, EventArgs e)
         {
-            MucKhuyenMai = khuyenMai_BUS.select_MucKhuyenMai_BUS(cbbMaGiamGia.SelectedValue.ToString());
             string maSanPham = nuocUong_BUS.select_maSanPhamNuoc_BUS(cbbTenNuoc.SelectedValue.ToString());
             txtSizeNuoc.Text = nuocUong_BUS.select_DonViBanNuocUong_BUS(maSanPham);
             decimal donGia = nuocUong_BUS.selectselect_donGiaNuoc_BUS(maSanPham, txtSizeNuoc.Text);
@@ -334,13 +400,14 @@ namespace QLCHTAN
                         }
                     }
                 }
-                TongTien = dgvThongTinDonHang.Rows.Count;
+               
                 thanhTien = 0;
-                for (int i = 0; i <= TongTien - 1; i++)
+                for (int i = 0; i <= dgvThongTinDonHang.Rows.Count - 1; i++)
                 {
                     thanhTien += Convert.ToDecimal(dgvThongTinDonHang.Rows[i].Cells["thanhTien"].Value.ToString());
                 }
-                txtTongTien.Text = Convert.ToString(Convert.ToDecimal(thanhTien.ToString()) - (Convert.ToDecimal(thanhTien.ToString()) * Convert.ToDecimal(MucKhuyenMai.ToString())));
+                TongTien = Convert.ToDecimal(Convert.ToDecimal(thanhTien.ToString()));
+                txtTongTien.Text = "";
             }
         }
         private void cbbTenNuoc_SelectedValueChanged(object sender, EventArgs e)
@@ -359,40 +426,129 @@ namespace QLCHTAN
                 }
                
             }
+            txtTongTien.Text = "";
         }
 
         private void btnXoaMon_Click_1(object sender, EventArgs e)
         {
-            DialogResult xoa = MessageBox.Show("Bạn muốn xóa món ăn này ?", "Thông báo", MessageBoxButtons.YesNo);
-            if (xoa == DialogResult.Yes)
+           if(dgvThongTinDonHang.Rows.Count<=0)
             {
-                int i = dgvThongTinDonHang.SelectedRows.Count;
-                while (i > 0)
+                MessageBox.Show("Không có sản phẩm xóa");
+                return;
+            }   
+           else
                 {
-                    if (!dgvThongTinDonHang.SelectedRows[0].IsNewRow)
-                        dgvThongTinDonHang.Rows.RemoveAt(dgvThongTinDonHang.SelectedRows[0].Index);
-                    i--;
+                DialogResult xoa = MessageBox.Show("Xác nhận xóa món ăn này ?", "Thông báo", MessageBoxButtons.YesNo);
+                if (xoa == DialogResult.Yes)
+                {
+                    for (int i = 0; i <= dgvThongTinDonHang.Rows.Count; i++)
+                    {
+                        if(dgvThongTinDonHang.SelectedRows!=null && dgvThongTinDonHang.SelectedRows.Count>0)
+                        {
+                            DataGridViewRow r = dgvThongTinDonHang.SelectedRows[i];
+                            TongTien = TongTien - Convert.ToDecimal(r.Cells["ThanhTien"].Value);
+                            dgvThongTinDonHang.Rows.RemoveAt(r.Index);
+                            break;
+                        }    
+                        else
+                        {
+                            MessageBox.Show("Vui lòng chọn sản phẩm muốn xóa");
+                            break;
+                        }
+
+                    }
+                   
                 }
             }
-            
+            txtTongTien.Text = "";
+
         }
         private void btnXoaNuoc_Click(object sender, EventArgs e)
         {
-            DialogResult xoa = MessageBox.Show("Bạn muốn xóa món nước này ?", "Thông báo", MessageBoxButtons.YesNo);
-            if (xoa == DialogResult.Yes)
+            if (dgvThongTinDonHang.Rows.Count <= 0)
             {
-                int i = dgvThongTinDonHang.SelectedRows.Count;
-                while (i > 0)
+                MessageBox.Show("Không có sản phẩm xóa");
+                return;
+            }
+            else
+            {
+                DialogResult xoa = MessageBox.Show("Xác nhận xóa đồ uống này ?", "Thông báo", MessageBoxButtons.YesNo);
+                if (xoa == DialogResult.Yes)
                 {
-                    if (!dgvThongTinDonHang.SelectedRows[0].IsNewRow)
-                        dgvThongTinDonHang.Rows.RemoveAt(dgvThongTinDonHang.SelectedRows[0].Index);
-                    i--;
+                    for (int i = 0; i <= dgvThongTinDonHang.Rows.Count; i++)
+                    {
+                        if (dgvThongTinDonHang.SelectedRows != null && dgvThongTinDonHang.SelectedRows.Count > 0)
+                        {
+                            DataGridViewRow r = dgvThongTinDonHang.SelectedRows[i];
+                            TongTien = TongTien - Convert.ToDecimal(r.Cells["ThanhTien"].Value);
+                            dgvThongTinDonHang.Rows.RemoveAt(r.Index);
+                            break;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Vui lòng chọn sản phẩm muốn xóa");
+                            break;
+                        }
+
+                    }
+
                 }
             }
+            txtTongTien.Text = "";
+
         }
 
         #endregion
 
+        private void rdbTienMat_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbTienMat.Checked)
+                htThanhToan = true;
+        }
 
+        private void rdbOnline_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbOnline.Checked)
+                htThanhToan = false;
+        }
+
+       
+
+        
+
+        
+
+        private void btnXemTongTien_Click(object sender, EventArgs e)
+        {
+            if (cbbMaGiamGia.SelectedValue != null )
+            {
+                decimal tongTienGiam =Convert.ToDecimal( TongTien) * khuyenMai_BUS.select_MucKhuyenMai_BUS(cbbMaGiamGia.SelectedValue.ToString());
+                txtTongTien.Text = (Convert.ToInt32(Convert.ToDecimal(TongTien) - tongTienGiam)).ToString();
+            }
+            else
+            {
+                txtTongTien.Text = (Convert.ToInt32(Convert.ToDecimal(TongTien))).ToString();
+            }
+        }
+
+        private void ckbKhongApDungKhuyenMai_CheckedChanged(object sender, EventArgs e)
+        {
+            if(ckbKhongApDungKhuyenMai.Checked)
+            {
+                cbbMaGiamGia.Enabled = false;
+                cbbMaGiamGia.SelectedValue = 0;
+            }
+            else
+            {
+                cbbMaGiamGia.Enabled = true;
+                cbbMaGiamGia.SelectedIndex = 0;
+            }
+            txtTongTien.Text = "";
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            clearData(sender,e);
+        }
     }
 }

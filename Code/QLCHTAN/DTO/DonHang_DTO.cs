@@ -18,7 +18,7 @@ namespace DTO
         private DateTime thoiGianDat;
         private int trangThai;
         private string ghiChu;
-        private int iDKhachHang;
+       // private int iDKhachHang;
         private decimal tongGia;
 
         public string MaDonHang { get => maDonHang; set => maDonHang = value; }
@@ -31,10 +31,10 @@ namespace DTO
         public DateTime ThoiGianDat { get => thoiGianDat; set => thoiGianDat = value; }
         public int TrangThai { get => trangThai; set => trangThai = value; }
         public string GhiChu { get => ghiChu; set => ghiChu = value; }
-        public int IDKhachHang { get => iDKhachHang; set => iDKhachHang = value; }
+       // public int IDKhachHang { get => iDKhachHang; set => iDKhachHang = value; }
         public decimal TongGia { get => tongGia; set => tongGia = value; }
 
-        public DonHang_DTO(string maDonHang, string tenDonHang, string maLoaiDonHang,bool maHinhThucThanhToan, string maNhanVien, string sDTKhachHang,string maKhuyenMai,DateTime thoiGianDat, int trangThai,string ghiChu, int iDKhachHang,decimal tongGia)
+        public DonHang_DTO(string MaDonHang, string TenDonHang, string MaLoaiDonHang,bool MaHinhThucThanhToan, string MaNhanVien, string SDTKhachHang,string MaKhuyenMai,DateTime ThoiGianDat, int TrangThai,string GhiChu, /*int iDKhachHang,*/decimal TongGia)
         {
             this.maDonHang = MaDonHang;
             this.tenDonHang = TenDonHang;
@@ -46,7 +46,7 @@ namespace DTO
             this.thoiGianDat = ThoiGianDat;
             this.trangThai = TrangThai;
             this.ghiChu = GhiChu;
-            this.iDKhachHang = IDKhachHang;
+//            this.iDKhachHang = IDKhachHang;
             this.tongGia = TongGia;
         }
     }

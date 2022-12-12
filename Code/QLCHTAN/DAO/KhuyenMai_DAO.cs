@@ -102,7 +102,29 @@ namespace DAO
 
                 throw;
             }
-            return 0;
+           
+        }
+
+        public string select_TenKhuyenMai_DAO(string maKhuyenMai)
+        {
+            Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("select_TenKhuyenMai", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@maKhuyenMai", SqlDbType.VarChar).Value = maKhuyenMai;
+                if (cmd.ExecuteScalar() != null)
+                {
+                    return cmd.ExecuteScalar().ToString();
+                }
+                return null;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

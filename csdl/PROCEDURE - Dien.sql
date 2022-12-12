@@ -51,9 +51,11 @@ create proc insert_DonHang
 as
 insert into DonHang
 values(@maDonHang,@tenDonHang,@maLoaiDon,@maHinhThuc,@maNhanVien,@SDTKhachHang,@maKhuyenMai,@thoiGianDat,@trangThai,@ghiChu,null,@tongGia)
+
 --Insert thông tin đơn hàng
 create proc insert_ThongTinDonHang
 @maDonHang varchar(10), @maSanPham varchar(10),@giaTien money,@soLuong int,@thanhTien money
 as
 	insert into ThongTinDonHang
 	values(@maDonHang,@maSanPham,@giaTien,@soLuong,@thanhTien)
+	go
