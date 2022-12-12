@@ -39,8 +39,8 @@ namespace DAO
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@SDT", SqlDbType.VarChar).Value = khachHang_DTO.SDT;
                 cmd.Parameters.Add("@tenKhachHang", SqlDbType.NVarChar).Value = khachHang_DTO.TenKhachHang;
-                cmd.Parameters.Add("@diaChi", SqlDbType.NVarChar).Value = khachHang_DTO.DiaChi;
                 cmd.Parameters.Add("@Phai", SqlDbType.NVarChar).Value = khachHang_DTO.Phai;
+                cmd.Parameters.Add("@diaChi", SqlDbType.NVarChar).Value = khachHang_DTO.DiaChi;
                 cmd.Parameters.Add("@Email", SqlDbType.NVarChar).Value = khachHang_DTO.Email;
                 cmd.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = khachHang_DTO.GhiChu;
                 if (cmd.ExecuteNonQuery() > 0)

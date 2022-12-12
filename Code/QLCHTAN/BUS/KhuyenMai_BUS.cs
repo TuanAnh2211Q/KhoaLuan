@@ -28,9 +28,9 @@ namespace BUS
         {
             return km_DAO.delete_KM_DAO(km);
         }
-        public decimal select_MucKhuyenMai_BUS(KhuyenMai_DTO khuyenMai_DTO)
+        public decimal select_MucKhuyenMai_BUS(string maKhuyenMai)
         {
-            return km_DAO.select_MucKhuyenMai_DAO(khuyenMai_DTO);
+            return km_DAO.select_MucKhuyenMai_DAO(maKhuyenMai);
         }
 
     }

@@ -27,7 +27,7 @@ namespace QLCHTAN
         {
             for (int i = 0; i <= dgvThongTinKhachHang.Rows.Count - 1; i++)
             {
-                if (txtSDT.Text == dgvThongTinKhachHang.Rows[i].Cells["SDTKhachHang"].Value.ToString())
+                if (txtSDT.Text == dgvThongTinKhachHang.Rows[i].Cells["SDT"].Value.ToString())
                 {
                     return true;
                 }
@@ -36,7 +36,7 @@ namespace QLCHTAN
         }
         public KhachHang_DTO khachHang_DTO()
         {
-            return new KhachHang_DTO(/*txtMaKhachHang.Text.Trim(), */txtSDT.Text.Trim(), txtTenKhachHang.Text.Trim(),  txtDiaChi.Text.Trim(), GioiTinh.Trim(), txtGmail.Text.Trim(), rtbGhiChu.Text.Trim());
+            return new KhachHang_DTO(/*txtMaKhachHang.Text.Trim(), */txtSDT.Text.Trim(), txtTenKhachHang.Text.Trim(),  GioiTinh.Trim(), txtDiaChi.Text.Trim(), txtGmail.Text.Trim(), rtbGhiChu.Text.Trim());
         }
 
         #endregion
@@ -123,8 +123,8 @@ namespace QLCHTAN
                     rdbNam.Checked = true;
                 else if (row.Cells["Phai"].Value.ToString().Trim() == "Nữ")
                     rdbNu.Checked = true;
-                txtGmail.Text = row.Cells["Email"].Value.ToString();
                 txtDiaChi.Text = row.Cells["diaChi"].Value.ToString();
+                txtGmail.Text = row.Cells["Email"].Value.ToString();
                 rtbGhiChu.Text = row.Cells["ghiChu"].Value.ToString();
                 txtMaKhachHang.Text = row.Cells["idKhachHang"].Value.ToString();
                 txtMaKhachHang.Enabled = false;
