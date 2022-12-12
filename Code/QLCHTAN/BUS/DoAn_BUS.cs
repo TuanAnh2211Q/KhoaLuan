@@ -46,9 +46,13 @@ namespace BUS
         {
             return doAn_DAO.select_DonViBanDoAn_DAO();
         }
-        public decimal  select_GiaDoAn_BUS(string maDoAn)
+        public decimal select_donGia_BUS(string maSanPham,string donViBan)
         {
-            return doAn_DAO.select_GiaDoAn_DAO(maDoAn);
+            return doAn_DAO.select_donGia_DAO(maSanPham,donViBan);
+        }
+        public string select_maSanPhamDoAn_BUS(string maDoAn)
+        {
+            return doAn_DAO.select_maSanPhamDoAn_DAO(maDoAn);
         }
     }
 }

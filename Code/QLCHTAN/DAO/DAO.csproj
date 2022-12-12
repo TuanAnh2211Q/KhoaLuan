@@ -182,6 +182,7 @@
     <Compile Include="DataProvider.cs" />
     <Compile Include="DoAn_DAO.cs" />
     <Compile Include="DoiMatKhau_DAO.cs" />
+    <Compile Include="DonHang_DAO.cs" />
     <Compile Include="getServer.cs" />
     <Compile Include="KhachHang_DAO.cs" />
     <Compile Include="KhuyenMai_DAO.cs" />
@@ -200,6 +201,7 @@
     <Compile Include="TaiKhoan_DAO.cs" />
     <Compile Include="ThongTinChiTietPhieuDatHang_DAO.cs" />
     <Compile Include="ThongTinChiTietPhieuNhap_DAO.cs" />
+    <Compile Include="ThongTinDonHang_DAO.cs" />
     <Compile Include="ThongTinKhuyenMai_DAO.cs" />
     <Compile Include="ThongTinPhieuTra_DAO.cs" />
     <Compile Include="ThongTinPhieuXuat_DAO.cs" />

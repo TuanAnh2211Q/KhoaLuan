@@ -41,5 +41,13 @@ namespace BUS
         {
             return nuocUong_DAO.select_thongTin_MatHangNuoc(maNuoc);
         }
+        public decimal selectselect_donGiaNuoc_BUS(string maSanPham, string donViBan)
+        {
+            return nuocUong_DAO.select_donGiaNuoc_DAO(maSanPham, donViBan);
+        }
+        public string select_maSanPhamNuoc_BUS(string maNuoc)
+        {
+            return nuocUong_DAO.select_maSanPhamNuoc_DAO(maNuoc);
+        }
     }
 }

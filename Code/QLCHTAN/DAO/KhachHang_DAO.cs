@@ -30,7 +30,28 @@ namespace DAO
             da.Fill(dt);
             return dt;
         }
-
+        public bool insert_KhachHang_DAO(KhachHang_DTO khachHang_DTO)
+        {
+            Open();
+            try 
+            {
+                SqlCommand cmd = new SqlCommand("insert_thongTinKhachHang", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@SDT", SqlDbType.VarChar).Value = khachHang_DTO.SDT;
+                cmd.Parameters.Add("@tenKhachHang", SqlDbType.NVarChar).Value = khachHang_DTO.TenKhachHang;
+                cmd.Parameters.Add("@diaChi", SqlDbType.NVarChar).Value = khachHang_DTO.DiaChi;
+                cmd.Parameters.Add("@Phai", SqlDbType.NVarChar).Value = khachHang_DTO.Phai;
+                cmd.Parameters.Add("@Email", SqlDbType.NVarChar).Value = khachHang_DTO.Email;
+                cmd.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = khachHang_DTO.GhiChu;
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return false;
+        }
         public bool update_KhachHang_DAO(KhachHang_DTO khachhang_DTO)
         {
             
@@ -45,7 +66,7 @@ namespace DAO
                 cmd.Parameters.Add("diaChi", SqlDbType.NVarChar).Value = khachhang_DTO.DiaChi;
                 cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = khachhang_DTO.Email;
                 cmd.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = khachhang_DTO.GhiChu;
-                cmd.Parameters.Add("idKhachHang", SqlDbType.Int).Value = khachhang_DTO.IdKhachHang;
+                //cmd.Parameters.Add("idKhachHang", SqlDbType.Int).Value = khachhang_DTO.IdKhachHang;
                if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
@@ -62,7 +83,7 @@ namespace DAO
                 Open();
                 SqlCommand cmd = new SqlCommand("delete_KhachHang",conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@idKhachHang", SqlDbType.Int).Value = khachhang_DTO.IdKhachHang;
+                cmd.Parameters.Add("@SDTKhachHang", SqlDbType.Int).Value = khachhang_DTO.SDT;
                 if(cmd.ExecuteNonQuery()>0)
                      return true;
             }

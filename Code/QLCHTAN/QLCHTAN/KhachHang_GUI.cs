@@ -27,7 +27,7 @@ namespace QLCHTAN
         {
             for (int i = 0; i <= dgvThongTinKhachHang.Rows.Count - 1; i++)
             {
-                if (txtMaKhachHang.Text == dgvThongTinKhachHang.Rows[i].Cells["idKhachHang"].Value.ToString())
+                if (txtSDT.Text == dgvThongTinKhachHang.Rows[i].Cells["SDTKhachHang"].Value.ToString())
                 {
                     return true;
                 }
@@ -36,7 +36,7 @@ namespace QLCHTAN
         }
         public KhachHang_DTO khachHang_DTO()
         {
-            return new KhachHang_DTO(txtMaKhachHang.Text.Trim(), txtSDT.Text.Trim(), txtTenKhachHang.Text.Trim(),  txtDiaChi.Text.Trim(), GioiTinh.Trim(), txtGmail.Text.Trim(), rtbGhiChu.Text.Trim());
+            return new KhachHang_DTO(/*txtMaKhachHang.Text.Trim(), */txtSDT.Text.Trim(), txtTenKhachHang.Text.Trim(),  txtDiaChi.Text.Trim(), GioiTinh.Trim(), txtGmail.Text.Trim(), rtbGhiChu.Text.Trim());
         }
 
         #endregion
@@ -59,7 +59,7 @@ namespace QLCHTAN
             rtbGhiChu.Clear();
             txtSDT.Focus();
             dgvThongTinKhachHang.DataSource = khachhang_BUS.show_dsKhachHang_BUS();
-            txtMaKhachHang.Clear();
+            //txtMaKhachHang.Clear();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
