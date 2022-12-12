@@ -35,10 +35,6 @@ namespace QLCHTAN
             this.dtNgayNhap = new System.Windows.Forms.DateTimePicker();
             this.txtMaXuat = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvPhieuXuat = new System.Windows.Forms.DataGridView();
-            this.maXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,9 +43,13 @@ namespace QLCHTAN
             this.lblkDuyetPhieuXuat = new System.Windows.Forms.LinkLabel();
             this.lblTrangThai = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.dgvPhieuXuat = new System.Windows.Forms.DataGridView();
+            this.maXuatt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuXuat)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuXuat)).BeginInit();
             this.SuspendLayout();
             // 
             // lblkThoat
@@ -113,47 +113,6 @@ namespace QLCHTAN
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(754, 365);
             this.panel1.TabIndex = 9;
-            // 
-            // dgvPhieuXuat
-            // 
-            this.dgvPhieuXuat.AllowUserToAddRows = false;
-            this.dgvPhieuXuat.AllowUserToDeleteRows = false;
-            this.dgvPhieuXuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPhieuXuat.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvPhieuXuat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvPhieuXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPhieuXuat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maXuat,
-            this.ngayXuat,
-            this.trangThai});
-            this.dgvPhieuXuat.Location = new System.Drawing.Point(2, 2);
-            this.dgvPhieuXuat.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvPhieuXuat.Name = "dgvPhieuXuat";
-            this.dgvPhieuXuat.ReadOnly = true;
-            this.dgvPhieuXuat.Size = new System.Drawing.Size(750, 363);
-            this.dgvPhieuXuat.TabIndex = 1;
-            this.dgvPhieuXuat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuXuat_CellClick);
-            // 
-            // maXuat
-            // 
-            this.maXuat.DataPropertyName = "maXuat";
-            this.maXuat.HeaderText = "Mã xuất";
-            this.maXuat.Name = "maXuat";
-            this.maXuat.ReadOnly = true;
-            // 
-            // ngayXuat
-            // 
-            this.ngayXuat.DataPropertyName = "ngayXuat";
-            this.ngayXuat.HeaderText = "Ngày xuất";
-            this.ngayXuat.Name = "ngayXuat";
-            this.ngayXuat.ReadOnly = true;
-            // 
-            // trangThai
-            // 
-            this.trangThai.DataPropertyName = "trangThai";
-            this.trangThai.HeaderText = "Trạng thái";
-            this.trangThai.Name = "trangThai";
-            this.trangThai.ReadOnly = true;
             // 
             // label2
             // 
@@ -242,6 +201,42 @@ namespace QLCHTAN
             this.label3.TabIndex = 27;
             this.label3.Text = "Trạng thái:";
             // 
+            // dgvPhieuXuat
+            // 
+            this.dgvPhieuXuat.AllowUserToAddRows = false;
+            this.dgvPhieuXuat.AllowUserToDeleteRows = false;
+            this.dgvPhieuXuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPhieuXuat.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvPhieuXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhieuXuat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maXuatt,
+            this.ngayXuat,
+            this.trangThai});
+            this.dgvPhieuXuat.Location = new System.Drawing.Point(3, 3);
+            this.dgvPhieuXuat.Name = "dgvPhieuXuat";
+            this.dgvPhieuXuat.ReadOnly = true;
+            this.dgvPhieuXuat.Size = new System.Drawing.Size(748, 359);
+            this.dgvPhieuXuat.TabIndex = 0;
+            this.dgvPhieuXuat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuXuat_CellClick);
+            // 
+            // maXuatt
+            // 
+            this.maXuatt.DataPropertyName = "maXuat";
+            this.maXuatt.HeaderText = "Mã xuất";
+            this.maXuatt.Name = "maXuatt";
+            // 
+            // ngayXuat
+            // 
+            this.ngayXuat.DataPropertyName = "ngayXuat";
+            this.ngayXuat.HeaderText = "Ngày xuất";
+            this.ngayXuat.Name = "ngayXuat";
+            // 
+            // trangThai
+            // 
+            this.trangThai.DataPropertyName = "trangThai";
+            this.trangThai.HeaderText = "Trạng thái";
+            this.trangThai.Name = "trangThai";
+            // 
             // PhieuXuatKho_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -259,9 +254,9 @@ namespace QLCHTAN
             this.Text = "PhieuXuatKho";
             this.Load += new System.EventHandler(this.PhieuXuatKho_GUI_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuXuat)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuXuat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,7 +270,6 @@ namespace QLCHTAN
         private System.Windows.Forms.DateTimePicker dtNgayNhap;
         private System.Windows.Forms.TextBox txtMaXuat;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvPhieuXuat;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -283,9 +277,10 @@ namespace QLCHTAN
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblTrangThai;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maXuat;
+        private System.Windows.Forms.LinkLabel lblkDuyetPhieuXuat;
+        private System.Windows.Forms.DataGridView dgvPhieuXuat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maXuatt;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayXuat;
         private System.Windows.Forms.DataGridViewTextBoxColumn trangThai;
-        private System.Windows.Forms.LinkLabel lblkDuyetPhieuXuat;
     }
 }

@@ -50,6 +50,7 @@ create proc insert_XuatKho
 @maXuat varchar(10), @ngayXuat datetime, @trangThai bit
 as
 insert into XuatKho values (@maXuat,@ngayXuat,@trangThai)
+go
 
 create proc insert_ThongTinXuatKho
 @maXuat varchar(10), @maHang varchar(10), @soLuong int, @ghiChu nvarchar(max), @tongDonGia money
@@ -72,7 +73,6 @@ create proc delete_XuatKho
 @maXuat varchar(10)
 as 
 delete from XuatKho where maXuat=@maXuat
-
 
 
 
@@ -101,5 +101,38 @@ go
 
 
 
+--12/12/2022--
+
+ALTER proc [dbo].[select_to_PhieuNhapTemp]
+@maDat varchar(10)
+as
+if not exists(select maTra from TraHang th, DatHang hd where th.maDatHang=hd.maDatHang)
+begin
+select  ttdh.maHang , ttdh.maNCC , ttdh.soLuongDat as soLuongNhap, ttdh.tongDonGia as tongDonGia
+from ThongTinDatHang ttdh
+where ttdh.maDatHang=@maDat
+end
+
+else
+begin
+select thongTinNhap.maHang, thongTinNhap.maNCC, SUM(thongTinNhap.SoLuongNhap)as soLuongNhap ,SUM (thongTinNhap.TongDonGia) as tongDonGia
+from (
+select  ttdh.maHang , ttdh.maNCC , ttdh.soLuongDat as soLuongNhap, ttdh.tongDonGia as tongDonGia
+from ThongTinDatHang ttdh,TraHang th
+where ttdh.maDatHang=th.maDatHang and th.maDatHang=@maDat
+union
+select ttth.maHang , ttth.maNCC , (-1)*ttth.soLuong as soLuongDat, (-1)*ttth.tongDonGia as tongDonGia
+from ThongTinTraHang ttth, TraHang th
+where ttth.maTra=th.maTra 
+and ttth.maTra=(select maTra from TraHang th, DatHang hd where th.maDatHang=hd.maDatHang and th.maDatHang=@maDat)
+) thongTinNhap
+group by  thongTinNhap.maHang, thongTinNhap.maNCC
+end
 
 
+create  proc select_KhoBan
+as
+select kb.maHang, mh.tenHang, sum(kb.soLuong) as soLuong, sum(kb.tongGia) as tongGia,kb.maXuat
+from KhoBan kb, MatHang mh
+where kb.maHang=mh.maHang
+group by kb.maHang,mh.tenHang,kb.maXuat

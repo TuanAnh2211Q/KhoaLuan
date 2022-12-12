@@ -103,3 +103,8 @@ ALTER  trigger [dbo].[trg_insertPhieuDat] on [dbo].[DatHang] instead of insert
 
  insert into DatHang values(@maPhieu,@ngayDat,@ngayGiao,@ghiChu,@phuongThuc,(select trangThai=@trangThai from inserted))
  end
+
+
+
+ ---12-12-2022
+

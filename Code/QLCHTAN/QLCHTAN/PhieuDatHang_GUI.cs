@@ -94,7 +94,7 @@ namespace QLCHTAN
                 if (!kt_Dondat())
                 {
                     long sp = dtNgayDuKienGiao.Value.Subtract(dtNgayDat.Value).Ticks;
-                    if (sp < 0)
+                    if (sp <= 0)
                     {
                         MessageBox.Show("Ngày dự kiến giao không được nhỏ hơn ngày đặt");
                     }

@@ -52,7 +52,7 @@ namespace QLCHTAN
             if(e.RowIndex>=0)
             {
                 DataGridViewRow r = dgvPhieuXuat.Rows[e.RowIndex];
-                txtMaXuat.Text = r.Cells["maXuat"].Value.ToString();
+                txtMaXuat.Text = r.Cells["maXuatt"].Value.ToString();
                 dtNgayNhap.Value =Convert.ToDateTime( r.Cells["ngayXuat"].Value);
                 if(r.Cells["trangThai"].Value is true)
                 {

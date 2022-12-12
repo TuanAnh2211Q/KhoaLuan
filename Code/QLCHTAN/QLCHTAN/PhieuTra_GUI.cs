@@ -50,10 +50,10 @@ namespace QLCHTAN
         {
             if (cbbMaDat.SelectedValue!=null)
             {
-                dgvPhieuTra.DataSource = phieuTra_BUS.show_PhieuTra_BUS();
+              
                 dtNgayTra.Value = Convert.ToDateTime(phieuTra_BUS.check_date_TraHang_DAO(phieuTra()));
             }
-
+            dgvPhieuTra.DataSource = phieuTra_BUS.show_PhieuTra_BUS();
             cbbMaDat.DataSource = phieuDatHang_BUS.dsPhieuDatHang_BUS();
             cbbMaDat.DisplayMember = "maDatHang";
             cbbMaDat.ValueMember = "maDatHang";

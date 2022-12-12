@@ -183,6 +183,7 @@
     <Compile Include="DoAn_DTO.cs" />
     <Compile Include="DoiMatKhau_DTO.cs" />
     <Compile Include="DonHang_DTO.cs" />
+    <Compile Include="KhoBan_DTO.cs" />
     <Compile Include="KhuyenMai_DTO.cs" />
     <Compile Include="LoaiDoAn_DTO.cs" />
     <Compile Include="LoaiKhuyenMai_DTO.cs" />
