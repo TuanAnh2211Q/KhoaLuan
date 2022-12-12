@@ -39,6 +39,10 @@ namespace BUS
         {
             return nhanVien_DAO.update_NhanVien_DAO(nhanVien_DTO);
         }
+        public string select_TenNhanVien_BUS(string manv)
+        {
+            return nhanVien_DAO.select_TenNhanVien_DAO(manv);
+        }
 
     }
 }

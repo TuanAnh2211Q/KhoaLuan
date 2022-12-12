@@ -13,9 +13,14 @@ namespace BUS
     public class DonHang_BUS
     {
         DonHang_DAO donHang_DAO = new DonHang_DAO();
-        public bool insert_DonHang_DAO(DonHang_DTO donHang_DTO)
+        public bool insert_DonHang_BUS(DonHang_DTO donHang_DTO)
         {
             return donHang_DAO.insert_DonHang_DAO(donHang_DTO);
+        }
+
+        public string select_TenLoaiDon_BUS(string maLoaiDon)
+        {
+            return donHang_DAO.select_TenLoaiDon_DAO(maLoaiDon);
         }
     }
 }

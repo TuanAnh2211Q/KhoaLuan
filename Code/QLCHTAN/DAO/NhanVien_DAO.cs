@@ -119,5 +119,27 @@ namespace DAO
             }
             return false;
         }
+
+        public string select_TenNhanVien_DAO(string manv)
+        {
+            try
+            {
+                Open();
+                SqlCommand cmd = new SqlCommand("select_TenNhanVien", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@maNhanVien", SqlDbType.VarChar).Value = manv;
+                if (cmd.ExecuteScalar()!=null)
+                    return cmd.ExecuteScalar().ToString();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return null;
+        }
+
+
     }
 }

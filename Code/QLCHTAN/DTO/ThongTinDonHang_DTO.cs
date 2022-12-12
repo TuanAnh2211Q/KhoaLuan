@@ -20,7 +20,7 @@ namespace DTO
         public int SoLuong { get => soLuong; set => soLuong = value; }
         public decimal ThanhTien { get => thanhTien; set => thanhTien = value; }
 
-        public ThongTinDonHang_DTO(string maDonHang, string  maSanPham, decimal giaBan,int soLuong, decimal thanhTien)
+        public ThongTinDonHang_DTO(string MaDonHang, string  MaSanPham, decimal GiaTien,int SoLuong, decimal ThanhTien)
         {
             this.maDonHang = MaDonHang;
             this.maSanPham = MaSanPham;

@@ -32,6 +32,9 @@ namespace BUS
         {
             return km_DAO.select_MucKhuyenMai_DAO(maKhuyenMai);
         }
-
+        public string select_TenKhuyenMai_BUS(string maKhuyenMai)
+        {
+            return km_DAO.select_TenKhuyenMai_DAO(maKhuyenMai);
+        }
     }
 }

@@ -114,6 +114,11 @@ namespace QLCHTAN
         {
             timer1.Stop();
         }
+
+        private void DangNhap_GUI_Load(object sender, EventArgs e)
+        {
+            btnDangNhap.Focus();
+        }
     }
     
 }

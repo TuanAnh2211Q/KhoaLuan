@@ -63,6 +63,8 @@ namespace QLCHTAN
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnLamMoi);
@@ -140,7 +142,7 @@ namespace QLCHTAN
             this.txtMaKhachHang.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaKhachHang.Location = new System.Drawing.Point(1831, 512);
             this.txtMaKhachHang.Name = "txtMaKhachHang";
-            this.txtMaKhachHang.Size = new System.Drawing.Size(40, 28);
+            this.txtMaKhachHang.Size = new System.Drawing.Size(40, 24);
             this.txtMaKhachHang.TabIndex = 13;
             this.txtMaKhachHang.Visible = false;
             // 
@@ -149,7 +151,7 @@ namespace QLCHTAN
             this.txtDiaChi.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(201, 238);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(228, 32);
+            this.txtDiaChi.Size = new System.Drawing.Size(228, 27);
             this.txtDiaChi.TabIndex = 12;
             // 
             // label6
@@ -157,7 +159,7 @@ namespace QLCHTAN
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(7, 241);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 29);
+            this.label6.Size = new System.Drawing.Size(75, 23);
             this.label6.TabIndex = 11;
             this.label6.Text = "Địa Chỉ :";
             // 
@@ -166,7 +168,7 @@ namespace QLCHTAN
             this.rdbNu.AutoSize = true;
             this.rdbNu.Location = new System.Drawing.Point(325, 149);
             this.rdbNu.Name = "rdbNu";
-            this.rdbNu.Size = new System.Drawing.Size(66, 33);
+            this.rdbNu.Size = new System.Drawing.Size(54, 27);
             this.rdbNu.TabIndex = 10;
             this.rdbNu.TabStop = true;
             this.rdbNu.Text = "Nữ";
@@ -178,7 +180,7 @@ namespace QLCHTAN
             this.rdbNam.AutoSize = true;
             this.rdbNam.Location = new System.Drawing.Point(201, 149);
             this.rdbNam.Name = "rdbNam";
-            this.rdbNam.Size = new System.Drawing.Size(82, 33);
+            this.rdbNam.Size = new System.Drawing.Size(66, 27);
             this.rdbNam.TabIndex = 9;
             this.rdbNam.TabStop = true;
             this.rdbNam.Text = "Nam";
@@ -198,7 +200,7 @@ namespace QLCHTAN
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 301);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 29);
+            this.label5.Size = new System.Drawing.Size(81, 23);
             this.label5.TabIndex = 7;
             this.label5.Text = "Ghi Chú :";
             // 
@@ -207,7 +209,7 @@ namespace QLCHTAN
             this.txtGmail.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGmail.Location = new System.Drawing.Point(201, 190);
             this.txtGmail.Name = "txtGmail";
-            this.txtGmail.Size = new System.Drawing.Size(228, 32);
+            this.txtGmail.Size = new System.Drawing.Size(228, 27);
             this.txtGmail.TabIndex = 6;
             // 
             // label4
@@ -215,7 +217,7 @@ namespace QLCHTAN
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(7, 193);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 29);
+            this.label4.Size = new System.Drawing.Size(66, 23);
             this.label4.TabIndex = 5;
             this.label4.Text = "Gmail :";
             // 
@@ -224,7 +226,7 @@ namespace QLCHTAN
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 151);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 29);
+            this.label3.Size = new System.Drawing.Size(93, 23);
             this.label3.TabIndex = 3;
             this.label3.Text = "Giới Tính :";
             // 
@@ -233,7 +235,7 @@ namespace QLCHTAN
             this.txtTenKhachHang.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKhachHang.Location = new System.Drawing.Point(201, 96);
             this.txtTenKhachHang.Name = "txtTenKhachHang";
-            this.txtTenKhachHang.Size = new System.Drawing.Size(228, 32);
+            this.txtTenKhachHang.Size = new System.Drawing.Size(228, 27);
             this.txtTenKhachHang.TabIndex = 2;
             this.txtTenKhachHang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTenKhachHang_KeyPress);
             // 
@@ -242,7 +244,7 @@ namespace QLCHTAN
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(7, 99);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 29);
+            this.label2.Size = new System.Drawing.Size(145, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên Khách Hàng :";
             // 
@@ -251,7 +253,7 @@ namespace QLCHTAN
             this.txtSDT.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(201, 42);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(228, 32);
+            this.txtSDT.Size = new System.Drawing.Size(228, 27);
             this.txtSDT.TabIndex = 1;
             // 
             // label1
@@ -259,7 +261,7 @@ namespace QLCHTAN
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 29);
+            this.label1.Size = new System.Drawing.Size(130, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Số Điện Thoại :";
             // 
@@ -267,6 +269,9 @@ namespace QLCHTAN
             // 
             this.dgvThongTinKhachHang.AllowUserToAddRows = false;
             this.dgvThongTinKhachHang.AllowUserToDeleteRows = false;
+            this.dgvThongTinKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvThongTinKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThongTinKhachHang.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dgvThongTinKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -346,9 +351,9 @@ namespace QLCHTAN
             // 
             // KhachHang_GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1441, 440);
             this.Controls.Add(this.dgvThongTinKhachHang);

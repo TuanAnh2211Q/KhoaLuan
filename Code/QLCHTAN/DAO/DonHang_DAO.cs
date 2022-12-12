@@ -25,11 +25,18 @@ namespace DAO
                 cmd.Parameters.Add("@maHinhThuc", SqlDbType.Bit).Value = donHang_DTO.MaHinhThucThanhToan;
                 cmd.Parameters.Add("@maNhanVien", SqlDbType.VarChar).Value = donHang_DTO.MaNhanVien;
                 cmd.Parameters.Add("@SDTKhachHang", SqlDbType.VarChar).Value = donHang_DTO.SDTKhachHang;
-                cmd.Parameters.Add("@maKhuyenMai", SqlDbType.VarChar).Value = donHang_DTO.MaKhuyenMai;
+                if(donHang_DTO.MaKhuyenMai==null)
+                {
+                    cmd.Parameters.Add("@maKhuyenMai", SqlDbType.VarChar).Value = DBNull.Value;
+                }
+                else
+                {
+                    cmd.Parameters.Add("@maKhuyenMai", SqlDbType.VarChar).Value = donHang_DTO.MaKhuyenMai;
+                }
                 cmd.Parameters.Add("@thoiGianDat", SqlDbType.DateTime).Value = donHang_DTO.ThoiGianDat;
                 cmd.Parameters.Add("@trangThai", SqlDbType.Int).Value = donHang_DTO.TrangThai;
-                cmd.Parameters.Add("@ghiChu", SqlDbType.VarChar).Value = donHang_DTO.MaNhanVien;
-                cmd.Parameters.Add("@maNhanVien", SqlDbType.VarChar).Value = donHang_DTO.MaNhanVien;
+                cmd.Parameters.Add("@ghiChu", SqlDbType.VarChar).Value = donHang_DTO.GhiChu;
+                cmd.Parameters.Add("@tongGia", SqlDbType.Money).Value = donHang_DTO.TongGia;
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
@@ -38,6 +45,21 @@ namespace DAO
                 throw;
             }
             return false;
+        }
+
+        public string select_TenLoaiDon_DAO(string maLoaiDon)
+        {
+            Open();
+            SqlCommand cmd = new SqlCommand("select_TenLoaiDon", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            
+            cmd.Parameters.Add("@maLoaiDon", SqlDbType.VarChar).Value = maLoaiDon;
+               if(cmd.ExecuteScalar()!=null)
+            {
+                return cmd.ExecuteScalar().ToString();
+            }
+            return null;
+             
         }
     }
 }

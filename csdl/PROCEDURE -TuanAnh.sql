@@ -136,3 +136,25 @@ select kb.maHang, mh.tenHang, sum(kb.soLuong) as soLuong, sum(kb.tongGia) as ton
 from KhoBan kb, MatHang mh
 where kb.maHang=mh.maHang
 group by kb.maHang,mh.tenHang,kb.maXuat
+
+
+
+
+create proc select_TenKhuyenMai
+@maKhuyenMai varchar(10)
+as
+select tenKhuyenMai from KhuyenMai where maKhuyenMai=@maKhuyenMai
+go
+
+
+create  proc select_TenNhanVien
+@maNhanVien varchar(10)
+as select tenNhanVien from NhanVien where maNhanVien=@maNhanVien
+go
+
+
+create proc select_TenLoaiDon
+@maLoaiDon varchar(10)
+as 
+select tenLoaiDon from LoaiDonHang where maLoaiDon=@maLoaiDon
+go

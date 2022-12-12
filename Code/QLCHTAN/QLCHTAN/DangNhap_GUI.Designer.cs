@@ -100,7 +100,7 @@ namespace QLCHTAN
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(341, 31);
             this.txtTaiKhoan.TabIndex = 4;
-            this.txtTaiKhoan.Text = "NV001";
+            this.txtTaiKhoan.Text = "NV002";
             // 
             // txtMatKhau
             // 
@@ -260,6 +260,7 @@ namespace QLCHTAN
             this.Name = "DangNhap_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
+            this.Load += new System.EventHandler(this.DangNhap_GUI_Load);
             this.Leave += new System.EventHandler(this.DangNhap_GUI_Leave);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
