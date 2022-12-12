@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace FastFood
 {
+   
     public class Connection
     {
         public static string GetConnectionString()
@@ -29,6 +32,20 @@ namespace FastFood
                 }
             }
             return isValid;
+        }
+
+        public static string GetImageUrl(Object url)
+        {
+            string url1 = "";
+            if(string.IsNullOrEmpty(url.ToString()) || url == DBNull.Value)
+            {
+                url1 = "../images/No_image.png";
+            }
+            else
+            {
+                url1 = string.Format("../{0}", url);
+            }
+            return url1;
         }
     }
 }
