@@ -21,7 +21,7 @@ namespace DAO
                 cmd.Parameters.Add("@maHang", SqlDbType.VarChar).Value = thongTinXuatKho.MaHang;
                 cmd.Parameters.Add("@soLuong", SqlDbType.Int).Value = thongTinXuatKho.SoLuong;
                 cmd.Parameters.Add("@ghiChu", SqlDbType.VarChar).Value = thongTinXuatKho.GhiChu;
-                cmd.Parameters.Add("@tongDonGia", SqlDbType.Decimal).Value = thongTinXuatKho.TongDonGia;
+                cmd.Parameters.Add("@tongDonGia", SqlDbType.Decimal).Value =DBNull.Value;
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
@@ -53,6 +53,19 @@ namespace DAO
             da.Fill(tb);
             return tb;
         }
+
+        public int select_SoLuong_ThongTinXuatKho_DAO(String maXuat,string maHang)
+        {
+            Open();
+            SqlCommand cmd = new SqlCommand("select_SoLuong_ThongTinXuatKho", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@maXuat", SqlDbType.VarChar).Value = maXuat;
+            cmd.Parameters.Add("@maHang", SqlDbType.VarChar).Value = maHang;
+            if (cmd.ExecuteScalar() != null)
+                return Convert.ToInt32(cmd.ExecuteScalar());
+            return 0;
+        }
+
 
     }
 }

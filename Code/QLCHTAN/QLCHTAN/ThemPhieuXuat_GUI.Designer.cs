@@ -336,7 +336,7 @@ namespace QLCHTAN
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(152, 32);
             this.btnXacNhan.TabIndex = 11;
-            this.btnXacNhan.Text = "Xác nhận xuất hàng";
+            this.btnXacNhan.Text = "Xác nhận";
             this.btnXacNhan.UseVisualStyleBackColor = true;
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 

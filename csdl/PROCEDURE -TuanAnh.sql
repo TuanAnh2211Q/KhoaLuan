@@ -56,6 +56,25 @@ create proc insert_ThongTinXuatKho
 as
 insert into ThongTinXuatKho values(@maXuat,@maHang,@soLuong,@ghiChu,@tongDonGia)
 
+create proc update_PhieuXuat
+@maXuat varchar(10)
+as
+update XuatKho set trangThai=1  where maXuat=@maXuat
+go
+
+create proc select_SoLuong_ThongTinXuatKho
+@maXuat varchar(10),@maHang varchar(10)
+as
+select soLuong from ThongTinXuatKho where maXuat=@maXuat and maHang=@maHang
+go
+
+create proc delete_XuatKho
+@maXuat varchar(10)
+as 
+delete from XuatKho where maXuat=@maXuat
+
+
+
 
 
 create  proc check_PhieuXuat
@@ -79,3 +98,8 @@ from ThongTinXuatKho  ttxk, MatHang mh
 where ttxk.maHang=mh.maHang
 and ttxk.maXuat=@maXuat
 go
+
+
+
+
+

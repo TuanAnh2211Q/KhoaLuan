@@ -24,5 +24,9 @@ namespace BUS
         {
             return thongTinPhieuXuat_DAO.select_ThongTinPhieuXuat_DAO(maxuat);
         }
+        public int select_SoLuong_ThongTinXuatKho_DAO(String maXuat, string maHang)
+        {
+            return thongTinPhieuXuat_DAO.select_SoLuong_ThongTinXuatKho_DAO(maXuat, maHang);
+        }
     }
 }

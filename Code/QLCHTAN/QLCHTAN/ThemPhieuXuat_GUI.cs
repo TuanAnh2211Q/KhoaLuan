@@ -41,6 +41,7 @@ namespace QLCHTAN
         }
         private void ThemPhieuXuat_GUI_Load(object sender, EventArgs e)
         {
+          
             dtNgayXuat.Value = DateTime.Today;
             cbbMatHang.DataSource = tttk.show_DS_HangTon_DAO();
             cbbMatHang.DisplayMember = "tenHang";
@@ -75,7 +76,7 @@ namespace QLCHTAN
 
         private void btnThemMatHangXuat_Click(object sender, EventArgs e)
         {
-           if(Convert.ToInt32(txtSoLuongXuat.Text)<0)
+           if(Convert.ToInt32(txtSoLuongXuat.Text)<=0)
             {
                 MessageBox.Show("Số lượng xuất không được phép nhỏ hơn 0");
                 txtSoLuongXuat.Text = "0";
@@ -194,9 +195,10 @@ namespace QLCHTAN
 
         private void txtSoLuongXuat_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(!char.IsNumber(e.KeyChar)||!char.IsControl(e.KeyChar))
+            txtSoLuongXuat.MaxLength = lblSoLuongTon.Text.Length;
+            if(!char.IsNumber(e.KeyChar)&&!char.IsControl(e.KeyChar))
             {
-                e.Handled = false;
+                e.Handled = true;
             }    
         }
 
@@ -236,7 +238,7 @@ namespace QLCHTAN
                                 int soluong = Convert.ToInt32(r.Cells["soLuong"].Value);
                                 string ghichu = r.Cells["ghiChu"].Value.ToString();
                                 decimal tongdongia = Convert.ToDecimal(r.Cells["tongDonGia"].Value);
-                                ThongTinPhieuXuat_DTO ttpx_dto = new ThongTinPhieuXuat_DTO(maxuat, mahang, soluong, ghichu, tongdongia);
+                                ThongTinPhieuXuat_DTO ttpx_dto = new ThongTinPhieuXuat_DTO(maxuat, mahang, soluong, ghichu);
                                 thongTinPhieuXuat.insert_ThongTinXuatKho_BUS(ttpx_dto);
                             }
                         }
