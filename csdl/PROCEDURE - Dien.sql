@@ -5,7 +5,7 @@ set dateformat dmy
 go
 --=================================Order=============================
 --Lấy giá Món ăn
-alter proc select_donGia_SanPham
+create proc select_donGia_SanPham
 @maSanPham varchar(10), @donViBan nvarchar(10)
 as
 	select donGia
@@ -39,7 +39,7 @@ as
 select mucGiam from KhuyenMai where maKhuyenMai=@maKhuyenMai;
 
 --Insert thông tin khách hàng vào database
-create proc insert_thongTinKhachHang
+alter proc insert_thongTinKhachHang
 @tenKhachHang nvarchar(100), @Phai nvarchar(10),@SDT varchar(11), @Email nvarchar(50), @diaChi nvarchar(100), @ghiChu nvarchar(max)
 as
 	insert into KhachHang 
@@ -50,7 +50,7 @@ create proc insert_DonHang
 @SDTKhachHang varchar(11),@maKhuyenMai varchar(10),@thoiGianDat datetime, @trangThai int, @ghiChu nvarchar(max),@tongGia money
 as
 insert into DonHang
-values(@maDonHang,@tenDonHang,@maLoaiDon,@maHinhThuc,@maNhanVien,@SDTKhachHang,@maKhuyenMai,@thoiGianDat,@trangThai,@ghiChu,@tongGia)
+values(@maDonHang,@tenDonHang,@maLoaiDon,@maHinhThuc,@maNhanVien,@SDTKhachHang,@maKhuyenMai,@thoiGianDat,@trangThai,@ghiChu,null,@tongGia)
 --Insert thông tin đơn hàng
 create proc insert_ThongTinDonHang
 @maDonHang varchar(10), @maSanPham varchar(10),@giaTien money,@soLuong int,@thanhTien money

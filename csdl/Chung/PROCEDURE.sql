@@ -355,10 +355,10 @@ go
 exec dbo.update_KhachHang
 
 -- Xóa thông tin khách hàng
-create proc delete_KhachHang
-@idKhachHang int
+alter proc delete_KhachHang
+@SDTKhachHang int
 as
- delete from KhachHang where idKhachHang=@idKhachHang
+ delete from KhachHang where SDT=@SDTKhachHang
 go
 exec dbo.delete_KhachHang 
 

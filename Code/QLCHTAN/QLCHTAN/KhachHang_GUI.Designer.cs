@@ -54,8 +54,8 @@ namespace QLCHTAN
             this.Phai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ghiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinKhachHang)).BeginInit();
@@ -276,8 +276,8 @@ namespace QLCHTAN
             this.Phai,
             this.diaChi,
             this.Email,
-            this.idKhachHang,
-            this.ghiChu});
+            this.ghiChu,
+            this.idKhachHang});
             this.dgvThongTinKhachHang.Location = new System.Drawing.Point(446, 6);
             this.dgvThongTinKhachHang.Name = "dgvThongTinKhachHang";
             this.dgvThongTinKhachHang.ReadOnly = true;
@@ -327,6 +327,14 @@ namespace QLCHTAN
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
             // 
+            // ghiChu
+            // 
+            this.ghiChu.DataPropertyName = "ghiChu";
+            this.ghiChu.HeaderText = "Ghi chú";
+            this.ghiChu.MinimumWidth = 6;
+            this.ghiChu.Name = "ghiChu";
+            this.ghiChu.ReadOnly = true;
+            // 
             // idKhachHang
             // 
             this.idKhachHang.DataPropertyName = "idKhachHang";
@@ -335,14 +343,6 @@ namespace QLCHTAN
             this.idKhachHang.Name = "idKhachHang";
             this.idKhachHang.ReadOnly = true;
             this.idKhachHang.Visible = false;
-            // 
-            // ghiChu
-            // 
-            this.ghiChu.DataPropertyName = "ghiChu";
-            this.ghiChu.HeaderText = "Ghi chú";
-            this.ghiChu.MinimumWidth = 6;
-            this.ghiChu.Name = "ghiChu";
-            this.ghiChu.ReadOnly = true;
             // 
             // KhachHang_GUI
             // 
@@ -395,7 +395,7 @@ namespace QLCHTAN
         private System.Windows.Forms.DataGridViewTextBoxColumn Phai;
         private System.Windows.Forms.DataGridViewTextBoxColumn diaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idKhachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn ghiChu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idKhachHang;
     }
 }

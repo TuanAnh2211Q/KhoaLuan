@@ -32,7 +32,7 @@ namespace QLCHTAN
         #region Method
         public KhachHang_DTO khachHang_DTO()
         {
-            return new KhachHang_DTO(/*txtMaKhachHang.Text.Trim(),*/cbbSDT.SelectedValue.ToString().Trim(), txtTenKhach.Text.Trim(), GioiTinh.Trim(), txtDiaChi.Text.Trim(), txtEmail.Text.Trim(), rtxtGhiChu.Text.Trim());
+            return new KhachHang_DTO(cbbSDT.Text.ToString().Trim(), txtTenKhach.Text.Trim(), GioiTinh.Trim(), txtDiaChi.Text.Trim(), txtEmail.Text.Trim(), rtxtGhiChu.Text.Trim());
         }
         public bool ktra_MonAn()
         {
@@ -83,6 +83,7 @@ namespace QLCHTAN
             rdbGiaoHang.Checked = false;
             rdbMangVe.Checked = false;
             dgvThongTinDonHang.Rows.Clear();
+            rdbNam.Enabled = true;
         }
 
 
@@ -102,6 +103,7 @@ namespace QLCHTAN
             cbbSizeDoAn.DataSource = doAn_BUS.select_DonViBanDoAn_BUS();
             cbbSizeDoAn.DisplayMember = "donViBan";
             cbbSizeDoAn.ValueMember = "donViBan";
+            rdbNam.Enabled = true;
             //load dữ liệu nước uống
             cbbTenNuoc.DataSource = nuocUong_BUS.show_dsNuocUong_BUS();
             cbbTenNuoc.DisplayMember = "tenNuoc";
@@ -251,7 +253,7 @@ namespace QLCHTAN
             string maSanPham = doAn_BUS.select_maSanPhamDoAn_BUS(cbbTenMon.SelectedValue.ToString());
             decimal donGia = doAn_BUS.select_donGia_BUS(maSanPham, donViBan);
             decimal thanhTien = nudSoLuongMon.Value * donGia;
-            //MucKhuyenMai = khuyenMai_BUS.select_MucKhuyenMai_BUS(cbbMaGiamGia.SelectedValue.ToString());
+            MucKhuyenMai = khuyenMai_BUS.select_MucKhuyenMai_BUS(cbbMaGiamGia.SelectedValue.ToString());
             DialogResult them = MessageBox.Show("Bạn muốn thêm món ăn này ?", "Thông báo", MessageBoxButtons.YesNo);
             if (them == DialogResult.Yes)
             {
@@ -289,13 +291,14 @@ namespace QLCHTAN
                 {
                     thanhTien += Convert.ToDecimal(dgvThongTinDonHang.Rows[i].Cells["thanhTien"].Value.ToString());
                 }
-                txtTongTien.Text = thanhTien.ToString();
+                txtTongTien.Text = Convert.ToString(Convert.ToDecimal(thanhTien.ToString()) - (Convert.ToDecimal(thanhTien.ToString())*Convert.ToDecimal(MucKhuyenMai.ToString())));
                 
             }
         }
 
         private void btnThemNuoc_Click(object sender, EventArgs e)
         {
+            MucKhuyenMai = khuyenMai_BUS.select_MucKhuyenMai_BUS(cbbMaGiamGia.SelectedValue.ToString());
             string maSanPham = nuocUong_BUS.select_maSanPhamNuoc_BUS(cbbTenNuoc.SelectedValue.ToString());
             txtSizeNuoc.Text = nuocUong_BUS.select_DonViBanNuocUong_BUS(maSanPham);
             decimal donGia = nuocUong_BUS.selectselect_donGiaNuoc_BUS(maSanPham, txtSizeNuoc.Text);
@@ -337,7 +340,7 @@ namespace QLCHTAN
                 {
                     thanhTien += Convert.ToDecimal(dgvThongTinDonHang.Rows[i].Cells["thanhTien"].Value.ToString());
                 }
-                txtTongTien.Text = thanhTien.ToString();
+                txtTongTien.Text = Convert.ToString(Convert.ToDecimal(thanhTien.ToString()) - (Convert.ToDecimal(thanhTien.ToString()) * Convert.ToDecimal(MucKhuyenMai.ToString())));
             }
         }
         private void cbbTenNuoc_SelectedValueChanged(object sender, EventArgs e)
