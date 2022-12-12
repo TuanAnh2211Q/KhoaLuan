@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32802.440
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "QLCHTAN\GUI.csproj", "{1326A9FF-6211-4CCC-807C-D2FF4280A33E}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{65ACF8DB-3A05-48DA-921F-46D03757B559}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{7456951A-1564-4F64-A409-84567B19750C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB", "..\WEB\FastFood\FastFood\WEB.csproj", "{39983413-D5EF-410B-B6DD-AA54D06ADD0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7456951A-1564-4F64-A409-84567B19750C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7456951A-1564-4F64-A409-84567B19750C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7456951A-1564-4F64-A409-84567B19750C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39983413-D5EF-410B-B6DD-AA54D06ADD0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39983413-D5EF-410B-B6DD-AA54D06ADD0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39983413-D5EF-410B-B6DD-AA54D06ADD0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39983413-D5EF-410B-B6DD-AA54D06ADD0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
