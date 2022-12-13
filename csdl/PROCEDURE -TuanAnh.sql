@@ -158,3 +158,15 @@ create proc select_TenLoaiDon
 as 
 select tenLoaiDon from LoaiDonHang where maLoaiDon=@maLoaiDon
 go
+
+
+ALTER procedure [dbo].[update_DoAn_ThanhPhanDoAn] @maThanhPhan nchar(30),@tenThanhPhan nvarchar(50),  @dinhLuong nvarchar(10), @maDoAn nchar(30),@soLuong int
+as 
+update ThongTinThanhPhanDoAn set dinhLuong=@dinhLuong, soLuong=@soLuong, tenThanhPhan=@tenThanhPhan where maDoAn=@maDoAn and maThanhPhan=@maThanhPhan 
+
+
+create proc select_donViThanhPhan
+@maThanhPhan varchar(10)
+as
+select donVi from MatHang where maHang=@maThanhPhan
+

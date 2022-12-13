@@ -46,12 +46,12 @@ namespace QLCHTAN
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbKhongNgayKT = new System.Windows.Forms.CheckBox();
+            this.cbKhongNgayBD = new System.Windows.Forms.CheckBox();
             this.cbbSanPham = new System.Windows.Forms.ComboBox();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.dtNgayKetThuc = new System.Windows.Forms.DateTimePicker();
             this.dtNgayBatDau = new System.Windows.Forms.DateTimePicker();
-            this.cbKhongNgayBD = new System.Windows.Forms.CheckBox();
-            this.cbKhongNgayKT = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSPKM)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -128,11 +128,11 @@ namespace QLCHTAN
             this.NgayKetThuc,
             this.GhiChu,
             this.maKhuyenMai});
-            this.dgvSPKM.Location = new System.Drawing.Point(280, 44);
+            this.dgvSPKM.Location = new System.Drawing.Point(286, 44);
             this.dgvSPKM.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSPKM.Name = "dgvSPKM";
             this.dgvSPKM.ReadOnly = true;
-            this.dgvSPKM.Size = new System.Drawing.Size(530, 200);
+            this.dgvSPKM.Size = new System.Drawing.Size(524, 200);
             this.dgvSPKM.TabIndex = 31;
             this.dgvSPKM.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSPKM_CellClick);
             // 
@@ -261,6 +261,30 @@ namespace QLCHTAN
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sản phẩm";
             // 
+            // cbKhongNgayKT
+            // 
+            this.cbKhongNgayKT.AutoSize = true;
+            this.cbKhongNgayKT.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbKhongNgayKT.Location = new System.Drawing.Point(189, 101);
+            this.cbKhongNgayKT.Name = "cbKhongNgayKT";
+            this.cbKhongNgayKT.Size = new System.Drawing.Size(70, 17);
+            this.cbKhongNgayKT.TabIndex = 38;
+            this.cbKhongNgayKT.Text = "Không có";
+            this.cbKhongNgayKT.UseVisualStyleBackColor = true;
+            this.cbKhongNgayKT.CheckedChanged += new System.EventHandler(this.cbKhongNgayKT_CheckedChanged);
+            // 
+            // cbKhongNgayBD
+            // 
+            this.cbKhongNgayBD.AutoSize = true;
+            this.cbKhongNgayBD.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbKhongNgayBD.Location = new System.Drawing.Point(190, 69);
+            this.cbKhongNgayBD.Name = "cbKhongNgayBD";
+            this.cbKhongNgayBD.Size = new System.Drawing.Size(70, 17);
+            this.cbKhongNgayBD.TabIndex = 37;
+            this.cbKhongNgayBD.Text = "Không có";
+            this.cbKhongNgayBD.UseVisualStyleBackColor = true;
+            this.cbKhongNgayBD.CheckedChanged += new System.EventHandler(this.cbKhongNgayBD_CheckedChanged);
+            // 
             // cbbSanPham
             // 
             this.cbbSanPham.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -296,40 +320,17 @@ namespace QLCHTAN
             this.dtNgayBatDau.Size = new System.Drawing.Size(96, 23);
             this.dtNgayBatDau.TabIndex = 31;
             // 
-            // cbKhongNgayBD
-            // 
-            this.cbKhongNgayBD.AutoSize = true;
-            this.cbKhongNgayBD.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbKhongNgayBD.Location = new System.Drawing.Point(190, 69);
-            this.cbKhongNgayBD.Name = "cbKhongNgayBD";
-            this.cbKhongNgayBD.Size = new System.Drawing.Size(70, 17);
-            this.cbKhongNgayBD.TabIndex = 37;
-            this.cbKhongNgayBD.Text = "Không có";
-            this.cbKhongNgayBD.UseVisualStyleBackColor = true;
-            this.cbKhongNgayBD.CheckedChanged += new System.EventHandler(this.cbKhongNgayBD_CheckedChanged);
-            // 
-            // cbKhongNgayKT
-            // 
-            this.cbKhongNgayKT.AutoSize = true;
-            this.cbKhongNgayKT.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbKhongNgayKT.Location = new System.Drawing.Point(189, 101);
-            this.cbKhongNgayKT.Name = "cbKhongNgayKT";
-            this.cbKhongNgayKT.Size = new System.Drawing.Size(70, 17);
-            this.cbKhongNgayKT.TabIndex = 38;
-            this.cbKhongNgayKT.Text = "Không có";
-            this.cbKhongNgayKT.UseVisualStyleBackColor = true;
-            this.cbKhongNgayKT.CheckedChanged += new System.EventHandler(this.cbKhongNgayKT_CheckedChanged);
-            // 
             // ThongTinKhuyenMai_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(824, 254);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvSPKM);
             this.Controls.Add(this.lblTenKhuyenMai);
             this.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "ThongTinKhuyenMai_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DanhSachKhuyenMai_GUI";

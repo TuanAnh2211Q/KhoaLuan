@@ -75,7 +75,7 @@ namespace DAO
                 SqlCommand cmd = new SqlCommand("update_PhieuNhap", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@maNhap", SqlDbType.VarChar).Value = phieuNhapKho_DTO.MaNhap;
-                cmd.Parameters.Add("@ngayNhap", SqlDbType.VarChar).Value = phieuNhapKho_DTO.NgayNhap;
+                cmd.Parameters.Add("@ngayNhap", SqlDbType.DateTime).Value = phieuNhapKho_DTO.NgayNhap;
                 cmd.Parameters.Add("@maDatHang", SqlDbType.VarChar).Value = phieuNhapKho_DTO.MaDatHang;
                 cmd.Parameters.Add("@ghiChu", SqlDbType.VarChar).Value = phieuNhapKho_DTO.GhiChu;
                 cmd.Parameters.Add("@trangThai", SqlDbType.Bit).Value = phieuNhapKho_DTO.TrangThai;

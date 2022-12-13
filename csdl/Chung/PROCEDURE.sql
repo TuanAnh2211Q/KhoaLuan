@@ -506,8 +506,9 @@ select tenDoAn,maDoAn from DoAn where maLoaiDoAn=@maLoaiDoAn
 
 --lấy đơn vị bán đồ ăn
 alter proc select_DonViBanDoAn
+@maDoAn varchar(10)
 as
-select distinct donViBan from ThongTinDoAn 
+select distinct donViBan from ThongTinDoAn where maDoAn=@maDoAn
 
 --lấy danh sách nước uống
 create proc select_dsNuocUong

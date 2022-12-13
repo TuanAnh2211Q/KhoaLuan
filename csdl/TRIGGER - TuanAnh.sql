@@ -108,3 +108,46 @@ ALTER  trigger [dbo].[trg_insertPhieuDat] on [dbo].[DatHang] instead of insert
 
  ---12-12-2022
 
+-- select tttpda.maThanhPhan as maHang, tttpda.soLuong*ttdh.soLuong as soLuong
+-- from  ThongTinThanhPhanDoAn tttpda, SanPham sp, ThongTinDonHang ttdh
+--where tttpda.maDoAn=sp.maSanPham
+--and sp.maSanPham=ttdh.maSanPham 
+--and ttdh.maSanPham='MDA003'
+
+
+--select nu.maNuoc as maHang, ttdh.soLuong as soLuong
+--from NuocUong nu, SanPham sp, ThongTinDonHang ttdh
+--where nu.maNuoc=sp.maSanPham
+--and ttdh.maSanPham=sp.maSanPham 
+--and maNuoc='MN001'
+
+--create trigger trg_update_KhoBan on ThongTinDonHang after insert
+--as
+--begin
+--declare @maHang varchar(10)=(select maSanPham from inserted),
+--            @maThanhPhan varchar(10),
+--			@soLuong int =(select soLuong from inserted),
+--			@maHangTon varchar(10),
+--			@soLuongTon int,
+--			@tongGiaTon money
+
+--			if (@maHang in (select * from SanPham where maLoaiSanPham='MLSP001'))
+--			begin
+--			Declare truTon Cursor for
+--			select tttpda.maThanhPhan as maHang, tttpda.soLuong*@soLuong as soLuong
+--				from  ThongTinThanhPhanDoAn tttpda, SanPham sp, inserted i
+--			where tttpda.maDoAn=sp.maSanPham
+--			and sp.maSanPham=i.maSanPham
+--				and sp.maSanPham=@maHang
+--				Open truTon
+--				Fetch next from @maHangTon, @soLuongTon, @tongGiaTon
+--				while @@FETCH_STATUS=0
+--				begin
+--				update KhoBan
+--				set soLuong=soLuong-@soLuongTon,
+--				    tongGia=tongGia-((select donGia from MatHang where maHang=@maHangTon)*@soLuongTon)
+--					where maHang=@maHangTon 
+--				end
+--			end
+
+--end

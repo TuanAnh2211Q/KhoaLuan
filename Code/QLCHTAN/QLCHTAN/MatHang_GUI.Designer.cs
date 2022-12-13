@@ -112,12 +112,16 @@ namespace QLCHTAN
             // 
             // tabMatHang
             // 
+            this.tabMatHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabMatHang.Controls.Add(this.tabNguyenLieu);
             this.tabMatHang.Controls.Add(this.tabNuoc);
+            this.tabMatHang.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabMatHang.Location = new System.Drawing.Point(12, 12);
             this.tabMatHang.Name = "tabMatHang";
             this.tabMatHang.SelectedIndex = 0;
-            this.tabMatHang.Size = new System.Drawing.Size(1027, 528);
+            this.tabMatHang.Size = new System.Drawing.Size(1212, 707);
             this.tabMatHang.TabIndex = 0;
             // 
             // tabNguyenLieu
@@ -126,10 +130,10 @@ namespace QLCHTAN
             this.tabNguyenLieu.Controls.Add(this.label9);
             this.tabNguyenLieu.Controls.Add(this.dgvMatHang);
             this.tabNguyenLieu.Controls.Add(this.groupBox1);
-            this.tabNguyenLieu.Location = new System.Drawing.Point(4, 22);
+            this.tabNguyenLieu.Location = new System.Drawing.Point(4, 27);
             this.tabNguyenLieu.Name = "tabNguyenLieu";
             this.tabNguyenLieu.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNguyenLieu.Size = new System.Drawing.Size(1019, 502);
+            this.tabNguyenLieu.Size = new System.Drawing.Size(1204, 676);
             this.tabNguyenLieu.TabIndex = 0;
             this.tabNguyenLieu.Text = "Thông tin nguyên liệu";
             this.tabNguyenLieu.UseVisualStyleBackColor = true;
@@ -178,7 +182,7 @@ namespace QLCHTAN
             this.dgvMatHang.Location = new System.Drawing.Point(35, 93);
             this.dgvMatHang.Name = "dgvMatHang";
             this.dgvMatHang.ReadOnly = true;
-            this.dgvMatHang.Size = new System.Drawing.Size(647, 379);
+            this.dgvMatHang.Size = new System.Drawing.Size(832, 553);
             this.dgvMatHang.TabIndex = 6;
             this.dgvMatHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatHang_CellClick);
             // 
@@ -272,9 +276,9 @@ namespace QLCHTAN
             this.groupBox1.Controls.Add(this.dtHSD);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(688, 43);
+            this.groupBox1.Location = new System.Drawing.Point(873, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(296, 429);
+            this.groupBox1.Size = new System.Drawing.Size(296, 603);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin mặt hàng";
@@ -703,6 +707,7 @@ namespace QLCHTAN
             this.btnLamMoiNuoc.TabIndex = 8;
             this.btnLamMoiNuoc.Text = "Làm mới";
             this.btnLamMoiNuoc.UseVisualStyleBackColor = true;
+            this.btnLamMoiNuoc.Click += new System.EventHandler(this.btnLamMoiNuoc_Click);
             // 
             // txtDonViNuoc
             // 
@@ -834,7 +839,7 @@ namespace QLCHTAN
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1041, 544);
+            this.ClientSize = new System.Drawing.Size(1226, 717);
             this.Controls.Add(this.tabMatHang);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MatHang_GUI";

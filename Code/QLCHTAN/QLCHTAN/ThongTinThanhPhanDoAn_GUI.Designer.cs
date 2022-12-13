@@ -40,13 +40,13 @@ namespace QLCHTAN
             this.txtDinhLuong = new System.Windows.Forms.TextBox();
             this.cbbTenThanhPhan = new System.Windows.Forms.ComboBox();
             this.dgvThanhPhanMon = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.maThanhPhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenThanhPhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dinhLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maDoAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThanhPhanMon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,6 +162,7 @@ namespace QLCHTAN
             this.cbbTenThanhPhan.Name = "cbbTenThanhPhan";
             this.cbbTenThanhPhan.Size = new System.Drawing.Size(182, 23);
             this.cbbTenThanhPhan.TabIndex = 42;
+            this.cbbTenThanhPhan.SelectedValueChanged += new System.EventHandler(this.cbbTenThanhPhan_SelectedValueChanged);
             // 
             // dgvThanhPhanMon
             // 
@@ -179,25 +180,6 @@ namespace QLCHTAN
             this.dgvThanhPhanMon.Size = new System.Drawing.Size(456, 123);
             this.dgvThanhPhanMon.TabIndex = 43;
             this.dgvThanhPhanMon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThanhPhanMon_CellClick);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 117);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 15);
-            this.label2.TabIndex = 44;
-            this.label2.Text = "Số lượng:";
-            // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSoLuong.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoLuong.Location = new System.Drawing.Point(139, 115);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(182, 23);
-            this.txtSoLuong.TabIndex = 45;
             // 
             // maThanhPhan
             // 
@@ -230,6 +212,25 @@ namespace QLCHTAN
             this.maDoAn.HeaderText = "Mã đồ ăn";
             this.maDoAn.Name = "maDoAn";
             this.maDoAn.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(21, 117);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 15);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Số lượng:";
+            // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSoLuong.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoLuong.Location = new System.Drawing.Point(139, 115);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(182, 23);
+            this.txtSoLuong.TabIndex = 45;
             // 
             // ThongTinThanhPhanDoAn_GUI
             // 

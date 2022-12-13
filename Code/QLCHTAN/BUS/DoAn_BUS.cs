@@ -42,9 +42,9 @@ namespace BUS
             return doAn_DAO.show_dsLoaiDoAn_DAO(maLoaiDoAN);
 
         }
-        public DataTable select_DonViBanDoAn_BUS()
+        public DataTable select_DonViBanDoAn_BUS(string maDoAn)
         {
-            return doAn_DAO.select_DonViBanDoAn_DAO();
+            return doAn_DAO.select_DonViBanDoAn_DAO(maDoAn);
         }
         public decimal select_donGia_BUS(string maSanPham,string donViBan)
         {

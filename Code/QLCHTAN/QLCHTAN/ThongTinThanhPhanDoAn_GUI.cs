@@ -31,6 +31,7 @@ namespace QLCHTAN
             cbbTenThanhPhan.DataSource = tttpda_BUS.show_dsthanhPhanDoAn_BUS();
             cbbTenThanhPhan.DisplayMember = "TenHang";
             cbbTenThanhPhan.ValueMember = "MaHang";
+            txtDinhLuong.Enabled = false;
         }
 
         private void dgvThanhPhanMon_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -138,6 +139,14 @@ namespace QLCHTAN
         {
             txtDinhLuong.Clear();
             ThongTinThanhPhanDoAn_GUI_Load(sender, e);
+        }
+
+        private void cbbTenThanhPhan_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(cbbTenThanhPhan.SelectedValue!=null)
+            {
+                txtDinhLuong.Text = tttpda_BUS.select_donViThanhPhan_BUS(cbbTenThanhPhan.SelectedValue.ToString());
+            }    
         }
     }
 }

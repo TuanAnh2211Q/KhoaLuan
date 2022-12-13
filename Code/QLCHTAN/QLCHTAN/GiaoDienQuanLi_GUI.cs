@@ -176,5 +176,13 @@ namespace QLCHTAN
             this.pCuaSoChucNang.Controls.Add(khoban);
             khoban.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            pCuaSoChucNang.Controls.Clear();
+            Order_GUI order = new Order_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true }; ;
+            this.pCuaSoChucNang.Controls.Add(order);
+            order.Show();
+        }
     }
 }

@@ -34,6 +34,9 @@ namespace BUS
         {
             return tttpda_DAO.delete_ThanhPhanDoAn_DAO(tttpda);
         }
-
+        public string select_donViThanhPhan_BUS(string maThanhPhan)
+        {
+            return tttpda_DAO.select_donViThanhPhan_DAO(maThanhPhan);
+        }
     }
 }
