@@ -189,6 +189,10 @@ namespace QLCHTAN
             txtMaHang.Text = txtTenHang.Text = txtGhiChu.Text = txtDonVi.Text = txtDonGia.Text = "";
             cbbNCC.Text = "null";
             txtMaHang.Enabled = true;
+
+            txtMaHangNuoc.Text = txtTenHangNuoc.Text = txtGhiChuNuoc.Text = txtDonViNuoc.Text = txtDonGiaNuoc.Text = "";
+            txtMaHangNuoc.Enabled = true;
+
         }
 
         private void dgvMatHang_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -381,6 +385,12 @@ namespace QLCHTAN
                 }
                 txtMaHangNuoc.Enabled = false;
             }
+        }
+
+        private void btnLamMoiNuoc_Click(object sender, EventArgs e)
+        {
+            MatHang_GUI_Load(sender, e);
+
         }
     }
 }

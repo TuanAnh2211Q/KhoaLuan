@@ -71,5 +71,7 @@ namespace QLCHTAN
             this.panelChucNang.Controls.Add(khoban);
             khoban.Show();
         }
+
+    
     }
 }

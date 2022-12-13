@@ -127,6 +127,7 @@ namespace QLCHTAN
             // 
             // btnThemPhieuDat
             // 
+            this.btnThemPhieuDat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThemPhieuDat.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemPhieuDat.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnThemPhieuDat.Location = new System.Drawing.Point(103, 564);
@@ -150,6 +151,7 @@ namespace QLCHTAN
             // 
             // btnHuyPhieuDat
             // 
+            this.btnHuyPhieuDat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHuyPhieuDat.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuyPhieuDat.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnHuyPhieuDat.Location = new System.Drawing.Point(242, 563);
@@ -165,7 +167,8 @@ namespace QLCHTAN
             // 
             this.dgvPhieuDat.AllowUserToAddRows = false;
             this.dgvPhieuDat.AllowUserToDeleteRows = false;
-            this.dgvPhieuDat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvPhieuDat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPhieuDat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPhieuDat.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
@@ -344,6 +347,7 @@ namespace QLCHTAN
             // 
             // btnLamMoi
             // 
+            this.btnLamMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
             this.btnLamMoi.Location = new System.Drawing.Point(631, 564);
             this.btnLamMoi.Name = "btnLamMoi";
@@ -354,6 +358,7 @@ namespace QLCHTAN
             // 
             // btnCapNhat
             // 
+            this.btnCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCapNhat.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnCapNhat.Location = new System.Drawing.Point(354, 563);
@@ -408,6 +413,7 @@ namespace QLCHTAN
             // 
             // btnThayDoiTrangThai
             // 
+            this.btnThayDoiTrangThai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThayDoiTrangThai.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThayDoiTrangThai.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnThayDoiTrangThai.Location = new System.Drawing.Point(487, 564);

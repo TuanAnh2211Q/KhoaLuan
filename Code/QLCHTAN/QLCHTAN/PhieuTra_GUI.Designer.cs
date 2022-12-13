@@ -74,8 +74,12 @@ namespace QLCHTAN
             // 
             // btnLamMoi
             // 
+            this.btnLamMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLamMoi.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
-            this.btnLamMoi.Location = new System.Drawing.Point(697, 492);
+            this.btnLamMoi.Location = new System.Drawing.Point(693, 476);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(44, 33);
             this.btnLamMoi.TabIndex = 17;
@@ -86,7 +90,8 @@ namespace QLCHTAN
             // 
             this.dgvPhieuTra.AllowUserToAddRows = false;
             this.dgvPhieuTra.AllowUserToDeleteRows = false;
-            this.dgvPhieuTra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvPhieuTra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPhieuTra.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPhieuTra.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
@@ -101,7 +106,7 @@ namespace QLCHTAN
             this.dgvPhieuTra.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPhieuTra.Name = "dgvPhieuTra";
             this.dgvPhieuTra.ReadOnly = true;
-            this.dgvPhieuTra.Size = new System.Drawing.Size(736, 445);
+            this.dgvPhieuTra.Size = new System.Drawing.Size(736, 429);
             this.dgvPhieuTra.TabIndex = 14;
             this.dgvPhieuTra.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuTra_CellClick);
             // 
@@ -142,7 +147,11 @@ namespace QLCHTAN
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(563, 491);
+            this.btnCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCapNhat.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhat.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCapNhat.Location = new System.Drawing.Point(559, 475);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(129, 34);
@@ -297,7 +306,11 @@ namespace QLCHTAN
             // 
             // btnThemPhieuTra
             // 
-            this.btnThemPhieuTra.Location = new System.Drawing.Point(314, 492);
+            this.btnThemPhieuTra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThemPhieuTra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnThemPhieuTra.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemPhieuTra.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnThemPhieuTra.Location = new System.Drawing.Point(310, 476);
             this.btnThemPhieuTra.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemPhieuTra.Name = "btnThemPhieuTra";
             this.btnThemPhieuTra.Size = new System.Drawing.Size(135, 33);
@@ -308,7 +321,11 @@ namespace QLCHTAN
             // 
             // btnHuyPhieuTra
             // 
-            this.btnHuyPhieuTra.Location = new System.Drawing.Point(453, 492);
+            this.btnHuyPhieuTra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHuyPhieuTra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHuyPhieuTra.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuyPhieuTra.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnHuyPhieuTra.Location = new System.Drawing.Point(449, 476);
             this.btnHuyPhieuTra.Margin = new System.Windows.Forms.Padding(2);
             this.btnHuyPhieuTra.Name = "btnHuyPhieuTra";
             this.btnHuyPhieuTra.Size = new System.Drawing.Size(108, 33);

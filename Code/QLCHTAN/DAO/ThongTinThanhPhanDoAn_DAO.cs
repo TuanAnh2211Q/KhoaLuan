@@ -99,6 +99,27 @@ namespace DAO
             return false;
         }
 
+        public string select_donViThanhPhan_DAO(string maThanhPhan)
+        {
+            Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("select_donViThanhPhan", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@maThanhPhan", SqlDbType.NChar).Value =maThanhPhan;
+               
+                if (cmd.ExecuteScalar()!=null)
+                    return cmd.ExecuteScalar().ToString();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return null;
+        }
+
 
     }
 }

@@ -114,11 +114,12 @@ namespace DAO
             da.Fill(dslda);
             return dslda;
         }
-        public DataTable select_DonViBanDoAn_DAO()
+        public DataTable select_DonViBanDoAn_DAO(string maDoAn)
         {
             Open();
             SqlDataAdapter da = new SqlDataAdapter("select_DonViBanDoAn", conn);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@maDoAn", SqlDbType.VarChar).Value = maDoAn;
             DataTable tb = new DataTable();
             da.Fill(tb);
             return tb;

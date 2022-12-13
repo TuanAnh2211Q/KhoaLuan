@@ -39,7 +39,7 @@ as
 select mucGiam from KhuyenMai where maKhuyenMai=@maKhuyenMai;
 
 --Insert thông tin khách hàng vào database
-alter proc insert_thongTinKhachHang
+create proc insert_thongTinKhachHang
 @tenKhachHang nvarchar(100), @Phai nvarchar(10),@SDT varchar(11), @Email nvarchar(50), @diaChi nvarchar(100), @ghiChu nvarchar(max)
 as
 	insert into KhachHang 
@@ -59,3 +59,5 @@ as
 	insert into ThongTinDonHang
 	values(@maDonHang,@maSanPham,@giaTien,@soLuong,@thanhTien)
 	go
+
+

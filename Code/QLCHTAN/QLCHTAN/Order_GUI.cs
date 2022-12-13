@@ -118,9 +118,7 @@ namespace QLCHTAN
             cbbDanhMucMon.DisplayMember = "tenLoaiDoAn";
             cbbDanhMucMon.ValueMember = "maLoaiDoAn";
             cbbSDT.SelectedValue = -1;
-            cbbSizeDoAn.DataSource = doAn_BUS.select_DonViBanDoAn_BUS();
-            cbbSizeDoAn.DisplayMember = "donViBan";
-            cbbSizeDoAn.ValueMember = "donViBan";
+           
             rdbNam.Enabled = true;
             //load dữ liệu nước uống
             cbbTenNuoc.DataSource = nuocUong_BUS.show_dsNuocUong_BUS();
@@ -523,11 +521,11 @@ namespace QLCHTAN
             if (cbbMaGiamGia.SelectedValue != null )
             {
                 decimal tongTienGiam =Convert.ToDecimal( TongTien) * khuyenMai_BUS.select_MucKhuyenMai_BUS(cbbMaGiamGia.SelectedValue.ToString());
-                txtTongTien.Text = (Convert.ToInt32(Convert.ToDecimal(TongTien) - tongTienGiam)).ToString();
+                txtTongTien.Text = (Convert.ToDecimal(Convert.ToDecimal(TongTien) - tongTienGiam)).ToString();
             }
             else
             {
-                txtTongTien.Text = (Convert.ToInt32(Convert.ToDecimal(TongTien))).ToString();
+                txtTongTien.Text = (Convert.ToDecimal(Convert.ToDecimal(TongTien))).ToString();
             }
         }
 
@@ -549,6 +547,17 @@ namespace QLCHTAN
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             clearData(sender,e);
+        }
+
+        private void cbbTenMon_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(cbbTenMon.SelectedValue!=null)
+            {
+                cbbSizeDoAn.DataSource = doAn_BUS.select_DonViBanDoAn_BUS(cbbTenMon.SelectedValue.ToString());
+                cbbSizeDoAn.DisplayMember = "donViBan";
+                cbbSizeDoAn.ValueMember = "donViBan";
+
+            }    
         }
     }
 }
