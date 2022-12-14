@@ -33,5 +33,9 @@ namespace BUS
         {
             return khachhang_DAO.insert_KhachHang_DAO(khachHang_DTO);
         }
+        public int select_id_KhachHang_BUS(string sdt)
+        {
+            return khachhang_DAO.select_id_KhachHang_DAO(sdt);
+        }
     }
 }

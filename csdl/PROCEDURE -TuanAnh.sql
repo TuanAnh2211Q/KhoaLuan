@@ -170,3 +170,32 @@ create proc select_donViThanhPhan
 as
 select donVi from MatHang where maHang=@maThanhPhan
 
+
+
+
+--14/12/2022
+
+create  proc check_ThongTinDonHang_KhoBan
+@maSanPham varchar(10),@soLuong int
+as
+if ((select maLoaiSanPham from SanPham where maSanPham=@maSanPham)='MLSP001')
+begin
+select kb.maHang, kb.soLuong-(@soLuong*tttpda.soLuong) as soLuong
+from SanPham sp, ThongTinThanhPhanDoAn tttpda,MatHang mh,KhoBan kb
+where sp.maSanPham=tttpda.maDoAn
+and mh.maHang=tttpda.maThanhPhan
+and kb.maHang=tttpda.maThanhPhan
+and sp.maSanPham=@maSanPham
+end
+else if ((select maLoaiSanPham from SanPham where maSanPham=@maSanPham)='MLSP002')
+begin
+select maHang, (soLuong-@soLuong) as soLuong
+from KhoBan where maHang=@maSanPham
+end
+
+
+
+create proc select_id_KhachHang
+@sdt varchar(10)
+as
+select idKhachHang from KhachHang where sdt=@sdt

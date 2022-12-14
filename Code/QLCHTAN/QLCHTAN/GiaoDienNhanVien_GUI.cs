@@ -72,6 +72,6 @@ namespace QLCHTAN
             khoban.Show();
         }
 
-    
+     
     }
 }

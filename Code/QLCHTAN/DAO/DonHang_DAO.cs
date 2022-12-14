@@ -37,6 +37,7 @@ namespace DAO
                 cmd.Parameters.Add("@trangThai", SqlDbType.Int).Value = donHang_DTO.TrangThai;
                 cmd.Parameters.Add("@ghiChu", SqlDbType.VarChar).Value = donHang_DTO.GhiChu;
                 cmd.Parameters.Add("@tongGia", SqlDbType.Money).Value = donHang_DTO.TongGia;
+                cmd.Parameters.Add("@id", SqlDbType.Int).Value = donHang_DTO.IDKhachHang;
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }

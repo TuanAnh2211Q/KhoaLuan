@@ -83,7 +83,7 @@ namespace DAO
                 Open();
                 SqlCommand cmd = new SqlCommand("delete_KhachHang",conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@SDTKhachHang", SqlDbType.Int).Value = khachhang_DTO.SDT;
+                cmd.Parameters.Add("@SDTKhachHang", SqlDbType.VarChar).Value = khachhang_DTO.SDT;
                 if(cmd.ExecuteNonQuery()>0)
                      return true;
             }
@@ -92,6 +92,25 @@ namespace DAO
                 throw;
             }
             return false;
+        }
+
+        public int select_id_KhachHang_DAO(string sdt)
+        {
+
+            try
+            {
+                Open();
+                SqlCommand cmd = new SqlCommand("select_id_KhachHang", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@sdt", SqlDbType.VarChar).Value = sdt;
+                if (cmd.ExecuteScalar() != null)
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return 0;
         }
 
     }
