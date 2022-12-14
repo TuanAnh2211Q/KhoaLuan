@@ -102,9 +102,9 @@ namespace QLCHTAN
             this.panel2.BackColor = System.Drawing.Color.AliceBlue;
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(399, 9);
+            this.panel2.Location = new System.Drawing.Point(385, 9);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1163, 113);
+            this.panel2.Size = new System.Drawing.Size(1177, 113);
             this.panel2.TabIndex = 7;
             // 
             // pictureBox2
@@ -123,7 +123,7 @@ namespace QLCHTAN
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Candara", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(83, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(1077, 78);
@@ -141,7 +141,7 @@ namespace QLCHTAN
             this.panel1.Controls.Add(this.lblkDangXuat);
             this.panel1.Location = new System.Drawing.Point(6, 22);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(387, 100);
+            this.panel1.Size = new System.Drawing.Size(373, 100);
             this.panel1.TabIndex = 6;
             // 
             // label1
@@ -188,7 +188,7 @@ namespace QLCHTAN
             // lblkDoiMatKhau
             // 
             this.lblkDoiMatKhau.AutoSize = true;
-            this.lblkDoiMatKhau.Location = new System.Drawing.Point(288, 73);
+            this.lblkDoiMatKhau.Location = new System.Drawing.Point(272, 71);
             this.lblkDoiMatKhau.Name = "lblkDoiMatKhau";
             this.lblkDoiMatKhau.Size = new System.Drawing.Size(91, 18);
             this.lblkDoiMatKhau.TabIndex = 2;
@@ -199,7 +199,7 @@ namespace QLCHTAN
             // lblkDangXuat
             // 
             this.lblkDangXuat.AutoSize = true;
-            this.lblkDangXuat.Location = new System.Drawing.Point(210, 73);
+            this.lblkDangXuat.Location = new System.Drawing.Point(194, 71);
             this.lblkDangXuat.Name = "lblkDangXuat";
             this.lblkDangXuat.Size = new System.Drawing.Size(72, 18);
             this.lblkDangXuat.TabIndex = 3;
@@ -285,6 +285,7 @@ namespace QLCHTAN
             // 
             this.btnOrder.BackColor = System.Drawing.Color.PowderBlue;
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOrder.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnOrder.Location = new System.Drawing.Point(108, 8);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(93, 77);

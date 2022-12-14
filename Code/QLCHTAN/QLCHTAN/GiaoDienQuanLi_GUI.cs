@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DTO;
+using BUS;
 namespace QLCHTAN
 {
     public partial class GiaoDienQuanLi_GUI : Form
     {
+        NhanVien_BUS nhanVien_BUS = new NhanVien_BUS();
         public GiaoDienQuanLi_GUI()
         {
             InitializeComponent();
@@ -151,6 +153,7 @@ namespace QLCHTAN
 
         private void GiaoDienQuanLi_GUI_Load(object sender, EventArgs e)
         {
+            lblTenTaiKhoan.Text = nhanVien_BUS.select_TenNhanVien_BUS(DangNhap_GUI.tenTaiKhoan);
 
         }
 

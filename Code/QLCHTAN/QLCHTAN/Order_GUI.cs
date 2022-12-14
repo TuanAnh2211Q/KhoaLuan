@@ -19,6 +19,7 @@ namespace QLCHTAN
         DoAn_BUS doAn_BUS = new DoAn_BUS();
         NuocUong_BUS nuocUong_BUS = new NuocUong_BUS();
         KhuyenMai_BUS khuyenMai_BUS = new KhuyenMai_BUS();
+        ThongTinDonHang_BUS thongTinDonHang_BUS = new ThongTinDonHang_BUS();
         public string loaiDichVu { get; set; }
         public decimal TongTien { get; set; }
         public decimal MucKhuyenMai { get; set; }
@@ -317,8 +318,27 @@ namespace QLCHTAN
         {
             string donViBan = cbbSizeDoAn.SelectedValue.ToString();
             string maSanPham = doAn_BUS.select_maSanPhamDoAn_BUS(cbbTenMon.SelectedValue.ToString());
+            int soLuong = Convert.ToInt32(nudSoLuongMon.Value);
             decimal donGia = doAn_BUS.select_donGia_BUS(maSanPham, donViBan);
             decimal thanhTien = nudSoLuongMon.Value * donGia;
+             
+            if(thongTinDonHang_BUS.check_ThongTinDonHang_KhoBan_BUS(maSanPham,soLuong).Rows.Count<0)
+            {
+                MessageBox.Show("Nguyên liệu bán món hiện không tồn tại trong kho bán, vui lòng nhập nguyên liệu");
+                return;
+            }    
+            foreach(DataRow r in thongTinDonHang_BUS.check_ThongTinDonHang_KhoBan_BUS(maSanPham,soLuong).Rows)
+            {
+                int soLuong_ = r.Field<int>("soLuong");
+
+                if(soLuong_<=0)
+                {
+                    MessageBox.Show("Không đủ nguyên liệu chế biến món ăn này, vui lòng nhập thêm");
+                    return;
+                }    
+            }    
+           
+
             DialogResult them = MessageBox.Show("Bạn muốn thêm món ăn này ?", "Thông báo", MessageBoxButtons.YesNo);
             if (them == DialogResult.Yes)
             {
@@ -367,6 +387,24 @@ namespace QLCHTAN
             txtSizeNuoc.Text = nuocUong_BUS.select_DonViBanNuocUong_BUS(maSanPham);
             decimal donGia = nuocUong_BUS.selectselect_donGiaNuoc_BUS(maSanPham, txtSizeNuoc.Text);
             decimal thanhTien = nudSoLuongNuoc.Value * donGia;
+            int soLuong = Convert.ToInt32(nudSoLuongNuoc.Value);
+
+            if (thongTinDonHang_BUS.check_ThongTinDonHang_KhoBan_BUS(maSanPham, soLuong).Rows.Count < 0)
+            {
+                MessageBox.Show("Nguyên liệu bán món hiện không tồn tại trong kho bán, vui lòng nhập nguyên liệu");
+                return;
+            }
+            foreach (DataRow r in thongTinDonHang_BUS.check_ThongTinDonHang_KhoBan_BUS(maSanPham, soLuong).Rows)
+            {
+                int soLuong_ = r.Field<int>("soLuong");
+
+                if (soLuong_ <= 0)
+                {
+                    MessageBox.Show("Không đủ nước trong kho để bán, vui lòng nhập thêm");
+                    return;
+                }
+            }
+
             DialogResult them = MessageBox.Show("Bạn muốn thêm nước này ?", "Thông báo", MessageBoxButtons.YesNo);
             if (them == DialogResult.Yes)
             {

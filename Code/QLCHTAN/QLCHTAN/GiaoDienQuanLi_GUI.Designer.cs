@@ -83,6 +83,10 @@ namespace QLCHTAN
             this.txtQLMH = new System.Windows.Forms.TextBox();
             this.btnQLMH = new System.Windows.Forms.Button();
             this.pChucNang = new System.Windows.Forms.Panel();
+            this.pQLOrder = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -97,10 +101,6 @@ namespace QLCHTAN
             this.lblkDangXuat = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.pCuaSoChucNang = new System.Windows.Forms.Panel();
-            this.pQLOrder = new System.Windows.Forms.Panel();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.pQLNV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pQLTK.SuspendLayout();
@@ -128,14 +128,14 @@ namespace QLCHTAN
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.pChucNang.SuspendLayout();
+            this.pQLOrder.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            this.pQLOrder.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.SuspendLayout();
             // 
             // pQLNV
@@ -807,7 +807,7 @@ namespace QLCHTAN
             this.pChucNang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pChucNang.AutoScroll = true;
-            this.pChucNang.BackColor = System.Drawing.Color.SkyBlue;
+            this.pChucNang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.pChucNang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pChucNang.Controls.Add(this.pQLOrder);
             this.pChucNang.Controls.Add(this.panel6);
@@ -830,6 +830,58 @@ namespace QLCHTAN
             this.pChucNang.Size = new System.Drawing.Size(389, 652);
             this.pChucNang.TabIndex = 14;
             this.pChucNang.Paint += new System.Windows.Forms.PaintEventHandler(this.pChucNang_Paint);
+            // 
+            // pQLOrder
+            // 
+            this.pQLOrder.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pQLOrder.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pQLOrder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pQLOrder.Controls.Add(this.textBox3);
+            this.pQLOrder.Controls.Add(this.button1);
+            this.pQLOrder.Controls.Add(this.pictureBox17);
+            this.pQLOrder.Location = new System.Drawing.Point(12, 1020);
+            this.pQLOrder.Name = "pQLOrder";
+            this.pQLOrder.Size = new System.Drawing.Size(355, 61);
+            this.pQLOrder.TabIndex = 3;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Enabled = false;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(168, 5);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(179, 50);
+            this.textBox3.TabIndex = 5;
+            this.textBox3.Text = "Quản lí thông tin order";
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(61, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 52);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Quản lí Order";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.Location = new System.Drawing.Point(5, 3);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(54, 54);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 3;
+            this.pictureBox17.TabStop = false;
             // 
             // panel6
             // 
@@ -961,7 +1013,7 @@ namespace QLCHTAN
             // 
             this.lblTenTaiKhoan.AutoSize = true;
             this.lblTenTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenTaiKhoan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTenTaiKhoan.ForeColor = System.Drawing.Color.Red;
             this.lblTenTaiKhoan.Location = new System.Drawing.Point(212, 23);
             this.lblTenTaiKhoan.Name = "lblTenTaiKhoan";
             this.lblTenTaiKhoan.Size = new System.Drawing.Size(57, 20);
@@ -1003,58 +1055,6 @@ namespace QLCHTAN
             this.pCuaSoChucNang.Name = "pCuaSoChucNang";
             this.pCuaSoChucNang.Size = new System.Drawing.Size(1162, 733);
             this.pCuaSoChucNang.TabIndex = 17;
-            // 
-            // pQLOrder
-            // 
-            this.pQLOrder.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pQLOrder.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pQLOrder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pQLOrder.Controls.Add(this.textBox3);
-            this.pQLOrder.Controls.Add(this.button1);
-            this.pQLOrder.Controls.Add(this.pictureBox17);
-            this.pQLOrder.Location = new System.Drawing.Point(12, 1020);
-            this.pQLOrder.Name = "pQLOrder";
-            this.pQLOrder.Size = new System.Drawing.Size(355, 61);
-            this.pQLOrder.TabIndex = 3;
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(5, 3);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(54, 54);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox17.TabIndex = 3;
-            this.pictureBox17.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(61, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 52);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Quản lí Order";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Enabled = false;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(168, 5);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(179, 50);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.Text = "Quản lí thông tin order";
             // 
             // GiaoDienQuanLi_GUI
             // 
@@ -1113,6 +1113,9 @@ namespace QLCHTAN
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.pChucNang.ResumeLayout(false);
+            this.pQLOrder.ResumeLayout(false);
+            this.pQLOrder.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
@@ -1122,9 +1125,6 @@ namespace QLCHTAN
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            this.pQLOrder.ResumeLayout(false);
-            this.pQLOrder.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.ResumeLayout(false);
 
         }

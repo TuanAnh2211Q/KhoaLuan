@@ -108,46 +108,104 @@ ALTER  trigger [dbo].[trg_insertPhieuDat] on [dbo].[DatHang] instead of insert
 
  ---12-12-2022
 
--- select tttpda.maThanhPhan as maHang, tttpda.soLuong*ttdh.soLuong as soLuong
--- from  ThongTinThanhPhanDoAn tttpda, SanPham sp, ThongTinDonHang ttdh
---where tttpda.maDoAn=sp.maSanPham
---and sp.maSanPham=ttdh.maSanPham 
---and ttdh.maSanPham='MDA003'
 
 
---select nu.maNuoc as maHang, ttdh.soLuong as soLuong
---from NuocUong nu, SanPham sp, ThongTinDonHang ttdh
---where nu.maNuoc=sp.maSanPham
---and ttdh.maSanPham=sp.maSanPham 
---and maNuoc='MN001'
 
---create trigger trg_update_KhoBan on ThongTinDonHang after insert
---as
---begin
---declare @maHang varchar(10)=(select maSanPham from inserted),
---            @maThanhPhan varchar(10),
---			@soLuong int =(select soLuong from inserted),
---			@maHangTon varchar(10),
---			@soLuongTon int,
---			@tongGiaTon money
 
---			if (@maHang in (select * from SanPham where maLoaiSanPham='MLSP001'))
---			begin
---			Declare truTon Cursor for
---			select tttpda.maThanhPhan as maHang, tttpda.soLuong*@soLuong as soLuong
---				from  ThongTinThanhPhanDoAn tttpda, SanPham sp, inserted i
---			where tttpda.maDoAn=sp.maSanPham
---			and sp.maSanPham=i.maSanPham
---				and sp.maSanPham=@maHang
---				Open truTon
---				Fetch next from @maHangTon, @soLuongTon, @tongGiaTon
---				while @@FETCH_STATUS=0
---				begin
---				update KhoBan
---				set soLuong=soLuong-@soLuongTon,
---				    tongGia=tongGia-((select donGia from MatHang where maHang=@maHangTon)*@soLuongTon)
---					where maHang=@maHangTon 
---				end
---			end
 
---end
+create trigger trg_update_KhoBan on ThongTinDonHang instead of insert
+as
+begin
+declare
+@maThanhPhan varchar(10),
+@soLuongDung int,
+@donGia money,
+@maDonHang varchar(10)= (select maDonHang from inserted),
+@maSanPham varchar(10)=(select maSanPham from inserted),
+@giaTien money =(select giaTien from inserted),
+@soLuong int=(select soLuong from inserted),
+@thanhTien money =(select thanhTien from inserted),
+@maLoaiSanPham varchar(10)=(select maLoaiSanPham from inserted,SanPham where inserted.maSanPham=SanPham.maSanPham)
+if(@maLoaiSanPham='MLSP001')
+begin
+DECLARE capNhatKhoBan CURSOR FOR  
+select tttpda.maThanhPhan, (i.soLuong*tttpda.soLuong) as soLuongCheBien,donGia
+from inserted i , SanPham sp, ThongTinThanhPhanDoAn tttpda, MatHang mh
+where i.maSanPham=sp.maSanPham
+and mh.maHang=tttpda.maThanhPhan
+and sp.maSanPham=tttpda.maDoAn     -- dữ liệu trỏ tới
+
+Open capNhatKhoBan
+
+FETCH NEXT FROM capNhatKhoBan
+      INTO @maThanhPhan, @soLuongDung,@donGia
+
+WHILE @@FETCH_STATUS = 0   
+begin
+update KhoBan
+set soLuong=soLuong-@soLuongDung,
+	tongGia=tongGia-(@donGia*@soLuongDung)
+where maHang=@maThanhPhan
+
+FETCH NEXT FROM capNhatKhoBan
+INTO @maThanhPhan,@soLuongDung,@donGia
+end
+close capNhatKhoBan
+Deallocate capNhatKhoBan
+end
+else if (@maLoaiSanPham='MLSP002')
+begin
+DECLARE capNhatKhoBan_Nuoc CURSOR FOR  
+select i.maSanPham,i.SoLuong, donGia
+from inserted i , SanPham sp, MatHang mh
+where i.maSanPham=sp.maSanPham
+and mh.maHang=sp.maSanPham
+and sp.maLoaiSanPham='MLSP002'     -- dữ liệu trỏ tới
+
+Open capNhatKhoBan_Nuoc
+
+FETCH NEXT FROM capNhatKhoBan_Nuoc
+      INTO @maThanhPhan, @soLuongDung,@donGia
+
+WHILE @@FETCH_STATUS = 0   
+begin
+update KhoBan
+set soLuong=soLuong-@soLuongDung,
+	tongGia=tongGia-(@donGia*@soLuongDung)
+where maHang=@maThanhPhan
+
+FETCH NEXT FROM capNhatKhoBan_Nuoc
+INTO @maThanhPhan,@soLuongDung,@donGia
+end
+close capNhatKhoBan_Nuoc
+Deallocate capNhatKhoBan_Nuoc
+end
+
+
+end
+
+
+
+	create trigger trg_insert_KhachHang on KhachHang instead of insert
+	as
+	begin
+
+	declare @tenKH nvarchar(50) =(select tenKhachHang from inserted),
+				@phai nvarchar(50)=(select Phai from inserted),
+				@sdt varchar(11)=(select SDT from inserted),
+				@email varchar(50)=(select Email from inserted),
+				@diachi nvarchar(100)=(select diaChi from inserted),
+				@ghichu nvarchar(max)=(select ghiChu from inserted)
+
+				if exists(select * from KhachHang where SDT=@sdt )
+				begin
+				update KhachHang set Phai=@phai, Email=@email, diaChi=@diachi,ghiChu=@ghichu where SDT=@sdt
+				end
+				else
+				insert into KhachHang values (@tenKH,@phai,@sdt,@email,@diachi,@ghichu)
+	end
+
+
+
+
+

@@ -17,5 +17,9 @@ namespace BUS
         {
             return thongTinDonHang_DAO.insert_ThongTinDonHang_DAO(thongTinDonHang_DTO);
         }
+        public DataTable check_ThongTinDonHang_KhoBan_BUS(string masp, int sl)
+        {
+            return thongTinDonHang_DAO.check_ThongTinDonHang_KhoBan_DAO(masp,sl);
+        }
     }
 }

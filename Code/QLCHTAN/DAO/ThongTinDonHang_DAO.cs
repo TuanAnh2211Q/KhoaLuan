@@ -33,5 +33,18 @@ namespace DAO
             }
             return false;
         }
+
+        public DataTable check_ThongTinDonHang_KhoBan_DAO(string masp,int sl)
+        {
+
+            Open();
+            SqlDataAdapter da = new SqlDataAdapter("check_ThongTinDonHang_KhoBan", conn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@maSanPham", SqlDbType.VarChar).Value = masp;
+            da.SelectCommand.Parameters.Add("@soLuong", SqlDbType.Int).Value = sl;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
     }
 }

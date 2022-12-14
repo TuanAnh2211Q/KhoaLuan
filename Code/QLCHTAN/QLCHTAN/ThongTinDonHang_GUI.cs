@@ -29,7 +29,7 @@ namespace QLCHTAN
         }
         public DonHang_DTO donHang_DTO()
         {
-            return new DonHang_DTO(lblMaDonHang.Text, lblTenDonHang.Text, Order_GUI.maLoaiDon, Order_GUI.htThanhToan, NhanVienThanhToan_GUI.maNVTT, lblSDT.Text, Order_GUI.maKM, DateTime.Today, 1, txtGhiChu.Text, Convert.ToDecimal(lblTongDonGia.Text));
+            return new DonHang_DTO(lblMaDonHang.Text, lblTenDonHang.Text, Order_GUI.maLoaiDon, Order_GUI.htThanhToan, NhanVienThanhToan_GUI.maNVTT, lblSDT.Text, Order_GUI.maKM, DateTime.Today, 1, txtGhiChu.Text,khachhang_BUS.select_id_KhachHang_BUS(lblSDT.Text), Convert.ToDecimal(lblTongDonGia.Text));
         }
         public ThongTinDonHang_GUI()
         {
