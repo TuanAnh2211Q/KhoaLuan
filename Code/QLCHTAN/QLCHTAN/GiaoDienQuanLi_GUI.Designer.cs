@@ -101,6 +101,13 @@ namespace QLCHTAN
             this.lblkDangXuat = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.pCuaSoChucNang = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.btnQLKH = new System.Windows.Forms.Button();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pQLNV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pQLTK.SuspendLayout();
@@ -136,6 +143,10 @@ namespace QLCHTAN
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             this.SuspendLayout();
             // 
             // pQLNV
@@ -145,9 +156,9 @@ namespace QLCHTAN
             this.pQLNV.Controls.Add(this.pictureBox1);
             this.pQLNV.Controls.Add(this.txtQLNV);
             this.pQLNV.Controls.Add(this.btnQLNV);
-            this.pQLNV.Location = new System.Drawing.Point(13, 18);
+            this.pQLNV.Location = new System.Drawing.Point(1, 3);
             this.pQLNV.Name = "pQLNV";
-            this.pQLNV.Size = new System.Drawing.Size(353, 62);
+            this.pQLNV.Size = new System.Drawing.Size(367, 62);
             this.pQLNV.TabIndex = 1;
             // 
             // pictureBox1
@@ -198,9 +209,9 @@ namespace QLCHTAN
             this.pQLTK.Controls.Add(this.pictureBox2);
             this.pQLTK.Controls.Add(this.txtQLTK);
             this.pQLTK.Controls.Add(this.btnQLTK);
-            this.pQLTK.Location = new System.Drawing.Point(13, 86);
+            this.pQLTK.Location = new System.Drawing.Point(1, 67);
             this.pQLTK.Name = "pQLTK";
-            this.pQLTK.Size = new System.Drawing.Size(352, 63);
+            this.pQLTK.Size = new System.Drawing.Size(366, 63);
             this.pQLTK.TabIndex = 2;
             // 
             // pictureBox2
@@ -247,9 +258,9 @@ namespace QLCHTAN
             this.pQLDA.Controls.Add(this.pictureBox3);
             this.pQLDA.Controls.Add(this.txtQLMA);
             this.pQLDA.Controls.Add(this.btnQLDA);
-            this.pQLDA.Location = new System.Drawing.Point(13, 218);
+            this.pQLDA.Location = new System.Drawing.Point(1, 200);
             this.pQLDA.Name = "pQLDA";
-            this.pQLDA.Size = new System.Drawing.Size(352, 62);
+            this.pQLDA.Size = new System.Drawing.Size(366, 62);
             this.pQLDA.TabIndex = 3;
             // 
             // pictureBox3
@@ -299,9 +310,9 @@ namespace QLCHTAN
             this.pQLNU.Controls.Add(this.txtQLNU);
             this.pQLNU.Controls.Add(this.btnQLNU);
             this.pQLNU.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pQLNU.Location = new System.Drawing.Point(13, 286);
+            this.pQLNU.Location = new System.Drawing.Point(2, 264);
             this.pQLNU.Name = "pQLNU";
-            this.pQLNU.Size = new System.Drawing.Size(352, 62);
+            this.pQLNU.Size = new System.Drawing.Size(365, 62);
             this.pQLNU.TabIndex = 4;
             // 
             // pictureBox4
@@ -350,9 +361,9 @@ namespace QLCHTAN
             this.pQLLDA.Controls.Add(this.pictureBox5);
             this.pQLLDA.Controls.Add(this.txtQLLDA);
             this.pQLLDA.Controls.Add(this.btnQLLDA);
-            this.pQLLDA.Location = new System.Drawing.Point(13, 150);
+            this.pQLLDA.Location = new System.Drawing.Point(0, 136);
             this.pQLLDA.Name = "pQLLDA";
-            this.pQLLDA.Size = new System.Drawing.Size(352, 62);
+            this.pQLLDA.Size = new System.Drawing.Size(367, 62);
             this.pQLLDA.TabIndex = 5;
             // 
             // pictureBox5
@@ -401,9 +412,9 @@ namespace QLCHTAN
             this.pQLNCC.Controls.Add(this.pictureBox6);
             this.pQLNCC.Controls.Add(this.txtQLNCC);
             this.pQLNCC.Controls.Add(this.btnQLNCC);
-            this.pQLNCC.Location = new System.Drawing.Point(15, 558);
+            this.pQLNCC.Location = new System.Drawing.Point(4, 536);
             this.pQLNCC.Name = "pQLNCC";
-            this.pQLNCC.Size = new System.Drawing.Size(352, 62);
+            this.pQLNCC.Size = new System.Drawing.Size(363, 62);
             this.pQLNCC.TabIndex = 6;
             // 
             // pictureBox6
@@ -452,9 +463,9 @@ namespace QLCHTAN
             this.panel5.Controls.Add(this.pictureBox7);
             this.panel5.Controls.Add(this.txtQLKM);
             this.panel5.Controls.Add(this.btnQLKM);
-            this.panel5.Location = new System.Drawing.Point(14, 422);
+            this.panel5.Location = new System.Drawing.Point(3, 400);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(352, 62);
+            this.panel5.Size = new System.Drawing.Size(364, 62);
             this.panel5.TabIndex = 7;
             // 
             // pictureBox7
@@ -503,9 +514,9 @@ namespace QLCHTAN
             this.pQLLKM.Controls.Add(this.pictureBox8);
             this.pQLLKM.Controls.Add(this.txtQLLKM);
             this.pQLLKM.Controls.Add(this.btnQLLKM);
-            this.pQLLKM.Location = new System.Drawing.Point(14, 490);
+            this.pQLLKM.Location = new System.Drawing.Point(3, 468);
             this.pQLLKM.Name = "pQLLKM";
-            this.pQLLKM.Size = new System.Drawing.Size(352, 62);
+            this.pQLLKM.Size = new System.Drawing.Size(364, 62);
             this.pQLLKM.TabIndex = 8;
             // 
             // pictureBox8
@@ -554,9 +565,9 @@ namespace QLCHTAN
             this.pQLNH.Controls.Add(this.pictureBox9);
             this.pQLNH.Controls.Add(this.txtQLNH);
             this.pQLNH.Controls.Add(this.btnQLNH);
-            this.pQLNH.Location = new System.Drawing.Point(13, 756);
+            this.pQLNH.Location = new System.Drawing.Point(3, 734);
             this.pQLNH.Name = "pQLNH";
-            this.pQLNH.Size = new System.Drawing.Size(352, 62);
+            this.pQLNH.Size = new System.Drawing.Size(364, 62);
             this.pQLNH.TabIndex = 9;
             // 
             // pictureBox9
@@ -605,9 +616,9 @@ namespace QLCHTAN
             this.pXuatHang.Controls.Add(this.pictureBox10);
             this.pXuatHang.Controls.Add(this.txtQLXH);
             this.pXuatHang.Controls.Add(this.btnQLXH);
-            this.pXuatHang.Location = new System.Drawing.Point(13, 822);
+            this.pXuatHang.Location = new System.Drawing.Point(3, 798);
             this.pXuatHang.Name = "pXuatHang";
-            this.pXuatHang.Size = new System.Drawing.Size(352, 62);
+            this.pXuatHang.Size = new System.Drawing.Size(364, 62);
             this.pXuatHang.TabIndex = 10;
             // 
             // pictureBox10
@@ -656,9 +667,9 @@ namespace QLCHTAN
             this.pDatHang.Controls.Add(this.pictureBox11);
             this.pDatHang.Controls.Add(this.txtQLDH);
             this.pDatHang.Controls.Add(this.btnQLDH);
-            this.pDatHang.Location = new System.Drawing.Point(15, 626);
+            this.pDatHang.Location = new System.Drawing.Point(4, 604);
             this.pDatHang.Name = "pDatHang";
-            this.pDatHang.Size = new System.Drawing.Size(352, 62);
+            this.pDatHang.Size = new System.Drawing.Size(363, 62);
             this.pDatHang.TabIndex = 11;
             // 
             // pictureBox11
@@ -707,9 +718,9 @@ namespace QLCHTAN
             this.panel1.Controls.Add(this.pictureBox12);
             this.panel1.Controls.Add(this.txtQLTH);
             this.panel1.Controls.Add(this.btnQLTH);
-            this.panel1.Location = new System.Drawing.Point(14, 692);
+            this.panel1.Location = new System.Drawing.Point(4, 670);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(352, 62);
+            this.panel1.Size = new System.Drawing.Size(363, 62);
             this.panel1.TabIndex = 12;
             // 
             // pictureBox12
@@ -758,9 +769,9 @@ namespace QLCHTAN
             this.panel2.Controls.Add(this.pictureBox13);
             this.panel2.Controls.Add(this.txtQLMH);
             this.panel2.Controls.Add(this.btnQLMH);
-            this.panel2.Location = new System.Drawing.Point(14, 352);
+            this.panel2.Location = new System.Drawing.Point(3, 330);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(352, 62);
+            this.panel2.Size = new System.Drawing.Size(364, 62);
             this.panel2.TabIndex = 13;
             // 
             // pictureBox13
@@ -809,6 +820,7 @@ namespace QLCHTAN
             this.pChucNang.AutoScroll = true;
             this.pChucNang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.pChucNang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pChucNang.Controls.Add(this.panel7);
             this.pChucNang.Controls.Add(this.pQLOrder);
             this.pChucNang.Controls.Add(this.panel6);
             this.pChucNang.Controls.Add(this.panel4);
@@ -839,9 +851,9 @@ namespace QLCHTAN
             this.pQLOrder.Controls.Add(this.textBox3);
             this.pQLOrder.Controls.Add(this.button1);
             this.pQLOrder.Controls.Add(this.pictureBox17);
-            this.pQLOrder.Location = new System.Drawing.Point(12, 1020);
+            this.pQLOrder.Location = new System.Drawing.Point(3, 992);
             this.pQLOrder.Name = "pQLOrder";
-            this.pQLOrder.Size = new System.Drawing.Size(355, 61);
+            this.pQLOrder.Size = new System.Drawing.Size(364, 61);
             this.pQLOrder.TabIndex = 3;
             // 
             // textBox3
@@ -890,9 +902,9 @@ namespace QLCHTAN
             this.panel6.Controls.Add(this.pictureBox16);
             this.panel6.Controls.Add(this.textBox2);
             this.panel6.Controls.Add(this.btnQLHKB);
-            this.panel6.Location = new System.Drawing.Point(13, 952);
+            this.panel6.Location = new System.Drawing.Point(4, 928);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(352, 62);
+            this.panel6.Size = new System.Drawing.Size(363, 62);
             this.panel6.TabIndex = 12;
             // 
             // pictureBox16
@@ -941,9 +953,9 @@ namespace QLCHTAN
             this.panel4.Controls.Add(this.pictureBox15);
             this.panel4.Controls.Add(this.textBox1);
             this.panel4.Controls.Add(this.btnQLHT);
-            this.panel4.Location = new System.Drawing.Point(13, 886);
+            this.panel4.Location = new System.Drawing.Point(3, 864);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(352, 62);
+            this.panel4.Size = new System.Drawing.Size(365, 62);
             this.panel4.TabIndex = 11;
             // 
             // pictureBox15
@@ -1023,10 +1035,10 @@ namespace QLCHTAN
             // lblkDangXuat
             // 
             this.lblkDangXuat.AutoSize = true;
-            this.lblkDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblkDangXuat.Location = new System.Drawing.Point(326, 60);
+            this.lblkDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblkDangXuat.Location = new System.Drawing.Point(319, 60);
             this.lblkDangXuat.Name = "lblkDangXuat";
-            this.lblkDangXuat.Size = new System.Drawing.Size(56, 13);
+            this.lblkDangXuat.Size = new System.Drawing.Size(65, 13);
             this.lblkDangXuat.TabIndex = 19;
             this.lblkDangXuat.TabStop = true;
             this.lblkDangXuat.Text = "Đăng xuất";
@@ -1049,24 +1061,113 @@ namespace QLCHTAN
             this.pCuaSoChucNang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pCuaSoChucNang.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pCuaSoChucNang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pCuaSoChucNang.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pCuaSoChucNang.Location = new System.Drawing.Point(393, 1);
+            this.pCuaSoChucNang.Location = new System.Drawing.Point(393, 86);
             this.pCuaSoChucNang.Name = "pCuaSoChucNang";
-            this.pCuaSoChucNang.Size = new System.Drawing.Size(1162, 733);
+            this.pCuaSoChucNang.Size = new System.Drawing.Size(1151, 648);
             this.pCuaSoChucNang.TabIndex = 17;
+            // 
+            // panel7
+            // 
+            this.panel7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel7.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.textBox4);
+            this.panel7.Controls.Add(this.btnQLKH);
+            this.panel7.Controls.Add(this.pictureBox18);
+            this.panel7.Location = new System.Drawing.Point(3, 1056);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(364, 61);
+            this.panel7.TabIndex = 14;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Enabled = false;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(168, 5);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(179, 50);
+            this.textBox4.TabIndex = 5;
+            this.textBox4.Text = "Quản lí thông tin khách hàng";
+            // 
+            // btnQLKH
+            // 
+            this.btnQLKH.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnQLKH.FlatAppearance.BorderSize = 2;
+            this.btnQLKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLKH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnQLKH.Location = new System.Drawing.Point(61, 3);
+            this.btnQLKH.Name = "btnQLKH";
+            this.btnQLKH.Size = new System.Drawing.Size(102, 52);
+            this.btnQLKH.TabIndex = 4;
+            this.btnQLKH.Text = "Quản lí khách hàng";
+            this.btnQLKH.UseVisualStyleBackColor = true;
+            this.btnQLKH.Click += new System.EventHandler(this.btnQLKH_Click);
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
+            this.pictureBox18.Location = new System.Drawing.Point(5, 3);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(54, 54);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 3;
+            this.pictureBox18.TabStop = false;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel8.Controls.Add(this.pictureBox19);
+            this.panel8.Controls.Add(this.label2);
+            this.panel8.Location = new System.Drawing.Point(393, 1);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1151, 79);
+            this.panel8.TabIndex = 18;
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
+            this.pictureBox19.Location = new System.Drawing.Point(54, 11);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox19.TabIndex = 1;
+            this.pictureBox19.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Candara", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(124, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(804, 59);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "QUẢN LÍ CỬA HÀNG THỨC ĂN NHANH";
             // 
             // GiaoDienQuanLi_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(1556, 737);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.pCuaSoChucNang);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pChucNang);
-            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GiaoDienQuanLi_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1125,6 +1226,12 @@ namespace QLCHTAN
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1201,5 +1308,12 @@ namespace QLCHTAN
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button btnQLKH;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.PictureBox pictureBox19;
+        private System.Windows.Forms.Label label2;
     }
 }

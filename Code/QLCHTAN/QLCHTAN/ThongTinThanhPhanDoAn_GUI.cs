@@ -26,7 +26,7 @@ namespace QLCHTAN
 
         private void ThongTinThanhPhanDoAn_GUI_Load(object sender, EventArgs e)
         {
-            lblTenMonAn.Text = DoAn_GUI.tenDoAn;
+            lblTenMonAn.Text = DoAn_GUI.tenDoAn.ToUpper();
             dgvThanhPhanMon.DataSource = tttpda_BUS.show_ThanhPhanDoAn_BUS(DoAn_GUI.maDoAn);
             cbbTenThanhPhan.DataSource = tttpda_BUS.show_dsthanhPhanDoAn_BUS();
             cbbTenThanhPhan.DisplayMember = "TenHang";

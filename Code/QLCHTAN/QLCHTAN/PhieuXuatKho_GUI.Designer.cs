@@ -29,6 +29,7 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhieuXuatKho_GUI));
             this.lblkThoat = new System.Windows.Forms.LinkLabel();
             this.lblkHuyPhieuXuat = new System.Windows.Forms.LinkLabel();
             this.lblkThongTinChiTiet = new System.Windows.Forms.LinkLabel();
@@ -47,9 +48,11 @@ namespace QLCHTAN
             this.lblkDuyetPhieuXuat = new System.Windows.Forms.LinkLabel();
             this.lblTrangThai = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuXuat)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblkThoat
@@ -111,7 +114,7 @@ namespace QLCHTAN
             this.panel1.Controls.Add(this.dgvPhieuXuat);
             this.panel1.Location = new System.Drawing.Point(370, 76);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(754, 365);
+            this.panel1.Size = new System.Drawing.Size(783, 365);
             this.panel1.TabIndex = 9;
             // 
             // dgvPhieuXuat
@@ -131,7 +134,7 @@ namespace QLCHTAN
             this.dgvPhieuXuat.Location = new System.Drawing.Point(3, 3);
             this.dgvPhieuXuat.Name = "dgvPhieuXuat";
             this.dgvPhieuXuat.ReadOnly = true;
-            this.dgvPhieuXuat.Size = new System.Drawing.Size(748, 359);
+            this.dgvPhieuXuat.Size = new System.Drawing.Size(777, 359);
             this.dgvPhieuXuat.TabIndex = 0;
             this.dgvPhieuXuat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuXuat_CellClick);
             // 
@@ -182,7 +185,7 @@ namespace QLCHTAN
             this.label6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(618, 47);
+            this.label6.Location = new System.Drawing.Point(651, 30);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(238, 26);
             this.label6.TabIndex = 10;
@@ -243,12 +246,23 @@ namespace QLCHTAN
             this.label3.TabIndex = 27;
             this.label3.Text = "Trạng thái:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(895, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // PhieuXuatKho_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1165, 470);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblkThoat);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
@@ -263,6 +277,7 @@ namespace QLCHTAN
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuXuat)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,5 +303,6 @@ namespace QLCHTAN
         private System.Windows.Forms.DataGridViewTextBoxColumn maXuatt;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayXuat;
         private System.Windows.Forms.DataGridViewTextBoxColumn trangThai;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

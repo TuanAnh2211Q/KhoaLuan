@@ -136,6 +136,8 @@ namespace QLCHTAN
             panel3.BackColor = SystemColors.Control;
             txtTaiKhoan.BackColor = SystemColors.Control;
         }
+
+        
     }
     
 }

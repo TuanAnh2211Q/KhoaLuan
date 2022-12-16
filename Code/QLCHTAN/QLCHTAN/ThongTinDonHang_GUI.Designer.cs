@@ -29,6 +29,7 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongTinDonHang_GUI));
             this.dgvThongTinHoaDon = new System.Windows.Forms.DataGridView();
             this.maSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +45,6 @@ namespace QLCHTAN
             this.label2 = new System.Windows.Forms.Label();
             this.lblKhachHang = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblTongDonGia = new System.Windows.Forms.Label();
             this.btnXacNhan = new System.Windows.Forms.Button();
@@ -66,10 +66,18 @@ namespace QLCHTAN
             this.label15 = new System.Windows.Forms.Label();
             this.lblKhuyenMai = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.btnQuayLai = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinHoaDon)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvThongTinHoaDon
@@ -77,7 +85,7 @@ namespace QLCHTAN
             this.dgvThongTinHoaDon.AllowUserToAddRows = false;
             this.dgvThongTinHoaDon.AllowUserToDeleteRows = false;
             this.dgvThongTinHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvThongTinHoaDon.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvThongTinHoaDon.BackgroundColor = System.Drawing.Color.PaleGreen;
             this.dgvThongTinHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongTinHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maSanPham,
@@ -129,6 +137,7 @@ namespace QLCHTAN
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Honeydew;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.txtGhiChu);
             this.panel1.Controls.Add(this.label7);
@@ -163,6 +172,7 @@ namespace QLCHTAN
             // lblDiaChi
             // 
             this.lblDiaChi.AutoSize = true;
+            this.lblDiaChi.ForeColor = System.Drawing.Color.Red;
             this.lblDiaChi.Location = new System.Drawing.Point(94, 68);
             this.lblDiaChi.Name = "lblDiaChi";
             this.lblDiaChi.Size = new System.Drawing.Size(96, 18);
@@ -181,6 +191,7 @@ namespace QLCHTAN
             // lblSDT
             // 
             this.lblSDT.AutoSize = true;
+            this.lblSDT.ForeColor = System.Drawing.Color.Red;
             this.lblSDT.Location = new System.Drawing.Point(94, 40);
             this.lblSDT.Name = "lblSDT";
             this.lblSDT.Size = new System.Drawing.Size(96, 18);
@@ -199,6 +210,7 @@ namespace QLCHTAN
             // lblKhachHang
             // 
             this.lblKhachHang.AutoSize = true;
+            this.lblKhachHang.ForeColor = System.Drawing.Color.Red;
             this.lblKhachHang.Location = new System.Drawing.Point(94, 10);
             this.lblKhachHang.Name = "lblKhachHang";
             this.lblKhachHang.Size = new System.Drawing.Size(96, 18);
@@ -214,32 +226,24 @@ namespace QLCHTAN
             this.label1.TabIndex = 0;
             this.label1.Text = "Khách hàng:";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(354, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(336, 39);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "THÔNG TIN ĐƠN HÀNG";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 635);
+            this.label5.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(66, 637);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 18);
+            this.label5.Size = new System.Drawing.Size(153, 29);
             this.label5.TabIndex = 4;
             this.label5.Text = "Tổng đơn giá:";
             // 
             // lblTongDonGia
             // 
             this.lblTongDonGia.AutoSize = true;
-            this.lblTongDonGia.Location = new System.Drawing.Point(115, 635);
+            this.lblTongDonGia.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTongDonGia.ForeColor = System.Drawing.Color.Red;
+            this.lblTongDonGia.Location = new System.Drawing.Point(236, 637);
             this.lblTongDonGia.Name = "lblTongDonGia";
-            this.lblTongDonGia.Size = new System.Drawing.Size(84, 18);
+            this.lblTongDonGia.Size = new System.Drawing.Size(127, 29);
             this.lblTongDonGia.TabIndex = 5;
             this.lblTongDonGia.Text = "...................";
             // 
@@ -257,6 +261,7 @@ namespace QLCHTAN
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Honeydew;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.lblNhanVien);
@@ -268,9 +273,9 @@ namespace QLCHTAN
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.lblMaDonHang);
             this.panel2.Controls.Add(this.lbl);
-            this.panel2.Location = new System.Drawing.Point(20, 60);
+            this.panel2.Location = new System.Drawing.Point(12, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(327, 160);
+            this.panel2.Size = new System.Drawing.Size(335, 160);
             this.panel2.TabIndex = 7;
             // 
             // label12
@@ -285,6 +290,7 @@ namespace QLCHTAN
             // lblNhanVien
             // 
             this.lblNhanVien.AutoSize = true;
+            this.lblNhanVien.ForeColor = System.Drawing.Color.Red;
             this.lblNhanVien.Location = new System.Drawing.Point(104, 127);
             this.lblNhanVien.Name = "lblNhanVien";
             this.lblNhanVien.Size = new System.Drawing.Size(96, 18);
@@ -294,6 +300,7 @@ namespace QLCHTAN
             // lblThanhToan
             // 
             this.lblThanhToan.AutoSize = true;
+            this.lblThanhToan.ForeColor = System.Drawing.Color.Red;
             this.lblThanhToan.Location = new System.Drawing.Point(104, 100);
             this.lblThanhToan.Name = "lblThanhToan";
             this.lblThanhToan.Size = new System.Drawing.Size(96, 18);
@@ -312,6 +319,7 @@ namespace QLCHTAN
             // lblLoaiDon
             // 
             this.lblLoaiDon.AutoSize = true;
+            this.lblLoaiDon.ForeColor = System.Drawing.Color.Red;
             this.lblLoaiDon.Location = new System.Drawing.Point(104, 68);
             this.lblLoaiDon.Name = "lblLoaiDon";
             this.lblLoaiDon.Size = new System.Drawing.Size(96, 18);
@@ -330,6 +338,7 @@ namespace QLCHTAN
             // lblTenDonHang
             // 
             this.lblTenDonHang.AutoSize = true;
+            this.lblTenDonHang.ForeColor = System.Drawing.Color.Red;
             this.lblTenDonHang.Location = new System.Drawing.Point(104, 40);
             this.lblTenDonHang.Name = "lblTenDonHang";
             this.lblTenDonHang.Size = new System.Drawing.Size(96, 18);
@@ -348,6 +357,7 @@ namespace QLCHTAN
             // lblMaDonHang
             // 
             this.lblMaDonHang.AutoSize = true;
+            this.lblMaDonHang.ForeColor = System.Drawing.Color.Red;
             this.lblMaDonHang.Location = new System.Drawing.Point(104, 10);
             this.lblMaDonHang.Name = "lblMaDonHang";
             this.lblMaDonHang.Size = new System.Drawing.Size(96, 18);
@@ -365,6 +375,7 @@ namespace QLCHTAN
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Honeydew;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.lblTrangThai);
             this.panel3.Controls.Add(this.label13);
@@ -380,6 +391,7 @@ namespace QLCHTAN
             // lblTrangThai
             // 
             this.lblTrangThai.AutoSize = true;
+            this.lblTrangThai.ForeColor = System.Drawing.Color.Red;
             this.lblTrangThai.Location = new System.Drawing.Point(94, 68);
             this.lblTrangThai.Name = "lblTrangThai";
             this.lblTrangThai.Size = new System.Drawing.Size(96, 18);
@@ -398,6 +410,7 @@ namespace QLCHTAN
             // lblThoiGian
             // 
             this.lblThoiGian.AutoSize = true;
+            this.lblThoiGian.ForeColor = System.Drawing.Color.Red;
             this.lblThoiGian.Location = new System.Drawing.Point(94, 40);
             this.lblThoiGian.Name = "lblThoiGian";
             this.lblThoiGian.Size = new System.Drawing.Size(96, 18);
@@ -416,6 +429,7 @@ namespace QLCHTAN
             // lblKhuyenMai
             // 
             this.lblKhuyenMai.AutoSize = true;
+            this.lblKhuyenMai.ForeColor = System.Drawing.Color.Red;
             this.lblKhuyenMai.Location = new System.Drawing.Point(147, 10);
             this.lblKhuyenMai.Name = "lblKhuyenMai";
             this.lblKhuyenMai.Size = new System.Drawing.Size(96, 18);
@@ -431,21 +445,78 @@ namespace QLCHTAN
             this.label17.TabIndex = 0;
             this.label17.Text = "Khuyến mãi áp dụng:";
             // 
+            // btnQuayLai
+            // 
+            this.btnQuayLai.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnQuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnQuayLai.Location = new System.Drawing.Point(771, 648);
+            this.btnQuayLai.Name = "btnQuayLai";
+            this.btnQuayLai.Size = new System.Drawing.Size(79, 34);
+            this.btnQuayLai.TabIndex = 9;
+            this.btnQuayLai.Text = "Quay lại";
+            this.btnQuayLai.UseVisualStyleBackColor = false;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.Location = new System.Drawing.Point(12, 12);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1010, 42);
+            this.panel4.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Candara", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(347, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(300, 36);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "THÔNG TIN ĐƠN HÀNG";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(638, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 628);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
             // ThongTinDonHang_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1034, 710);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.btnQuayLai);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.lblTongDonGia);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvThongTinHoaDon);
             this.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ThongTinDonHang_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -458,6 +529,10 @@ namespace QLCHTAN
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -473,7 +548,6 @@ namespace QLCHTAN
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblDiaChi;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblTongDonGia;
         private System.Windows.Forms.Button btnXacNhan;
@@ -502,5 +576,10 @@ namespace QLCHTAN
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn donGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn thanhTien;
+        private System.Windows.Forms.Button btnQuayLai;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

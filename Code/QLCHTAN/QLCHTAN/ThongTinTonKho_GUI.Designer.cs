@@ -29,6 +29,7 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongTinTonKho_GUI));
             this.lblkThoat = new System.Windows.Forms.LinkLabel();
             this.dgvThongTinHangTon = new System.Windows.Forms.DataGridView();
             this.maHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,8 +54,10 @@ namespace QLCHTAN
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.lblkLamMoi = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinHangTon)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblkThoat
@@ -142,7 +145,7 @@ namespace QLCHTAN
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(610, 10);
+            this.label1.Location = new System.Drawing.Point(608, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(363, 29);
             this.label1.TabIndex = 2;
@@ -311,12 +314,23 @@ namespace QLCHTAN
             this.lblkLamMoi.Text = "Làm mới";
             this.lblkLamMoi.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkLamMoi_LinkClicked);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(977, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // ThongTinTonKho_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1210, 600);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblkLamMoi);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.groupBox1);
@@ -332,6 +346,7 @@ namespace QLCHTAN
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinHangTon)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,5 +378,6 @@ namespace QLCHTAN
         private System.Windows.Forms.TextBox txtTenHang;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel lblkLamMoi;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

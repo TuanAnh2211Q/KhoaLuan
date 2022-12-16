@@ -48,10 +48,12 @@ namespace QLCHTAN
             this.cbbNuoc = new System.Windows.Forms.ComboBox();
             this.txtTenNuoc = new System.Windows.Forms.TextBox();
             this.txtDonViBan = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNuocUong)).BeginInit();
             this.grbThongTinNuocUong.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,11 +133,11 @@ namespace QLCHTAN
             this.DonViBan,
             this.DonGia});
             this.dgvNuocUong.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvNuocUong.Location = new System.Drawing.Point(314, 42);
+            this.dgvNuocUong.Location = new System.Drawing.Point(314, 39);
             this.dgvNuocUong.Margin = new System.Windows.Forms.Padding(4);
             this.dgvNuocUong.Name = "dgvNuocUong";
             this.dgvNuocUong.ReadOnly = true;
-            this.dgvNuocUong.Size = new System.Drawing.Size(405, 203);
+            this.dgvNuocUong.Size = new System.Drawing.Size(405, 206);
             this.dgvNuocUong.TabIndex = 37;
             this.dgvNuocUong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNuocUong_CellClick);
             // 
@@ -241,11 +243,11 @@ namespace QLCHTAN
             this.grbThongTinNuocUong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbThongTinNuocUong.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbThongTinNuocUong.ForeColor = System.Drawing.Color.Black;
-            this.grbThongTinNuocUong.Location = new System.Drawing.Point(13, 22);
+            this.grbThongTinNuocUong.Location = new System.Drawing.Point(13, 31);
             this.grbThongTinNuocUong.Margin = new System.Windows.Forms.Padding(4);
             this.grbThongTinNuocUong.Name = "grbThongTinNuocUong";
             this.grbThongTinNuocUong.Padding = new System.Windows.Forms.Padding(4);
-            this.grbThongTinNuocUong.Size = new System.Drawing.Size(295, 223);
+            this.grbThongTinNuocUong.Size = new System.Drawing.Size(295, 214);
             this.grbThongTinNuocUong.TabIndex = 44;
             this.grbThongTinNuocUong.TabStop = false;
             this.grbThongTinNuocUong.Text = "Thông tin nước uống";
@@ -280,25 +282,36 @@ namespace QLCHTAN
             this.txtDonViBan.Size = new System.Drawing.Size(199, 23);
             this.txtDonViBan.TabIndex = 35;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(314, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(405, 44);
+            this.panel1.TabIndex = 45;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Candara", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label5.Location = new System.Drawing.Point(397, 9);
+            this.label5.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(90, 7);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(208, 26);
-            this.label5.TabIndex = 45;
-            this.label5.Text = "Danh mục nước uống";
+            this.label5.Size = new System.Drawing.Size(241, 26);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "DANH MỤC NƯỚC UỐNG";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(601, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(337, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(26, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 46;
+            this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
             // NuocUong_GUI
@@ -307,10 +320,9 @@ namespace QLCHTAN
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(725, 250);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.grbThongTinNuocUong);
             this.Controls.Add(this.dgvNuocUong);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -321,9 +333,10 @@ namespace QLCHTAN
             ((System.ComponentModel.ISupportInitialize)(this.dgvNuocUong)).EndInit();
             this.grbThongTinNuocUong.ResumeLayout(false);
             this.grbThongTinNuocUong.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -341,12 +354,13 @@ namespace QLCHTAN
         private System.Windows.Forms.GroupBox grbThongTinNuocUong;
         private System.Windows.Forms.TextBox txtTenNuoc;
         private System.Windows.Forms.TextBox txtDonViBan;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNuoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNuoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonViBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
         private System.Windows.Forms.ComboBox cbbNuoc;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

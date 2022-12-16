@@ -155,7 +155,6 @@ namespace QLCHTAN
             cbbLoaiKhuyenMai.DisplayMember = "tenLoaiKhuyenMai";
             cbbLoaiKhuyenMai.ValueMember = "maLoaiKhuyenMai";
             txtMaKhuyenMai.Enabled = true;
-            btnDanhSachSanPhamApDung.Enabled = false;
 
         }
 
@@ -180,13 +179,6 @@ namespace QLCHTAN
                 e.Handled = true;
         }
 
-        private void txtMaKhuyenMai_TextChanged(object sender, EventArgs e)
-        {
-            if (txtMaKhuyenMai.Text == "")
-                btnDanhSachSanPhamApDung.Enabled = false;
-            else
-                btnDanhSachSanPhamApDung.Enabled = true;
-        }
 
         private void lblkThoat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

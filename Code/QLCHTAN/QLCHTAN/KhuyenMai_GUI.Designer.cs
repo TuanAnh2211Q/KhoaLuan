@@ -37,7 +37,6 @@ namespace QLCHTAN
             this.txtMaKhuyenMai = new System.Windows.Forms.TextBox();
             this.txtMucGiam = new System.Windows.Forms.TextBox();
             this.txtTenKhuyenMai = new System.Windows.Forms.TextBox();
-            this.btnDanhSachSanPhamApDung = new System.Windows.Forms.Button();
             this.dgvThongTinKhuyenMai = new System.Windows.Forms.DataGridView();
             this.maKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,7 +60,7 @@ namespace QLCHTAN
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkRed;
+            this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(514, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(272, 33);
@@ -109,7 +108,6 @@ namespace QLCHTAN
             this.txtMaKhuyenMai.Name = "txtMaKhuyenMai";
             this.txtMaKhuyenMai.Size = new System.Drawing.Size(237, 23);
             this.txtMaKhuyenMai.TabIndex = 6;
-            this.txtMaKhuyenMai.TextChanged += new System.EventHandler(this.txtMaKhuyenMai_TextChanged);
             // 
             // txtMucGiam
             // 
@@ -129,20 +127,6 @@ namespace QLCHTAN
             this.txtTenKhuyenMai.Name = "txtTenKhuyenMai";
             this.txtTenKhuyenMai.Size = new System.Drawing.Size(236, 23);
             this.txtTenKhuyenMai.TabIndex = 9;
-            // 
-            // btnDanhSachSanPhamApDung
-            // 
-            this.btnDanhSachSanPhamApDung.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDanhSachSanPhamApDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDanhSachSanPhamApDung.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDanhSachSanPhamApDung.Location = new System.Drawing.Point(5, 135);
-            this.btnDanhSachSanPhamApDung.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDanhSachSanPhamApDung.Name = "btnDanhSachSanPhamApDung";
-            this.btnDanhSachSanPhamApDung.Size = new System.Drawing.Size(89, 51);
-            this.btnDanhSachSanPhamApDung.TabIndex = 11;
-            this.btnDanhSachSanPhamApDung.Text = "Danh sách sản phẩm áp dụng";
-            this.btnDanhSachSanPhamApDung.UseVisualStyleBackColor = false;
-            this.btnDanhSachSanPhamApDung.Click += new System.EventHandler(this.btnDanhSachSanPhamApDung_Click);
             // 
             // dgvThongTinKhuyenMai
             // 
@@ -290,7 +274,6 @@ namespace QLCHTAN
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox1.Controls.Add(this.btnDanhSachSanPhamApDung);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Controls.Add(this.cbbLoaiKhuyenMai);
@@ -357,7 +340,6 @@ namespace QLCHTAN
         private System.Windows.Forms.TextBox txtMaKhuyenMai;
         private System.Windows.Forms.TextBox txtMucGiam;
         private System.Windows.Forms.TextBox txtTenKhuyenMai;
-        private System.Windows.Forms.Button btnDanhSachSanPhamApDung;
         private System.Windows.Forms.DataGridView dgvThongTinKhuyenMai;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnSua;

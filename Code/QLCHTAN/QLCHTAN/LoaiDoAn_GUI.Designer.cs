@@ -55,7 +55,7 @@ namespace QLCHTAN
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label5.Location = new System.Drawing.Point(607, 9);
+            this.label5.Location = new System.Drawing.Point(581, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(231, 26);
             this.label5.TabIndex = 24;
@@ -134,7 +134,7 @@ namespace QLCHTAN
             this.dgvLoaiDoAn.Location = new System.Drawing.Point(407, 38);
             this.dgvLoaiDoAn.Name = "dgvLoaiDoAn";
             this.dgvLoaiDoAn.ReadOnly = true;
-            this.dgvLoaiDoAn.Size = new System.Drawing.Size(609, 127);
+            this.dgvLoaiDoAn.Size = new System.Drawing.Size(598, 127);
             this.dgvLoaiDoAn.TabIndex = 19;
             this.dgvLoaiDoAn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoaiDoAn_CellClick);
             // 
@@ -223,7 +223,7 @@ namespace QLCHTAN
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1019, 177);
+            this.ClientSize = new System.Drawing.Size(1017, 177);
             this.Controls.Add(this.lblkThoat);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);

@@ -257,16 +257,16 @@ namespace QLCHTAN
             this.lblTaiKhoan.ForeColor = System.Drawing.Color.Red;
             this.lblTaiKhoan.Location = new System.Drawing.Point(516, 23);
             this.lblTaiKhoan.Name = "lblTaiKhoan";
-            this.lblTaiKhoan.Size = new System.Drawing.Size(146, 19);
+            this.lblTaiKhoan.Size = new System.Drawing.Size(169, 19);
             this.lblTaiKhoan.TabIndex = 2;
-            this.lblTaiKhoan.Text = "Danh sách tài khoản";
+            this.lblTaiKhoan.Text = "DANH SÁCH TÀI KHOẢN";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(668, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(691, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
