@@ -75,8 +75,28 @@ namespace QLCHTAN
            
         }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Dispose();
+        }
 
       
+
+        private void txtMatKhau_Click(object sender, EventArgs e)
+        {
+            txtMatKhau.BackColor = Color.White;
+            panel4.BackColor = Color.White;
+            panel3.BackColor = SystemColors.Control;
+            txtTaiKhoan.BackColor = SystemColors.Control;
+        }
+
+        private void txtTaiKhoan_Click(object sender, EventArgs e)
+        {
+            txtTaiKhoan.BackColor = Color.White;
+            panel3.BackColor = Color.White;
+            panel4.BackColor = SystemColors.Control;
+            txtMatKhau.BackColor = SystemColors.Control;
+        }
     }
 }

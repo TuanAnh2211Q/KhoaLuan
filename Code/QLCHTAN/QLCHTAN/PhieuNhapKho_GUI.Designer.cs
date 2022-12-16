@@ -29,6 +29,7 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhieuNhapKho_GUI));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblkHuyPhieuNhap = new System.Windows.Forms.LinkLabel();
             this.txtMaDatHang = new System.Windows.Forms.TextBox();
@@ -52,9 +53,11 @@ namespace QLCHTAN
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.lblkThoat = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhap)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -277,7 +280,7 @@ namespace QLCHTAN
             this.label6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(592, 42);
+            this.label6.Location = new System.Drawing.Point(589, 25);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(242, 26);
             this.label6.TabIndex = 6;
@@ -294,12 +297,22 @@ namespace QLCHTAN
             this.lblkThoat.Text = "Thoát";
             this.lblkThoat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkThoat_LinkClicked);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(837, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 43);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // PhieuNhapKho_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1106, 447);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblkThoat);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
@@ -314,6 +327,7 @@ namespace QLCHTAN
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhap)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,5 +358,6 @@ namespace QLCHTAN
         private System.Windows.Forms.DataGridViewTextBoxColumn trangThai;
         private System.Windows.Forms.LinkLabel lblkThoat;
         private System.Windows.Forms.LinkLabel lblkHuyPhieuNhap;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

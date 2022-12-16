@@ -29,7 +29,9 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KhoBan_GUI));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblkTaoPhieuXuat = new System.Windows.Forms.LinkLabel();
             this.lblTenHang = new System.Windows.Forms.Label();
             this.lblSoLuong = new System.Windows.Forms.Label();
             this.lblTongGia = new System.Windows.Forms.Label();
@@ -47,10 +49,11 @@ namespace QLCHTAN
             this.maXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.lblkThoat = new System.Windows.Forms.LinkLabel();
-            this.lblkTaoPhieuXuat = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhoBan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -74,12 +77,24 @@ namespace QLCHTAN
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin mặt hàng";
             // 
+            // lblkTaoPhieuXuat
+            // 
+            this.lblkTaoPhieuXuat.AutoSize = true;
+            this.lblkTaoPhieuXuat.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblkTaoPhieuXuat.Location = new System.Drawing.Point(89, 271);
+            this.lblkTaoPhieuXuat.Name = "lblkTaoPhieuXuat";
+            this.lblkTaoPhieuXuat.Size = new System.Drawing.Size(127, 18);
+            this.lblkTaoPhieuXuat.TabIndex = 11;
+            this.lblkTaoPhieuXuat.TabStop = true;
+            this.lblkTaoPhieuXuat.Text = "Tạo phiếu xuất kho";
+            this.lblkTaoPhieuXuat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkTaoPhieuXuat_LinkClicked);
+            // 
             // lblTenHang
             // 
             this.lblTenHang.AutoSize = true;
             this.lblTenHang.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenHang.ForeColor = System.Drawing.Color.Red;
-            this.lblTenHang.Location = new System.Drawing.Point(89, 73);
+            this.lblTenHang.Location = new System.Drawing.Point(89, 99);
             this.lblTenHang.Name = "lblTenHang";
             this.lblTenHang.Size = new System.Drawing.Size(68, 18);
             this.lblTenHang.TabIndex = 7;
@@ -90,7 +105,7 @@ namespace QLCHTAN
             this.lblSoLuong.AutoSize = true;
             this.lblSoLuong.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSoLuong.ForeColor = System.Drawing.Color.Red;
-            this.lblSoLuong.Location = new System.Drawing.Point(89, 100);
+            this.lblSoLuong.Location = new System.Drawing.Point(89, 126);
             this.lblSoLuong.Name = "lblSoLuong";
             this.lblSoLuong.Size = new System.Drawing.Size(68, 18);
             this.lblSoLuong.TabIndex = 6;
@@ -101,7 +116,7 @@ namespace QLCHTAN
             this.lblTongGia.AutoSize = true;
             this.lblTongGia.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTongGia.ForeColor = System.Drawing.Color.Red;
-            this.lblTongGia.Location = new System.Drawing.Point(90, 132);
+            this.lblTongGia.Location = new System.Drawing.Point(90, 158);
             this.lblTongGia.Name = "lblTongGia";
             this.lblTongGia.Size = new System.Drawing.Size(68, 18);
             this.lblTongGia.TabIndex = 5;
@@ -112,7 +127,7 @@ namespace QLCHTAN
             this.lblMaHang.AutoSize = true;
             this.lblMaHang.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaHang.ForeColor = System.Drawing.Color.Red;
-            this.lblMaHang.Location = new System.Drawing.Point(89, 44);
+            this.lblMaHang.Location = new System.Drawing.Point(89, 70);
             this.lblMaHang.Name = "lblMaHang";
             this.lblMaHang.Size = new System.Drawing.Size(68, 18);
             this.lblMaHang.TabIndex = 4;
@@ -122,7 +137,7 @@ namespace QLCHTAN
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 132);
+            this.label5.Location = new System.Drawing.Point(6, 158);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 18);
             this.label5.TabIndex = 3;
@@ -132,7 +147,7 @@ namespace QLCHTAN
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 73);
+            this.label4.Location = new System.Drawing.Point(6, 99);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 18);
             this.label4.TabIndex = 2;
@@ -142,7 +157,7 @@ namespace QLCHTAN
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 100);
+            this.label3.Location = new System.Drawing.Point(6, 126);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 18);
             this.label3.TabIndex = 1;
@@ -152,7 +167,7 @@ namespace QLCHTAN
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 44);
+            this.label2.Location = new System.Drawing.Point(6, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 18);
             this.label2.TabIndex = 0;
@@ -236,7 +251,7 @@ namespace QLCHTAN
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(464, 23);
+            this.label1.Location = new System.Drawing.Point(423, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(343, 26);
             this.label1.TabIndex = 2;
@@ -254,17 +269,15 @@ namespace QLCHTAN
             this.lblkThoat.Text = "Thoát";
             this.lblkThoat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkThoat_LinkClicked);
             // 
-            // lblkTaoPhieuXuat
+            // pictureBox1
             // 
-            this.lblkTaoPhieuXuat.AutoSize = true;
-            this.lblkTaoPhieuXuat.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblkTaoPhieuXuat.Location = new System.Drawing.Point(89, 294);
-            this.lblkTaoPhieuXuat.Name = "lblkTaoPhieuXuat";
-            this.lblkTaoPhieuXuat.Size = new System.Drawing.Size(127, 18);
-            this.lblkTaoPhieuXuat.TabIndex = 11;
-            this.lblkTaoPhieuXuat.TabStop = true;
-            this.lblkTaoPhieuXuat.Text = "Tạo phiếu xuất kho";
-            this.lblkTaoPhieuXuat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkTaoPhieuXuat_LinkClicked);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(772, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // KhoBan_GUI
             // 
@@ -272,6 +285,7 @@ namespace QLCHTAN
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(933, 363);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblkThoat);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -286,6 +300,7 @@ namespace QLCHTAN
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhoBan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,5 +327,6 @@ namespace QLCHTAN
         private System.Windows.Forms.DataGridViewTextBoxColumn tongGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn maXuat;
         private System.Windows.Forms.LinkLabel lblkTaoPhieuXuat;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

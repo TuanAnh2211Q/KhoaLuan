@@ -187,5 +187,13 @@ namespace QLCHTAN
             this.pCuaSoChucNang.Controls.Add(order);
             order.Show();
         }
+
+        private void btnQLKH_Click(object sender, EventArgs e)
+        {
+            pCuaSoChucNang.Controls.Clear();
+            KhachHang_GUI khachHang = new KhachHang_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true }; ;
+            this.pCuaSoChucNang.Controls.Add(khachHang);
+            khachHang.Show();
+        }
     }
 }

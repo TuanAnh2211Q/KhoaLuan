@@ -105,10 +105,11 @@ namespace QLCHTAN
             // 
             // btnHuy
             // 
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Location = new System.Drawing.Point(412, 441);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(2);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(58, 25);
+            this.btnHuy.Size = new System.Drawing.Size(58, 27);
             this.btnHuy.TabIndex = 21;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -125,6 +126,7 @@ namespace QLCHTAN
             // 
             // btnTiepTuc
             // 
+            this.btnTiepTuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTiepTuc.Location = new System.Drawing.Point(475, 440);
             this.btnTiepTuc.Margin = new System.Windows.Forms.Padding(2);
             this.btnTiepTuc.Name = "btnTiepTuc";
@@ -213,6 +215,7 @@ namespace QLCHTAN
             // 
             // btnQuayLai
             // 
+            this.btnQuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuayLai.Location = new System.Drawing.Point(431, 456);
             this.btnQuayLai.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuayLai.Name = "btnQuayLai";
@@ -224,6 +227,7 @@ namespace QLCHTAN
             // 
             // btnXacNhan
             // 
+            this.btnXacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXacNhan.Location = new System.Drawing.Point(494, 456);
             this.btnXacNhan.Margin = new System.Windows.Forms.Padding(2);
             this.btnXacNhan.Name = "btnXacNhan";
@@ -291,6 +295,7 @@ namespace QLCHTAN
             this.ClientSize = new System.Drawing.Size(605, 534);
             this.Controls.Add(this.tbThemPhieuNhap);
             this.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThemPhieuNhap_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThemPhieuNhap_GUI";

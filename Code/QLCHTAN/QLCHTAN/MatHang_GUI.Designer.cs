@@ -121,7 +121,7 @@ namespace QLCHTAN
             this.tabMatHang.Location = new System.Drawing.Point(12, 12);
             this.tabMatHang.Name = "tabMatHang";
             this.tabMatHang.SelectedIndex = 0;
-            this.tabMatHang.Size = new System.Drawing.Size(1212, 707);
+            this.tabMatHang.Size = new System.Drawing.Size(1212, 700);
             this.tabMatHang.TabIndex = 0;
             // 
             // tabNguyenLieu
@@ -133,7 +133,7 @@ namespace QLCHTAN
             this.tabNguyenLieu.Location = new System.Drawing.Point(4, 27);
             this.tabNguyenLieu.Name = "tabNguyenLieu";
             this.tabNguyenLieu.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNguyenLieu.Size = new System.Drawing.Size(1204, 676);
+            this.tabNguyenLieu.Size = new System.Drawing.Size(1204, 669);
             this.tabNguyenLieu.TabIndex = 0;
             this.tabNguyenLieu.Text = "Thông tin nguyên liệu";
             this.tabNguyenLieu.UseVisualStyleBackColor = true;
@@ -141,7 +141,7 @@ namespace QLCHTAN
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(490, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(558, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(42, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -152,12 +152,12 @@ namespace QLCHTAN
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label9.Location = new System.Drawing.Point(187, 43);
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(307, 19);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(297, 26);
+            this.label9.Size = new System.Drawing.Size(245, 26);
             this.label9.TabIndex = 7;
-            this.label9.Text = "Danh sách mặt hàng nguyên liệu";
+            this.label9.Text = "Danh sách mặt hàng đồ ăn";
             // 
             // dgvMatHang
             // 
@@ -179,10 +179,10 @@ namespace QLCHTAN
             this.NSX,
             this.HSD,
             this.ghiChu});
-            this.dgvMatHang.Location = new System.Drawing.Point(35, 93);
+            this.dgvMatHang.Location = new System.Drawing.Point(6, 51);
             this.dgvMatHang.Name = "dgvMatHang";
             this.dgvMatHang.ReadOnly = true;
-            this.dgvMatHang.Size = new System.Drawing.Size(832, 553);
+            this.dgvMatHang.Size = new System.Drawing.Size(861, 612);
             this.dgvMatHang.TabIndex = 6;
             this.dgvMatHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatHang_CellClick);
             // 
@@ -276,9 +276,9 @@ namespace QLCHTAN
             this.groupBox1.Controls.Add(this.dtHSD);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(873, 43);
+            this.groupBox1.Location = new System.Drawing.Point(873, 19);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(296, 603);
+            this.groupBox1.Size = new System.Drawing.Size(325, 644);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin mặt hàng";
@@ -286,9 +286,9 @@ namespace QLCHTAN
             // btnThem
             // 
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnThem.Location = new System.Drawing.Point(6, 292);
+            this.btnThem.Location = new System.Drawing.Point(9, 295);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(62, 23);
+            this.btnThem.Size = new System.Drawing.Size(81, 23);
             this.btnThem.TabIndex = 5;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -300,15 +300,15 @@ namespace QLCHTAN
             this.txtGhiChu.Location = new System.Drawing.Point(102, 233);
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(178, 56);
+            this.txtGhiChu.Size = new System.Drawing.Size(217, 56);
             this.txtGhiChu.TabIndex = 11;
             // 
             // btnXoa
             // 
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnXoa.Location = new System.Drawing.Point(74, 292);
+            this.btnXoa.Location = new System.Drawing.Point(96, 295);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(61, 23);
+            this.btnXoa.Size = new System.Drawing.Size(68, 23);
             this.btnXoa.TabIndex = 6;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -321,13 +321,13 @@ namespace QLCHTAN
             this.cbbNCC.FormattingEnabled = true;
             this.cbbNCC.Location = new System.Drawing.Point(102, 79);
             this.cbbNCC.Name = "cbbNCC";
-            this.cbbNCC.Size = new System.Drawing.Size(178, 23);
+            this.cbbNCC.Size = new System.Drawing.Size(217, 23);
             this.cbbNCC.TabIndex = 16;
             // 
             // btnSua
             // 
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSua.Location = new System.Drawing.Point(141, 292);
+            this.btnSua.Location = new System.Drawing.Point(170, 295);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(68, 23);
             this.btnSua.TabIndex = 7;
@@ -340,13 +340,13 @@ namespace QLCHTAN
             this.txtTenHang.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenHang.Location = new System.Drawing.Point(102, 50);
             this.txtTenHang.Name = "txtTenHang";
-            this.txtTenHang.Size = new System.Drawing.Size(178, 23);
+            this.txtTenHang.Size = new System.Drawing.Size(217, 23);
             this.txtTenHang.TabIndex = 15;
             // 
             // btnLamMoi
             // 
             this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLamMoi.Location = new System.Drawing.Point(215, 292);
+            this.btnLamMoi.Location = new System.Drawing.Point(244, 295);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(75, 23);
             this.btnLamMoi.TabIndex = 8;
@@ -359,7 +359,7 @@ namespace QLCHTAN
             this.txtDonVi.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonVi.Location = new System.Drawing.Point(102, 108);
             this.txtDonVi.Name = "txtDonVi";
-            this.txtDonVi.Size = new System.Drawing.Size(178, 23);
+            this.txtDonVi.Size = new System.Drawing.Size(217, 23);
             this.txtDonVi.TabIndex = 13;
             // 
             // txtDonGia
@@ -367,7 +367,7 @@ namespace QLCHTAN
             this.txtDonGia.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonGia.Location = new System.Drawing.Point(102, 137);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(178, 23);
+            this.txtDonGia.Size = new System.Drawing.Size(217, 23);
             this.txtDonGia.TabIndex = 12;
             // 
             // txtMaHang
@@ -375,7 +375,7 @@ namespace QLCHTAN
             this.txtMaHang.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaHang.Location = new System.Drawing.Point(102, 21);
             this.txtMaHang.Name = "txtMaHang";
-            this.txtMaHang.Size = new System.Drawing.Size(178, 23);
+            this.txtMaHang.Size = new System.Drawing.Size(217, 23);
             this.txtMaHang.TabIndex = 8;
             // 
             // label8
@@ -466,7 +466,7 @@ namespace QLCHTAN
             this.dtNSX.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtNSX.Location = new System.Drawing.Point(102, 166);
             this.dtNSX.Name = "dtNSX";
-            this.dtNSX.Size = new System.Drawing.Size(178, 23);
+            this.dtNSX.Size = new System.Drawing.Size(217, 23);
             this.dtNSX.TabIndex = 17;
             // 
             // dtHSD
@@ -476,7 +476,7 @@ namespace QLCHTAN
             this.dtHSD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtHSD.Location = new System.Drawing.Point(102, 199);
             this.dtHSD.Name = "dtHSD";
-            this.dtHSD.Size = new System.Drawing.Size(178, 23);
+            this.dtHSD.Size = new System.Drawing.Size(217, 23);
             this.dtHSD.TabIndex = 18;
             // 
             // tabNuoc
@@ -485,10 +485,10 @@ namespace QLCHTAN
             this.tabNuoc.Controls.Add(this.label10);
             this.tabNuoc.Controls.Add(this.dgvMatHangNuoc);
             this.tabNuoc.Controls.Add(this.groupBox2);
-            this.tabNuoc.Location = new System.Drawing.Point(4, 22);
+            this.tabNuoc.Location = new System.Drawing.Point(4, 27);
             this.tabNuoc.Name = "tabNuoc";
             this.tabNuoc.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNuoc.Size = new System.Drawing.Size(1019, 502);
+            this.tabNuoc.Size = new System.Drawing.Size(1204, 669);
             this.tabNuoc.TabIndex = 1;
             this.tabNuoc.Text = "Thông tin nước";
             this.tabNuoc.UseVisualStyleBackColor = true;
@@ -496,7 +496,7 @@ namespace QLCHTAN
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(467, 30);
+            this.pictureBox2.Location = new System.Drawing.Point(538, 6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(42, 39);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -507,8 +507,8 @@ namespace QLCHTAN
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label10.Location = new System.Drawing.Point(220, 43);
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(291, 19);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(241, 26);
             this.label10.TabIndex = 7;
@@ -534,10 +534,10 @@ namespace QLCHTAN
             this.NSXNuoc,
             this.HSDNuoc,
             this.ghiChuNuoc});
-            this.dgvMatHangNuoc.Location = new System.Drawing.Point(35, 93);
+            this.dgvMatHangNuoc.Location = new System.Drawing.Point(6, 48);
             this.dgvMatHangNuoc.Name = "dgvMatHangNuoc";
             this.dgvMatHangNuoc.ReadOnly = true;
-            this.dgvMatHangNuoc.Size = new System.Drawing.Size(647, 379);
+            this.dgvMatHangNuoc.Size = new System.Drawing.Size(861, 615);
             this.dgvMatHangNuoc.TabIndex = 6;
             this.dgvMatHangNuoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatHangNuoc_CellClick);
             // 
@@ -631,9 +631,9 @@ namespace QLCHTAN
             this.groupBox2.Controls.Add(this.dtHSDNuoc);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(688, 43);
+            this.groupBox2.Location = new System.Drawing.Point(873, 19);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(296, 429);
+            this.groupBox2.Size = new System.Drawing.Size(325, 644);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin mặt hàng";
@@ -641,9 +641,9 @@ namespace QLCHTAN
             // btnThemNuoc
             // 
             this.btnThemNuoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnThemNuoc.Location = new System.Drawing.Point(6, 292);
+            this.btnThemNuoc.Location = new System.Drawing.Point(6, 295);
             this.btnThemNuoc.Name = "btnThemNuoc";
-            this.btnThemNuoc.Size = new System.Drawing.Size(62, 23);
+            this.btnThemNuoc.Size = new System.Drawing.Size(70, 23);
             this.btnThemNuoc.TabIndex = 5;
             this.btnThemNuoc.Text = "Thêm";
             this.btnThemNuoc.UseVisualStyleBackColor = true;
@@ -655,15 +655,15 @@ namespace QLCHTAN
             this.txtGhiChuNuoc.Location = new System.Drawing.Point(102, 233);
             this.txtGhiChuNuoc.Multiline = true;
             this.txtGhiChuNuoc.Name = "txtGhiChuNuoc";
-            this.txtGhiChuNuoc.Size = new System.Drawing.Size(178, 56);
+            this.txtGhiChuNuoc.Size = new System.Drawing.Size(217, 56);
             this.txtGhiChuNuoc.TabIndex = 11;
             // 
             // btnXoaNuoc
             // 
             this.btnXoaNuoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnXoaNuoc.Location = new System.Drawing.Point(74, 292);
+            this.btnXoaNuoc.Location = new System.Drawing.Point(82, 295);
             this.btnXoaNuoc.Name = "btnXoaNuoc";
-            this.btnXoaNuoc.Size = new System.Drawing.Size(61, 23);
+            this.btnXoaNuoc.Size = new System.Drawing.Size(73, 23);
             this.btnXoaNuoc.TabIndex = 6;
             this.btnXoaNuoc.Text = "Xóa";
             this.btnXoaNuoc.UseVisualStyleBackColor = true;
@@ -676,15 +676,15 @@ namespace QLCHTAN
             this.cbbNCCNuoc.FormattingEnabled = true;
             this.cbbNCCNuoc.Location = new System.Drawing.Point(102, 79);
             this.cbbNCCNuoc.Name = "cbbNCCNuoc";
-            this.cbbNCCNuoc.Size = new System.Drawing.Size(178, 23);
+            this.cbbNCCNuoc.Size = new System.Drawing.Size(217, 23);
             this.cbbNCCNuoc.TabIndex = 16;
             // 
             // btnSuaNuoc
             // 
             this.btnSuaNuoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSuaNuoc.Location = new System.Drawing.Point(141, 292);
+            this.btnSuaNuoc.Location = new System.Drawing.Point(161, 295);
             this.btnSuaNuoc.Name = "btnSuaNuoc";
-            this.btnSuaNuoc.Size = new System.Drawing.Size(68, 23);
+            this.btnSuaNuoc.Size = new System.Drawing.Size(77, 23);
             this.btnSuaNuoc.TabIndex = 7;
             this.btnSuaNuoc.Text = "Sửa";
             this.btnSuaNuoc.UseVisualStyleBackColor = true;
@@ -695,13 +695,13 @@ namespace QLCHTAN
             this.txtTenHangNuoc.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenHangNuoc.Location = new System.Drawing.Point(102, 50);
             this.txtTenHangNuoc.Name = "txtTenHangNuoc";
-            this.txtTenHangNuoc.Size = new System.Drawing.Size(178, 23);
+            this.txtTenHangNuoc.Size = new System.Drawing.Size(217, 23);
             this.txtTenHangNuoc.TabIndex = 15;
             // 
             // btnLamMoiNuoc
             // 
             this.btnLamMoiNuoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLamMoiNuoc.Location = new System.Drawing.Point(215, 292);
+            this.btnLamMoiNuoc.Location = new System.Drawing.Point(244, 295);
             this.btnLamMoiNuoc.Name = "btnLamMoiNuoc";
             this.btnLamMoiNuoc.Size = new System.Drawing.Size(75, 23);
             this.btnLamMoiNuoc.TabIndex = 8;
@@ -714,7 +714,7 @@ namespace QLCHTAN
             this.txtDonViNuoc.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonViNuoc.Location = new System.Drawing.Point(102, 108);
             this.txtDonViNuoc.Name = "txtDonViNuoc";
-            this.txtDonViNuoc.Size = new System.Drawing.Size(178, 23);
+            this.txtDonViNuoc.Size = new System.Drawing.Size(217, 23);
             this.txtDonViNuoc.TabIndex = 13;
             // 
             // txtDonGiaNuoc
@@ -722,7 +722,7 @@ namespace QLCHTAN
             this.txtDonGiaNuoc.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonGiaNuoc.Location = new System.Drawing.Point(102, 137);
             this.txtDonGiaNuoc.Name = "txtDonGiaNuoc";
-            this.txtDonGiaNuoc.Size = new System.Drawing.Size(178, 23);
+            this.txtDonGiaNuoc.Size = new System.Drawing.Size(217, 23);
             this.txtDonGiaNuoc.TabIndex = 12;
             // 
             // txtMaHangNuoc
@@ -730,7 +730,7 @@ namespace QLCHTAN
             this.txtMaHangNuoc.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaHangNuoc.Location = new System.Drawing.Point(102, 21);
             this.txtMaHangNuoc.Name = "txtMaHangNuoc";
-            this.txtMaHangNuoc.Size = new System.Drawing.Size(178, 23);
+            this.txtMaHangNuoc.Size = new System.Drawing.Size(217, 23);
             this.txtMaHangNuoc.TabIndex = 8;
             // 
             // label11
@@ -821,7 +821,7 @@ namespace QLCHTAN
             this.dtNSXNuoc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtNSXNuoc.Location = new System.Drawing.Point(102, 166);
             this.dtNSXNuoc.Name = "dtNSXNuoc";
-            this.dtNSXNuoc.Size = new System.Drawing.Size(178, 23);
+            this.dtNSXNuoc.Size = new System.Drawing.Size(217, 23);
             this.dtNSXNuoc.TabIndex = 17;
             // 
             // dtHSDNuoc
@@ -831,7 +831,7 @@ namespace QLCHTAN
             this.dtHSDNuoc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtHSDNuoc.Location = new System.Drawing.Point(102, 199);
             this.dtHSDNuoc.Name = "dtHSDNuoc";
-            this.dtHSDNuoc.Size = new System.Drawing.Size(178, 23);
+            this.dtHSDNuoc.Size = new System.Drawing.Size(217, 23);
             this.dtHSDNuoc.TabIndex = 18;
             // 
             // MatHang_GUI

@@ -57,16 +57,16 @@ namespace QLCHTAN
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(135, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 23);
+            this.label1.Size = new System.Drawing.Size(292, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Thông tin thành phần món ăn ";
+            this.label1.Text = "THÔNG TIN THÀNH PHẦN MÓN ĂN";
             // 
             // lblTenMonAn
             // 
             this.lblTenMonAn.AutoSize = true;
             this.lblTenMonAn.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenMonAn.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblTenMonAn.Location = new System.Drawing.Point(379, 19);
+            this.lblTenMonAn.Location = new System.Drawing.Point(433, 19);
             this.lblTenMonAn.Name = "lblTenMonAn";
             this.lblTenMonAn.Size = new System.Drawing.Size(59, 23);
             this.lblTenMonAn.TabIndex = 1;
@@ -95,6 +95,7 @@ namespace QLCHTAN
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.Transparent;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSua.Location = new System.Drawing.Point(172, 144);
@@ -108,6 +109,7 @@ namespace QLCHTAN
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.Color.Transparent;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnXoa.Location = new System.Drawing.Point(100, 144);
@@ -121,6 +123,7 @@ namespace QLCHTAN
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.Transparent;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnThem.Location = new System.Drawing.Point(22, 144);
@@ -134,6 +137,7 @@ namespace QLCHTAN
             // btnLamMoi
             // 
             this.btnLamMoi.BackColor = System.Drawing.Color.Transparent;
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLamMoi.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnLamMoi.Location = new System.Drawing.Point(246, 144);
@@ -256,7 +260,6 @@ namespace QLCHTAN
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ThongTinThanhPhanDoAn_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ThongTinThanhPhanDoAn_GUI";
             this.Load += new System.EventHandler(this.ThongTinThanhPhanDoAn_GUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThanhPhanMon)).EndInit();
             this.ResumeLayout(false);

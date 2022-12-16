@@ -69,7 +69,7 @@ namespace QLCHTAN
             }
             lblThoiGian.Text = DateTime.Now.ToString();
             lblTrangThai.Text = "Chưa thanh toán";
-            lblTongDonGia.Text = Order_GUI.tongGia;
+            lblTongDonGia.Text =Order_GUI.tongGia ;
             dgvThongTinHoaDon.DataSource = Order_GUI.ttdh;
 
 
@@ -112,5 +112,15 @@ namespace QLCHTAN
                 }
             }
         }
+
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            NhanVienThanhToan_GUI nvtt = new NhanVienThanhToan_GUI();
+            nvtt.Show();
+            this.Close();
+            this.Dispose();
+        }
+
+       
     }
 }
