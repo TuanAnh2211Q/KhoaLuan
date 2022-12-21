@@ -17,22 +17,6 @@ namespace DAO
             SqlDataSourceEnumerator serverNames = SqlDataSourceEnumerator.Instance;
             DataTable serversInfo = serverNames.GetDataSources();
 
-            //for(int i=0;i<=serversInfo.Rows.Count;i++)
-            //{
-            //    DataRow r = serversInfo.Rows[i];
-            //    string serverName ;
-            //    if(r.ToString()!="")
-            //    {
-            //        serverName = r["Servername"].ToString() + "\\" + r.ToString();
-            //    }
-            //    else
-            //    {
-            //        serverName = r["Servername"].ToString();
-            //    }    
-            //    ServerList.Add(serverName);
-            //}
-            //return ServerList;
-
             foreach (DataRow r in serversInfo.Rows)
             {
                 string serverName = r["Servername"].ToString();
