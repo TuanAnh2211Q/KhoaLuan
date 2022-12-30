@@ -147,7 +147,7 @@ namespace QLCHTAN
                             KhachHang_GUI_Load(sender, e);
                         }
                         else
-                            MessageBox.Show("Xóa Nhân Viên Thất Bại");
+                            MessageBox.Show("Xóa Khách hàng Thất Bại");
                     }
                     else
                         MessageBox.Show("Nhân viên không tồn tại, vui lòng kiểm tra lại ");
