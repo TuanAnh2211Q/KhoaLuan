@@ -130,13 +130,13 @@ namespace QLCHTAN
             txtDiaChi.Clear();
             rdbNam1.Checked = rdbNu0.Checked = rdbKhac.Checked = false;
             txtMaNhanVien.Focus();
-            dgvNhanVien.DataSource = nhanVien_BUS.dsNhanVien_BUS();
+            dgvNhanVien.DataSource = nhanVien_BUS.show_list_NhanVien_BUS();
 
-            cbbChucDanh.DataSource = nhanVien_BUS.dsChucDanh_BUS();
+            cbbChucDanh.DataSource = nhanVien_BUS.show_list_ChucDanh_BUS();
             cbbChucDanh.ValueMember = "maChucDanh";
             cbbChucDanh.DisplayMember = "tenChucDanh";
 
-            cbbLoaiNV.DataSource = nhanVien_BUS.dsLoaiNhanVien_BUS();
+            cbbLoaiNV.DataSource = nhanVien_BUS.show_list_LoaiNhanVien_BUS();
             cbbLoaiNV.ValueMember = "maLoaiNhanVien";
             cbbLoaiNV.DisplayMember = "tenLoaiNhanVien";
         }
@@ -194,7 +194,7 @@ namespace QLCHTAN
                 e.Handled = true;
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
+        private void lblkThoat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
         }

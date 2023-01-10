@@ -130,40 +130,40 @@ namespace QLCHTAN
             }
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            DialogResult sua = MessageBox.Show("Bạn muốn sửa thông tin nước uống này ?", "Thông báo", MessageBoxButtons.YesNo);
-            if (sua == DialogResult.Yes)
-            {
-                if (kt_NuocUong())
-                {
-                    try
-                    {
-                        if ( txtTenNuoc.Text != "" & txtDonGia.Text != "" && txtDonViBan.Text != "")
-                        {
-                            if (nuocuong.update_NuocUong_BUS(nuocUong_DTO()))
-                            {
-                                MessageBox.Show("Sửa thông tin nước thành công");
-                                btnLamMoi_Click(sender, e);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Sửa thông tin nước thất bại vui lòng kiểm tra lại thông tin nhập");
-                            }
-                        }
-                        else
-                        { MessageBox.Show("Vui lòng nhập dầy đủ thông tin"); }
+        //private void btnSua_Click(object sender, EventArgs e)
+        //{
+        //    DialogResult sua = MessageBox.Show("Bạn muốn sửa thông tin nước uống này ?", "Thông báo", MessageBoxButtons.YesNo);
+        //    if (sua == DialogResult.Yes)
+        //    {
+        //        if (kt_NuocUong())
+        //        {
+        //            try
+        //            {
+        //                if ( txtTenNuoc.Text != "" & txtDonGia.Text != "" && txtDonViBan.Text != "")
+        //                {
+        //                    if (nuocuong.update_NuocUong_BUS(nuocUong_DTO()))
+        //                    {
+        //                        MessageBox.Show("Sửa thông tin nước thành công");
+        //                        btnLamMoi_Click(sender, e);
+        //                    }
+        //                    else
+        //                    {
+        //                        MessageBox.Show("Sửa thông tin nước thất bại vui lòng kiểm tra lại thông tin nhập");
+        //                    }
+        //                }
+        //                else
+        //                { MessageBox.Show("Vui lòng nhập dầy đủ thông tin"); }
 
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show("Sửa thông tin nước thất bại vui lòng kiểm tra lại thông tin đồ ăn");
-                    }
-                }
-                else
-                    MessageBox.Show("Mã nước không tồn tại, không thể sửa");
-            }
-        }
+        //            }
+        //            catch (Exception)
+        //            {
+        //                MessageBox.Show("Sửa thông tin nước thất bại vui lòng kiểm tra lại thông tin đồ ăn");
+        //            }
+        //        }
+        //        else
+        //            MessageBox.Show("Mã nước không tồn tại, không thể sửa");
+        //    }
+        //}
 
         private void cbbNuoc_SelectedValueChanged(object sender, EventArgs e)
         {

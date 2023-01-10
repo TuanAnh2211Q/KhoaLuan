@@ -12,19 +12,19 @@ namespace BUS
     public class NhanVien_BUS
     {
         NhanVien_DAO nhanVien_DAO = new NhanVien_DAO();
-        public DataTable dsChucDanh_BUS()
+        public DataTable show_list_ChucDanh_BUS()
         {
-            return nhanVien_DAO.dsChucDanh_DAO();
+            return nhanVien_DAO.show_list_ChucDanh_DAO();
         }
 
-        public DataTable dsLoaiNhanVien_BUS()
+        public DataTable show_list_LoaiNhanVien_BUS()
         {
-            return nhanVien_DAO.dsLoaiNhanVien_DAO();
+            return nhanVien_DAO.show_list_LoaiNhanVien_DAO();
         }
 
-        public DataTable dsNhanVien_BUS()
+        public DataTable show_list_NhanVien_BUS()
         {
-            return nhanVien_DAO.dsNhanVien_DAO();
+            return nhanVien_DAO.show_list_NhanVien_DAO();
         }
 
         public bool insert_NhanVien_BUS(NhanVien_DTO nhanVien_DTO)

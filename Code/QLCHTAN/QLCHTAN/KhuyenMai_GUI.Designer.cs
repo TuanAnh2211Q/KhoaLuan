@@ -30,6 +30,7 @@ namespace QLCHTAN
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KhuyenMai_GUI));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -38,10 +39,6 @@ namespace QLCHTAN
             this.txtMucGiam = new System.Windows.Forms.TextBox();
             this.txtTenKhuyenMai = new System.Windows.Forms.TextBox();
             this.dgvThongTinKhuyenMai = new System.Windows.Forms.DataGridView();
-            this.maKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maLoaiKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mucGiam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -51,6 +48,10 @@ namespace QLCHTAN
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblkThoat = new System.Windows.Forms.LinkLabel();
+            this.maKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maLoaiKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mucGiam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinKhuyenMai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -114,6 +115,7 @@ namespace QLCHTAN
             this.txtMucGiam.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMucGiam.Location = new System.Drawing.Point(98, 116);
             this.txtMucGiam.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMucGiam.MaxLength = 4;
             this.txtMucGiam.Name = "txtMucGiam";
             this.txtMucGiam.Size = new System.Drawing.Size(237, 23);
             this.txtMucGiam.TabIndex = 8;
@@ -150,34 +152,6 @@ namespace QLCHTAN
             this.dgvThongTinKhuyenMai.Size = new System.Drawing.Size(590, 156);
             this.dgvThongTinKhuyenMai.TabIndex = 12;
             this.dgvThongTinKhuyenMai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinKhuyenMai_CellClick);
-            // 
-            // maKhuyenMai
-            // 
-            this.maKhuyenMai.DataPropertyName = "maKhuyenMai";
-            this.maKhuyenMai.HeaderText = "Mã khuyến mãi";
-            this.maKhuyenMai.Name = "maKhuyenMai";
-            this.maKhuyenMai.ReadOnly = true;
-            // 
-            // tenKhuyenMai
-            // 
-            this.tenKhuyenMai.DataPropertyName = "tenKhuyenMai";
-            this.tenKhuyenMai.HeaderText = "Tên khuyến mãi";
-            this.tenKhuyenMai.Name = "tenKhuyenMai";
-            this.tenKhuyenMai.ReadOnly = true;
-            // 
-            // maLoaiKhuyenMai
-            // 
-            this.maLoaiKhuyenMai.DataPropertyName = "maLoaiKhuyenMai";
-            this.maLoaiKhuyenMai.HeaderText = "Loại khuyến mãi";
-            this.maLoaiKhuyenMai.Name = "maLoaiKhuyenMai";
-            this.maLoaiKhuyenMai.ReadOnly = true;
-            // 
-            // mucGiam
-            // 
-            this.mucGiam.DataPropertyName = "mucGiam";
-            this.mucGiam.HeaderText = "Mức giảm";
-            this.mucGiam.Name = "mucGiam";
-            this.mucGiam.ReadOnly = true;
             // 
             // label7
             // 
@@ -305,6 +279,37 @@ namespace QLCHTAN
             this.lblkThoat.Text = "Thoát";
             this.lblkThoat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkThoat_LinkClicked);
             // 
+            // maKhuyenMai
+            // 
+            this.maKhuyenMai.DataPropertyName = "maKhuyenMai";
+            this.maKhuyenMai.HeaderText = "Mã khuyến mãi";
+            this.maKhuyenMai.Name = "maKhuyenMai";
+            this.maKhuyenMai.ReadOnly = true;
+            // 
+            // tenKhuyenMai
+            // 
+            this.tenKhuyenMai.DataPropertyName = "tenKhuyenMai";
+            this.tenKhuyenMai.HeaderText = "Tên khuyến mãi";
+            this.tenKhuyenMai.Name = "tenKhuyenMai";
+            this.tenKhuyenMai.ReadOnly = true;
+            // 
+            // maLoaiKhuyenMai
+            // 
+            this.maLoaiKhuyenMai.DataPropertyName = "maLoaiKhuyenMai";
+            this.maLoaiKhuyenMai.HeaderText = "Loại khuyến mãi";
+            this.maLoaiKhuyenMai.Name = "maLoaiKhuyenMai";
+            this.maLoaiKhuyenMai.ReadOnly = true;
+            // 
+            // mucGiam
+            // 
+            this.mucGiam.DataPropertyName = "mucGiam";
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.mucGiam.DefaultCellStyle = dataGridViewCellStyle3;
+            this.mucGiam.HeaderText = "Mức giảm";
+            this.mucGiam.Name = "mucGiam";
+            this.mucGiam.ReadOnly = true;
+            // 
             // KhuyenMai_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -349,10 +354,10 @@ namespace QLCHTAN
         private System.Windows.Forms.ComboBox cbbLoaiKhuyenMai;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.LinkLabel lblkThoat;
         private System.Windows.Forms.DataGridViewTextBoxColumn maKhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenKhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn maLoaiKhuyenMai;
         private System.Windows.Forms.DataGridViewTextBoxColumn mucGiam;
-        private System.Windows.Forms.LinkLabel lblkThoat;
     }
 }

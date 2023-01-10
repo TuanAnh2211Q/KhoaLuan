@@ -25,6 +25,7 @@ namespace QLCHTAN
         }
         private void PhanQuyen_GUI_Load(object sender, EventArgs e)
         {
+            
             dgvPhanQuyen.DataSource = phanQuyen_BUS.dsQuyen_BUS();
         }
         private void dgvPhanQuyen_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -53,6 +54,11 @@ namespace QLCHTAN
             {
                 PhanQuyen_GUI_Load(sender, e);
             }
+        }
+
+        private void lblkThoat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

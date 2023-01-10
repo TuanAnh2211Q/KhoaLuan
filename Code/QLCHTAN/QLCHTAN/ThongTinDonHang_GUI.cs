@@ -25,11 +25,20 @@ namespace QLCHTAN
         ThongTinDonHang_BUS ttdh_BUS = new ThongTinDonHang_BUS();
         public KhachHang_DTO khachhang_DTO()
         {
-            return new KhachHang_DTO(lblSDT.Text, lblKhachHang.Text, gioiTinhKhach, diaChiKhach, emailKhach, txtGhiChu.Text);
+            return new KhachHang_DTO(lblSDT.Text.Trim(), lblKhachHang.Text.Trim(), gioiTinhKhach.Trim(), diaChiKhach.Trim(), emailKhach.Trim(), txtGhiChu.Text.Trim());
         }
         public DonHang_DTO donHang_DTO()
         {
-            return new DonHang_DTO(lblMaDonHang.Text, lblTenDonHang.Text, Order_GUI.maLoaiDon, Order_GUI.htThanhToan, NhanVienThanhToan_GUI.maNVTT, lblSDT.Text, Order_GUI.maKM, DateTime.Today, 1, txtGhiChu.Text,khachhang_BUS.select_id_KhachHang_BUS(lblSDT.Text), Convert.ToDecimal(lblTongDonGia.Text));
+            string km = "";
+            if (Order_GUI.maKM.Trim() is null)
+            {
+                km = "Null";
+            }
+            else
+            {
+                km = Order_GUI.maKM.Trim();
+            }    
+            return new DonHang_DTO(lblMaDonHang.Text.Trim(), lblTenDonHang.Text.Trim(), Order_GUI.maLoaiDon.Trim(), Order_GUI.htThanhToan, NhanVienThanhToan_GUI.maNVTT.Trim(), lblSDT.Text.Trim(), km.Trim(), DateTime.Today, 1, txtGhiChu.Text.Trim(),khachhang_BUS.select_id_KhachHang_BUS(lblSDT.Text.Trim()), Convert.ToDecimal(lblTongDonGia.Text));
         }
         public ThongTinDonHang_GUI()
         {

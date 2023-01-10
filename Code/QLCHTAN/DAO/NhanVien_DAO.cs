@@ -10,7 +10,7 @@ namespace DAO
 {
     public class NhanVien_DAO:DataProvider
     {
-        public DataTable dsLoaiNhanVien_DAO()
+        public DataTable show_list_LoaiNhanVien_DAO()
         {
             Open();
             SqlDataAdapter da = new SqlDataAdapter("select_LoaiNhanVien",conn);
@@ -20,7 +20,7 @@ namespace DAO
             return tb;
         }
 
-        public DataTable dsChucDanh_DAO()
+        public DataTable show_list_ChucDanh_DAO()
         {
             Open();
             SqlDataAdapter da = new SqlDataAdapter("select_ChucDanh",conn);
@@ -30,7 +30,7 @@ namespace DAO
             return tb;
         }
 
-        public DataTable dsNhanVien_DAO()
+        public DataTable show_list_NhanVien_DAO()
         {
             Open();
             SqlCommand cmd = new SqlCommand("select_NhanVien", conn);

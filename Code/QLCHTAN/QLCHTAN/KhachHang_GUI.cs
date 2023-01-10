@@ -36,7 +36,7 @@ namespace QLCHTAN
         }
         public KhachHang_DTO khachHang_DTO()
         {
-            return new KhachHang_DTO(/*txtMaKhachHang.Text.Trim(), */txtSDT.Text.Trim(), txtTenKhachHang.Text.Trim(),  GioiTinh.Trim(), txtDiaChi.Text.Trim(), txtGmail.Text.Trim(), rtbGhiChu.Text.Trim());
+            return new KhachHang_DTO(txtSDT.Text.Trim(), txtTenKhachHang.Text.Trim(),  GioiTinh.Trim(), txtDiaChi.Text.Trim(), txtGmail.Text.Trim(), rtbGhiChu.Text.Trim());
         }
 
         #endregion
@@ -59,15 +59,14 @@ namespace QLCHTAN
             rtbGhiChu.Clear();
             txtSDT.Focus();
             dgvThongTinKhachHang.DataSource = khachhang_BUS.show_dsKhachHang_BUS();
-            //txtMaKhachHang.Clear();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            DialogResult them = MessageBox.Show("Bạn có chắc muốn sửa thông tin nhân viên ?", "Thông báo", MessageBoxButtons.YesNo);
+            DialogResult them = MessageBox.Show("Bạn có chắc muốn sửa thông tin khách hàng ?", "Thông báo", MessageBoxButtons.YesNo);
             if (them == DialogResult.Yes)
             {
-                if (txtSDT.Text.Trim() != "" && txtTenKhachHang.Text.Trim() != "" &&  txtDiaChi.Text.Trim() != "" && txtGmail.Text.Trim() != "" && rtbGhiChu.Text.Trim() != "")
+                if (txtSDT.Text.Trim() != "" && txtTenKhachHang.Text.Trim() != "" &&  txtDiaChi.Text.Trim() != "" && txtGmail.Text.Trim() != "" )
                 {
                     if (kt_KhachHang())
                     {
@@ -77,10 +76,10 @@ namespace QLCHTAN
                             KhachHang_GUI_Load(sender, e);
                         }
                         else
-                            MessageBox.Show("Chỉnh sửa thông tin nhân viên thất bại");
+                            MessageBox.Show("Chỉnh sửa thông tin khách hàng thất bại");
                     }
                     else
-                        MessageBox.Show("Nhân viên không tồn tại, vui lòng kiểm tra lại");
+                        MessageBox.Show("Khách hàng không tồn tại, vui lòng kiểm tra lại");
                 }
                 else
                     MessageBox.Show("Vui lòng nhập đủ thông tin");
@@ -150,7 +149,7 @@ namespace QLCHTAN
                             MessageBox.Show("Xóa Khách hàng Thất Bại");
                     }
                     else
-                        MessageBox.Show("Nhân viên không tồn tại, vui lòng kiểm tra lại ");
+                        MessageBox.Show("Khách không tồn tại, vui lòng kiểm tra lại ");
                 }
                 else
                     MessageBox.Show("Vui lòng nhập đủ thông tin");

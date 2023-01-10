@@ -13,13 +13,13 @@ namespace BUS
     {
         DoAn_DAO doAn_DAO = new DoAn_DAO();
 
-        public DataTable show_dsDoAn_BUS()
+        public DataTable show_list_DoAn_BUS()
         {
-            return doAn_DAO.show_ds_DoAn_DAO();
+            return doAn_DAO.show_list_DoAn_DAO();
         }
-        public DataTable show_dsLoaiDoAn_BUS()
+        public DataTable show_list_LoaiDoAn_BUS()
         {
-            return doAn_DAO.show_ds_LoaiDoAn_DAO();
+            return doAn_DAO.show_list_LoaiDoAn_DAO();
         }
         public bool insert_DoAn_ThongTinDoAn_BUS(DoAn_DTO doAn_DTO)
         {
@@ -33,13 +33,15 @@ namespace BUS
         {
             return doAn_DAO.update_DoAn_DAO(doAn_DTO);
         }
-        public DataTable show_dsMon_BUS()
+        //public DataTable show_dsMon_BUS()
+        //{
+        //    return doAn_DAO.show_dsMon_DAO();
+        //}
+
+
+        public DataTable show_DoAnTheoLoai_BUS(string maLoaiDoAN)
         {
-            return doAn_DAO.show_dsMon_DAO();
-        }
-        public DataTable show_DSLoaiDoAn_BUS(string maLoaiDoAN)
-        {
-            return doAn_DAO.show_dsLoaiDoAn_DAO(maLoaiDoAN);
+            return doAn_DAO.show_DoAnTheoLoai_DAO(maLoaiDoAN);
 
         }
         public DataTable select_DonViBanDoAn_BUS(string maDoAn)
