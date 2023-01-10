@@ -53,8 +53,8 @@ namespace QLCHTAN
 
         private void DoAn_GUI_Load(object sender, EventArgs e)
         {
-            dgvDoAn.DataSource = doAn_BUS.show_dsDoAn_BUS();
-            ccbLoaiDoAn.DataSource = doAn_BUS.show_dsLoaiDoAn_BUS();
+            dgvDoAn.DataSource = doAn_BUS.show_list_DoAn_BUS();
+            ccbLoaiDoAn.DataSource = doAn_BUS.show_list_LoaiDoAn_BUS();
             ccbLoaiDoAn.DisplayMember = "tenLoaiDoAn";
             ccbLoaiDoAn.ValueMember = "maLoaiDoAn";
 

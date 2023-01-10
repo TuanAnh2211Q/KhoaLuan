@@ -10,7 +10,7 @@ namespace DAO
 {
     public class DoAn_DAO:DataProvider
     {
-        public DataTable show_ds_DoAn_DAO()
+        public DataTable show_list_DoAn_DAO()
         {
             Open();
             SqlDataAdapter da = new SqlDataAdapter("show_dsDoAn", conn);
@@ -20,7 +20,7 @@ namespace DAO
             return dt;
         }
 
-        public DataTable show_ds_LoaiDoAn_DAO()
+        public DataTable show_list_LoaiDoAn_DAO()
         {
             Open();
             SqlDataAdapter da = new SqlDataAdapter("select_LoaiDoAn",conn);
@@ -29,15 +29,16 @@ namespace DAO
             da.Fill(dslda);
             return dslda;
         }
-        public DataTable show_dsMon_DAO()
-        {
-            Open();
-            SqlDataAdapter da = new SqlDataAdapter("select_DoAnTheoYeuCau",conn);
-            da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            DataTable dsMon = new DataTable();
-            da.Fill(dsMon);
-            return dsMon;
-        }
+
+        //public DataTable show_dsMon_DAO()
+        //{
+        //    Open();
+        //    SqlDataAdapter da = new SqlDataAdapter("select_DoAnTheoYeuCau",conn);
+        //    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+        //    DataTable dsMon = new DataTable();
+        //    da.Fill(dsMon);
+        //    return dsMon;
+        //}
         
         public bool insert_DoAn_DAO(DoAn_DTO doAn_DTO)
         {
@@ -104,7 +105,7 @@ namespace DAO
             }
             return false;
         }
-        public DataTable show_dsLoaiDoAn_DAO( string maLoaiDoAn)
+        public DataTable show_DoAnTheoLoai_DAO( string maLoaiDoAn)
         {
             Open();
             SqlDataAdapter da = new SqlDataAdapter("select_dsDoAnTheoLoai", conn);

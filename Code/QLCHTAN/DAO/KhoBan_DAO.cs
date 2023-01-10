@@ -10,7 +10,7 @@ namespace DAO
 {
     public class KhoBan_DAO:DataProvider
     {
-        public DataTable show_KhoBan_DAO()
+        public DataTable show_list_KhoBan_DAO()
         {
             Open();
             SqlDataAdapter da = new SqlDataAdapter("select_KhoBan", conn);

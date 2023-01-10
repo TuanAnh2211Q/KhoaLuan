@@ -13,9 +13,9 @@ namespace BUS
     {
         KhoBan_DAO khoban_DAO = new KhoBan_DAO();
 
-        public DataTable show_KhoBan_BUS()
+        public DataTable show_list_KhoBan_BUS()
         {
-            return khoban_DAO.show_KhoBan_DAO();
+            return khoban_DAO.show_list_KhoBan_DAO();
 
         }    
 

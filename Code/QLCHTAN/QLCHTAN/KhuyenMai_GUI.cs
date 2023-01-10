@@ -166,7 +166,7 @@ namespace QLCHTAN
                 txtMaKhuyenMai.Text = r.Cells["maKhuyenMai"].Value.ToString();
                 txtTenKhuyenMai.Text = r.Cells["tenKhuyenMai"].Value.ToString();
                 cbbLoaiKhuyenMai.SelectedValue = r.Cells["maLoaiKhuyenMai"].Value.ToString();
-                txtMucGiam.Text = r.Cells["mucGiam"].Value.ToString();
+                txtMucGiam.Text = Math.Round( Convert.ToDouble( r.Cells["mucGiam"].Value), 4).ToString();
                 txtMaKhuyenMai.Enabled = false;
             }    
         }
@@ -184,5 +184,6 @@ namespace QLCHTAN
         {
             this.Close();
         }
+
     }
 }

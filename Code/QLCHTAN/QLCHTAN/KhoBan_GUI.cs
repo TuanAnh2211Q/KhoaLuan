@@ -27,7 +27,7 @@ namespace QLCHTAN
 
         private void KhoBan_GUI_Load(object sender, EventArgs e)
         {
-            dgvKhoBan.DataSource = khoban_BUS.show_KhoBan_BUS();
+            dgvKhoBan.DataSource = khoban_BUS.show_list_KhoBan_BUS();
         }
 
         private void dgvKhoBan_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -37,12 +37,12 @@ namespace DAO
             {
                 SqlCommand cmd = new SqlCommand("insert_thongTinKhachHang", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@SDT", SqlDbType.VarChar).Value = khachHang_DTO.SDT;
-                cmd.Parameters.Add("@tenKhachHang", SqlDbType.NVarChar).Value = khachHang_DTO.TenKhachHang;
-                cmd.Parameters.Add("@Phai", SqlDbType.NVarChar).Value = khachHang_DTO.Phai;
-                cmd.Parameters.Add("@diaChi", SqlDbType.NVarChar).Value = khachHang_DTO.DiaChi;
-                cmd.Parameters.Add("@Email", SqlDbType.NVarChar).Value = khachHang_DTO.Email;
-                cmd.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = khachHang_DTO.GhiChu;
+                cmd.Parameters.Add("@SDT", SqlDbType.VarChar).Value = khachHang_DTO.SDT.Trim();
+                cmd.Parameters.Add("@tenKhachHang", SqlDbType.NVarChar).Value = khachHang_DTO.TenKhachHang.Trim();
+                cmd.Parameters.Add("@Phai", SqlDbType.NVarChar).Value = khachHang_DTO.Phai.Trim();
+                cmd.Parameters.Add("@diaChi", SqlDbType.NVarChar).Value = khachHang_DTO.DiaChi.Trim();
+                cmd.Parameters.Add("@Email", SqlDbType.NVarChar).Value = khachHang_DTO.Email.Trim();
+                cmd.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = khachHang_DTO.GhiChu.Trim();
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
@@ -58,17 +58,26 @@ namespace DAO
             try
             {
                 Open();
-                SqlCommand cmd = new SqlCommand("update_KhachHang", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@SDT", SqlDbType.VarChar).Value = khachhang_DTO.SDT;
-                cmd.Parameters.Add("@tenKhachHang", SqlDbType.NVarChar).Value = khachhang_DTO.TenKhachHang;
-                cmd.Parameters.Add("@Phai", SqlDbType.NVarChar).Value = khachhang_DTO.Phai;
-                cmd.Parameters.Add("diaChi", SqlDbType.NVarChar).Value = khachhang_DTO.DiaChi;
-                cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = khachhang_DTO.Email;
-                cmd.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = khachhang_DTO.GhiChu;
-                //cmd.Parameters.Add("idKhachHang", SqlDbType.Int).Value = khachhang_DTO.IdKhachHang;
-               if (cmd.ExecuteNonQuery() > 0)
-                    return true;
+                SqlCommand cmd1 = new SqlCommand("select_id_KhachHang", conn);
+                cmd1.CommandType = CommandType.StoredProcedure;
+                cmd1.Parameters.Add("sdt", SqlDbType.VarChar).Value = khachhang_DTO.SDT.Trim();
+                if(cmd1.ExecuteScalar()!=null)
+                {
+                    int id = Convert.ToInt32(cmd1.ExecuteScalar());
+
+                    SqlCommand cmd = new SqlCommand("update_KhachHang", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@SDT", SqlDbType.VarChar).Value = khachhang_DTO.SDT;
+                    cmd.Parameters.Add("@tenKhachHang", SqlDbType.NVarChar).Value = khachhang_DTO.TenKhachHang;
+                    cmd.Parameters.Add("@Phai", SqlDbType.NVarChar).Value = khachhang_DTO.Phai;
+                    cmd.Parameters.Add("diaChi", SqlDbType.NVarChar).Value = khachhang_DTO.DiaChi;
+                    cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = khachhang_DTO.Email;
+                    cmd.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = khachhang_DTO.GhiChu;
+                    cmd.Parameters.Add("idKhachHang", SqlDbType.Int).Value =id;
+                    if (cmd.ExecuteNonQuery() > 0)
+                        return true;
+                }    
+
             }
             catch(Exception)
             {

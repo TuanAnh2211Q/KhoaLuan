@@ -285,9 +285,9 @@ namespace QLCHTAN
             this.grbThongTinDoAn.Controls.Add(this.ccbLoaiDoAn);
             this.grbThongTinDoAn.Controls.Add(this.rtxtGhiChu);
             this.grbThongTinDoAn.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbThongTinDoAn.Location = new System.Drawing.Point(12, 24);
+            this.grbThongTinDoAn.Location = new System.Drawing.Point(12, 9);
             this.grbThongTinDoAn.Name = "grbThongTinDoAn";
-            this.grbThongTinDoAn.Size = new System.Drawing.Size(278, 306);
+            this.grbThongTinDoAn.Size = new System.Drawing.Size(278, 321);
             this.grbThongTinDoAn.TabIndex = 21;
             this.grbThongTinDoAn.TabStop = false;
             this.grbThongTinDoAn.Text = "Thông tin món";
