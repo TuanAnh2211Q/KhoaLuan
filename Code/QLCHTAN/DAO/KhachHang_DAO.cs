@@ -122,5 +122,31 @@ namespace DAO
             return 0;
         }
 
+        public DataTable search_KhachHang_DAO(string timkiem)
+        {
+
+         
+                Open();
+                SqlDataAdapter da = new SqlDataAdapter("search_KhachHang", conn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.Add("@find", SqlDbType.NVarChar).Value = timkiem;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+       
+        }
+
+        public DataTable sort_KhachHang_DAO(int loc)
+        {
+            Open();
+            SqlDataAdapter da = new SqlDataAdapter("sort_khachHang", conn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@loaiKhach", SqlDbType.Int).Value = loc;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+
+        }
+
     }
 }

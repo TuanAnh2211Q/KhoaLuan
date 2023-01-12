@@ -223,12 +223,6 @@
     <Compile Include="ThongTinDonHang_GUI.Designer.cs">
       <DependentUpon>ThongTinDonHang_GUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThongTinKhuyenMai_GUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ThongTinKhuyenMai_GUI.Designer.cs">
-      <DependentUpon>ThongTinKhuyenMai_GUI.cs</DependentUpon>
-    </Compile>
     <Compile Include="DoAn_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -407,9 +401,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinDonHang_GUI.resx">
       <DependentUpon>ThongTinDonHang_GUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThongTinKhuyenMai_GUI.resx">
-      <DependentUpon>ThongTinKhuyenMai_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoAn_GUI.resx">
       <DependentUpon>DoAn_GUI.cs</DependentUpon>
