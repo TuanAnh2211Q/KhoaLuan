@@ -222,6 +222,7 @@ namespace QLCHTAN
             this.trangThai});
             this.dgvPhieuNhap.Location = new System.Drawing.Point(2, 2);
             this.dgvPhieuNhap.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvPhieuNhap.MultiSelect = false;
             this.dgvPhieuNhap.Name = "dgvPhieuNhap";
             this.dgvPhieuNhap.ReadOnly = true;
             this.dgvPhieuNhap.Size = new System.Drawing.Size(750, 363);

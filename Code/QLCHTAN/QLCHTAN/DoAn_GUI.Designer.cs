@@ -311,6 +311,7 @@ namespace QLCHTAN
             this.GhiChu});
             this.dgvDoAn.GridColor = System.Drawing.SystemColors.Control;
             this.dgvDoAn.Location = new System.Drawing.Point(296, 52);
+            this.dgvDoAn.MultiSelect = false;
             this.dgvDoAn.Name = "dgvDoAn";
             this.dgvDoAn.ReadOnly = true;
             this.dgvDoAn.Size = new System.Drawing.Size(647, 278);

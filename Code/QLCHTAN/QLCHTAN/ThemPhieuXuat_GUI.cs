@@ -41,7 +41,6 @@ namespace QLCHTAN
         }
         private void ThemPhieuXuat_GUI_Load(object sender, EventArgs e)
         {
-          
             dtNgayXuat.Value = DateTime.Today;
             cbbMatHang.DataSource = tttk.show_DS_HangTon_DAO();
             cbbMatHang.DisplayMember = "tenHang";
@@ -57,8 +56,16 @@ namespace QLCHTAN
 
         private void cbbMatHang_SelectedValueChanged(object sender, EventArgs e)
         {
-            lblMaHang.Text = cbbMatHang.SelectedValue.ToString();
-            lblSoLuongTon.Text = tttk.select_SoLuong_TonKho_DAO(cbbMatHang.SelectedValue.ToString()).ToString();
+         if(cbbMatHang.SelectedValue!=null)
+            {
+                lblMaHang.Text = cbbMatHang.SelectedValue.ToString();
+                lblSoLuongTon.Text = tttk.select_SoLuong_TonKho_DAO(cbbMatHang.SelectedValue.ToString()).ToString();
+            }    
+         else
+            {
+                MessageBox.Show("Hiện tại không có bất kì mặt hàng nào trong kho tồn, vui lòng đặt hàng từ nhà cung cấp trước khi yêu cầu xuất");
+                this.Dispose();
+            }    
         }
 
         private void txtSoLuongXuat_Leave(object sender, EventArgs e)
@@ -76,7 +83,12 @@ namespace QLCHTAN
 
         private void btnThemMatHangXuat_Click(object sender, EventArgs e)
         {
-           if(Convert.ToInt32(txtSoLuongXuat.Text)<=0)
+            if(txtSoLuongXuat.Text=="")
+            {
+                MessageBox.Show("Không để trống số lượng xuất");
+                return;
+            }    
+           else if(Convert.ToInt32(txtSoLuongXuat.Text)<=0)
             {
                 MessageBox.Show("Số lượng xuất không được phép nhỏ hơn 0");
                 txtSoLuongXuat.Text = "0";

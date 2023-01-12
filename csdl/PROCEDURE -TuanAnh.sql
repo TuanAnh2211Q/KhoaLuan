@@ -199,3 +199,25 @@ create proc select_id_KhachHang
 @sdt varchar(10)
 as
 select idKhachHang from KhachHang where sdt=@sdt
+
+
+
+
+
+
+
+---12-1-2023----------
+
+create proc search_KhachHang 
+@find nvarchar(max)
+as
+select * from KhachHang
+where tenKhachHang like N'%'+@find+'%'
+or Phai like N'%'+@find+'%'
+or SDT like '%'+@find+'%'
+or Email like '%'+@find+'%'
+or diaChi like N'%'+@find+'%'
+or ghiChu like N'%'+@find+'%'
+
+
+

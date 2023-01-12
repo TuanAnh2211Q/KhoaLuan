@@ -49,14 +49,7 @@ namespace QLCHTAN
             InitializeComponent();
         }
 
-        private void btnDanhSachSanPhamApDung_Click(object sender, EventArgs e)
-        {
-            tenKM = txtTenKhuyenMai.Text;
-            maKM = txtMaKhuyenMai.Text;
-            ThongTinKhuyenMai_GUI dssp = new ThongTinKhuyenMai_GUI();
-            dssp.Show();
-        }
-
+       
         private void btnThem_Click(object sender, EventArgs e)
         {
             if (txtMaKhuyenMai.Text != "" || txtTenKhuyenMai.Text != "" || txtMucGiam.Text != "")

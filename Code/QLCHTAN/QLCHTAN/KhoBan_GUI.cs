@@ -47,5 +47,6 @@ namespace QLCHTAN
             ThemPhieuXuat_GUI phieuXuat = new ThemPhieuXuat_GUI();
             phieuXuat.Show();
         }
+
     }
 }

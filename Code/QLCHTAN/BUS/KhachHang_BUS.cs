@@ -37,5 +37,15 @@ namespace BUS
         {
             return khachhang_DAO.select_id_KhachHang_DAO(sdt);
         }
+        public DataTable search_KhachHang_BUS(string timkiem)
+        {
+            return khachhang_DAO.search_KhachHang_DAO(timkiem);
+        }
+        public DataTable sort_KhachHang_BUS(int loc)
+        {
+            return khachhang_DAO.sort_KhachHang_DAO(loc);
+        }
+
+
     }
 }

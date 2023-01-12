@@ -21,6 +21,7 @@ namespace QLCHTAN
         NuocUong_BUS nuocUong_BUS = new NuocUong_BUS();
         KhuyenMai_BUS khuyenMai_BUS = new KhuyenMai_BUS();
         ThongTinDonHang_BUS thongTinDonHang_BUS = new ThongTinDonHang_BUS();
+        ThongTinThanhPhanDoAn_BUS thongTinThanhPhanDoAn_BUS = new ThongTinThanhPhanDoAn_BUS();
         public string loaiDichVu { get; set; }
         public decimal TongTien { get; set; }
         public decimal MucKhuyenMai { get; set; }
@@ -85,15 +86,6 @@ namespace QLCHTAN
         }
         private void clearData(object sender, EventArgs e)
         {
-            DataTable sdt = khachHang_BUS.show_dsKhachHang_BUS();
-            DataRow sdtrong = sdt.NewRow();
-            sdtrong["tenKhachHang"] = sdtrong["Phai"] = sdtrong["SDT"] = sdtrong["Email"] = sdtrong["diaChi"] = sdtrong["ghiChu"] = "";
-            sdtrong["idKhachHang"] = DBNull.Value;
-            sdt.Rows.Add(sdtrong);
-            cbbSDT.DataSource = sdt;
-            cbbSDT.ValueMember = "SDT";
-            cbbSDT.DisplayMember = "SDT";
-            cbbSDT.SelectedIndex = -1;
             txtTenKhach.Clear();
             txtDiaChi.Clear();
             txtEmail.Clear();
@@ -105,6 +97,7 @@ namespace QLCHTAN
             rdbMangVe.Checked = false;
             dgvThongTinDonHang.Rows.Clear();
             rdbNam.Enabled = true;
+            rdbNu.Enabled = true;
             txtTongTien.Clear();
             rdbOnline.Checked = false;
             rdbTienMat.Checked = false;
@@ -118,6 +111,15 @@ namespace QLCHTAN
 
         private void Order_GUI_Load(object sender, EventArgs e)
         {
+            DataTable sdt = khachHang_BUS.show_dsKhachHang_BUS();
+            DataRow sdtrong = sdt.NewRow();
+            sdtrong["tenKhachHang"] = sdtrong["Phai"] = sdtrong["SDT"] = sdtrong["Email"] = sdtrong["diaChi"] = sdtrong["ghiChu"] = "";
+            sdtrong["idKhachHang"] = DBNull.Value;
+            sdt.Rows.Add(sdtrong);
+            cbbSDT.DataSource = sdt;
+            cbbSDT.ValueMember = "SDT";
+            cbbSDT.DisplayMember = "SDT";
+            cbbSDT.Text = "";
             clearData(sender, e);
             ////load dữ liệu dồ ăn
             cbbDanhMucMon.DataSource = doAn_BUS.show_list_LoaiDoAn_BUS();
@@ -262,52 +264,42 @@ namespace QLCHTAN
         }
         private void cbbSDT_SelectedValueChanged(object sender, EventArgs e)
         {
-
-            if (cbbSDT.SelectedValue != null)
+            if(cbbSDT.SelectedValue!=null)
             {
-                if (cbbSDT.Text != "")
+                var customerTable = khachHang_BUS.find_KhachHang_BUS(cbbSDT.SelectedValue?.ToString());
+                if (customerTable == null || customerTable.Rows.Count == 0)
                 {
-                    if (khachHang_BUS.find_KhachHang_BUS(cbbSDT.SelectedValue.ToString()).Rows.Count>0)
-                    {
-                        DataTable tb = khachHang_BUS.find_KhachHang_BUS(cbbSDT.SelectedValue.ToString());
-                        foreach (DataRow r in tb.Rows)
-                        {
-                            txtTenKhach.Text = r["tenKhachHang"].ToString();
-                            if (r["Phai"].ToString().Trim() == "Nam")
-                            {
-                                rdbNam.Enabled = true;
-                                rdbNam.Checked = true;
-                                rdbNu.Enabled = false;
-                            }
-                            else
-                            {
-                                rdbNu.Enabled = true;
-                                rdbNu.Checked = true;
-                                rdbNam.Enabled = false;
-                            }
-                            txtDiaChi.Text = r["diaChi"].ToString();
-                            txtEmail.Text = r["Email"].ToString();
-                            rtxtGhiChu.Text = r["ghiChu"].ToString();
-                            if (khachHang_BUS.select_id_KhachHang_BUS(cbbSDT.Text.ToString().Trim()) != null)
-                            {
-                                txtTenKhach.Enabled = pGioiTinh.Enabled = txtDiaChi.Enabled = txtEmail.Enabled = false;
-                            }
-                            else
-                            {
-                                clearData(sender, e);
-                                txtTenKhach.Enabled = pGioiTinh.Enabled = txtDiaChi.Enabled = txtEmail.Enabled = true;
-                            }
-
-                        }
-
-                    }
+                    clearData(sender, e);
+                    txtTenKhach.Enabled = pGioiTinh.Enabled = txtDiaChi.Enabled = txtEmail.Enabled = true;
+                    return;
                 }
-
+                var customerRow = customerTable.Rows[0];
+                txtTenKhach.Text = customerRow["tenKhachHang"].ToString();
+                if (customerRow["Phai"].ToString() == "Nam")
+                {
+                    rdbNam.Enabled = true;
+                    rdbNam.Checked = true;
+                    rdbNu.Enabled = false;
+                }
+                else
+                {
+                    rdbNu.Enabled = true;
+                    rdbNu.Checked = true;
+                    rdbNam.Enabled = false;
+                }
+                txtDiaChi.Text = customerRow["diaChi"].ToString();
+                txtEmail.Text = customerRow["Email"].ToString();
+                rtxtGhiChu.Text = customerRow["ghiChu"].ToString();
+                if (khachHang_BUS.select_id_KhachHang_BUS(cbbSDT.Text.ToString().Trim()) >0)
+                {
+                    txtTenKhach.Enabled = pGioiTinh.Enabled = txtDiaChi.Enabled = txtEmail.Enabled = false;
+                }
                 else
                 {
                     clearData(sender, e);
                     txtTenKhach.Enabled = pGioiTinh.Enabled = txtDiaChi.Enabled = txtEmail.Enabled = true;
                 }
+
             }
         }
 
@@ -335,6 +327,7 @@ namespace QLCHTAN
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             clearData(sender, e);
+            cbbSDT.Text = "";
         }
 
         private void btnThemMon_Click(object sender, EventArgs e)
@@ -345,21 +338,34 @@ namespace QLCHTAN
             decimal donGia = doAn_BUS.select_donGia_BUS(maSanPham, donViBan);
             decimal thanhTien = nudSoLuongMon.Value * donGia;
 
-            if (thongTinDonHang_BUS.check_ThongTinDonHang_KhoBan_BUS(maSanPham, soLuong).Rows.Count < 0)
+            if (thongTinDonHang_BUS.check_ThongTinDonHang_KhoBan_BUS(maSanPham, soLuong).Rows.Count <= 0)
             {
                 MessageBox.Show("Nguyên liệu bán món hiện không tồn tại trong kho bán, vui lòng nhập nguyên liệu");
                 return;
             }
-            foreach (DataRow r in thongTinDonHang_BUS.check_ThongTinDonHang_KhoBan_BUS(maSanPham, soLuong).Rows)
+            foreach(DataRow dr in thongTinThanhPhanDoAn_BUS.show_ThanhPhanDoAn_BUS(maSanPham).Rows)
             {
-                int soLuong_ = r.Field<int>("soLuong");
-
-                if (soLuong_ <= 0)
+                if (thongTinThanhPhanDoAn_BUS.show_ThanhPhanDoAn_BUS(maSanPham).Rows.Count != thongTinDonHang_BUS.check_ThongTinDonHang_KhoBan_BUS(maSanPham, soLuong).Rows.Count)
                 {
                     MessageBox.Show("Không đủ nguyên liệu chế biến món ăn này, vui lòng nhập thêm");
                     return;
                 }
-            }
+                else
+                {
+                    foreach (DataRow r in thongTinDonHang_BUS.check_ThongTinDonHang_KhoBan_BUS(maSanPham, soLuong).Rows)
+                    {
+
+                        int soLuong_ = r.Field<int>("soLuong");
+
+                        if (soLuong_ <= 0)
+                        {
+                            MessageBox.Show("Không đủ nguyên liệu chế biến món ăn này, vui lòng nhập thêm");
+                            return;
+                        }
+                    }
+                }    
+            }    
+           
 
 
             DialogResult them = MessageBox.Show("Bạn muốn thêm món ăn này ?", "Thông báo", MessageBoxButtons.YesNo);
@@ -412,7 +418,7 @@ namespace QLCHTAN
             decimal thanhTien = nudSoLuongNuoc.Value * donGia;
             int soLuong = Convert.ToInt32(nudSoLuongNuoc.Value);
 
-            if (thongTinDonHang_BUS.check_ThongTinDonHang_KhoBan_BUS(maSanPham, soLuong).Rows.Count < 0)
+            if (thongTinDonHang_BUS.check_ThongTinDonHang_KhoBan_BUS(maSanPham, soLuong).Rows.Count <= 0)
             {
                 MessageBox.Show("Nguyên liệu bán món hiện không tồn tại trong kho bán, vui lòng nhập nguyên liệu");
                 return;
@@ -490,7 +496,7 @@ namespace QLCHTAN
 
         private void btnXoaMon_Click_1(object sender, EventArgs e)
         {
-            if (dgvThongTinDonHang.Rows.Count <= 0)
+            if (dgvThongTinDonHang.Rows.Count < 0)
             {
                 MessageBox.Show("Không có sản phẩm xóa");
                 return;
@@ -504,9 +510,11 @@ namespace QLCHTAN
                     {
                         if (dgvThongTinDonHang.SelectedRows != null && dgvThongTinDonHang.SelectedRows.Count > 0)
                         {
-                            DataGridViewRow r = dgvThongTinDonHang.SelectedRows[i];
-                            TongTien = TongTien - Convert.ToDecimal(r.Cells["ThanhTien"].Value);
-                            dgvThongTinDonHang.Rows.RemoveAt(r.Index);
+                            foreach (DataGridViewRow r in dgvThongTinDonHang.SelectedRows)
+                            {
+                                TongTien = TongTien - Convert.ToDecimal(r.Cells["ThanhTien"].Value);
+                                dgvThongTinDonHang.Rows.RemoveAt(r.Index);
+                            }
                             break;
                         }
                         else
@@ -626,6 +634,7 @@ namespace QLCHTAN
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             clearData(sender, e);
+            TongTien = 0;
         }
 
         private void cbbTenMon_SelectedValueChanged(object sender, EventArgs e)
@@ -635,17 +644,22 @@ namespace QLCHTAN
                 cbbSizeDoAn.DataSource = doAn_BUS.select_DonViBanDoAn_BUS(cbbTenMon.SelectedValue.ToString());
                 cbbSizeDoAn.DisplayMember = "donViBan";
                 cbbSizeDoAn.ValueMember = "donViBan";
+                cbbSizeDoAn.Enabled = true;
+                nudSoLuongMon.Enabled = true;
+                btnThemMon.Enabled = true;
+                btnXoaMon.Enabled = true;
 
             }
-        }
-
-        private void cbbSDT_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-            if(khachHang_BUS.find_KhachHang_BUS(cbbSDT.Text).Rows.Count<=0)
+            else
             {
-                txtTenKhach.Enabled = pGioiTinh.Enabled = txtDiaChi.Enabled = txtEmail.Enabled = true;
+                cbbSizeDoAn.Enabled = false;
+                nudSoLuongMon.Enabled = false;
+                btnThemMon.Enabled = false;
+                btnXoaMon.Enabled = false;
             }
         }
+
+     
 
         private void txtTongTien_TextChanged(object sender, EventArgs e)
         {
@@ -659,6 +673,37 @@ namespace QLCHTAN
             }
 
 
+        }
+
+        private void cbbSDT_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+            {
+                var khach = khachHang_BUS.find_KhachHang_BUS(cbbSDT.Text);
+                if (khach == null || khach.Rows.Count == 0)
+                {
+                    clearData(sender, e);
+                    txtTenKhach.Enabled = pGioiTinh.Enabled = txtDiaChi.Enabled = txtEmail.Enabled = true;
+                    return;
+                }
+            }
+            else
+                e.Handled = true;
+        }
+
+        private void txtTenKhach_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void dgvThongTinDonHang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex>=0)
+
+            {
+                dgvThongTinDonHang.Rows[e.RowIndex].Selected = true;
+            }
         }
     }   
 }

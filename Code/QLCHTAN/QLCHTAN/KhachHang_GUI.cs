@@ -57,7 +57,6 @@ namespace QLCHTAN
             txtGmail.Clear();
             txtDiaChi.Clear();
             rtbGhiChu.Clear();
-            txtSDT.Focus();
             dgvThongTinKhachHang.DataSource = khachhang_BUS.show_dsKhachHang_BUS();
         }
 
@@ -157,5 +156,46 @@ namespace QLCHTAN
         }
         #endregion
 
+        private void txtSDT_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if(txtSDT.Text.Length>11 && !char.IsControl(e.KeyChar))
+            {
+
+                e.Handled = true;
+            }    
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if(txtTimKiem.Text=="")
+            {
+                KhachHang_GUI_Load(sender, e);
+            }    
+            else
+            {
+               dgvThongTinKhachHang.DataSource = khachhang_BUS.search_KhachHang_BUS(txtTimKiem.Text.Trim());
+            }    
+        }
+
+        private void cbbTieuChiLoc_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(cbbTieuChiLoc.SelectedItem.ToString()=="Khách hàng thân thiết")
+            {
+                dgvThongTinKhachHang.DataSource = khachhang_BUS.sort_KhachHang_BUS(1);
+            }    
+            else if (cbbTieuChiLoc.SelectedItem.ToString()=="Khách hàng phổ thông")
+            {
+                dgvThongTinKhachHang.DataSource = khachhang_BUS.sort_KhachHang_BUS(0);
+            }
+            else
+            {
+                dgvThongTinKhachHang.DataSource = khachhang_BUS.show_dsKhachHang_BUS();
+            }    
+
+        }
     }
 }
