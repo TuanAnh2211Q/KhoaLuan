@@ -616,20 +616,7 @@ namespace QLCHTAN
           
         }
 
-        private void ckbKhongApDungKhuyenMai_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ckbKhongApDungKhuyenMai.Checked)
-            {
-                cbbMaGiamGia.Enabled = false;
-                cbbMaGiamGia.SelectedValue = 0;
-            }
-            else
-            {
-                cbbMaGiamGia.Enabled = true;
-                cbbMaGiamGia.SelectedIndex = 0;
-            }
-            txtTongTien.Text = "";
-        }
+      
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {

@@ -23,17 +23,17 @@ namespace OnlineFoodOrder_Website.Models
 
         public CartItem(int productID, int userID)
         {
-            using (OnlineFoodOrder_DBEntities6 db = new OnlineFoodOrder_DBEntities6())
-            {
-                this.ProductID = productID;
-                Product product = db.Products.SingleOrDefault(x => x.ProductID == productID);
-                this.ProductName = product.ProductName;
-                this.ProductImg = product.ImageUrl;
-                this.Price = product.Price.Value;
-                this.Quantity = 1;
-                this.ItemPriceTotal = Price * Quantity;
-                this.UserID = userID;
-            }
+            //using (OnlineFoodOrder_DBEntities6 db = new OnlineFoodOrder_DBEntities6())
+            //{
+            //    this.ProductID = productID;
+            //    Product product = db.Products.SingleOrDefault(x => x.ProductID == productID);
+            //    this.ProductName = product.ProductName;
+            //    this.ProductImg = product.ImageUrl;
+            //    this.Price = product.Price.Value;
+            //    this.Quantity = 1;
+            //    this.ItemPriceTotal = Price * Quantity;
+            //    this.UserID = userID;
+            //}
         }
     }
 }
