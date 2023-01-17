@@ -148,17 +148,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AdminController.cs" />
-    <Compile Include="Controllers\BookTableController.cs" />
-    <Compile Include="Controllers\CartController.cs" />
-    <Compile Include="Controllers\CategoryManagerController.cs" />
-    <Compile Include="Controllers\ContactManagerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\OrderManagerController.cs" />
-    <Compile Include="Controllers\PaymentController.cs" />
-    <Compile Include="Controllers\ProductManagerController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
-    <Compile Include="Controllers\UserManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -292,7 +282,7 @@
     <Compile Include="Models\Order.cs">
       <DependentUpon>FOOD_OLD.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\OrderInvoice.cs" />
+    <Compile Include="Models\HoaDonDatHang.cs" />
     <Compile Include="Models\Payment.cs">
       <DependentUpon>FOOD_OLD.tt</DependentUpon>
     </Compile>
@@ -722,6 +712,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\HomeControllerWeb\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
