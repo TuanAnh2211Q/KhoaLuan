@@ -10,7 +10,7 @@ namespace OnlineFoodOrder_Website.Controllers
     public class CartController : Controller
     {
         // GET: Cart
-        OnlineFoodOrder_DBEntities6 db = new OnlineFoodOrder_DBEntities6();   
+        OnlineFoodOrder_DBEntities7 db = new OnlineFoodOrder_DBEntities7();   
         public ActionResult ViewCart(int UserID)
         {
             int userID = (int)UserID;

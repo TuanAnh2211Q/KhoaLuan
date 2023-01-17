@@ -10,7 +10,7 @@ namespace OnlineFoodOrder_Website.Controllers
 {
     public class OrderManagerController : Controller
     {
-        OnlineFoodOrder_DBEntities6 db = new OnlineFoodOrder_DBEntities6();
+        OnlineFoodOrder_DBEntities7 db = new OnlineFoodOrder_DBEntities7();
         // GET: OrderManager
         public ActionResult OrderList(int? page)
         {

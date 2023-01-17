@@ -9,7 +9,7 @@ namespace OnlineFoodOrder_Website.Controllers
 {
     public class HomeController : Controller
     {
-        OnlineFoodOrder_DBEntities6 db = new OnlineFoodOrder_DBEntities6();
+        OnlineFoodOrder_DBEntities7 db = new OnlineFoodOrder_DBEntities7();
         // GET: Home
         public ActionResult Index()
         {

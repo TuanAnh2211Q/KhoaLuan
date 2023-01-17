@@ -166,11 +166,11 @@
       <DependentUpon>Food_DB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Cart.cs">
-      <DependentUpon>OnlineFoodOrder_DB.tt</DependentUpon>
+      <DependentUpon>FOOD_OLD.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\Category.cs">
-      <DependentUpon>OnlineFoodOrder_DB.tt</DependentUpon>
+      <DependentUpon>FOOD_OLD.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChamCong.cs">
       <DependentUpon>Food_DB.tt</DependentUpon>
@@ -197,7 +197,7 @@
       <DependentUpon>Food_DB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Contact.cs">
-      <DependentUpon>OnlineFoodOrder_DB.tt</DependentUpon>
+      <DependentUpon>FOOD_OLD.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DangNhap_Result.cs">
       <DependentUpon>Food_DB.tt</DependentUpon>
@@ -231,6 +231,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Food_DB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FOOD_OLD.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FOOD_OLD.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FOOD_OLD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FOOD_OLD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FOOD_OLD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FOOD_OLD.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\HinhThucThanhToan.cs">
       <DependentUpon>Food_DB.tt</DependentUpon>
@@ -274,27 +289,12 @@
     <Compile Include="Models\NuocUong.cs">
       <DependentUpon>Food_DB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\OnlineFoodOrder_DB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OnlineFoodOrder_DB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\OnlineFoodOrder_DB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OnlineFoodOrder_DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\OnlineFoodOrder_DB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OnlineFoodOrder_DB.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\Order.cs">
-      <DependentUpon>OnlineFoodOrder_DB.tt</DependentUpon>
+      <DependentUpon>FOOD_OLD.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\OrderInvoice.cs" />
     <Compile Include="Models\Payment.cs">
-      <DependentUpon>OnlineFoodOrder_DB.tt</DependentUpon>
+      <DependentUpon>FOOD_OLD.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PhanQuyen.cs">
       <DependentUpon>Food_DB.tt</DependentUpon>
@@ -303,7 +303,7 @@
       <DependentUpon>Food_DB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Product.cs">
-      <DependentUpon>OnlineFoodOrder_DB.tt</DependentUpon>
+      <DependentUpon>FOOD_OLD.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PurchasedHistory.cs" />
     <Compile Include="Models\PurchasedItemOfEachCart.cs" />
@@ -452,7 +452,7 @@
       <DependentUpon>Food_DB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs">
-      <DependentUpon>OnlineFoodOrder_DB.tt</DependentUpon>
+      <DependentUpon>FOOD_OLD.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ViPham.cs">
       <DependentUpon>Food_DB.tt</DependentUpon>
@@ -624,15 +624,15 @@
       <DependentUpon>Food_DB.edmx</DependentUpon>
       <LastGenOutput>Food_DB.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\OnlineFoodOrder_DB.Context.tt">
+    <Content Include="Models\FOOD_OLD.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>OnlineFoodOrder_DB.edmx</DependentUpon>
-      <LastGenOutput>OnlineFoodOrder_DB.Context.cs</LastGenOutput>
+      <DependentUpon>FOOD_OLD.edmx</DependentUpon>
+      <LastGenOutput>FOOD_OLD.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\OnlineFoodOrder_DB.tt">
+    <Content Include="Models\FOOD_OLD.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>OnlineFoodOrder_DB.edmx</DependentUpon>
-      <LastGenOutput>OnlineFoodOrder_DB.cs</LastGenOutput>
+      <DependentUpon>FOOD_OLD.edmx</DependentUpon>
+      <LastGenOutput>FOOD_OLD.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -650,19 +650,19 @@
     <Content Include="Content\Admin\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\Admin\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\Admin\fonts\glyphicons-halflings-regular.woff2" />
-    <EntityDeploy Include="Models\OnlineFoodOrder_DB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>OnlineFoodOrder_DB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\OnlineFoodOrder_DB.edmx.diagram">
-      <DependentUpon>OnlineFoodOrder_DB.edmx</DependentUpon>
-    </Content>
     <EntityDeploy Include="Models\Food_DB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Food_DB.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <Content Include="Models\Food_DB.edmx.diagram">
       <DependentUpon>Food_DB.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\FOOD_OLD.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FOOD_OLD.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\FOOD_OLD.edmx.diagram">
+      <DependentUpon>FOOD_OLD.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

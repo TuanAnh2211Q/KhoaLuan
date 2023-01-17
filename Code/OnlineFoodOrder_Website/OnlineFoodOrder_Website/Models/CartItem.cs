@@ -23,7 +23,7 @@ namespace OnlineFoodOrder_Website.Models
 
         public CartItem(int productID, int userID)
         {
-            using (OnlineFoodOrder_DBEntities6 db = new OnlineFoodOrder_DBEntities6())
+            using (OnlineFoodOrder_DBEntities7 db = new OnlineFoodOrder_DBEntities7())
             {
                 this.ProductID = productID;
                 Product product = db.Products.SingleOrDefault(x => x.ProductID == productID);

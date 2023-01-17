@@ -6,7 +6,7 @@ namespace OnlineFoodOrder_Website.Controllers
 {
     public class AdminController : Controller
     {
-        OnlineFoodOrder_DBEntities6 db = new OnlineFoodOrder_DBEntities6();
+        OnlineFoodOrder_DBEntities7 db = new OnlineFoodOrder_DBEntities7();
         // GET: Admin
         public ActionResult AdminHome()
         {
