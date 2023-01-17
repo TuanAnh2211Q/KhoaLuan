@@ -26,11 +26,22 @@ namespace QLCHTAN.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TRAN-TUAN-ANH\\TUANANH;Initial Catalog=QLCUAHANGTHUCANNHANH;Persist Se" +
-            "curity Info=True;User ID=sa;Password=123")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-4MUEPD4\\THANHBAO;Initial Catalog=QLCUAHANGTHUCANNHANH;Persist" +
+            " Security Info=True;User ID=sa;Password=123")]
         public string QLCUAHANGTHUCANNHANHConnectionString {
             get {
                 return ((string)(this["QLCUAHANGTHUCANNHANHConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TRAN-TUAN-ANH\\TUANANH;Initial Catalog=QLCUAHANGTHUCANNHANH;Persist Se" +
+            "curity Info=True;User ID=sa;Password=123")]
+        public string QLCUAHANGTHUCANNHANHConnectionString1 {
+            get {
+                return ((string)(this["QLCUAHANGTHUCANNHANHConnectionString1"]));
             }
         }
     }

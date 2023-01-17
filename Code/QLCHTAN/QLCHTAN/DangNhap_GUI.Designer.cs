@@ -245,7 +245,7 @@ namespace QLCHTAN
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(414, 36);
             this.txtTaiKhoan.TabIndex = 21;
-            this.txtTaiKhoan.Text = "NV002";
+            this.txtTaiKhoan.Text = "NV001";
             this.txtTaiKhoan.Click += new System.EventHandler(this.txtTaiKhoan_Click);
             // 
             // label6

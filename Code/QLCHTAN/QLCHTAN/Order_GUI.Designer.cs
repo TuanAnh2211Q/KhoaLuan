@@ -72,7 +72,6 @@ namespace QLCHTAN
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnXemTongTien = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.ckbKhongApDungKhuyenMai = new System.Windows.Forms.CheckBox();
             this.cbbMaGiamGia = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.PanelOrder = new System.Windows.Forms.Panel();
@@ -147,7 +146,7 @@ namespace QLCHTAN
             this.btnThanhToan.ForeColor = System.Drawing.Color.Red;
             this.btnThanhToan.Image = ((System.Drawing.Image)(resources.GetObject("btnThanhToan.Image")));
             this.btnThanhToan.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThanhToan.Location = new System.Drawing.Point(59, 440);
+            this.btnThanhToan.Location = new System.Drawing.Point(50, 365);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(230, 45);
             this.btnThanhToan.TabIndex = 14;
@@ -262,7 +261,7 @@ namespace QLCHTAN
             this.groupBox1.Controls.Add(this.rdbOnline);
             this.groupBox1.Controls.Add(this.rdbTienMat);
             this.groupBox1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(9, 216);
+            this.groupBox1.Location = new System.Drawing.Point(9, 165);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(305, 69);
             this.groupBox1.TabIndex = 13;
@@ -505,7 +504,7 @@ namespace QLCHTAN
             this.btnRefresh.ForeColor = System.Drawing.Color.Red;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRefresh.Location = new System.Drawing.Point(59, 491);
+            this.btnRefresh.Location = new System.Drawing.Point(50, 416);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(230, 36);
             this.btnRefresh.TabIndex = 20;
@@ -529,7 +528,7 @@ namespace QLCHTAN
             this.groupBox3.Controls.Add(this.btnXemTongTien);
             this.groupBox3.Controls.Add(this.txtTongTien);
             this.groupBox3.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(9, 291);
+            this.groupBox3.Location = new System.Drawing.Point(9, 240);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(305, 116);
             this.groupBox3.TabIndex = 18;
@@ -554,27 +553,15 @@ namespace QLCHTAN
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.ckbKhongApDungKhuyenMai);
             this.groupBox2.Controls.Add(this.cbbMaGiamGia);
             this.groupBox2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Red;
             this.groupBox2.Location = new System.Drawing.Point(9, 81);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(305, 122);
+            this.groupBox2.Size = new System.Drawing.Size(305, 80);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chọn khuyến mãi áp dụng";
-            // 
-            // ckbKhongApDungKhuyenMai
-            // 
-            this.ckbKhongApDungKhuyenMai.AutoSize = true;
-            this.ckbKhongApDungKhuyenMai.Location = new System.Drawing.Point(13, 80);
-            this.ckbKhongApDungKhuyenMai.Name = "ckbKhongApDungKhuyenMai";
-            this.ckbKhongApDungKhuyenMai.Size = new System.Drawing.Size(214, 23);
-            this.ckbKhongApDungKhuyenMai.TabIndex = 13;
-            this.ckbKhongApDungKhuyenMai.Text = "Không áp dụng khuyến mãi";
-            this.ckbKhongApDungKhuyenMai.UseVisualStyleBackColor = true;
-            this.ckbKhongApDungKhuyenMai.CheckedChanged += new System.EventHandler(this.ckbKhongApDungKhuyenMai_CheckedChanged);
             // 
             // cbbMaGiamGia
             // 
@@ -1050,7 +1037,6 @@ namespace QLCHTAN
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.PanelOrder.ResumeLayout(false);
             this.PanelOrder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -1130,7 +1116,6 @@ namespace QLCHTAN
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnXemTongTien;
-        private System.Windows.Forms.CheckBox ckbKhongApDungKhuyenMai;
         private Microsoft.Data.SqlClient.SqlDataAdapter sqlDataAdapter1;
         private System.Windows.Forms.DataGridView dgvThongTinDonHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn maSanPham;
