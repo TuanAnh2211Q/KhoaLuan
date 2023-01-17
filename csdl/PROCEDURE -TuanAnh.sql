@@ -221,3 +221,40 @@ or ghiChu like N'%'+@find+'%'
 
 
 
+
+
+---17/1/2022
+
+create proc print_HoaDonBanHang
+@maDonHang varchar(10)
+as
+select dhang.MaDonHang, dhang.TenDonHang, dhang.ThoiGianDat, dhang.TenNhanVien, dhang.TenSanPham, dhang.GiaTien, dhang.SoLuong, dhang.ThanhTien, dhang.TenKhuyenMai
+from
+(
+select dh.maDonHang as MaDonHang, dh.tenDonHang as TenDonHang, dh.thoiGianDat as ThoiGianDat, nv.tenNhanVien as TenNhanVien, da.tenDoAn as TenSanPham, ttdh.giaTien as GiaTien ,ttdh.soLuong as SoLuong, ttdh.thanhTien as ThanhTien , km.tenKhuyenMai as TenKhuyenMai
+from DonHang dh, ThongTinDonHang ttdh, DoAn da, NhanVien nv, KhuyenMai km
+where dh.maDonHang=ttdh.maDonHang
+and ttdh.maSanPham=da.maDoAn
+and dh.maNhanVien=nv.maNhanVien
+and dh.maKhuyenMai=km.maKhuyenMai
+union
+select dh.maDonHang as MaDonHang, dh.tenDonHang as TenDonHang, dh.thoiGianDat as ThoiGianDat, nv.tenNhanVien as TenNhanVien, nu.tenNuoc as TenSanPham, ttdh.giaTien as GiaTien ,ttdh.soLuong as SoLuong, ttdh.thanhTien as ThanhTien , km.tenKhuyenMai as TenKhuyenMai
+from DonHang dh, ThongTinDonHang ttdh, NuocUong nu, NhanVien nv, KhuyenMai km
+where dh.maDonHang=ttdh.maDonHang
+and ttdh.maSanPham=nu.maNuoc
+and dh.maNhanVien=nv.maNhanVien
+and dh.maKhuyenMai=km.maKhuyenMai
+)dhang
+where dhang.MaDonHang=@maDonHang
+
+
+
+create proc print_TongGia
+@maDonHang varchar(10)
+as
+select sum(ThanhTien)
+from ThongTinDonHang
+where maDonHang=@maDonHang
+
+
+exec print_HoaDonBanHang 'MHD2899'

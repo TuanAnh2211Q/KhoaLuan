@@ -18,6 +18,7 @@ namespace QLCHTAN
         public string diaChiKhach = Order_GUI.diaChi;
         public string emailKhach = Order_GUI.email;
         public int ttd = 0;
+        public static string madh;
         KhachHang_BUS khachhang_BUS = new KhachHang_BUS();
         DonHang_BUS donhang_BUS = new DonHang_BUS();
         KhuyenMai_BUS khuyenMai_BUS = new KhuyenMai_BUS();
@@ -30,9 +31,9 @@ namespace QLCHTAN
         public DonHang_DTO donHang_DTO()
         {
             string km = "";
-            if (Order_GUI.maKM.Trim() is null)
+            if (Order_GUI.maKM is null)
             {
-                km = "Null";
+                km = "NULL";
             }
             else
             {
@@ -78,7 +79,7 @@ namespace QLCHTAN
             }
             lblThoiGian.Text = DateTime.Now.ToString();
             lblTrangThai.Text = "Chưa thanh toán";
-            lblTongDonGia.Text =Order_GUI.tongGia ;
+            lblTongDonGia.Text =Order_GUI.tongGia;
             dgvThongTinHoaDon.DataSource = Order_GUI.ttdh;
 
 
@@ -116,7 +117,10 @@ namespace QLCHTAN
                             }  
                         }
                         MessageBox.Show("Hoàn tất đơn hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
+                        madh = lblMaDonHang.Text.Trim();
+                        InHoaDon_GUI inHoaDon_GUI = new InHoaDon_GUI();
+                        inHoaDon_GUI.Show();
+
                     }    
                 }
             }
