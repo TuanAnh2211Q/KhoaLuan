@@ -76,22 +76,35 @@ namespace QLCHTAN
                         MessageBox.Show("Ngày lập phiếu trả phải lớn hơn ngày dự kiến giao của phiếu đặt \n" +
                             " (Ngày dự kiến giao của phiếu đặt này là " + Convert.ToDateTime(phieuTra_BUS.check_date_TraHang_DAO(phieuTra())).ToShortDateString() + ")");
                     }
-                    else if (phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuTra(cbbMaDat.SelectedValue.ToString()) == null)
+                    else 
                     {
-                        DialogResult rs = MessageBox.Show("Xác nhận thêm phiếu trả mới ?", "Thông báo", MessageBoxButtons.YesNo);
-                        if (rs == DialogResult.Yes)
+                        if (phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuNhap(cbbMaDat.SelectedValue.ToString()))
                         {
-                            if (phieuTra_BUS.insert_PhieuTra_BUS(phieuTra()))
+                            if (phieuDatHang_BUS.check_TrangThai_PhieuDat_PhieuTra(cbbMaDat.SelectedValue.ToString()) == null)
                             {
-                                MessageBox.Show("Thêm phiếu trả mới thành công");
-                                btnLamMoi_Click(sender, e);
+                                DialogResult rs = MessageBox.Show("Xác nhận thêm phiếu trả mới ?", "Thông báo", MessageBoxButtons.YesNo);
+                                if (rs == DialogResult.Yes)
+                                {
+                                    if (phieuTra_BUS.insert_PhieuTra_BUS(phieuTra()))
+                                    {
+                                        MessageBox.Show("Thêm phiếu trả mới thành công");
+                                        btnLamMoi_Click(sender, e);
+                                    }
+                                    else
+                                        MessageBox.Show("Thêm phiếu trả thất bại, vui lòng kiểm tra lại thông tin");
+                                }
                             }
                             else
-                                MessageBox.Show("Thêm phiếu trả thất bại, vui lòng kiểm tra lại thông tin");
+                                MessageBox.Show("Không thể thêm phiếu trả do đã tồn tại phiếu trả hàng trên phiếu đặt này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                         }
+                        else
+                        {
+                            MessageBox.Show("Phiếu đặt đã tồn tại nhập hàng tương ứng, không thể trả hàng");
+                        }    
+
                     }
-                    else
-                        MessageBox.Show("Không thể thêm phiếu trả do đã tồn tại phiếu trả hàng trên phiếu đặt này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                   
                 }
                 else
                 {

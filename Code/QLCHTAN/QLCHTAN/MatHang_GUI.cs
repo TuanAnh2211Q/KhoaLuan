@@ -41,7 +41,7 @@ namespace QLCHTAN
         public MatHang_DTO mathangDTO()
         {
             string ncc;
-            if (cbbNCC.Text=="null")
+            if (cbbNCC.SelectedIndex==-1 || cbbNCC.Text=="null")
                 ncc = "null";
             else
                 ncc = cbbNCC.SelectedValue.ToString().Trim();
@@ -51,7 +51,7 @@ namespace QLCHTAN
         public MatHang_DTO mathangNuocDTO()
         {
             string nccnuoc;
-            if (cbbNCCNuoc.Text == "null")
+            if (cbbNCCNuoc.SelectedIndex==-1 || cbbNCCNuoc.Text == "null")
                 nccnuoc = "null";
             else
                 nccnuoc = cbbNCCNuoc.SelectedValue.ToString().Trim();
@@ -187,7 +187,6 @@ namespace QLCHTAN
             cbbNCCNuoc.ValueMember = "maNCC";
 
             txtMaHang.Text = txtTenHang.Text = txtGhiChu.Text = txtDonVi.Text = txtDonGia.Text = "";
-            cbbNCC.Text = "null";
             txtMaHang.Enabled = true;
 
             txtMaHangNuoc.Text = txtTenHangNuoc.Text = txtGhiChuNuoc.Text = txtDonViNuoc.Text = txtDonGiaNuoc.Text = "";
@@ -203,11 +202,11 @@ namespace QLCHTAN
                 txtMaHang.Text = r.Cells["maHang"].Value.ToString();
                 txtTenHang.Text = r.Cells["tenHang"].Value.ToString();
                 txtGhiChu.Text = r.Cells["ghiChu"].Value.ToString();
-                txtDonGia.Text =Convert.ToSingle( r.Cells["donGia"].Value).ToString();
+                txtDonGia.Text =r.Cells["donGia"].Value.ToString();
                 txtDonVi.Text = r.Cells["donVi"].Value.ToString();
                 if(r.Cells["maNCC"].Value.ToString()=="")
                 {
-                    cbbNCC.Text ="null";
+                    cbbNCC.SelectedIndex = -1;
 
                 }
                 else
@@ -354,11 +353,11 @@ namespace QLCHTAN
                 txtMaHangNuoc.Text = r.Cells["maHangNuoc"].Value.ToString();
                 txtTenHangNuoc.Text = r.Cells["tenHangNuoc"].Value.ToString();
                 txtGhiChuNuoc.Text = r.Cells["ghiChuNuoc"].Value.ToString();
-                txtDonGiaNuoc.Text = Convert.ToSingle(r.Cells["donGiaNuoc"].Value).ToString();
+                txtDonGiaNuoc.Text = r.Cells["donGiaNuoc"].Value.ToString();
                 txtDonViNuoc.Text = r.Cells["donViNuoc"].Value.ToString();
                 if (r.Cells["maNCCNuoc"].Value.ToString() == "")
                 {
-                    cbbNCCNuoc.Text = "null";
+                    cbbNCCNuoc.SelectedIndex=-1;
 
                 }
                 else

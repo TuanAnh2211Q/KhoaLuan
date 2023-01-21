@@ -39,7 +39,6 @@ namespace QLCHTAN
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTenNhanVien = new System.Windows.Forms.Label();
             this.lblTenTaiKhoanNhanVien = new System.Windows.Forms.Label();
-            this.lblkDoiMatKhau = new System.Windows.Forms.LinkLabel();
             this.lblkDangXuat = new System.Windows.Forms.LinkLabel();
             this.gbxChucNangNhanVien = new System.Windows.Forms.GroupBox();
             this.flpChucNangNhanVien = new System.Windows.Forms.FlowLayoutPanel();
@@ -59,6 +58,7 @@ namespace QLCHTAN
             this.txtQuanLiThongTinKhachHang = new System.Windows.Forms.TextBox();
             this.btnQuanLiKhachHang = new System.Windows.Forms.Button();
             this.panelChucNang = new System.Windows.Forms.Panel();
+            this.lblkDoiMatKhau = new System.Windows.Forms.LinkLabel();
             this.grbThongTinDangNhap.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -184,17 +184,6 @@ namespace QLCHTAN
             this.lblTenTaiKhoanNhanVien.Size = new System.Drawing.Size(65, 26);
             this.lblTenTaiKhoanNhanVien.TabIndex = 4;
             this.lblTenTaiKhoanNhanVien.Text = "label2";
-            // 
-            // lblkDoiMatKhau
-            // 
-            this.lblkDoiMatKhau.AutoSize = true;
-            this.lblkDoiMatKhau.Location = new System.Drawing.Point(222, 71);
-            this.lblkDoiMatKhau.Name = "lblkDoiMatKhau";
-            this.lblkDoiMatKhau.Size = new System.Drawing.Size(91, 18);
-            this.lblkDoiMatKhau.TabIndex = 2;
-            this.lblkDoiMatKhau.TabStop = true;
-            this.lblkDoiMatKhau.Text = "Đổi mật khẩu";
-            this.lblkDoiMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkDoiMatKhau_LinkClicked);
             // 
             // lblkDangXuat
             // 
@@ -436,6 +425,17 @@ namespace QLCHTAN
             this.panelChucNang.Size = new System.Drawing.Size(1239, 475);
             this.panelChucNang.TabIndex = 5;
             // 
+            // lblkDoiMatKhau
+            // 
+            this.lblkDoiMatKhau.AutoSize = true;
+            this.lblkDoiMatKhau.Location = new System.Drawing.Point(222, 71);
+            this.lblkDoiMatKhau.Name = "lblkDoiMatKhau";
+            this.lblkDoiMatKhau.Size = new System.Drawing.Size(91, 18);
+            this.lblkDoiMatKhau.TabIndex = 2;
+            this.lblkDoiMatKhau.TabStop = true;
+            this.lblkDoiMatKhau.Text = "Đổi mật khẩu";
+            this.lblkDoiMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkDoiMatKhau_LinkClicked);
+            // 
             // GiaoDienNhanVien_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -484,7 +484,6 @@ namespace QLCHTAN
 
         private System.Windows.Forms.GroupBox grbThongTinDangNhap;
         private System.Windows.Forms.LinkLabel lblkDangXuat;
-        private System.Windows.Forms.LinkLabel lblkDoiMatKhau;
         private System.Windows.Forms.Label lblTenNhanVien;
         private System.Windows.Forms.Label label1;
   
@@ -512,5 +511,6 @@ namespace QLCHTAN
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.LinkLabel lblkDoiMatKhau;
     }
 }

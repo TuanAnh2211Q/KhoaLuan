@@ -133,6 +133,7 @@ namespace QLCHTAN
                 }
                 else
                 {
+                    maPhieuDat = txtMaDat.Text.Trim();
                     ThongTinPhieuDat_GUI thongTinChiTietPhieuDat_GUI = new ThongTinPhieuDat_GUI();
                     thongTinChiTietPhieuDat_GUI.Show();
                 }
@@ -309,7 +310,7 @@ namespace QLCHTAN
                         }
                         else
                         {
-                            DialogResult rs = MessageBox.Show("Xác nhận hoàn thành phiếu đặt ?", "Thông báo", MessageBoxButtons.YesNo);
+                            DialogResult rs = MessageBox.Show("Xác nhận thay đổi trạng thái phiếu đặt ?", "Thông báo", MessageBoxButtons.YesNo);
                             if (rs == DialogResult.Yes)
                             {
                                 if(trangThaiPhieu is false)
