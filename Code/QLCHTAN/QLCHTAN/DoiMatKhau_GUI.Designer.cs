@@ -29,7 +29,12 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoiMatKhau_GUI));
             this.grbDoiMatKhau = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnHienMatKhau = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnKhongHienMatKhau = new System.Windows.Forms.Button();
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.txtMatKhauMoi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,6 +47,10 @@ namespace QLCHTAN
             // 
             // grbDoiMatKhau
             // 
+            this.grbDoiMatKhau.Controls.Add(this.btnHienMatKhau);
+            this.grbDoiMatKhau.Controls.Add(this.button2);
+            this.grbDoiMatKhau.Controls.Add(this.button1);
+            this.grbDoiMatKhau.Controls.Add(this.btnKhongHienMatKhau);
             this.grbDoiMatKhau.Controls.Add(this.btnXacNhan);
             this.grbDoiMatKhau.Controls.Add(this.txtMatKhauMoi);
             this.grbDoiMatKhau.Controls.Add(this.label3);
@@ -58,6 +67,58 @@ namespace QLCHTAN
             this.grbDoiMatKhau.TabStop = false;
             this.grbDoiMatKhau.Text = "Đổi mật khẩu";
             // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(306, 79);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(27, 25);
+            this.button2.TabIndex = 33;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnHienMatKhau
+            // 
+            this.btnHienMatKhau.FlatAppearance.BorderSize = 0;
+            this.btnHienMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHienMatKhau.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnHienMatKhau.Image = ((System.Drawing.Image)(resources.GetObject("btnHienMatKhau.Image")));
+            this.btnHienMatKhau.Location = new System.Drawing.Point(306, 47);
+            this.btnHienMatKhau.Name = "btnHienMatKhau";
+            this.btnHienMatKhau.Size = new System.Drawing.Size(27, 26);
+            this.btnHienMatKhau.TabIndex = 32;
+            this.btnHienMatKhau.UseVisualStyleBackColor = true;
+            this.btnHienMatKhau.Click += new System.EventHandler(this.btnHienMatKhau_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(306, 79);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 26);
+            this.button1.TabIndex = 31;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnKhongHienMatKhau
+            // 
+            this.btnKhongHienMatKhau.FlatAppearance.BorderSize = 0;
+            this.btnKhongHienMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhongHienMatKhau.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnKhongHienMatKhau.Image = ((System.Drawing.Image)(resources.GetObject("btnKhongHienMatKhau.Image")));
+            this.btnKhongHienMatKhau.Location = new System.Drawing.Point(306, 47);
+            this.btnKhongHienMatKhau.Name = "btnKhongHienMatKhau";
+            this.btnKhongHienMatKhau.Size = new System.Drawing.Size(27, 26);
+            this.btnKhongHienMatKhau.TabIndex = 30;
+            this.btnKhongHienMatKhau.UseVisualStyleBackColor = true;
+            this.btnKhongHienMatKhau.Click += new System.EventHandler(this.btnKhongHienMatKhau_Click);
+            // 
             // btnXacNhan
             // 
             this.btnXacNhan.Location = new System.Drawing.Point(258, 111);
@@ -72,6 +133,7 @@ namespace QLCHTAN
             // 
             this.txtMatKhauMoi.Location = new System.Drawing.Point(119, 79);
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
+            this.txtMatKhauMoi.PasswordChar = '*';
             this.txtMatKhauMoi.Size = new System.Drawing.Size(214, 26);
             this.txtMatKhauMoi.TabIndex = 5;
             // 
@@ -88,6 +150,7 @@ namespace QLCHTAN
             // 
             this.txtMatKhauCu.Location = new System.Drawing.Point(119, 47);
             this.txtMatKhauCu.Name = "txtMatKhauCu";
+            this.txtMatKhauCu.PasswordChar = '*';
             this.txtMatKhauCu.Size = new System.Drawing.Size(214, 26);
             this.txtMatKhauCu.TabIndex = 3;
             // 
@@ -149,5 +212,9 @@ namespace QLCHTAN
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTenDangNhap;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnKhongHienMatKhau;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnHienMatKhau;
     }
 }

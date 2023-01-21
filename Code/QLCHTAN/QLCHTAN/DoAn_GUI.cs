@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using DTO;
 using BUS;
+using System.Globalization;
+
 namespace QLCHTAN
 {
     public partial class DoAn_GUI : Form
@@ -203,5 +205,6 @@ namespace QLCHTAN
         {
             this.Close();
         }
+
     }
 }

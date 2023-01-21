@@ -69,6 +69,11 @@ namespace QLCHTAN
                     {
                         dgvThongTinChiTietPhieuNhap.DataSource = thongTinChiTietPhieuNhap_BUS.select_to_PhieuNhap_Temp(PhieuDatHang_GUI.maPhieuDat, PhieuTra_GUI.maPhieuTra);
                     }
+                    if (dgvThongTinChiTietPhieuNhap.RowCount < 0)
+                    {
+                        MessageBox.Show("Không có thông tin nhập hàng");
+                        return;
+                    }
                 }    
                else
                 {

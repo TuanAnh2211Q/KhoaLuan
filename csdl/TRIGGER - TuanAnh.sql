@@ -206,6 +206,46 @@ end
 	end
 
 
+	---21/1/2023
+
+	create trigger trg_update_MatHang on MatHang after update
+	as
+	begin
+	declare @ncc varchar(10)= (select maNCC from inserted),
+				@mahang varchar(10)=(select maHang from inserted),
+				@madat varchar(10)= (select dh.maDatHang from DatHang dh, ThongTinDatHang ttdh 
+													where dh.maDatHang=ttdh.maDatHang and trangThai =0)
+
+	delete from ThongTinDatHang
+	where maDatHang=@madat 
+	and maHang=@mahang
+	end
+
+
+
+	--create trigger trg_update_DatHang on DatHang after update
+	--as
+	--begin
+	--declare @maDat varchar(10)= (select maDatHang from inserted),
+				
+	--			@maHang varchar(10)=(select maHang from inserted i, ThongTinDatHang ttdh 
+	--													where i.maDatHang=ttdh.maNCC)
+	--if not exists (select mh.maHang
+	--				    from DatHang dh, ThongTinDatHang ttdh, MatHang mh
+	--				    where dh.maDatHang=ttdh.maDatHang
+	--				    and mh.maHang=ttdh.maHang
+	--				    and mh.maNCC=ttdh.maNCC
+	--				    and ttdh.maDatHang=@maDat)
+	--begin
+	--delete from ThongTinDatHang
+	--where maHang=@maHang
+	--end
+	--end
+
+
+
+
+
 
 
 

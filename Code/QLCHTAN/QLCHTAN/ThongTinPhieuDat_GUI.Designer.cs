@@ -320,7 +320,7 @@ namespace QLCHTAN
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ThongTinPhieuDat_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ThongTinChiTietPhieuDat_GUI";
+            this.Text = "Thông tin phiếu đặt ";
             this.Load += new System.EventHandler(this.ThongTinChiTietPhieuDat_GUI_Load);
             this.grbThongTinPhieuDat.ResumeLayout(false);
             this.grbThongTinPhieuDat.PerformLayout();

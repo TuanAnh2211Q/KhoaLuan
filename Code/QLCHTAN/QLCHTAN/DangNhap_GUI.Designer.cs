@@ -171,7 +171,7 @@ namespace QLCHTAN
             this.btnHienMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHienMatKhau.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnHienMatKhau.Image = ((System.Drawing.Image)(resources.GetObject("btnHienMatKhau.Image")));
-            this.btnHienMatKhau.Location = new System.Drawing.Point(435, 3);
+            this.btnHienMatKhau.Location = new System.Drawing.Point(432, 3);
             this.btnHienMatKhau.Name = "btnHienMatKhau";
             this.btnHienMatKhau.Size = new System.Drawing.Size(41, 41);
             this.btnHienMatKhau.TabIndex = 28;

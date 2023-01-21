@@ -28,11 +28,7 @@ namespace QLCHTAN
             this.Close();
         }
 
-        private void lblkDoiMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            DoiMatKhau_GUI doiMatKhau_GUI = new DoiMatKhau_GUI();
-            doiMatKhau_GUI.Show();
-        }
+        
 
         private void btnLapPhieuNhapHang_Click(object sender, EventArgs e)
         {
@@ -72,6 +68,11 @@ namespace QLCHTAN
             khoban.Show();
         }
 
-     
+        private void lblkDoiMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DoiMatKhau_GUI doiMatKhau_GUI = new DoiMatKhau_GUI(this);
+            doiMatKhau_GUI.ShowDialog();
+            
+        }
     }
 }

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using DTO;
 using BUS;
+using System.Globalization;
+
 namespace QLCHTAN
 {
     public partial class ThongTinPhieuDat_GUI : Form
@@ -40,7 +42,11 @@ namespace QLCHTAN
         {
             txtMaDatHang.Text = PhieuDatHang_GUI.maPhieuDat;
             dgvThongTinChiTietPhieuDat.DataSource = thongTinChiTietPhieuDatHang_BUS.ds_SanPhamDat_BUS(PhieuDatHang_GUI.maPhieuDat);
-            lblTongGia.Text = thongTinChiTietPhieuDatHang_BUS.tongGia_PhieuDat_BUS(PhieuDatHang_GUI.maPhieuDat) + "VND";
+
+           
+            lblTongGia.Text = thongTinChiTietPhieuDatHang_BUS.tongGia_PhieuDat_BUS(PhieuDatHang_GUI.maPhieuDat) +"VNĐ";
+
+
 
             cbbMatHang.DataSource = thongTinChiTietPhieuDatHang_BUS.ds_matHang_BUS();
             cbbMatHang.DisplayMember = "tenHang";

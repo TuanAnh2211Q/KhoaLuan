@@ -26,8 +26,10 @@ namespace DAO
             SqlCommand cmd = new SqlCommand("select_TongGiaNhap", conn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@maNhap", SqlDbType.VarChar).Value = manhap;
-            if (cmd.ExecuteScalar() != null)
+            object c = cmd.ExecuteScalar();
+            if (ReferenceEquals(c,null))
                 return Convert.ToInt32(cmd.ExecuteScalar());
+            else
             return 0;
         }
         public DataTable select_to_PhieuNhap_Temp(string madat, string matra)
