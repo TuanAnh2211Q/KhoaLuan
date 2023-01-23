@@ -126,9 +126,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\DatBanController.cs" />
-    <Compile Include="Controllers\GioiThieuController.cs" />
-    <Compile Include="Controllers\ThucDonController.cs" />
     <Compile Include="Controllers\TrangChuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -418,6 +415,7 @@
     <Content Include="css\responsive.css" />
     <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="images\about-img.png" />
@@ -508,10 +506,15 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
+    <Content Include="Views\TrangChu\DatBan.cshtml" />
+    <Content Include="Views\Layout\TrangChuLayout.cshtml" />
+    <Content Include="Views\Layout\TieuDe.cshtml" />
     <Content Include="Views\TrangChu\TrangChu.cshtml" />
-    <Content Include="Views\ThucDon\ThucDon.cshtml" />
-    <Content Include="Views\GioiThieu\GioiThieu.cshtml" />
-    <Content Include="Views\DatBan\DatBan.cshtml" />
+    <Content Include="Views\TrangChu\ThucDon.cshtml" />
+    <Content Include="Views\TrangChu\GioiThieu.cshtml" />
+    <Content Include="Views\TrangChu\LienHe.cshtml" />
+    <Content Include="Views\TrangChu\DangNhap.cshtml" />
+    <Content Include="Views\TrangChu\DangKi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
