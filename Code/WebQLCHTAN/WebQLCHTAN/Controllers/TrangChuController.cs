@@ -12,7 +12,29 @@ namespace WebQLCHTAN.Controllers
         {
             return View();
         }
-
-
+        public ActionResult ThucDon()
+        {
+            return View();
+        }
+        public ActionResult GioiThieu()
+        {
+            return View();
+        }
+        public ActionResult DatBan()
+        {
+            return View();
+        }
+        public ActionResult LienHe()
+        {
+            return View();
+        }
+        public ActionResult DangNhap()
+        {
+            return View();
+        }
+        public ActionResult DangKi()
+        {
+            return View();
+        }
     }
 }
