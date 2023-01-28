@@ -591,7 +591,6 @@
     <Content Include="Views\TrangChu\TrangChu.cshtml" />
     <Content Include="Views\TrangChu\ThucDon.cshtml" />
     <Content Include="Views\TrangChu\GioiThieu.cshtml" />
-    <Content Include="Views\TrangChu\LienHe.cshtml" />
     <Content Include="Views\TrangChu\DangNhap.cshtml" />
     <Content Include="Views\TrangChu\DangKi.cshtml" />
     <Content Include="Views\QuanLyLayout\QuanLyTieuDePhiaTren.cshtml" />
