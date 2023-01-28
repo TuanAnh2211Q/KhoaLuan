@@ -126,6 +126,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\QuanLyController.cs" />
     <Compile Include="Controllers\TrangChuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -410,6 +411,73 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\QuanLy\css\animate.css" />
+    <Content Include="Content\QuanLy\css\bootstrap.css" />
+    <Content Include="Content\QuanLy\css\custom.css" />
+    <Content Include="Content\QuanLy\css\export.css" />
+    <Content Include="Content\QuanLy\css\font-awesome.css" />
+    <Content Include="Content\QuanLy\css\graph.css" />
+    <Content Include="Content\QuanLy\css\jqcandlestick.css" />
+    <Content Include="Content\QuanLy\css\monthly.css" />
+    <Content Include="Content\QuanLy\css\owl.carousel.css" />
+    <Content Include="Content\QuanLy\css\SidebarNav.min.css" />
+    <Content Include="Content\QuanLy\css\style.css" />
+    <Content Include="Content\QuanLy\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\QuanLy\images\1.jpg" />
+    <Content Include="Content\QuanLy\images\2.jpg" />
+    <Content Include="Content\QuanLy\images\3.jpg" />
+    <Content Include="Content\QuanLy\images\4.jpg" />
+    <Content Include="Content\QuanLy\images\a.png" />
+    <Content Include="Content\QuanLy\images\i1.png" />
+    <Content Include="Content\QuanLy\images\i2.png" />
+    <Content Include="Content\QuanLy\images\i3.png" />
+    <Content Include="Content\QuanLy\images\i4.png" />
+    <Content Include="Content\QuanLy\images\img-sprite.png" />
+    <Content Include="Content\QuanLy\images\img1.png" />
+    <Content Include="Content\QuanLy\images\lock.png" />
+    <Content Include="Content\QuanLy\images\mail.png" />
+    <Content Include="Content\QuanLy\images\search-icon.png" />
+    <Content Include="Content\QuanLy\images\slider1.jpg" />
+    <Content Include="Content\QuanLy\images\slider2.jpg" />
+    <Content Include="Content\QuanLy\images\slider3.jpg" />
+    <Content Include="Content\QuanLy\images\slider4.jpg" />
+    <Content Include="Content\QuanLy\images\slider5.jpg" />
+    <Content Include="Content\QuanLy\images\slider6.jpg" />
+    <Content Include="Content\QuanLy\images\slider7.jpg" />
+    <Content Include="Content\QuanLy\images\tick.png" />
+    <Content Include="Content\QuanLy\images\user.png" />
+    <Content Include="Content\QuanLy\images\weather.jpg" />
+    <Content Include="Content\QuanLy\js\amcharts.js" />
+    <Content Include="Content\QuanLy\js\bootstrap.js" />
+    <Content Include="Content\QuanLy\js\Chart.bundle.js" />
+    <Content Include="Content\QuanLy\js\Chart.js" />
+    <Content Include="Content\QuanLy\js\Chart.min.js" />
+    <Content Include="Content\QuanLy\js\chartinator.js" />
+    <Content Include="Content\QuanLy\js\classie.js" />
+    <Content Include="Content\QuanLy\js\Controller\CartController.js" />
+    <Content Include="Content\QuanLy\js\custom.js" />
+    <Content Include="Content\QuanLy\js\export.min.js" />
+    <Content Include="Content\QuanLy\js\images\dragIconRoundBig.svg" />
+    <Content Include="Content\QuanLy\js\images\lens.svg" />
+    <Content Include="Content\QuanLy\js\index.js" />
+    <Content Include="Content\QuanLy\js\index1.js" />
+    <Content Include="Content\QuanLy\js\index2.js" />
+    <Content Include="Content\QuanLy\js\jquery-1.11.1.min.js" />
+    <Content Include="Content\QuanLy\js\jquery.flot.js" />
+    <Content Include="Content\QuanLy\js\jquery.jqcandlestick.min.js" />
+    <Content Include="Content\QuanLy\js\jquery.nicescroll.js" />
+    <Content Include="Content\QuanLy\js\light.js" />
+    <Content Include="Content\QuanLy\js\metisMenu.min.js" />
+    <Content Include="Content\QuanLy\js\modernizr.custom.js" />
+    <Content Include="Content\QuanLy\js\monthly.js" />
+    <Content Include="Content\QuanLy\js\owl.carousel.js" />
+    <Content Include="Content\QuanLy\js\pie-chart.js" />
+    <Content Include="Content\QuanLy\js\scripts.js" />
+    <Content Include="Content\QuanLy\js\serial.js" />
+    <Content Include="Content\QuanLy\js\SidebarNav.min.js" />
+    <Content Include="Content\QuanLy\js\SimpleChart.js" />
+    <Content Include="Content\QuanLy\js\utils.js" />
+    <Content Include="Content\QuanLy\js\validator.min.js" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\responsive.css" />
@@ -418,7 +486,9 @@
     <Content Include="fonts\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\1.png" />
     <Content Include="images\about-img.png" />
+    <Content Include="images\banner.jpg" />
     <Content Include="images\client1.jpg" />
     <Content Include="images\client2.jpg" />
     <Content Include="images\f1.png" />
@@ -487,6 +557,15 @@
     <Content Include="Models\WebQLCHTAN.edmx.diagram">
       <DependentUpon>WebQLCHTAN.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\QuanLy\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\QuanLy\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\QuanLy\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\QuanLy\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\QuanLy\fonts\FontAwesome.otf" />
+    <Content Include="Content\QuanLy\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\QuanLy\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\QuanLy\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\QuanLy\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -515,10 +594,13 @@
     <Content Include="Views\TrangChu\LienHe.cshtml" />
     <Content Include="Views\TrangChu\DangNhap.cshtml" />
     <Content Include="Views\TrangChu\DangKi.cshtml" />
+    <Content Include="Views\QuanLyLayout\QuanLyTieuDePhiaTren.cshtml" />
+    <Content Include="Views\QuanLyLayout\QuanLyChucNang.cshtml" />
+    <Content Include="Views\QuanLyLayout\QuanLyLayout.cshtml" />
+    <Content Include="Views\QuanLy\TrangQuanLy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\QuanLy\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

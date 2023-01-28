@@ -1,5 +1,41 @@
 ﻿@using WebQLCHTAN.Models
+@model TaiKhoanNhanVien
 @{
     ViewBag.Title = "DangNhap";
     Layout = "~/Views/Layout/TrangChuLayout.cshtml";
 }
+<section class="book_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <div class="align-self-end">
+                <label></label>
+            </div>
+            <label><h2 style="font-family: 'Dancing Script', cursive;">Login</h2></label>
+
+            <span style="color: red; margin-left: 45%;">@ViewBag.Message</span>
+        </div>
+        @using (Html.BeginForm("DangNhap", "TrangChu", FormMethod.Post))
+        {
+            <div class="row">
+                <div class="col-md-6">
+                    <div style="width: 100%; overflow: hidden;">
+                        <img src="@Url.Content("~/images/banner.jpg")" />
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form_container" style="margin-top: 50px;">
+                        @Html.TextBoxFor(model =>model.tenTaiKhoan, new { @placeholder = "Nhập Tài Khoản...", @class = "form-control", @required = "required" })
+                    </div>
+                    <div class="form_container" style="margin-top: 45px;">
+                        @Html.TextBoxFor(model => model.matKhau, new { @placeholder = "Nhập Mật Khẩu...", @class = "form-control", @required = "required", @type = "password" })
+                    </div>
+                    <div class="btn-box">
+                        <button class="btn btn-info rounded-pill pl-4 pr-4 text-white" type="submit" style="background-color: #ffbe33; border: none;">Đăng Nhập</button>
+                        <label class="pl-3 text-black-100">Bạn Chưa Có Tài Khoản? <a href="@Url.Action("DangKi", "TrangChu")" class="badge badge-info" style="background-color: #ffbe33; border: none;">Đăng Kí Ở Đây.....</a></label>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>>
