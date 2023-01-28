@@ -1,0 +1,76 @@
+﻿<aside class="sidebar-left">
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".collapse" aria-expanded="false">
+                <span class="sr-only">Chức Năng Quản Lí</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h1><a class="navbar-brand" href="#"><span class="fa fa-area-chart"></span> HUFI.Food<span class="dashboard_text"> Trang Quản Lý</span></a></h1>
+        </div>
+        <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="sidebar-menu">
+                <li class="header">CHỨC NĂNG CHÍNH</li>
+                <li class="treeview">
+                    <a href="@Url.Action("TrangQuanLy", "QuanLy")">
+                        Chức Năng
+                    </a>
+                </li>
+
+                <li class="treeview">
+                    <a href="#">
+                        <span>Quản Lý Người Dùng</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="@Url.Action("DanhSachNguoiDung", "QuanLyNguoiDung")"><i class="fa fa-angle-right"></i>Danh Sách Người Dùng</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#">
+                        <span>Quản Lý Danh Mục</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="@Url.Action("ThemDanhMuc", "QuanLyDanhMuc")"><i class="fa fa-angle-right"></i> Danh Sách Chức năng</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#">
+                        <span>Quản Lý Sản Phẩm</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="@Url.Action("ThemSanPham", "QuanLySanPham")"><i class="fa fa-angle-right"></i>Danh Sách Sản Phẩm</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#">
+                        <span>Quản Lý Đặt Hàng</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="@Url.Action("DanhSachDangHang", "QuanLyDatHang")"><i class="fa fa-angle-right"></i>Cập Nhật Trạng Thái</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#">
+                        <span>Quản Lý Liên Hệ</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="@Url.Action("DanhSachLienHe", "QuanLyLienHe")"><i class="fa fa-angle-right"></i>Danh Sách Liên Hệ</a></li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+</aside>
