@@ -31,6 +31,11 @@ namespace DAO
                 da.SelectCommand.Parameters.Add("@tenNuocUong", SqlDbType.NVarChar).Value = NuocUong_DTO.TenNuoc;
                 da.SelectCommand.Parameters.Add("@donViBan", SqlDbType.NVarChar).Value = NuocUong_DTO.DonViBan;
                 da.SelectCommand.Parameters.Add("@donGia", SqlDbType.Money).Value = NuocUong_DTO.DonGia;
+                if(NuocUong_DTO.HinhURL!=null)
+                    da.SelectCommand.Parameters.Add("@anh", SqlDbType.Money).Value = NuocUong_DTO.HinhURL;
+                else
+                    da.SelectCommand.Parameters.Add("@anh", SqlDbType.Money).Value = DBNull.Value;
+
                 if (da.SelectCommand.ExecuteNonQuery() > 0)
                     return true;
             }
@@ -71,7 +76,10 @@ namespace DAO
                 da.SelectCommand.Parameters.Add("@tenNuocUong", SqlDbType.NVarChar).Value = NuocUong_DTO.TenNuoc;
                 da.SelectCommand.Parameters.Add("@donViBan", SqlDbType.NVarChar).Value = NuocUong_DTO.DonViBan;
                 da.SelectCommand.Parameters.Add("@donGia", SqlDbType.Money).Value = NuocUong_DTO.DonGia;
-
+                if (NuocUong_DTO.HinhURL != null)
+                    da.SelectCommand.Parameters.Add("@anh", SqlDbType.VarBinary).Value = NuocUong_DTO.HinhURL;
+                else
+                    da.SelectCommand.Parameters.Add("@anh", SqlDbType.VarBinary).Value = DBNull.Value;
                 if (da.SelectCommand.ExecuteNonQuery() > 0)
                     return true;
             }

@@ -55,8 +55,15 @@ namespace DTO
             get { return ghiChu; }
             set { ghiChu = value; }
         }
+        public byte[] hinhURL;
+        public byte[] HinhURL
+        {
+            get { return hinhURL; }
+            set { hinhURL = value; }
+        }
 
-        public DoAn_DTO (string MaDoAn, string TenDoAn, string MaLoaiDoAn, string DonViBan, float DonGia, string GhiChu)
+
+        public DoAn_DTO (string MaDoAn, string TenDoAn, string MaLoaiDoAn, string DonViBan, float DonGia, string GhiChu,byte[] HinhURL)
         {
             this.maDoAn = MaDoAn;
             this.tenDoAn = TenDoAn;
@@ -64,6 +71,7 @@ namespace DTO
             this.donViBan = DonViBan;
             this.donGia = DonGia;
             this.ghiChu = GhiChu;
+            this.hinhURL = HinhURL;
         }
 
     }

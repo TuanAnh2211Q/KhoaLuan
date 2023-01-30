@@ -30,15 +30,7 @@ namespace DAO
             return dslda;
         }
 
-        //public DataTable show_dsMon_DAO()
-        //{
-        //    Open();
-        //    SqlDataAdapter da = new SqlDataAdapter("select_DoAnTheoYeuCau",conn);
-        //    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-        //    DataTable dsMon = new DataTable();
-        //    da.Fill(dsMon);
-        //    return dsMon;
-        //}
+
         
         public bool insert_DoAn_DAO(DoAn_DTO doAn_DTO)
         {
@@ -53,12 +45,15 @@ namespace DAO
                 da.SelectCommand.Parameters.Add("@donViBan", SqlDbType.NVarChar).Value = doAn_DTO.DonViBan;
                 da.SelectCommand.Parameters.Add("@donGia", SqlDbType.Money).Value = doAn_DTO.DonGia;
                 da.SelectCommand.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = doAn_DTO.GhiChu;
+                if (doAn_DTO.HinhURL != null)
+                    da.SelectCommand.Parameters.Add("@anh", SqlDbType.VarBinary).Value = doAn_DTO.HinhURL;
+                else
+                    da.SelectCommand.Parameters.Add("@anh", SqlDbType.VarBinary).Value = DBNull.Value;
                 if (da.SelectCommand.ExecuteNonQuery() > 0)
                     return true;
             }
             catch (Exception)
             {
-
                 throw;
             }
             return false;
@@ -95,6 +90,10 @@ namespace DAO
                 da.SelectCommand.Parameters.Add("@donViBan", SqlDbType.NVarChar).Value = doAn_DTO.DonViBan;
                 da.SelectCommand.Parameters.Add("@donGia", SqlDbType.Money).Value = doAn_DTO.DonGia;
                 da.SelectCommand.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = doAn_DTO.GhiChu;
+                if (doAn_DTO.HinhURL != null)
+                    da.SelectCommand.Parameters.Add("@anh", SqlDbType.VarBinary).Value = doAn_DTO.HinhURL;
+                else
+                    da.SelectCommand.Parameters.Add("@anh", SqlDbType.VarBinary).Value = DBNull.Value;
                 if (da.SelectCommand.ExecuteNonQuery() > 0)
                     return true;
             }

@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using DTO;
 using BUS;
 using System.Globalization;
+using System.IO;
 
 namespace QLCHTAN
 {
@@ -19,9 +20,12 @@ namespace QLCHTAN
         DoAn_BUS doAn_BUS = new DoAn_BUS();
         public static string tenDoAn;
         public static string maDoAn;
+        public byte[] Hinh;
         public DoAn_DTO doAn_DTO()
         {
-            return new DoAn_DTO(txtMaDoAn.Text, txtTenDoAn.Text, ccbLoaiDoAn.SelectedValue.ToString(), txtDonViBan.Text, Convert.ToSingle(txtDonGia.Text), rtxtGhiChu.Text);
+            
+                return new DoAn_DTO(txtMaDoAn.Text, txtTenDoAn.Text, ccbLoaiDoAn.SelectedValue.ToString(), txtDonViBan.Text, Convert.ToSingle(txtDonGia.Text), rtxtGhiChu.Text, Hinh);
+           
         }
         public bool kt_DoAnTonTai()
         {
@@ -87,8 +91,9 @@ namespace QLCHTAN
 
 
                         }
-                        catch (Exception)
+                        catch (Exception ex)
                         {
+                            MessageBox.Show(ex.Message);
                             MessageBox.Show("Thêm đồ ăn thất bại vui lòng kiểm tra lại thông tin đồ ăn");
                         }
 
@@ -111,17 +116,33 @@ namespace QLCHTAN
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow r = dgvDoAn.Rows[e.RowIndex];
-                txtMaDoAn.Text = r.Cells[0].Value.ToString();
-                txtTenDoAn.Text = r.Cells[1].Value.ToString();
-                ccbLoaiDoAn.Text = r.Cells[2].Value.ToString();
-                txtDonViBan.Text = r.Cells[3].Value.ToString();
-                txtDonGia.Text = r.Cells[4].Value.ToString();
-                rtxtGhiChu.Text = r.Cells[5].Value.ToString();
+                txtMaDoAn.Text = r.Cells["maDoAnColumn"].Value.ToString();
+                txtTenDoAn.Text = r.Cells["tenDoAnColumn"].Value.ToString();
+                ccbLoaiDoAn.Text = r.Cells["LoaiDoAn"].Value.ToString();
+                txtDonViBan.Text = r.Cells["DonViBan"].Value.ToString();
+                txtDonGia.Text = r.Cells["DonGia"].Value.ToString();
+                rtxtGhiChu.Text = r.Cells["GhiChu"].Value.ToString();
                 txtMaDoAn.Enabled = false;
                 if (txtTenDoAn.Text == "")
                     btnThanhPhanDoAn.Enabled = false;
                 else
                     btnThanhPhanDoAn.Enabled = true;
+               if(r.Cells["HinhURL"].Value.ToString()!="")
+                {
+                    byte[] image=(byte[])r.Cells["HinhURL"].Value;
+                    using (var ms = new MemoryStream(image))
+                    {
+                        picAnhDoAn.Image = Image.FromStream(ms);
+                        picAnhDoAn.SizeMode = PictureBoxSizeMode.StretchImage;
+                        picAnhDoAn.ClientSize = new Size(133, 169);
+                    }
+                }
+                else
+                {
+                    picAnhDoAn.Image = null;
+                }
+
+
             }
         }
 
@@ -132,6 +153,7 @@ namespace QLCHTAN
             ccbLoaiDoAn.SelectedIndex = 0;
             txtMaDoAn.Enabled = true;
             btnThanhPhanDoAn.Enabled = false;
+            picAnhDoAn.Image = null;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -206,5 +228,33 @@ namespace QLCHTAN
             this.Close();
         }
 
+        private void btnChonAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files(*.JPG;*.JPEG;*.PNG;*.GIF)|*.JPG;*.JPEG;*.PNG;*.GIF";
+            openFileDialog.ShowDialog();
+
+            if (openFileDialog.FileName != "")
+            {
+                picAnhDoAn.Image = Image.FromFile(openFileDialog.FileName);
+                picAnhDoAn.SizeMode = PictureBoxSizeMode.StretchImage;
+                picAnhDoAn.ClientSize = new Size(133, 169);
+                using (var ms = new MemoryStream())
+                {
+                    picAnhDoAn.Image.Save(ms, picAnhDoAn.Image.RawFormat);
+                    Hinh = ms.ToArray();
+                }
+            }
+        }
+
+        private void btnBoAnh_Click(object sender, EventArgs e)
+        {
+            picAnhDoAn.Image = null;
+            picAnhDoAn.SizeMode = PictureBoxSizeMode.StretchImage;
+            picAnhDoAn.ClientSize = new Size(133, 169);
+            Hinh = null;
+        }
+
+      
     }
 }
