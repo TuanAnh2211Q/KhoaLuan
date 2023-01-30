@@ -338,6 +338,19 @@ namespace QLCHTAN
             decimal donGia = doAn_BUS.select_donGia_BUS(maSanPham, donViBan);
             decimal thanhTien = nudSoLuongMon.Value * donGia;
 
+            if (dgvThongTinDonHang.Rows.Count >= 0)
+            {
+                for (int i = 0; i <= dgvThongTinDonHang.Rows.Count - 1; i++)
+                {
+                    DataGridViewRow row = dgvThongTinDonHang.Rows[i];
+                    if (row.Cells["maSanPham"].Value.ToString() == maSanPham)
+                    {
+                        int soLuongOrder = Convert.ToInt32(row.Cells["soLuong"].Value.ToString());
+                        soLuong = Convert.ToInt32(nudSoLuongMon.Value) + soLuongOrder;
+                    }
+                }
+            }
+
             if (thongTinDonHang_BUS.check_ThongTinDonHang_KhoBan_BUS(maSanPham, soLuong).Rows.Count <= 0)
             {
                 MessageBox.Show("Nguyên liệu bán món hiện không tồn tại trong kho bán, vui lòng nhập nguyên liệu");
@@ -357,7 +370,7 @@ namespace QLCHTAN
 
                         int soLuong_ = r.Field<int>("soLuong");
 
-                        if (soLuong_ <= 0)
+                        if (soLuong_ < 0)
                         {
                             MessageBox.Show("Không đủ nguyên liệu chế biến món ăn này, vui lòng nhập thêm");
                             return;
@@ -416,64 +429,84 @@ namespace QLCHTAN
             txtSizeNuoc.Text = nuocUong_BUS.select_DonViBanNuocUong_BUS(maSanPham);
             decimal donGia = nuocUong_BUS.selectselect_donGiaNuoc_BUS(maSanPham, txtSizeNuoc.Text);
             decimal thanhTien = nudSoLuongNuoc.Value * donGia;
-            int soLuong = Convert.ToInt32(nudSoLuongNuoc.Value);
-
+            int soLuong=0;
             if (thongTinDonHang_BUS.check_ThongTinDonHang_KhoBan_BUS(maSanPham, soLuong).Rows.Count <= 0)
             {
                 MessageBox.Show("Nguyên liệu bán món hiện không tồn tại trong kho bán, vui lòng nhập nguyên liệu");
                 return;
             }
-            foreach (DataRow r in thongTinDonHang_BUS.check_ThongTinDonHang_KhoBan_BUS(maSanPham, soLuong).Rows)
+            else
             {
-                int soLuong_ = r.Field<int>("soLuong");
-
-                if (soLuong_ <= 0)
+                if (dgvThongTinDonHang.RowCount != 0)
                 {
-                    MessageBox.Show("Không đủ nước trong kho để bán, vui lòng nhập thêm");
-                    return;
-                }
-            }
-
-            DialogResult them = MessageBox.Show("Bạn muốn thêm nước này ?", "Thông báo", MessageBoxButtons.YesNo);
-            if (them == DialogResult.Yes)
-            {
-                if (!ktra_Nuoc())
-                {
-                    for (int i = dgvThongTinDonHang.Rows.Count + 1; ; i++)
+                    for (int i = 0; i <= dgvThongTinDonHang.Rows.Count - 1; i++)
                     {
-                        i = dgvThongTinDonHang.Rows.Add();
-                        DataGridViewRow r = dgvThongTinDonHang.Rows[i];
-                        r.Cells["maSanPham"].Value = maSanPham.ToString();
-                        r.Cells["tenMon"].Value = cbbTenNuoc.Text;
-                        r.Cells["donViBan"].Value = txtSizeNuoc.Text;
-                        r.Cells["soLuong"].Value = nudSoLuongNuoc.Value.ToString();
-                        r.Cells["donGia"].Value = donGia.ToString();
-                        r.Cells["thanhTien"].Value = thanhTien.ToString();
-                        break;
+                        DataGridViewRow row = dgvThongTinDonHang.Rows[i];
+                        if (row.Cells["maSanPham"].Value.ToString() == maSanPham)
+                        {
+                            int soLuongOrder = Convert.ToInt32(row.Cells["soLuong"].Value.ToString());
+                            soLuong = Convert.ToInt32(nudSoLuongNuoc.Value) + soLuongOrder;
+                        }
                     }
                 }
                 else
                 {
-                    for (int i = 0; i <= dgvThongTinDonHang.Rows.Count - 1; i++)
-                    {
-                        if ((maSanPham.ToString() == dgvThongTinDonHang.Rows[i].Cells["maSanPham"].Value.ToString()) && (txtSizeNuoc.Text.ToString() == dgvThongTinDonHang.Rows[i].Cells["donViBan"].Value.ToString()))
-                        {
-                            dgvThongTinDonHang.Rows[i].Cells["soLuong"].Value = (Convert.ToInt32(dgvThongTinDonHang.Rows[i].Cells["soLuong"].Value) + Convert.ToInt32(nudSoLuongNuoc.Value)).ToString();
-                            thanhTien = nudSoLuongNuoc.Value * donGia;
-                            DataGridViewRow r = dgvThongTinDonHang.Rows[i];
-                            r.Cells["thanhTien"].Value = r.Cells["thanhTien"].Value = (Convert.ToDecimal(r.Cells["thanhTien"].Value) + thanhTien).ToString();
-                        }
-                    }
+                    soLuong = Convert.ToInt32(nudSoLuongNuoc.Value);
                 }
 
-                thanhTien = 0;
-                for (int i = 0; i <= dgvThongTinDonHang.Rows.Count - 1; i++)
+                foreach (DataRow r in thongTinDonHang_BUS.check_ThongTinDonHang_KhoBan_BUS(maSanPham, soLuong).Rows)
                 {
-                    thanhTien += Convert.ToDecimal(dgvThongTinDonHang.Rows[i].Cells["thanhTien"].Value.ToString());
+                    int soLuong_ = r.Field<int>("soLuong");
+                    if (soLuong_ < 0)
+                    {
+                        MessageBox.Show("Không đủ nước trong kho để bán, vui lòng nhập thêm");
+                        return;
+                    }
+
                 }
-                TongTien = Convert.ToDecimal(Convert.ToDecimal(thanhTien.ToString()));
-                txtTongTien.Text = "";
+
+                DialogResult them = MessageBox.Show("Bạn muốn thêm nước này ?", "Thông báo", MessageBoxButtons.YesNo);
+                if (them == DialogResult.Yes)
+                {
+                    if (!ktra_Nuoc())
+                    {
+                        for (int i = dgvThongTinDonHang.Rows.Count + 1; ; i++)
+                        {
+                            i = dgvThongTinDonHang.Rows.Add();
+                            DataGridViewRow r = dgvThongTinDonHang.Rows[i];
+                            r.Cells["maSanPham"].Value = maSanPham.ToString();
+                            r.Cells["tenMon"].Value = cbbTenNuoc.Text;
+                            r.Cells["donViBan"].Value = txtSizeNuoc.Text;
+                            r.Cells["soLuong"].Value = nudSoLuongNuoc.Value.ToString();
+                            r.Cells["donGia"].Value = donGia.ToString();
+                            r.Cells["thanhTien"].Value = thanhTien.ToString();
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        for (int i = 0; i <= dgvThongTinDonHang.Rows.Count - 1; i++)
+                        {
+                            if ((maSanPham.ToString() == dgvThongTinDonHang.Rows[i].Cells["maSanPham"].Value.ToString()) && (txtSizeNuoc.Text.ToString() == dgvThongTinDonHang.Rows[i].Cells["donViBan"].Value.ToString()))
+                            {
+                                dgvThongTinDonHang.Rows[i].Cells["soLuong"].Value = (Convert.ToInt32(dgvThongTinDonHang.Rows[i].Cells["soLuong"].Value) + Convert.ToInt32(nudSoLuongNuoc.Value)).ToString();
+                                thanhTien = nudSoLuongNuoc.Value * donGia;
+                                DataGridViewRow r = dgvThongTinDonHang.Rows[i];
+                                r.Cells["thanhTien"].Value = r.Cells["thanhTien"].Value = (Convert.ToDecimal(r.Cells["thanhTien"].Value) + thanhTien).ToString();
+                            }
+                        }
+                    }
+
+                    thanhTien = 0;
+                    for (int i = 0; i <= dgvThongTinDonHang.Rows.Count - 1; i++)
+                    {
+                        thanhTien += Convert.ToDecimal(dgvThongTinDonHang.Rows[i].Cells["thanhTien"].Value.ToString());
+                    }
+                    TongTien = Convert.ToDecimal(Convert.ToDecimal(thanhTien.ToString()));
+                    txtTongTien.Text = "";
+                }
             }
+          
         }
         private void cbbTenNuoc_SelectedValueChanged(object sender, EventArgs e)
         {

@@ -258,3 +258,72 @@ where maDonHang=@maDonHang
 
 
 exec print_HoaDonBanHang 'MHD2899'
+
+set dateformat dmy
+
+--26/01/2023
+--Thống kê doanh thu theo ngày-tháng năm
+alter proc select_ThongKeDoanhThu
+@loaithongke varchar(10), @thoigian datetime
+as
+if (@loaithongke='ngay')
+begin
+select dh.maDonHang, dh.tenDonHang, dh.thoiGianDat, dh.tongGia,
+(
+select sum(dh.tongGia) 
+from DonHang dh
+where thoiGianDat=@thoigian)  as tongDoanhThu
+
+from DonHang dh
+where thoiGianDat=@thoigian
+end
+
+else if (@loaithongke='thang')
+begin
+
+select dh.maDonHang, dh.tenDonHang, dh.thoiGianDat, dh.tongGia,
+(
+select sum(dh.tongGia) 
+from DonHang dh
+where MONTH(thoiGianDat)=Month(@thoigian )and YEAR(thoiGianDat)=Year(@thoigian))  as tongDoanhThu
+
+from DonHang dh
+where MONTH(thoiGianDat)=Month(@thoigian )and YEAR(thoiGianDat)=Year(@thoigian)
+end
+
+else if(@loaithongke='nam')
+begin
+select dh.maDonHang, dh.tenDonHang, dh.thoiGianDat, dh.tongGia,
+(
+select sum(dh.tongGia) 
+from DonHang dh
+where YEAR(thoiGianDat)=Year(@thoigian))  as tongDoanhThu
+
+from DonHang dh
+where YEAR(thoiGianDat)=year(@thoigian)
+end
+
+
+exec select_ThongKeDoanhThu 'thang','23/01/2023'
+
+
+
+
+
+create proc selectThongKeDoanhThuTheoMocThoiGian
+@tg1 varchar(max), @tg2 varchar(max)
+as
+select dh.maDonHang, dh.tenDonHang, dh.thoiGianDat, dh.tongGia,
+(
+select sum(dh.tongGia) 
+from DonHang dh
+where thoiGianDat between @tg1 and @tg2)  as tongDoanhThu
+
+from DonHang dh
+where thoiGianDat between @tg1 and @tg2
+
+
+
+--27/1/2022
+
+exec print_HoaDonBanHang 'MHD2725'

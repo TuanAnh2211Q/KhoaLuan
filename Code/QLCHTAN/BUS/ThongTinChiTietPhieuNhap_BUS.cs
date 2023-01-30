@@ -16,7 +16,7 @@ namespace BUS
         {
             return thongTinChiTietPhieuNhap_DAO.dsThongTinPhieuNhap(manhap);
         }
-        public int select_TongGiaNhap_DAO(string manhap)
+        public decimal select_TongGiaNhap_DAO(string manhap)
         {
             return thongTinChiTietPhieuNhap_DAO.select_TongGiaNhap_DAO(manhap);
         }

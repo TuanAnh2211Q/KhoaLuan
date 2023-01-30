@@ -232,12 +232,14 @@ namespace QLCHTAN
                     dtHSD.Value = Convert.ToDateTime(r.Cells["HSD"].Value.ToString());
                 }
                 txtMaHang.Enabled = false;
-            }    
+                cbbNCC.Enabled = false;
+            }
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             MatHang_GUI_Load(sender, e);
+            cbbNCC.Enabled = true;
         }
 
         private void btnThemNuoc_Click(object sender, EventArgs e)
@@ -383,12 +385,14 @@ namespace QLCHTAN
                     dtHSDNuoc.Value = Convert.ToDateTime(r.Cells["HSDNuoc"].Value.ToString());
                 }
                 txtMaHangNuoc.Enabled = false;
+                cbbNCCNuoc.Enabled = false;
             }
         }
 
         private void btnLamMoiNuoc_Click(object sender, EventArgs e)
         {
             MatHang_GUI_Load(sender, e);
+            cbbNCCNuoc.Enabled = true;
 
         }
     }
