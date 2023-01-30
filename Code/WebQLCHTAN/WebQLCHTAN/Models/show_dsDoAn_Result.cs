@@ -19,5 +19,6 @@ namespace WebQLCHTAN.Models
         public string donViBan { get; set; }
         public Nullable<decimal> donGia { get; set; }
         public string ghiChu { get; set; }
+        public byte[] HinhURL { get; set; }
     }
 }

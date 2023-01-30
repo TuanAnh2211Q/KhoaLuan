@@ -11,12 +11,15 @@ namespace WebQLCHTAN.Models
 {
     using System;
     
-    public partial class select_ThongTinPhieuTra_Result
+    public partial class search_KhachHang_Result
     {
-        public string maHang { get; set; }
-        public string tenHang { get; set; }
-        public string tenNCC { get; set; }
-        public Nullable<int> soLuong { get; set; }
-        public Nullable<decimal> tongDonGia { get; set; }
+        public string tenKhachHang { get; set; }
+        public string Phai { get; set; }
+        public string SDT { get; set; }
+        public string Email { get; set; }
+        public string diaChi { get; set; }
+        public string ghiChu { get; set; }
+        public int idKhachHang { get; set; }
+        public string matKhau { get; set; }
     }
 }

@@ -16,7 +16,6 @@ namespace WebQLCHTAN.Models
     {
         public XuatKho()
         {
-            this.KhoBans = new HashSet<KhoBan>();
             this.ThongTinXuatKhoes = new HashSet<ThongTinXuatKho>();
         }
     
@@ -24,7 +23,6 @@ namespace WebQLCHTAN.Models
         public Nullable<System.DateTime> ngayXuat { get; set; }
         public Nullable<bool> trangThai { get; set; }
     
-        public virtual ICollection<KhoBan> KhoBans { get; set; }
         public virtual ICollection<ThongTinXuatKho> ThongTinXuatKhoes { get; set; }
     }
 }

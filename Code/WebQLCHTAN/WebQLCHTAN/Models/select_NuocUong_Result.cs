@@ -17,6 +17,6 @@ namespace WebQLCHTAN.Models
         public string tenNuoc { get; set; }
         public string donViBan { get; set; }
         public Nullable<decimal> giaBanNuoc { get; set; }
-        public string HinhURL { get; set; }
+        public byte[] HinhURL { get; set; }
     }
 }

@@ -57,7 +57,7 @@
           <Property Name="maDoAn" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="maLoaiDoAn" Type="varchar" MaxLength="10" />
           <Property Name="tenDoAn" Type="nvarchar" MaxLength="50" />
-          <Property Name="HinhURL" Type="varchar(max)" />
+          <Property Name="HinhURL" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="DonHang">
           <Key>
@@ -108,12 +108,10 @@
         <EntityType Name="KhoBan">
           <Key>
             <PropertyRef Name="maHang" />
-            <PropertyRef Name="maXuat" />
           </Key>
           <Property Name="maHang" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="soLuong" Type="int" />
           <Property Name="tongGia" Type="money" />
-          <Property Name="maXuat" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="KhuyenMai">
           <Key>
@@ -215,7 +213,7 @@
           <Property Name="tenNuoc" Type="nvarchar" MaxLength="50" />
           <Property Name="donViBan" Type="nvarchar" MaxLength="10" />
           <Property Name="giaBanNuoc" Type="money" />
-          <Property Name="HinhURL" Type="varchar(max)" />
+          <Property Name="HinhURL" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="PhanQuyen">
           <Key>
@@ -581,25 +579,13 @@
         </Association>
         <Association Name="FK_NguyenLieuBep_MatHang">
           <End Role="MatHang" Type="Self.MatHang" Multiplicity="1" />
-          <End Role="KhoBan" Type="Self.KhoBan" Multiplicity="*" />
+          <End Role="KhoBan" Type="Self.KhoBan" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="MatHang">
               <PropertyRef Name="maHang" />
             </Principal>
             <Dependent Role="KhoBan">
               <PropertyRef Name="maHang" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_NguyenLieuBep_XuatKho">
-          <End Role="XuatKho" Type="Self.XuatKho" Multiplicity="1" />
-          <End Role="KhoBan" Type="Self.KhoBan" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="XuatKho">
-              <PropertyRef Name="maXuat" />
-            </Principal>
-            <Dependent Role="KhoBan">
-              <PropertyRef Name="maXuat" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1095,6 +1081,7 @@
         <Function Name="find_KhachHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="SDT" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="insert_DatHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="maDH" Type="varchar" Mode="In" />
           <Parameter Name="ngayDat" Type="datetime" Mode="In" />
@@ -1116,6 +1103,7 @@
           <Parameter Name="donViBan" Type="nvarchar" Mode="In" />
           <Parameter Name="donGia" Type="money" Mode="In" />
           <Parameter Name="ghiChu" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="anh" Type="varbinary(max)" Mode="In" />
         </Function>
         <Function Name="insert_DonHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="maDonHang" Type="varchar" Mode="In" />
@@ -1237,6 +1225,7 @@
           <Parameter Name="tenNuocUong" Type="nvarchar" Mode="In" />
           <Parameter Name="donViBan" Type="nvarchar" Mode="In" />
           <Parameter Name="donGia" Type="money" Mode="In" />
+          <Parameter Name="anh" Type="varbinary(max)" Mode="In" />
         </Function>
         <Function Name="insert_TraHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="maTra" Type="varchar" Mode="In" />
@@ -1249,8 +1238,17 @@
           <Parameter Name="ngayXuat" Type="datetime" Mode="In" />
           <Parameter Name="trangThai" Type="bit" Mode="In" />
         </Function>
+        <Function Name="print_HoaDonBanHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="maDonHang" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="print_TongGia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="maDonHang" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="rs_mkTKNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="search_KhachHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="find" Type="nvarchar(max)" Mode="In" />
         </Function>
         <Function Name="select_ChucDanh" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="select_DatHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
@@ -1332,6 +1330,10 @@
         <Function Name="select_TenNhanVien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="maNhanVien" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="select_ThongKeDoanhThu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="loaithongke" Type="varchar" Mode="In" />
+          <Parameter Name="thoigian" Type="datetime" Mode="In" />
+        </Function>
         <Function Name="select_thongTin_MatHangNuoc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="maHang" Type="varchar" Mode="In" />
         </Function>
@@ -1363,6 +1365,10 @@
         <Function Name="select_TonKho" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="select_TTSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="select_XuatKho" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="selectThongKeDoanhThuTheoMocThoiGian" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="tg1" Type="varchar(max)" Mode="In" />
+          <Parameter Name="tg2" Type="varchar(max)" Mode="In" />
+        </Function>
         <Function Name="show_dsDoAn" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="soLuong_TraHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="maTra" Type="varchar" Mode="In" />
@@ -1396,6 +1402,7 @@
           <Parameter Name="donViBan" Type="nvarchar" Mode="In" />
           <Parameter Name="donGia" Type="money" Mode="In" />
           <Parameter Name="ghiChu" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="anh" Type="varbinary(max)" Mode="In" />
         </Function>
         <Function Name="update_KhachHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="tenKhachHang" Type="nvarchar" Mode="In" />
@@ -1490,6 +1497,7 @@
           <Parameter Name="tenNuocUong" Type="nvarchar" Mode="In" />
           <Parameter Name="donViBan" Type="nvarchar" Mode="In" />
           <Parameter Name="donGia" Type="money" Mode="In" />
+          <Parameter Name="anh" Type="varbinary(max)" Mode="In" />
         </Function>
         <Function Name="update_TraHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="maTra" Type="varchar" Mode="In" />
@@ -1601,10 +1609,6 @@
           </AssociationSet>
           <AssociationSet Name="FK_NguyenLieuBep_MatHang" Association="Self.FK_NguyenLieuBep_MatHang">
             <End Role="MatHang" EntitySet="MatHang" />
-            <End Role="KhoBan" EntitySet="KhoBan" />
-          </AssociationSet>
-          <AssociationSet Name="FK_NguyenLieuBep_XuatKho" Association="Self.FK_NguyenLieuBep_XuatKho">
-            <End Role="XuatKho" EntitySet="XuatKho" />
             <End Role="KhoBan" EntitySet="KhoBan" />
           </AssociationSet>
           <AssociationSet Name="fk_NhanVien_ChucDanh" Association="Self.fk_NhanVien_ChucDanh">
@@ -1803,7 +1807,7 @@
           <Property Name="maDoAn" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="maLoaiDoAn" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="tenDoAn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="HinhURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="HinhURL" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="SanPham" Relationship="Self.fk_DoAn_SanPham" FromRole="DoAn" ToRole="SanPham" />
           <NavigationProperty Name="ThongTinDoAn" Relationship="Self.fk_DoAn_ThongTinDoAn" FromRole="DoAn" ToRole="ThongTinDoAn" />
           <NavigationProperty Name="LoaiDoAn" Relationship="Self.fk_LoaiDoAn_DoAn" FromRole="DoAn" ToRole="LoaiDoAn" />
@@ -1868,14 +1872,11 @@
         <EntityType Name="KhoBan">
           <Key>
             <PropertyRef Name="maHang" />
-            <PropertyRef Name="maXuat" />
           </Key>
           <Property Name="maHang" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="soLuong" Type="Int32" />
           <Property Name="tongGia" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="maXuat" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="MatHang" Relationship="Self.FK_NguyenLieuBep_MatHang" FromRole="KhoBan" ToRole="MatHang" />
-          <NavigationProperty Name="XuatKho" Relationship="Self.FK_NguyenLieuBep_XuatKho" FromRole="KhoBan" ToRole="XuatKho" />
         </EntityType>
         <EntityType Name="KhuyenMai">
           <Key>
@@ -1942,7 +1943,7 @@
           <Property Name="donGia" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="ghiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="loaiHang" Type="Boolean" />
-          <NavigationProperty Name="KhoBans" Relationship="Self.FK_NguyenLieuBep_MatHang" FromRole="MatHang" ToRole="KhoBan" />
+          <NavigationProperty Name="KhoBan" Relationship="Self.FK_NguyenLieuBep_MatHang" FromRole="MatHang" ToRole="KhoBan" />
           <NavigationProperty Name="NhaCungCap" Relationship="Self.fk_MatHang_NhaCungCap" FromRole="MatHang" ToRole="NhaCungCap" />
           <NavigationProperty Name="NuocUong" Relationship="Self.FK_NuocUong_MatHang" FromRole="MatHang" ToRole="NuocUong" />
           <NavigationProperty Name="ThongTinDatHangs" Relationship="Self.fk_ThongTinDatHang_MatHang" FromRole="MatHang" ToRole="ThongTinDatHang" />
@@ -2007,7 +2008,7 @@
           <Property Name="tenNuoc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="donViBan" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="giaBanNuoc" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="HinhURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="HinhURL" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="MatHang" Relationship="Self.FK_NuocUong_MatHang" FromRole="NuocUong" ToRole="MatHang" />
           <NavigationProperty Name="SanPham" Relationship="Self.fk_NuocUong_SanPham" FromRole="NuocUong" ToRole="SanPham" />
         </EntityType>
@@ -2230,7 +2231,6 @@
           <Property Name="maXuat" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ngayXuat" Type="DateTime" Precision="3" />
           <Property Name="trangThai" Type="Boolean" />
-          <NavigationProperty Name="KhoBans" Relationship="Self.FK_NguyenLieuBep_XuatKho" FromRole="XuatKho" ToRole="KhoBan" />
           <NavigationProperty Name="ThongTinXuatKhoes" Relationship="Self.fk_ThongTinXuatKho_XuatKho" FromRole="XuatKho" ToRole="ThongTinXuatKho" />
         </EntityType>
         <Association Name="fk_ChamCong_CaLam">
@@ -2475,25 +2475,13 @@
         </Association>
         <Association Name="FK_NguyenLieuBep_MatHang">
           <End Role="MatHang" Type="Self.MatHang" Multiplicity="1" />
-          <End Role="KhoBan" Type="Self.KhoBan" Multiplicity="*" />
+          <End Role="KhoBan" Type="Self.KhoBan" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="MatHang">
               <PropertyRef Name="maHang" />
             </Principal>
             <Dependent Role="KhoBan">
               <PropertyRef Name="maHang" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_NguyenLieuBep_XuatKho">
-          <End Role="XuatKho" Type="Self.XuatKho" Multiplicity="1" />
-          <End Role="KhoBan" Type="Self.KhoBan" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="XuatKho">
-              <PropertyRef Name="maXuat" />
-            </Principal>
-            <Dependent Role="KhoBan">
-              <PropertyRef Name="maXuat" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2821,7 +2809,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="QLCUAHANGTHUCANNHANHEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="QLCUAHANGTHUCANNHANHEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CaLams" EntityType="Self.CaLam" />
           <EntitySet Name="ChamCongs" EntityType="Self.ChamCong" />
           <EntitySet Name="ChucDanhs" EntityType="Self.ChucDanh" />
@@ -2947,10 +2935,6 @@
             <End Role="MatHang" EntitySet="MatHangs" />
             <End Role="KhoBan" EntitySet="KhoBans" />
           </AssociationSet>
-          <AssociationSet Name="FK_NguyenLieuBep_XuatKho" Association="Self.FK_NguyenLieuBep_XuatKho">
-            <End Role="XuatKho" EntitySet="XuatKhoes" />
-            <End Role="KhoBan" EntitySet="KhoBans" />
-          </AssociationSet>
           <AssociationSet Name="fk_KhuyenMai_LoaiKhuyenMai" Association="Self.fk_KhuyenMai_LoaiKhuyenMai">
             <End Role="LoaiKhuyenMai" EntitySet="LoaiKhuyenMais" />
             <End Role="KhuyenMai" EntitySet="KhuyenMais" />
@@ -3074,7 +3058,7 @@
           <FunctionImport Name="check_MatHang_ThanhPhan" ReturnType="Collection(QLCUAHANGTHUCANNHANHModel.check_MatHang_ThanhPhan_Result)">
             <Parameter Name="maHang" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="check_PhieuDat_PhieuNhap" ReturnType="Collection(QLCUAHANGTHUCANNHANHModel.check_PhieuDat_PhieuNhap_Result)">
+          <FunctionImport Name="check_PhieuDat_PhieuNhap" ReturnType="Collection(String)">
             <Parameter Name="maDat" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="check_PhieuDat_PhieuTra" ReturnType="Collection(String)">
@@ -3188,6 +3172,7 @@
             <Parameter Name="donViBan" Mode="In" Type="String" />
             <Parameter Name="donGia" Mode="In" Type="Decimal" />
             <Parameter Name="ghiChu" Mode="In" Type="String" />
+            <Parameter Name="anh" Mode="In" Type="Binary" />
           </FunctionImport>
           <FunctionImport Name="insert_DonHang">
             <Parameter Name="maDonHang" Mode="In" Type="String" />
@@ -3309,6 +3294,7 @@
             <Parameter Name="tenNuocUong" Mode="In" Type="String" />
             <Parameter Name="donViBan" Mode="In" Type="String" />
             <Parameter Name="donGia" Mode="In" Type="Decimal" />
+            <Parameter Name="anh" Mode="In" Type="Binary" />
           </FunctionImport>
           <FunctionImport Name="insert_TraHang">
             <Parameter Name="maTra" Mode="In" Type="String" />
@@ -3321,8 +3307,17 @@
             <Parameter Name="ngayXuat" Mode="In" Type="DateTime" />
             <Parameter Name="trangThai" Mode="In" Type="Boolean" />
           </FunctionImport>
+          <FunctionImport Name="print_HoaDonBanHang" ReturnType="Collection(QLCUAHANGTHUCANNHANHModel.print_HoaDonBanHang_Result)">
+            <Parameter Name="maDonHang" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="print_TongGia" ReturnType="Collection(Decimal)">
+            <Parameter Name="maDonHang" Mode="In" Type="String" />
+          </FunctionImport>
           <FunctionImport Name="rs_mkTKNV">
             <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="search_KhachHang" ReturnType="Collection(QLCUAHANGTHUCANNHANHModel.search_KhachHang_Result)">
+            <Parameter Name="find" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="select_ChucDanh" ReturnType="Collection(QLCUAHANGTHUCANNHANHModel.select_ChucDanh_Result)" />
           <FunctionImport Name="select_DatHang" ReturnType="Collection(QLCUAHANGTHUCANNHANHModel.select_DatHang_Result)" />
@@ -3404,6 +3399,10 @@
           <FunctionImport Name="select_TenNhanVien" ReturnType="Collection(String)">
             <Parameter Name="maNhanVien" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="select_ThongKeDoanhThu" ReturnType="Collection(QLCUAHANGTHUCANNHANHModel.select_ThongKeDoanhThu_Result)">
+            <Parameter Name="loaithongke" Mode="In" Type="String" />
+            <Parameter Name="thoigian" Mode="In" Type="DateTime" />
+          </FunctionImport>
           <FunctionImport Name="select_thongTin_MatHangNuoc" ReturnType="Collection(QLCUAHANGTHUCANNHANHModel.select_thongTin_MatHangNuoc_Result)">
             <Parameter Name="maHang" Mode="In" Type="String" />
           </FunctionImport>
@@ -3435,6 +3434,10 @@
           <FunctionImport Name="select_TonKho" ReturnType="Collection(QLCUAHANGTHUCANNHANHModel.select_TonKho_Result)" />
           <FunctionImport Name="select_TTSP" ReturnType="Collection(QLCUAHANGTHUCANNHANHModel.select_TTSP_Result)" />
           <FunctionImport Name="select_XuatKho" ReturnType="Collection(QLCUAHANGTHUCANNHANHModel.select_XuatKho_Result)" />
+          <FunctionImport Name="selectThongKeDoanhThuTheoMocThoiGian" ReturnType="Collection(QLCUAHANGTHUCANNHANHModel.selectThongKeDoanhThuTheoMocThoiGian_Result)">
+            <Parameter Name="tg1" Mode="In" Type="String" />
+            <Parameter Name="tg2" Mode="In" Type="String" />
+          </FunctionImport>
           <FunctionImport Name="show_dsDoAn" ReturnType="Collection(QLCUAHANGTHUCANNHANHModel.show_dsDoAn_Result)" />
           <FunctionImport Name="soLuong_TraHang" ReturnType="Collection(Int32)">
             <Parameter Name="maTra" Mode="In" Type="String" />
@@ -3468,6 +3471,7 @@
             <Parameter Name="donViBan" Mode="In" Type="String" />
             <Parameter Name="donGia" Mode="In" Type="Decimal" />
             <Parameter Name="ghiChu" Mode="In" Type="String" />
+            <Parameter Name="anh" Mode="In" Type="Binary" />
           </FunctionImport>
           <FunctionImport Name="update_KhachHang">
             <Parameter Name="tenKhachHang" Mode="In" Type="String" />
@@ -3562,6 +3566,7 @@
             <Parameter Name="tenNuocUong" Mode="In" Type="String" />
             <Parameter Name="donViBan" Mode="In" Type="String" />
             <Parameter Name="donGia" Mode="In" Type="Decimal" />
+            <Parameter Name="anh" Mode="In" Type="Binary" />
           </FunctionImport>
           <FunctionImport Name="update_TraHang">
             <Parameter Name="maTra" Mode="In" Type="String" />
@@ -3574,7 +3579,7 @@
           <Property Type="String" Name="maDoAn" Nullable="false" MaxLength="10" />
           <Property Type="String" Name="maLoaiDoAn" Nullable="true" MaxLength="10" />
           <Property Type="String" Name="tenDoAn" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="HinhURL" Nullable="true" />
+          <Property Type="Binary" Name="HinhURL" Nullable="true" />
         </ComplexType>
         <ComplexType Name="check_MaNhapKho_Result">
           <Property Type="String" Name="maNhap" Nullable="false" MaxLength="10" />
@@ -3599,19 +3604,6 @@
           <Property Type="String" Name="ghiChu" Nullable="true" />
           <Property Type="Boolean" Name="loaiHang" Nullable="true" />
         </ComplexType>
-        <ComplexType Name="check_PhieuDat_PhieuNhap_Result">
-          <Property Type="String" Name="maNhap" Nullable="false" MaxLength="10" />
-          <Property Type="DateTime" Name="ngayNhap" Nullable="true" Precision="23" />
-          <Property Type="String" Name="maDatHang" Nullable="true" MaxLength="10" />
-          <Property Type="String" Name="ghiChu" Nullable="true" />
-          <Property Type="Boolean" Name="trangThai" Nullable="true" />
-          <Property Type="String" Name="maDatHang1" Nullable="false" MaxLength="10" />
-          <Property Type="DateTime" Name="ngayDatHang" Nullable="true" Precision="23" />
-          <Property Type="DateTime" Name="ngayDuKienGiao" Nullable="true" Precision="23" />
-          <Property Type="String" Name="ghiChu1" Nullable="true" />
-          <Property Type="String" Name="phuongThucThanhToan" Nullable="true" MaxLength="50" />
-          <Property Type="Boolean" Name="trangThai1" Nullable="true" />
-        </ComplexType>
         <ComplexType Name="check_ThongTinDonHang_KhoBan_Result">
           <Property Type="String" Name="maHang" Nullable="false" MaxLength="10" />
           <Property Type="Int32" Name="soLuong" Nullable="true" />
@@ -3626,6 +3618,27 @@
           <Property Type="String" Name="maQuyen" Nullable="true" MaxLength="10" />
         </ComplexType>
         <ComplexType Name="find_KhachHang_Result">
+          <Property Type="String" Name="tenKhachHang" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Phai" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="SDT" Nullable="false" MaxLength="11" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="diaChi" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ghiChu" Nullable="true" />
+          <Property Type="Int32" Name="idKhachHang" Nullable="false" />
+          <Property Type="String" Name="matKhau" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="print_HoaDonBanHang_Result">
+          <Property Type="String" Name="MaDonHang" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="TenDonHang" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="ThoiGianDat" Nullable="true" Precision="23" />
+          <Property Type="String" Name="TenNhanVien" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="TenSanPham" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="GiaTien" Nullable="true" Precision="19" />
+          <Property Type="Int32" Name="SoLuong" Nullable="true" />
+          <Property Type="Decimal" Name="ThanhTien" Nullable="true" Precision="19" />
+          <Property Type="String" Name="TenKhuyenMai" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="search_KhachHang_Result">
           <Property Type="String" Name="tenKhachHang" Nullable="true" MaxLength="100" />
           <Property Type="String" Name="Phai" Nullable="true" MaxLength="10" />
           <Property Type="String" Name="SDT" Nullable="false" MaxLength="11" />
@@ -3761,7 +3774,7 @@
           <Property Type="String" Name="tenNuoc" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="donViBan" Nullable="true" MaxLength="10" />
           <Property Type="Decimal" Name="giaBanNuoc" Nullable="true" Precision="19" />
-          <Property Type="String" Name="HinhURL" Nullable="true" />
+          <Property Type="Binary" Name="HinhURL" Nullable="true" />
         </ComplexType>
         <ComplexType Name="select_PhanQuyen_Result">
           <Property Type="String" Name="maQuyen" Nullable="false" MaxLength="10" />
@@ -3774,6 +3787,13 @@
           <Property Type="String" Name="ghiChu" Nullable="true" />
           <Property Type="String" Name="maDatHang" Nullable="true" MaxLength="10" />
           <Property Type="Boolean" Name="trangThai" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="select_ThongKeDoanhThu_Result">
+          <Property Type="String" Name="maDonHang" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="tenDonHang" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="thoiGianDat" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="tongGia" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="tongDoanhThu" Nullable="true" Precision="19" />
         </ComplexType>
         <ComplexType Name="select_thongTin_MatHangNuoc_Result">
           <Property Type="String" Name="donVi" Nullable="true" MaxLength="10" />
@@ -3811,7 +3831,6 @@
           <Property Type="Decimal" Name="tongDonGia" Nullable="true" Precision="19" />
         </ComplexType>
         <ComplexType Name="select_ThongTinPhieuTra_Result">
-          <Property Type="String" Name="maTra" Nullable="false" MaxLength="10" />
           <Property Type="String" Name="maHang" Nullable="false" MaxLength="10" />
           <Property Type="String" Name="tenHang" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="tenNCC" Nullable="false" MaxLength="50" />
@@ -3856,6 +3875,13 @@
           <Property Type="DateTime" Name="ngayXuat" Nullable="true" Precision="23" />
           <Property Type="Boolean" Name="trangThai" Nullable="true" />
         </ComplexType>
+        <ComplexType Name="selectThongKeDoanhThuTheoMocThoiGian_Result">
+          <Property Type="String" Name="maDonHang" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="tenDonHang" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="thoiGianDat" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="tongGia" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="tongDoanhThu" Nullable="true" Precision="19" />
+        </ComplexType>
         <ComplexType Name="show_dsDoAn_Result">
           <Property Type="String" Name="maDoAn" Nullable="false" MaxLength="10" />
           <Property Type="String" Name="tenDoAn" Nullable="true" MaxLength="50" />
@@ -3863,13 +3889,14 @@
           <Property Type="String" Name="donViBan" Nullable="true" MaxLength="10" />
           <Property Type="Decimal" Name="donGia" Nullable="true" Precision="19" />
           <Property Type="String" Name="ghiChu" Nullable="true" />
+          <Property Type="Binary" Name="HinhURL" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QLCUAHANGTHUCANNHANHModelStoreContainer" CdmEntityContainer="QLCUAHANGTHUCANNHANHEntities">
+        <EntityContainerMapping StorageEntityContainer="QLCUAHANGTHUCANNHANHModelStoreContainer" CdmEntityContainer="QLCUAHANGTHUCANNHANHEntities1">
           <EntitySetMapping Name="CaLams">
             <EntityTypeMapping TypeName="QLCUAHANGTHUCANNHANHModel.CaLam">
               <MappingFragment StoreEntitySet="CaLam">
@@ -3986,7 +4013,6 @@
                 <ScalarProperty Name="maHang" ColumnName="maHang" />
                 <ScalarProperty Name="soLuong" ColumnName="soLuong" />
                 <ScalarProperty Name="tongGia" ColumnName="tongGia" />
-                <ScalarProperty Name="maXuat" ColumnName="maXuat" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -4338,23 +4364,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="check_PhieuDat_PhieuNhap" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.check_PhieuDat_PhieuNhap">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="QLCUAHANGTHUCANNHANHModel.check_PhieuDat_PhieuNhap_Result">
-                <ScalarProperty Name="maNhap" ColumnName="maNhap" />
-                <ScalarProperty Name="ngayNhap" ColumnName="ngayNhap" />
-                <ScalarProperty Name="maDatHang" ColumnName="maDatHang" />
-                <ScalarProperty Name="ghiChu" ColumnName="ghiChu" />
-                <ScalarProperty Name="trangThai" ColumnName="trangThai" />
-                <ScalarProperty Name="maDatHang1" ColumnName="maDatHang1" />
-                <ScalarProperty Name="ngayDatHang" ColumnName="ngayDatHang" />
-                <ScalarProperty Name="ngayDuKienGiao" ColumnName="ngayDuKienGiao" />
-                <ScalarProperty Name="ghiChu1" ColumnName="ghiChu1" />
-                <ScalarProperty Name="phuongThucThanhToan" ColumnName="phuongThucThanhToan" />
-                <ScalarProperty Name="trangThai1" ColumnName="trangThai1" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="check_PhieuDat_PhieuNhap" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.check_PhieuDat_PhieuNhap" />
           <FunctionImportMapping FunctionImportName="check_PhieuDat_PhieuTra" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.check_PhieuDat_PhieuTra" />
           <FunctionImportMapping FunctionImportName="check_PhieuNhap" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.check_PhieuNhap" />
           <FunctionImportMapping FunctionImportName="check_PhieuXuat" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.check_PhieuXuat" />
@@ -4440,7 +4450,37 @@
           <FunctionImportMapping FunctionImportName="insert_to_NuocUong" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.insert_to_NuocUong" />
           <FunctionImportMapping FunctionImportName="insert_TraHang" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.insert_TraHang" />
           <FunctionImportMapping FunctionImportName="insert_XuatKho" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.insert_XuatKho" />
+          <FunctionImportMapping FunctionImportName="print_HoaDonBanHang" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.print_HoaDonBanHang">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLCUAHANGTHUCANNHANHModel.print_HoaDonBanHang_Result">
+                <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
+                <ScalarProperty Name="TenDonHang" ColumnName="TenDonHang" />
+                <ScalarProperty Name="ThoiGianDat" ColumnName="ThoiGianDat" />
+                <ScalarProperty Name="TenNhanVien" ColumnName="TenNhanVien" />
+                <ScalarProperty Name="TenSanPham" ColumnName="TenSanPham" />
+                <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+                <ScalarProperty Name="TenKhuyenMai" ColumnName="TenKhuyenMai" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="print_TongGia" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.print_TongGia" />
           <FunctionImportMapping FunctionImportName="rs_mkTKNV" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.rs_mkTKNV" />
+          <FunctionImportMapping FunctionImportName="search_KhachHang" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.search_KhachHang">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLCUAHANGTHUCANNHANHModel.search_KhachHang_Result">
+                <ScalarProperty Name="tenKhachHang" ColumnName="tenKhachHang" />
+                <ScalarProperty Name="Phai" ColumnName="Phai" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="diaChi" ColumnName="diaChi" />
+                <ScalarProperty Name="ghiChu" ColumnName="ghiChu" />
+                <ScalarProperty Name="idKhachHang" ColumnName="idKhachHang" />
+                <ScalarProperty Name="matKhau" ColumnName="matKhau" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="select_ChucDanh" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.select_ChucDanh">
             <ResultMapping>
               <ComplexTypeMapping TypeName="QLCUAHANGTHUCANNHANHModel.select_ChucDanh_Result">
@@ -4678,6 +4718,17 @@
           <FunctionImportMapping FunctionImportName="select_TenKhuyenMai" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.select_TenKhuyenMai" />
           <FunctionImportMapping FunctionImportName="select_TenLoaiDon" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.select_TenLoaiDon" />
           <FunctionImportMapping FunctionImportName="select_TenNhanVien" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.select_TenNhanVien" />
+          <FunctionImportMapping FunctionImportName="select_ThongKeDoanhThu" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.select_ThongKeDoanhThu">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLCUAHANGTHUCANNHANHModel.select_ThongKeDoanhThu_Result">
+                <ScalarProperty Name="maDonHang" ColumnName="maDonHang" />
+                <ScalarProperty Name="tenDonHang" ColumnName="tenDonHang" />
+                <ScalarProperty Name="thoiGianDat" ColumnName="thoiGianDat" />
+                <ScalarProperty Name="tongGia" ColumnName="tongGia" />
+                <ScalarProperty Name="tongDoanhThu" ColumnName="tongDoanhThu" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="select_thongTin_MatHangNuoc" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.select_thongTin_MatHangNuoc">
             <ResultMapping>
               <ComplexTypeMapping TypeName="QLCUAHANGTHUCANNHANHModel.select_thongTin_MatHangNuoc_Result">
@@ -4736,7 +4787,6 @@
           <FunctionImportMapping FunctionImportName="select_ThongTinPhieuTra" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.select_ThongTinPhieuTra">
             <ResultMapping>
               <ComplexTypeMapping TypeName="QLCUAHANGTHUCANNHANHModel.select_ThongTinPhieuTra_Result">
-                <ScalarProperty Name="maTra" ColumnName="maTra" />
                 <ScalarProperty Name="maHang" ColumnName="maHang" />
                 <ScalarProperty Name="tenHang" ColumnName="tenHang" />
                 <ScalarProperty Name="tenNCC" ColumnName="tenNCC" />
@@ -4808,6 +4858,17 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="selectThongKeDoanhThuTheoMocThoiGian" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.selectThongKeDoanhThuTheoMocThoiGian">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLCUAHANGTHUCANNHANHModel.selectThongKeDoanhThuTheoMocThoiGian_Result">
+                <ScalarProperty Name="maDonHang" ColumnName="maDonHang" />
+                <ScalarProperty Name="tenDonHang" ColumnName="tenDonHang" />
+                <ScalarProperty Name="thoiGianDat" ColumnName="thoiGianDat" />
+                <ScalarProperty Name="tongGia" ColumnName="tongGia" />
+                <ScalarProperty Name="tongDoanhThu" ColumnName="tongDoanhThu" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="show_dsDoAn" FunctionName="QLCUAHANGTHUCANNHANHModel.Store.show_dsDoAn">
             <ResultMapping>
               <ComplexTypeMapping TypeName="QLCUAHANGTHUCANNHANHModel.show_dsDoAn_Result">
@@ -4817,6 +4878,7 @@
                 <ScalarProperty Name="donViBan" ColumnName="donViBan" />
                 <ScalarProperty Name="donGia" ColumnName="donGia" />
                 <ScalarProperty Name="ghiChu" ColumnName="ghiChu" />
+                <ScalarProperty Name="HinhURL" ColumnName="HinhURL" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

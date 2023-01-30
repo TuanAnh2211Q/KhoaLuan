@@ -11,12 +11,12 @@ namespace WebQLCHTAN.Models
 {
     using System;
     
-    public partial class select_ThongTinPhieuTra_Result
+    public partial class select_ThongKeDoanhThu_Result
     {
-        public string maHang { get; set; }
-        public string tenHang { get; set; }
-        public string tenNCC { get; set; }
-        public Nullable<int> soLuong { get; set; }
-        public Nullable<decimal> tongDonGia { get; set; }
+        public string maDonHang { get; set; }
+        public string tenDonHang { get; set; }
+        public Nullable<System.DateTime> thoiGianDat { get; set; }
+        public Nullable<decimal> tongGia { get; set; }
+        public Nullable<decimal> tongDoanhThu { get; set; }
     }
 }

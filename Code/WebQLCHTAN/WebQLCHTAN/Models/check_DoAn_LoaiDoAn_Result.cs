@@ -16,6 +16,6 @@ namespace WebQLCHTAN.Models
         public string maDoAn { get; set; }
         public string maLoaiDoAn { get; set; }
         public string tenDoAn { get; set; }
-        public string HinhURL { get; set; }
+        public byte[] HinhURL { get; set; }
     }
 }

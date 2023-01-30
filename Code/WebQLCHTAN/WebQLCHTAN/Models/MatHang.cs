@@ -16,7 +16,6 @@ namespace WebQLCHTAN.Models
     {
         public MatHang()
         {
-            this.KhoBans = new HashSet<KhoBan>();
             this.ThongTinDatHangs = new HashSet<ThongTinDatHang>();
             this.ThongTinNhapKhoes = new HashSet<ThongTinNhapKho>();
             this.ThongTinThanhPhanDoAns = new HashSet<ThongTinThanhPhanDoAn>();
@@ -34,7 +33,7 @@ namespace WebQLCHTAN.Models
         public string ghiChu { get; set; }
         public Nullable<bool> loaiHang { get; set; }
     
-        public virtual ICollection<KhoBan> KhoBans { get; set; }
+        public virtual KhoBan KhoBan { get; set; }
         public virtual NhaCungCap NhaCungCap { get; set; }
         public virtual NuocUong NuocUong { get; set; }
         public virtual ICollection<ThongTinDatHang> ThongTinDatHangs { get; set; }

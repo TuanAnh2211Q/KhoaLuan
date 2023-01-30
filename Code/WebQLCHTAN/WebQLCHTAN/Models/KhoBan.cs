@@ -17,9 +17,7 @@ namespace WebQLCHTAN.Models
         public string maHang { get; set; }
         public Nullable<int> soLuong { get; set; }
         public Nullable<decimal> tongGia { get; set; }
-        public string maXuat { get; set; }
     
         public virtual MatHang MatHang { get; set; }
-        public virtual XuatKho XuatKho { get; set; }
     }
 }

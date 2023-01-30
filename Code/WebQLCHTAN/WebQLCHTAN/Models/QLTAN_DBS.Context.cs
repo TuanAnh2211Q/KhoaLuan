@@ -16,10 +16,10 @@ namespace WebQLCHTAN.Models
     using System.Data.Objects.DataClasses;
     using System.Linq;
     
-    public partial class QLCUAHANGTHUCANNHANHEntities : DbContext
+    public partial class QLCUAHANGTHUCANNHANHEntities1 : DbContext
     {
-        public QLCUAHANGTHUCANNHANHEntities()
-            : base("name=QLCUAHANGTHUCANNHANHEntities")
+        public QLCUAHANGTHUCANNHANHEntities1()
+            : base("name=QLCUAHANGTHUCANNHANHEntities1")
         {
         }
     
@@ -115,13 +115,13 @@ namespace WebQLCHTAN.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<check_MatHang_ThanhPhan_Result>("check_MatHang_ThanhPhan", maHangParameter);
         }
     
-        public virtual ObjectResult<check_PhieuDat_PhieuNhap_Result> check_PhieuDat_PhieuNhap(string maDat)
+        public virtual ObjectResult<string> check_PhieuDat_PhieuNhap(string maDat)
         {
             var maDatParameter = maDat != null ?
                 new ObjectParameter("maDat", maDat) :
                 new ObjectParameter("maDat", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<check_PhieuDat_PhieuNhap_Result>("check_PhieuDat_PhieuNhap", maDatParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("check_PhieuDat_PhieuNhap", maDatParameter);
         }
     
         public virtual ObjectResult<string> check_PhieuDat_PhieuTra(string maDat)
@@ -454,7 +454,7 @@ namespace WebQLCHTAN.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insert_DoAn_ThanhPhanDoAn", maThanhPhanParameter, tenThanhPhanParameter, dinhLuongParameter, maDoAnParameter, soLuongParameter);
         }
     
-        public virtual int insert_DoAn_ThongTinDoAn(string maDoAn, string maLoaiDoAn, string tenDoAn, string donViBan, Nullable<decimal> donGia, string ghiChu)
+        public virtual int insert_DoAn_ThongTinDoAn(string maDoAn, string maLoaiDoAn, string tenDoAn, string donViBan, Nullable<decimal> donGia, string ghiChu, byte[] anh)
         {
             var maDoAnParameter = maDoAn != null ?
                 new ObjectParameter("maDoAn", maDoAn) :
@@ -480,7 +480,11 @@ namespace WebQLCHTAN.Models
                 new ObjectParameter("ghiChu", ghiChu) :
                 new ObjectParameter("ghiChu", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insert_DoAn_ThongTinDoAn", maDoAnParameter, maLoaiDoAnParameter, tenDoAnParameter, donViBanParameter, donGiaParameter, ghiChuParameter);
+            var anhParameter = anh != null ?
+                new ObjectParameter("anh", anh) :
+                new ObjectParameter("anh", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insert_DoAn_ThongTinDoAn", maDoAnParameter, maLoaiDoAnParameter, tenDoAnParameter, donViBanParameter, donGiaParameter, ghiChuParameter, anhParameter);
         }
     
         public virtual int insert_DonHang(string maDonHang, string tenDonHang, string maLoaiDon, string maHinhThuc, string maNhanVien, string sDTKhachHang, string maKhuyenMai, Nullable<System.DateTime> thoiGianDat, Nullable<int> trangThai, string ghiChu, Nullable<decimal> tongGia, Nullable<int> id)
@@ -895,7 +899,7 @@ namespace WebQLCHTAN.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insert_to_NCC", maNCCParameter, tenNCCParameter, diachiNCCParameter, emailNCCParameter, sdtNCCParameter, ghiChuParameter);
         }
     
-        public virtual int insert_to_NuocUong(string maNuocUong, string tenNuocUong, string donViBan, Nullable<decimal> donGia)
+        public virtual int insert_to_NuocUong(string maNuocUong, string tenNuocUong, string donViBan, Nullable<decimal> donGia, byte[] anh)
         {
             var maNuocUongParameter = maNuocUong != null ?
                 new ObjectParameter("maNuocUong", maNuocUong) :
@@ -913,7 +917,11 @@ namespace WebQLCHTAN.Models
                 new ObjectParameter("donGia", donGia) :
                 new ObjectParameter("donGia", typeof(decimal));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insert_to_NuocUong", maNuocUongParameter, tenNuocUongParameter, donViBanParameter, donGiaParameter);
+            var anhParameter = anh != null ?
+                new ObjectParameter("anh", anh) :
+                new ObjectParameter("anh", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insert_to_NuocUong", maNuocUongParameter, tenNuocUongParameter, donViBanParameter, donGiaParameter, anhParameter);
         }
     
         public virtual int insert_TraHang(string maTra, Nullable<System.DateTime> ngayTra, string ghiChu, string maDat)
@@ -954,6 +962,24 @@ namespace WebQLCHTAN.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insert_XuatKho", maXuatParameter, ngayXuatParameter, trangThaiParameter);
         }
     
+        public virtual ObjectResult<print_HoaDonBanHang_Result> print_HoaDonBanHang(string maDonHang)
+        {
+            var maDonHangParameter = maDonHang != null ?
+                new ObjectParameter("maDonHang", maDonHang) :
+                new ObjectParameter("maDonHang", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<print_HoaDonBanHang_Result>("print_HoaDonBanHang", maDonHangParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<decimal>> print_TongGia(string maDonHang)
+        {
+            var maDonHangParameter = maDonHang != null ?
+                new ObjectParameter("maDonHang", maDonHang) :
+                new ObjectParameter("maDonHang", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("print_TongGia", maDonHangParameter);
+        }
+    
         public virtual int rs_mkTKNV(Nullable<int> id)
         {
             var idParameter = id.HasValue ?
@@ -961,6 +987,15 @@ namespace WebQLCHTAN.Models
                 new ObjectParameter("id", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("rs_mkTKNV", idParameter);
+        }
+    
+        public virtual ObjectResult<search_KhachHang_Result> search_KhachHang(string find)
+        {
+            var findParameter = find != null ?
+                new ObjectParameter("find", find) :
+                new ObjectParameter("find", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<search_KhachHang_Result>("search_KhachHang", findParameter);
         }
     
         public virtual ObjectResult<select_ChucDanh_Result> select_ChucDanh()
@@ -1240,6 +1275,19 @@ namespace WebQLCHTAN.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("select_TenNhanVien", maNhanVienParameter);
         }
     
+        public virtual ObjectResult<select_ThongKeDoanhThu_Result> select_ThongKeDoanhThu(string loaithongke, Nullable<System.DateTime> thoigian)
+        {
+            var loaithongkeParameter = loaithongke != null ?
+                new ObjectParameter("loaithongke", loaithongke) :
+                new ObjectParameter("loaithongke", typeof(string));
+    
+            var thoigianParameter = thoigian.HasValue ?
+                new ObjectParameter("thoigian", thoigian) :
+                new ObjectParameter("thoigian", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<select_ThongKeDoanhThu_Result>("select_ThongKeDoanhThu", loaithongkeParameter, thoigianParameter);
+        }
+    
         public virtual ObjectResult<select_thongTin_MatHangNuoc_Result> select_thongTin_MatHangNuoc(string maHang)
         {
             var maHangParameter = maHang != null ?
@@ -1341,6 +1389,19 @@ namespace WebQLCHTAN.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<select_XuatKho_Result>("select_XuatKho");
         }
     
+        public virtual ObjectResult<selectThongKeDoanhThuTheoMocThoiGian_Result> selectThongKeDoanhThuTheoMocThoiGian(string tg1, string tg2)
+        {
+            var tg1Parameter = tg1 != null ?
+                new ObjectParameter("tg1", tg1) :
+                new ObjectParameter("tg1", typeof(string));
+    
+            var tg2Parameter = tg2 != null ?
+                new ObjectParameter("tg2", tg2) :
+                new ObjectParameter("tg2", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<selectThongKeDoanhThuTheoMocThoiGian_Result>("selectThongKeDoanhThuTheoMocThoiGian", tg1Parameter, tg2Parameter);
+        }
+    
         public virtual ObjectResult<show_dsDoAn_Result> show_dsDoAn()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<show_dsDoAn_Result>("show_dsDoAn");
@@ -1431,7 +1492,7 @@ namespace WebQLCHTAN.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("update_DoAn_ThanhPhanDoAn", maThanhPhanParameter, tenThanhPhanParameter, dinhLuongParameter, maDoAnParameter, soLuongParameter);
         }
     
-        public virtual int update_DoAn_ThongTinDoAn(string maDoAn, string maLoaiDoAn, string tenDoAn, string donViBan, Nullable<decimal> donGia, string ghiChu)
+        public virtual int update_DoAn_ThongTinDoAn(string maDoAn, string maLoaiDoAn, string tenDoAn, string donViBan, Nullable<decimal> donGia, string ghiChu, byte[] anh)
         {
             var maDoAnParameter = maDoAn != null ?
                 new ObjectParameter("maDoAn", maDoAn) :
@@ -1457,7 +1518,11 @@ namespace WebQLCHTAN.Models
                 new ObjectParameter("ghiChu", ghiChu) :
                 new ObjectParameter("ghiChu", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("update_DoAn_ThongTinDoAn", maDoAnParameter, maLoaiDoAnParameter, tenDoAnParameter, donViBanParameter, donGiaParameter, ghiChuParameter);
+            var anhParameter = anh != null ?
+                new ObjectParameter("anh", anh) :
+                new ObjectParameter("anh", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("update_DoAn_ThongTinDoAn", maDoAnParameter, maLoaiDoAnParameter, tenDoAnParameter, donViBanParameter, donGiaParameter, ghiChuParameter, anhParameter);
         }
     
         public virtual int update_KhachHang(string tenKhachHang, string phai, string sDT, string email, string diaChi, string ghiChu, Nullable<int> idKhachHang)
@@ -1770,7 +1835,7 @@ namespace WebQLCHTAN.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("update_to_NCC", maNCCParameter, tenNCCParameter, diachiNCCParameter, emailNCCParameter, sdtNCCParameter, ghiChuParameter);
         }
     
-        public virtual int update_to_NuocUong(string maNuocUong, string tenNuocUong, string donViBan, Nullable<decimal> donGia)
+        public virtual int update_to_NuocUong(string maNuocUong, string tenNuocUong, string donViBan, Nullable<decimal> donGia, byte[] anh)
         {
             var maNuocUongParameter = maNuocUong != null ?
                 new ObjectParameter("maNuocUong", maNuocUong) :
@@ -1788,7 +1853,11 @@ namespace WebQLCHTAN.Models
                 new ObjectParameter("donGia", donGia) :
                 new ObjectParameter("donGia", typeof(decimal));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("update_to_NuocUong", maNuocUongParameter, tenNuocUongParameter, donViBanParameter, donGiaParameter);
+            var anhParameter = anh != null ?
+                new ObjectParameter("anh", anh) :
+                new ObjectParameter("anh", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("update_to_NuocUong", maNuocUongParameter, tenNuocUongParameter, donViBanParameter, donGiaParameter, anhParameter);
         }
     
         public virtual int update_TraHang(string maTra, Nullable<System.DateTime> ngayTra, string ghiChu, string maDat)
