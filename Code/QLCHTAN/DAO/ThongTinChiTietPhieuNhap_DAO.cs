@@ -20,15 +20,15 @@ namespace DAO
             da.Fill(tb);
             return tb;
         }
-        public int select_TongGiaNhap_DAO(string manhap)
+        public decimal select_TongGiaNhap_DAO(string manhap)
         {
             Open();
             SqlCommand cmd = new SqlCommand("select_TongGiaNhap", conn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@maNhap", SqlDbType.VarChar).Value = manhap;
             object c = cmd.ExecuteScalar();
-            if (ReferenceEquals(c,null))
-                return Convert.ToInt32(cmd.ExecuteScalar());
+            if (!ReferenceEquals(c,null))
+                return Convert.ToDecimal(cmd.ExecuteScalar());
             else
             return 0;
         }

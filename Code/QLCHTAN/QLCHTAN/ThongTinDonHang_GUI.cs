@@ -50,7 +50,7 @@ namespace QLCHTAN
         {
             //Random mã đơn hàng dựa vào thời gian trong ngày
             Random rnd = new Random();
-            int ma = Convert.ToInt32(DateTime.Now.Day) + Convert.ToInt32(DateTime.Now.Month) + Convert.ToInt32(DateTime.Now.Year) + Convert.ToInt32(DateTime.Now.Hour) + Convert.ToInt32(DateTime.Now.Minute) + Convert.ToInt32(DateTime.Now.Millisecond) + rnd.Next(1, 1000);
+            int ma = Convert.ToInt32(DateTime.Now.Day) + Convert.ToInt32(DateTime.Now.Month) + Convert.ToInt32(DateTime.Now.Year) + Convert.ToInt32(DateTime.Now.Hour) + Convert.ToInt32(DateTime.Now.Minute) + Convert.ToInt32(DateTime.Now.Millisecond) + rnd.Next(1, 9999);
 
             lblNhanVien.Text = nhanVien_BUS.select_TenNhanVien_BUS(NhanVienThanhToan_GUI.maNVTT);
             lblMaDonHang.Text = "MHD" + ma;
@@ -90,7 +90,7 @@ namespace QLCHTAN
         {
             DialogResult rs = MessageBox.Show("Xác nhận thanh toán hóa đơn " + lblMaDonHang.Text + "", "Thông báo", MessageBoxButtons.YesNo);
             if (rs == DialogResult.Yes)
-            {
+            {   
                 if (khachhang_BUS.insert_KhachHang_BUS(khachhang_DTO()))
                 {
                     if(donhang_BUS.insert_DonHang_BUS(donHang_DTO()))
@@ -120,6 +120,7 @@ namespace QLCHTAN
                         madh = lblMaDonHang.Text.Trim();
                         InHoaDon_GUI inHoaDon_GUI = new InHoaDon_GUI();
                         inHoaDon_GUI.Show();
+                        this.Close();
 
                     }    
                 }

@@ -31,6 +31,11 @@ namespace QLCHTAN
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KhachHang_GUI));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbbTieuChiLoc = new System.Windows.Forms.ComboBox();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
@@ -50,27 +55,23 @@ namespace QLCHTAN
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvThongTinKhachHang = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ghiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbbTieuChiLoc = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinKhachHang)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -87,6 +88,63 @@ namespace QLCHTAN
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(399, 541);
             this.panel1.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.txtTimKiem);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.cbbTieuChiLoc);
+            this.groupBox2.Location = new System.Drawing.Point(3, 367);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(382, 116);
+            this.groupBox2.TabIndex = 26;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Lọc khách hàng";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 75);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(92, 23);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Tìm kiếm:";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(162, 74);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(208, 27);
+            this.txtTimKiem.TabIndex = 2;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 32);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 23);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Tiêu chí:";
+            // 
+            // cbbTieuChiLoc
+            // 
+            this.cbbTieuChiLoc.AutoCompleteCustomSource.AddRange(new string[] {
+            "Khách thân thiết",
+            "Khách phổ thông"});
+            this.cbbTieuChiLoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbTieuChiLoc.FormattingEnabled = true;
+            this.cbbTieuChiLoc.Items.AddRange(new object[] {
+            "Tất cả",
+            "Khách hàng thân thiết",
+            "Khách hàng phổ thông"});
+            this.cbbTieuChiLoc.Location = new System.Drawing.Point(163, 29);
+            this.cbbTieuChiLoc.Name = "cbbTieuChiLoc";
+            this.cbbTieuChiLoc.Size = new System.Drawing.Size(207, 30);
+            this.cbbTieuChiLoc.TabIndex = 0;
+            this.cbbTieuChiLoc.SelectedValueChanged += new System.EventHandler(this.cbbTieuChiLoc_SelectedValueChanged);
             // 
             // btnSua
             // 
@@ -297,6 +355,7 @@ namespace QLCHTAN
             this.dgvThongTinKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongTinKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SDT,
+            this.matKhau,
             this.tenKhachHang,
             this.Phai,
             this.diaChi,
@@ -312,6 +371,39 @@ namespace QLCHTAN
             this.dgvThongTinKhachHang.TabIndex = 1;
             this.dgvThongTinKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinKhachHang_CellClick);
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Location = new System.Drawing.Point(410, 6);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1028, 62);
+            this.panel2.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(307, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(369, 21);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(283, 29);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "DANH SÁCH KHÁCH HÀNG";
+            // 
             // SDT
             // 
             this.SDT.DataPropertyName = "SDT";
@@ -319,6 +411,14 @@ namespace QLCHTAN
             this.SDT.MinimumWidth = 6;
             this.SDT.Name = "SDT";
             this.SDT.ReadOnly = true;
+            // 
+            // matKhau
+            // 
+            this.matKhau.DataPropertyName = "matKhau";
+            this.matKhau.HeaderText = "Mật khẩu";
+            this.matKhau.Name = "matKhau";
+            this.matKhau.ReadOnly = true;
+            this.matKhau.Visible = false;
             // 
             // tenKhachHang
             // 
@@ -369,96 +469,6 @@ namespace QLCHTAN
             this.idKhachHang.ReadOnly = true;
             this.idKhachHang.Visible = false;
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(410, 6);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1028, 62);
-            this.panel2.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(307, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(369, 21);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(283, 29);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "DANH SÁCH KHÁCH HÀNG";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txtTimKiem);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.cbbTieuChiLoc);
-            this.groupBox2.Location = new System.Drawing.Point(3, 367);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(382, 116);
-            this.groupBox2.TabIndex = 26;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Lọc khách hàng";
-            // 
-            // cbbTieuChiLoc
-            // 
-            this.cbbTieuChiLoc.AutoCompleteCustomSource.AddRange(new string[] {
-            "Khách thân thiết",
-            "Khách phổ thông"});
-            this.cbbTieuChiLoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbTieuChiLoc.FormattingEnabled = true;
-            this.cbbTieuChiLoc.Items.AddRange(new object[] {
-            "Tất cả",
-            "Khách hàng thân thiết",
-            "Khách hàng phổ thông"});
-            this.cbbTieuChiLoc.Location = new System.Drawing.Point(163, 29);
-            this.cbbTieuChiLoc.Name = "cbbTieuChiLoc";
-            this.cbbTieuChiLoc.Size = new System.Drawing.Size(207, 30);
-            this.cbbTieuChiLoc.TabIndex = 0;
-            this.cbbTieuChiLoc.SelectedValueChanged += new System.EventHandler(this.cbbTieuChiLoc_SelectedValueChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 32);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 23);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Tiêu chí:";
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(162, 74);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(208, 27);
-            this.txtTimKiem.TabIndex = 2;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 75);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 23);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Tìm kiếm:";
-            // 
             // KhachHang_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -477,14 +487,14 @@ namespace QLCHTAN
             this.Text = "Thông Tin Khách Hàng";
             this.Load += new System.EventHandler(this.KhachHang_GUI_Load);
             this.panel1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinKhachHang)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -511,13 +521,6 @@ namespace QLCHTAN
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtMaKhachHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenKhachHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Phai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diaChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ghiChu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idKhachHang;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -526,5 +529,13 @@ namespace QLCHTAN
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbbTieuChiLoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn matKhau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenKhachHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Phai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ghiChu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idKhachHang;
     }
 }

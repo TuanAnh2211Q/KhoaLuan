@@ -56,8 +56,6 @@ namespace QLCHTAN
                         ThongTinDonHang_GUI ttdh = new ThongTinDonHang_GUI();
                         ttdh.Show();
                         this.Close();
-
-
                     }
                     else
                         MessageBox.Show("Tên đăng nhập hoặc mất khẩu không đúng, vui lòng kiểm tra lại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);

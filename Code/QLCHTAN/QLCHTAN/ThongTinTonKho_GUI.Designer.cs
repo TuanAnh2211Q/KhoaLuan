@@ -52,7 +52,6 @@ namespace QLCHTAN
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.lblkLamMoi = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinHangTon)).BeginInit();
@@ -293,16 +292,6 @@ namespace QLCHTAN
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã hàng:";
             // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(0, 0);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(61, 15);
-            this.linkLabel2.TabIndex = 4;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "linkLabel2";
-            // 
             // lblkLamMoi
             // 
             this.lblkLamMoi.AutoSize = true;
@@ -332,7 +321,6 @@ namespace QLCHTAN
             this.ClientSize = new System.Drawing.Size(1210, 600);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblkLamMoi);
-            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvThongTinHangTon);
@@ -376,7 +364,6 @@ namespace QLCHTAN
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel lblkTaoPhieuXuat;
         private System.Windows.Forms.TextBox txtTenHang;
-        private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel lblkLamMoi;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

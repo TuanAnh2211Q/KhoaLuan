@@ -38,7 +38,8 @@ namespace QLCHTAN
                 lblMaHang.Text = r.Cells["maHang"].Value.ToString();
                 lblSoLuong.Text = r.Cells["soLuong"].Value.ToString();
                 lblTenHang.Text = r.Cells["tenHang"].Value.ToString();
-                lblTongGia.Text = r.Cells["tongGia"].Value.ToString() + " VNĐ";
+                decimal tongGia = Convert.ToDecimal(r.Cells["tongGia"].Value.ToString());
+                lblTongGia.Text = tongGia.ToString("#,##0.000 VNĐ");
             }    
         }
 

@@ -24,8 +24,8 @@ namespace QLCHTAN
         {
             lblThongTinPhieuNhap.Text = lblThongTinPhieuNhap.Text + " " + PhieuNhapKho_GUI.maNhapKho;
             dgvThongTinChiTietPhieuNhap.DataSource = thongTinChiTietPhieuNhap_BUS.dsThongTinChiTietPhieuNhap(PhieuNhapKho_GUI.maNhapKho);
-            string tongGia = thongTinChiTietPhieuNhap_BUS.select_TongGiaNhap_DAO(PhieuNhapKho_GUI.maNhapKho).ToString();
-            lblTongGiaNhap.Text =lblTongGiaNhap.Text+" "+tongGia +" " + "VNĐ";
+            decimal tongGia = thongTinChiTietPhieuNhap_BUS.select_TongGiaNhap_DAO(PhieuNhapKho_GUI.maNhapKho);
+            lblTongGiaNhap.Text =lblTongGiaNhap.Text+tongGia.ToString("#,##0.000 VNĐ");
         }
 
       

@@ -188,6 +188,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietHoaDon_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietHoaDon_GUI.Designer.cs">
+      <DependentUpon>ChiTietHoaDon_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="CSDL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +246,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>rptHoaDonMuaHang.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ThongKe_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKe_GUI.Designer.cs">
+      <DependentUpon>ThongKe_GUI.cs</DependentUpon>
     </Compile>
     <Compile Include="ThongTinDonHang_GUI.cs">
       <SubType>Form</SubType>
@@ -399,6 +411,9 @@
     <Compile Include="ThongTinTonKho_GUI.Designer.cs">
       <DependentUpon>ThongTinTonKho_GUI.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChiTietHoaDon_GUI.resx">
+      <DependentUpon>ChiTietHoaDon_GUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CSDL.resx">
       <DependentUpon>CSDL.cs</DependentUpon>
     </EmbeddedResource>
@@ -423,6 +438,9 @@
     <EmbeddedResource Include="rptHoaDonMuaHang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptHoaDonMuaHang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe_GUI.resx">
+      <DependentUpon>ThongKe_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinDonHang_GUI.resx">
       <DependentUpon>ThongTinDonHang_GUI.cs</DependentUpon>
@@ -480,6 +498,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TaiKhoan_GUI.resx">
       <DependentUpon>TaiKhoan_GUI.cs</DependentUpon>
@@ -552,6 +571,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revenue.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.5.0.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.5.0.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />

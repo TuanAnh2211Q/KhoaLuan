@@ -29,7 +29,6 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTongGiaNhap = new System.Windows.Forms.Label();
             this.dgvThongTinPhieuXuat = new System.Windows.Forms.DataGridView();
             this.maHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,16 +54,6 @@ namespace QLCHTAN
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinPhieuXuat)).BeginInit();
             this.grbThongTinPhieuDat.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblTongGiaNhap
-            // 
-            this.lblTongGiaNhap.AutoSize = true;
-            this.lblTongGiaNhap.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongGiaNhap.Location = new System.Drawing.Point(9, 868);
-            this.lblTongGiaNhap.Name = "lblTongGiaNhap";
-            this.lblTongGiaNhap.Size = new System.Drawing.Size(82, 23);
-            this.lblTongGiaNhap.TabIndex = 7;
-            this.lblTongGiaNhap.Text = "Tổng giá:";
             // 
             // dgvThongTinPhieuXuat
             // 
@@ -128,7 +117,7 @@ namespace QLCHTAN
             // 
             this.lblkThoat.AutoSize = true;
             this.lblkThoat.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblkThoat.Location = new System.Drawing.Point(806, 872);
+            this.lblkThoat.Location = new System.Drawing.Point(806, 857);
             this.lblkThoat.Name = "lblkThoat";
             this.lblkThoat.Size = new System.Drawing.Size(49, 19);
             this.lblkThoat.TabIndex = 9;
@@ -296,14 +285,13 @@ namespace QLCHTAN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 897);
+            this.ClientSize = new System.Drawing.Size(869, 883);
             this.Controls.Add(this.grbThongTinPhieuDat);
-            this.Controls.Add(this.lblTongGiaNhap);
             this.Controls.Add(this.dgvThongTinPhieuXuat);
             this.Controls.Add(this.lblkThoat);
             this.Controls.Add(this.lblThongTinPhieuXuat);
             this.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThongTinPhieuXuat_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThongTinPhieuXuat_GUI";
@@ -317,8 +305,6 @@ namespace QLCHTAN
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblTongGiaNhap;
         private System.Windows.Forms.DataGridView dgvThongTinPhieuXuat;
         private System.Windows.Forms.LinkLabel lblkThoat;
         private System.Windows.Forms.Label lblThongTinPhieuXuat;

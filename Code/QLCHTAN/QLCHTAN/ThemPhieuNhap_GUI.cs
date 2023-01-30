@@ -132,8 +132,9 @@ namespace QLCHTAN
                     if (phieuNhapKho_BUS.insert_PhieuNhap(phieuNhap_DTO()))
                     {
                         DataTable tb = (DataTable)dgvThongTinChiTietPhieuNhap.DataSource;
-                        foreach (DataRow r in tb.Rows)
+                        for ( int i=0;i<= tb.Rows.Count-1;i++)
                         {
+                            DataRow r = tb.Rows[i];
                             string maNhaCungCap = r.Field<string>("maNCC");
                             string maHangNhap = r.Field<string>("maHang");
                             int soLuongNhap = r.Field<int>("soLuongNhap");
