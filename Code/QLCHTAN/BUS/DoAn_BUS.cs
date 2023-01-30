@@ -33,11 +33,6 @@ namespace BUS
         {
             return doAn_DAO.update_DoAn_DAO(doAn_DTO);
         }
-        //public DataTable show_dsMon_BUS()
-        //{
-        //    return doAn_DAO.show_dsMon_DAO();
-        //}
-
 
         public DataTable show_DoAnTheoLoai_BUS(string maLoaiDoAN)
         {

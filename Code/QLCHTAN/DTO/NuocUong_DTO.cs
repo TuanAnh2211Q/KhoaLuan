@@ -39,15 +39,21 @@ namespace DTO
             get { return donGia; }
             set { donGia = value; }
         }
-       
+        public byte[] hinhURL;
+        public byte[] HinhURL
+        {
+            get { return hinhURL; }
+            set { hinhURL = value; }
+        }
 
-        public NuocUong_DTO (string MaNuoc, string TenNuoc, string DonViBan, string DonGia)
+
+        public NuocUong_DTO (string MaNuoc, string TenNuoc, string DonViBan, string DonGia,byte[]HinhURL)
         {
             this.maNuoc = MaNuoc;
             this.tenNuoc = TenNuoc;
             this.donViBan = DonViBan;
             this.donGia = DonGia;
-            
+            this.hinhURL = HinhURL;
         }
     }
 }

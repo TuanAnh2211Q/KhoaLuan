@@ -10,15 +10,18 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using DTO;
 using BUS;
+using System.IO;
+
 namespace QLCHTAN
 {
     public partial class NuocUong_GUI : Form
     {
         NuocUong_BUS nuocuong = new NuocUong_BUS();
         MatHang_BUS mathang = new MatHang_BUS();
+        public byte[] Hinh;
         public NuocUong_DTO nuocUong_DTO()
         {
-            return new NuocUong_DTO(cbbNuoc.SelectedValue.ToString(), txtTenNuoc.Text, txtDonViBan.Text, txtDonGia.Text);
+            return new NuocUong_DTO(cbbNuoc.SelectedValue.ToString(), txtTenNuoc.Text, txtDonViBan.Text, txtDonGia.Text,Hinh);
         }
         public bool kt_NuocUong()
         {
@@ -53,6 +56,20 @@ namespace QLCHTAN
                 txtTenNuoc.Text = r.Cells[1].Value.ToString();
                 txtDonViBan.Text = r.Cells[2].Value.ToString();
                 txtDonGia.Text = r.Cells[3].Value.ToString();
+                if (r.Cells["HinhURL"].Value.ToString() != "")
+                {
+                    byte[] image = (byte[])r.Cells["HinhURL"].Value;
+                    using (var ms = new MemoryStream(image))
+                    {
+                        picAnhNuoc.Image = Image.FromStream(ms);
+                        picAnhNuoc.SizeMode = PictureBoxSizeMode.StretchImage;
+                        picAnhNuoc.ClientSize = new Size(133, 169);
+                    }
+                }
+                else
+                {
+                    picAnhNuoc.Image = null;
+                }
             }
         }
 
@@ -107,6 +124,7 @@ namespace QLCHTAN
 
                     try
                     {
+
                        
                             if (nuocuong.delete_NuocUong_BUS(nuocUong_DTO()))
                             {
@@ -117,12 +135,14 @@ namespace QLCHTAN
                             {
                                 MessageBox.Show("Xóa nước uống thất bại vui lòng kiểm tra lại thông tin nhập");
                             }
-                        }
-                  
-                    
+                        
+                       
+                     }
+
+
                     catch (Exception)
                     {
-                        MessageBox.Show("Xóa nước uống thất bại vui lòng kiểm tra lại thông tin đồ ăn");
+                        MessageBox.Show("Xóa nước uống thất bại vui lòng kiểm tra lại thông tin nước");
                     }
                 }
                 else
@@ -130,40 +150,40 @@ namespace QLCHTAN
             }
         }
 
-        //private void btnSua_Click(object sender, EventArgs e)
-        //{
-        //    DialogResult sua = MessageBox.Show("Bạn muốn sửa thông tin nước uống này ?", "Thông báo", MessageBoxButtons.YesNo);
-        //    if (sua == DialogResult.Yes)
-        //    {
-        //        if (kt_NuocUong())
-        //        {
-        //            try
-        //            {
-        //                if ( txtTenNuoc.Text != "" & txtDonGia.Text != "" && txtDonViBan.Text != "")
-        //                {
-        //                    if (nuocuong.update_NuocUong_BUS(nuocUong_DTO()))
-        //                    {
-        //                        MessageBox.Show("Sửa thông tin nước thành công");
-        //                        btnLamMoi_Click(sender, e);
-        //                    }
-        //                    else
-        //                    {
-        //                        MessageBox.Show("Sửa thông tin nước thất bại vui lòng kiểm tra lại thông tin nhập");
-        //                    }
-        //                }
-        //                else
-        //                { MessageBox.Show("Vui lòng nhập dầy đủ thông tin"); }
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            DialogResult sua = MessageBox.Show("Bạn muốn sửa thông tin nước uống này ?", "Thông báo", MessageBoxButtons.YesNo);
+            if (sua == DialogResult.Yes)
+            {
+                if (kt_NuocUong())
+                {
+                    try
+                    {
+                        if (txtTenNuoc.Text != "" & txtDonGia.Text != "" && txtDonViBan.Text != "")
+                        {
+                            if (nuocuong.update_NuocUong_BUS(nuocUong_DTO()))
+                            {
+                                MessageBox.Show("Sửa thông tin nước thành công");
+                                btnLamMoi_Click(sender, e);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Sửa thông tin nước thất bại vui lòng kiểm tra lại thông tin nhập");
+                            }
+                        }
+                        else
+                        { MessageBox.Show("Vui lòng nhập dầy đủ thông tin"); }
 
-        //            }
-        //            catch (Exception)
-        //            {
-        //                MessageBox.Show("Sửa thông tin nước thất bại vui lòng kiểm tra lại thông tin đồ ăn");
-        //            }
-        //        }
-        //        else
-        //            MessageBox.Show("Mã nước không tồn tại, không thể sửa");
-        //    }
-        //}
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Sửa thông tin nước thất bại vui lòng kiểm tra lại thông tin nước uống");
+                    }
+                }
+                else
+                    MessageBox.Show("Mã nước không tồn tại, không thể sửa");
+            }
+        }
 
         private void cbbNuoc_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -180,6 +200,33 @@ namespace QLCHTAN
                     }
                 }
             }    
+        }
+
+        private void btnChonAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files(*.JPG;*.JPEG;*.PNG;*.GIF)|*.JPG;*.JPEG;*.PNG;*.GIF";
+            openFileDialog.ShowDialog();
+
+            if (openFileDialog.FileName != "")
+            {
+                picAnhNuoc.Image = Image.FromFile(openFileDialog.FileName);
+                picAnhNuoc.SizeMode = PictureBoxSizeMode.StretchImage;
+                picAnhNuoc.ClientSize = new Size(133, 169);
+                using (var ms = new MemoryStream())
+                {
+                    picAnhNuoc.Image.Save(ms, picAnhNuoc.Image.RawFormat);
+                    Hinh = ms.ToArray();
+                }
+            }
+        }
+
+        private void btnBoAnh_Click(object sender, EventArgs e)
+        {
+            picAnhNuoc.Image = null;
+            picAnhNuoc.SizeMode = PictureBoxSizeMode.StretchImage;
+            picAnhNuoc.ClientSize = new Size(133, 169);
+            Hinh = null;
         }
     }
 }
