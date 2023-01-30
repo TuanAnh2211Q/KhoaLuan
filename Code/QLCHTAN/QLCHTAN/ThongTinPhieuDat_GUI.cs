@@ -43,11 +43,8 @@ namespace QLCHTAN
             txtMaDatHang.Text = PhieuDatHang_GUI.maPhieuDat;
             dgvThongTinChiTietPhieuDat.DataSource = thongTinChiTietPhieuDatHang_BUS.ds_SanPhamDat_BUS(PhieuDatHang_GUI.maPhieuDat);
 
-           
-            lblTongGia.Text = thongTinChiTietPhieuDatHang_BUS.tongGia_PhieuDat_BUS(PhieuDatHang_GUI.maPhieuDat) +"VNĐ";
-
-
-
+            decimal tongGia = Convert.ToDecimal(thongTinChiTietPhieuDatHang_BUS.tongGia_PhieuDat_BUS(PhieuDatHang_GUI.maPhieuDat));
+            lblTongGia.Text = tongGia.ToString("#,##0.000 VNĐ");
             cbbMatHang.DataSource = thongTinChiTietPhieuDatHang_BUS.ds_matHang_BUS();
             cbbMatHang.DisplayMember = "tenHang";
             cbbMatHang.ValueMember = "maHang";

@@ -195,5 +195,13 @@ namespace QLCHTAN
             this.pCuaSoChucNang.Controls.Add(khachHang);
             khachHang.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pCuaSoChucNang.Controls.Clear();
+           ThongKe_GUI thongKe= new ThongKe_GUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoSize = true }; ;
+            this.pCuaSoChucNang.Controls.Add(thongKe);
+            thongKe.Show();
+        }
     }
 }

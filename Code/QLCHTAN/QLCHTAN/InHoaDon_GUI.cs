@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using DAO;
 using CrystalDecisions.Shared;
 using CrystalDecisions.CrystalReports.Engine;
+using System.Globalization;
 
 namespace QLCHTAN
 {
@@ -34,6 +35,7 @@ namespace QLCHTAN
             SqlDataAdapter da = new SqlDataAdapter("print_HoaDonBanHang",data.conn);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
             da.SelectCommand.Parameters.Add("@maDonHang", SqlDbType.VarChar).Value = ThongTinDonHang_GUI.madh;
+
             SqlCommand cmd = new SqlCommand("print_TongGia", data.conn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@maDonHang", SqlDbType.VarChar).Value = ThongTinDonHang_GUI.madh;
@@ -43,10 +45,9 @@ namespace QLCHTAN
 
             if (cmd.ExecuteScalar()!=null)
             {
-                decimal tong = Math.Round(Convert.ToDecimal(cmd.ExecuteScalar()),3);
-
+                decimal tong = Convert.ToDecimal(cmd.ExecuteScalar());
                 TextObject title = (TextObject)prtHDMH.ReportDefinition.Sections[4].ReportObjects["TongGia"];
-                title.Text = tong.ToString() +"VNĐ";
+                title.Text = tong.ToString("#,##0.000 VNĐ");
                 title.Color = Color.Red;
 
             }

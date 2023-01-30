@@ -198,6 +198,7 @@
     <Compile Include="PhieuXuat_BUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaiKhoan_BUS.cs" />
+    <Compile Include="ThongKe_BUS.cs" />
     <Compile Include="ThongTinChiTietPhieuDatHang_BUS.cs" />
     <Compile Include="ThongTinChiTietPhieuNhap_BUS.cs" />
     <Compile Include="ThongTinDonHang_BUS.cs" />

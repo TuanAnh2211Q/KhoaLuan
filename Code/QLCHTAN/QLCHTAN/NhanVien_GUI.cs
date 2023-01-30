@@ -198,5 +198,6 @@ namespace QLCHTAN
         {
             this.Close();
         }
+
     }
 }

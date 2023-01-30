@@ -362,9 +362,10 @@ namespace QLCHTAN
             this.Controls.Add(this.grbDanhSachHangDat);
             this.Controls.Add(this.grbThongTinPhieuDat);
             this.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ThongTinPhieuTra_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ThongTinPhieuTra_GUI";
+            this.Text = "Thông tin phiếu trả";
             this.Load += new System.EventHandler(this.ThongTinPhieuTra_GUI_Load);
             this.grbDanhSachHangDat.ResumeLayout(false);
             this.grbDanhSachHangDat.PerformLayout();
