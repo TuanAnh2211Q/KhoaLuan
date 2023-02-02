@@ -325,5 +325,199 @@ where thoiGianDat between @tg1 and @tg2
 
 
 --27/1/2022
+alter PROCEDURE select_ThongKeDoanhThuTheoQuy
+(
+    @nam int,
+    @quyList VARCHAR(max)
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
 
-exec print_HoaDonBanHang 'MHD2725'
+    DECLARE @quy INT;
+    DECLARE @tuNgay varchar(max);
+    DECLARE @denNgay varchar(max);
+
+    SET @quy = 1;
+    WHILE (@quy <= 4)
+    BEGIN
+       IF (@quy = 1)
+        BEGIN
+            SET @tuNgay =convert(Varchar(max),@nam)+'-01-01';
+            SET @denNgay = convert(Varchar(max),@nam)+'-03-31';
+        END
+        ELSE IF (@quy = 2)
+        BEGIN
+            SET @tuNgay = convert(Varchar(max),@nam)+'-04-01';
+            SET @denNgay =convert(Varchar(max),@nam)+'-06-30';
+        END
+        ELSE IF (@quy = 3)
+        BEGIN
+            SET @tuNgay =convert(Varchar(max),@nam)+'-07-01';
+            SET @denNgay =convert(Varchar(max),@nam)+'-09-30';
+        END
+        ELSE
+        BEGIN
+            SET @tuNgay =convert(Varchar(max),@nam)+'-10-10';
+            SET @denNgay =convert(Varchar(max),@nam)+'-12-31';
+        END
+
+
+        IF CHARINDEX(CONVERT(VARCHAR(10), @quy), @quyList) > 0
+        BEGIN
+            SELECT dh.maDonHang, dh.tenDonHang, dh.thoiGianDat, dh.tongGia,(select sum(dh.tongGia) from DonHang dh  WHERE dh.thoiGianDat BETWEEN @tuNgay AND @denNgay)  as tongDoanhThu
+            FROM DonHang dh
+            WHERE thoiGianDat BETWEEN @tuNgay AND @denNgay;
+        END
+
+        SET @quy = @quy + 1;
+    END
+END
+
+
+
+
+create proc select_NguyenLieuBan_NTN
+ @loai varchar(max), @ngay datetime
+as
+if(@loai='ngay')
+begin
+select tttpda.maThanhPhan,mh.tenHang,(ttdh.soLuong*tttpda.soLuong) as soLuong, (ttdh.soLuong*tttpda.soLuong*donGia) as TongGiaBan,
+(
+select sum((ttdh.soLuong*tttpda.soLuong*donGia))
+from ThongTinDonHang ttdh , SanPham sp, ThongTinThanhPhanDoAn tttpda, MatHang mh, DonHang dh
+where ttdh.maSanPham=sp.maSanPham
+and ttdh.maDonHang=dh.maDonHang
+and mh.maHang=tttpda.maThanhPhan
+and sp.maSanPham=tttpda.maDoAn) as TongGia
+from ThongTinDonHang ttdh , SanPham sp, ThongTinThanhPhanDoAn tttpda, MatHang mh, DonHang dh
+where ttdh.maSanPham=sp.maSanPham
+and ttdh.maDonHang=dh.maDonHang
+and mh.maHang=tttpda.maThanhPhan
+and sp.maSanPham=tttpda.maDoAn
+and dh.thoiGianDat=@ngay
+end
+else if(@loai='thang')
+begin
+select tttpda.maThanhPhan,mh.tenHang,(ttdh.soLuong*tttpda.soLuong) as soLuong, (ttdh.soLuong*tttpda.soLuong*donGia) as TongGiaBan,
+(
+select sum((ttdh.soLuong*tttpda.soLuong*donGia))
+from ThongTinDonHang ttdh , SanPham sp, ThongTinThanhPhanDoAn tttpda, MatHang mh, DonHang dh
+where ttdh.maSanPham=sp.maSanPham
+and ttdh.maDonHang=dh.maDonHang
+and mh.maHang=tttpda.maThanhPhan
+and sp.maSanPham=tttpda.maDoAn) as TongGia
+from ThongTinDonHang ttdh , SanPham sp, ThongTinThanhPhanDoAn tttpda, MatHang mh, DonHang dh
+where ttdh.maSanPham=sp.maSanPham
+and ttdh.maDonHang=dh.maDonHang
+and mh.maHang=tttpda.maThanhPhan
+and sp.maSanPham=tttpda.maDoAn
+and MONTH(dh.thoiGianDat)=MONTH(@ngay)
+end
+else if(@loai='nam')
+begin
+select tttpda.maThanhPhan,mh.tenHang,(ttdh.soLuong*tttpda.soLuong) as soLuong, (ttdh.soLuong*tttpda.soLuong*donGia) as TongGiaBan,
+(
+select sum((ttdh.soLuong*tttpda.soLuong*donGia))
+from ThongTinDonHang ttdh , SanPham sp, ThongTinThanhPhanDoAn tttpda, MatHang mh, DonHang dh
+where ttdh.maSanPham=sp.maSanPham
+and ttdh.maDonHang=dh.maDonHang
+and mh.maHang=tttpda.maThanhPhan
+and sp.maSanPham=tttpda.maDoAn) as TongGia
+from ThongTinDonHang ttdh , SanPham sp, ThongTinThanhPhanDoAn tttpda, MatHang mh, DonHang dh
+where ttdh.maSanPham=sp.maSanPham
+and ttdh.maDonHang=dh.maDonHang
+and mh.maHang=tttpda.maThanhPhan
+and sp.maSanPham=tttpda.maDoAn
+and YEAR(dh.thoiGianDat)=YEAR(@ngay)
+end
+
+--exec select_NguyenLieuBan_NTN 'nam','2023'
+
+create  proc select_NguyenLieuBan_MTG
+@tg1 datetime,@tg2 datetime
+as
+select tttpda.maThanhPhan,mh.tenHang,(ttdh.soLuong*tttpda.soLuong) as soLuong, (ttdh.soLuong*tttpda.soLuong*donGia) as TongGiaBan,
+(
+select sum((ttdh.soLuong*tttpda.soLuong*donGia))
+from ThongTinDonHang ttdh , SanPham sp, ThongTinThanhPhanDoAn tttpda, MatHang mh, DonHang dh
+where ttdh.maSanPham=sp.maSanPham
+and ttdh.maDonHang=dh.maDonHang
+and mh.maHang=tttpda.maThanhPhan
+and sp.maSanPham=tttpda.maDoAn) as TongGia
+from ThongTinDonHang ttdh , SanPham sp, ThongTinThanhPhanDoAn tttpda, MatHang mh, DonHang dh
+where ttdh.maSanPham=sp.maSanPham
+and ttdh.maDonHang=dh.maDonHang
+and mh.maHang=tttpda.maThanhPhan
+and sp.maSanPham=tttpda.maDoAn
+and dh.thoiGianDat between @tg1 and @tg2
+
+----------------------
+
+create PROCEDURE  select_NguyenLieuBan_Q
+(
+    @nam int,
+    @quyList VARCHAR(max)
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @quy INT;
+    DECLARE @tuNgay varchar(max);
+    DECLARE @denNgay varchar(max);
+
+    SET @quy = 1;
+    WHILE (@quy <= 4)
+    BEGIN
+       IF (@quy = 1)
+        BEGIN
+            SET @tuNgay =convert(Varchar(max),@nam)+'-01-01';
+            SET @denNgay = convert(Varchar(max),@nam)+'-03-31';
+        END
+        ELSE IF (@quy = 2)
+        BEGIN
+            SET @tuNgay = convert(Varchar(max),@nam)+'-04-01';
+            SET @denNgay =convert(Varchar(max),@nam)+'-06-30';
+        END
+        ELSE IF (@quy = 3)
+        BEGIN
+            SET @tuNgay =convert(Varchar(max),@nam)+'-07-01';
+            SET @denNgay =convert(Varchar(max),@nam)+'-09-30';
+        END
+        ELSE
+        BEGIN
+            SET @tuNgay =convert(Varchar(max),@nam)+'-10-10';
+            SET @denNgay =convert(Varchar(max),@nam)+'-12-31';
+        END
+
+
+        IF CHARINDEX(CONVERT(VARCHAR(10), @quy), @quyList) > 0
+        BEGIN
+            select tttpda.maThanhPhan,mh.tenHang,(ttdh.soLuong*tttpda.soLuong) as soLuong, (ttdh.soLuong*tttpda.soLuong*donGia) as TongGiaBan,
+(
+select sum((ttdh.soLuong*tttpda.soLuong*donGia))
+from ThongTinDonHang ttdh , SanPham sp, ThongTinThanhPhanDoAn tttpda, MatHang mh, DonHang dh
+where ttdh.maSanPham=sp.maSanPham
+and ttdh.maDonHang=dh.maDonHang
+and mh.maHang=tttpda.maThanhPhan
+and sp.maSanPham=tttpda.maDoAn) as TongGia
+from ThongTinDonHang ttdh , SanPham sp, ThongTinThanhPhanDoAn tttpda, MatHang mh, DonHang dh
+where ttdh.maSanPham=sp.maSanPham
+and ttdh.maDonHang=dh.maDonHang
+and mh.maHang=tttpda.maThanhPhan
+and sp.maSanPham=tttpda.maDoAn
+and dh.thoiGianDat BETWEEN @tuNgay AND @denNgay;
+        END
+
+        SET @quy = @quy + 1;
+    END
+END
+
+
+
+exec select_NguyenLieuBan_Q '2023','4'
+
+
+
+

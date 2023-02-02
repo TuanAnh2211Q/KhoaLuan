@@ -157,6 +157,14 @@ namespace QLCHTAN
             {
                 DataGridViewRow r = dgvThongTinKhuyenMai.Rows[e.RowIndex];
                 txtMaKhuyenMai.Text = r.Cells["maKhuyenMai"].Value.ToString();
+                if(txtMaKhuyenMai.Text=="MKM000")
+                {
+                    btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = false;
+                }    
+                else
+                {
+                    btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = true;
+                }
                 txtTenKhuyenMai.Text = r.Cells["tenKhuyenMai"].Value.ToString();
                 cbbLoaiKhuyenMai.SelectedValue = r.Cells["maLoaiKhuyenMai"].Value.ToString();
                 txtMucGiam.Text = Math.Round( Convert.ToDouble( r.Cells["mucGiam"].Value), 4).ToString();

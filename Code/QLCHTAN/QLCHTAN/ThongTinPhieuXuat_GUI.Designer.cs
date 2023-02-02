@@ -123,6 +123,7 @@ namespace QLCHTAN
             this.lblkThoat.TabIndex = 9;
             this.lblkThoat.TabStop = true;
             this.lblkThoat.Text = "Thoát";
+            this.lblkThoat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkThoat_LinkClicked);
             // 
             // lblThongTinPhieuXuat
             // 

@@ -166,5 +166,7 @@ namespace QLCHTAN
             int ma = Convert.ToInt32(DateTime.Now.Day) + Convert.ToInt32(DateTime.Now.Month) + Convert.ToInt32(DateTime.Now.Year) + Convert.ToInt32(DateTime.Now.Hour) + Convert.ToInt32(DateTime.Now.Minute) + Convert.ToInt32(DateTime.Now.Millisecond) + rnd.Next(1, 1000);
             txtMaNhap.Text = "MN" + "_"+ma.ToString();
         }
+
+     
     }
 }

@@ -20,6 +20,24 @@ namespace BUS
             return thongKe_DAO.thongKeDoanhThu_MTG_DAO(tg1, tg2);
 
         }
+        public DataSet thongKeDoanhThu_TQ_BUS(int nam, string quy)
+        {
+            return thongKe_DAO.thongKeDoanhThu_TQ_DAO(nam, quy);
+        }
+
+        public DataTable thongKeNguyenLieuSuDung_NTN_BUS(string loai, DateTime thoiGian)
+        {
+            return thongKe_DAO.thongKeNguyenLieuSuDung_NTN_DAO(loai, thoiGian);
+        }
+        public DataTable thongKeNguyenLieuSuDung_MTG_BUS(DateTime tg1, DateTime tg2)
+        {
+            return thongKe_DAO.thongKeNguyenLieuSuDung_NTG_DAO(tg1, tg2);
+        }
+
+        public DataSet thongKeNguyenLieuSuDung_Q_BUS(int nam, string quy)
+        {
+            return thongKe_DAO.thongKeNguyenLieuSuDung_Q_DAO(nam, quy);
+        }
 
     }
 }

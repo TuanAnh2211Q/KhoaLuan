@@ -34,5 +34,53 @@ namespace DAO
             return tb;
         }
 
+        public DataSet thongKeDoanhThu_TQ_DAO(int nam, string quy)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("select_ThongKeDoanhThuTheoQuy", conn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@nam", SqlDbType.Int).Value =nam;
+            da.SelectCommand.Parameters.Add("@quyList", SqlDbType.VarChar).Value = quy.ToString(). Trim(); 
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            return ds;
+
+        }
+
+        public DataTable thongKeNguyenLieuSuDung_NTN_DAO(string loai, DateTime thoiGian)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("select_NguyenLieuBan_NTN", conn);
+
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@loai", SqlDbType.VarChar).Value = loai.Trim();
+            da.SelectCommand.Parameters.Add("@ngay", SqlDbType.DateTime).Value = thoiGian.ToString().Trim();
+            DataTable tb = new DataTable();
+            da.Fill(tb);
+            return tb;
+        }
+
+        public DataTable thongKeNguyenLieuSuDung_NTG_DAO(DateTime tg1, DateTime tg2)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("select_NguyenLieuBan_MTG", conn);
+
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@tg1", SqlDbType.DateTime).Value = tg1.ToString().Trim();
+            da.SelectCommand.Parameters.Add("@tg2", SqlDbType.DateTime).Value = tg2.ToString().Trim();
+            DataTable tb = new DataTable();
+            da.Fill(tb);
+            return tb;
+        }
+
+
+        public DataSet thongKeNguyenLieuSuDung_Q_DAO(int nam, string quy)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("select_NguyenLieuBan_Q", conn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@nam", SqlDbType.Int).Value = nam;
+            da.SelectCommand.Parameters.Add("@quyList", SqlDbType.VarChar).Value = quy.ToString().Trim();
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            return ds;
+        }
+
     }
 }

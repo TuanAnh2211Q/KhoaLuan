@@ -120,6 +120,14 @@ namespace QLCHTAN
             if (e.RowIndex >= 0)
             {
                 txtMaLoaiKhuyenMai.Text = dgvLoaiKhuyenMai.Rows[e.RowIndex].Cells["MaLoaiKhuyenMai"].Value.ToString();
+                if(txtMaLoaiKhuyenMai.Text=="MLKM000")
+                {
+                    btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = false;
+                }
+                else
+                {
+                    btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = true;
+                }
                 txtTenLoaiKhuyenMai.Text = dgvLoaiKhuyenMai.Rows[e.RowIndex].Cells["TenLoaiKhuyenMai"].Value.ToString();
                 txtMaLoaiKhuyenMai.Enabled = false;
             }

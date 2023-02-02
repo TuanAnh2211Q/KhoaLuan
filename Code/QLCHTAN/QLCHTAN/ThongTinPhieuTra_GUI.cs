@@ -62,7 +62,15 @@ namespace QLCHTAN
                 DialogResult rs = MessageBox.Show("Không có mặt hàng nào trong phiếu đặt để thực hiện đổi trả", "Thông báo", MessageBoxButtons.OK);
                 this.Close();
             }
-            decimal tongGia = Convert.ToDecimal(ttpt.tongGia_PhieuTra_BUS(txtMaTra.Text));
+            decimal tongGia;
+            if (ttpt.tongGia_PhieuTra_BUS(txtMaTra.Text)=="")
+            {
+                tongGia = 0;
+            }    
+            else
+            {
+                tongGia  = Convert.ToDecimal(ttpt.tongGia_PhieuTra_BUS(txtMaTra.Text));
+            }
             lblTongGia.Text = tongGia.ToString("#,##0.000 VNĐ");
             txtSoLuong.Clear();
         }
