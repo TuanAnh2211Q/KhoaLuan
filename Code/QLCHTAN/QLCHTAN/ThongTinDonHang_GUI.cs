@@ -24,6 +24,7 @@ namespace QLCHTAN
         KhuyenMai_BUS khuyenMai_BUS = new KhuyenMai_BUS();
         NhanVien_BUS nhanVien_BUS = new NhanVien_BUS();
         ThongTinDonHang_BUS ttdh_BUS = new ThongTinDonHang_BUS();
+        private decimal tongDonGia;
         public KhachHang_DTO khachhang_DTO()
         {
             return new KhachHang_DTO(lblSDT.Text.Trim(), lblKhachHang.Text.Trim(), gioiTinhKhach.Trim(), diaChiKhach.Trim(), emailKhach.Trim(), txtGhiChu.Text.Trim());
@@ -39,7 +40,7 @@ namespace QLCHTAN
             {
                 km = Order_GUI.maKM.Trim();
             }    
-            return new DonHang_DTO(lblMaDonHang.Text.Trim(), lblTenDonHang.Text.Trim(), Order_GUI.maLoaiDon.Trim(), Order_GUI.htThanhToan, NhanVienThanhToan_GUI.maNVTT.Trim(), lblSDT.Text.Trim(), km.Trim(), DateTime.Today, 1, txtGhiChu.Text.Trim(),khachhang_BUS.select_id_KhachHang_BUS(lblSDT.Text.Trim()), Convert.ToDecimal(lblTongDonGia.Text));
+            return new DonHang_DTO(lblMaDonHang.Text.Trim(), lblTenDonHang.Text.Trim(), Order_GUI.maLoaiDon.Trim(), Order_GUI.htThanhToan, NhanVienThanhToan_GUI.maNVTT.Trim(), lblSDT.Text.Trim(), km.Trim(), DateTime.Today, 1, txtGhiChu.Text.Trim(),khachhang_BUS.select_id_KhachHang_BUS(lblSDT.Text.Trim()), tongDonGia);
         }
         public ThongTinDonHang_GUI()
         {
@@ -79,7 +80,8 @@ namespace QLCHTAN
             }
             lblThoiGian.Text = DateTime.Now.ToString();
             lblTrangThai.Text = "Chưa thanh toán";
-            lblTongDonGia.Text =Order_GUI.tongGia;
+            tongDonGia = Convert.ToDecimal(Order_GUI.tongGia);
+            lblTongDonGia.Text =(tongDonGia.ToString("#,##0.000 VNĐ"));
             dgvThongTinHoaDon.DataSource = Order_GUI.ttdh;
 
 

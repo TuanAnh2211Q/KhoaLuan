@@ -99,5 +99,10 @@ namespace QLCHTAN
                 txtGhiChu.Text = r.Cells["ghiChu"].Value.ToString();
             }    
         }
+
+        private void lblkThoat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

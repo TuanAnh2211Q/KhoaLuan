@@ -170,6 +170,8 @@ namespace QLCHTAN
             // 
             // dgvThanhPhanMon
             // 
+            this.dgvThanhPhanMon.AllowUserToAddRows = false;
+            this.dgvThanhPhanMon.AllowUserToDeleteRows = false;
             this.dgvThanhPhanMon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThanhPhanMon.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvThanhPhanMon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -181,6 +183,7 @@ namespace QLCHTAN
             this.maDoAn});
             this.dgvThanhPhanMon.Location = new System.Drawing.Point(327, 52);
             this.dgvThanhPhanMon.Name = "dgvThanhPhanMon";
+            this.dgvThanhPhanMon.ReadOnly = true;
             this.dgvThanhPhanMon.Size = new System.Drawing.Size(456, 123);
             this.dgvThanhPhanMon.TabIndex = 43;
             this.dgvThanhPhanMon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThanhPhanMon_CellClick);
@@ -190,6 +193,7 @@ namespace QLCHTAN
             this.maThanhPhan.DataPropertyName = "maThanhPhan";
             this.maThanhPhan.HeaderText = "Mã thành phần";
             this.maThanhPhan.Name = "maThanhPhan";
+            this.maThanhPhan.ReadOnly = true;
             this.maThanhPhan.Visible = false;
             // 
             // tenThanhPhan
@@ -197,24 +201,28 @@ namespace QLCHTAN
             this.tenThanhPhan.DataPropertyName = "tenThanhPhan";
             this.tenThanhPhan.HeaderText = "Tên thành phần";
             this.tenThanhPhan.Name = "tenThanhPhan";
+            this.tenThanhPhan.ReadOnly = true;
             // 
             // dinhLuong
             // 
             this.dinhLuong.DataPropertyName = "dinhLuong";
             this.dinhLuong.HeaderText = "Định lượng";
             this.dinhLuong.Name = "dinhLuong";
+            this.dinhLuong.ReadOnly = true;
             // 
             // soLuong
             // 
             this.soLuong.DataPropertyName = "soLuong";
             this.soLuong.HeaderText = "Số lượng";
             this.soLuong.Name = "soLuong";
+            this.soLuong.ReadOnly = true;
             // 
             // maDoAn
             // 
             this.maDoAn.DataPropertyName = "maDoAn";
             this.maDoAn.HeaderText = "Mã đồ ăn";
             this.maDoAn.Name = "maDoAn";
+            this.maDoAn.ReadOnly = true;
             this.maDoAn.Visible = false;
             // 
             // label2

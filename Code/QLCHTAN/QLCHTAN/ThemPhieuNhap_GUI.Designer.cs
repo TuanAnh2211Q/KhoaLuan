@@ -249,6 +249,8 @@ namespace QLCHTAN
             // 
             // dgvThongTinChiTietPhieuNhap
             // 
+            this.dgvThongTinChiTietPhieuNhap.AllowUserToAddRows = false;
+            this.dgvThongTinChiTietPhieuNhap.AllowUserToDeleteRows = false;
             this.dgvThongTinChiTietPhieuNhap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThongTinChiTietPhieuNhap.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvThongTinChiTietPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -260,6 +262,7 @@ namespace QLCHTAN
             this.dgvThongTinChiTietPhieuNhap.Location = new System.Drawing.Point(2, 28);
             this.dgvThongTinChiTietPhieuNhap.Margin = new System.Windows.Forms.Padding(2);
             this.dgvThongTinChiTietPhieuNhap.Name = "dgvThongTinChiTietPhieuNhap";
+            this.dgvThongTinChiTietPhieuNhap.ReadOnly = true;
             this.dgvThongTinChiTietPhieuNhap.Size = new System.Drawing.Size(569, 424);
             this.dgvThongTinChiTietPhieuNhap.TabIndex = 0;
             // 
@@ -268,24 +271,28 @@ namespace QLCHTAN
             this.maHang.DataPropertyName = "maHang";
             this.maHang.HeaderText = "Mã hàng";
             this.maHang.Name = "maHang";
+            this.maHang.ReadOnly = true;
             // 
             // maNCC
             // 
             this.maNCC.DataPropertyName = "maNCC";
             this.maNCC.HeaderText = "Mã nhà cung cấp";
             this.maNCC.Name = "maNCC";
+            this.maNCC.ReadOnly = true;
             // 
             // soLuong
             // 
             this.soLuong.DataPropertyName = "soLuongNhap";
             this.soLuong.HeaderText = "Số lượng";
             this.soLuong.Name = "soLuong";
+            this.soLuong.ReadOnly = true;
             // 
             // tongDonGia
             // 
             this.tongDonGia.DataPropertyName = "tongDonGia";
             this.tongDonGia.HeaderText = "Tổng giá";
             this.tongDonGia.Name = "tongDonGia";
+            this.tongDonGia.ReadOnly = true;
             // 
             // ThemPhieuNhap_GUI
             // 
