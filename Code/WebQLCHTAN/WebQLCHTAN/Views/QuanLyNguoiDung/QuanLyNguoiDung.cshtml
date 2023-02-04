@@ -1,0 +1,109 @@
+﻿@using PagedList
+@using PagedList.Mvc
+
+@model PagedList.IPagedList<WebQLCHTAN.Models.KhachHang>
+@{
+    ViewBag.Title = "QuanLyNguoiDung";
+    Layout = "~/Views/QuanLyLayout/QuanLyLayout.cshtml";
+}
+
+<style>
+    label, th {
+        font-weight: unset;
+    }
+
+    th {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    td {
+        text-align: center;
+    }
+</style>
+
+<h2 style="text-align: center; font-weight: bold; margin-top: 20px;">Quản Lý Người Dùng</h2>
+
+<div style="width: 90%; margin: auto; border: 1px solid black; margin-top: 50px; box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); border-radius: 5px;">
+    <div class="table-border-style">
+        <div class="table-responsive">
+            @using (Html.BeginForm("TimNguoiDung", "QuanLyNguoiDung", FormMethod.Post))
+            {
+                <p style="text-align: right; margin-top: 10px; margin-right: 10px;">
+                  Tìm với Tên: @Html.TextBox("NoiDungTim")
+                    <input type="submit" value="Tìm" class="btn btn-primary" style="padding: 5px 15px; margin-bottom: 5px;" />
+                </p>
+            }
+            <table class="table table-hover nowrap" style="margin-top: 15px;">
+                <tr>
+                    <th>Họ Và Tên</th>
+                    <th>Tên Đăng Nhập</th>
+                    <th>Số Điện Thoại</th>
+                    <th>Email</th>
+                    <th>Địa Chỉ</th>
+                    <th>Quyền</th>
+                    <th>Hành Động</th>
+                </tr>
+                @if (Model == null)
+                {
+
+                }
+                else
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.tenKhachHang</td>
+                            @*@if (@item.ImageUrl == null)
+                            {
+                                <td style="width: 15%;">
+                                    <div style="width: 100%; overflow: hidden; align-items: center;">
+                                        <img style="width: 100%; height: 220px;" src="@Url.Content("../Image/Avatar_Null.png")" />
+                                    </div>
+                                </td>
+                            }
+                            else
+                            {
+                                <td style="width: 15%;">
+                                    <div style="width: 100%; overflow: hidden; align-items: center;">
+                                        <img style="width: 100%; height: 220px;" src="@Url.Content("../Image/" + item.ImageUrl)" />
+                                    </div>
+                                </td>
+                            }*@
+                            <td>@item.SDT</td>
+                            <td>@item.SDT</td>
+                            <td style="width: 5%;">@item.Email</td>
+                            <td style="width: 10%;">@item.diaChi</td>
+                            <script>
+                                function ktraQuyen(item.SDT)
+                                {
+                                    return !isNaN(item.SDT);
+                                }
+                                   @*@if ()
+                            {
+                                <td><span style="background-color: #9ab254; padding: 5px 20px; border-radius: 5px;">Quản Lýt</span></td>
+                            }
+                            else
+                            {
+                                <td><span style="background-color: #ff7f7d; padding: 5px 20px; border-radius: 5px;">Người Dùng</span></td>
+                            }*@
+                            </script>
+                         
+                            <td>
+                                <a href="@Url.Action("CapNhatQuyen", "QuanLyNguoiDung", new {UserID = item.idKhachHang})" style="color: black;"><i class="fa-solid fa-pen-to-square"></i></a> /
+                                <a href="@Url.Action("XoaNguoiDung", "QuanLyNguoiDung", new {UserID = item.idKhachHang})" style="color: black;"><i class="fa-solid fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </table>
+
+            <p class="text-center">Trang @(Model.PageCount < Model.PageCount ? 0 : Model.PageNumber) of @Model.PageCount</p>
+
+            <div class="nav justify-content-center">
+                @Html.PagedListPager(Model, page => Url.Action("DanhSachNguoiDung", new { page = page }))
+            </div>
+
+        </div>
+    </div>
+</div>
