@@ -46,9 +46,9 @@ namespace DAO
 
         }
 
-        public DataTable thongKeNguyenLieuSuDung_NTN_DAO(string loai, DateTime thoiGian)
+        public DataTable thongKeHangHoa_NTN_DAO(string loai, DateTime thoiGian)
         {
-            SqlDataAdapter da = new SqlDataAdapter("select_NguyenLieuBan_NTN", conn);
+            SqlDataAdapter da = new SqlDataAdapter("select_HangHoa_NTN", conn);
 
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
             da.SelectCommand.Parameters.Add("@loai", SqlDbType.VarChar).Value = loai.Trim();
@@ -58,9 +58,9 @@ namespace DAO
             return tb;
         }
 
-        public DataTable thongKeNguyenLieuSuDung_NTG_DAO(DateTime tg1, DateTime tg2)
+        public DataTable thongKeHangHoa_MTG_DAO(DateTime tg1, DateTime tg2)
         {
-            SqlDataAdapter da = new SqlDataAdapter("select_NguyenLieuBan_MTG", conn);
+            SqlDataAdapter da = new SqlDataAdapter("select_HangHoa_MTG", conn);
 
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
             da.SelectCommand.Parameters.Add("@tg1", SqlDbType.DateTime).Value = tg1.ToString().Trim();
@@ -71,9 +71,9 @@ namespace DAO
         }
 
 
-        public DataSet thongKeNguyenLieuSuDung_Q_DAO(int nam, string quy)
+        public DataSet thongKeHangHoa_TQ(int nam, string quy)
         {
-            SqlDataAdapter da = new SqlDataAdapter("select_NguyenLieuBan_Q", conn);
+            SqlDataAdapter da = new SqlDataAdapter("select_HangHoa_TQ", conn);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
             da.SelectCommand.Parameters.Add("@nam", SqlDbType.Int).Value = nam;
             da.SelectCommand.Parameters.Add("@quyList", SqlDbType.VarChar).Value = quy.ToString().Trim();
