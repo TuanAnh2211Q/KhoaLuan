@@ -132,6 +132,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\NguoiDungController.cs" />
     <Compile Include="Controllers\QuanLyController.cs" />
     <Compile Include="Controllers\QuanLyNguoiDungController.cs" />
     <Compile Include="Controllers\TrangChuController.cs" />
@@ -139,274 +140,287 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CaLam.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChamCong.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\check_DoAn_LoaiDoAn_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\check_MaNhapKho_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\check_MatHang_ThanhPhan_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\check_ThongTinDonHang_KhoBan_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\chect_exist_LoaiDoAn_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChucDanh.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DangNhap_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DanhGia.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DatHang.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DoAn.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DonHang.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\find_KhachHang_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GioHang.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\HinhThucThanhToan.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KhachHang.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KhoBan.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KhuyenMai.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\LoaiDoAn.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\LoaiDonHang.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\LoaiKhuyenMai.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\LoaiNhanVien.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\LoaiSanPham.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MatHang.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\NhaCungCap.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\NhanVien.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\NhapKho.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\NuocUong.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PhanQuyen.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PhucLoi.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\print_HoaDonBanHang_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\QLTAN_DBS.Context.cs">
+    <Compile Include="Models\QLTAN_DBS_WEB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLTAN_DBS.Context.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\QLTAN_DBS.cs">
+    <Compile Include="Models\QLTAN_DBS_WEB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\QLTAN_DBS.Designer.cs">
+    <Compile Include="Models\QLTAN_DBS_WEB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLTAN_DBS.edmx</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\QuanLyNguoiDungModel.cs" />
     <Compile Include="Models\SanPham.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\search_KhachHang_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\selectThongKeDoanhThuTheoMocThoiGian_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_ChucDanh_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_DatHang_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_DoAn_ThanhPhanDoAn_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_dsDoAnTheoLoai_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_DSMatHang_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_dsNuocUong_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\select_HangHoa_MTG_Result.cs">
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\select_HangHoa_NTN_Result.cs">
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\select_HangHoa_TQ_Result.cs">
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_KhachHang_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_KhoBan_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_KhuyenMai_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_LoaiDoAn_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_LoaiKM_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_LoaiNhanVien_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_MatHang_DoAn_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_MatHang_Nuoc_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_NCC_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_NhanVien_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_NhapKho_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_NuocUong_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_PhanQuyen_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_PhieuTra_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\select_ThongKeDoanhThuTheoQuy_Result.cs">
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_ThongKeDoanhThu_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_ThongTinDatHang_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_ThongTinKhuyenMai_DA_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_ThongTinKhuyenMai_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_ThongTinNhapKho_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_ThongTinPhieuTra_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_ThongTinPhieuXuat_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_thongTin_MatHangNuoc_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_TKNV_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_TonKho_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_to_PhieuNhapTemp_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_TTSP_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\select_XuatKho_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\show_dsDoAn_Result.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TaiKhoanNhanVien.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ThongTinCaLam.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ThongTinDatHang.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ThongTinDoAn.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ThongTinDonHang.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ThongTinHangTon.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ThongTinKhuyenMai.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ThongTinNhapKho.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ThongTinPhucLoi.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ThongTinThanhPhanDoAn.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ThongTinTraHang.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ThongTinViPham.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ThongTinXuatKho.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TraHang.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ViPham.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\XuatKho.cs">
-      <DependentUpon>QLTAN_DBS.tt</DependentUpon>
+      <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -524,15 +538,15 @@
     <Content Include="js\bootstrap.js" />
     <Content Include="js\custom.js" />
     <Content Include="js\jquery-3.4.1.min.js" />
-    <Content Include="Models\QLTAN_DBS.Context.tt">
+    <Content Include="Models\QLTAN_DBS_WEB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLTAN_DBS.edmx</DependentUpon>
-      <LastGenOutput>QLTAN_DBS.Context.cs</LastGenOutput>
+      <DependentUpon>QLTAN_DBS_WEB.edmx</DependentUpon>
+      <LastGenOutput>QLTAN_DBS_WEB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\QLTAN_DBS.tt">
+    <Content Include="Models\QLTAN_DBS_WEB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLTAN_DBS.edmx</DependentUpon>
-      <LastGenOutput>QLTAN_DBS.cs</LastGenOutput>
+      <DependentUpon>QLTAN_DBS_WEB.edmx</DependentUpon>
+      <LastGenOutput>QLTAN_DBS_WEB.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -576,12 +590,12 @@
     <Content Include="Content\QuanLy\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\QuanLy\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\QuanLy\fonts\glyphicons-halflings-regular.woff2" />
-    <EntityDeploy Include="Models\QLTAN_DBS.edmx">
+    <EntityDeploy Include="Models\QLTAN_DBS_WEB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QLTAN_DBS.Designer.cs</LastGenOutput>
+      <LastGenOutput>QLTAN_DBS_WEB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\QLTAN_DBS.edmx.diagram">
-      <DependentUpon>QLTAN_DBS.edmx</DependentUpon>
+    <Content Include="Models\QLTAN_DBS_WEB.edmx.diagram">
+      <DependentUpon>QLTAN_DBS_WEB.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -614,7 +628,8 @@
     <Content Include="Views\QuanLyLayout\QuanLyChucNang.cshtml" />
     <Content Include="Views\QuanLyLayout\QuanLyLayout.cshtml" />
     <Content Include="Views\QuanLy\TrangQuanLy.cshtml" />
-    <Content Include="Views\QuanLyNguoiDung\QuanLyNguoiDung.cshtml" />
+    <Content Include="Views\QuanLyNguoiDung\DanhSachNguoiDung.cshtml" />
+    <Content Include="Views\NguoiDung\HoSoNguoiDung.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
