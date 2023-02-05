@@ -1,22 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.IO;
-using PagedList;
+﻿using System.Web.Mvc;
 using WebQLCHTAN.Models;
+using System.Data.EntityClient;
 
 
 namespace WebQLCHTAN.Controllers
 {
     public class QuanLyNguoiDungController : Controller
     {
-        QLCUAHANGTHUCANNHANHEntities1 db = new QLCUAHANGTHUCANNHANHEntities1();
+        QLCUAHANGTHUCANNHANH db = new QLCUAHANGTHUCANNHANH();
         // GET: QuanLyNguoiDung
-        public ActionResult QuanLyNguoiDung()
+        public ActionResult DanhSachNguoiDung(int? page)
         {
-            return View();
+            int pageNum = page ?? 1;
+            int pageSize = 5;
+            var lstUser = db.KhachHangs.SqlQuery("select_KhachHanng");
+            return View(lstUser/*.(x => x.SDT).ToPagedList(pageNum, pageSize)*/);
         }
     }
 }
