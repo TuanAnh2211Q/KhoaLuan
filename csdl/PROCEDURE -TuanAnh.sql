@@ -521,3 +521,7 @@ exec select_NguyenLieuBan_Q '2023','4'
 
 
 
+
+create proc select_LoaiKhach
+as
+	select * from LoaiKhachHang

@@ -45,7 +45,11 @@ namespace BUS
         {
             return khachhang_DAO.sort_KhachHang_DAO(loc);
         }
-
+        public DataTable select_LoaiKhach_BUS()
+        {
+            return khachhang_DAO.select_LoaiKhach_DAO();
+                 
+        }
 
     }
 }

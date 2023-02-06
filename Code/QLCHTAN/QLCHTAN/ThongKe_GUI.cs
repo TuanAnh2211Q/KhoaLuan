@@ -259,7 +259,7 @@ namespace QLCHTAN
             xuatThongKe.Show();
         }
 
-        //------------------------------THỐNG KÊ NGUYÊN LIỆU------------------------------------
+        //------------------------------THỐNG KÊ MẶT HÀNG------------------------------------
         public void KhongCoDuLieu_TKHH()
         {
             pic_TKHH_KCDL.Visible = true;
@@ -488,6 +488,8 @@ namespace QLCHTAN
             xuatThongKe_GUI.Show();
         }
 
-      
+
+        //------------------------------THỐNG KÊ SẢN PHẨM------------------------------------
+
     }
 }
