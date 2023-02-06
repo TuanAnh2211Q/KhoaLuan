@@ -43,7 +43,7 @@ namespace DAO
             this.DataBase = "QLCUAHANGTHUCANNHANH";
             this.Username = "sa";
             this.Password = "123";
-            this.connSTR = @"Database=DESKTOP-OAO1M7B" + DataBase+";Persist Security Info=True;User ID="+Username+";Password="+Password+"";
+            this.connSTR = @"Database=" + DataBase+";Persist Security Info=True;User ID="+Username+";Password="+Password+"";
             conn = new SqlConnection(connSTR);
         }
 

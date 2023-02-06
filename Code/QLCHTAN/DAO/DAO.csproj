@@ -199,6 +199,7 @@
     <Compile Include="PhieuTra_DAO.cs" />
     <Compile Include="PhieuXuat_DAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SanPham_DAO.cs" />
     <Compile Include="TaiKhoan_DAO.cs" />
     <Compile Include="ThongKe_DAO.cs" />
     <Compile Include="ThongTinChiTietPhieuDatHang_DAO.cs" />

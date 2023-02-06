@@ -39,6 +39,7 @@ namespace QLCHTAN
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTenNhanVien = new System.Windows.Forms.Label();
             this.lblTenTaiKhoanNhanVien = new System.Windows.Forms.Label();
+            this.lblkDoiMatKhau = new System.Windows.Forms.LinkLabel();
             this.lblkDangXuat = new System.Windows.Forms.LinkLabel();
             this.gbxChucNangNhanVien = new System.Windows.Forms.GroupBox();
             this.flpChucNangNhanVien = new System.Windows.Forms.FlowLayoutPanel();
@@ -58,7 +59,6 @@ namespace QLCHTAN
             this.txtQuanLiThongTinKhachHang = new System.Windows.Forms.TextBox();
             this.btnQuanLiKhachHang = new System.Windows.Forms.Button();
             this.panelChucNang = new System.Windows.Forms.Panel();
-            this.lblkDoiMatKhau = new System.Windows.Forms.LinkLabel();
             this.grbThongTinDangNhap.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -184,6 +184,17 @@ namespace QLCHTAN
             this.lblTenTaiKhoanNhanVien.Size = new System.Drawing.Size(65, 26);
             this.lblTenTaiKhoanNhanVien.TabIndex = 4;
             this.lblTenTaiKhoanNhanVien.Text = "label2";
+            // 
+            // lblkDoiMatKhau
+            // 
+            this.lblkDoiMatKhau.AutoSize = true;
+            this.lblkDoiMatKhau.Location = new System.Drawing.Point(222, 71);
+            this.lblkDoiMatKhau.Name = "lblkDoiMatKhau";
+            this.lblkDoiMatKhau.Size = new System.Drawing.Size(91, 18);
+            this.lblkDoiMatKhau.TabIndex = 2;
+            this.lblkDoiMatKhau.TabStop = true;
+            this.lblkDoiMatKhau.Text = "Đổi mật khẩu";
+            this.lblkDoiMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkDoiMatKhau_LinkClicked);
             // 
             // lblkDangXuat
             // 
@@ -419,22 +430,12 @@ namespace QLCHTAN
             this.panelChucNang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelChucNang.AutoScroll = true;
             this.panelChucNang.AutoSize = true;
             this.panelChucNang.Location = new System.Drawing.Point(342, 136);
             this.panelChucNang.Name = "panelChucNang";
             this.panelChucNang.Size = new System.Drawing.Size(1239, 475);
             this.panelChucNang.TabIndex = 5;
-            // 
-            // lblkDoiMatKhau
-            // 
-            this.lblkDoiMatKhau.AutoSize = true;
-            this.lblkDoiMatKhau.Location = new System.Drawing.Point(222, 71);
-            this.lblkDoiMatKhau.Name = "lblkDoiMatKhau";
-            this.lblkDoiMatKhau.Size = new System.Drawing.Size(91, 18);
-            this.lblkDoiMatKhau.TabIndex = 2;
-            this.lblkDoiMatKhau.TabStop = true;
-            this.lblkDoiMatKhau.Text = "Đổi mật khẩu";
-            this.lblkDoiMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkDoiMatKhau_LinkClicked);
             // 
             // GiaoDienNhanVien_GUI
             // 
