@@ -36,8 +36,27 @@ namespace BUS
 
         public DataSet thongKeHangHoa_TQ_BUS(int nam, string quy)
         {
-            return thongKe_DAO.thongKeHangHoa_TQ(nam, quy);
+            return thongKe_DAO.thongKeHangHoa_TQ_DAO(nam, quy);
         }
-
+        public DataTable thongKeHangHoa_TMH_BUS(string mahang)
+        {
+            return thongKe_DAO.thongKeHangHoa_TMH_DAO(mahang);
+        }
+        public DataTable thongKeSanPham_NTN_BUS(string loai, DateTime ngay)
+        {
+            return thongKe_DAO.thongKeSanPham_NTN_DAO(loai, ngay);
+        }
+        public DataTable thongKeSanPham_MTG_BUS(DateTime tg1, DateTime tg2)
+        {
+            return thongKe_DAO.thongKeSanPham_MTG_DAO(tg1, tg2);
+        }
+        public DataSet thongKeSanPham_TQ_BUS(int nam, string quy)
+        {
+            return thongKe_DAO.thongKeSanPham_TQ_DAO(nam, quy);
+        }
+        public DataTable thongKeSanPham_TSP_BUS(string masp)
+        {
+            return thongKe_DAO.thongKeSanPham_TSP_DAO(masp);
+        }
     }
 }

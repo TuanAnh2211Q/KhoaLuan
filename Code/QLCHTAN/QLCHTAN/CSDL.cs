@@ -69,6 +69,16 @@ namespace QLCHTAN
         private void CSDL_Load(object sender, EventArgs e)
         {
            ccbDataSource.DataSource= myServer.GetServerNameFromPC();
+            if(ccbDataSource.Items.Count==0)
+            {
+                MessageBox.Show("Cơ sở dữ liệu của hệ thống hiện không tồn tại, vui lòng liên hệ bộ phận kĩ thuật để được xử lý kịp thời");
+            }    
+        }
+
+        private void btnPhucHoi_Click(object sender, EventArgs e)
+        {
+            BackUp_Restore_GUI backUp_Restore_GUI = new BackUp_Restore_GUI();
+            backUp_Restore_GUI.Show();
         }
     }
 }

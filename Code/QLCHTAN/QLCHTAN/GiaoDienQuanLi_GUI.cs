@@ -203,5 +203,11 @@ namespace QLCHTAN
             this.pCuaSoChucNang.Controls.Add(thongKe);
             thongKe.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            BackUp_Restore_GUI backUp_Restore_GUI = new BackUp_Restore_GUI();
+            backUp_Restore_GUI.Show();
+        }
     }
 }
