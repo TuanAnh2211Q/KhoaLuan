@@ -43,6 +43,14 @@ namespace DAO
                 cmd.Parameters.Add("@diaChi", SqlDbType.NVarChar).Value = khachHang_DTO.DiaChi.Trim();
                 cmd.Parameters.Add("@Email", SqlDbType.NVarChar).Value = khachHang_DTO.Email.Trim();
                 cmd.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = khachHang_DTO.GhiChu.Trim();
+                if (khachHang_DTO.MaLoaiKhach == null)
+                {
+                    cmd.Parameters.Add("@maLoaiKhach", SqlDbType.NChar).Value = DBNull.Value;
+                }
+                else
+                {
+                    cmd.Parameters.Add("@maLoaiKhach", SqlDbType.NChar).Value = khachHang_DTO.MaLoaiKhach.Trim();
+                }
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
@@ -73,6 +81,14 @@ namespace DAO
                     cmd.Parameters.Add("diaChi", SqlDbType.NVarChar).Value = khachhang_DTO.DiaChi;
                     cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = khachhang_DTO.Email;
                     cmd.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = khachhang_DTO.GhiChu;
+                    if(khachhang_DTO.MaLoaiKhach==null)
+                    {
+                        cmd.Parameters.Add("@maLoaiKhach", SqlDbType.NChar).Value = DBNull.Value;
+                    }
+                    else
+                    {
+                        cmd.Parameters.Add("@maLoaiKhach", SqlDbType.NChar).Value = khachhang_DTO.MaLoaiKhach.Trim();
+                    }
                     cmd.Parameters.Add("idKhachHang", SqlDbType.Int).Value =id;
                     if (cmd.ExecuteNonQuery() > 0)
                         return true;
@@ -148,5 +164,13 @@ namespace DAO
 
         }
 
+        public DataTable select_LoaiKhach_DAO()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("select_LoaiKhach", conn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
     }
 }

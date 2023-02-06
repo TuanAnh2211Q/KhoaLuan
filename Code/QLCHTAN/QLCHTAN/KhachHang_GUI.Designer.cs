@@ -58,6 +58,8 @@ namespace QLCHTAN
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.ccbLoaiKhach = new System.Windows.Forms.ComboBox();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +68,7 @@ namespace QLCHTAN
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ghiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maLoaiKhach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -191,6 +194,8 @@ namespace QLCHTAN
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox1.Controls.Add(this.ccbLoaiKhach);
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtMaKhachHang);
             this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.label6);
@@ -226,7 +231,7 @@ namespace QLCHTAN
             // txtDiaChi
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(166, 238);
+            this.txtDiaChi.Location = new System.Drawing.Point(166, 205);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(208, 27);
             this.txtDiaChi.TabIndex = 12;
@@ -234,7 +239,7 @@ namespace QLCHTAN
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 241);
+            this.label6.Location = new System.Drawing.Point(7, 208);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 23);
             this.label6.TabIndex = 11;
@@ -243,7 +248,7 @@ namespace QLCHTAN
             // rdbNu
             // 
             this.rdbNu.AutoSize = true;
-            this.rdbNu.Location = new System.Drawing.Point(325, 149);
+            this.rdbNu.Location = new System.Drawing.Point(325, 129);
             this.rdbNu.Name = "rdbNu";
             this.rdbNu.Size = new System.Drawing.Size(54, 27);
             this.rdbNu.TabIndex = 10;
@@ -255,7 +260,7 @@ namespace QLCHTAN
             // rdbNam
             // 
             this.rdbNam.AutoSize = true;
-            this.rdbNam.Location = new System.Drawing.Point(201, 149);
+            this.rdbNam.Location = new System.Drawing.Point(201, 129);
             this.rdbNam.Name = "rdbNam";
             this.rdbNam.Size = new System.Drawing.Size(66, 27);
             this.rdbNam.TabIndex = 9;
@@ -284,7 +289,7 @@ namespace QLCHTAN
             // txtGmail
             // 
             this.txtGmail.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGmail.Location = new System.Drawing.Point(166, 190);
+            this.txtGmail.Location = new System.Drawing.Point(166, 162);
             this.txtGmail.Name = "txtGmail";
             this.txtGmail.Size = new System.Drawing.Size(208, 27);
             this.txtGmail.TabIndex = 6;
@@ -292,7 +297,7 @@ namespace QLCHTAN
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 193);
+            this.label4.Location = new System.Drawing.Point(7, 165);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 23);
             this.label4.TabIndex = 5;
@@ -301,7 +306,7 @@ namespace QLCHTAN
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 151);
+            this.label3.Location = new System.Drawing.Point(6, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 23);
             this.label3.TabIndex = 3;
@@ -361,7 +366,8 @@ namespace QLCHTAN
             this.diaChi,
             this.Email,
             this.ghiChu,
-            this.idKhachHang});
+            this.idKhachHang,
+            this.maLoaiKhach});
             this.dgvThongTinKhachHang.Location = new System.Drawing.Point(410, 74);
             this.dgvThongTinKhachHang.Name = "dgvThongTinKhachHang";
             this.dgvThongTinKhachHang.ReadOnly = true;
@@ -403,6 +409,27 @@ namespace QLCHTAN
             this.label7.Size = new System.Drawing.Size(283, 29);
             this.label7.TabIndex = 0;
             this.label7.Text = "DANH SÁCH KHÁCH HÀNG";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 248);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(100, 23);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Loại khách:";
+            // 
+            // ccbLoaiKhach
+            // 
+            this.ccbLoaiKhach.AllowDrop = true;
+            this.ccbLoaiKhach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.ccbLoaiKhach.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.ccbLoaiKhach.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ccbLoaiKhach.FormattingEnabled = true;
+            this.ccbLoaiKhach.Location = new System.Drawing.Point(166, 247);
+            this.ccbLoaiKhach.Name = "ccbLoaiKhach";
+            this.ccbLoaiKhach.Size = new System.Drawing.Size(209, 27);
+            this.ccbLoaiKhach.TabIndex = 32;
             // 
             // SDT
             // 
@@ -469,6 +496,14 @@ namespace QLCHTAN
             this.idKhachHang.ReadOnly = true;
             this.idKhachHang.Visible = false;
             // 
+            // maLoaiKhach
+            // 
+            this.maLoaiKhach.DataPropertyName = "maLoaiKhach";
+            this.maLoaiKhach.HeaderText = "Mã loại khách";
+            this.maLoaiKhach.Name = "maLoaiKhach";
+            this.maLoaiKhach.ReadOnly = true;
+            this.maLoaiKhach.Visible = false;
+            // 
             // KhachHang_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -529,6 +564,8 @@ namespace QLCHTAN
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbbTieuChiLoc;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox ccbLoaiKhach;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn matKhau;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenKhachHang;
@@ -537,5 +574,6 @@ namespace QLCHTAN
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn ghiChu;
         private System.Windows.Forms.DataGridViewTextBoxColumn idKhachHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maLoaiKhach;
     }
 }

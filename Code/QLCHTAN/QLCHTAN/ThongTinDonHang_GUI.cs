@@ -27,7 +27,7 @@ namespace QLCHTAN
         private decimal tongDonGia;
         public KhachHang_DTO khachhang_DTO()
         {
-            return new KhachHang_DTO(lblSDT.Text.Trim(), lblKhachHang.Text.Trim(), gioiTinhKhach.Trim(), diaChiKhach.Trim(), emailKhach.Trim(), txtGhiChu.Text.Trim());
+            return new KhachHang_DTO(lblSDT.Text.Trim(), lblKhachHang.Text.Trim(), gioiTinhKhach.Trim(), diaChiKhach.Trim(), emailKhach.Trim(), txtGhiChu.Text.Trim(),Order_GUI.maLoaiKhach);
         }
         public DonHang_DTO donHang_DTO()
         {
@@ -57,6 +57,16 @@ namespace QLCHTAN
             lblMaDonHang.Text = "MHD" + ma;
             lblTenDonHang.Text = "Đơn hàng ngày " + DateTime.Now;
             lblLoaiDon.Text = donhang_BUS.select_TenLoaiDon_BUS(Order_GUI.maLoaiDon);
+            if(Order_GUI.maLoaiKhach=="MLKH001")
+            {
+                lblLoaiKhach.Text = "Khách vãng lai";
+            }    
+            else if (Order_GUI.maLoaiKhach=="MLKH002")
+
+            {
+                lblLoaiKhach.Text = "Khách hàng thân thiết";
+            }    
+
             if(Order_GUI.htThanhToan is true)
             {
                 lblThanhToan.Text = "Tiền mặt";

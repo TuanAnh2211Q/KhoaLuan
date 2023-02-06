@@ -68,9 +68,11 @@ namespace QLCHTAN
             this.label17 = new System.Windows.Forms.Label();
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblLoaiKhach = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinHoaDon)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -139,6 +141,8 @@ namespace QLCHTAN
             // 
             this.panel1.BackColor = System.Drawing.Color.Honeydew;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.lblLoaiKhach);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtGhiChu);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.lblDiaChi);
@@ -154,16 +158,16 @@ namespace QLCHTAN
             // 
             // txtGhiChu
             // 
-            this.txtGhiChu.Location = new System.Drawing.Point(64, 100);
+            this.txtGhiChu.Location = new System.Drawing.Point(64, 114);
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(259, 53);
+            this.txtGhiChu.Size = new System.Drawing.Size(259, 39);
             this.txtGhiChu.TabIndex = 7;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(0, 100);
+            this.label7.Location = new System.Drawing.Point(3, 114);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 18);
             this.label7.TabIndex = 6;
@@ -468,6 +472,16 @@ namespace QLCHTAN
             this.panel4.Size = new System.Drawing.Size(1010, 42);
             this.panel4.TabIndex = 10;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(638, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -479,16 +493,6 @@ namespace QLCHTAN
             this.label4.TabIndex = 3;
             this.label4.Text = "THÔNG TIN ĐƠN HÀNG";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(638, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 37);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -498,6 +502,25 @@ namespace QLCHTAN
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 86);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 18);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Loại khách:";
+            // 
+            // lblLoaiKhach
+            // 
+            this.lblLoaiKhach.AutoSize = true;
+            this.lblLoaiKhach.ForeColor = System.Drawing.Color.Red;
+            this.lblLoaiKhach.Location = new System.Drawing.Point(94, 86);
+            this.lblLoaiKhach.Name = "lblLoaiKhach";
+            this.lblLoaiKhach.Size = new System.Drawing.Size(96, 18);
+            this.lblLoaiKhach.TabIndex = 9;
+            this.lblLoaiKhach.Text = "......................";
             // 
             // ThongTinDonHang_GUI
             // 
@@ -581,5 +604,7 @@ namespace QLCHTAN
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblLoaiKhach;
     }
 }

@@ -98,22 +98,6 @@ namespace QLCHTAN
             this.grb_TKTQ_Nam = new System.Windows.Forms.GroupBox();
             this.dtTKTQ_Nam = new System.Windows.Forms.DateTimePicker();
             this.tpTKNL = new System.Windows.Forms.TabPage();
-            this.grbTKHH_Q = new System.Windows.Forms.GroupBox();
-            this.ckbTKHH_Q1 = new System.Windows.Forms.CheckBox();
-            this.ckbTKHH_Q2 = new System.Windows.Forms.CheckBox();
-            this.ckbTKHH_Q3 = new System.Windows.Forms.CheckBox();
-            this.ckbTKHH_Q4 = new System.Windows.Forms.CheckBox();
-            this.dtTKHH_Nam = new System.Windows.Forms.DateTimePicker();
-            this.btnTTHH_Q = new System.Windows.Forms.Button();
-            this.grbTKHH_NTN = new System.Windows.Forms.GroupBox();
-            this.btnTKHH_NTN = new System.Windows.Forms.Button();
-            this.dtTKHH_NTN = new System.Windows.Forms.DateTimePicker();
-            this.grbTKHH_MTG = new System.Windows.Forms.GroupBox();
-            this.btnTKHH_MTG = new System.Windows.Forms.Button();
-            this.dt_TKHH_MTG_TG2 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dtTKHH_MTG_TG1 = new System.Windows.Forms.DateTimePicker();
             this.grbTKHH_CachThongKe = new System.Windows.Forms.GroupBox();
             this.rdbTKHH_Q = new System.Windows.Forms.RadioButton();
             this.rdbTKHH_MTG = new System.Windows.Forms.RadioButton();
@@ -122,6 +106,20 @@ namespace QLCHTAN
             this.rdbTKHH_Y = new System.Windows.Forms.RadioButton();
             this.rdbTKHH_M = new System.Windows.Forms.RadioButton();
             this.rdbTKHH_D = new System.Windows.Forms.RadioButton();
+            this.p_KQ_TKHH_MTG = new System.Windows.Forms.Panel();
+            this.dgvTKHH_MTG = new System.Windows.Forms.DataGridView();
+            this.maHang_MTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenHang_MTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoiGian_MTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuongBan_MTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuongKhoBan_MTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuongTon_MTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongGiaBan_MTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbkXuat_TKHH_MTG = new System.Windows.Forms.LinkLabel();
+            this.lblTKHH_MTG = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pic_TKHH_KCDL = new System.Windows.Forms.PictureBox();
             this.p_KQ_TKHH_Q = new System.Windows.Forms.Panel();
             this.dgvTKHH_Q = new System.Windows.Forms.DataGridView();
             this.maHang_Q = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -148,24 +146,90 @@ namespace QLCHTAN
             this.soLuongTon_NTN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongGiaBan_NTN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongGia_NTN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p_KQ_TKHH_MTG = new System.Windows.Forms.Panel();
-            this.dgvTKHH_MTG = new System.Windows.Forms.DataGridView();
-            this.maHang_MTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenHang_MTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thoiGian_MTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuongBan_MTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuongKhoBan_MTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuongTon_MTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongGiaBan_MTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbkXuat_TKHH_MTG = new System.Windows.Forms.LinkLabel();
-            this.lblTKHH_MTG = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pic_TKHH_KCDL = new System.Windows.Forms.PictureBox();
+            this.grbTKHH_NTN = new System.Windows.Forms.GroupBox();
+            this.btnTKHH_NTN = new System.Windows.Forms.Button();
+            this.dtTKHH_NTN = new System.Windows.Forms.DateTimePicker();
+            this.grbTKHH_MTG = new System.Windows.Forms.GroupBox();
+            this.btnTKHH_MTG = new System.Windows.Forms.Button();
+            this.dt_TKHH_MTG_TG2 = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtTKHH_MTG_TG1 = new System.Windows.Forms.DateTimePicker();
+            this.grbTKHH_Q = new System.Windows.Forms.GroupBox();
+            this.ckbTKHH_Q1 = new System.Windows.Forms.CheckBox();
+            this.ckbTKHH_Q2 = new System.Windows.Forms.CheckBox();
+            this.ckbTKHH_Q3 = new System.Windows.Forms.CheckBox();
+            this.ckbTKHH_Q4 = new System.Windows.Forms.CheckBox();
+            this.dtTKHH_Nam = new System.Windows.Forms.DateTimePicker();
+            this.btnTTHH_Q = new System.Windows.Forms.Button();
             this.tpTKSP = new System.Windows.Forms.TabPage();
+            this.grbTKSP_NTN = new System.Windows.Forms.GroupBox();
+            this.btnTKSP_NTN = new System.Windows.Forms.Button();
+            this.dtTKSP_NTN = new System.Windows.Forms.DateTimePicker();
+            this.grbTKSP_TQ = new System.Windows.Forms.GroupBox();
+            this.ckbTKSP_Q1 = new System.Windows.Forms.CheckBox();
+            this.ckbTKSP_Q2 = new System.Windows.Forms.CheckBox();
+            this.ckbTKSP_Q3 = new System.Windows.Forms.CheckBox();
+            this.ckbTKSP_Q4 = new System.Windows.Forms.CheckBox();
+            this.dtTKSP_Nam = new System.Windows.Forms.DateTimePicker();
+            this.btnTKSP_TQ = new System.Windows.Forms.Button();
+            this.grbTKSP_MTG = new System.Windows.Forms.GroupBox();
+            this.btnTKSP_MTG = new System.Windows.Forms.Button();
+            this.dtTKSP_MTG_TG2 = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dtTKSP_MTG_TG1 = new System.Windows.Forms.DateTimePicker();
+            this.grbTKSP_CachThongKe = new System.Windows.Forms.GroupBox();
+            this.rdbTKSP_Q = new System.Windows.Forms.RadioButton();
+            this.rdbTKSP_MTG = new System.Windows.Forms.RadioButton();
+            this.rdbTKSP_NTN = new System.Windows.Forms.RadioButton();
+            this.p_TKSP_NTN_Chon = new System.Windows.Forms.Panel();
+            this.rdbTKSP_Y = new System.Windows.Forms.RadioButton();
+            this.rdbTKSP_M = new System.Windows.Forms.RadioButton();
+            this.rdbTKSP_D = new System.Windows.Forms.RadioButton();
             this.lbkThoat = new System.Windows.Forms.LinkLabel();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.p_TKSP_MTG = new System.Windows.Forms.Panel();
+            this.dgvTKSP_MTG = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbkXuatTKSP_MTG = new System.Windows.Forms.LinkLabel();
+            this.lblTongGiaTKSP_MTG = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.p_TKSP_TQ = new System.Windows.Forms.Panel();
+            this.dgvTKSP_TQ = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblkXuatTKSP_TQ = new System.Windows.Forms.LinkLabel();
+            this.lblTongGiaTKSP_TQ = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.p_TKSP_NTN = new System.Windows.Forms.Panel();
+            this.lblkXuatTKSP_NTN = new System.Windows.Forms.LinkLabel();
+            this.lblTongGiaTKSP_NTN = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.dgvTKSP_NTN = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pic_KCDL_TKSP = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tpTKDT.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -188,19 +252,32 @@ namespace QLCHTAN
             this.grbTKTQ_Quy.SuspendLayout();
             this.grb_TKTQ_Nam.SuspendLayout();
             this.tpTKNL.SuspendLayout();
-            this.grbTKHH_Q.SuspendLayout();
-            this.grbTKHH_NTN.SuspendLayout();
-            this.grbTKHH_MTG.SuspendLayout();
             this.grbTKHH_CachThongKe.SuspendLayout();
             this.p_TKHH_NTN.SuspendLayout();
+            this.p_KQ_TKHH_MTG.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTKHH_MTG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_TKHH_KCDL)).BeginInit();
             this.p_KQ_TKHH_Q.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTKHH_Q)).BeginInit();
             this.p_KQ_TKHH_NTN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTKHH_NTN)).BeginInit();
-            this.p_KQ_TKHH_MTG.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTKHH_MTG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_TKHH_KCDL)).BeginInit();
+            this.grbTKHH_NTN.SuspendLayout();
+            this.grbTKHH_MTG.SuspendLayout();
+            this.grbTKHH_Q.SuspendLayout();
+            this.tpTKSP.SuspendLayout();
+            this.grbTKSP_NTN.SuspendLayout();
+            this.grbTKSP_TQ.SuspendLayout();
+            this.grbTKSP_MTG.SuspendLayout();
+            this.grbTKSP_CachThongKe.SuspendLayout();
+            this.p_TKSP_NTN_Chon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.p_TKSP_MTG.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTKSP_MTG)).BeginInit();
+            this.p_TKSP_TQ.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTKSP_TQ)).BeginInit();
+            this.p_TKSP_NTN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTKSP_NTN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_KCDL_TKSP)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -501,7 +578,7 @@ namespace QLCHTAN
             this.tbTKDT_TheoMocTG.Location = new System.Drawing.Point(4, 27);
             this.tbTKDT_TheoMocTG.Name = "tbTKDT_TheoMocTG";
             this.tbTKDT_TheoMocTG.Padding = new System.Windows.Forms.Padding(3);
-            this.tbTKDT_TheoMocTG.Size = new System.Drawing.Size(1063, 604);
+            this.tbTKDT_TheoMocTG.Size = new System.Drawing.Size(1063, 621);
             this.tbTKDT_TheoMocTG.TabIndex = 3;
             this.tbTKDT_TheoMocTG.Text = "Theo mốc thời gian";
             this.tbTKDT_TheoMocTG.UseVisualStyleBackColor = true;
@@ -518,7 +595,7 @@ namespace QLCHTAN
             this.groupBox4.Controls.Add(this.dgvTKDT_MTG);
             this.groupBox4.Location = new System.Drawing.Point(6, 65);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1045, 468);
+            this.groupBox4.Size = new System.Drawing.Size(1045, 485);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             // 
@@ -530,7 +607,7 @@ namespace QLCHTAN
             this.picTKDT_MTG.Image = ((System.Drawing.Image)(resources.GetObject("picTKDT_MTG.Image")));
             this.picTKDT_MTG.Location = new System.Drawing.Point(0, 6);
             this.picTKDT_MTG.Name = "picTKDT_MTG";
-            this.picTKDT_MTG.Size = new System.Drawing.Size(1051, 513);
+            this.picTKDT_MTG.Size = new System.Drawing.Size(1051, 530);
             this.picTKDT_MTG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picTKDT_MTG.TabIndex = 1;
             this.picTKDT_MTG.TabStop = false;
@@ -539,7 +616,7 @@ namespace QLCHTAN
             // 
             this.lblbXuatTKDT_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblbXuatTKDT_MTG.AutoSize = true;
-            this.lblbXuatTKDT_MTG.Location = new System.Drawing.Point(948, 446);
+            this.lblbXuatTKDT_MTG.Location = new System.Drawing.Point(948, 463);
             this.lblbXuatTKDT_MTG.Name = "lblbXuatTKDT_MTG";
             this.lblbXuatTKDT_MTG.Size = new System.Drawing.Size(94, 18);
             this.lblbXuatTKDT_MTG.TabIndex = 5;
@@ -552,7 +629,7 @@ namespace QLCHTAN
             this.lblDT_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblDT_MTG.AutoSize = true;
             this.lblDT_MTG.ForeColor = System.Drawing.Color.Red;
-            this.lblDT_MTG.Location = new System.Drawing.Point(121, 446);
+            this.lblDT_MTG.Location = new System.Drawing.Point(121, 463);
             this.lblDT_MTG.Name = "lblDT_MTG";
             this.lblDT_MTG.Size = new System.Drawing.Size(78, 18);
             this.lblDT_MTG.TabIndex = 5;
@@ -562,7 +639,7 @@ namespace QLCHTAN
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 446);
+            this.label5.Location = new System.Drawing.Point(6, 463);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(109, 18);
             this.label5.TabIndex = 4;
@@ -588,7 +665,7 @@ namespace QLCHTAN
             this.dgvTKDT_MTG.Location = new System.Drawing.Point(5, 21);
             this.dgvTKDT_MTG.Name = "dgvTKDT_MTG";
             this.dgvTKDT_MTG.ReadOnly = true;
-            this.dgvTKDT_MTG.Size = new System.Drawing.Size(1039, 412);
+            this.dgvTKDT_MTG.Size = new System.Drawing.Size(1039, 429);
             this.dgvTKDT_MTG.TabIndex = 3;
             this.dgvTKDT_MTG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTKDT_MTG_CellClick);
             // 
@@ -720,7 +797,7 @@ namespace QLCHTAN
             this.tpTKDT_TQ.Location = new System.Drawing.Point(4, 27);
             this.tpTKDT_TQ.Name = "tpTKDT_TQ";
             this.tpTKDT_TQ.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTKDT_TQ.Size = new System.Drawing.Size(1063, 604);
+            this.tpTKDT_TQ.Size = new System.Drawing.Size(1063, 621);
             this.tpTKDT_TQ.TabIndex = 4;
             this.tpTKDT_TQ.Text = "Theo quý";
             this.tpTKDT_TQ.UseVisualStyleBackColor = true;
@@ -737,7 +814,7 @@ namespace QLCHTAN
             this.panel2.Controls.Add(this.dgvTKDT_TQ);
             this.panel2.Location = new System.Drawing.Point(6, 69);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1051, 529);
+            this.panel2.Size = new System.Drawing.Size(1051, 546);
             this.panel2.TabIndex = 3;
             // 
             // picTKDT_TQ
@@ -748,7 +825,7 @@ namespace QLCHTAN
             this.picTKDT_TQ.Image = ((System.Drawing.Image)(resources.GetObject("picTKDT_TQ.Image")));
             this.picTKDT_TQ.Location = new System.Drawing.Point(0, 0);
             this.picTKDT_TQ.Name = "picTKDT_TQ";
-            this.picTKDT_TQ.Size = new System.Drawing.Size(1054, 513);
+            this.picTKDT_TQ.Size = new System.Drawing.Size(1054, 530);
             this.picTKDT_TQ.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picTKDT_TQ.TabIndex = 9;
             this.picTKDT_TQ.TabStop = false;
@@ -757,7 +834,7 @@ namespace QLCHTAN
             // 
             this.lbkXuatTKDT_TQ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbkXuatTKDT_TQ.AutoSize = true;
-            this.lbkXuatTKDT_TQ.Location = new System.Drawing.Point(950, 461);
+            this.lbkXuatTKDT_TQ.Location = new System.Drawing.Point(950, 478);
             this.lbkXuatTKDT_TQ.Name = "lbkXuatTKDT_TQ";
             this.lbkXuatTKDT_TQ.Size = new System.Drawing.Size(94, 18);
             this.lbkXuatTKDT_TQ.TabIndex = 8;
@@ -770,7 +847,7 @@ namespace QLCHTAN
             this.lblTongDT_TKDT_TQ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTongDT_TKDT_TQ.AutoSize = true;
             this.lblTongDT_TKDT_TQ.ForeColor = System.Drawing.Color.Red;
-            this.lblTongDT_TKDT_TQ.Location = new System.Drawing.Point(123, 461);
+            this.lblTongDT_TKDT_TQ.Location = new System.Drawing.Point(123, 478);
             this.lblTongDT_TKDT_TQ.Name = "lblTongDT_TKDT_TQ";
             this.lblTongDT_TKDT_TQ.Size = new System.Drawing.Size(45, 18);
             this.lblTongDT_TKDT_TQ.TabIndex = 7;
@@ -780,7 +857,7 @@ namespace QLCHTAN
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 461);
+            this.label6.Location = new System.Drawing.Point(8, 478);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 18);
             this.label6.TabIndex = 6;
@@ -806,7 +883,7 @@ namespace QLCHTAN
             this.dgvTKDT_TQ.Location = new System.Drawing.Point(3, 3);
             this.dgvTKDT_TQ.Name = "dgvTKDT_TQ";
             this.dgvTKDT_TQ.ReadOnly = true;
-            this.dgvTKDT_TQ.Size = new System.Drawing.Size(1048, 455);
+            this.dgvTKDT_TQ.Size = new System.Drawing.Size(1048, 472);
             this.dgvTKDT_TQ.TabIndex = 0;
             this.dgvTKDT_TQ.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTKDT_TQ_CellClick);
             // 
@@ -972,13 +1049,13 @@ namespace QLCHTAN
             // tpTKNL
             // 
             this.tpTKNL.Controls.Add(this.grbTKHH_CachThongKe);
-            this.tpTKNL.Controls.Add(this.p_KQ_TKHH_MTG);
+            this.tpTKNL.Controls.Add(this.grbTKHH_NTN);
+            this.tpTKNL.Controls.Add(this.grbTKHH_MTG);
+            this.tpTKNL.Controls.Add(this.grbTKHH_Q);
             this.tpTKNL.Controls.Add(this.pic_TKHH_KCDL);
             this.tpTKNL.Controls.Add(this.p_KQ_TKHH_Q);
             this.tpTKNL.Controls.Add(this.p_KQ_TKHH_NTN);
-            this.tpTKNL.Controls.Add(this.grbTKHH_MTG);
-            this.tpTKNL.Controls.Add(this.grbTKHH_Q);
-            this.tpTKNL.Controls.Add(this.grbTKHH_NTN);
+            this.tpTKNL.Controls.Add(this.p_KQ_TKHH_MTG);
             this.tpTKNL.Location = new System.Drawing.Point(4, 28);
             this.tpTKNL.Name = "tpTKNL";
             this.tpTKNL.Padding = new System.Windows.Forms.Padding(3);
@@ -986,213 +1063,6 @@ namespace QLCHTAN
             this.tpTKNL.TabIndex = 1;
             this.tpTKNL.Text = "Thống kê mặt hàng";
             this.tpTKNL.UseVisualStyleBackColor = true;
-            // 
-            // grbTKHH_Q
-            // 
-            this.grbTKHH_Q.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grbTKHH_Q.Controls.Add(this.ckbTKHH_Q1);
-            this.grbTKHH_Q.Controls.Add(this.ckbTKHH_Q2);
-            this.grbTKHH_Q.Controls.Add(this.ckbTKHH_Q3);
-            this.grbTKHH_Q.Controls.Add(this.ckbTKHH_Q4);
-            this.grbTKHH_Q.Controls.Add(this.dtTKHH_Nam);
-            this.grbTKHH_Q.Controls.Add(this.btnTTHH_Q);
-            this.grbTKHH_Q.Location = new System.Drawing.Point(172, 7);
-            this.grbTKHH_Q.Name = "grbTKHH_Q";
-            this.grbTKHH_Q.Size = new System.Drawing.Size(906, 63);
-            this.grbTKHH_Q.TabIndex = 10;
-            this.grbTKHH_Q.TabStop = false;
-            this.grbTKHH_Q.Text = "Chọn quý";
-            this.grbTKHH_Q.Visible = false;
-            // 
-            // ckbTKHH_Q1
-            // 
-            this.ckbTKHH_Q1.AutoSize = true;
-            this.ckbTKHH_Q1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbTKHH_Q1.ForeColor = System.Drawing.Color.Red;
-            this.ckbTKHH_Q1.Location = new System.Drawing.Point(31, 22);
-            this.ckbTKHH_Q1.Name = "ckbTKHH_Q1";
-            this.ckbTKHH_Q1.Size = new System.Drawing.Size(33, 23);
-            this.ckbTKHH_Q1.TabIndex = 6;
-            this.ckbTKHH_Q1.Text = "1";
-            this.ckbTKHH_Q1.UseVisualStyleBackColor = true;
-            // 
-            // ckbTKHH_Q2
-            // 
-            this.ckbTKHH_Q2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ckbTKHH_Q2.AutoSize = true;
-            this.ckbTKHH_Q2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbTKHH_Q2.ForeColor = System.Drawing.Color.Red;
-            this.ckbTKHH_Q2.Location = new System.Drawing.Point(77, 22);
-            this.ckbTKHH_Q2.Name = "ckbTKHH_Q2";
-            this.ckbTKHH_Q2.Size = new System.Drawing.Size(36, 23);
-            this.ckbTKHH_Q2.TabIndex = 7;
-            this.ckbTKHH_Q2.Text = "2";
-            this.ckbTKHH_Q2.UseVisualStyleBackColor = true;
-            // 
-            // ckbTKHH_Q3
-            // 
-            this.ckbTKHH_Q3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ckbTKHH_Q3.AutoSize = true;
-            this.ckbTKHH_Q3.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbTKHH_Q3.ForeColor = System.Drawing.Color.Red;
-            this.ckbTKHH_Q3.Location = new System.Drawing.Point(119, 21);
-            this.ckbTKHH_Q3.Name = "ckbTKHH_Q3";
-            this.ckbTKHH_Q3.Size = new System.Drawing.Size(39, 23);
-            this.ckbTKHH_Q3.TabIndex = 8;
-            this.ckbTKHH_Q3.Text = " 3";
-            this.ckbTKHH_Q3.UseVisualStyleBackColor = true;
-            // 
-            // ckbTKHH_Q4
-            // 
-            this.ckbTKHH_Q4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ckbTKHH_Q4.AutoSize = true;
-            this.ckbTKHH_Q4.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbTKHH_Q4.ForeColor = System.Drawing.Color.Red;
-            this.ckbTKHH_Q4.Location = new System.Drawing.Point(164, 22);
-            this.ckbTKHH_Q4.Name = "ckbTKHH_Q4";
-            this.ckbTKHH_Q4.Size = new System.Drawing.Size(40, 23);
-            this.ckbTKHH_Q4.TabIndex = 9;
-            this.ckbTKHH_Q4.Text = " 4";
-            this.ckbTKHH_Q4.UseVisualStyleBackColor = true;
-            // 
-            // dtTKHH_Nam
-            // 
-            this.dtTKHH_Nam.CustomFormat = "yyyy";
-            this.dtTKHH_Nam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTKHH_Nam.Location = new System.Drawing.Point(237, 22);
-            this.dtTKHH_Nam.Name = "dtTKHH_Nam";
-            this.dtTKHH_Nam.ShowUpDown = true;
-            this.dtTKHH_Nam.Size = new System.Drawing.Size(196, 27);
-            this.dtTKHH_Nam.TabIndex = 5;
-            // 
-            // btnTTHH_Q
-            // 
-            this.btnTTHH_Q.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTTHH_Q.BackColor = System.Drawing.Color.White;
-            this.btnTTHH_Q.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTTHH_Q.Location = new System.Drawing.Point(780, 17);
-            this.btnTTHH_Q.Name = "btnTTHH_Q";
-            this.btnTTHH_Q.Size = new System.Drawing.Size(120, 31);
-            this.btnTTHH_Q.TabIndex = 4;
-            this.btnTTHH_Q.Text = "Xem thống kê";
-            this.btnTTHH_Q.UseVisualStyleBackColor = false;
-            this.btnTTHH_Q.Click += new System.EventHandler(this.btnTTHH_Q_Click);
-            // 
-            // grbTKHH_NTN
-            // 
-            this.grbTKHH_NTN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grbTKHH_NTN.Controls.Add(this.btnTKHH_NTN);
-            this.grbTKHH_NTN.Controls.Add(this.dtTKHH_NTN);
-            this.grbTKHH_NTN.Enabled = false;
-            this.grbTKHH_NTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grbTKHH_NTN.Location = new System.Drawing.Point(172, 6);
-            this.grbTKHH_NTN.Name = "grbTKHH_NTN";
-            this.grbTKHH_NTN.Size = new System.Drawing.Size(906, 64);
-            this.grbTKHH_NTN.TabIndex = 9;
-            this.grbTKHH_NTN.TabStop = false;
-            this.grbTKHH_NTN.Text = "Chọn thời gian thống kê";
-            this.grbTKHH_NTN.Visible = false;
-            // 
-            // btnTKHH_NTN
-            // 
-            this.btnTKHH_NTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTKHH_NTN.BackColor = System.Drawing.Color.White;
-            this.btnTKHH_NTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTKHH_NTN.Location = new System.Drawing.Point(779, 19);
-            this.btnTKHH_NTN.Name = "btnTKHH_NTN";
-            this.btnTKHH_NTN.Size = new System.Drawing.Size(120, 31);
-            this.btnTKHH_NTN.TabIndex = 1;
-            this.btnTKHH_NTN.Text = "Xem thống kê";
-            this.btnTKHH_NTN.UseVisualStyleBackColor = false;
-            this.btnTKHH_NTN.Click += new System.EventHandler(this.btnTKHH_NTN_Click);
-            // 
-            // dtTKHH_NTN
-            // 
-            this.dtTKHH_NTN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtTKHH_NTN.CalendarFont = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtTKHH_NTN.CustomFormat = "dd/MM/yyyy";
-            this.dtTKHH_NTN.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTKHH_NTN.Location = new System.Drawing.Point(6, 19);
-            this.dtTKHH_NTN.Name = "dtTKHH_NTN";
-            this.dtTKHH_NTN.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dtTKHH_NTN.Size = new System.Drawing.Size(767, 27);
-            this.dtTKHH_NTN.TabIndex = 0;
-            // 
-            // grbTKHH_MTG
-            // 
-            this.grbTKHH_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grbTKHH_MTG.Controls.Add(this.btnTKHH_MTG);
-            this.grbTKHH_MTG.Controls.Add(this.dt_TKHH_MTG_TG2);
-            this.grbTKHH_MTG.Controls.Add(this.label4);
-            this.grbTKHH_MTG.Controls.Add(this.label7);
-            this.grbTKHH_MTG.Controls.Add(this.dtTKHH_MTG_TG1);
-            this.grbTKHH_MTG.Location = new System.Drawing.Point(172, 6);
-            this.grbTKHH_MTG.Name = "grbTKHH_MTG";
-            this.grbTKHH_MTG.Size = new System.Drawing.Size(906, 66);
-            this.grbTKHH_MTG.TabIndex = 15;
-            this.grbTKHH_MTG.TabStop = false;
-            this.grbTKHH_MTG.Text = "Chọn mốc thời gian cần thống kê";
-            this.grbTKHH_MTG.Visible = false;
-            // 
-            // btnTKHH_MTG
-            // 
-            this.btnTKHH_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTKHH_MTG.BackColor = System.Drawing.Color.White;
-            this.btnTKHH_MTG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTKHH_MTG.Location = new System.Drawing.Point(779, 20);
-            this.btnTKHH_MTG.Name = "btnTKHH_MTG";
-            this.btnTKHH_MTG.Size = new System.Drawing.Size(120, 30);
-            this.btnTKHH_MTG.TabIndex = 5;
-            this.btnTKHH_MTG.Text = "Xem thống kê";
-            this.btnTKHH_MTG.UseVisualStyleBackColor = false;
-            this.btnTKHH_MTG.Click += new System.EventHandler(this.btnTKHH_MTG_Click);
-            // 
-            // dt_TKHH_MTG_TG2
-            // 
-            this.dt_TKHH_MTG_TG2.CalendarFont = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dt_TKHH_MTG_TG2.CustomFormat = "dd/MM/yyyy";
-            this.dt_TKHH_MTG_TG2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_TKHH_MTG_TG2.Location = new System.Drawing.Point(290, 22);
-            this.dt_TKHH_MTG_TG2.Name = "dt_TKHH_MTG_TG2";
-            this.dt_TKHH_MTG_TG2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dt_TKHH_MTG_TG2.Size = new System.Drawing.Size(143, 27);
-            this.dt_TKHH_MTG_TG2.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(213, 28);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 19);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "đến ngày";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 28);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 19);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Từ ngày";
-            // 
-            // dtTKHH_MTG_TG1
-            // 
-            this.dtTKHH_MTG_TG1.CalendarFont = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtTKHH_MTG_TG1.CustomFormat = "dd/MM/yyyy";
-            this.dtTKHH_MTG_TG1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTKHH_MTG_TG1.Location = new System.Drawing.Point(70, 22);
-            this.dtTKHH_MTG_TG1.Name = "dtTKHH_MTG_TG1";
-            this.dtTKHH_MTG_TG1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dtTKHH_MTG_TG1.Size = new System.Drawing.Size(130, 27);
-            this.dtTKHH_MTG_TG1.TabIndex = 1;
             // 
             // grbTKHH_CachThongKe
             // 
@@ -1292,6 +1162,145 @@ namespace QLCHTAN
             this.rdbTKHH_D.Text = "Ngày";
             this.rdbTKHH_D.UseVisualStyleBackColor = true;
             this.rdbTKHH_D.CheckedChanged += new System.EventHandler(this.rdbTKHH_D_CheckedChanged);
+            // 
+            // p_KQ_TKHH_MTG
+            // 
+            this.p_KQ_TKHH_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.p_KQ_TKHH_MTG.Controls.Add(this.dgvTKHH_MTG);
+            this.p_KQ_TKHH_MTG.Controls.Add(this.lbkXuat_TKHH_MTG);
+            this.p_KQ_TKHH_MTG.Controls.Add(this.lblTKHH_MTG);
+            this.p_KQ_TKHH_MTG.Controls.Add(this.label10);
+            this.p_KQ_TKHH_MTG.Location = new System.Drawing.Point(169, 76);
+            this.p_KQ_TKHH_MTG.Name = "p_KQ_TKHH_MTG";
+            this.p_KQ_TKHH_MTG.Size = new System.Drawing.Size(915, 580);
+            this.p_KQ_TKHH_MTG.TabIndex = 11;
+            this.p_KQ_TKHH_MTG.Visible = false;
+            // 
+            // dgvTKHH_MTG
+            // 
+            this.dgvTKHH_MTG.AllowUserToAddRows = false;
+            this.dgvTKHH_MTG.AllowUserToDeleteRows = false;
+            this.dgvTKHH_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvTKHH_MTG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTKHH_MTG.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvTKHH_MTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTKHH_MTG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maHang_MTG,
+            this.tenHang_MTG,
+            this.thoiGian_MTG,
+            this.soLuongBan_MTG,
+            this.soLuongKhoBan_MTG,
+            this.soLuongTon_MTG,
+            this.TongGiaBan_MTG,
+            this.dataGridViewTextBoxColumn13});
+            this.dgvTKHH_MTG.Location = new System.Drawing.Point(6, 12);
+            this.dgvTKHH_MTG.Name = "dgvTKHH_MTG";
+            this.dgvTKHH_MTG.ReadOnly = true;
+            this.dgvTKHH_MTG.Size = new System.Drawing.Size(905, 478);
+            this.dgvTKHH_MTG.TabIndex = 7;
+            // 
+            // maHang_MTG
+            // 
+            this.maHang_MTG.DataPropertyName = "maHang";
+            this.maHang_MTG.HeaderText = "Mã hàng";
+            this.maHang_MTG.Name = "maHang_MTG";
+            this.maHang_MTG.ReadOnly = true;
+            // 
+            // tenHang_MTG
+            // 
+            this.tenHang_MTG.DataPropertyName = "tenHang";
+            this.tenHang_MTG.HeaderText = "Tên hàng";
+            this.tenHang_MTG.Name = "tenHang_MTG";
+            this.tenHang_MTG.ReadOnly = true;
+            // 
+            // thoiGian_MTG
+            // 
+            this.thoiGian_MTG.DataPropertyName = "thoiGianDat";
+            this.thoiGian_MTG.HeaderText = "Thời gian";
+            this.thoiGian_MTG.Name = "thoiGian_MTG";
+            this.thoiGian_MTG.ReadOnly = true;
+            // 
+            // soLuongBan_MTG
+            // 
+            this.soLuongBan_MTG.DataPropertyName = "soLuongBan";
+            this.soLuongBan_MTG.HeaderText = "Số lượng bán";
+            this.soLuongBan_MTG.Name = "soLuongBan_MTG";
+            this.soLuongBan_MTG.ReadOnly = true;
+            // 
+            // soLuongKhoBan_MTG
+            // 
+            this.soLuongKhoBan_MTG.DataPropertyName = "soLuongKhoBan";
+            this.soLuongKhoBan_MTG.HeaderText = "Số lượng kho bán";
+            this.soLuongKhoBan_MTG.Name = "soLuongKhoBan_MTG";
+            this.soLuongKhoBan_MTG.ReadOnly = true;
+            // 
+            // soLuongTon_MTG
+            // 
+            this.soLuongTon_MTG.DataPropertyName = "soLuongTon";
+            this.soLuongTon_MTG.HeaderText = "Số lượng kho tổng";
+            this.soLuongTon_MTG.Name = "soLuongTon_MTG";
+            this.soLuongTon_MTG.ReadOnly = true;
+            // 
+            // TongGiaBan_MTG
+            // 
+            this.TongGiaBan_MTG.DataPropertyName = "TongGiaBan";
+            this.TongGiaBan_MTG.HeaderText = "Tổng giá bán";
+            this.TongGiaBan_MTG.Name = "TongGiaBan_MTG";
+            this.TongGiaBan_MTG.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "TongGia";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Tổng giá";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Visible = false;
+            // 
+            // lbkXuat_TKHH_MTG
+            // 
+            this.lbkXuat_TKHH_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbkXuat_TKHH_MTG.AutoSize = true;
+            this.lbkXuat_TKHH_MTG.Location = new System.Drawing.Point(803, 496);
+            this.lbkXuat_TKHH_MTG.Name = "lbkXuat_TKHH_MTG";
+            this.lbkXuat_TKHH_MTG.Size = new System.Drawing.Size(105, 19);
+            this.lbkXuat_TKHH_MTG.TabIndex = 6;
+            this.lbkXuat_TKHH_MTG.TabStop = true;
+            this.lbkXuat_TKHH_MTG.Text = "Xuất thống kê";
+            this.lbkXuat_TKHH_MTG.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbkXuat_TKHH_MTG_LinkClicked);
+            // 
+            // lblTKHH_MTG
+            // 
+            this.lblTKHH_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblTKHH_MTG.AutoSize = true;
+            this.lblTKHH_MTG.ForeColor = System.Drawing.Color.Red;
+            this.lblTKHH_MTG.Location = new System.Drawing.Point(82, 493);
+            this.lblTKHH_MTG.Name = "lblTKHH_MTG";
+            this.lblTKHH_MTG.Size = new System.Drawing.Size(70, 19);
+            this.lblTKHH_MTG.TabIndex = 5;
+            this.lblTKHH_MTG.Text = "Tổng giá:";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 493);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(70, 19);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Tổng giá:";
+            // 
+            // pic_TKHH_KCDL
+            // 
+            this.pic_TKHH_KCDL.Image = ((System.Drawing.Image)(resources.GetObject("pic_TKHH_KCDL.Image")));
+            this.pic_TKHH_KCDL.Location = new System.Drawing.Point(169, 73);
+            this.pic_TKHH_KCDL.Name = "pic_TKHH_KCDL";
+            this.pic_TKHH_KCDL.Size = new System.Drawing.Size(1034, 604);
+            this.pic_TKHH_KCDL.TabIndex = 13;
+            this.pic_TKHH_KCDL.TabStop = false;
             // 
             // p_KQ_TKHH_Q
             // 
@@ -1553,156 +1562,538 @@ namespace QLCHTAN
             this.TongGia_NTN.ReadOnly = true;
             this.TongGia_NTN.Visible = false;
             // 
-            // p_KQ_TKHH_MTG
+            // grbTKHH_NTN
             // 
-            this.p_KQ_TKHH_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.grbTKHH_NTN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.p_KQ_TKHH_MTG.Controls.Add(this.dgvTKHH_MTG);
-            this.p_KQ_TKHH_MTG.Controls.Add(this.lbkXuat_TKHH_MTG);
-            this.p_KQ_TKHH_MTG.Controls.Add(this.lblTKHH_MTG);
-            this.p_KQ_TKHH_MTG.Controls.Add(this.label10);
-            this.p_KQ_TKHH_MTG.Location = new System.Drawing.Point(169, 76);
-            this.p_KQ_TKHH_MTG.Name = "p_KQ_TKHH_MTG";
-            this.p_KQ_TKHH_MTG.Size = new System.Drawing.Size(915, 580);
-            this.p_KQ_TKHH_MTG.TabIndex = 11;
-            this.p_KQ_TKHH_MTG.Visible = false;
+            this.grbTKHH_NTN.Controls.Add(this.btnTKHH_NTN);
+            this.grbTKHH_NTN.Controls.Add(this.dtTKHH_NTN);
+            this.grbTKHH_NTN.Enabled = false;
+            this.grbTKHH_NTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grbTKHH_NTN.Location = new System.Drawing.Point(172, 6);
+            this.grbTKHH_NTN.Name = "grbTKHH_NTN";
+            this.grbTKHH_NTN.Size = new System.Drawing.Size(906, 64);
+            this.grbTKHH_NTN.TabIndex = 9;
+            this.grbTKHH_NTN.TabStop = false;
+            this.grbTKHH_NTN.Text = "Chọn thời gian thống kê";
+            this.grbTKHH_NTN.Visible = false;
             // 
-            // dgvTKHH_MTG
+            // btnTKHH_NTN
             // 
-            this.dgvTKHH_MTG.AllowUserToAddRows = false;
-            this.dgvTKHH_MTG.AllowUserToDeleteRows = false;
-            this.dgvTKHH_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnTKHH_NTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTKHH_NTN.BackColor = System.Drawing.Color.White;
+            this.btnTKHH_NTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTKHH_NTN.Location = new System.Drawing.Point(779, 19);
+            this.btnTKHH_NTN.Name = "btnTKHH_NTN";
+            this.btnTKHH_NTN.Size = new System.Drawing.Size(120, 31);
+            this.btnTKHH_NTN.TabIndex = 1;
+            this.btnTKHH_NTN.Text = "Xem thống kê";
+            this.btnTKHH_NTN.UseVisualStyleBackColor = false;
+            this.btnTKHH_NTN.Click += new System.EventHandler(this.btnTKHH_NTN_Click);
+            // 
+            // dtTKHH_NTN
+            // 
+            this.dtTKHH_NTN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvTKHH_MTG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvTKHH_MTG.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvTKHH_MTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTKHH_MTG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maHang_MTG,
-            this.tenHang_MTG,
-            this.thoiGian_MTG,
-            this.soLuongBan_MTG,
-            this.soLuongKhoBan_MTG,
-            this.soLuongTon_MTG,
-            this.TongGiaBan_MTG,
-            this.dataGridViewTextBoxColumn13});
-            this.dgvTKHH_MTG.Location = new System.Drawing.Point(6, 12);
-            this.dgvTKHH_MTG.Name = "dgvTKHH_MTG";
-            this.dgvTKHH_MTG.ReadOnly = true;
-            this.dgvTKHH_MTG.Size = new System.Drawing.Size(905, 478);
-            this.dgvTKHH_MTG.TabIndex = 7;
+            this.dtTKHH_NTN.CalendarFont = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtTKHH_NTN.CustomFormat = "dd/MM/yyyy";
+            this.dtTKHH_NTN.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTKHH_NTN.Location = new System.Drawing.Point(6, 19);
+            this.dtTKHH_NTN.Name = "dtTKHH_NTN";
+            this.dtTKHH_NTN.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtTKHH_NTN.Size = new System.Drawing.Size(767, 27);
+            this.dtTKHH_NTN.TabIndex = 0;
             // 
-            // maHang_MTG
+            // grbTKHH_MTG
             // 
-            this.maHang_MTG.DataPropertyName = "maHang";
-            this.maHang_MTG.HeaderText = "Mã hàng";
-            this.maHang_MTG.Name = "maHang_MTG";
-            this.maHang_MTG.ReadOnly = true;
+            this.grbTKHH_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grbTKHH_MTG.Controls.Add(this.btnTKHH_MTG);
+            this.grbTKHH_MTG.Controls.Add(this.dt_TKHH_MTG_TG2);
+            this.grbTKHH_MTG.Controls.Add(this.label4);
+            this.grbTKHH_MTG.Controls.Add(this.label7);
+            this.grbTKHH_MTG.Controls.Add(this.dtTKHH_MTG_TG1);
+            this.grbTKHH_MTG.Location = new System.Drawing.Point(172, 6);
+            this.grbTKHH_MTG.Name = "grbTKHH_MTG";
+            this.grbTKHH_MTG.Size = new System.Drawing.Size(906, 66);
+            this.grbTKHH_MTG.TabIndex = 15;
+            this.grbTKHH_MTG.TabStop = false;
+            this.grbTKHH_MTG.Text = "Chọn mốc thời gian cần thống kê";
+            this.grbTKHH_MTG.Visible = false;
             // 
-            // tenHang_MTG
+            // btnTKHH_MTG
             // 
-            this.tenHang_MTG.DataPropertyName = "tenHang";
-            this.tenHang_MTG.HeaderText = "Tên hàng";
-            this.tenHang_MTG.Name = "tenHang_MTG";
-            this.tenHang_MTG.ReadOnly = true;
+            this.btnTKHH_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTKHH_MTG.BackColor = System.Drawing.Color.White;
+            this.btnTKHH_MTG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTKHH_MTG.Location = new System.Drawing.Point(779, 20);
+            this.btnTKHH_MTG.Name = "btnTKHH_MTG";
+            this.btnTKHH_MTG.Size = new System.Drawing.Size(120, 30);
+            this.btnTKHH_MTG.TabIndex = 5;
+            this.btnTKHH_MTG.Text = "Xem thống kê";
+            this.btnTKHH_MTG.UseVisualStyleBackColor = false;
+            this.btnTKHH_MTG.Click += new System.EventHandler(this.btnTKHH_MTG_Click);
             // 
-            // thoiGian_MTG
+            // dt_TKHH_MTG_TG2
             // 
-            this.thoiGian_MTG.DataPropertyName = "thoiGianDat";
-            this.thoiGian_MTG.HeaderText = "Thời gian";
-            this.thoiGian_MTG.Name = "thoiGian_MTG";
-            this.thoiGian_MTG.ReadOnly = true;
+            this.dt_TKHH_MTG_TG2.CalendarFont = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dt_TKHH_MTG_TG2.CustomFormat = "dd/MM/yyyy";
+            this.dt_TKHH_MTG_TG2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dt_TKHH_MTG_TG2.Location = new System.Drawing.Point(290, 22);
+            this.dt_TKHH_MTG_TG2.Name = "dt_TKHH_MTG_TG2";
+            this.dt_TKHH_MTG_TG2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dt_TKHH_MTG_TG2.Size = new System.Drawing.Size(143, 27);
+            this.dt_TKHH_MTG_TG2.TabIndex = 4;
             // 
-            // soLuongBan_MTG
+            // label4
             // 
-            this.soLuongBan_MTG.DataPropertyName = "soLuongBan";
-            this.soLuongBan_MTG.HeaderText = "Số lượng bán";
-            this.soLuongBan_MTG.Name = "soLuongBan_MTG";
-            this.soLuongBan_MTG.ReadOnly = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(213, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 19);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "đến ngày";
             // 
-            // soLuongKhoBan_MTG
+            // label7
             // 
-            this.soLuongKhoBan_MTG.DataPropertyName = "soLuongKhoBan";
-            this.soLuongKhoBan_MTG.HeaderText = "Số lượng kho bán";
-            this.soLuongKhoBan_MTG.Name = "soLuongKhoBan_MTG";
-            this.soLuongKhoBan_MTG.ReadOnly = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 28);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(62, 19);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Từ ngày";
             // 
-            // soLuongTon_MTG
+            // dtTKHH_MTG_TG1
             // 
-            this.soLuongTon_MTG.DataPropertyName = "soLuongTon";
-            this.soLuongTon_MTG.HeaderText = "Số lượng kho tổng";
-            this.soLuongTon_MTG.Name = "soLuongTon_MTG";
-            this.soLuongTon_MTG.ReadOnly = true;
+            this.dtTKHH_MTG_TG1.CalendarFont = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtTKHH_MTG_TG1.CustomFormat = "dd/MM/yyyy";
+            this.dtTKHH_MTG_TG1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTKHH_MTG_TG1.Location = new System.Drawing.Point(70, 22);
+            this.dtTKHH_MTG_TG1.Name = "dtTKHH_MTG_TG1";
+            this.dtTKHH_MTG_TG1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtTKHH_MTG_TG1.Size = new System.Drawing.Size(130, 27);
+            this.dtTKHH_MTG_TG1.TabIndex = 1;
             // 
-            // TongGiaBan_MTG
+            // grbTKHH_Q
             // 
-            this.TongGiaBan_MTG.DataPropertyName = "TongGiaBan";
-            this.TongGiaBan_MTG.HeaderText = "Tổng giá bán";
-            this.TongGiaBan_MTG.Name = "TongGiaBan_MTG";
-            this.TongGiaBan_MTG.ReadOnly = true;
+            this.grbTKHH_Q.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grbTKHH_Q.Controls.Add(this.ckbTKHH_Q1);
+            this.grbTKHH_Q.Controls.Add(this.ckbTKHH_Q2);
+            this.grbTKHH_Q.Controls.Add(this.ckbTKHH_Q3);
+            this.grbTKHH_Q.Controls.Add(this.ckbTKHH_Q4);
+            this.grbTKHH_Q.Controls.Add(this.dtTKHH_Nam);
+            this.grbTKHH_Q.Controls.Add(this.btnTTHH_Q);
+            this.grbTKHH_Q.Location = new System.Drawing.Point(172, 7);
+            this.grbTKHH_Q.Name = "grbTKHH_Q";
+            this.grbTKHH_Q.Size = new System.Drawing.Size(906, 63);
+            this.grbTKHH_Q.TabIndex = 10;
+            this.grbTKHH_Q.TabStop = false;
+            this.grbTKHH_Q.Text = "Chọn quý";
+            this.grbTKHH_Q.Visible = false;
             // 
-            // dataGridViewTextBoxColumn13
+            // ckbTKHH_Q1
             // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "TongGia";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Tổng giá";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Visible = false;
+            this.ckbTKHH_Q1.AutoSize = true;
+            this.ckbTKHH_Q1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbTKHH_Q1.ForeColor = System.Drawing.Color.Red;
+            this.ckbTKHH_Q1.Location = new System.Drawing.Point(31, 22);
+            this.ckbTKHH_Q1.Name = "ckbTKHH_Q1";
+            this.ckbTKHH_Q1.Size = new System.Drawing.Size(33, 23);
+            this.ckbTKHH_Q1.TabIndex = 6;
+            this.ckbTKHH_Q1.Text = "1";
+            this.ckbTKHH_Q1.UseVisualStyleBackColor = true;
             // 
-            // lbkXuat_TKHH_MTG
+            // ckbTKHH_Q2
             // 
-            this.lbkXuat_TKHH_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbkXuat_TKHH_MTG.AutoSize = true;
-            this.lbkXuat_TKHH_MTG.Location = new System.Drawing.Point(803, 496);
-            this.lbkXuat_TKHH_MTG.Name = "lbkXuat_TKHH_MTG";
-            this.lbkXuat_TKHH_MTG.Size = new System.Drawing.Size(105, 19);
-            this.lbkXuat_TKHH_MTG.TabIndex = 6;
-            this.lbkXuat_TKHH_MTG.TabStop = true;
-            this.lbkXuat_TKHH_MTG.Text = "Xuất thống kê";
-            this.lbkXuat_TKHH_MTG.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbkXuat_TKHH_MTG_LinkClicked);
+            this.ckbTKHH_Q2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ckbTKHH_Q2.AutoSize = true;
+            this.ckbTKHH_Q2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbTKHH_Q2.ForeColor = System.Drawing.Color.Red;
+            this.ckbTKHH_Q2.Location = new System.Drawing.Point(77, 22);
+            this.ckbTKHH_Q2.Name = "ckbTKHH_Q2";
+            this.ckbTKHH_Q2.Size = new System.Drawing.Size(36, 23);
+            this.ckbTKHH_Q2.TabIndex = 7;
+            this.ckbTKHH_Q2.Text = "2";
+            this.ckbTKHH_Q2.UseVisualStyleBackColor = true;
             // 
-            // lblTKHH_MTG
+            // ckbTKHH_Q3
             // 
-            this.lblTKHH_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblTKHH_MTG.AutoSize = true;
-            this.lblTKHH_MTG.ForeColor = System.Drawing.Color.Red;
-            this.lblTKHH_MTG.Location = new System.Drawing.Point(82, 493);
-            this.lblTKHH_MTG.Name = "lblTKHH_MTG";
-            this.lblTKHH_MTG.Size = new System.Drawing.Size(70, 19);
-            this.lblTKHH_MTG.TabIndex = 5;
-            this.lblTKHH_MTG.Text = "Tổng giá:";
+            this.ckbTKHH_Q3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ckbTKHH_Q3.AutoSize = true;
+            this.ckbTKHH_Q3.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbTKHH_Q3.ForeColor = System.Drawing.Color.Red;
+            this.ckbTKHH_Q3.Location = new System.Drawing.Point(119, 21);
+            this.ckbTKHH_Q3.Name = "ckbTKHH_Q3";
+            this.ckbTKHH_Q3.Size = new System.Drawing.Size(39, 23);
+            this.ckbTKHH_Q3.TabIndex = 8;
+            this.ckbTKHH_Q3.Text = " 3";
+            this.ckbTKHH_Q3.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // ckbTKHH_Q4
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 493);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 19);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Tổng giá:";
+            this.ckbTKHH_Q4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ckbTKHH_Q4.AutoSize = true;
+            this.ckbTKHH_Q4.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbTKHH_Q4.ForeColor = System.Drawing.Color.Red;
+            this.ckbTKHH_Q4.Location = new System.Drawing.Point(164, 22);
+            this.ckbTKHH_Q4.Name = "ckbTKHH_Q4";
+            this.ckbTKHH_Q4.Size = new System.Drawing.Size(40, 23);
+            this.ckbTKHH_Q4.TabIndex = 9;
+            this.ckbTKHH_Q4.Text = " 4";
+            this.ckbTKHH_Q4.UseVisualStyleBackColor = true;
             // 
-            // pic_TKHH_KCDL
+            // dtTKHH_Nam
             // 
-            this.pic_TKHH_KCDL.Image = ((System.Drawing.Image)(resources.GetObject("pic_TKHH_KCDL.Image")));
-            this.pic_TKHH_KCDL.Location = new System.Drawing.Point(169, 73);
-            this.pic_TKHH_KCDL.Name = "pic_TKHH_KCDL";
-            this.pic_TKHH_KCDL.Size = new System.Drawing.Size(1034, 604);
-            this.pic_TKHH_KCDL.TabIndex = 13;
-            this.pic_TKHH_KCDL.TabStop = false;
+            this.dtTKHH_Nam.CustomFormat = "yyyy";
+            this.dtTKHH_Nam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTKHH_Nam.Location = new System.Drawing.Point(237, 22);
+            this.dtTKHH_Nam.Name = "dtTKHH_Nam";
+            this.dtTKHH_Nam.ShowUpDown = true;
+            this.dtTKHH_Nam.Size = new System.Drawing.Size(196, 27);
+            this.dtTKHH_Nam.TabIndex = 5;
+            // 
+            // btnTTHH_Q
+            // 
+            this.btnTTHH_Q.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTTHH_Q.BackColor = System.Drawing.Color.White;
+            this.btnTTHH_Q.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTTHH_Q.Location = new System.Drawing.Point(780, 17);
+            this.btnTTHH_Q.Name = "btnTTHH_Q";
+            this.btnTTHH_Q.Size = new System.Drawing.Size(120, 31);
+            this.btnTTHH_Q.TabIndex = 4;
+            this.btnTTHH_Q.Text = "Xem thống kê";
+            this.btnTTHH_Q.UseVisualStyleBackColor = false;
+            this.btnTTHH_Q.Click += new System.EventHandler(this.btnTTHH_Q_Click);
             // 
             // tpTKSP
             // 
-            this.tpTKSP.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tpTKSP.Controls.Add(this.pic_KCDL_TKSP);
+            this.tpTKSP.Controls.Add(this.grbTKSP_MTG);
+            this.tpTKSP.Controls.Add(this.grbTKSP_CachThongKe);
+            this.tpTKSP.Controls.Add(this.grbTKSP_NTN);
+            this.tpTKSP.Controls.Add(this.grbTKSP_TQ);
+            this.tpTKSP.Controls.Add(this.p_TKSP_NTN);
+            this.tpTKSP.Controls.Add(this.p_TKSP_TQ);
+            this.tpTKSP.Controls.Add(this.p_TKSP_MTG);
+            this.tpTKSP.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tpTKSP.ForeColor = System.Drawing.Color.Red;
             this.tpTKSP.Location = new System.Drawing.Point(4, 28);
             this.tpTKSP.Name = "tpTKSP";
             this.tpTKSP.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTKSP.Size = new System.Drawing.Size(1084, 642);
+            this.tpTKSP.Size = new System.Drawing.Size(1084, 659);
             this.tpTKSP.TabIndex = 2;
             this.tpTKSP.Text = "Thống kê sản phẩm";
             this.tpTKSP.UseVisualStyleBackColor = true;
+            // 
+            // grbTKSP_NTN
+            // 
+            this.grbTKSP_NTN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grbTKSP_NTN.Controls.Add(this.btnTKSP_NTN);
+            this.grbTKSP_NTN.Controls.Add(this.dtTKSP_NTN);
+            this.grbTKSP_NTN.Enabled = false;
+            this.grbTKSP_NTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grbTKSP_NTN.Location = new System.Drawing.Point(169, 9);
+            this.grbTKSP_NTN.Name = "grbTKSP_NTN";
+            this.grbTKSP_NTN.Size = new System.Drawing.Size(906, 58);
+            this.grbTKSP_NTN.TabIndex = 18;
+            this.grbTKSP_NTN.TabStop = false;
+            this.grbTKSP_NTN.Text = "Chọn thời gian thống kê";
+            this.grbTKSP_NTN.Visible = false;
+            // 
+            // btnTKSP_NTN
+            // 
+            this.btnTKSP_NTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTKSP_NTN.BackColor = System.Drawing.Color.White;
+            this.btnTKSP_NTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTKSP_NTN.Location = new System.Drawing.Point(779, 19);
+            this.btnTKSP_NTN.Name = "btnTKSP_NTN";
+            this.btnTKSP_NTN.Size = new System.Drawing.Size(120, 31);
+            this.btnTKSP_NTN.TabIndex = 1;
+            this.btnTKSP_NTN.Text = "Xem thống kê";
+            this.btnTKSP_NTN.UseVisualStyleBackColor = false;
+            // 
+            // dtTKSP_NTN
+            // 
+            this.dtTKSP_NTN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtTKSP_NTN.CalendarFont = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtTKSP_NTN.CustomFormat = "dd/MM/yyyy";
+            this.dtTKSP_NTN.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTKSP_NTN.Location = new System.Drawing.Point(6, 19);
+            this.dtTKSP_NTN.Name = "dtTKSP_NTN";
+            this.dtTKSP_NTN.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtTKSP_NTN.Size = new System.Drawing.Size(767, 27);
+            this.dtTKSP_NTN.TabIndex = 0;
+            // 
+            // grbTKSP_TQ
+            // 
+            this.grbTKSP_TQ.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grbTKSP_TQ.Controls.Add(this.ckbTKSP_Q1);
+            this.grbTKSP_TQ.Controls.Add(this.ckbTKSP_Q2);
+            this.grbTKSP_TQ.Controls.Add(this.ckbTKSP_Q3);
+            this.grbTKSP_TQ.Controls.Add(this.ckbTKSP_Q4);
+            this.grbTKSP_TQ.Controls.Add(this.dtTKSP_Nam);
+            this.grbTKSP_TQ.Controls.Add(this.btnTKSP_TQ);
+            this.grbTKSP_TQ.Location = new System.Drawing.Point(169, 9);
+            this.grbTKSP_TQ.Name = "grbTKSP_TQ";
+            this.grbTKSP_TQ.Size = new System.Drawing.Size(906, 58);
+            this.grbTKSP_TQ.TabIndex = 17;
+            this.grbTKSP_TQ.TabStop = false;
+            this.grbTKSP_TQ.Text = "Chọn quý";
+            this.grbTKSP_TQ.Visible = false;
+            // 
+            // ckbTKSP_Q1
+            // 
+            this.ckbTKSP_Q1.AutoSize = true;
+            this.ckbTKSP_Q1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbTKSP_Q1.ForeColor = System.Drawing.Color.Red;
+            this.ckbTKSP_Q1.Location = new System.Drawing.Point(31, 22);
+            this.ckbTKSP_Q1.Name = "ckbTKSP_Q1";
+            this.ckbTKSP_Q1.Size = new System.Drawing.Size(33, 23);
+            this.ckbTKSP_Q1.TabIndex = 6;
+            this.ckbTKSP_Q1.Text = "1";
+            this.ckbTKSP_Q1.UseVisualStyleBackColor = true;
+            // 
+            // ckbTKSP_Q2
+            // 
+            this.ckbTKSP_Q2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ckbTKSP_Q2.AutoSize = true;
+            this.ckbTKSP_Q2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbTKSP_Q2.ForeColor = System.Drawing.Color.Red;
+            this.ckbTKSP_Q2.Location = new System.Drawing.Point(77, 22);
+            this.ckbTKSP_Q2.Name = "ckbTKSP_Q2";
+            this.ckbTKSP_Q2.Size = new System.Drawing.Size(36, 23);
+            this.ckbTKSP_Q2.TabIndex = 7;
+            this.ckbTKSP_Q2.Text = "2";
+            this.ckbTKSP_Q2.UseVisualStyleBackColor = true;
+            // 
+            // ckbTKSP_Q3
+            // 
+            this.ckbTKSP_Q3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ckbTKSP_Q3.AutoSize = true;
+            this.ckbTKSP_Q3.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbTKSP_Q3.ForeColor = System.Drawing.Color.Red;
+            this.ckbTKSP_Q3.Location = new System.Drawing.Point(119, 21);
+            this.ckbTKSP_Q3.Name = "ckbTKSP_Q3";
+            this.ckbTKSP_Q3.Size = new System.Drawing.Size(39, 23);
+            this.ckbTKSP_Q3.TabIndex = 8;
+            this.ckbTKSP_Q3.Text = " 3";
+            this.ckbTKSP_Q3.UseVisualStyleBackColor = true;
+            // 
+            // ckbTKSP_Q4
+            // 
+            this.ckbTKSP_Q4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ckbTKSP_Q4.AutoSize = true;
+            this.ckbTKSP_Q4.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbTKSP_Q4.ForeColor = System.Drawing.Color.Red;
+            this.ckbTKSP_Q4.Location = new System.Drawing.Point(164, 22);
+            this.ckbTKSP_Q4.Name = "ckbTKSP_Q4";
+            this.ckbTKSP_Q4.Size = new System.Drawing.Size(40, 23);
+            this.ckbTKSP_Q4.TabIndex = 9;
+            this.ckbTKSP_Q4.Text = " 4";
+            this.ckbTKSP_Q4.UseVisualStyleBackColor = true;
+            // 
+            // dtTKSP_Nam
+            // 
+            this.dtTKSP_Nam.CustomFormat = "yyyy";
+            this.dtTKSP_Nam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTKSP_Nam.Location = new System.Drawing.Point(237, 22);
+            this.dtTKSP_Nam.Name = "dtTKSP_Nam";
+            this.dtTKSP_Nam.ShowUpDown = true;
+            this.dtTKSP_Nam.Size = new System.Drawing.Size(196, 27);
+            this.dtTKSP_Nam.TabIndex = 5;
+            // 
+            // btnTKSP_TQ
+            // 
+            this.btnTKSP_TQ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTKSP_TQ.BackColor = System.Drawing.Color.White;
+            this.btnTKSP_TQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTKSP_TQ.Location = new System.Drawing.Point(780, 17);
+            this.btnTKSP_TQ.Name = "btnTKSP_TQ";
+            this.btnTKSP_TQ.Size = new System.Drawing.Size(120, 31);
+            this.btnTKSP_TQ.TabIndex = 4;
+            this.btnTKSP_TQ.Text = "Xem thống kê";
+            this.btnTKSP_TQ.UseVisualStyleBackColor = false;
+            // 
+            // grbTKSP_MTG
+            // 
+            this.grbTKSP_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grbTKSP_MTG.Controls.Add(this.btnTKSP_MTG);
+            this.grbTKSP_MTG.Controls.Add(this.dtTKSP_MTG_TG2);
+            this.grbTKSP_MTG.Controls.Add(this.label12);
+            this.grbTKSP_MTG.Controls.Add(this.label13);
+            this.grbTKSP_MTG.Controls.Add(this.dtTKSP_MTG_TG1);
+            this.grbTKSP_MTG.Location = new System.Drawing.Point(169, 9);
+            this.grbTKSP_MTG.Name = "grbTKSP_MTG";
+            this.grbTKSP_MTG.Size = new System.Drawing.Size(906, 58);
+            this.grbTKSP_MTG.TabIndex = 16;
+            this.grbTKSP_MTG.TabStop = false;
+            this.grbTKSP_MTG.Text = "Chọn mốc thời gian cần thống kê";
+            this.grbTKSP_MTG.Visible = false;
+            // 
+            // btnTKSP_MTG
+            // 
+            this.btnTKSP_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTKSP_MTG.BackColor = System.Drawing.Color.White;
+            this.btnTKSP_MTG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTKSP_MTG.ForeColor = System.Drawing.Color.Black;
+            this.btnTKSP_MTG.Location = new System.Drawing.Point(779, 20);
+            this.btnTKSP_MTG.Name = "btnTKSP_MTG";
+            this.btnTKSP_MTG.Size = new System.Drawing.Size(120, 30);
+            this.btnTKSP_MTG.TabIndex = 5;
+            this.btnTKSP_MTG.Text = "Xem thống kê";
+            this.btnTKSP_MTG.UseVisualStyleBackColor = false;
+            // 
+            // dtTKSP_MTG_TG2
+            // 
+            this.dtTKSP_MTG_TG2.CalendarFont = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtTKSP_MTG_TG2.CustomFormat = "dd/MM/yyyy";
+            this.dtTKSP_MTG_TG2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTKSP_MTG_TG2.Location = new System.Drawing.Point(290, 22);
+            this.dtTKSP_MTG_TG2.Name = "dtTKSP_MTG_TG2";
+            this.dtTKSP_MTG_TG2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtTKSP_MTG_TG2.Size = new System.Drawing.Size(143, 27);
+            this.dtTKSP_MTG_TG2.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(213, 28);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(71, 19);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "đến ngày";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(6, 28);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(62, 19);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Từ ngày";
+            // 
+            // dtTKSP_MTG_TG1
+            // 
+            this.dtTKSP_MTG_TG1.CalendarFont = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtTKSP_MTG_TG1.CustomFormat = "dd/MM/yyyy";
+            this.dtTKSP_MTG_TG1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTKSP_MTG_TG1.Location = new System.Drawing.Point(70, 22);
+            this.dtTKSP_MTG_TG1.Name = "dtTKSP_MTG_TG1";
+            this.dtTKSP_MTG_TG1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtTKSP_MTG_TG1.Size = new System.Drawing.Size(130, 27);
+            this.dtTKSP_MTG_TG1.TabIndex = 1;
+            // 
+            // grbTKSP_CachThongKe
+            // 
+            this.grbTKSP_CachThongKe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.grbTKSP_CachThongKe.Controls.Add(this.rdbTKSP_Q);
+            this.grbTKSP_CachThongKe.Controls.Add(this.rdbTKSP_MTG);
+            this.grbTKSP_CachThongKe.Controls.Add(this.rdbTKSP_NTN);
+            this.grbTKSP_CachThongKe.Controls.Add(this.p_TKSP_NTN_Chon);
+            this.grbTKSP_CachThongKe.Location = new System.Drawing.Point(6, 9);
+            this.grbTKSP_CachThongKe.Name = "grbTKSP_CachThongKe";
+            this.grbTKSP_CachThongKe.Size = new System.Drawing.Size(157, 650);
+            this.grbTKSP_CachThongKe.TabIndex = 15;
+            this.grbTKSP_CachThongKe.TabStop = false;
+            this.grbTKSP_CachThongKe.Text = "Chọn cách thống kê";
+            // 
+            // rdbTKSP_Q
+            // 
+            this.rdbTKSP_Q.AutoSize = true;
+            this.rdbTKSP_Q.ForeColor = System.Drawing.Color.Black;
+            this.rdbTKSP_Q.Location = new System.Drawing.Point(6, 215);
+            this.rdbTKSP_Q.Name = "rdbTKSP_Q";
+            this.rdbTKSP_Q.Size = new System.Drawing.Size(89, 23);
+            this.rdbTKSP_Q.TabIndex = 3;
+            this.rdbTKSP_Q.TabStop = true;
+            this.rdbTKSP_Q.Text = "Theo quý";
+            this.rdbTKSP_Q.UseVisualStyleBackColor = true;
+            // 
+            // rdbTKSP_MTG
+            // 
+            this.rdbTKSP_MTG.AutoSize = true;
+            this.rdbTKSP_MTG.ForeColor = System.Drawing.Color.Black;
+            this.rdbTKSP_MTG.Location = new System.Drawing.Point(6, 171);
+            this.rdbTKSP_MTG.Name = "rdbTKSP_MTG";
+            this.rdbTKSP_MTG.Size = new System.Drawing.Size(120, 23);
+            this.rdbTKSP_MTG.TabIndex = 2;
+            this.rdbTKSP_MTG.TabStop = true;
+            this.rdbTKSP_MTG.Text = "Mốc thời gian";
+            this.rdbTKSP_MTG.UseVisualStyleBackColor = true;
+            // 
+            // rdbTKSP_NTN
+            // 
+            this.rdbTKSP_NTN.AutoSize = true;
+            this.rdbTKSP_NTN.ForeColor = System.Drawing.Color.Black;
+            this.rdbTKSP_NTN.Location = new System.Drawing.Point(6, 26);
+            this.rdbTKSP_NTN.Name = "rdbTKSP_NTN";
+            this.rdbTKSP_NTN.Size = new System.Drawing.Size(141, 23);
+            this.rdbTKSP_NTN.TabIndex = 1;
+            this.rdbTKSP_NTN.TabStop = true;
+            this.rdbTKSP_NTN.Text = "Ngày-tháng-năm";
+            this.rdbTKSP_NTN.UseVisualStyleBackColor = true;
+            // 
+            // p_TKSP_NTN_Chon
+            // 
+            this.p_TKSP_NTN_Chon.BackColor = System.Drawing.Color.White;
+            this.p_TKSP_NTN_Chon.Controls.Add(this.rdbTKSP_Y);
+            this.p_TKSP_NTN_Chon.Controls.Add(this.rdbTKSP_M);
+            this.p_TKSP_NTN_Chon.Controls.Add(this.rdbTKSP_D);
+            this.p_TKSP_NTN_Chon.Enabled = false;
+            this.p_TKSP_NTN_Chon.Location = new System.Drawing.Point(6, 50);
+            this.p_TKSP_NTN_Chon.Name = "p_TKSP_NTN_Chon";
+            this.p_TKSP_NTN_Chon.Size = new System.Drawing.Size(141, 96);
+            this.p_TKSP_NTN_Chon.TabIndex = 0;
+            // 
+            // rdbTKSP_Y
+            // 
+            this.rdbTKSP_Y.AutoSize = true;
+            this.rdbTKSP_Y.ForeColor = System.Drawing.Color.Black;
+            this.rdbTKSP_Y.Location = new System.Drawing.Point(20, 67);
+            this.rdbTKSP_Y.Name = "rdbTKSP_Y";
+            this.rdbTKSP_Y.Size = new System.Drawing.Size(59, 23);
+            this.rdbTKSP_Y.TabIndex = 2;
+            this.rdbTKSP_Y.TabStop = true;
+            this.rdbTKSP_Y.Text = "Năm";
+            this.rdbTKSP_Y.UseVisualStyleBackColor = true;
+            // 
+            // rdbTKSP_M
+            // 
+            this.rdbTKSP_M.AutoSize = true;
+            this.rdbTKSP_M.ForeColor = System.Drawing.Color.Black;
+            this.rdbTKSP_M.Location = new System.Drawing.Point(20, 38);
+            this.rdbTKSP_M.Name = "rdbTKSP_M";
+            this.rdbTKSP_M.Size = new System.Drawing.Size(70, 23);
+            this.rdbTKSP_M.TabIndex = 1;
+            this.rdbTKSP_M.TabStop = true;
+            this.rdbTKSP_M.Text = "Tháng";
+            this.rdbTKSP_M.UseVisualStyleBackColor = true;
+            // 
+            // rdbTKSP_D
+            // 
+            this.rdbTKSP_D.AutoSize = true;
+            this.rdbTKSP_D.ForeColor = System.Drawing.Color.Black;
+            this.rdbTKSP_D.Location = new System.Drawing.Point(20, 10);
+            this.rdbTKSP_D.Name = "rdbTKSP_D";
+            this.rdbTKSP_D.Size = new System.Drawing.Size(62, 23);
+            this.rdbTKSP_D.TabIndex = 0;
+            this.rdbTKSP_D.TabStop = true;
+            this.rdbTKSP_D.Text = "Ngày";
+            this.rdbTKSP_D.UseVisualStyleBackColor = true;
             // 
             // lbkThoat
             // 
@@ -1737,6 +2128,402 @@ namespace QLCHTAN
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            // 
+            // p_TKSP_MTG
+            // 
+            this.p_TKSP_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.p_TKSP_MTG.Controls.Add(this.dgvTKSP_MTG);
+            this.p_TKSP_MTG.Controls.Add(this.lbkXuatTKSP_MTG);
+            this.p_TKSP_MTG.Controls.Add(this.lblTongGiaTKSP_MTG);
+            this.p_TKSP_MTG.Controls.Add(this.label15);
+            this.p_TKSP_MTG.Location = new System.Drawing.Point(169, 83);
+            this.p_TKSP_MTG.Name = "p_TKSP_MTG";
+            this.p_TKSP_MTG.Size = new System.Drawing.Size(915, 535);
+            this.p_TKSP_MTG.TabIndex = 19;
+            this.p_TKSP_MTG.Visible = false;
+            // 
+            // dgvTKSP_MTG
+            // 
+            this.dgvTKSP_MTG.AllowUserToAddRows = false;
+            this.dgvTKSP_MTG.AllowUserToDeleteRows = false;
+            this.dgvTKSP_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvTKSP_MTG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTKSP_MTG.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvTKSP_MTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTKSP_MTG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.dgvTKSP_MTG.Location = new System.Drawing.Point(6, 12);
+            this.dgvTKSP_MTG.Name = "dgvTKSP_MTG";
+            this.dgvTKSP_MTG.ReadOnly = true;
+            this.dgvTKSP_MTG.Size = new System.Drawing.Size(905, 433);
+            this.dgvTKSP_MTG.TabIndex = 7;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "maHang";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã hàng";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "tenHang";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên hàng";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "thoiGianDat";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Thời gian";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "soLuongBan";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Số lượng bán";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "soLuongKhoBan";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Số lượng kho bán";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "soLuongTon";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Số lượng kho tổng";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "TongGiaBan";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Tổng giá bán";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "TongGia";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Tổng giá";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Visible = false;
+            // 
+            // lbkXuatTKSP_MTG
+            // 
+            this.lbkXuatTKSP_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbkXuatTKSP_MTG.AutoSize = true;
+            this.lbkXuatTKSP_MTG.Location = new System.Drawing.Point(803, 451);
+            this.lbkXuatTKSP_MTG.Name = "lbkXuatTKSP_MTG";
+            this.lbkXuatTKSP_MTG.Size = new System.Drawing.Size(105, 19);
+            this.lbkXuatTKSP_MTG.TabIndex = 6;
+            this.lbkXuatTKSP_MTG.TabStop = true;
+            this.lbkXuatTKSP_MTG.Text = "Xuất thống kê";
+            // 
+            // lblTongGiaTKSP_MTG
+            // 
+            this.lblTongGiaTKSP_MTG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblTongGiaTKSP_MTG.AutoSize = true;
+            this.lblTongGiaTKSP_MTG.ForeColor = System.Drawing.Color.Red;
+            this.lblTongGiaTKSP_MTG.Location = new System.Drawing.Point(82, 448);
+            this.lblTongGiaTKSP_MTG.Name = "lblTongGiaTKSP_MTG";
+            this.lblTongGiaTKSP_MTG.Size = new System.Drawing.Size(70, 19);
+            this.lblTongGiaTKSP_MTG.TabIndex = 5;
+            this.lblTongGiaTKSP_MTG.Text = "Tổng giá:";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 448);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 19);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "Tổng giá:";
+            // 
+            // p_TKSP_TQ
+            // 
+            this.p_TKSP_TQ.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.p_TKSP_TQ.Controls.Add(this.dgvTKSP_TQ);
+            this.p_TKSP_TQ.Controls.Add(this.lblkXuatTKSP_TQ);
+            this.p_TKSP_TQ.Controls.Add(this.lblTongGiaTKSP_TQ);
+            this.p_TKSP_TQ.Controls.Add(this.label16);
+            this.p_TKSP_TQ.Location = new System.Drawing.Point(168, 83);
+            this.p_TKSP_TQ.Name = "p_TKSP_TQ";
+            this.p_TKSP_TQ.Size = new System.Drawing.Size(912, 535);
+            this.p_TKSP_TQ.TabIndex = 20;
+            this.p_TKSP_TQ.Visible = false;
+            // 
+            // dgvTKSP_TQ
+            // 
+            this.dgvTKSP_TQ.AllowUserToAddRows = false;
+            this.dgvTKSP_TQ.AllowUserToDeleteRows = false;
+            this.dgvTKSP_TQ.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvTKSP_TQ.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTKSP_TQ.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvTKSP_TQ.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTKSP_TQ.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17});
+            this.dgvTKSP_TQ.Location = new System.Drawing.Point(6, 4);
+            this.dgvTKSP_TQ.Name = "dgvTKSP_TQ";
+            this.dgvTKSP_TQ.ReadOnly = true;
+            this.dgvTKSP_TQ.Size = new System.Drawing.Size(905, 466);
+            this.dgvTKSP_TQ.TabIndex = 8;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "maHang";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Mã hàng";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "tenHang";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Tên hàng";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "thoiGianDat";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Thời gian";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "soLuongBan";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Số lượng bán";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "soLuongKhoBan";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Số lượng kho bán";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "soLuongTon";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Số lượng kho tổng";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "TongGiaBan";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Tổng giá bán";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "TongGia";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Tổng giá";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.dataGridViewTextBoxColumn17.Visible = false;
+            // 
+            // lblkXuatTKSP_TQ
+            // 
+            this.lblkXuatTKSP_TQ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblkXuatTKSP_TQ.AutoSize = true;
+            this.lblkXuatTKSP_TQ.Location = new System.Drawing.Point(806, 473);
+            this.lblkXuatTKSP_TQ.Name = "lblkXuatTKSP_TQ";
+            this.lblkXuatTKSP_TQ.Size = new System.Drawing.Size(105, 19);
+            this.lblkXuatTKSP_TQ.TabIndex = 3;
+            this.lblkXuatTKSP_TQ.TabStop = true;
+            this.lblkXuatTKSP_TQ.Text = "Xuất thống kê";
+            // 
+            // lblTongGiaTKSP_TQ
+            // 
+            this.lblTongGiaTKSP_TQ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblTongGiaTKSP_TQ.AutoSize = true;
+            this.lblTongGiaTKSP_TQ.ForeColor = System.Drawing.Color.Red;
+            this.lblTongGiaTKSP_TQ.Location = new System.Drawing.Point(82, 473);
+            this.lblTongGiaTKSP_TQ.Name = "lblTongGiaTKSP_TQ";
+            this.lblTongGiaTKSP_TQ.Size = new System.Drawing.Size(70, 19);
+            this.lblTongGiaTKSP_TQ.TabIndex = 2;
+            this.lblTongGiaTKSP_TQ.Text = "Tổng giá:";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 473);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(70, 19);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Tổng giá:";
+            // 
+            // p_TKSP_NTN
+            // 
+            this.p_TKSP_NTN.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.p_TKSP_NTN.Controls.Add(this.lblkXuatTKSP_NTN);
+            this.p_TKSP_NTN.Controls.Add(this.lblTongGiaTKSP_NTN);
+            this.p_TKSP_NTN.Controls.Add(this.label17);
+            this.p_TKSP_NTN.Controls.Add(this.dgvTKSP_NTN);
+            this.p_TKSP_NTN.Location = new System.Drawing.Point(168, 80);
+            this.p_TKSP_NTN.Name = "p_TKSP_NTN";
+            this.p_TKSP_NTN.Size = new System.Drawing.Size(915, 538);
+            this.p_TKSP_NTN.TabIndex = 21;
+            this.p_TKSP_NTN.Visible = false;
+            // 
+            // lblkXuatTKSP_NTN
+            // 
+            this.lblkXuatTKSP_NTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblkXuatTKSP_NTN.AutoSize = true;
+            this.lblkXuatTKSP_NTN.Location = new System.Drawing.Point(807, 443);
+            this.lblkXuatTKSP_NTN.Name = "lblkXuatTKSP_NTN";
+            this.lblkXuatTKSP_NTN.Size = new System.Drawing.Size(105, 19);
+            this.lblkXuatTKSP_NTN.TabIndex = 3;
+            this.lblkXuatTKSP_NTN.TabStop = true;
+            this.lblkXuatTKSP_NTN.Text = "Xuất thống kê";
+            // 
+            // lblTongGiaTKSP_NTN
+            // 
+            this.lblTongGiaTKSP_NTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblTongGiaTKSP_NTN.AutoSize = true;
+            this.lblTongGiaTKSP_NTN.ForeColor = System.Drawing.Color.Red;
+            this.lblTongGiaTKSP_NTN.Location = new System.Drawing.Point(82, 443);
+            this.lblTongGiaTKSP_NTN.Name = "lblTongGiaTKSP_NTN";
+            this.lblTongGiaTKSP_NTN.Size = new System.Drawing.Size(70, 19);
+            this.lblTongGiaTKSP_NTN.TabIndex = 2;
+            this.lblTongGiaTKSP_NTN.Text = "Tổng giá:";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 443);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(70, 19);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Tổng giá:";
+            // 
+            // dgvTKSP_NTN
+            // 
+            this.dgvTKSP_NTN.AllowUserToAddRows = false;
+            this.dgvTKSP_NTN.AllowUserToDeleteRows = false;
+            this.dgvTKSP_NTN.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvTKSP_NTN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTKSP_NTN.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvTKSP_NTN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTKSP_NTN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25});
+            this.dgvTKSP_NTN.Location = new System.Drawing.Point(3, 3);
+            this.dgvTKSP_NTN.Name = "dgvTKSP_NTN";
+            this.dgvTKSP_NTN.ReadOnly = true;
+            this.dgvTKSP_NTN.Size = new System.Drawing.Size(909, 425);
+            this.dgvTKSP_NTN.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "maHang";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Mã hàng";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "tenHang";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Tên hàng";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "thoiGianDat";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Thời gian";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "soLuongBan";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Số lượng bán";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "soLuongKhoBan";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Số lượng kho bán";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "soLuongTon";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Số lượng kho tổng";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "TongGiaBan";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Tổng giá bán";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "TongGia";
+            this.dataGridViewTextBoxColumn25.HeaderText = "Tổng giá";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.ReadOnly = true;
+            this.dataGridViewTextBoxColumn25.Visible = false;
+            // 
+            // pic_KCDL_TKSP
+            // 
+            this.pic_KCDL_TKSP.Image = ((System.Drawing.Image)(resources.GetObject("pic_KCDL_TKSP.Image")));
+            this.pic_KCDL_TKSP.Location = new System.Drawing.Point(168, 69);
+            this.pic_KCDL_TKSP.Name = "pic_KCDL_TKSP";
+            this.pic_KCDL_TKSP.Size = new System.Drawing.Size(916, 605);
+            this.pic_KCDL_TKSP.TabIndex = 22;
+            this.pic_KCDL_TKSP.TabStop = false;
             // 
             // ThongKe_GUI
             // 
@@ -1783,26 +2570,46 @@ namespace QLCHTAN
             this.grbTKTQ_Quy.PerformLayout();
             this.grb_TKTQ_Nam.ResumeLayout(false);
             this.tpTKNL.ResumeLayout(false);
-            this.grbTKHH_Q.ResumeLayout(false);
-            this.grbTKHH_Q.PerformLayout();
-            this.grbTKHH_NTN.ResumeLayout(false);
-            this.grbTKHH_MTG.ResumeLayout(false);
-            this.grbTKHH_MTG.PerformLayout();
             this.grbTKHH_CachThongKe.ResumeLayout(false);
             this.grbTKHH_CachThongKe.PerformLayout();
             this.p_TKHH_NTN.ResumeLayout(false);
             this.p_TKHH_NTN.PerformLayout();
+            this.p_KQ_TKHH_MTG.ResumeLayout(false);
+            this.p_KQ_TKHH_MTG.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTKHH_MTG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_TKHH_KCDL)).EndInit();
             this.p_KQ_TKHH_Q.ResumeLayout(false);
             this.p_KQ_TKHH_Q.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTKHH_Q)).EndInit();
             this.p_KQ_TKHH_NTN.ResumeLayout(false);
             this.p_KQ_TKHH_NTN.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTKHH_NTN)).EndInit();
-            this.p_KQ_TKHH_MTG.ResumeLayout(false);
-            this.p_KQ_TKHH_MTG.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTKHH_MTG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_TKHH_KCDL)).EndInit();
+            this.grbTKHH_NTN.ResumeLayout(false);
+            this.grbTKHH_MTG.ResumeLayout(false);
+            this.grbTKHH_MTG.PerformLayout();
+            this.grbTKHH_Q.ResumeLayout(false);
+            this.grbTKHH_Q.PerformLayout();
+            this.tpTKSP.ResumeLayout(false);
+            this.grbTKSP_NTN.ResumeLayout(false);
+            this.grbTKSP_TQ.ResumeLayout(false);
+            this.grbTKSP_TQ.PerformLayout();
+            this.grbTKSP_MTG.ResumeLayout(false);
+            this.grbTKSP_MTG.PerformLayout();
+            this.grbTKSP_CachThongKe.ResumeLayout(false);
+            this.grbTKSP_CachThongKe.PerformLayout();
+            this.p_TKSP_NTN_Chon.ResumeLayout(false);
+            this.p_TKSP_NTN_Chon.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.p_TKSP_MTG.ResumeLayout(false);
+            this.p_TKSP_MTG.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTKSP_MTG)).EndInit();
+            this.p_TKSP_TQ.ResumeLayout(false);
+            this.p_TKSP_TQ.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTKSP_TQ)).EndInit();
+            this.p_TKSP_NTN.ResumeLayout(false);
+            this.p_TKSP_NTN.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTKSP_NTN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_KCDL_TKSP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1944,5 +2751,69 @@ namespace QLCHTAN
         private System.Windows.Forms.CheckBox ckbTKHH_Q4;
         private System.Windows.Forms.DateTimePicker dtTKHH_Nam;
         private System.Windows.Forms.Button btnTTHH_Q;
+        private System.Windows.Forms.GroupBox grbTKSP_CachThongKe;
+        private System.Windows.Forms.RadioButton rdbTKSP_Q;
+        private System.Windows.Forms.RadioButton rdbTKSP_MTG;
+        private System.Windows.Forms.RadioButton rdbTKSP_NTN;
+        private System.Windows.Forms.Panel p_TKSP_NTN_Chon;
+        private System.Windows.Forms.RadioButton rdbTKSP_Y;
+        private System.Windows.Forms.RadioButton rdbTKSP_M;
+        private System.Windows.Forms.RadioButton rdbTKSP_D;
+        private System.Windows.Forms.GroupBox grbTKSP_MTG;
+        private System.Windows.Forms.Button btnTKSP_MTG;
+        private System.Windows.Forms.DateTimePicker dtTKSP_MTG_TG2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DateTimePicker dtTKSP_MTG_TG1;
+        private System.Windows.Forms.GroupBox grbTKSP_TQ;
+        private System.Windows.Forms.CheckBox ckbTKSP_Q1;
+        private System.Windows.Forms.CheckBox ckbTKSP_Q2;
+        private System.Windows.Forms.CheckBox ckbTKSP_Q3;
+        private System.Windows.Forms.CheckBox ckbTKSP_Q4;
+        private System.Windows.Forms.DateTimePicker dtTKSP_Nam;
+        private System.Windows.Forms.Button btnTKSP_TQ;
+        private System.Windows.Forms.GroupBox grbTKSP_NTN;
+        private System.Windows.Forms.Button btnTKSP_NTN;
+        private System.Windows.Forms.DateTimePicker dtTKSP_NTN;
+        private System.Windows.Forms.Panel p_TKSP_MTG;
+        private System.Windows.Forms.DataGridView dgvTKSP_MTG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.LinkLabel lbkXuatTKSP_MTG;
+        private System.Windows.Forms.Label lblTongGiaTKSP_MTG;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel p_TKSP_TQ;
+        private System.Windows.Forms.DataGridView dgvTKSP_TQ;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.LinkLabel lblkXuatTKSP_TQ;
+        private System.Windows.Forms.Label lblTongGiaTKSP_TQ;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel p_TKSP_NTN;
+        private System.Windows.Forms.LinkLabel lblkXuatTKSP_NTN;
+        private System.Windows.Forms.Label lblTongGiaTKSP_NTN;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.DataGridView dgvTKSP_NTN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.PictureBox pic_KCDL_TKSP;
     }
 }

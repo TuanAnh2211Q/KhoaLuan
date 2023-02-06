@@ -36,7 +36,7 @@ namespace QLCHTAN
         }
         public KhachHang_DTO khachHang_DTO()
         {
-            return new KhachHang_DTO(txtSDT.Text.Trim(), txtTenKhachHang.Text.Trim(),  GioiTinh.Trim(), txtDiaChi.Text.Trim(), txtGmail.Text.Trim(), rtbGhiChu.Text.Trim());
+            return new KhachHang_DTO(txtSDT.Text.Trim(), txtTenKhachHang.Text.Trim(),  GioiTinh.Trim(), txtDiaChi.Text.Trim(), txtGmail.Text.Trim(), rtbGhiChu.Text.Trim(),ccbLoaiKhach.SelectedValue.ToString());
         }
 
         #endregion
@@ -45,7 +45,10 @@ namespace QLCHTAN
         private void KhachHang_GUI_Load(object sender, EventArgs e)
         {
             btnLamMoi_Click(sender, e);
-     
+            ccbLoaiKhach.DataSource = khachhang_BUS.select_LoaiKhach_BUS();
+            ccbLoaiKhach.DisplayMember = "tenLoaiKhach";
+            ccbLoaiKhach.ValueMember = "maLoaiKhach";
+
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
@@ -126,6 +129,7 @@ namespace QLCHTAN
                 rtbGhiChu.Text = row.Cells["ghiChu"].Value.ToString();
                 txtMaKhachHang.Text = row.Cells["idKhachHang"].Value.ToString();
                 txtMaKhachHang.Enabled = false;
+                ccbLoaiKhach.SelectedValue = row.Cells["maLoaiKhach"].Value.ToString();
             }
         }
 

@@ -105,6 +105,8 @@ namespace QLCHTAN
             this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sqlDataAdapter1 = new Microsoft.Data.SqlClient.SqlDataAdapter();
+            this.label9 = new System.Windows.Forms.Label();
+            this.ccbLoaiKhach = new System.Windows.Forms.ComboBox();
             this.gbPhuongThuc.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panelKhachHang.SuspendLayout();
@@ -228,7 +230,7 @@ namespace QLCHTAN
             this.gbPhuongThuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbPhuongThuc.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbPhuongThuc.ForeColor = System.Drawing.Color.Red;
-            this.gbPhuongThuc.Location = new System.Drawing.Point(6, 304);
+            this.gbPhuongThuc.Location = new System.Drawing.Point(7, 328);
             this.gbPhuongThuc.Name = "gbPhuongThuc";
             this.gbPhuongThuc.Size = new System.Drawing.Size(393, 74);
             this.gbPhuongThuc.TabIndex = 2;
@@ -301,9 +303,9 @@ namespace QLCHTAN
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.rtxtGhiChu);
             this.panel5.Controls.Add(this.label11);
-            this.panel5.Location = new System.Drawing.Point(7, 384);
+            this.panel5.Location = new System.Drawing.Point(7, 408);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(392, 162);
+            this.panel5.Size = new System.Drawing.Size(392, 138);
             this.panel5.TabIndex = 20;
             // 
             // rtxtGhiChu
@@ -327,6 +329,8 @@ namespace QLCHTAN
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.ccbLoaiKhach);
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.pGioiTinh);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.txtEmail);
@@ -339,7 +343,7 @@ namespace QLCHTAN
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(6, 81);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(392, 204);
+            this.panel1.Size = new System.Drawing.Size(392, 241);
             this.panel1.TabIndex = 19;
             // 
             // pGioiTinh
@@ -1001,6 +1005,28 @@ namespace QLCHTAN
             this.ThanhTien.Name = "ThanhTien";
             this.ThanhTien.ReadOnly = true;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(5, 208);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(76, 17);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "Loại khách:";
+            // 
+            // ccbLoaiKhach
+            // 
+            this.ccbLoaiKhach.AllowDrop = true;
+            this.ccbLoaiKhach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.ccbLoaiKhach.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.ccbLoaiKhach.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ccbLoaiKhach.FormattingEnabled = true;
+            this.ccbLoaiKhach.Location = new System.Drawing.Point(84, 203);
+            this.ccbLoaiKhach.Name = "ccbLoaiKhach";
+            this.ccbLoaiKhach.Size = new System.Drawing.Size(284, 27);
+            this.ccbLoaiKhach.TabIndex = 31;
+            // 
             // Order_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -1124,5 +1150,7 @@ namespace QLCHTAN
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn donGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private System.Windows.Forms.ComboBox ccbLoaiKhach;
+        private System.Windows.Forms.Label label9;
     }
 }

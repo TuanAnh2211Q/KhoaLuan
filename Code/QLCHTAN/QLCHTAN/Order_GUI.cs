@@ -41,7 +41,7 @@ namespace QLCHTAN
         public static string ghiChu;
         public static string tongGia;
         public static DataTable ttdh;
-
+        public static string maLoaiKhach;
 
         public Order_GUI()
         {
@@ -50,7 +50,7 @@ namespace QLCHTAN
         #region Method
         public KhachHang_DTO khachHang_DTO()
         {
-            return new KhachHang_DTO(cbbSDT.Text.ToString().Trim(), txtTenKhach.Text.Trim(), GioiTinh.Trim(), txtDiaChi.Text.Trim(), txtEmail.Text.Trim(), rtxtGhiChu.Text.Trim());
+            return new KhachHang_DTO(cbbSDT.Text.ToString().Trim(), txtTenKhach.Text.Trim(), GioiTinh.Trim(), txtDiaChi.Text.Trim(), txtEmail.Text.Trim(), rtxtGhiChu.Text.Trim(),ccbLoaiKhach.SelectedValue.ToString());
         }
         public bool ktra_MonAn()
         {
@@ -138,6 +138,10 @@ namespace QLCHTAN
             cbbMaGiamGia.DisplayMember = "tenKhuyenMai";
             cbbMaGiamGia.ValueMember = "maKhuyenMai";
 
+            //Load loại khách
+            ccbLoaiKhach.DataSource = khachHang_BUS.select_LoaiKhach_BUS();
+            ccbLoaiKhach.DisplayMember = "tenLoaiKhach";
+            ccbLoaiKhach.ValueMember = "maLoaiKhach";
 
         }
 
@@ -166,6 +170,7 @@ namespace QLCHTAN
                             email = txtEmail.Text;
                             maLoaiDon = loaiDichVu;
                             ghiChu = rtxtGhiChu.Text;
+                            maLoaiKhach = ccbLoaiKhach.SelectedValue.ToString().Trim();
                             if (cbbMaGiamGia.SelectedValue != null)
                             {
                                 maKM = cbbMaGiamGia.SelectedValue.ToString();
@@ -270,7 +275,7 @@ namespace QLCHTAN
                 if (customerTable == null || customerTable.Rows.Count == 0)
                 {
                     clearData(sender, e);
-                    txtTenKhach.Enabled = pGioiTinh.Enabled = txtDiaChi.Enabled = txtEmail.Enabled = true;
+                    txtTenKhach.Enabled = pGioiTinh.Enabled = txtDiaChi.Enabled = txtEmail.Enabled=ccbLoaiKhach.Enabled = true;
                     return;
                 }
                 var customerRow = customerTable.Rows[0];
@@ -292,13 +297,14 @@ namespace QLCHTAN
                 rtxtGhiChu.Text = customerRow["ghiChu"].ToString();
                 if (khachHang_BUS.select_id_KhachHang_BUS(cbbSDT.Text.ToString().Trim()) >0)
                 {
-                    txtTenKhach.Enabled = pGioiTinh.Enabled = txtDiaChi.Enabled = txtEmail.Enabled = false;
+                    txtTenKhach.Enabled = pGioiTinh.Enabled = txtDiaChi.Enabled = txtEmail.Enabled =ccbLoaiKhach.Enabled= false;
                 }
                 else
                 {
                     clearData(sender, e);
                     txtTenKhach.Enabled = pGioiTinh.Enabled = txtDiaChi.Enabled = txtEmail.Enabled = true;
                 }
+                ccbLoaiKhach.SelectedValue = customerRow["maLoaiKhach"].ToString();
 
             }
         }
@@ -720,7 +726,7 @@ namespace QLCHTAN
                 if (khach == null || khach.Rows.Count == 0)
                 {
                     clearData(sender, e);
-                    txtTenKhach.Enabled = pGioiTinh.Enabled = txtDiaChi.Enabled = txtEmail.Enabled = true;
+                    txtTenKhach.Enabled = pGioiTinh.Enabled = txtDiaChi.Enabled = txtEmail.Enabled =ccbLoaiKhach.Enabled= true;
                     return;
                 }
             }
