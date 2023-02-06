@@ -602,6 +602,9 @@
     <EmbeddedResource Include="XuatThongKe_GUI.resx">
       <DependentUpon>XuatThongKe_GUI.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="dsMuaHang.xsc">
       <DependentUpon>dsMuaHang.xsd</DependentUpon>
     </None>
