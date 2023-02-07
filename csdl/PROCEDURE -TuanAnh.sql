@@ -454,7 +454,215 @@ and dh.thoiGianDat between @tg1 and @tg2
 
 ----------------------
 
-create PROCEDURE  select_NguyenLieuBan_Q
+alter proc select_HangHoa_TMH
+@maHang varchar(10)
+as
+if(@maHang='all')
+begin
+select tkmh.maHang,tkmh.tenHang,sum( tkmh.soLuongBan ) as soLuongBan,sum(tkmh.soLuongKhoBan )as soLuongKhoBan, sum(tkmh.soLuongTon) as soLuongTon,sum(tkmh.tongGiaBan) as tongGiaBan
+from
+(
+select tttpda.maThanhPhan as maHang,mh.tenHang as tenHang,(ttdh.soLuong*tttpda.soLuong) as soLuongBan, ttht.soLuongTon as soLuongTon, kb.soLuong as soLuongKhoBan,(ttdh.soLuong*tttpda.soLuong*donGia) as tongGiaBan,
+(
+select sum((ttdh.soLuong*tttpda.soLuong*donGia))
+from ThongTinDonHang ttdh , SanPham sp, ThongTinThanhPhanDoAn tttpda, MatHang mh, DonHang dh
+where ttdh.maSanPham=sp.maSanPham
+and ttdh.maDonHang=dh.maDonHang
+and mh.maHang=tttpda.maThanhPhan
+and sp.maSanPham=tttpda.maDoAn
+) as TongGia
+from ThongTinDonHang ttdh , SanPham sp, ThongTinThanhPhanDoAn tttpda, MatHang mh, DonHang dh, ThongTinHangTon ttht,KhoBan kb
+where ttdh.maSanPham=sp.maSanPham
+and ttdh.maDonHang=dh.maDonHang
+and mh.maHang=tttpda.maThanhPhan
+and sp.maSanPham=tttpda.maDoAn
+and tttpda.maThanhPhan=ttht.maHang
+and tttpda.maThanhPhan=kb.maHang
+
+union
+select nu.maNuoc as maHang,mh.tenHang as tenHang,ttdh.soLuong as soLuongBan, ttht.soLuongTon as soLuongTon, kb.soLuong as soLuongKhoBan,(ttdh.soLuong*donGia) as TongGiaBan,
+(
+select sum((ttdh.soLuong*donGia))
+from ThongTinDonHang ttdh , SanPham sp, NuocUong nu, MatHang mh, DonHang dh
+where ttdh.maSanPham=sp.maSanPham
+and ttdh.maDonHang=dh.maDonHang
+and mh.maHang=nu.maNuoc
+and sp.maSanPham=nu.maNuoc
+) as TongGia
+from ThongTinDonHang ttdh , SanPham sp, NuocUong nu, MatHang mh, DonHang dh, ThongTinHangTon ttht,KhoBan kb
+where ttdh.maSanPham=sp.maSanPham
+and ttdh.maDonHang=dh.maDonHang
+and mh.maHang=nu.maNuoc
+and sp.maSanPham=nu.maNuoc
+and nu.maNuoc=ttht.maHang
+and nu.maNuoc=kb.maHang
+) tkmh
+group by tkmh.maHang,tkmh.tenHang
+end
+else
+begin
+select tkmh.maHang,tkmh.tenHang,sum( tkmh.soLuongBan ) as soLuongBan,sum(tkmh.soLuongKhoBan )as soLuongKhoBan, sum(tkmh.soLuongTon) as soLuongTon,sum(tkmh.tongGiaBan) as tongGiaBan
+from
+(
+select tttpda.maThanhPhan as maHang,mh.tenHang as tenHang,(ttdh.soLuong*tttpda.soLuong) as soLuongBan, ttht.soLuongTon as soLuongTon, kb.soLuong as soLuongKhoBan,(ttdh.soLuong*tttpda.soLuong*donGia) as tongGiaBan,
+(
+select sum((ttdh.soLuong*tttpda.soLuong*donGia))
+from ThongTinDonHang ttdh , SanPham sp, ThongTinThanhPhanDoAn tttpda, MatHang mh, DonHang dh
+where ttdh.maSanPham=sp.maSanPham
+and ttdh.maDonHang=dh.maDonHang
+and mh.maHang=tttpda.maThanhPhan
+and sp.maSanPham=tttpda.maDoAn
+) as TongGia
+from ThongTinDonHang ttdh , SanPham sp, ThongTinThanhPhanDoAn tttpda, MatHang mh, DonHang dh, ThongTinHangTon ttht,KhoBan kb
+where ttdh.maSanPham=sp.maSanPham
+and ttdh.maDonHang=dh.maDonHang
+and mh.maHang=tttpda.maThanhPhan
+and sp.maSanPham=tttpda.maDoAn
+and tttpda.maThanhPhan=ttht.maHang
+and tttpda.maThanhPhan=kb.maHang
+
+union
+select nu.maNuoc as maHang,mh.tenHang as tenHang,ttdh.soLuong as soLuongBan, ttht.soLuongTon as soLuongTon, kb.soLuong as soLuongKhoBan,(ttdh.soLuong*donGia) as TongGiaBan,
+(
+select sum((ttdh.soLuong*donGia))
+from ThongTinDonHang ttdh , SanPham sp, NuocUong nu, MatHang mh, DonHang dh
+where ttdh.maSanPham=sp.maSanPham
+and ttdh.maDonHang=dh.maDonHang
+and mh.maHang=nu.maNuoc
+and sp.maSanPham=nu.maNuoc
+) as TongGia
+from ThongTinDonHang ttdh , SanPham sp, NuocUong nu, MatHang mh, DonHang dh, ThongTinHangTon ttht,KhoBan kb
+where ttdh.maSanPham=sp.maSanPham
+and ttdh.maDonHang=dh.maDonHang
+and mh.maHang=nu.maNuoc
+and sp.maSanPham=nu.maNuoc
+and nu.maNuoc=ttht.maHang
+and nu.maNuoc=kb.maHang
+) tkmh
+where  tkmh.maHang=@maHang
+group by tkmh.maHang,tkmh.tenHang
+end
+
+
+s--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+create proc select_LoaiKhach
+as
+	select * from LoaiKhachHang
+
+
+
+create proc select_TKSP_NTN
+@loai nvarchar(50), @ngay datetime
+as
+
+if(@loai='ngay')
+begin
+select TKSP.maSanPham, TKSP.tenSanPham, COALESCE(SUM( TKSP.soLuongBan),0) as soLuongBan, COALESCE(SUM(TKSP.tongGiaBan),0) as tongGiaBan
+from
+(
+SELECT ttdh.maDonHang as maDonHang, da.maDoAn as maSanPham, da.tenDoAn as tenSanPham ,COALESCE(SUM(ttdh.soLuong),0) as soLuongBan ,COALESCE(SUM(ttdh.thanhTien),0) as tongGiaBan 
+FROM DoAn da
+LEFT JOIN ThongTinDonHang ttdh
+ON da.maDoAn = ttdh.maSanPham
+GROUP BY da.maDoAn, da.tenDoAn,ttdh.maDonHang
+union
+SELECT ttdh.maDonHang as maDonHang,nu.maNuoc as maSanPham, nu.tenNuoc as tenSanPham ,COALESCE(SUM(ttdh.soLuong),0) as soLuongBan ,COALESCE(SUM(ttdh.thanhTien),0) as tongGiaBan 
+FROM NuocUong nu
+LEFT JOIN ThongTinDonHang ttdh
+ON nu.maNuoc = ttdh.maSanPham
+GROUP BY nu.maNuoc, nu.tenNuoc,ttdh.maDonHang
+)TKSP
+LEFT JOIN DonHang dh
+ON TKSP.maDonHang=dh.maDonHang
+where dh.thoiGianDat=@ngay
+Group by TKSP.maSanPham, TKSP.tenSanPham
+ORDER BY tongGiaBan DESC
+end
+
+else if(@loai='thang')
+begin
+select TKSP.maSanPham, TKSP.tenSanPham, COALESCE(SUM( TKSP.soLuongBan),0) as soLuongBan, COALESCE(SUM(TKSP.tongGiaBan),0) as tongGiaBan
+from
+(
+SELECT ttdh.maDonHang as maDonHang, da.maDoAn as maSanPham, da.tenDoAn as tenSanPham ,COALESCE(SUM(ttdh.soLuong),0) as soLuongBan ,COALESCE(SUM(ttdh.thanhTien),0) as tongGiaBan 
+FROM DoAn da
+LEFT JOIN ThongTinDonHang ttdh
+ON da.maDoAn = ttdh.maSanPham
+GROUP BY da.maDoAn, da.tenDoAn,ttdh.maDonHang
+union
+SELECT ttdh.maDonHang as maDonHang,nu.maNuoc as maSanPham, nu.tenNuoc as tenSanPham ,COALESCE(SUM(ttdh.soLuong),0) as soLuongBan ,COALESCE(SUM(ttdh.thanhTien),0) as tongGiaBan 
+FROM NuocUong nu
+LEFT JOIN ThongTinDonHang ttdh
+ON nu.maNuoc = ttdh.maSanPham
+GROUP BY nu.maNuoc, nu.tenNuoc,ttdh.maDonHang
+)TKSP
+LEFT JOIN DonHang dh
+ON TKSP.maDonHang=dh.maDonHang
+where MONTH(dh.thoiGianDat)=MONTH(@ngay) and YEAR(dh.thoiGianDat)=YEAR(@ngay)
+Group by TKSP.maSanPham, TKSP.tenSanPham
+ORDER BY tongGiaBan DESC
+end
+else if (@loai='nam')
+select TKSP.maSanPham, TKSP.tenSanPham, COALESCE(SUM( TKSP.soLuongBan),0) as soLuongBan, COALESCE(SUM(TKSP.tongGiaBan),0) as tongGiaBan
+from
+(
+SELECT ttdh.maDonHang as maDonHang, da.maDoAn as maSanPham, da.tenDoAn as tenSanPham ,COALESCE(SUM(ttdh.soLuong),0) as soLuongBan ,COALESCE(SUM(ttdh.thanhTien),0) as tongGiaBan 
+FROM DoAn da
+LEFT JOIN ThongTinDonHang ttdh
+ON da.maDoAn = ttdh.maSanPham
+GROUP BY da.maDoAn, da.tenDoAn,ttdh.maDonHang
+union
+SELECT ttdh.maDonHang as maDonHang,nu.maNuoc as maSanPham, nu.tenNuoc as tenSanPham ,COALESCE(SUM(ttdh.soLuong),0) as soLuongBan ,COALESCE(SUM(ttdh.thanhTien),0) as tongGiaBan 
+FROM NuocUong nu
+LEFT JOIN ThongTinDonHang ttdh
+ON nu.maNuoc = ttdh.maSanPham
+GROUP BY nu.maNuoc, nu.tenNuoc,ttdh.maDonHang
+)TKSP
+LEFT JOIN DonHang dh
+ON TKSP.maDonHang=dh.maDonHang
+where YEAR( dh.thoiGianDat)=YEAR(@ngay)
+Group by TKSP.maSanPham, TKSP.tenSanPham
+ORDER BY tongGiaBan DESC
+
+
+
+
+
+create proc select_TKSP_MTG
+@tg1 Datetime, @tg2 datetime
+as
+select TKSP.maSanPham, TKSP.tenSanPham, COALESCE(SUM( TKSP.soLuongBan),0) as soLuongBan, COALESCE(SUM(TKSP.tongGiaBan),0) as tongGiaBan
+from
+(
+SELECT ttdh.maDonHang as maDonHang, da.maDoAn as maSanPham, da.tenDoAn as tenSanPham ,COALESCE(SUM(ttdh.soLuong),0) as soLuongBan ,COALESCE(SUM(ttdh.thanhTien),0) as tongGiaBan 
+FROM DoAn da
+LEFT JOIN ThongTinDonHang ttdh
+ON da.maDoAn = ttdh.maSanPham
+GROUP BY da.maDoAn, da.tenDoAn,ttdh.maDonHang
+union
+SELECT ttdh.maDonHang as maDonHang,nu.maNuoc as maSanPham, nu.tenNuoc as tenSanPham ,COALESCE(SUM(ttdh.soLuong),0) as soLuongBan ,COALESCE(SUM(ttdh.thanhTien),0) as tongGiaBan 
+FROM NuocUong nu
+LEFT JOIN ThongTinDonHang ttdh
+ON nu.maNuoc = ttdh.maSanPham
+GROUP BY nu.maNuoc, nu.tenNuoc,ttdh.maDonHang
+)TKSP
+LEFT JOIN DonHang dh
+ON TKSP.maDonHang=dh.maDonHang
+where dh.thoiGianDat between @tg1 and @tg2
+Group by TKSP.maSanPham, TKSP.tenSanPham
+ORDER BY tongGiaBan DESC
+
+
+
+
+
+
+
+
+create PROCEDURE select_TKSP_TQ
 (
     @nam int,
     @quyList VARCHAR(max)
@@ -494,20 +702,27 @@ BEGIN
 
         IF CHARINDEX(CONVERT(VARCHAR(10), @quy), @quyList) > 0
         BEGIN
-            select tttpda.maThanhPhan,mh.tenHang,(ttdh.soLuong*tttpda.soLuong) as soLuong, (ttdh.soLuong*tttpda.soLuong*donGia) as TongGiaBan,
+         select TKSP.maSanPham, TKSP.tenSanPham, COALESCE(SUM( TKSP.soLuongBan),0) as soLuongBan, COALESCE(SUM(TKSP.tongGiaBan),0) as tongGiaBan
+from
 (
-select sum((ttdh.soLuong*tttpda.soLuong*donGia))
-from ThongTinDonHang ttdh , SanPham sp, ThongTinThanhPhanDoAn tttpda, MatHang mh, DonHang dh
-where ttdh.maSanPham=sp.maSanPham
-and ttdh.maDonHang=dh.maDonHang
-and mh.maHang=tttpda.maThanhPhan
-and sp.maSanPham=tttpda.maDoAn) as TongGia
-from ThongTinDonHang ttdh , SanPham sp, ThongTinThanhPhanDoAn tttpda, MatHang mh, DonHang dh
-where ttdh.maSanPham=sp.maSanPham
-and ttdh.maDonHang=dh.maDonHang
-and mh.maHang=tttpda.maThanhPhan
-and sp.maSanPham=tttpda.maDoAn
-and dh.thoiGianDat BETWEEN @tuNgay AND @denNgay;
+SELECT ttdh.maDonHang as maDonHang, da.maDoAn as maSanPham, da.tenDoAn as tenSanPham ,COALESCE(SUM(ttdh.soLuong),0) as soLuongBan ,COALESCE(SUM(ttdh.thanhTien),0) as tongGiaBan 
+FROM DoAn da
+LEFT JOIN ThongTinDonHang ttdh
+ON da.maDoAn = ttdh.maSanPham
+GROUP BY da.maDoAn, da.tenDoAn,ttdh.maDonHang
+union
+SELECT ttdh.maDonHang as maDonHang,nu.maNuoc as maSanPham, nu.tenNuoc as tenSanPham ,COALESCE(SUM(ttdh.soLuong),0) as soLuongBan ,COALESCE(SUM(ttdh.thanhTien),0) as tongGiaBan 
+FROM NuocUong nu
+LEFT JOIN ThongTinDonHang ttdh
+ON nu.maNuoc = ttdh.maSanPham
+GROUP BY nu.maNuoc, nu.tenNuoc,ttdh.maDonHang
+)TKSP
+LEFT JOIN DonHang dh
+ON TKSP.maDonHang=dh.maDonHang
+where dh.thoiGianDat between @tuNgay and @denNgay
+Group by TKSP.maSanPham, TKSP.tenSanPham
+ORDER BY tongGiaBan DESC
+
         END
 
         SET @quy = @quy + 1;
@@ -516,12 +731,62 @@ END
 
 
 
-exec select_NguyenLieuBan_Q '2023','4'
-
-
-
-
-
-create proc select_LoaiKhach
+create proc select_TKSP_TSP
+@sanpham nchar(10)
 as
-	select * from LoaiKhachHang
+if(@sanpham='all')
+begin
+ select TKSP.maSanPham, TKSP.tenSanPham, COALESCE(SUM( TKSP.soLuongBan),0) as soLuongBan, COALESCE(SUM(TKSP.tongGiaBan),0) as tongGiaBan
+from
+(
+SELECT  da.maDoAn as maSanPham, da.tenDoAn as tenSanPham ,COALESCE(SUM(ttdh.soLuong),0) as soLuongBan ,COALESCE(SUM(ttdh.thanhTien),0) as tongGiaBan 
+FROM DoAn da
+LEFT JOIN ThongTinDonHang ttdh
+ON da.maDoAn = ttdh.maSanPham
+GROUP BY da.maDoAn, da.tenDoAn
+union
+SELECT nu.maNuoc as maSanPham, nu.tenNuoc as tenSanPham ,COALESCE(SUM(ttdh.soLuong),0) as soLuongBan ,COALESCE(SUM(ttdh.thanhTien),0) as tongGiaBan 
+FROM NuocUong nu
+LEFT JOIN ThongTinDonHang ttdh
+ON nu.maNuoc = ttdh.maSanPham
+GROUP BY nu.maNuoc, nu.tenNuoc
+)TKSP
+Group by TKSP.maSanPham, TKSP.tenSanPham
+ORDER BY tongGiaBan DESC
+end
+else 
+begin
+ select TKSP.maSanPham, TKSP.tenSanPham, COALESCE(SUM( TKSP.soLuongBan),0) as soLuongBan, COALESCE(SUM(TKSP.tongGiaBan),0) as tongGiaBan
+from
+(
+SELECT  da.maDoAn as maSanPham, da.tenDoAn as tenSanPham ,COALESCE(SUM(ttdh.soLuong),0) as soLuongBan ,COALESCE(SUM(ttdh.thanhTien),0) as tongGiaBan 
+FROM DoAn da
+LEFT JOIN ThongTinDonHang ttdh
+ON da.maDoAn = ttdh.maSanPham
+GROUP BY da.maDoAn, da.tenDoAn
+union
+SELECT nu.maNuoc as maSanPham, nu.tenNuoc as tenSanPham ,COALESCE(SUM(ttdh.soLuong),0) as soLuongBan ,COALESCE(SUM(ttdh.thanhTien),0) as tongGiaBan 
+FROM NuocUong nu
+LEFT JOIN ThongTinDonHang ttdh
+ON nu.maNuoc = ttdh.maSanPham
+GROUP BY nu.maNuoc, nu.tenNuoc
+)TKSP
+where TKSP.maSanPham=@sanpham
+Group by TKSP.maSanPham, TKSP.tenSanPham
+ORDER BY tongGiaBan DESC
+end
+
+
+
+create proc select_SanPham
+as
+select maSanPham, tenSanPham
+from
+(select sp.maSanPham as maSanPham, da.tenDoAn as tenSanPham
+from SanPham sp, DoAn da
+where sp.maSanPham=da.maDoAn
+union
+select  sp.maSanPham as maSanPham, nu.tenNuoc as tenSanPham
+from SanPham sp, NuocUong nu
+where nu.maNuoc=sp.maSanPham
+)sanPham

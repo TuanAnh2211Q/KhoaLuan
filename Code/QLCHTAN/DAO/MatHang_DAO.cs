@@ -10,6 +10,14 @@ namespace DAO
 {
     public class MatHang_DAO:DataProvider
     {
+        public DataTable select_matHang_DAO()
+        {
+            Open();
+            SqlDataAdapter da = new SqlDataAdapter(" select_MatHang", conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
         public DataTable show_dsMatHang_DA0()
         {
             Open();

@@ -125,7 +125,7 @@ namespace QLCHTAN
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(83, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1339, 97);
+            this.label2.Size = new System.Drawing.Size(1077, 78);
             this.label2.TabIndex = 0;
             this.label2.Text = "QUẢN LÍ CỬA HÀNG THỨC ĂN NHANH";
             // 
@@ -151,7 +151,7 @@ namespace QLCHTAN
             this.label1.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(90, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 33);
+            this.label1.Size = new System.Drawing.Size(108, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhân viên:";
             // 
@@ -170,7 +170,7 @@ namespace QLCHTAN
             this.lblTenNhanVien.AutoSize = true;
             this.lblTenNhanVien.Location = new System.Drawing.Point(64, -15);
             this.lblTenNhanVien.Name = "lblTenNhanVien";
-            this.lblTenNhanVien.Size = new System.Drawing.Size(0, 23);
+            this.lblTenNhanVien.Size = new System.Drawing.Size(0, 18);
             this.lblTenNhanVien.TabIndex = 1;
             // 
             // lblTenTaiKhoanNhanVien
@@ -181,7 +181,7 @@ namespace QLCHTAN
             this.lblTenTaiKhoanNhanVien.ForeColor = System.Drawing.Color.Red;
             this.lblTenTaiKhoanNhanVien.Location = new System.Drawing.Point(90, 32);
             this.lblTenTaiKhoanNhanVien.Name = "lblTenTaiKhoanNhanVien";
-            this.lblTenTaiKhoanNhanVien.Size = new System.Drawing.Size(84, 33);
+            this.lblTenTaiKhoanNhanVien.Size = new System.Drawing.Size(65, 26);
             this.lblTenTaiKhoanNhanVien.TabIndex = 4;
             this.lblTenTaiKhoanNhanVien.Text = "label2";
             // 
@@ -190,7 +190,7 @@ namespace QLCHTAN
             this.lblkDoiMatKhau.AutoSize = true;
             this.lblkDoiMatKhau.Location = new System.Drawing.Point(222, 71);
             this.lblkDoiMatKhau.Name = "lblkDoiMatKhau";
-            this.lblkDoiMatKhau.Size = new System.Drawing.Size(117, 23);
+            this.lblkDoiMatKhau.Size = new System.Drawing.Size(91, 18);
             this.lblkDoiMatKhau.TabIndex = 2;
             this.lblkDoiMatKhau.TabStop = true;
             this.lblkDoiMatKhau.Text = "Đổi mật khẩu";
@@ -201,7 +201,7 @@ namespace QLCHTAN
             this.lblkDangXuat.AutoSize = true;
             this.lblkDangXuat.Location = new System.Drawing.Point(144, 71);
             this.lblkDangXuat.Name = "lblkDangXuat";
-            this.lblkDangXuat.Size = new System.Drawing.Size(91, 23);
+            this.lblkDangXuat.Size = new System.Drawing.Size(72, 18);
             this.lblkDangXuat.TabIndex = 3;
             this.lblkDangXuat.TabStop = true;
             this.lblkDangXuat.Text = "Đăng xuất";
@@ -430,9 +430,8 @@ namespace QLCHTAN
             this.panelChucNang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelChucNang.AutoScroll = true;
             this.panelChucNang.AutoSize = true;
-            this.panelChucNang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelChucNang.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelChucNang.Location = new System.Drawing.Point(342, 136);
             this.panelChucNang.Name = "panelChucNang";
             this.panelChucNang.Size = new System.Drawing.Size(1239, 475);
@@ -440,7 +439,7 @@ namespace QLCHTAN
             // 
             // GiaoDienNhanVien_GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;

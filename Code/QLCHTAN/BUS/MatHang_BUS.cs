@@ -53,5 +53,9 @@ namespace BUS
         {
             return mathang.select_DonGia_MatHang(maHang);
         }
+        public DataTable select_MatHang()
+        {
+            return mathang.select_matHang_DAO();
+        }
     }
 }
