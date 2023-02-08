@@ -186,5 +186,9 @@ namespace QLCHTAN
             this.Close();
         }
 
+        private void txtMucGiam_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
