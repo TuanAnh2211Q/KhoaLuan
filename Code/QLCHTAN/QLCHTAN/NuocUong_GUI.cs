@@ -45,6 +45,7 @@ namespace QLCHTAN
             cbbNuoc.DataSource = mathang.show_dsMatHang_Nuoc_BUS();
             cbbNuoc.DisplayMember = "tenHang";
             cbbNuoc.ValueMember = "maHang";
+            picAnhNuoc.Image =null;
         }
 
         private void dgvNuocUong_CellClick(object sender, DataGridViewCellEventArgs e)

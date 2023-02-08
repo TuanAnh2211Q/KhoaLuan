@@ -29,8 +29,8 @@ namespace QLCHTAN
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KhuyenMai_GUI));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -39,6 +39,10 @@ namespace QLCHTAN
             this.txtMucGiam = new System.Windows.Forms.TextBox();
             this.txtTenKhuyenMai = new System.Windows.Forms.TextBox();
             this.dgvThongTinKhuyenMai = new System.Windows.Forms.DataGridView();
+            this.maKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maLoaiKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mucGiam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -48,10 +52,6 @@ namespace QLCHTAN
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblkThoat = new System.Windows.Forms.LinkLabel();
-            this.maKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maLoaiKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mucGiam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinKhuyenMai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -64,7 +64,7 @@ namespace QLCHTAN
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(514, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(272, 33);
+            this.label1.Size = new System.Drawing.Size(341, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách khuyến mãi";
             // 
@@ -75,7 +75,7 @@ namespace QLCHTAN
             this.label2.Location = new System.Drawing.Point(5, 34);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 15);
+            this.label2.Size = new System.Drawing.Size(123, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã khuyến mãi:";
             // 
@@ -86,7 +86,7 @@ namespace QLCHTAN
             this.label5.Location = new System.Drawing.Point(2, 118);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 15);
+            this.label5.Size = new System.Drawing.Size(87, 21);
             this.label5.TabIndex = 4;
             this.label5.Text = "Mức giảm:";
             // 
@@ -97,7 +97,7 @@ namespace QLCHTAN
             this.label6.Location = new System.Drawing.Point(2, 64);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 15);
+            this.label6.Size = new System.Drawing.Size(126, 21);
             this.label6.TabIndex = 5;
             this.label6.Text = "Tên khuyến mãi:";
             // 
@@ -107,7 +107,7 @@ namespace QLCHTAN
             this.txtMaKhuyenMai.Location = new System.Drawing.Point(98, 31);
             this.txtMaKhuyenMai.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaKhuyenMai.Name = "txtMaKhuyenMai";
-            this.txtMaKhuyenMai.Size = new System.Drawing.Size(237, 23);
+            this.txtMaKhuyenMai.Size = new System.Drawing.Size(237, 27);
             this.txtMaKhuyenMai.TabIndex = 6;
             // 
             // txtMucGiam
@@ -117,8 +117,9 @@ namespace QLCHTAN
             this.txtMucGiam.Margin = new System.Windows.Forms.Padding(2);
             this.txtMucGiam.MaxLength = 4;
             this.txtMucGiam.Name = "txtMucGiam";
-            this.txtMucGiam.Size = new System.Drawing.Size(237, 23);
+            this.txtMucGiam.Size = new System.Drawing.Size(237, 27);
             this.txtMucGiam.TabIndex = 8;
+            this.txtMucGiam.TextChanged += new System.EventHandler(this.txtMucGiam_TextChanged);
             this.txtMucGiam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMucGiam_KeyPress);
             // 
             // txtTenKhuyenMai
@@ -127,7 +128,7 @@ namespace QLCHTAN
             this.txtTenKhuyenMai.Location = new System.Drawing.Point(98, 62);
             this.txtTenKhuyenMai.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenKhuyenMai.Name = "txtTenKhuyenMai";
-            this.txtTenKhuyenMai.Size = new System.Drawing.Size(236, 23);
+            this.txtTenKhuyenMai.Size = new System.Drawing.Size(236, 27);
             this.txtTenKhuyenMai.TabIndex = 9;
             // 
             // dgvThongTinKhuyenMai
@@ -149,9 +150,45 @@ namespace QLCHTAN
             this.dgvThongTinKhuyenMai.Margin = new System.Windows.Forms.Padding(2);
             this.dgvThongTinKhuyenMai.Name = "dgvThongTinKhuyenMai";
             this.dgvThongTinKhuyenMai.ReadOnly = true;
+            this.dgvThongTinKhuyenMai.RowHeadersWidth = 51;
             this.dgvThongTinKhuyenMai.Size = new System.Drawing.Size(590, 156);
             this.dgvThongTinKhuyenMai.TabIndex = 12;
             this.dgvThongTinKhuyenMai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinKhuyenMai_CellClick);
+            // 
+            // maKhuyenMai
+            // 
+            this.maKhuyenMai.DataPropertyName = "maKhuyenMai";
+            this.maKhuyenMai.HeaderText = "Mã khuyến mãi";
+            this.maKhuyenMai.MinimumWidth = 6;
+            this.maKhuyenMai.Name = "maKhuyenMai";
+            this.maKhuyenMai.ReadOnly = true;
+            // 
+            // tenKhuyenMai
+            // 
+            this.tenKhuyenMai.DataPropertyName = "tenKhuyenMai";
+            this.tenKhuyenMai.HeaderText = "Tên khuyến mãi";
+            this.tenKhuyenMai.MinimumWidth = 6;
+            this.tenKhuyenMai.Name = "tenKhuyenMai";
+            this.tenKhuyenMai.ReadOnly = true;
+            // 
+            // maLoaiKhuyenMai
+            // 
+            this.maLoaiKhuyenMai.DataPropertyName = "maLoaiKhuyenMai";
+            this.maLoaiKhuyenMai.HeaderText = "Loại khuyến mãi";
+            this.maLoaiKhuyenMai.MinimumWidth = 6;
+            this.maLoaiKhuyenMai.Name = "maLoaiKhuyenMai";
+            this.maLoaiKhuyenMai.ReadOnly = true;
+            // 
+            // mucGiam
+            // 
+            this.mucGiam.DataPropertyName = "mucGiam";
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.mucGiam.DefaultCellStyle = dataGridViewCellStyle1;
+            this.mucGiam.HeaderText = "Mức giảm";
+            this.mucGiam.MinimumWidth = 6;
+            this.mucGiam.Name = "mucGiam";
+            this.mucGiam.ReadOnly = true;
             // 
             // label7
             // 
@@ -160,7 +197,7 @@ namespace QLCHTAN
             this.label7.Location = new System.Drawing.Point(2, 92);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 15);
+            this.label7.Size = new System.Drawing.Size(130, 21);
             this.label7.TabIndex = 13;
             this.label7.Text = "Loại khuyến mãi:";
             // 
@@ -231,7 +268,7 @@ namespace QLCHTAN
             this.cbbLoaiKhuyenMai.Location = new System.Drawing.Point(98, 89);
             this.cbbLoaiKhuyenMai.Margin = new System.Windows.Forms.Padding(2);
             this.cbbLoaiKhuyenMai.Name = "cbbLoaiKhuyenMai";
-            this.cbbLoaiKhuyenMai.Size = new System.Drawing.Size(237, 23);
+            this.cbbLoaiKhuyenMai.Size = new System.Drawing.Size(237, 27);
             this.cbbLoaiKhuyenMai.TabIndex = 22;
             // 
             // pictureBox1
@@ -273,46 +310,15 @@ namespace QLCHTAN
             this.lblkThoat.AutoSize = true;
             this.lblkThoat.Location = new System.Drawing.Point(365, 43);
             this.lblkThoat.Name = "lblkThoat";
-            this.lblkThoat.Size = new System.Drawing.Size(39, 15);
+            this.lblkThoat.Size = new System.Drawing.Size(52, 21);
             this.lblkThoat.TabIndex = 25;
             this.lblkThoat.TabStop = true;
             this.lblkThoat.Text = "Thoát";
             this.lblkThoat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblkThoat_LinkClicked);
             // 
-            // maKhuyenMai
-            // 
-            this.maKhuyenMai.DataPropertyName = "maKhuyenMai";
-            this.maKhuyenMai.HeaderText = "Mã khuyến mãi";
-            this.maKhuyenMai.Name = "maKhuyenMai";
-            this.maKhuyenMai.ReadOnly = true;
-            // 
-            // tenKhuyenMai
-            // 
-            this.tenKhuyenMai.DataPropertyName = "tenKhuyenMai";
-            this.tenKhuyenMai.HeaderText = "Tên khuyến mãi";
-            this.tenKhuyenMai.Name = "tenKhuyenMai";
-            this.tenKhuyenMai.ReadOnly = true;
-            // 
-            // maLoaiKhuyenMai
-            // 
-            this.maLoaiKhuyenMai.DataPropertyName = "maLoaiKhuyenMai";
-            this.maLoaiKhuyenMai.HeaderText = "Loại khuyến mãi";
-            this.maLoaiKhuyenMai.Name = "maLoaiKhuyenMai";
-            this.maLoaiKhuyenMai.ReadOnly = true;
-            // 
-            // mucGiam
-            // 
-            this.mucGiam.DataPropertyName = "mucGiam";
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.mucGiam.DefaultCellStyle = dataGridViewCellStyle3;
-            this.mucGiam.HeaderText = "Mức giảm";
-            this.mucGiam.Name = "mucGiam";
-            this.mucGiam.ReadOnly = true;
-            // 
             // KhuyenMai_GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(969, 228);
