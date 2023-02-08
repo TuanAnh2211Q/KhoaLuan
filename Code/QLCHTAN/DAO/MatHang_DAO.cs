@@ -13,7 +13,7 @@ namespace DAO
         public DataTable select_matHang_DAO()
         {
             Open();
-            SqlDataAdapter da = new SqlDataAdapter(" select_MatHang", conn);
+            SqlDataAdapter da = new SqlDataAdapter("select_MatHang", conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;

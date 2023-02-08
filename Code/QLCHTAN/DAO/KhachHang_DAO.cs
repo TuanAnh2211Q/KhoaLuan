@@ -152,17 +152,6 @@ namespace DAO
        
         }
 
-        public DataTable sort_KhachHang_DAO(int loc)
-        {
-            Open();
-            SqlDataAdapter da = new SqlDataAdapter("sort_khachHang", conn);
-            da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            da.SelectCommand.Parameters.Add("@loaiKhach", SqlDbType.Int).Value = loc;
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            return dt;
-
-        }
 
         public DataTable select_LoaiKhach_DAO()
         {

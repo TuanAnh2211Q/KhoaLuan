@@ -51,7 +51,7 @@ namespace QLCHTAN
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
                 throw;
             }
         }
