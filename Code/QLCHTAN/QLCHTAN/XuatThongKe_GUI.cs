@@ -69,7 +69,7 @@ namespace QLCHTAN
                 TextObject tongDT = (TextObject)rpt_XuatTKDT_TQ.ReportDefinition.Sections[4].ReportObjects["txtTongDoanhThu"];
                 foreach (DataRow r in tb.Rows)
                 {
-                    decimal tDT = tb.AsEnumerable().Sum(row => r.Field<decimal>("tongDoanhThu"));
+                    decimal tDT = tb.AsEnumerable().Select(row => row.Field<decimal>("tongDoanhThu")).Distinct().Sum();
                     tongDT.Text = tDT.ToString("#,##0.000 VNĐ");
                 }
                 crvXuatThongKe.ReportSource = rpt_XuatTKDT_TQ;

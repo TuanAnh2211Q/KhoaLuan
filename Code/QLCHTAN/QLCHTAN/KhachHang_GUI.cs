@@ -185,21 +185,6 @@ namespace QLCHTAN
             }    
         }
 
-        private void cbbTieuChiLoc_SelectedValueChanged(object sender, EventArgs e)
-        {
-            if(cbbTieuChiLoc.SelectedItem.ToString()=="Khách hàng thân thiết")
-            {
-                dgvThongTinKhachHang.DataSource = khachhang_BUS.sort_KhachHang_BUS(1);
-            }    
-            else if (cbbTieuChiLoc.SelectedItem.ToString()=="Khách hàng phổ thông")
-            {
-                dgvThongTinKhachHang.DataSource = khachhang_BUS.sort_KhachHang_BUS(0);
-            }
-            else
-            {
-                dgvThongTinKhachHang.DataSource = khachhang_BUS.show_dsKhachHang_BUS();
-            }    
-
-        }
+    
     }
 }

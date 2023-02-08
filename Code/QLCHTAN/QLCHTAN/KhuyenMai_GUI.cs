@@ -40,7 +40,7 @@ namespace QLCHTAN
             else
             {
                 float f = float.Parse(txtMucGiam.Text.Trim());
-                 mucGiam= (float)Math.Round(f * 100f) / 100f;
+                 mucGiam= (float)Math.Round(f,3);
             }    
             return new KhuyenMai_DTO(txtMaKhuyenMai.Text.Trim(), txtTenKhuyenMai.Text.Trim(), cbbLoaiKhuyenMai.SelectedValue.ToString(),mucGiam);
         }
@@ -176,7 +176,7 @@ namespace QLCHTAN
 
         private void txtMucGiam_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar)&&!(e.KeyChar.ToString()==","))
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar)&&!(e.KeyChar.ToString()=="."))
                 e.Handled = true;
         }
 

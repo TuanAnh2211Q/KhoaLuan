@@ -250,7 +250,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLTAN_DBS_WEB.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\QuanLyNguoiDungModel.cs" />
     <Compile Include="Models\SanPham.cs">
       <DependentUpon>QLTAN_DBS_WEB.tt</DependentUpon>
     </Compile>
