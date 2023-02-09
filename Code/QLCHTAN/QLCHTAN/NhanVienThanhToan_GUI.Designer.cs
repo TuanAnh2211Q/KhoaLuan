@@ -104,7 +104,6 @@ namespace QLCHTAN
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(414, 36);
             this.txtTaiKhoan.TabIndex = 21;
-            this.txtTaiKhoan.Text = "NV002";
             this.txtTaiKhoan.Click += new System.EventHandler(this.txtTaiKhoan_Click);
             // 
             // panel4
@@ -166,7 +165,6 @@ namespace QLCHTAN
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(369, 36);
             this.txtMatKhau.TabIndex = 22;
-            this.txtMatKhau.Text = "1";
             this.txtMatKhau.Click += new System.EventHandler(this.txtMatKhau_Click);
             // 
             // panel3

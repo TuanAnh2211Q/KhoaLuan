@@ -36,6 +36,9 @@ namespace QLCHTAN
             // crvInHoaDon
             // 
             this.crvInHoaDon.ActiveViewIndex = -1;
+            this.crvInHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.crvInHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crvInHoaDon.Cursor = System.Windows.Forms.Cursors.Default;
             this.crvInHoaDon.DisplayStatusBar = false;
@@ -63,10 +66,10 @@ namespace QLCHTAN
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblkThoat);
             this.Controls.Add(this.crvInHoaDon);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InHoaDon_GUI";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InHoaDon_GUI";
+            this.Text = "In hóa đơn";
             this.Load += new System.EventHandler(this.InHoaDon_GUI_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
