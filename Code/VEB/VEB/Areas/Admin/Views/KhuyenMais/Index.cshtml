@@ -1,0 +1,80 @@
+﻿@model IEnumerable<VEB.Models.KhuyenMai>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h2>Quản lí khuyến mãi</h2>
+
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-6">
+                <strong class="text-uppercase text-danger">Danh sách khuyến mãi</strong>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-3">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Tên khuyến mãi</th>
+                    <th>Loại khuyến mãi</th>
+                    <th>Mức giảm</th>
+                    <th style="width:400px;" class="text-center">Chức năng</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+
+                    <tr>
+                        <td>@item.tenKhuyenMai</td>
+                        <td>@item.LoaiKhuyenMai.tenLoaiKhuyenMai</td>
+                    
+                        <td>@item.mucGiam</td>
+               
+
+                        <td style="width:180px;" class="text-center">
+                            <a href="@Url.Action("Create","KhuyenMais")" class="btn btn-success">Thêm</a>
+                            <a href="@Url.Action("Edit","KhuyenMais",new { @maKm = item.maKhuyenMai})" class="btn btn-success">Chỉnh sửa</a>
+                            <a href="@Url.Action("Details","KhuyenMais",new { @maKm = item.maKhuyenMai})" class="btn btn-success">Xem</a>
+                            <a href="@Url.Action("Delete","KhuyenMais",new { @maKm = item.maKhuyenMai})" class="btn btn-danger">Xóa</a>
+
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

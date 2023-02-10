@@ -1,0 +1,57 @@
+﻿@model VEB.Models.KhuyenMai
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<h3>Xác nhận muốn xóa @Html.DisplayFor(model => model.tenKhuyenMai) ?
+</h3>
+<div>
+    <hr />
+
+    <h2>Thông tin khuyến mãi</h2>
+
+    <div class="py-5">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Tên khuyến mãi</th>
+                    <th>Loại khuyến mãi</th>
+                    <th>Mức giảm</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => model.tenKhuyenMai)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.LoaiKhuyenMai.tenLoaiKhuyenMai)
+                    </td>
+
+
+                    <td>
+                        @Html.DisplayFor(model => model.mucGiam)
+                    </td>
+
+
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-success" />
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,67 @@
+﻿@model VEB.Models.NuocUong
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NuocUong</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MatHang.tenHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatHang.tenHang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SanPham.maLoaiSanPham)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SanPham.maLoaiSanPham)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tenNuoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenNuoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.donViBan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.donViBan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.giaBanNuoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.giaBanNuoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HinhURL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maNuoc }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

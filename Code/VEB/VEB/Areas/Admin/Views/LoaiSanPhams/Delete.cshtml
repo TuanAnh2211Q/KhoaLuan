@@ -1,0 +1,41 @@
+﻿@model VEB.Models.LoaiSanPham
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h3>Xác nhận xóa loại sản phẩm?</h3>
+<div>
+    <hr />
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>
+                Mã loại sản phẩm
+            </th>
+            <th>
+                Tên loại sản phẩm
+            </th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.maLoaiSanPham)
+
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.tenLoaiSanPham)
+
+            </td>
+        </tr>
+    </table>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default bg-danger" />
+             @Html.ActionLink("Back to List", "Index") 
+        </div>
+    }
+</div>

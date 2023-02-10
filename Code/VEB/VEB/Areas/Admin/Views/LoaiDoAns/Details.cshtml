@@ -1,0 +1,27 @@
+﻿@model VEB.Models.LoaiDoAn
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LoaiDoAn</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tenLoaiDoAn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenLoaiDoAn)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maLoaiDoAn }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
