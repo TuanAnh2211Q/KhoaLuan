@@ -1,0 +1,52 @@
+﻿@model IEnumerable<VEB.Models.LoaiSanPham>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-6">
+                <strong class="text-uppercase text-danger">Danh sách sản phẩm</strong>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-3">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Mã loại sản phẩm</th>
+                    <th>Tên loại sản phẩm</th>
+                    <th>Liên kết</th>
+                    <th style="width:400px;" class="text-center">Chức năng</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+
+                <tr>
+                    <td>@item.maLoaiSanPham</td>
+                    <td>@item.tenLoaiSanPham</td>
+                    <td>
+                        <a href="~/san-pham/@item.maLoaiSanPham">Sản phẩm mã loại @item.maLoaiSanPham</a>
+                    </td>
+                    <td style="width:180px;" class="text-center">
+                        <a href="@Url.Action("Create","LoaiSanPhams")" class="btn btn-success" >Thêm</a>
+                        <a href="@Url.Action("Edit","LoaiSanPhams",new { @maLoaiSanPham = item.maLoaiSanPham })" class="btn btn-success">Chỉnh sửa</a>
+                        <a href="@Url.Action("Details","LoaiSanPhams",new { @maLoaiSanPham = item.maLoaiSanPham })" class="btn btn-success">Xem</a>
+                        <a href="@Url.Action("Delete","LoaiSanPhams",new { @maLoaiSanPham = item.maLoaiSanPham })" class="btn btn-danger">Xóa</a>
+
+                    </td>
+
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+

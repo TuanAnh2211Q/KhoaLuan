@@ -1,0 +1,54 @@
+﻿@model IEnumerable<VEB.Models.SanPham>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.maSanPham)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiSanPham.tenLoaiSanPham)
+        </th>
+        <th>
+            <a> Tên sản phẩm</a>
+            @*@Html.DisplayNameFor(model => model.DoAn.tenDoAn)/ @Html.DisplayNameFor(model => model.NuocUong.tenNuoc)*@
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.LoaiSanPham.tenLoaiSanPham)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.maSanPham)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LoaiSanPham.tenLoaiSanPham)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DoAn.tenDoAn)
+        @Html.DisplayFor(modelItem => item.NuocUong.tenNuoc)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.maSanPham }) |
+        @Html.ActionLink("Details", "Details", new { id = item.maSanPham }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.maSanPham })
+    </td>
+</tr>
+}
+
+</table>

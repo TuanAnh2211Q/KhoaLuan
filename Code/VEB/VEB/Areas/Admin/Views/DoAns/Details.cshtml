@@ -1,0 +1,59 @@
+﻿@model VEB.Models.DoAn
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DoAn</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LoaiDoAn.tenLoaiDoAn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoaiDoAn.tenLoaiDoAn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SanPham.maLoaiSanPham)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SanPham.maLoaiSanPham)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThongTinDoAn.donViBan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThongTinDoAn.donViBan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tenDoAn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenDoAn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HinhURL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maDoAn }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

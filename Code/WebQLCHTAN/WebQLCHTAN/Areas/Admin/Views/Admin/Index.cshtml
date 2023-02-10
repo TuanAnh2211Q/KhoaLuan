@@ -4,4 +4,164 @@
     Layout = "~/Areas/Admin/Views/Shared/QuanLyLayout.cshtml";
 }
 
+<div class="row" style="margin-top: 50px;">
+
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1" style="font-size: 20px;">
+                            <a href="@Url.Action("ThemDanhMuc", "QuanLyDanhMuc")" style="color: #3582ff">Chức Năng</a>
+                        </div>
+                        <div class="h5 mb-0 text-gray-800" style="font-size: 30px; font-weight: 500;">@ViewBag.QuanLyDanhMuc</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fa-sharp fa-solid fa-folder-open text-gray-300 fa-2x" style="color: #3582ff"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1" style="font-size: 20px;">
+                            @*<a href="#" style="color: #f75153;">Sản Phẩm</a>*@
+                            <a href="@Url.Action("ThemSanPham", "QuanLySanPham")" style="color: #f75153;">Sản Phẩm</a>
+                        </div>
+                        <div class="h5 mb-0 text-gray-800" style="font-size: 30px; font-weight: 500;">@ViewBag.SanPham</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fa-solid fa-burger fa-2x text-gray-300" style="color: #f75153;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1" style="font-size: 20px; color: #3582ff">
+                            <a href="#" style="color: #3582ff;">Tổng Đơn Hàng</a>
+                        </div>
+                        <div class="h5 mb-0 text-gray-800" style="font-size: 30px; font-weight: 500;">@ViewBag.TongDon</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-list fa-2x text-gray-300" style="color: #3582ff"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Pending Requests Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1" style="font-size: 20px;">
+                            <a href="#" style="color: #f75153;">Đơn Giao Hàng</a>
+                        </div>
+                        <div class="h5 mb-0 text-gray-800" style="font-size: 30px; font-weight: 500;">@ViewBag.GiaoHang</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-car fa-2x text-gray-300" style="color: #f75153;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1" style="font-size: 20px;">
+                            <a href="#" style="color: #f75153;">Chờ Xử  Lý</a>
+                        </div>
+                        <div class="h5 mb-0 text-gray-800" style="font-size: 30px; font-weight: 500;">@ViewBag.ChoXuLy</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-pencil fa-2x text-gray-300" style="color: #f75153;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1" style="font-size: 20px;">
+                            <a href="#" style="color: #3582ff">Khách Hàng</a>
+                        </div>
+                        <div class="h5 mb-0 text-gray-800" style="font-size: 30px; font-weight: 500;">@ViewBag.KhachHang</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-user fa-2x text-gray-300" style="color: #3582ff"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pending Requests Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1" style="font-size: 20px;">
+                            <a href="#" style="color: #f75153;">Đánh Giá</a>
+                        </div>
+                        <div class="h5 mb-0 text-gray-800" style="font-size: 30px; font-weight: 500;">@ViewBag.DanhGia</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-comments fa-2x text-gray-300" style="color: #f75153;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1" style="font-size: 20px;">
+                            <a href="#" style="color: #3582ff">Doanh Thu</a>
+                        </div>
+                        <div class="h5 mb-0 text-gray-800" style="font-size: 30px; font-weight: 500;">$@ViewBag.DoanhThu</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fa-solid fa-money text-gray-300" style="font-size: 30px; color: #3582ff;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
 

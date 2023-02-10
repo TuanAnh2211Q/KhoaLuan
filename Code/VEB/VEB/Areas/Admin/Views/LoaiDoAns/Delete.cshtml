@@ -1,0 +1,39 @@
+﻿@model VEB.Models.LoaiDoAn
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="card">
+        <div class="card-header">
+            <h4>Xóa loại đồ ăn</h4>
+        </div>
+
+        <div class="card-body">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div>
+                <h6 class="text-success">Xác nhận xóa loại đồ ăn @Model.maLoaiDoAn ?</h6>
+            </div>
+
+            <div>
+                <h6 class="text-success">Tên loại đồ ăn: @Model.tenLoaiDoAn</h6>
+            </div>
+        </div>
+
+
+        <div class="card-footer">
+            <div class=" text-end">
+                <input type="submit" value="Xác nhận" class="btn btn-success" />
+                <b></b>
+                <a href="@Url.Action("Index","LoaiDoAns")">Quay lại</a>
+            </div>
+        </div>
+    </div>
+}

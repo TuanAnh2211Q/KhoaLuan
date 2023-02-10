@@ -1,0 +1,64 @@
+﻿@model IEnumerable<VEB.Models.NuocUong>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MatHang.tenHang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SanPham.maLoaiSanPham)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tenNuoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.donViBan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.giaBanNuoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HinhURL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MatHang.tenHang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SanPham.maLoaiSanPham)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tenNuoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.donViBan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.giaBanNuoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HinhURL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.maNuoc }) |
+            @Html.ActionLink("Details", "Details", new { id=item.maNuoc }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.maNuoc })
+        </td>
+    </tr>
+}
+
+</table>

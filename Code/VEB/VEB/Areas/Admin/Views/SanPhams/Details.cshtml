@@ -1,0 +1,43 @@
+﻿@model VEB.Models.SanPham
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SanPham</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DoAn.maLoaiDoAn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoAn.maLoaiDoAn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoaiSanPham.tenLoaiSanPham)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoaiSanPham.tenLoaiSanPham)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NuocUong.tenNuoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NuocUong.tenNuoc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maSanPham }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

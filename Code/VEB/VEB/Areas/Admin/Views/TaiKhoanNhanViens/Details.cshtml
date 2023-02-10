@@ -1,0 +1,58 @@
+﻿@model VEB.Models.TaiKhoanNhanVien
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thông tin tài khoản nhân viên</h2>
+
+<div class="card-body p-3">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Tên nhân viên</th>
+                <th>Tên tài khoản</th>
+                <th>Mật khẩu</th>
+                <th>Quyền:</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.NhanVien.tenNhanVien)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.tenTaiKhoan)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.matKhau)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.PhanQuyen.tenQuyen)
+
+                </td>
+
+
+
+
+
+
+            </tr>
+
+        </tbody>
+    </table>
+
+    <div>
+
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</div>
+
+
+
+
+

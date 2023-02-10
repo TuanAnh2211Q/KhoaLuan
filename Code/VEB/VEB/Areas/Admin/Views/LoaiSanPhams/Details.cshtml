@@ -1,0 +1,39 @@
+﻿@model VEB.Models.LoaiSanPham
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Thông tin loại sản phẩm</h4>
+    <hr />
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>
+                Mã loại sản phẩm
+            </th>
+            <th>
+                Tên loại sản phẩm
+            </th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.maLoaiSanPham)
+
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.tenLoaiSanPham)
+
+            </td>
+        </tr>
+    </table>
+   
+   
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maLoaiSanPham }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
