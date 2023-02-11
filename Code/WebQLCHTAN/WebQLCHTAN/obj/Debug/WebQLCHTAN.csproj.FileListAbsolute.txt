@@ -124,3 +124,5 @@ C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\WebQLC
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\WebQLCHTAN\WebQLCHTAN\obj\Debug\WebQLCHTAN.pdb
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\WebQLCHTAN\WebQLCHTAN\bin\EntityFramework.SqlServer.dll
 C:\Users\tuana\OneDrive\Documents\Khóa luận\KhoaLuan2022\KhoaLuan\Code\WebQLCHTAN\WebQLCHTAN\bin\EntityFramework.SqlServer.xml
+D:\KLTN2022\Code\WebQLCHTAN\WebQLCHTAN\bin\EntityFramework.SqlServer.dll
+D:\KLTN2022\Code\WebQLCHTAN\WebQLCHTAN\bin\EntityFramework.SqlServer.xml
