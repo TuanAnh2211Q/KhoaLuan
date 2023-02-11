@@ -21,6 +21,11 @@ namespace VEB.Areas.Admin.Controllers
           
             return View(doAns.ToList());
         }
+        public ActionResult list_DoAnTheoLoai(string maLoaiDoAn)
+        {
+            var doAns_TL = db.DoAns.Where(e => e.maLoaiDoAn == maLoaiDoAn).ToList();
+            return View(doAns_TL);
+        }
 
         // GET: Admin/DoAns/Details/5
         public ActionResult Details(string maDoAn)
@@ -40,7 +45,7 @@ namespace VEB.Areas.Admin.Controllers
         // GET: Admin/DoAns/Create
         public ActionResult Create()
         {
-            ViewBag.maLoaiDoAn = new SelectList(db.LoaiDoAns, "maLoaiDoAn");
+            ViewBag.maLoaiDoAn = new SelectList(db.LoaiDoAns, "maLoaiDoAn","tenLoaiDoAn");
             ViewBag.maDoAn = new MultiSelectList(db.ThongTinDoAns, "maDoAn", "donViBan","donGia","ghiChu");
             ViewBag.maDoAn = new MultiSelectList(db.DoAns, "maDoAn", "tenDoAn","HinhURL");
 
@@ -52,7 +57,7 @@ namespace VEB.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "maDoAn,maLoaiDoAn,tenDoAn,HinhURL")] DoAn doAn)
+        public ActionResult Create([Bind(Include = "maDoAn,tenDoAn,maLoaiDoAn,HinhURL")] DoAn doAn)
         {
             if (ModelState.IsValid)
             {

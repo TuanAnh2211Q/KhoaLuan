@@ -306,6 +306,7 @@
                 <tr>
                     <th class="text-center">Mã loại đồ ăn</th>
                     <th class="text-center">Tên loại đồ ăn</th>
+                    <th class="text-center"> Danh mục đồ ăn thuộc loại</th>
                     <th  style="width:200px" class="text-center">Chức năng</th>
                 </tr>
             </thead>
@@ -317,6 +318,9 @@
                         </td>
                         <td>
                             @item.tenLoaiDoAn
+                        </td>
+                        <td>
+                            <a href="@Url.Action("list_DoAnTheoLoai","DoAns",new { maLoaiDoAn=item.maLoaiDoAn})"> Đồ ăn thuộc @item.tenLoaiDoAn </a>
                         </td>
                         <td class="text-center">
                             <a href="@Url.Action("Edit", "LoaiDoAns", new { id = item.maLoaiDoAn })" class="btn btn-sm btn-success">Sửa</a>
