@@ -179,6 +179,7 @@
     <Compile Include="Areas\Admin\Controllers\NuocUongsController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamsController.cs" />
     <Compile Include="Areas\Admin\Controllers\TaiKhoanNhanViensController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ThongTinDoAnsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -322,6 +323,11 @@
     <Content Include="Areas\Admin\Views\NhanViens\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\NhanViens\Index.cshtml" />
     <Content Include="Areas\Admin\Views\DoAns\list_DoAnTheoLoai.cshtml" />
+    <Content Include="Areas\Admin\Views\ThongTinDoAns\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ThongTinDoAns\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ThongTinDoAns\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\ThongTinDoAns\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ThongTinDoAns\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -371,6 +377,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="HinhSanPham\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
