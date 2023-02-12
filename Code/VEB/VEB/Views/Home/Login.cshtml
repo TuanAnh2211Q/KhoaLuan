@@ -1,0 +1,55 @@
+﻿@using VEB.Models
+@model VEB.Models.KhachHang
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/HomeLayout.cshtml";
+}
+
+section class="book_section layout_padding">
+<div class="container">
+    <div class="heading_container">
+        <div class="align-self-end">
+            <label></label>
+        </div>
+        <label><h2 style="font-family: 'Dancing Script', cursive;">Login</h2></label>
+
+        <span style="color: red; margin-left: 45%;">@ViewBag.Message</span>
+    </div>
+    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+    {
+<div class="row">
+    <div class="col-md-6">
+        <div style="width: 100%; overflow: hidden;">
+            <img src="@Url.Content("~/User/images/banner.jpg")" />
+        </div>
+    </div>
+
+    @*<div class="col-md-6">
+            <div class="form_container" style="margin-top: 45px;">
+                @Html.TextBoxFor(model => model.SDT, new { @placeholder = "Nhập Tài Khoản...", @class = "form-control", @required = "required" })
+            </div>
+            <div class="form_container" style="margin-top: 50px;">
+                @Html.TextBoxFor(model => model.matKhau, new { @placeholder = "Nhập Mật Khẩu...", @class = "form-control", @required = "required", @type = "password" })
+            </div>
+            <div class="btn-box">
+                <button class="btn btn-info rounded-pill pl-4 pr-4 text-white" type="submit" style="background-color: #ffbe33; border: none;">Đăng Nhập</button>
+                <label class="pl-3 text-black-100">Bạn Chưa Có Tài Khoản? <a href="@Url.Action("Register", "Home")" class="badge badge-info" style="background-color: #ffbe33; border: none;">Đăng Kí Ở Đây.....</a></label>
+            </div>
+        </div>*@
+        <div class="col-md-6">
+            <div class="form_container" style="margin-top: 45px; text-align: center;">
+                @Html.TextBoxFor(model => model.SDT, new { @placeholder = "Nhập Tài Khoản...", @class = "form-control", @required = "required" })
+            </div>
+            <div class="form_container" style="margin-top: 50px; text-align: center;">
+                @Html.TextBoxFor(model => model.matKhau, new { @placeholder = "Nhập Mật Khẩu...", @class = "form-control", @required = "required", @type = "password" })
+            </div>
+            <div class="btn-box" style="display: flex; justify-content: center; align-items: center; margin-top: 50px;">
+                <button class="btn btn-info" style="background-color: #ffbe33; border: none; padding: 10px 20px;">Đăng Nhập</button>
+                <label style="margin-left: 20px;">Bạn Chưa Có Tài Khoản? <a href="@Url.Action("Register", "Home")" style="background-color: #ffbe33; border: none; padding: 5px 10px;">Đăng Kí Ở Đây.....</a></label>
+            </div>
+        </div>
+</div>
+    }
+</div>
+</section>>
+
