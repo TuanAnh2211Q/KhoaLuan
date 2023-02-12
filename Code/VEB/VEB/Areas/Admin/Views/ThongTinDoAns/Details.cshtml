@@ -1,0 +1,51 @@
+﻿@model VEB.Models.ThongTinDoAn
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ThongTinDoAn</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DoAn.maLoaiDoAn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoAn.maLoaiDoAn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.donViBan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.donViBan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.donGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.donGia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ghiChu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ghiChu)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maDoAn }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

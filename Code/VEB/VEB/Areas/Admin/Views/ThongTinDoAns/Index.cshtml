@@ -1,0 +1,55 @@
+﻿@model IEnumerable<VEB.Models.ThongTinDoAn>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-6">
+                <strong class="text-uppercase text-danger">Thông tin đồ ăn</strong>
+            </div>
+            <div class="col-md-6 text-end">
+                <a href="@Url.Action("Create","ThongTinDoAns")" class="btn btn-success">Thêm thông tin đồ ăn</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-3">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Mã đồ ăn</th>
+                    <th>Tên đồ ăn</th>
+                    <th>Đơn vị bán</th>
+                    <th>Đơn giá</th>
+                    <th>Ghi chú</th>
+                    <th>Chức năng</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+
+                    <tr>
+                        <td>@item.maDoAn</td>
+                        <td>@item.DoAn.tenDoAn</td>
+                        <td>@item.donViBan</td>
+                        <td>@item.donGia</td>
+                        <td>@item.ghiChu</td>
+                        <td>
+                            <a href="@Url.Action("Edit","ThongTinDoAns",new { @maDoAn = item.maDoAn })" class="btn btn-success">Chỉnh sửa</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+
+
+

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<VEB.Models.DoAn>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiDoAn.tenLoaiDoAn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SanPham.maLoaiSanPham)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThongTinDoAn.donViBan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tenDoAn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HinhURL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoaiDoAn.tenLoaiDoAn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SanPham.maLoaiSanPham)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThongTinDoAn.donViBan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tenDoAn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HinhURL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.maDoAn }) |
+            @Html.ActionLink("Details", "Details", new { id=item.maDoAn }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.maDoAn })
+        </td>
+    </tr>
+}
+
+</table>

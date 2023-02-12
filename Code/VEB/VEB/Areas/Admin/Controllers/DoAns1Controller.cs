@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
-using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -11,30 +10,25 @@ using VEB.Models;
 
 namespace VEB.Areas.Admin.Controllers
 {
-    public class DoAnsController : Controller
+    public class DoAns1Controller : Controller
     {
         private DBQLCHTAN db = new DBQLCHTAN();
 
-        // GET: Admin/DoAns
+        // GET: Admin/DoAns1
         public ActionResult Index()
         {
             var doAns = db.DoAns.Include(d => d.LoaiDoAn).Include(d => d.SanPham).Include(d => d.ThongTinDoAn);
-            return View(doAns);
-        }
-        public ActionResult list_DoAnTheoLoai(string maLoaiDoAn)
-        {
-            var doAns_TL = db.DoAns.Where(e => e.maLoaiDoAn == maLoaiDoAn).ToList();
-            return View(db.DoAns.ToList());
+            return View(doAns.ToList());
         }
 
-        // GET: Admin/DoAns/Details/5
-        public ActionResult Details(string maDoAn)
+        // GET: Admin/DoAns1/Details/5
+        public ActionResult Details(string id)
         {
-            if (maDoAn == null)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            DoAn doAn = db.DoAns.Find(maDoAn);
+            DoAn doAn = db.DoAns.Find(id);
             if (doAn == null)
             {
                 return HttpNotFound();
@@ -42,78 +36,54 @@ namespace VEB.Areas.Admin.Controllers
             return View(doAn);
         }
 
-        // GET: Admin/DoAns/Create
+        // GET: Admin/DoAns1/Create
         public ActionResult Create()
         {
-            ViewBag.maLoaiDoAn = new SelectList(db.LoaiDoAns, "maLoaiDoAn","tenLoaiDoAn");
-            return View();
-        }
-        public ActionResult CreateUpload()
-        {
+            ViewBag.maLoaiDoAn = new SelectList(db.LoaiDoAns, "maLoaiDoAn", "tenLoaiDoAn");
+            ViewBag.maDoAn = new SelectList(db.SanPhams, "maSanPham", "maLoaiSanPham");
+            ViewBag.maDoAn = new SelectList(db.ThongTinDoAns, "maDoAn", "donViBan");
             return View();
         }
 
-        // POST: Admin/DoAns/Create
+        // POST: Admin/DoAns1/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(DoAn doAn, HttpPostedFileBase fileupload)
+        public ActionResult Create([Bind(Include = "maDoAn,maLoaiDoAn,tenDoAn,HinhURL")] DoAn doAn)
         {
-            var doAn_exists = db.DoAns.SingleOrDefault(e => e.maDoAn == doAn.maDoAn);
-            if(doAn_exists==null)
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
-                {
-                    if (doAn.maDoAn == null)
-                    {
-                        ModelState.AddModelError("maLoaiDoAn", "Mã đồ ăn không được để trống");
-                    }
-                    else if (doAn.tenDoAn == null)
-                    {
-                        ModelState.AddModelError("tenLoaiDoAn", "Tên đồ ăn không được để trống");
-                    }
-                    else
-                    {
-                        var fileanh = Path.GetFileName(fileupload.FileName);
-                        var path = Path.Combine(Server.MapPath("~HinhSanPham"), fileanh);
-                        if(System.IO.File.Exists(path))
-                        {
-                            ViewBag.thongBao = "Hình ảnh đã tồn tại";
-                        }
-                        else
-                        {
-                            //doAn.HinhURL =  fileanh.ToArray();
-                            db.DoAns.Add(doAn);
-                            db.SaveChanges();
-                            return RedirectToAction("Index");
-                        }    
-                      
-                    }    
-                }
-            }    
-           
-            ViewBag.maLoaiDoAn = new SelectList(db.LoaiDoAns, "maLoaiDoAn", "tenLoaiDoAn");
+                db.DoAns.Add(doAn);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.maLoaiDoAn = new SelectList(db.LoaiDoAns, "maLoaiDoAn", "tenLoaiDoAn", doAn.maLoaiDoAn);
+            ViewBag.maDoAn = new SelectList(db.SanPhams, "maSanPham", "maLoaiSanPham", doAn.maDoAn);
+            ViewBag.maDoAn = new SelectList(db.ThongTinDoAns, "maDoAn", "donViBan", doAn.maDoAn);
             return View(doAn);
         }
 
-        // GET: Admin/DoAns/Edit/5
-        public ActionResult Edit(string maDoAn)
+        // GET: Admin/DoAns1/Edit/5
+        public ActionResult Edit(string id)
         {
-            if (maDoAn == null)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            DoAn doAn = db.DoAns.Find(maDoAn);
+            DoAn doAn = db.DoAns.Find(id);
             if (doAn == null)
             {
                 return HttpNotFound();
             }
             ViewBag.maLoaiDoAn = new SelectList(db.LoaiDoAns, "maLoaiDoAn", "tenLoaiDoAn", doAn.maLoaiDoAn);
+            ViewBag.maDoAn = new SelectList(db.SanPhams, "maSanPham", "maLoaiSanPham", doAn.maDoAn);
+            ViewBag.maDoAn = new SelectList(db.ThongTinDoAns, "maDoAn", "donViBan", doAn.maDoAn);
             return View(doAn);
         }
 
-        // POST: Admin/DoAns/Edit/5
+        // POST: Admin/DoAns1/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -132,14 +102,14 @@ namespace VEB.Areas.Admin.Controllers
             return View(doAn);
         }
 
-        // GET: Admin/DoAns/Delete/5
-        public ActionResult Delete(string maDoAn)
+        // GET: Admin/DoAns1/Delete/5
+        public ActionResult Delete(string id)
         {
-            if (maDoAn == null)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            DoAn doAn = db.DoAns.Find(maDoAn);
+            DoAn doAn = db.DoAns.Find(id);
             if (doAn == null)
             {
                 return HttpNotFound();
@@ -147,7 +117,7 @@ namespace VEB.Areas.Admin.Controllers
             return View(doAn);
         }
 
-        // POST: Admin/DoAns/Delete/5
+        // POST: Admin/DoAns1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
