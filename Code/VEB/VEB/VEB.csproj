@@ -183,10 +183,7 @@
     <Compile Include="Areas\Admin\Controllers\SanPhamsController.cs" />
     <Compile Include="Areas\Admin\Controllers\TaiKhoanNhanViensController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThongTinDoAnsController.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -344,6 +341,29 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="User\css\bootstrap.css" />
+    <Content Include="User\css\font-awesome.min.css" />
+    <Content Include="User\css\responsive.css" />
+    <Content Include="User\css\style.css" />
+    <Content Include="User\images\about-img.png" />
+    <Content Include="User\images\client1.jpg" />
+    <Content Include="User\images\client2.jpg" />
+    <Content Include="User\images\f1.png" />
+    <Content Include="User\images\f2.png" />
+    <Content Include="User\images\f3.png" />
+    <Content Include="User\images\f4.png" />
+    <Content Include="User\images\f5.png" />
+    <Content Include="User\images\f6.png" />
+    <Content Include="User\images\f7.png" />
+    <Content Include="User\images\f8.png" />
+    <Content Include="User\images\f9.png" />
+    <Content Include="User\images\favicon.png" />
+    <Content Include="User\images\hero-bg.jpg" />
+    <Content Include="User\images\o1.jpg" />
+    <Content Include="User\images\o2.jpg" />
+    <Content Include="User\js\bootstrap.js" />
+    <Content Include="User\js\custom.js" />
+    <Content Include="User\js\jquery-3.4.1.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -353,32 +373,18 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Shared\HeaderPartial.cshtml" />
+    <Content Include="Views\Shared\HomeLayout.cshtml" />
+    <Content Include="User\css\style.css.map" />
+    <Content Include="User\css\style.scss" />
+    <Content Include="User\fonts\fontawesome-webfont.ttf" />
+    <Content Include="User\fonts\fontawesome-webfont.woff" />
+    <Content Include="User\fonts\fontawesome-webfont.woff2" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
-    <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Home\LoadMenu.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

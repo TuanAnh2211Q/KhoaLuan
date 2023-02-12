@@ -1,0 +1,56 @@
+﻿@using VEB.Models
+@model VEB.Models.KhachHang
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/HomeLayout.cshtml";
+}
+
+<section class="book_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <div class="align-self-end">
+                <label></label>
+            </div>
+            <label><h2 style="color: red">Đăng kí</h2></label>
+
+            <span style="color: red; margin: auto;">@ViewBag.Message</span>
+        </div>
+        @using (Html.BeginForm("Register", "Home", FormMethod.Post))
+        {
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form_container">
+                        @Html.EditorFor(model => model.tenKhachHang, new { htmlAttributes = new { @placeholder = "Nhập Tên Của Bạn...", @class = "form-control", @required = "required" } })
+                    </div>
+                    <div class="form_container">
+                        @Html.EditorFor(model => model.SDT, new { htmlAttributes = new { @placeholder = "Nhập số điện thoại của bạn...", @class = "form-control", @required = "required" } })
+                    </div>
+                    <div class="form_container">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @placeholder = "Nhập Email của bạn...", @class = "form-control", @required = "required" } })
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form_container">
+                        @Html.EditorFor(model => model.diaChi, new { htmlAttributes = new { @placeholder = "Nhập Địa chỉ của bạn...", @class = "form-control", @required = "required" } })
+                    </div>
+
+                    <div class="form_container">
+                        @Html.EditorFor(model => model.matKhau, new { htmlAttributes = new { @placeholder = "Nhập Mật Khẩu của bạn...", @class = "form-control", @required = "required", @type = "password" } })
+                    </div>
+                    <div class="form_container">
+                        <input type="password" class="form-control" placeholder="Nhập lại mật khẫu..." name="txtXacNhanMatKhau" id="XacNhanMatKhau" required />
+                    </div>
+                </div>
+                <div class="row pl-4">
+                    <div class="btn-box">
+                        <button class="btn btn-info rounded-pill pl-4 pr-4 text-white" type="submit" style="background-color: #ffbe33; border: none;">Đăng Kí</button>
+                        <label class="pl-3 text-black-100">Bạn đã đăng kí xong chưa? <a href="@Url.Action("Login", "Home")" class="badge badge-info" style="background-color: #ffbe33; border: none;">Đang Nhập Ở Đây...</a></label>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</section>
+
