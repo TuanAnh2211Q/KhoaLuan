@@ -1,8 +1,6 @@
 ﻿
-
-
 @using VEB.Models
-@model LoginViewModel
+@model VEB.Models.UserLoginModel
 @{
     ViewBag.Title = "Log in";
 }
@@ -31,19 +29,24 @@
                                     <form>
                                         <p>ĐĂNG NHẬP</p>
                                         <div class="form-outline mb-4">
-                                            <input type="email" id="form2Example11" class="form-control"
-                                                   placeholder="Nhập tài khoản..." />
-                                            <label class="form-label" for="form2Example11">Tải khoản</label>
+                                            <label class="form-label" for="form2Example11">Tài khoản</label>
+                                            @*@Html.LabelFor(model => model.tenDangNhap)*@
+                                            @Html.TextBoxFor(model => model.tenDangNhap, new { @class = "form-control" })
+                                            @*placeholder="Nhập tài khoản..." />*@
+                                            @Html.ValidationMessageFor(model => model.tenDangNhap)
                                         </div>
 
                                         <div class="form-outline mb-4">
-                                            <input type="password" id="form2Example22" class="form-control"
-                                                   placeholder="Nhập mật khẩu..." />
                                             <label class="form-label" for="form2Example22">Mật Khẩu</label>
+                                            @*<input type="password" id="form2Example22" class="form-control"*@
+                                            @*@Html.LabelFor(model => model.matKhau)*@
+                                            @Html.PasswordFor(model => model.matKhau, new { @class = "form-control" })
+                                            @*placeholder="Nhập mật khẩu..." />*@
+                                            @Html.ValidationMessageFor(model => model.matKhau)
                                         </div>
 
                                         <div class="text-center pt-1 mb-5 pb-1">
-                                            <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">
+                                            <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">
                                                 Đăng Nhập
                                             </button>
                                         </div>
@@ -66,6 +69,10 @@
     </section>
 </body>
 </html>
+@if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
 
 
 
