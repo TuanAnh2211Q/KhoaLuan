@@ -1,4 +1,4 @@
-namespace VEB.Models
+﻿namespace VEB.Models
 {
     using System;
     using System.Collections.Generic;
@@ -11,9 +11,10 @@ namespace VEB.Models
     {
         public int id { get; set; }
 
+        [Required (ErrorMessage ="Vui lòng nhập tài khoản")]
         [StringLength(10)]
         public string tenTaiKhoan { get; set; }
-
+        [Required(ErrorMessage = "Vui lòng nhập mật khẩu")]
         [StringLength(1)]
         public string matKhau { get; set; }
 

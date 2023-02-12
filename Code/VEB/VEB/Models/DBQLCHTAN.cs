@@ -11,6 +11,7 @@ namespace VEB.Models
             : base("name=DBQLCHTAN")
         {
         }
+        
 
         public virtual DbSet<ChucDanh> ChucDanhs { get; set; }
         public virtual DbSet<DanhGia> DanhGias { get; set; }
