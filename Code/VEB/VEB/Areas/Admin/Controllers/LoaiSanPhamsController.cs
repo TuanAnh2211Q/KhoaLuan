@@ -38,6 +38,7 @@ namespace VEB.Areas.Admin.Controllers
         // GET: Admin/LoaiSanPhams/Create
         public ActionResult Create()
         {
+            ViewBag.maDoAn = new SelectList(db.DoAns, "maDoAn", "tenDoAn");
             return View();
         }
 

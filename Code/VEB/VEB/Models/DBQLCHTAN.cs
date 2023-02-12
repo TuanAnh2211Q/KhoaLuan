@@ -11,11 +11,8 @@ namespace VEB.Models
             : base("name=DBQLCHTAN")
         {
         }
-        
 
-        public virtual DbSet<ChucDanh> ChucDanhs { get; set; }
         public virtual DbSet<DanhGia> DanhGias { get; set; }
-        public virtual DbSet<DatHang> DatHangs { get; set; }
         public virtual DbSet<DoAn> DoAns { get; set; }
         public virtual DbSet<DonHang> DonHangs { get; set; }
         public virtual DbSet<GioHang> GioHangs { get; set; }
@@ -27,12 +24,10 @@ namespace VEB.Models
         public virtual DbSet<LoaiDonHang> LoaiDonHangs { get; set; }
         public virtual DbSet<LoaiKhachHang> LoaiKhachHangs { get; set; }
         public virtual DbSet<LoaiKhuyenMai> LoaiKhuyenMais { get; set; }
-        public virtual DbSet<LoaiNhanVien> LoaiNhanViens { get; set; }
         public virtual DbSet<LoaiSanPham> LoaiSanPhams { get; set; }
         public virtual DbSet<MatHang> MatHangs { get; set; }
         public virtual DbSet<NuocUong> NuocUongs { get; set; }
         public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; }
-        public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<PhanQuyen> PhanQuyens { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
         public virtual DbSet<TaiKhoanNhanVien> TaiKhoanNhanViens { get; set; }
@@ -43,16 +38,8 @@ namespace VEB.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ChucDanh>()
-                .Property(e => e.maChucDanh)
-                .IsUnicode(false);
-
             modelBuilder.Entity<DanhGia>()
                 .Property(e => e.maSanPham)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<DatHang>()
-                .Property(e => e.maDatHang)
                 .IsUnicode(false);
 
             modelBuilder.Entity<DoAn>()
@@ -157,10 +144,6 @@ namespace VEB.Models
                 .Property(e => e.maLoaiKhuyenMai)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<LoaiNhanVien>()
-                .Property(e => e.maLoaiNhanVien)
-                .IsUnicode(false);
-
             modelBuilder.Entity<LoaiSanPham>()
                 .Property(e => e.maLoaiSanPham)
                 .IsUnicode(false);
@@ -215,34 +198,14 @@ namespace VEB.Models
                 .Property(e => e.sdtNCC)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<NhanVien>()
-                .Property(e => e.maNhanVien)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<NhanVien>()
-                .Property(e => e.SDT)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<NhanVien>()
-                .Property(e => e.Email)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<NhanVien>()
-                .Property(e => e.maChucDanh)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<NhanVien>()
-                .Property(e => e.maLoaiNhanVien)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<NhanVien>()
-                .HasMany(e => e.TaiKhoanNhanViens)
-                .WithOptional(e => e.NhanVien)
-                .HasForeignKey(e => e.tenTaiKhoan);
-
             modelBuilder.Entity<PhanQuyen>()
                 .Property(e => e.maQuyen)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<PhanQuyen>()
+                .HasMany(e => e.TaiKhoanNhanViens)
+                .WithRequired(e => e.PhanQuyen)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<SanPham>()
                 .Property(e => e.maSanPham)
@@ -321,7 +284,5 @@ namespace VEB.Models
                 .Property(e => e.maDoAn)
                 .IsUnicode(false);
         }
-
-      
     }
 }
