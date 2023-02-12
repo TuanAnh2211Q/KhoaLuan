@@ -17,7 +17,7 @@ namespace VEB.Areas.Admin
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new { Controller="Admin", action = "Index", id = UrlParameter.Optional }
+                new { Controller="TaiKhoanNhanViens", action = "Login", id = UrlParameter.Optional }
             );
         }
     }

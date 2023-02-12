@@ -1,26 +1,22 @@
 ﻿<div class="sb-sidenav-menu">
     <div class="nav">
-        <div class="sb-sidenav-menu-heading">Core</div>
-        @*<a class="nav-link" href="index.html">
-            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-            Dashboard
-        </a>*@
-        @*<div class="sb-sidenav-menu-heading">Interface</div>*@
+      
         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-            Quản lí nhân viên
+            KHUYẾN MÃI
             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
         </a>
         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
             <nav class="sb-sidenav-menu-nested nav">
-                <a class="nav-link" href="@Url.Action("Index","NhanViens")">Quản lí thông tin nhân viên</a>
-                <a class="nav-link" href="@Url.Action("Index","TaiKhoanNhanViens")">Tài khoản nhân viên</a>
+                <a class="nav-link" href="@Url.Action("Index","LoaiKhuyenMais")">Quản lí loại khuyến mãi</a>
+                <a class="nav-link" href="@Url.Action("Index","KhuyenMais")">Quản lí thông tin khuyến mãi</a>
 
             </nav>
         </div>
+        <div></div>
         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
             <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-            Quản lí sản phẩm
+            THỰC ĐƠN
             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
         </a>
         <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
@@ -38,19 +34,11 @@
                 </div>
                 <a class="nav-link" href="@Url.Action("Index","NuocUongs")">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Quản lí nước uông
+                    Quản lí nước uống
                 </a>
-                <a class="nav-link collapsed" href="@Url.Action("Index","NuocUongs")" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                    Quản lí khuyến mãi
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="#">Thông tin khuyến mãi</a>
-                        <a class="nav-link" href="#">Loại khuyến mãi</a>
-                    </nav>
-                </div>
+                
             </nav>
         </div>
-
+        </div>
+    </div>
      

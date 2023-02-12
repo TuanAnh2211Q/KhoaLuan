@@ -11,20 +11,21 @@
     {
         public int id { get; set; }
 
-        [Required (ErrorMessage ="Vui lòng nhập tài khoản")]
+        [Required(ErrorMessage ="Không để trống tài khoản")]
         [StringLength(10)]
         public string tenTaiKhoan { get; set; }
-        [Required(ErrorMessage = "Vui lòng nhập mật khẩu")]
-        [StringLength(1)]
+
+        [Required(ErrorMessage = "Không để trống mật khẩu")]
+
+        [StringLength(10)]
         public string matKhau { get; set; }
 
         [StringLength(10)]
         public string maNhanVien { get; set; }
 
+        [Required]
         [StringLength(10)]
         public string maQuyen { get; set; }
-
-        public virtual NhanVien NhanVien { get; set; }
 
         public virtual PhanQuyen PhanQuyen { get; set; }
     }

@@ -17,7 +17,7 @@
         @Html.HiddenFor(model => model.maKhuyenMai)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.tenKhuyenMai, htmlAttributes: new { @class = "control-label col-md-2" })
+            <h6>Nhập tên khuyên mãi:</h6>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.tenKhuyenMai, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.tenKhuyenMai, "", new { @class = "text-danger" })
@@ -25,7 +25,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.maLoaiKhuyenMai, "maLoaiKhuyenMai", htmlAttributes: new { @class = "control-label col-md-2" })
+            <h6>Chọn mã loại khuyến mãi:
+             </h6>            
             <div class="col-md-10">
                 @Html.DropDownList("maLoaiKhuyenMai", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.maLoaiKhuyenMai, "", new { @class = "text-danger" })
@@ -33,7 +34,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.mucGiam, htmlAttributes: new { @class = "control-label col-md-2" })
+            <h6>Nhập mức giảm</h6>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.mucGiam, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.mucGiam, "", new { @class = "text-danger" })
@@ -42,12 +43,10 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Lưu" class="btn btn-default btn-success" />
+                @Html.ActionLink("Quay về", "Index")
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>

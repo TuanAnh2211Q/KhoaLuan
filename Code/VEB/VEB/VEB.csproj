@@ -177,20 +177,18 @@
     <Compile Include="Areas\Admin\Controllers\DoAnsController.cs" />
     <Compile Include="Areas\Admin\Controllers\KhuyenMaisController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoaiDoAnsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoaiKhuyenMaisController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoaiSanPhamsController.cs" />
-    <Compile Include="Areas\Admin\Controllers\NhanViensController.cs" />
     <Compile Include="Areas\Admin\Controllers\NuocUongsController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamsController.cs" />
     <Compile Include="Areas\Admin\Controllers\TaiKhoanNhanViensController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThongTinDoAnsController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TrangChuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\ChucDanh.cs" />
     <Compile Include="Models\DanhGia.cs" />
-    <Compile Include="Models\DatHang.cs" />
     <Compile Include="Models\DBQLCHTAN.cs" />
     <Compile Include="Models\DoAn.cs" />
     <Compile Include="Models\DonHang.cs" />
@@ -204,12 +202,10 @@
     <Compile Include="Models\LoaiDonHang.cs" />
     <Compile Include="Models\LoaiKhachHang.cs" />
     <Compile Include="Models\LoaiKhuyenMai.cs" />
-    <Compile Include="Models\LoaiNhanVien.cs" />
     <Compile Include="Models\LoaiSanPham.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MatHang.cs" />
     <Compile Include="Models\NhaCungCap.cs" />
-    <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Models\NuocUong.cs" />
     <Compile Include="Models\PhanQuyen.cs" />
     <Compile Include="Models\SanPham.cs" />
@@ -218,7 +214,6 @@
     <Compile Include="Models\ThongTinDonHang.cs" />
     <Compile Include="Models\ThongTinHangTon.cs" />
     <Compile Include="Models\ThongTinThanhPhanDoAn.cs" />
-    <Compile Include="Models\UserLoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -308,28 +303,29 @@
     <Content Include="Areas\Admin\Views\LoaiSanPhams\Details.cshtml" />
     <Content Include="Areas\Admin\Views\LoaiSanPhams\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\LoaiSanPhams\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Index.cshtml" />
     <Content Include="Areas\Admin\Views\KhuyenMais\Create.cshtml" />
     <Content Include="Areas\Admin\Views\KhuyenMais\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\KhuyenMais\Details.cshtml" />
     <Content Include="Areas\Admin\Views\KhuyenMais\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\KhuyenMais\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_LayoutTrai.cshtml" />
-    <Content Include="Areas\Admin\Views\NhanViens\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\NhanViens\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\NhanViens\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\NhanViens\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\NhanViens\Index.cshtml" />
     <Content Include="Areas\Admin\Views\DoAns\list_DoAnTheoLoai.cshtml" />
     <Content Include="Areas\Admin\Views\ThongTinDoAns\Create.cshtml" />
     <Content Include="Areas\Admin\Views\ThongTinDoAns\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\ThongTinDoAns\Details.cshtml" />
     <Content Include="Areas\Admin\Views\ThongTinDoAns\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\ThongTinDoAns\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiKhuyenMais\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiKhuyenMais\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiKhuyenMais\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiKhuyenMais\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiKhuyenMais\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -341,29 +337,6 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="User\css\bootstrap.css" />
-    <Content Include="User\css\font-awesome.min.css" />
-    <Content Include="User\css\responsive.css" />
-    <Content Include="User\css\style.css" />
-    <Content Include="User\images\about-img.png" />
-    <Content Include="User\images\client1.jpg" />
-    <Content Include="User\images\client2.jpg" />
-    <Content Include="User\images\f1.png" />
-    <Content Include="User\images\f2.png" />
-    <Content Include="User\images\f3.png" />
-    <Content Include="User\images\f4.png" />
-    <Content Include="User\images\f5.png" />
-    <Content Include="User\images\f6.png" />
-    <Content Include="User\images\f7.png" />
-    <Content Include="User\images\f8.png" />
-    <Content Include="User\images\f9.png" />
-    <Content Include="User\images\favicon.png" />
-    <Content Include="User\images\hero-bg.jpg" />
-    <Content Include="User\images\o1.jpg" />
-    <Content Include="User\images\o2.jpg" />
-    <Content Include="User\js\bootstrap.js" />
-    <Content Include="User\js\custom.js" />
-    <Content Include="User\js\jquery-3.4.1.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -372,19 +345,13 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\HeaderPartial.cshtml" />
-    <Content Include="Views\Shared\HomeLayout.cshtml" />
-    <Content Include="User\css\style.css.map" />
-    <Content Include="User\css\style.scss" />
-    <Content Include="User\fonts\fontawesome-webfont.ttf" />
-    <Content Include="User\fonts\fontawesome-webfont.woff" />
-    <Content Include="User\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\LoadMenu.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Home\Register.cshtml" />
+    <Content Include="Views\Shared\_LayoutTrangChu.cshtml" />
+    <Content Include="Views\Shared\_LayoutTieuDe.cshtml" />
+    <Content Include="Views\TrangChu\TrangChu.cshtml" />
+    <Content Include="Views\TrangChu\ThucDon.cshtml" />
+    <Content Include="Views\TrangChu\GioiThieu.cshtml" />
+    <Content Include="Views\TrangChu\DatBan.cshtml" />
+    <Content Include="Views\TrangChu\LienHe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

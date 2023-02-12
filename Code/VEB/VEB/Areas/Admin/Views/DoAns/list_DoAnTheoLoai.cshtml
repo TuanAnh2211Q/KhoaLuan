@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-6">
                 <strong class="text-uppercase text-danger">Danh sách sản phẩm</strong>
-                
+
             </div>
             <div class="col-md-6 text-end">
                 <a href="@Url.Action("Create","DoAns")" class="btn btn-success ">Thêm đồ ăn</a>
@@ -18,15 +18,8 @@
                 <tr>
                     <th>Mã đồ ăn</th>
                     <th>Tên đồ ăn</th>
-                    <th>Tên loại đồ ăn</th>
-                    <th>Đơn vị bán</th>
-                    <th>Đơn giá</th>
-                    <th>Ghi chú</th>
                     <th>Ảnh</th>
-
-
-
-
+                    <th>Thông tin chi tiết</th>
                     <th style="width:400px;" class="text-center">Chức năng</th>
 
                 </tr>
@@ -38,18 +31,12 @@
                     <tr>
                         <td>@item.maDoAn</td>
                         <td>@item.tenDoAn</td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.LoaiDoAn.tenLoaiDoAn)
-                        </td>
-                        <td>@item.ThongTinDoAn.donViBan</td>
-                        <td>@item.ThongTinDoAn.donGia</td>
-                        <td>@item.ThongTinDoAn.ghiChu</td>
                         <td>@item.HinhURL</td>
+                        <td><a href="@Url.Action("Index","ThongTinDoAns",new{@maDoAn=item.maDoAn})">Thông tin chi tiết</a></td>
 
 
                         <td style="width:180px;" class="text-center">
                             <a href="@Url.Action("Edit","DoAns",new { @maDoAn = item.maDoAn })" class="btn btn-success">Chỉnh sửa</a>
-                            <a href="@Url.Action("Details","DoAns",new { @maDoAn = item.maDoAn })" class="btn btn-success">Xem</a>
                             <a href="@Url.Action("Delete","DoAns",new { @maDoAn = item.maDoAn })" class="btn btn-danger">Xóa</a>
 
                         </td>

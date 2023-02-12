@@ -5,58 +5,58 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
-
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>NuocUong</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.maNuoc)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.tenNuoc, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.tenNuoc, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.tenNuoc, "", new { @class = "text-danger" })
+    <div class="card">
+        <div class="card-header">
+            <h4>Chỉnh sửa thông tin nước uống</h4>
+        </div>
+
+        <div class="card-body">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <h6 class="text-success">Mã nước: @Model.maNuoc</h6>
+            </div>
+
+            <div class="form-group">
+                <h6 class="text-success">Nhập tên nước uống:</h6>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.tenNuoc, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.tenNuoc, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <h6 class="text-success">Nhập đơn vị bán:</h6>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.donViBan, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.donViBan, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <h6 class="text-success">Nhập giá bán:</h6>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.giaBanNuoc, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.giaBanNuoc, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <h6 class="text-success">Chọn ảnh:</h6>
+                <input type="file" name="fileupload" />
+                @ViewBag.thongBao
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.donViBan, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.donViBan, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.donViBan, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.giaBanNuoc, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.giaBanNuoc, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.giaBanNuoc, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.HinhURL, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.HinhURL, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.HinhURL, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+        <div class="card-footer">
+            <div class=" text-end">
+                <input type="submit" value="Sửa" class="btn btn-success" />
+                <b></b>
+                <a href="@Url.Action("Index","NuocUongs")">Quay lại</a>
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+

@@ -1,62 +1,59 @@
 ﻿@model IEnumerable<VEB.Models.TaiKhoanNhanVien>
 
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    Layout = null;
 }
 
-<div class="card">
-    <div class="card-header">
-        <div class="row">
-            <div class="col-md-6">
-                <strong class="text-uppercase text-danger">Danh sách tài khoản nhân viên</strong>
-            </div>
-        </div>
-    </div>
-    <div class="card-body p-3">
-        <table class="table table-bordered table-hover">
-            <thead>
-                <tr>
-                    <th>Tên nhân viên</th>
-                    <th>Tên tài khoản</th>
-                    <th>Mật khẩu</th>
-                    <th>Quyền:</th>
+<!DOCTYPE html>
 
-                    <th style="width:400px;" class="text-center">Chức năng</th>
-
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-
-                <tr>
-                    <td>@item.NhanVien.tenNhanVien</td>
-                    <td>@item.tenTaiKhoan</td>
-                    <td> @item.matKhau</td>
-                    <td>
-                        @item.PhanQuyen.tenQuyen
-                    </td>
-
-
-
-
-                    <td style="width:180px;" class="text-center">
-                        <a href="@Url.Action("Edit","TaiKhoanNhanViens",new { @id = item.id})" class="btn btn-success">Chỉnh sửa</a>
-                        <a href="@Url.Action("Details","TaiKhoanNhanViens",new { @id = item.id})" class="btn btn-success">Xem</a>
-                        <a href="@Url.Action("Delete","TaiKhoanNhanViens",new { @id = item.id})" class="btn btn-danger">Xóa</a>
-                    </td>
-
-                </tr>
-            }
-            </tbody>
-        </table>
-    </div>
-
-
-</div>
-
-
-
-
-
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PhanQuyen.tenQuyen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tenTaiKhoan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.matKhau)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.maNhanVien)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhanQuyen.tenQuyen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tenTaiKhoan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.matKhau)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.maNhanVien)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

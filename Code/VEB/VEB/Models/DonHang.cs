@@ -53,8 +53,6 @@ namespace VEB.Models
 
         public virtual LoaiDonHang LoaiDonHang { get; set; }
 
-        public virtual NhanVien NhanVien { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ThongTinDonHang> ThongTinDonHangs { get; set; }
     }

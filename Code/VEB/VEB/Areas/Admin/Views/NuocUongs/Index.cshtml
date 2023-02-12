@@ -5,60 +5,57 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-6">
+                <strong class="text-uppercase text-danger">Danh sách sản phẩm</strong>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.MatHang.tenHang)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SanPham.maLoaiSanPham)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.tenNuoc)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.donViBan)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.giaBanNuoc)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HinhURL)
-        </th>
-        <th></th>
-    </tr>
+            </div>
+            <div class="col-md-6 text-end">
+                <a href="@Url.Action("Create","NuocUongs")" class="btn btn-success ">Thêm nước uống </a>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.MatHang.tenHang)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SanPham.maLoaiSanPham)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.tenNuoc)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.donViBan)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.giaBanNuoc)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HinhURL)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.maNuoc }) |
-            @Html.ActionLink("Details", "Details", new { id=item.maNuoc }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.maNuoc })
-        </td>
-    </tr>
-}
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-3">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Mã nước</th>
+                    <th>Tên nước</th>
+                    <th>Đơn vị bán</th>
+                    <th>Đơn giá</th>
+                    <th>Ảnh</th>
+                    <th style="width:400px;" class="text-center">Chức năng</th>
 
-</table>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+
+                    <tr>
+                        <td>@item.maNuoc</td>
+                        <td>@item.tenNuoc</td>
+                        <td>@item.donViBan</td>
+                        <td>@item.giaBanNuoc</td>
+                        <td>@item.HinhURL</td>
+                        <td style="width:180px;" class="text-center">
+                            <a href="@Url.Action("Edit","NuocUongs",new { @maNuoc = item.maNuoc })" class="btn btn-success">Chỉnh sửa</a>
+                            <a href="@Url.Action("Delete","NuocUongs",new { @maNuoc = item.maNuoc })" class="btn btn-danger">Xóa</a>
+
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+
+</div>
+
+
+
