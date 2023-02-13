@@ -56,7 +56,8 @@ namespace QLCHTAN
                 DataGridViewRow r = dgvThongTinHangTon.Rows[e.RowIndex];
                 cbbMaHang.SelectedValue = r.Cells["tenHang"].Value.ToString();
                 lblSoLuongTon.Text = r.Cells["soLuongTon"].Value.ToString();
-                lblTongDonGia.Text = r.Cells["tongDonGia"].Value.ToString() + " VNĐ";
+                decimal tongDonGia = Convert.ToDecimal(r.Cells["tongDonGia"].Value.ToString()) ;
+                lblTongDonGia.Text = tongDonGia.ToString("#,##0.000 VNĐ");
             }    
         }
 
