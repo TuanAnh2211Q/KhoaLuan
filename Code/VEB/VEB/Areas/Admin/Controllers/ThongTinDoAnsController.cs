@@ -36,9 +36,9 @@ namespace VEB.Areas.Admin.Controllers
         }
 
         // GET: Admin/ThongTinDoAns/Create
-        public ActionResult Create()
+        public ActionResult Create(string maDoAn)
         {
-            ViewBag.maDoAn = new SelectList(db.DoAns, "maDoAn", "maLoaiDoAn");
+            ViewBag.maDoAn = maDoAn;
             return View();
         }
 
@@ -53,10 +53,8 @@ namespace VEB.Areas.Admin.Controllers
             {
                 db.ThongTinDoAns.Add(thongTinDoAn);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","DoAns");
             }
-
-            ViewBag.maDoAn = new SelectList(db.DoAns, "maDoAn", "maLoaiDoAn", thongTinDoAn.maDoAn);
             return View(thongTinDoAn);
         }
 

@@ -39,8 +39,7 @@ namespace VEB.Areas.Admin.Controllers
         // GET: Admin/NuocUongs/Create
         public ActionResult Create()
         {
-            ViewBag.maNuoc = new SelectList(db.MatHangs, "maHang", "tenHang");
-            ViewBag.maNuoc = new SelectList(db.SanPhams, "maSanPham", "maLoaiSanPham");
+            ViewBag.maNuoc = new SelectList(db.MatHangs.Where(e => db.SanPhams.FirstOrDefault(s => s.maLoaiSanPham == "MLSP002" && s.maSanPham == e.maHang) != null), "maHang", "tenHang");
             return View();
         }
 
@@ -64,13 +63,13 @@ namespace VEB.Areas.Admin.Controllers
         }
 
         // GET: Admin/NuocUongs/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(string maNuoc)
         {
-            if (id == null)
+            if (maNuoc == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NuocUong nuocUong = db.NuocUongs.Find(id);
+            NuocUong nuocUong = db.NuocUongs.Find(maNuoc);
             if (nuocUong == null)
             {
                 return HttpNotFound();
@@ -99,13 +98,13 @@ namespace VEB.Areas.Admin.Controllers
         }
 
         // GET: Admin/NuocUongs/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(string maNuoc)
         {
-            if (id == null)
+            if (maNuoc == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NuocUong nuocUong = db.NuocUongs.Find(id);
+            NuocUong nuocUong = db.NuocUongs.Find(maNuoc);
             if (nuocUong == null)
             {
                 return HttpNotFound();
@@ -116,9 +115,9 @@ namespace VEB.Areas.Admin.Controllers
         // POST: Admin/NuocUongs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(string maNuoc)
         {
-            NuocUong nuocUong = db.NuocUongs.Find(id);
+            NuocUong nuocUong = db.NuocUongs.Find(maNuoc);
             db.NuocUongs.Remove(nuocUong);
             db.SaveChanges();
             return RedirectToAction("Index");

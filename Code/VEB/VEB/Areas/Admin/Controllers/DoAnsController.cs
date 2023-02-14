@@ -24,7 +24,7 @@ namespace VEB.Areas.Admin.Controllers
         public ActionResult list_DoAnTheoLoai(string maLoaiDoAn)
         {
             var doAns_TL = db.DoAns.Where(e => e.maLoaiDoAn == maLoaiDoAn).ToList();
-            return View(db.DoAns.ToList());
+            return View(doAns_TL.ToList());
         }
 
         // GET: Admin/DoAns/Details/5
@@ -58,7 +58,7 @@ namespace VEB.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(DoAn doAn, HttpPostedFileBase fileupload)
+        public ActionResult Create(DoAn doAn)
         {
             var doAn_exists = db.DoAns.SingleOrDefault(e => e.maDoAn == doAn.maDoAn);
             if(doAn_exists==null)
@@ -75,19 +75,11 @@ namespace VEB.Areas.Admin.Controllers
                     }
                     else
                     {
-                        var fileanh = Path.GetFileName(fileupload.FileName);
-                        var path = Path.Combine(Server.MapPath("~HinhSanPham"), fileanh);
-                        if(System.IO.File.Exists(path))
-                        {
-                            ViewBag.thongBao = "Hình ảnh đã tồn tại";
-                        }
-                        else
-                        {
-                            //doAn.HinhURL =  fileanh.ToArray();
+                       
                             db.DoAns.Add(doAn);
                             db.SaveChanges();
                             return RedirectToAction("Index");
-                        }    
+                        
                       
                     }    
                 }

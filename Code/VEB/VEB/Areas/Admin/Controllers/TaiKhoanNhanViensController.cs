@@ -17,10 +17,30 @@ namespace VEB.Areas.Admin.Controllers
         // GET: Admin/TaiKhoanNhanViens
         public ActionResult Index()
         {
-            var taiKhoanNhanViens = db.TaiKhoanNhanViens.Include(t => t.NhanVien).Include(t => t.PhanQuyen);
+            var taiKhoanNhanViens = db.TaiKhoanNhanViens.Include(t => t.PhanQuyen);
             return View(taiKhoanNhanViens.ToList());
         }
 
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(TaiKhoanNhanVien taiKhoanNhanVien)
+        {
+           
+                var tk = db.TaiKhoanNhanViens.FirstOrDefault(e => e.tenTaiKhoan == taiKhoanNhanVien.tenTaiKhoan);
+                if (tk != null)
+                {
+                    if (taiKhoanNhanVien.matKhau == tk.matKhau)
+                        return RedirectToAction("Index", "Admin");
+                    else
+                        ModelState.AddModelError("", "Tên đăng nhập hoặc tại khoản không đúng vui lòng kiểm tra lại");
+                }
+           
+            return View("Login");
+        }
         // GET: Admin/TaiKhoanNhanViens/Details/5
         public ActionResult Details(int? id)
         {
@@ -39,7 +59,6 @@ namespace VEB.Areas.Admin.Controllers
         // GET: Admin/TaiKhoanNhanViens/Create
         public ActionResult Create()
         {
-            ViewBag.tenTaiKhoan = new SelectList(db.NhanViens, "maNhanVien", "tenNhanVien");
             ViewBag.maQuyen = new SelectList(db.PhanQuyens, "maQuyen", "tenQuyen");
             return View();
         }
@@ -49,6 +68,8 @@ namespace VEB.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+
+      
         public ActionResult Create([Bind(Include = "id,tenTaiKhoan,matKhau,maNhanVien,maQuyen")] TaiKhoanNhanVien taiKhoanNhanVien)
         {
             if (ModelState.IsValid)
@@ -58,7 +79,6 @@ namespace VEB.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.tenTaiKhoan = new SelectList(db.NhanViens, "maNhanVien", "tenNhanVien", taiKhoanNhanVien.tenTaiKhoan);
             ViewBag.maQuyen = new SelectList(db.PhanQuyens, "maQuyen", "tenQuyen", taiKhoanNhanVien.maQuyen);
             return View(taiKhoanNhanVien);
         }
@@ -75,7 +95,6 @@ namespace VEB.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.matKhau = new SelectList(db.TaiKhoanNhanViens, "matKhau", taiKhoanNhanVien.tenTaiKhoan);
             ViewBag.maQuyen = new SelectList(db.PhanQuyens, "maQuyen", "tenQuyen", taiKhoanNhanVien.maQuyen);
             return View(taiKhoanNhanVien);
         }
@@ -85,7 +104,7 @@ namespace VEB.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,matKhau, maQuyen")] TaiKhoanNhanVien taiKhoanNhanVien)
+        public ActionResult Edit([Bind(Include = "id,tenTaiKhoan,matKhau,maNhanVien,maQuyen")] TaiKhoanNhanVien taiKhoanNhanVien)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +112,6 @@ namespace VEB.Areas.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.tenTaiKhoan = new SelectList(db.NhanViens, "maNhanVien", "tenNhanVien", taiKhoanNhanVien.tenTaiKhoan);
             ViewBag.maQuyen = new SelectList(db.PhanQuyens, "maQuyen", "tenQuyen", taiKhoanNhanVien.maQuyen);
             return View(taiKhoanNhanVien);
         }
@@ -101,7 +119,7 @@ namespace VEB.Areas.Admin.Controllers
         // GET: Admin/TaiKhoanNhanViens/Delete/5
         public ActionResult Delete(int? id)
         {
-            if (id== null)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }

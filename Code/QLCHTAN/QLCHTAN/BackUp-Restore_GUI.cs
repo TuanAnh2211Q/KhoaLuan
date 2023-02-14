@@ -150,7 +150,7 @@ namespace QLCHTAN
         {
             try
             {
-                conn = new SqlConnection();
+                conn = new SqlConnection(connStr);
                 conn.Open();
                 sql = "alter database "+cbbDatabase.Text.ToString().Trim()+" set single_user with rollback immediate;";
                 sql += "Restore database " + cbbDatabase.Text.ToString().Trim() + " from disk ='" + txtRestoreDBS.Text.Trim() + "' with replace;";

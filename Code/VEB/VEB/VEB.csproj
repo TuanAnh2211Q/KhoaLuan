@@ -177,23 +177,18 @@
     <Compile Include="Areas\Admin\Controllers\DoAnsController.cs" />
     <Compile Include="Areas\Admin\Controllers\KhuyenMaisController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoaiDoAnsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoaiKhuyenMaisController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoaiSanPhamsController.cs" />
-    <Compile Include="Areas\Admin\Controllers\NhanViensController.cs" />
     <Compile Include="Areas\Admin\Controllers\NuocUongsController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamsController.cs" />
     <Compile Include="Areas\Admin\Controllers\TaiKhoanNhanViensController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThongTinDoAnsController.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TrangChuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\ChucDanh.cs" />
     <Compile Include="Models\DanhGia.cs" />
-    <Compile Include="Models\DatHang.cs" />
     <Compile Include="Models\DBQLCHTAN.cs" />
     <Compile Include="Models\DoAn.cs" />
     <Compile Include="Models\DonHang.cs" />
@@ -207,12 +202,10 @@
     <Compile Include="Models\LoaiDonHang.cs" />
     <Compile Include="Models\LoaiKhachHang.cs" />
     <Compile Include="Models\LoaiKhuyenMai.cs" />
-    <Compile Include="Models\LoaiNhanVien.cs" />
     <Compile Include="Models\LoaiSanPham.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MatHang.cs" />
     <Compile Include="Models\NhaCungCap.cs" />
-    <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Models\NuocUong.cs" />
     <Compile Include="Models\PhanQuyen.cs" />
     <Compile Include="Models\SanPham.cs" />
@@ -221,7 +214,6 @@
     <Compile Include="Models\ThongTinDonHang.cs" />
     <Compile Include="Models\ThongTinHangTon.cs" />
     <Compile Include="Models\ThongTinThanhPhanDoAn.cs" />
-    <Compile Include="Models\UserLoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -311,28 +303,29 @@
     <Content Include="Areas\Admin\Views\LoaiSanPhams\Details.cshtml" />
     <Content Include="Areas\Admin\Views\LoaiSanPhams\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\LoaiSanPhams\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Index.cshtml" />
     <Content Include="Areas\Admin\Views\KhuyenMais\Create.cshtml" />
     <Content Include="Areas\Admin\Views\KhuyenMais\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\KhuyenMais\Details.cshtml" />
     <Content Include="Areas\Admin\Views\KhuyenMais\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\KhuyenMais\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_LayoutTrai.cshtml" />
-    <Content Include="Areas\Admin\Views\NhanViens\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\NhanViens\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\NhanViens\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\NhanViens\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\NhanViens\Index.cshtml" />
     <Content Include="Areas\Admin\Views\DoAns\list_DoAnTheoLoai.cshtml" />
     <Content Include="Areas\Admin\Views\ThongTinDoAns\Create.cshtml" />
     <Content Include="Areas\Admin\Views\ThongTinDoAns\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\ThongTinDoAns\Details.cshtml" />
     <Content Include="Areas\Admin\Views\ThongTinDoAns\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\ThongTinDoAns\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoanNhanViens\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiKhuyenMais\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiKhuyenMais\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiKhuyenMais\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiKhuyenMais\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiKhuyenMais\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -352,33 +345,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
-    <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Share\_LayoutTrangChu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

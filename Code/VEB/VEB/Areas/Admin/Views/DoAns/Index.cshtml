@@ -39,11 +39,9 @@
                         <td>@item.tenDoAn</td>
                         <td>@item.HinhURL</td>
                         <td><a href="@Url.Action("Index","ThongTinDoAns",new{@maDoAn=item.maDoAn})">Thông tin chi tiết</a></td>
-
-
                         <td style="width:180px;" class="text-center">
                             <a href="@Url.Action("Edit","DoAns",new { @maDoAn = item.maDoAn })" class="btn btn-success">Chỉnh sửa</a>
-                            <a href="@Url.Action("Details","DoAns",new { @maDoAn = item.maDoAn })" class="btn btn-success">Xem</a>
+                            <a href="@Url.Action("Create","ThongTinDoAns",new { @maDoAn = item.maDoAn })" class="btn btn-success">Thêm thông tin chi tiết</a>
                             <a href="@Url.Action("Delete","DoAns",new { @maDoAn = item.maDoAn })" class="btn btn-danger">Xóa</a>
 
                         </td>
@@ -53,6 +51,7 @@
             </tbody>
         </table>
     </div>
+
 
 
 </div>
