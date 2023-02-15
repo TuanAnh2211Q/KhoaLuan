@@ -12,7 +12,7 @@ namespace VEB.Controllers
         {
             return View();
         }
-        public ActionResult ThucDon()
+        public ActionResult SanPham()
         {
             return View();
         }
