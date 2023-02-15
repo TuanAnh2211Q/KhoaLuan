@@ -351,6 +351,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Share\_LayoutTrangChu.cshtml" />
     <Content Include="Views\TrangChu\TrangChu.cshtml" />
+    <Content Include="Views\TrangChu\GioiThieu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
